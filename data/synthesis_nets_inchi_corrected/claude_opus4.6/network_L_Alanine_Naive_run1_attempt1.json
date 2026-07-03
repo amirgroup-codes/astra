@@ -1,0 +1,126 @@
+{
+  "target_molecule": "L-Alanine",
+  "network": {
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CH4",
+        "iupac_name": "methane",
+        "common_name": "Methane",
+        "inchi": "InChI=1S/CH4/h1H4"
+      },
+      {
+        "id": "mol_002",
+        "formula": "CO",
+        "iupac_name": "carbon monoxide",
+        "common_name": "Carbon Monoxide",
+        "inchi": "InChI=1S/CO/c1-2"
+      },
+      {
+        "id": "mol_003",
+        "formula": "CH3CHO",
+        "iupac_name": "acetaldehyde",
+        "common_name": "Acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3"
+      },
+      {
+        "id": "mol_004",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "Ammonia",
+        "inchi": "InChI=1S/H3N/h1H3"
+      },
+      {
+        "id": "mol_005",
+        "formula": "HCN",
+        "iupac_name": "formonitrile",
+        "common_name": "Hydrogen Cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H"
+      },
+      {
+        "id": "mol_006",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "Water",
+        "inchi": "InChI=1S/H2O/h1H2"
+      },
+      {
+        "id": "mol_007",
+        "formula": "CH3CHNH",
+        "iupac_name": "ethylideneamine",
+        "common_name": "Acetaldimine",
+        "inchi": "InChI=1S/C2H5N/c1-2-3/h2-3H,1H3"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C2H4(NH2)CN",
+        "iupac_name": "2-aminopropanenitrile",
+        "common_name": "alpha-Aminonitrile",
+        "inchi": "InChI=1S/C3H6N2/c1-3(5)2-4/h3H,5H2,1H3"
+      },
+      {
+        "id": "mol_009",
+        "formula": "CH3CH(NH2)COOH",
+        "iupac_name": "(2S)-2-aminopropanoic acid",
+        "common_name": "L-Alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Precursor formation",
+        "description": "UV photolysis and electrical discharge convert methane and carbon monoxide into acetaldehyde",
+        "conditions": "UV radiation, lightning discharge",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_003"
+        ]
+      },
+      {
+        "id": "rxn_002",
+        "name": "Imine formation (condensation)",
+        "description": "Nucleophilic addition of ammonia to acetaldehyde followed by dehydration yields an imine (Schiff base)",
+        "conditions": "Aqueous solution, mild temperature",
+        "inputs": [
+          "mol_003",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_007",
+          "mol_006"
+        ]
+      },
+      {
+        "id": "rxn_003",
+        "name": "Cyanide addition (Strecker reaction)",
+        "description": "Cyanide ion attacks the electrophilic carbon of the imine, forming a new C-C bond and producing an alpha-aminonitrile",
+        "conditions": "Aqueous solution, mildly basic pH",
+        "inputs": [
+          "mol_007",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_008"
+        ]
+      },
+      {
+        "id": "rxn_004",
+        "name": "Stepwise hydrolysis",
+        "description": "The nitrile group is hydrolyzed via an amide intermediate to yield the carboxylic acid, producing L-Alanine and releasing ammonia",
+        "conditions": "Acidic aqueous solution, heat (hydrothermal vents or warm tidal pools)",
+        "inputs": [
+          "mol_008",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_009",
+          "mol_004"
+        ]
+      }
+    ]
+  }
+}

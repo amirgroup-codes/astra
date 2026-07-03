@@ -1,0 +1,203 @@
+{
+  "target_molecule": "Threonine",
+  "network": {
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H"
+      },
+      {
+        "id": "mol_002",
+        "formula": "C2H4O",
+        "iupac_name": "ethanal",
+        "common_name": "acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3"
+      },
+      {
+        "id": "mol_003",
+        "formula": "C3H3N3",
+        "iupac_name": "2-aminopropane-1,3-dinitrile",
+        "common_name": "aminomalononitrile",
+        "inchi": "InChI=1S/C3H3N3/c4-1-3(6)2-5/h3H,6H2"
+      },
+      {
+        "id": "mol_004",
+        "formula": "C5H7N3O",
+        "iupac_name": "2-amino-2-(1-hydroxyethyl)propane-1,3-dinitrile",
+        "common_name": "beta-hydroxy aminodinitrile adduct",
+        "inchi": null
+      },
+      {
+        "id": "mol_005",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2"
+      },
+      {
+        "id": "mol_006",
+        "formula": "C5H9NO5",
+        "iupac_name": "2-amino-2-(1-hydroxyethyl)propanedioic acid",
+        "common_name": "beta-hydroxy alpha-aminomalonic acid derivative",
+        "inchi": "InChI=1S/C5H9NO5/c1-2(7)5(6,3(8)9)4(10)11/h2,7H,6H2,1H3,(H,8,9)(H,10,11)"
+      },
+      {
+        "id": "mol_007",
+        "formula": "H3N",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3"
+      },
+      {
+        "id": "mol_008",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C4H9NO3",
+        "iupac_name": "2-amino-3-hydroxybutanoic acid",
+        "common_name": "threonine",
+        "inchi": "InChI=1S/C4H9NO3/c1-2(6)3(5)4(7)8/h2-3,6H,5H2,1H3,(H,7,8)"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C4H9NO3",
+        "iupac_name": "2-amino-3-hydroxybutanoic acid",
+        "common_name": "allothreonine",
+        "inchi": "InChI=1S/C4H9NO3/c1-2(6)3(5)4(7)8/h2-3,6H,5H2,1H3,(H,7,8)"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "inputs": [
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_003"
+        ],
+        "stoichiometry": {
+          "inputs": {
+            "mol_001": 3
+          },
+          "outputs": {
+            "mol_003": 1
+          }
+        },
+        "transformation_type": "HCN oligomerization",
+        "description": "Three equivalents of hydrogen cyanide oligomerize to aminomalononitrile."
+      },
+      {
+        "id": "rxn_002",
+        "inputs": [
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "stoichiometry": {
+          "inputs": {
+            "mol_003": 1,
+            "mol_002": 1
+          },
+          "outputs": {
+            "mol_004": 1
+          }
+        },
+        "transformation_type": "C-C bond formation to aldehyde",
+        "description": "Aminomalononitrile reacts with acetaldehyde to install the threonine side chain as a beta-hydroxy aminodinitrile."
+      },
+      {
+        "id": "rxn_003",
+        "inputs": [
+          "mol_004",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_006",
+          "mol_007"
+        ],
+        "stoichiometry": {
+          "inputs": {
+            "mol_004": 1,
+            "mol_005": 4
+          },
+          "outputs": {
+            "mol_006": 1,
+            "mol_007": 2
+          }
+        },
+        "transformation_type": "nitrile hydrolysis",
+        "description": "Hydrolysis of both nitriles gives the corresponding beta-hydroxy alpha-aminomalonic acid derivative, with ammonia released."
+      },
+      {
+        "id": "rxn_004",
+        "inputs": [
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_009",
+          "mol_008"
+        ],
+        "stoichiometry": {
+          "inputs": {
+            "mol_006": 1
+          },
+          "outputs": {
+            "mol_009": 1,
+            "mol_008": 1
+          }
+        },
+        "transformation_type": "decarboxylation",
+        "description": "Decarboxylation of the aminomalonic acid derivative yields threonine."
+      },
+      {
+        "id": "rxn_005",
+        "inputs": [
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_010",
+          "mol_008"
+        ],
+        "stoichiometry": {
+          "inputs": {
+            "mol_006": 1
+          },
+          "outputs": {
+            "mol_010": 1,
+            "mol_008": 1
+          }
+        },
+        "transformation_type": "decarboxylation",
+        "description": "An alternative stereochemical outcome of the same decarboxylation sequence yields allothreonine."
+      }
+    ],
+    "pathway_summary": [
+      "Hydrogen cyanide is treated as the key simple prebiotic feedstock.",
+      "Aminomalononitrile is the formal HCN trimer and the branchpoint intermediate in this network.",
+      "Acetaldehyde contributes the CH(OH)CH3 side chain required for threonine.",
+      "The network predicts nonselective product formation, so threonine and allothreonine are both represented."
+    ],
+    "assumptions": [
+      "This is a condensed plausible prebiotic network, not a fully specified geochemical environment.",
+      "Proton transfers, salts, pH effects, and catalytic mineral surfaces are omitted from the reaction graph.",
+      "Stereochemistry is not encoded in the intermediate structures; final products are represented as diastereomeric outcomes."
+    ],
+    "target_ids": [
+      "mol_009"
+    ],
+    "side_products_or_competing_products": [
+      "mol_010",
+      "mol_007",
+      "mol_008"
+    ]
+  }
+}

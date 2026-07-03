@@ -1,0 +1,159 @@
+{
+  "target_molecule": "L-Proline",
+  "network": {
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "HCN",
+        "iupac_name": "formonitrile",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H"
+      },
+      {
+        "id": "mol_002",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3"
+      },
+      {
+        "id": "mol_003",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2"
+      },
+      {
+        "id": "mol_004",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2"
+      },
+      {
+        "id": "mol_005",
+        "formula": "C2H4O2",
+        "iupac_name": "2-hydroxyacetaldehyde",
+        "common_name": "glycolaldehyde",
+        "inchi": "InChI=1S/C2H4O2/c3-1-2-4/h1,4H,2H2"
+      },
+      {
+        "id": "mol_006",
+        "formula": "C4H6O2",
+        "iupac_name": "butanedial",
+        "common_name": "succinaldehyde",
+        "inchi": "InChI=1S/C4H6O2/c5-3-1-2-4-6/h3-4H,1-2H2"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C4H7N",
+        "iupac_name": "3,4-dihydro-2H-pyrrole",
+        "common_name": "delta-1-pyrroline",
+        "inchi": "InChI=1S/C4H7N/c1-2-4-5-3-1/h3H,1-2,4H2"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C5H8N2",
+        "iupac_name": "pyrrolidine-2-carbonitrile",
+        "common_name": "2-cyanopyrrolidine",
+        "inchi": "InChI=1S/C5H8N2/c6-4-5-2-1-3-7-5/h5,7H,1-3H2"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C5H9NO2",
+        "iupac_name": "pyrrolidine-2-carboxylic acid",
+        "common_name": "DL-proline",
+        "inchi": "InChI=1S/C5H9NO2/c7-5(8)4-2-1-3-6-4/h4,6H,1-3H2,(H,7,8)"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C5H9NO2",
+        "iupac_name": "(S)-pyrrolidine-2-carboxylic acid",
+        "common_name": "L-proline",
+        "inchi": "InChI=1S/C5H9NO2/c7-5(8)4-2-1-3-6-4/h4,6H,1-3H2,(H,7,8)/t4-/m0/s1"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Aldol condensation",
+        "description": "Two formaldehyde molecules undergo aldol condensation under mildly basic conditions to form glycolaldehyde, the simplest sugar-related aldehyde.",
+        "inputs": [
+          "mol_003",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_005"
+        ],
+        "conditions": "Mildly basic aqueous solution, mineral surface catalysis (e.g. clay or carbonate minerals), UV irradiation"
+      },
+      {
+        "id": "rxn_002",
+        "name": "Formose-type oligomerization",
+        "description": "Glycolaldehyde reacts with additional formaldehyde via sequential aldol condensations and retro-aldol rearrangements to yield the symmetric C4 dialdehyde succinaldehyde.",
+        "inputs": [
+          "mol_005",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "conditions": "Aqueous solution, moderate temperature (60-100 \u00b0C), mineral catalysis, formose-type reaction cascade"
+      },
+      {
+        "id": "rxn_003",
+        "name": "Intramolecular cyclization",
+        "description": "Succinaldehyde reacts with ammonia: one aldehyde forms a C=N imine bond, then the nitrogen attacks the second aldehyde intramolecularly, closing the five-membered ring with loss of water to produce delta-1-pyrroline.",
+        "inputs": [
+          "mol_006",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_007",
+          "mol_004"
+        ],
+        "conditions": "Aqueous solution, ambient to moderate temperature, spontaneous at neutral to mildly acidic pH"
+      },
+      {
+        "id": "rxn_004",
+        "name": "Strecker addition",
+        "description": "HCN undergoes nucleophilic addition across the C=N imine bond of delta-1-pyrroline, installing the cyanide group at C-2 of the pyrrolidine ring. This is the key carbon-nitrogen bond-forming step that introduces the carboxylate precursor.",
+        "inputs": [
+          "mol_007",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "conditions": "Aqueous solution with dissolved HCN, mildly acidic to neutral pH, ambient temperature"
+      },
+      {
+        "id": "rxn_005",
+        "name": "Nitrile hydrolysis",
+        "description": "The nitrile group (-CN) of 2-cyanopyrrolidine is hydrolyzed stepwise through an amide intermediate to the free carboxylic acid, releasing ammonia and yielding racemic proline.",
+        "inputs": [
+          "mol_008",
+          "mol_004",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_009",
+          "mol_002"
+        ],
+        "conditions": "Aqueous solution, elevated temperature (50-100 \u00b0C) or prolonged time at ambient temperature, acidic or basic catalysis"
+      },
+      {
+        "id": "rxn_006",
+        "name": "Chiral amplification",
+        "description": "The racemic DL-proline mixture is resolved to the biological L-enantiomer via symmetry-breaking mechanisms: circularly polarized light, enantioselective adsorption on chiral mineral surfaces (calcite, quartz), or Soai-type autocatalytic amplification. L-proline itself acts as an asymmetric organocatalyst, enabling self-amplification of enantiomeric excess.",
+        "inputs": [
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "conditions": "Chiral mineral surfaces (e.g. d-calcite), circularly polarized UV light, or autocatalytic amplification via asymmetric aldol catalysis"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1283 @@
+{
+  "target_molecule": "Threonine",
+  "network": {
+    "target_molecule": "Threonine",
+    "overall_strategy": "This network constructs L-threonine (2-amino-3-hydroxybutanoic acid) from simple C1-C2 feedstocks through three interconnected environmental stages. Hydrothermal reactions generate formate, CO, formaldehyde, acetaldehyde, pyruvate, and glyoxylic acid via iron-sulfur mineral catalysis. Surface reactions drive formose chemistry to glycolaldehyde, glyceraldehyde, and methylglyoxal, selective reduction to acetol, tautomerization to lactaldehyde, and both Strecker and phosphoro-Strecker aminonitrile formation. A parallel surface route uses cyanide-catalyzed acyloin condensation of acetaldehyde with glyoxylic acid to form threonine's \u03b1-keto acid. Biochemical-stage reactions complete aminonitrile hydrolysis and reductive amination. Hub molecules (formaldehyde, acetaldehyde, methylglyoxal, lactaldehyde, glyoxylic acid) create network density and redundancy. Ten pathways are defined spanning all three environments with multiple convergence points.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "ammonia",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_005",
+        "formula": "H2O",
+        "iupac_name": "water",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_006",
+        "formula": "H2S",
+        "iupac_name": "hydrogen sulfide",
+        "common_name": "hydrogen sulfide",
+        "inchi": "InChI=1S/H2S/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_007",
+        "formula": "CO",
+        "iupac_name": "carbon monoxide",
+        "common_name": "carbon monoxide",
+        "inchi": "InChI=1S/CO/c1-2",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_008",
+        "formula": "CHOO-",
+        "iupac_name": "formate",
+        "common_name": "formate",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)/p-1",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_009",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C2H4O",
+        "iupac_name": "acetaldehyde",
+        "common_name": "acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C2H4O2",
+        "iupac_name": "2-hydroxyacetaldehyde",
+        "common_name": "glycolaldehyde",
+        "inchi": "InChI=1S/C2H4O2/c3-1-2-4/h1,4H,2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C3H6O3",
+        "iupac_name": "2,3-dihydroxypropanal",
+        "common_name": "glyceraldehyde",
+        "inchi": "InChI=1S/C3H6O3/c4-1-3(6)2-5/h1,3,5-6H,2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C3H4O2",
+        "iupac_name": "2-oxopropanal",
+        "common_name": "methylglyoxal",
+        "inchi": "InChI=1S/C3H4O2/c1-3(5)2-4/h2H,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C3H6O2",
+        "iupac_name": "1-hydroxypropan-2-one",
+        "common_name": "acetol (hydroxyacetone)",
+        "inchi": "InChI=1S/C3H6O2/c1-3(5)2-4/h4H,2H2,1H3",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C3H6O2",
+        "iupac_name": "2-hydroxypropanal",
+        "common_name": "lactaldehyde",
+        "inchi": "InChI=1S/C3H6O2/c1-3(5)2-4/h2-3,5H,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C4H7N2O",
+        "iupac_name": "2-amino-3-hydroxybutanenitrile",
+        "common_name": "threonine aminonitrile",
+        "inchi": "InChI=1S/C4H8N2O/c1-3(7)4(6)2-5/h3-4,7H,6H2,1H3",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_017",
+        "formula": "H4N2O2P",
+        "iupac_name": "diamidophosphate",
+        "common_name": "DAP",
+        "inchi": "InChI=1S/H5N2O2P/c1-5(2,3)4/h(H5,1,2,3,4)/p-1",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_018",
+        "formula": "C4H8N2O4P",
+        "iupac_name": "N-phosphoro-2-amino-3-hydroxybutanenitrile",
+        "common_name": "N-phosphoro-threonine-aminonitrile",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_019",
+        "formula": "C2H2O3",
+        "iupac_name": "oxoethanoic acid",
+        "common_name": "glyoxylic acid",
+        "inchi": "InChI=1S/C2H2O3/c3-1-2(4)5/h1H,(H,4,5)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_020",
+        "formula": "C4H6O4",
+        "iupac_name": "3-hydroxy-2-oxobutanoic acid",
+        "common_name": "3-hydroxy-2-ketobutyrate",
+        "inchi": "InChI=1S/C4H6O4/c1-2(5)3(6)4(7)8/h2,5H,1H3,(H,7,8)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_021",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvate",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_022",
+        "formula": "C4H9NO3",
+        "iupac_name": "2-amino-3-hydroxybutanoic acid",
+        "common_name": "threonine",
+        "inchi": "InChI=1S/C4H9NO3/c1-2(6)3(5)4(7)8/h2-3,6H,5H2,1H3,(H,7,8)",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_023",
+        "formula": "C2H3NO",
+        "iupac_name": "2-hydroxyacetonitrile",
+        "common_name": "glycolonitrile",
+        "inchi": "InChI=1S/C2H3NO/c3-1-2-4/h4H,2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "CO2 hydrogenation to formate on greigite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-100 bar)",
+          "catalyst": "greigite (Fe3S4)",
+          "aqueous": "true",
+          "other": "Alkaline hydrothermal vent, pH 9-11, H2-rich serpentinization fluid"
+        },
+        "mechanism": "CO2 is reduced to formate via hydride transfer on the Fe3S4 surface, which structurally mimics biological [Fe4S4] clusters. H2 dissociates on the mineral surface to provide reducing equivalents.",
+        "reasoning": "Greigite-catalyzed CO2 reduction to formate is supported as the first step in prebiotic carbon fixation in alkaline hydrothermal vents (Herschy et al., 2014; Roldan et al., 2015). The structural analogy between greigite and ferredoxin [Fe4S4] clusters provides mechanistic justification."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Formate reduction to formaldehyde on magnetite",
+        "inputs": [
+          "mol_008",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_009",
+          "mol_005"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "370-420K",
+          "pressure": "high (50-100 bar)",
+          "catalyst": "magnetite (Fe3O4)",
+          "aqueous": "true",
+          "other": "Continued reduction in alkaline vent system; formate as intermediate"
+        },
+        "mechanism": "Formate is further reduced to formaldehyde via hydrogen transfer on the magnetite surface. This is a sequential two-electron reduction mediated by surface Fe2+/Fe3+ redox cycling.",
+        "reasoning": "Magnetite-catalyzed reduction of formate to formaldehyde has been proposed as part of the stepwise CO2 reduction series in alkaline hydrothermal systems (Preiner et al., 2020). Magnetite forms at ~360K during serpentinization and catalyzes further reduction of C1 intermediates."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Reverse water-gas shift: CO2 to CO on magnetite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_007",
+          "mol_005"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high (>100 bar)",
+          "catalyst": "magnetite (Fe3O4)",
+          "aqueous": "true",
+          "other": "Black smoker / high-temperature vent region; CO2 + H2 \u2192 CO + H2O"
+        },
+        "mechanism": "Reverse water-gas shift reaction catalyzed by magnetite surface. CO2 is reduced to CO with concomitant oxidation of H2 to water. Fe0 provides additional reducing potential.",
+        "reasoning": "The reverse water-gas shift on iron oxide surfaces is well-documented in Fischer-Tropsch-type (FTT) prebiotic chemistry (McCollom & Seewald, 2006). CO is a critical intermediate for FTT synthesis of aldehydes. This reaction resolves the dangling CO input identified in previous attempts."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Fischer-Tropsch-type synthesis of acetaldehyde",
+        "inputs": [
+          "mol_007",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high (>100 bar)",
+          "catalyst": "magnetite (Fe3O4)",
+          "aqueous": "true",
+          "other": "FTT synthesis at black smoker temperatures; CO hydrogenation to oxygenated C2 products"
+        },
+        "mechanism": "CO is hydrogenated on magnetite surfaces via stepwise addition of H2. Surface-bound methyl and formyl intermediates combine to form acetaldehyde (CH3CHO) as part of the FTT oxygenate product distribution.",
+        "reasoning": "FTT synthesis of small oxygenated organics including acetaldehyde on magnetite is experimentally supported (McCollom et al., 1999; Rushdi & Simoneit, 2001). Acetaldehyde is a commonly observed C2 oxygenate in FTT product distributions. The Cold Bokkeveld meteorite (containing magnetite) catalyzes FTT reactions producing oxygenated species (Sources 19309, 19315)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "CO2 reduction to pyruvate on greigite-magnetite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_021",
+          "mol_005"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-100 bar)",
+          "catalyst": "greigite-magnetite mixed mineral surface",
+          "aqueous": "true",
+          "other": "Native iron + CO2 in alkaline vent system; multiple CO2 fixation steps"
+        },
+        "mechanism": "Sequential CO2 fixation via formate and acetate intermediates on greigite-magnetite surfaces, analogous to the reductive acetyl-CoA pathway. Three CO2 molecules are reduced and combined to form pyruvate.",
+        "reasoning": "Direct CO2 fixation to pyruvate on FeS/Fe3O4 mineral surfaces has been demonstrated by Varma et al. (2018) and Muchowska et al. (2019). The yields are low but pyruvate was unambiguously identified as a product of native iron-promoted CO2 fixation under hydrothermal conditions."
+      },
+      {
+        "id": "rxn_006",
+        "name": "CO2 reductive carboxylation to glyoxylic acid on mackinawite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_019",
+          "mol_005"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "mackinawite (FeS)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-100 bar)",
+          "catalyst": "mackinawite (FeS)",
+          "aqueous": "true",
+          "other": "Alkaline vent; two CO2 molecules combined to form the C2 \u03b1-keto acid"
+        },
+        "mechanism": "Two molecules of CO2 are sequentially reduced and coupled on the FeS surface. The first CO2 is reduced to formate/CO, then carboxylation yields glyoxylic acid (OHC-COOH), the simplest \u03b1-keto acid.",
+        "reasoning": "Glyoxylate is identified as a prebiotically relevant C2 starting material for protometabolic cycles (Stubbs et al., 2020; Sources 995, 9332). Its formation from CO2 on iron-sulfur minerals is proposed by analogy with the reductive glyoxylate cycle. While direct experimental yields are modest, glyoxylate is a key metabolic precursor and its mineral-surface formation is thermodynamically favorable under reducing hydrothermal conditions."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Pyruvate thermal decarboxylation to acetaldehyde",
+        "inputs": [
+          "mol_021"
+        ],
+        "outputs": [
+          "mol_010",
+          "mol_001"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "moderate to high",
+          "catalyst": "pyrite surface (optional; thermal decarboxylation occurs spontaneously)",
+          "aqueous": "true",
+          "other": "Well-known thermal decarboxylation; pyrite surface may lower activation energy"
+        },
+        "mechanism": "\u03b2-keto acid decarboxylation: pyruvate loses CO2 to form acetaldehyde. The reaction proceeds via a concerted pericyclic mechanism through a cyclic transition state involving the keto and carboxyl groups.",
+        "reasoning": "Thermal decarboxylation of pyruvate to acetaldehyde is a well-established reaction occurring readily at hydrothermal temperatures (Cooper et al., 2011; Cody et al., 2004). This provides a second convergent route to acetaldehyde alongside FTT synthesis (rxn_004)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Formose reaction: formaldehyde self-condensation to glycolaldehyde",
+        "inputs": [
+          "mol_009",
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "borate minerals (colemanite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "Ca(OH)2 / borate minerals",
+          "aqueous": "true",
+          "other": "Alkaline evaporitic pool; borate stabilizes sugar intermediates; Butlerov formose reaction conditions"
+        },
+        "mechanism": "Two formaldehyde molecules undergo aldol condensation to form glycolaldehyde (the simplest sugar). Under alkaline conditions with Ca(OH)2 catalyst, the Cannizzaro side reaction is suppressed by borate complexation of the products.",
+        "reasoning": "The formose reaction producing glycolaldehyde from formaldehyde is a foundational prebiotic reaction (Butlerov, 1861; Breslow, 1959). Borate minerals stabilize sugar products and prevent degradation (Ricardo et al., 2004; Sources 16400). Montmorillonite concentrates reactants on its surface."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Formose chain extension: glycolaldehyde + formaldehyde to glyceraldehyde",
+        "inputs": [
+          "mol_011",
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "borate minerals",
+          "aqueous": "true",
+          "other": "Aldol extension in alkaline pool; borate complexation stabilizes glyceraldehyde"
+        },
+        "mechanism": "Aldol condensation between the enol of glycolaldehyde (nucleophile) and formaldehyde (electrophile) produces glyceraldehyde. Borate complexation of the diol stabilizes the product against retro-aldol.",
+        "reasoning": "This is the canonical second step of the formose reaction producing C3 sugars (Breslow, 1959; Ricardo et al., 2004). Borate stabilization of glyceraldehyde is experimentally demonstrated (Sources 16400). This reaction is essential for building the C3 backbone required for threonine."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Glyceraldehyde dehydration to methylglyoxal",
+        "inputs": [
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_013",
+          "mol_005"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite)"
+        ],
+        "conditions": {
+          "temperature": "320-370K",
+          "pressure": "1 atm",
+          "catalyst": "acidic clay surface / phosphate",
+          "aqueous": "true",
+          "other": "Mildly acidic conditions at pool margins; dehydration during partial evaporation"
+        },
+        "mechanism": "Glyceraldehyde undergoes acid-catalyzed elimination of water. The secondary hydroxyl is protonated and eliminated, forming an enol that tautomerizes to methylglyoxal (2-oxopropanal). This is a well-known degradation pathway for triose sugars.",
+        "reasoning": "Methylglyoxal is a ubiquitous degradation product of triose sugars under mildly acidic or heated conditions (Thornalley, 1996). In prebiotic formose chemistry, methylglyoxal accumulates as a stable sideproduct (Delidovich et al., 2014). Montmorillonite provides the mildly acidic surface environment to catalyze the dehydration."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Methylglyoxal selective aldehyde reduction to acetol on FeS",
+        "inputs": [
+          "mol_013",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "mackinawite (FeS)",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "350-380K",
+          "pressure": "moderate",
+          "catalyst": "mackinawite (FeS)",
+          "aqueous": "true",
+          "other": "Mild reducing conditions at vent periphery; selective reduction of more electrophilic aldehyde"
+        },
+        "mechanism": "The aldehyde functional group of methylglyoxal (CHO) is more electrophilic and sterically accessible than the ketone (CO-CH3), making it preferentially reduced by H2 on the FeS mineral surface. The product is acetol (1-hydroxypropan-2-one, CH3-CO-CH2OH).",
+        "reasoning": "Selective reduction of the more reactive aldehyde over the ketone is the expected chemoselectivity in carbonyl reductions (Carey & Sundberg, Advanced Organic Chemistry). FeS surfaces provide mild reducing conditions suitable for partial carbonyl reduction. This corrects the selectivity concern from previous attempts: the aldehyde IS the more reactive group, so its preferential reduction to give acetol is the thermodynamically and kinetically expected outcome."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Acetol-lactaldehyde tautomeric equilibrium",
+        "inputs": [
+          "mol_014"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite clay surface (acid-base catalysis)",
+          "aqueous": "true",
+          "other": "Aqueous solution; keto-enol tautomerism; equilibrium favors ketone but aldehyde form present"
+        },
+        "mechanism": "Acetol (CH3-CO-CH2OH) and lactaldehyde (CH3-CH(OH)-CHO) are related by 1,3-proton shift through a common enediol intermediate (CH3-C(OH)=CHOH). On clay mineral surfaces with acid-base sites, the tautomeric equilibrium is catalyzed. Although the ketone form (acetol) is thermodynamically favored, the aldehyde form (lactaldehyde) is present at equilibrium and is continuously consumed by downstream Strecker reactions, driving the equilibrium.",
+        "reasoning": "Keto-enol tautomerism between hydroxyketones and hydroxyaldehydes via enediol intermediates is well-established in sugar chemistry (Lobry de Bruyn\u2013van Ekenstein transformation). Montmorillonite catalyzes such tautomerizations through its Br\u00f8nsted acid-base surface sites (Bernal, 1951; Ferris, 2005). The continuous removal of lactaldehyde by Strecker chemistry provides a thermodynamic driving force (Le Chatelier's principle)."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Strecker synthesis: lactaldehyde + HCN + NH3 \u2192 threonine aminonitrile",
+        "inputs": [
+          "mol_015",
+          "mol_004",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_016",
+          "mol_005"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite (concentration/catalysis)",
+          "aqueous": "true",
+          "other": "Evaporitic pool; moderate pH 6-8; classic Strecker conditions"
+        },
+        "mechanism": "Lactaldehyde (CH3CH(OH)CHO) reacts with NH3 to form an imine (CH3CH(OH)CH=NH), which then undergoes nucleophilic addition of HCN to yield threonine aminonitrile (CH3CH(OH)CH(NH2)CN). The short-lived imine intermediate is characteristic of aqueous Strecker chemistry.",
+        "reasoning": "The Strecker reaction is the most widely studied prebiotic pathway for amino acid synthesis (Strecker, 1850; Miller, 1957; Sources 6940, 6942, 985). Using lactaldehyde as the starting aldehyde, the product is specifically the aminonitrile precursor to threonine. The imine-like intermediates under aqueous conditions drive the Strecker completion (Sources 1026)."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Strecker aminonitrile hydrolysis to threonine",
+        "inputs": [
+          "mol_016",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_022",
+          "mol_003"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "Aqueous hydrolysis; proceeds through aminoamide intermediate; mildly acidic or basic conditions"
+        },
+        "mechanism": "Threonine aminonitrile (CH3CH(OH)CH(NH2)CN) undergoes stepwise hydrolysis: first to the aminoamide (CH3CH(OH)CH(NH2)CONH2), then to threonine (CH3CH(OH)CH(NH2)COOH) with release of NH3. This is a standard nitrile hydrolysis proceeding under mild aqueous conditions.",
+        "reasoning": "Aminonitrile hydrolysis to the corresponding amino acid is the terminal step of the Strecker synthesis, well-documented under prebiotic conditions (Miller, 1957; Bada, 2013; Sources 6940). The reaction proceeds readily in aqueous solution at moderate temperatures."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Phosphoro-Strecker: lactaldehyde + DAP + HCN \u2192 N-phosphoro-aminonitrile",
+        "inputs": [
+          "mol_015",
+          "mol_017",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_018"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "phosphate minerals (apatite)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "phosphate minerals provide phosphorus source; DAP as activated phosphorus",
+          "aqueous": "true",
+          "other": "Neutral pH ~7; evaporitic pool conditions; DAP available from volcanic/meteoritic sources"
+        },
+        "mechanism": "DAP reacts with lactaldehyde to form an N-phosphoroimine intermediate. HCN then adds to the electrophilic carbon of the imine to produce the N-phosphoro-threonine-aminonitrile. This pathway selectively targets aldehydes over ketones, avoiding unnatural \u03b1,\u03b1-disubstituted products.",
+        "reasoning": "The phosphoro-Strecker synthesis was demonstrated by Krishnamurthy et al. (2017) as a prebiotically plausible variant of the Strecker reaction (Sources 21192, 21193). Starting with aldehyde, DAP, and HCN at pH 7, the reaction produces N-phosphoroaminonitriles that can be further hydrolyzed under varying pH conditions. The selectivity for aldehydes over ketones is a notable prebiotic advantage."
+      },
+      {
+        "id": "rxn_016",
+        "name": "Phosphoro-Strecker intermediate hydrolysis to threonine",
+        "inputs": [
+          "mol_018",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_022"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "Sequential pH changes: pH 13 for N-phosphoramidic acid formation, then pH 1.5 for final hydrolysis to amino acid"
+        },
+        "mechanism": "The N-phosphoro-aminonitrile undergoes hydrolysis at pH 13 to form an N-phosphoramidic acid intermediate, followed by nitrile hydrolysis. Under acidic conditions (pH 1.5), the phosphoryl group is cleaved and the nitrile fully hydrolyzes to yield free threonine.",
+        "reasoning": "Krishnamurthy et al. (2017) demonstrated that N-phosphoroaminonitriles undergo sequential transformations at different pH values: hydrolysis at pH 13 and aminonitrile formation at pH 1.5 (Sources 21192, 21193). These pH changes could be achieved in natural settings through mixing of alkaline vent fluids with acidic ocean water."
+      },
+      {
+        "id": "rxn_017",
+        "name": "Cyanide-catalyzed acyloin condensation: acetaldehyde + glyoxylic acid \u2192 3-hydroxy-2-oxobutanoic acid",
+        "inputs": [
+          "mol_010",
+          "mol_019",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_020"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "HCN acts as umpolung catalyst; clay concentrates reactants",
+          "aqueous": "true",
+          "other": "Mildly alkaline evaporitic pool (pH 8-9); cyanide-catalyzed benzoin-type condensation"
+        },
+        "mechanism": "HCN adds to acetaldehyde to form an acyl anion equivalent (cyanohydrin: CH3CH(OH)CN). This umpolung intermediate acts as a nucleophilic acyl donor, attacking the aldehyde carbon of glyoxylic acid (OHC-COOH). After C-C bond formation and loss of CN\u207b (catalytic), the product is 3-hydroxy-2-oxobutanoic acid (CH3CH(OH)-CO-COOH), the \u03b1-keto acid corresponding to threonine.",
+        "reasoning": "The benzoin condensation catalyzed by cyanide is a classic umpolung reaction in organic chemistry (W\u00f6hler & Liebig, 1832; Breslow, 1958). Under prebiotic conditions, HCN is abundant and can serve as a catalytic umpolung agent. Glyoxylate and acetaldehyde are both prebiotically available (Sources 995, 9332). This reaction provides a chemically rigorous route to threonine's \u03b1-keto acid that avoids the selectivity problems of previous attempts."
+      },
+      {
+        "id": "rxn_018",
+        "name": "Reductive amination of 3-hydroxy-2-oxobutanoic acid to threonine on metallic iron",
+        "inputs": [
+          "mol_020",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_022",
+          "mol_005"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "metallic iron (Fe0) as reductant",
+          "aqueous": "true",
+          "other": "pH < 7; Fe0 provides electrons for imine reduction; mimics biological transamination"
+        },
+        "mechanism": "The \u03b1-keto group of 3-hydroxy-2-oxobutanoic acid reacts with NH3 to form a transient imine intermediate (CH3CH(OH)C(=NH)COOH). Fe0 provides electrons to reduce the imine to the amine, yielding threonine. This non-enzymatic reductive amination mirrors the biological transamination pathway.",
+        "reasoning": "Reductive amination of \u03b1-keto acids to amino acids using metallic iron (Fe0) under aqueous conditions (pH < 7) was demonstrated by Barge et al. (2019) (Sources 1026). Short-lived imine intermediates drive the reaction to completion. This pathway parallels the biological synthesis of amino acids via transamination of \u03b1-keto acids (Sources 6940, 6987)."
+      },
+      {
+        "id": "rxn_019",
+        "name": "Formaldehyde + HCN to glycolonitrile (cyanosulfidic entry)",
+        "inputs": [
+          "mol_009",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_023"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite)",
+          "TiO2 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide mineral surface; UV photocatalysis possible",
+          "aqueous": "true",
+          "other": "Cyanosulfidic conditions; UV irradiation; pool setting"
+        },
+        "mechanism": "Nucleophilic addition of cyanide to formaldehyde produces glycolonitrile (HOCH2CN). This is a rapid, quantitative reaction under ambient aqueous conditions.",
+        "reasoning": "Glycolonitrile formation from HCN and formaldehyde is the entry point for the Sutherland cyanosulfidic network (Patel et al., 2015; Sources 9376, 9381). This cyanohydrin reaction is fast and nearly quantitative under mild conditions. Glycolonitrile serves as a versatile C2 building block for further prebiotic synthesis."
+      },
+      {
+        "id": "rxn_020",
+        "name": "Glycolonitrile hydrolysis and chain extension to glycolaldehyde",
+        "inputs": [
+          "mol_023",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_011",
+          "mol_004"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "TiO2 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "UV photocatalysis on TiO2; clay catalysis",
+          "aqueous": "true",
+          "other": "Cyanosulfidic network; UV-driven partial hydrolysis and reduction of nitrile to aldehyde"
+        },
+        "mechanism": "Glycolonitrile undergoes partial hydrolysis to glycolamide, then UV-assisted reductive decyanation or further hydrolysis yields glycolaldehyde and releases HCN. Under cyanosulfidic conditions with UV and sulfide reductants, the nitrile can be reduced to the corresponding aldehyde.",
+        "reasoning": "In the Sutherland cyanosulfidic network, glycolonitrile is processed through UV-driven transformations involving bisulfite adducts and photoreduction steps to yield sugar and amino acid precursors (Patel et al., 2015; Sources 9376, 16400). Glycolaldehyde is a key intermediate in these networks. TiO2 photocatalysis provides UV-driven reduction capability."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Hydrothermal CO2 \u2192 formate \u2192 formaldehyde \u2192 Formose-Strecker to threonine",
+        "description": "Complete Hydrothermal\u2192Surface\u2192Biochemical route. CO2 is reduced to formate then formaldehyde in alkaline vents, formaldehyde undergoes formose chemistry on surface to glycolaldehyde, glyceraldehyde, and methylglyoxal, then selective reduction to acetol, tautomerization to lactaldehyde, Strecker synthesis, and hydrolysis to threonine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_009",
+          "mol_011",
+          "mol_012",
+          "mol_013",
+          "mol_014",
+          "mol_015",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Hydrothermal CO2 \u2192 formate \u2192 formaldehyde \u2192 Formose-Phosphoro-Strecker to threonine",
+        "description": "Same upstream as P1 but uses the phosphoro-Strecker variant with DAP instead of classic Strecker. Lactaldehyde reacts with DAP and HCN to form N-phosphoro-aminonitrile, which hydrolyzes to threonine under pH cycling.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_015",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_009",
+          "mol_012",
+          "mol_013",
+          "mol_015",
+          "mol_018"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "FTT acetaldehyde + hydrothermal glyoxylic acid \u2192 acyloin \u2192 reductive amination to threonine",
+        "description": "CO2 is converted to CO (RWGS), then FTT synthesis produces acetaldehyde. Separately, CO2 is reduced to glyoxylic acid on mackinawite. On the surface, cyanide-catalyzed acyloin condensation of acetaldehyde and glyoxylic acid produces threonine's \u03b1-keto acid, which undergoes reductive amination on Fe0.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_006",
+          "rxn_017",
+          "rxn_018"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_010",
+          "mol_019",
+          "mol_020"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Hydrothermal pyruvate \u2192 acetaldehyde + glyoxylic acid \u2192 acyloin \u2192 reductive amination to threonine",
+        "description": "CO2 is directly fixed to pyruvate on greigite-magnetite. Pyruvate decarboxylates to acetaldehyde. Separately formed glyoxylic acid combines with acetaldehyde via cyanide-catalyzed acyloin to form threonine's \u03b1-keto acid, then reductive amination yields threonine.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_007",
+          "rxn_006",
+          "rxn_017",
+          "rxn_018"
+        ],
+        "key_intermediates": [
+          "mol_021",
+          "mol_010",
+          "mol_019",
+          "mol_020"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "FTT CO \u2192 acetaldehyde \u2192 pyruvate-independent Strecker via formose convergence",
+        "description": "CO from RWGS feeds FTT synthesis of acetaldehyde. Acetaldehyde combines with glyoxylic acid to form \u03b1-keto acid. Simultaneously, CO2\u2192formate\u2192formaldehyde enters formose. Both routes converge: formose provides the glyceraldehyde\u2192methylglyoxal\u2192lactaldehyde for Strecker, while acetaldehyde feeds the \u03b1-keto acid route as parallel backup.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_006",
+          "rxn_017",
+          "rxn_018"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_010",
+          "mol_019",
+          "mol_020"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Cyanosulfidic \u2192 glycolonitrile \u2192 glycolaldehyde \u2192 formose \u2192 Strecker to threonine",
+        "description": "Formaldehyde and HCN form glycolonitrile via cyanosulfidic chemistry. UV-driven processing converts glycolonitrile to glycolaldehyde. Glycolaldehyde then enters the formose sequence to glyceraldehyde \u2192 methylglyoxal \u2192 acetol \u2192 lactaldehyde \u2192 Strecker \u2192 threonine.",
+        "reaction_sequence": [
+          "rxn_019",
+          "rxn_020",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_023",
+          "mol_011",
+          "mol_012",
+          "mol_013",
+          "mol_015",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Cyanosulfidic \u2192 glycolaldehyde \u2192 formose \u2192 Phosphoro-Strecker to threonine",
+        "description": "Same cyanosulfidic upstream as P6 but diverges at lactaldehyde to use the phosphoro-Strecker pathway with DAP and HCN.",
+        "reaction_sequence": [
+          "rxn_019",
+          "rxn_020",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_015",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_023",
+          "mol_011",
+          "mol_013",
+          "mol_015",
+          "mol_018"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Mixed hydrothermal: pyruvate-derived acetaldehyde + FTT formaldehyde \u2192 formose-Strecker",
+        "description": "Pyruvate from CO2 fixation decarboxylates to acetaldehyde (hydrothermal). Formaldehyde from formate reduction enters formose on surface. Formose produces glycolaldehyde \u2192 glyceraldehyde \u2192 methylglyoxal \u2192 acetol \u2192 lactaldehyde. Lactaldehyde undergoes Strecker synthesis to threonine. Acetaldehyde from pyruvate and formaldehyde from formate both originate hydrothermally but follow different reduction pathways.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_007",
+          "rxn_001",
+          "rxn_002",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_021",
+          "mol_010",
+          "mol_009",
+          "mol_012",
+          "mol_013",
+          "mol_015",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Dual convergence: FTT formaldehyde + FTT acetaldehyde \u2192 parallel keto-acid and Strecker routes",
+        "description": "RWGS produces CO, which feeds FTT synthesis of both acetaldehyde and (via formate) formaldehyde. Formaldehyde enters formose \u2192 methylglyoxal \u2192 lactaldehyde \u2192 Strecker \u2192 threonine. Acetaldehyde feeds the acyloin route with glyoxylic acid \u2192 \u03b1-keto acid \u2192 reductive amination \u2192 threonine. Both routes produce threonine independently.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_001",
+          "rxn_002",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_009",
+          "mol_010",
+          "mol_013",
+          "mol_015"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Glyoxylic acid + pyruvate-derived acetaldehyde \u2192 \u03b1-keto acid \u2192 phosphoro-Strecker hybrid",
+        "description": "Glyoxylic acid and acetaldehyde (from pyruvate decarboxylation) undergo acyloin condensation to form 3-hydroxy-2-oxobutanoic acid. This \u03b1-keto acid is then reductively aminated on Fe0 to yield threonine. This pathway represents a purely metabolic analog route through \u03b1-keto acid intermediates, paralleling the transamination logic of modern biochemistry.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_007",
+          "rxn_006",
+          "rxn_017",
+          "rxn_018"
+        ],
+        "key_intermediates": [
+          "mol_021",
+          "mol_010",
+          "mol_019",
+          "mol_020"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_009",
+      "mol_010",
+      "mol_013",
+      "mol_015",
+      "mol_019"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_009",
+        "incoming_reactions": [
+          "rxn_002"
+        ],
+        "outgoing_reactions": [
+          "rxn_008",
+          "rxn_009",
+          "rxn_019"
+        ]
+      },
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_004",
+          "rxn_007"
+        ],
+        "outgoing_reactions": [
+          "rxn_017"
+        ]
+      },
+      {
+        "molecule_id": "mol_013",
+        "incoming_reactions": [
+          "rxn_010"
+        ],
+        "outgoing_reactions": [
+          "rxn_011"
+        ]
+      },
+      {
+        "molecule_id": "mol_015",
+        "incoming_reactions": [
+          "rxn_012"
+        ],
+        "outgoing_reactions": [
+          "rxn_013",
+          "rxn_015"
+        ]
+      },
+      {
+        "molecule_id": "mol_019",
+        "incoming_reactions": [
+          "rxn_006"
+        ],
+        "outgoing_reactions": [
+          "rxn_017"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Threonine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_002": 0.6,
+          "rxn_008": 0.8,
+          "rxn_009": 0.8,
+          "rxn_010": 0.75,
+          "rxn_011": 0.55,
+          "rxn_012": 0.55,
+          "rxn_013": 0.85,
+          "rxn_014": 0.8
+        },
+        "chemical_feasibility": 0.65,
+        "pathway_coherence": 0.7,
+        "environmental_progression": 0.6,
+        "target_achievement": 0.75,
+        "overall_confidence": 0.67,
+        "feedback": "Long pathway with several weak links. rxn_002 (formate to formaldehyde) is thermodynamically challenging even on magnetite. rxn_011 requires methylglyoxal produced on the surface to be transported back to a hydrothermal environment for reduction, breaking the expected Hydrothermal\u2192Surface\u2192Biochemical flow. rxn_012 (acetol to lactaldehyde) is described as a tautomeric equilibrium but is actually a Lobry de Bruyn-van Ekenstein type rearrangement through an enediol intermediate\u2014feasible but requiring alkaline conditions and slower than implied. The final Strecker steps are well-supported.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_011",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Specify the alkaline or mineral catalyst conditions needed for the acetol-lactaldehyde isomerization (rxn_012)",
+          "Resolve the environmental backflow: rxn_011 should be surface or the methylglyoxal should be reduced in a surface context with FeS mineral",
+          "Consider a more direct route to formaldehyde, e.g., photoreduction of CO2 or direct FTT production"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_002": 0.6,
+          "rxn_008": 0.8,
+          "rxn_009": 0.8,
+          "rxn_010": 0.75,
+          "rxn_011": 0.55,
+          "rxn_012": 0.55,
+          "rxn_015": 0.85,
+          "rxn_016": 0.8
+        },
+        "chemical_feasibility": 0.66,
+        "pathway_coherence": 0.72,
+        "environmental_progression": 0.62,
+        "target_achievement": 0.78,
+        "overall_confidence": 0.69,
+        "feedback": "Shares the same problematic early steps as P1 but uses the phosphoro-Strecker route to threonine, which is well-supported by literature (DAP-mediated). The phosphoro-Strecker intermediate avoids the competing Favorskii-type side reactions and is more selective. Same environmental backflow issue with rxn_011.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_011",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Same fixes as P1 for the early steps",
+          "Specify pH cycling needed for phosphoro-Strecker (pH 7 for formation, then hydrolysis conditions)"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_003": 0.85,
+          "rxn_004": 0.68,
+          "rxn_006": 0.62,
+          "rxn_017": 0.58,
+          "rxn_018": 0.75
+        },
+        "chemical_feasibility": 0.7,
+        "pathway_coherence": 0.78,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.78,
+        "overall_confidence": 0.76,
+        "feedback": "This is one of the strongest pathways due to its directness and good environmental flow (Hydrothermal\u2192Surface\u2192Biochemical). The FTT synthesis of acetaldehyde (rxn_004) has some support but selectivity is low. rxn_006 (glyoxylic acid from CO2 on mackinawite) is plausible but not strongly experimentally validated. The cyanide-catalyzed acyloin condensation (rxn_017) between acetaldehyde and glyoxylic acid is the weakest step\u2014benzoin-type condensations work between two aldehydes, but coupling an aldehyde with a ketoacid is less established. Reductive amination (rxn_018) is well-supported by literature with metallic iron.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_017",
+          "rxn_006"
+        ],
+        "suggestions": [
+          "Provide more mechanistic detail for the acyloin condensation; consider whether a simple aldol between acetaldehyde enolate and glyoxylic acid might be more appropriate",
+          "Cite specific experimental evidence for glyoxylic acid production on mackinawite"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_005": 0.8,
+          "rxn_007": 0.9,
+          "rxn_006": 0.62,
+          "rxn_017": 0.58,
+          "rxn_018": 0.75
+        },
+        "chemical_feasibility": 0.72,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.78,
+        "overall_confidence": 0.78,
+        "feedback": "The best-scoring pathway. Pyruvate from CO2 on greigite (rxn_005) is supported by Varma et al. and similar studies. Pyruvate decarboxylation to acetaldehyde (rxn_007) is a well-known thermal reaction. Combined with glyoxylic acid from hydrothermal fixation, the \u03b1-keto acid route to threonine via reductive amination is biologically analogous and literature-supported. The acyloin condensation step (rxn_017) remains the weakest link. Environmental flow is clean.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_017"
+        ],
+        "suggestions": [
+          "Strengthen rxn_017 by exploring aldol condensation mechanism instead of benzoin-type",
+          "Consider whether 3-hydroxy-2-ketobutyrate could form via a different route, e.g., direct pyruvate-acetaldehyde aldol"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_003": 0.85,
+          "rxn_004": 0.68,
+          "rxn_008": 0.8,
+          "rxn_013": 0.85,
+          "rxn_014": 0.8
+        },
+        "chemical_feasibility": 0.72,
+        "pathway_coherence": 0.68,
+        "environmental_progression": 0.75,
+        "target_achievement": 0.72,
+        "overall_confidence": 0.72,
+        "feedback": "Pathway description is vague about how FTT acetaldehyde converges with the formose-Strecker route. The convergence is not clearly defined in the reaction network. If it uses formose products and Strecker chemistry, it largely duplicates P1 with different starting steps.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_004"
+        ],
+        "suggestions": [
+          "Clarify the specific convergence mechanism between FTT-derived acetaldehyde and formose products"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_019": 0.9,
+          "rxn_020": 0.35,
+          "rxn_009": 0.8,
+          "rxn_010": 0.75,
+          "rxn_011": 0.55,
+          "rxn_012": 0.55,
+          "rxn_013": 0.85,
+          "rxn_014": 0.8
+        },
+        "chemical_feasibility": 0.55,
+        "pathway_coherence": 0.6,
+        "environmental_progression": 0.65,
+        "target_achievement": 0.68,
+        "overall_confidence": 0.58,
+        "feedback": "Weakest pathway due to rxn_020. Glycolonitrile hydrolysis yields glycolic acid (or glycolamide), NOT glycolaldehyde. Converting a nitrile to an aldehyde requires partial reduction (e.g., DIBAL-type), not hydrolysis. As written, this reaction is chemically incorrect. The rest of the pathway inherits P1's issues.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_020",
+          "rxn_011",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Replace rxn_020 with a chemically valid transformation\u2014either sulfide-mediated partial reduction of glycolonitrile to glycolaldehyde, or use glycolonitrile hydrolysis to glycolamide/glycolic acid and find a different route to glycolaldehyde",
+          "The cyanosulfidic entry is promising but needs correct chemistry"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_019": 0.9,
+          "rxn_020": 0.35,
+          "rxn_009": 0.8,
+          "rxn_010": 0.75,
+          "rxn_011": 0.55,
+          "rxn_012": 0.55,
+          "rxn_015": 0.85,
+          "rxn_016": 0.8
+        },
+        "chemical_feasibility": 0.56,
+        "pathway_coherence": 0.6,
+        "environmental_progression": 0.65,
+        "target_achievement": 0.7,
+        "overall_confidence": 0.59,
+        "feedback": "Same fundamental issue as P6 with rxn_020. Phosphoro-Strecker ending is good but cannot compensate for the broken early step.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_020",
+          "rxn_011",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Fix rxn_020 as recommended for P6"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_005": 0.8,
+          "rxn_007": 0.9,
+          "rxn_001": 0.9,
+          "rxn_002": 0.6,
+          "rxn_008": 0.8,
+          "rxn_009": 0.8,
+          "rxn_010": 0.75,
+          "rxn_011": 0.55,
+          "rxn_012": 0.55,
+          "rxn_013": 0.85,
+          "rxn_014": 0.8
+        },
+        "chemical_feasibility": 0.65,
+        "pathway_coherence": 0.68,
+        "environmental_progression": 0.6,
+        "target_achievement": 0.72,
+        "overall_confidence": 0.65,
+        "feedback": "Very long pathway (11 steps) combining pyruvate-derived acetaldehyde with formaldehyde from formate. Accumulates the issues from both hydrothermal generation routes. The length adds fragility without clear benefit over simpler routes.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_011",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Consider whether this long route adds genuine redundancy or just accumulates weaknesses"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_003": 0.85,
+          "rxn_004": 0.68,
+          "rxn_001": 0.9,
+          "rxn_002": 0.6,
+          "rxn_008": 0.8,
+          "rxn_017": 0.58,
+          "rxn_018": 0.75,
+          "rxn_013": 0.85,
+          "rxn_014": 0.8
+        },
+        "chemical_feasibility": 0.68,
+        "pathway_coherence": 0.72,
+        "environmental_progression": 0.7,
+        "target_achievement": 0.75,
+        "overall_confidence": 0.71,
+        "feedback": "Dual convergence pathway leveraging both FTT formaldehyde and acetaldehyde. Conceptually interesting for showing network redundancy. However, the long route and multiple moderate-confidence reactions limit overall confidence.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_017"
+        ],
+        "suggestions": [
+          "Tighten the convergence logic and ensure the dual routes genuinely reinforce target achievement"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_006": 0.62,
+          "rxn_005": 0.8,
+          "rxn_007": 0.9,
+          "rxn_017": 0.58,
+          "rxn_018": 0.75
+        },
+        "chemical_feasibility": 0.7,
+        "pathway_coherence": 0.72,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.75,
+        "overall_confidence": 0.73,
+        "feedback": "Described as a hybrid but functionally very similar to P4. Uses glyoxylic acid plus pyruvate-derived acetaldehyde to form the \u03b1-keto acid, then reductive amination. The phosphoro-Strecker hybrid label is confusing since the terminal step is reductive amination, not Strecker. Reasonable environmental flow.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_017",
+          "rxn_006"
+        ],
+        "suggestions": [
+          "Clarify whether this actually uses phosphoro-Strecker or reductive amination for the final step",
+          "Same acyloin condensation concern as P3/P4"
+        ]
+      }
+    ],
+    "best_pathway_id": "P4",
+    "overall_confidence": 0.74,
+    "network_feedback": "This is a well-designed and ambitious network that demonstrates strong alignment with the prebiotic chemistry literature for threonine synthesis. The network correctly identifies and implements the three major literature-supported routes (Strecker, phosphoro-Strecker, and \u03b1-keto acid reductive amination) and uses plausible prebiotic feedstocks. Hub molecule identification (formaldehyde, acetaldehyde, glyoxylic acid) is well-justified by literature. However, several issues prevent approval: (1) rxn_020 (glycolonitrile hydrolysis to glycolaldehyde) is chemically incorrect\u2014nitrile hydrolysis produces acids, not aldehydes; (2) rxn_012 (acetol-lactaldehyde 'tautomerization') is mislabeled and needs explicit base-catalyzed enediol mechanism; (3) rxn_011 creates an environmental backflow (surface\u2192hydrothermal) that is poorly justified; (4) rxn_017 (cyanide-catalyzed acyloin condensation between an aldehyde and a keto acid) is mechanistically unclear\u2014a direct aldol condensation between acetaldehyde enolate and glyoxylate would be more defensible; (5) two declared hub molecules (methylglyoxal, glyoxylic acid) have effective connectivity degree of only 2, weakening the hub architecture. The network would benefit from fixing rxn_020, relabeling rxn_012 with proper mechanism, resolving the rxn_011 environment issue, and strengthening the acyloin condensation step with better mechanistic justification or an alternative aldol route.",
+    "approved": false,
+    "hub_quality": 0.72,
+    "convergence_quality": 0.78
+  },
+  "success": false,
+  "attempts": 3,
+  "notes": null
+}

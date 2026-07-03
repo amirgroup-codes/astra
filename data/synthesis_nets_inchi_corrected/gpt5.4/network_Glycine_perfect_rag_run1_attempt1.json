@@ -1,0 +1,926 @@
+{
+  "target_molecule": "Glycine",
+  "network": {
+    "target_molecule": "Glycine",
+    "overall_strategy": "This network treats glycine as a prebiotic thermodynamic and synthetic convergence point produced by ten literature-grounded routes spanning hydrothermal iron-driven chemistry, submarine hydrothermal amino-acid recycling, and surface cyanosulfidic/photoredox chemistry. The network is organized around shared C2 hubs\u2014glyoxylate, glycolic acid, formaldehyde, aminoacetonitrile, and glycine itself\u2014so that upstream hydrothermal and surface reactions converge on direct glycine-forming steps, while glycine then flows into biochemical peptide assembly. Environmental interconnection is explicit: hydrothermal glyoxylate and formaldehyde feed surface chemistry; surface aminoacetonitrile and photochemically generated glyoxylate/glycolic acid feed hydrothermal or pooled amino-acid networks; and glycine from all sources enters a common biochemical pool for oligomerization.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_005",
+        "formula": "C2H4N2",
+        "iupac_name": "2-aminoacetonitrile",
+        "common_name": "aminoacetonitrile",
+        "inchi": "InChI=1S/C2H4N2/c3-1-2-4/h1,3H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_006",
+        "formula": "C2H5NO2",
+        "iupac_name": "2-aminoacetic acid",
+        "common_name": "glycine",
+        "inchi": "InChI=1S/C2H5NO2/c3-1-2(4)5/h1,3H2,(H,4,5)",
+        "role": "target",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "H3NO",
+        "iupac_name": "hydroxylamine",
+        "common_name": "hydroxylamine",
+        "inchi": "InChI=1S/H3NO/c1-2/h2H,1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_008",
+        "formula": "C2H2O3",
+        "iupac_name": "2-oxoacetic acid",
+        "common_name": "glyoxylic acid",
+        "inchi": "InChI=1S/C2H2O3/c3-1-2(4)5/h1H,(H,4,5)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C6H8O7",
+        "iupac_name": "2-hydroxypropane-1,2,3-tricarboxylic acid",
+        "common_name": "isocitrate",
+        "inchi": "InChI=1S/C6H8O7/c7-3(8)1-6(13,5(11)12)2-4(9)10/h13H,1-2H2,(H,7,8)(H,9,10)(H,11,12)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C4H6O4",
+        "iupac_name": "butanedioic acid",
+        "common_name": "succinic acid",
+        "inchi": "InChI=1S/C4H6O4/c5-3(6)1-2-4(7)8/h1-2H2,(H,5,6)(H,7,8)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C2H4O4",
+        "iupac_name": "2,2-dihydroxyacetic acid",
+        "common_name": "2,2-dihydroxyacetic acid",
+        "inchi": "InChI=1S/C2H4O4/c3-1(4)2(5)6/h1,3-4H,(H,5,6)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C2H4O3",
+        "iupac_name": "2-hydroxyacetic acid",
+        "common_name": "glycolic acid",
+        "inchi": "InChI=1S/C2H4O3/c3-1-2(4)5/h3H,1H2,(H,4,5)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C2H4O2",
+        "iupac_name": "ethanoic acid",
+        "common_name": "acetic acid",
+        "inchi": "InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C2H4O3",
+        "iupac_name": "peroxyacetic acid",
+        "common_name": "peracetic acid",
+        "inchi": "InChI=1S/C2H4O3/c1-2(3)5-4/h4H,1H3",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C3H7NO3",
+        "iupac_name": "2-amino-3-hydroxypropanoic acid",
+        "common_name": "L-serine",
+        "inchi": "InChI=1S/C3H7NO3/c4-2(1-5)3(6)7/h2,5H,1,4H2,(H,6,7)",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C4H9NO3",
+        "iupac_name": "2-amino-3-hydroxybutanoic acid",
+        "common_name": "L-threonine",
+        "inchi": "InChI=1S/C4H9NO3/c1-2(6)3(5)4(7)8/h2-3,6H,5H2,1H3,(H,7,8)",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_017",
+        "formula": "C2H4O",
+        "iupac_name": "oxirane",
+        "common_name": "ethylene oxide",
+        "inchi": "InChI=1S/C2H4O/c1-2-3-1/h1-2H2",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_018",
+        "formula": "C4H8N2O3",
+        "iupac_name": "2-amino-4-amino-4-oxobutanoic acid",
+        "common_name": "L-asparagine",
+        "inchi": "InChI=1S/C4H8N2O3/c5-2(4(8)9)1-3(6)7/h2H,1,5H2,(H2,6,7)(H,8,9)/t2-/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_019",
+        "formula": "C4H8N2O3",
+        "iupac_name": "glycylglycine",
+        "common_name": "glycylglycine",
+        "inchi": "InChI=1S/C4H8N2O3/c5-1-3(7)6-2-4(8)9/h1-2,5H2,(H,6,7)(H,8,9)",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Strecker-type formation of aminoacetonitrile from formaldehyde",
+        "inputs": [
+          "mol_003",
+          "mol_004",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_005"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "sulfide minerals"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite and sulfide minerals",
+          "aqueous": "true",
+          "other": "cyanosulfidic evaporitic pool conditions; wet phases allow Strecker-type aminonitrile formation"
+        },
+        "mechanism": "Formaldehyde reacts with ammonia to form an imine/iminium equivalent that is trapped by cyanide, yielding the aminonitrile aminoacetonitrile.",
+        "reasoning": "Aminoacetonitrile is identified as the Strecker aminonitrile intermediate formed from formaldehyde, HCN, and NH3 in cyanosulfidic chemistry leading to glycine precursors (Patel et al., 2015). Inclusion of mineral surfaces is used here to satisfy the required surface-agent specification while remaining consistent with cyanosulfidic surface-pool chemistry described by Patel et al. (2015)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Aminoacetonitrile hydrolysis to glycine",
+        "inputs": [
+          "mol_005",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_006",
+          "mol_002"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals"
+        ],
+        "conditions": {
+          "temperature": "ambient",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite and phosphate minerals",
+          "aqueous": "true",
+          "other": "aqueous cyanosulfidic pool conditions"
+        },
+        "mechanism": "Water adds to the nitrile of aminoacetonitrile to form amide-like intermediates and then the carboxylic acid glycine, releasing ammonia.",
+        "reasoning": "This is the experimentally demonstrated cyanosulfidic glycine route: aminoacetonitrile hydrolyzes in aqueous conditions to give glycine and ammonia (Patel et al., 2015). Mineral specification is added to represent plausible surface-pool concentration and hydrolysis support while keeping the core reaction faithful to Patel et al. (2015)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Fe2+-catalyzed isocitrate cleavage to glyoxylate and succinate",
+        "inputs": [
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_008",
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron",
+          "greigite"
+        ],
+        "conditions": {
+          "temperature": "343K",
+          "pressure": "high",
+          "catalyst": "Fe2+ in iron-rich hydrothermal fluid with iron-sulfur mineral surfaces",
+          "aqueous": "true",
+          "other": "mild hydrothermal water; retro-aldol-like cleavage"
+        },
+        "mechanism": "Iron(II)-promoted retro-aldol cleavage of isocitrate splits the C6 tricarboxylate into C2 glyoxylate and C4 succinate.",
+        "reasoning": "Muchowska et al. (2019) showed Fe2+-catalyzed cleavage of isocitrate to glyoxylate and succinate at 70\u00b0C in water. The required hydrothermal mineral agents are represented here by elemental iron and greigite as plausible iron-rich vent minerals consistent with the iron-sulfur setting, while the reaction itself follows Muchowska et al. (2019)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "UV dehydration of 2,2-dihydroxyacetic acid to glyoxylate",
+        "inputs": [
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_008",
+          "mol_001"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2",
+          "borate minerals"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "UV photoredox on TiO2-bearing mineral surfaces",
+          "aqueous": "true",
+          "other": "UV-irradiated pool; dehydration of glyoxylate hydrate"
+        },
+        "mechanism": "Photochemical dehydration of the gem-diol form regenerates the aldehyde functionality, giving glyoxylate.",
+        "reasoning": "Liu et al. (2021) demonstrated UV-driven conversion of 2,2-dihydroxyacetic acid to glyoxylate in surface photoredox chemistry. TiO2 is included as the required surface mineral photocatalyst analogue, and borate minerals are plausible co-occurring pool minerals; the literature basis for the transformation is Liu et al. (2021)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Iron-promoted reductive amination of glyoxylate to glycine",
+        "inputs": [
+          "mol_008",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_006",
+          "mol_001"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron",
+          "greigite"
+        ],
+        "conditions": {
+          "temperature": "343K",
+          "pressure": "high",
+          "catalyst": "elemental iron with dissolved Fe2+ in aqueous hydrothermal medium",
+          "aqueous": "true",
+          "other": "mild hydrothermal vent-mixing conditions; anoxic"
+        },
+        "mechanism": "Hydroxylamine provides the nitrogen atom while iron supplies reducing equivalents for reductive amination of the \u03b1-keto acid glyoxylate to glycine.",
+        "reasoning": "This direct glycine-forming route is experimentally demonstrated by Muchowska et al. (2019): glyoxylate plus hydroxylamine gives glycine at 70\u00b0C in water with Fe0/Fe2+. The network preserves that chemistry and acknowledges the iron-rich hydrothermal setting. Hydroxylamine availability remains an open question noted by Muchowska et al. (2019)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Reduction of glyoxylate to glycolic acid",
+        "inputs": [
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron",
+          "mackinawite"
+        ],
+        "conditions": {
+          "temperature": "343K",
+          "pressure": "high",
+          "catalyst": "Fe2+/iron-rich hydrothermal system",
+          "aqueous": "true",
+          "other": "1 hour to hydrothermal timescale; anoxic reducing conditions"
+        },
+        "mechanism": "The aldehyde function of glyoxylate is reduced to a primary alcohol, producing the \u03b1-hydroxy acid glycolic acid.",
+        "reasoning": "Reduction of glyoxylate to glycolic acid is supported under iron-driven hydrothermal conditions by Muchowska et al. (2019) and also in cyanosulfidic networks by Ritson (2021). This node is retained because the literature identifies glycolic acid as a key connected C2 hub even though it is not a direct glycine precursor."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Cannizzaro-type conversion of formaldehyde to glycolic acid",
+        "inputs": [
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite",
+          "pyrite"
+        ],
+        "conditions": {
+          "temperature": "elevated",
+          "pressure": "high",
+          "catalyst": "mineral-assisted submarine hydrothermal conditions",
+          "aqueous": "true",
+          "other": "submarine hydrothermal setting; Cannizzaro-type disproportionation"
+        },
+        "mechanism": "Formaldehyde undergoes disproportionation and associated C2-building chemistry to give glycolic acid under hydrothermal conditions.",
+        "reasoning": "Aubrey et al. (2008) reported hydrothermal production of glycolic acid from formaldehyde by Cannizzaro-type chemistry. The exact mechanistic interpretation is discussed in that study, but the glycolic-acid outcome is literature-grounded. Magnetite and pyrite are included as hydrothermal mineral agents consistent with the required vent-mineral specification."
+      },
+      {
+        "id": "rxn_008",
+        "name": "UV photoredox conversion of acetate to glycolic acid",
+        "inputs": [
+          "mol_013",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_012",
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2",
+          "sulfide minerals"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "UV photoredox on mineral surfaces",
+          "aqueous": "true",
+          "other": "UV-irradiated pools; 4 hour timescale"
+        },
+        "mechanism": "Photoredox activation of acetate generates radical intermediates that couple with water-derived species to form glycolic acid while acetate is regenerated overall in part.",
+        "reasoning": "Liu et al. (2021) demonstrated UV-driven photoredox production of glycolic acid from acetate and water in irradiated surface environments. TiO2 is used here as the required surface photocatalytic mineral analogue for UV activation, with sulfide minerals representing the broader photoredox/cyanosulfidic setting described by Liu et al. (2021)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Peracetic acid amination to glycine",
+        "inputs": [
+          "mol_014",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite",
+          "magnetite"
+        ],
+        "conditions": {
+          "temperature": "elevated",
+          "pressure": "high",
+          "catalyst": "submarine hydrothermal mineral surfaces",
+          "aqueous": "true",
+          "other": "submarine hydrothermal conditions"
+        },
+        "mechanism": "Ammonia attacks the activated oxidized acetyl carbon of peracetic acid, displacing peroxide functionality and forming the C-N bond of glycine.",
+        "reasoning": "Aubrey et al. (2008) experimentally demonstrated glycine formation from peracetic acid and ammonia under hydrothermal conditions. The literature notes that the prebiotic origin of peracetic acid remains an open question, so this path is included as demonstrated but upstream-limited. Mineral agents are added to satisfy hydrothermal network requirements while remaining compatible with the submarine hydrothermal setting of Aubrey et al. (2008)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Thermal decomposition of L-serine to glycine and formaldehyde",
+        "inputs": [
+          "mol_015"
+        ],
+        "outputs": [
+          "mol_006",
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite",
+          "pyrite"
+        ],
+        "conditions": {
+          "temperature": "elevated",
+          "pressure": "high",
+          "catalyst": "thermal decomposition on hydrothermal mineral surfaces",
+          "aqueous": "true",
+          "other": "sustained hydrothermal heating"
+        },
+        "mechanism": "Retro-aldol cleavage breaks the C-C bond between the \u03b1-carbon and hydroxymethyl side chain of serine, releasing formaldehyde and producing glycine.",
+        "reasoning": "Bada et al. (1978) showed that L-serine thermally decomposes to glycine and formaldehyde at elevated temperatures. This reaction is important because it closes a recycling loop: hydrothermal glycine formation can be complemented by thermal degradation of more complex amino acids back to glycine (Bada et al., 1978)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Thermal decomposition of L-threonine to glycine",
+        "inputs": [
+          "mol_016"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite",
+          "pyrite"
+        ],
+        "conditions": {
+          "temperature": "elevated",
+          "pressure": "high",
+          "catalyst": "thermal decomposition on hydrothermal mineral surfaces",
+          "aqueous": "true",
+          "other": "hydrothermal heating; glycine as major amino-acid product"
+        },
+        "mechanism": "Thermal degradation removes the C2 side-chain fragment of threonine, leaving glycine as a stable product.",
+        "reasoning": "Vallentyne (1964) established that L-threonine thermally decomposes to glycine, supporting glycine as a thermodynamically stable degradation product under hydrothermal conditions. This route represents one of the experimentally documented direct paths to glycine from a more complex amino acid."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Thermal decomposition of L-threonine to glycine and ethylene oxide",
+        "inputs": [
+          "mol_016"
+        ],
+        "outputs": [
+          "mol_006",
+          "mol_017"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite",
+          "pyrite"
+        ],
+        "conditions": {
+          "temperature": "elevated",
+          "pressure": "high",
+          "catalyst": "thermal decomposition on hydrothermal mineral surfaces",
+          "aqueous": "true",
+          "other": "hydrothermal heating; retro-aldol-type fragmentation"
+        },
+        "mechanism": "Retro-aldol-type cleavage of threonine liberates the glycine moiety and releases the side chain as ethylene oxide.",
+        "reasoning": "Bada et al. (1978) provided the more detailed product characterization of threonine decomposition to glycine plus ethylene oxide. This is treated as a distinct literature-supported glycine pathway from the broader threonine degradation chemistry."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Hydrolytic decomposition of L-asparagine to glycine",
+        "inputs": [
+          "mol_018",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite",
+          "pyrite"
+        ],
+        "conditions": {
+          "temperature": "high temperature",
+          "pressure": "high",
+          "catalyst": "hydrothermal aqueous mineral interface",
+          "aqueous": "true",
+          "other": "deep-sea hydrothermal vent relevant"
+        },
+        "mechanism": "Hydrolysis of the side-chain amide followed by backbone degradation converts the C4 amino acid to glycine equivalents under high-temperature aqueous conditions.",
+        "reasoning": "Qian et al. (1993) demonstrated hydrolytic decomposition of L-asparagine at high temperature to yield glycine, with a net production of two glycine equivalents. For graph simplicity this node records glycine production without duplicate stoichiometric output nodes, while staying faithful to Qian et al. (1993)."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Biochemical peptide bond formation from glycine",
+        "inputs": [
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_019"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite",
+          "aqueous": "false",
+          "other": "wet-dry cycling in prebiotic pools; concentration-driven condensation"
+        },
+        "mechanism": "Repeated dehydration-condensation of glycine yields peptide bonds and short oligomers such as glycylglycine.",
+        "reasoning": "This downstream step is included to connect all glycine-producing routes to the biochemical stage required by the network design. Wet-dry and clay-assisted peptide formation is widely used in prebiotic peptide scenarios; here it serves as the shared sink for glycine generated by the literature-supported upstream routes, while remaining chemically consistent with prebiotic peptide-bond formation frameworks."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Surface aminonitrile hydrolysis route",
+        "description": "Classic cyanosulfidic surface-pool route from formaldehyde, HCN, and ammonia through aminoacetonitrile to glycine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002"
+        ],
+        "key_intermediates": [
+          "mol_005"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Hydrothermal iron network via isocitrate",
+        "description": "Hydrothermal metabolic-analog route in which isocitrate cleaves to glyoxylate, then iron-driven reductive amination yields glycine.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_005"
+        ],
+        "key_intermediates": [
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Surface photoredox glyoxylate route",
+        "description": "UV-irradiated surface pools generate glyoxylate from 2,2-dihydroxyacetic acid, and subsequent hydrothermal iron chemistry converts glyoxylate to glycine.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_005"
+        ],
+        "key_intermediates": [
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Direct hydrothermal peracetic acid amination",
+        "description": "A direct hydrothermal route where peracetic acid reacts with ammonia to form glycine.",
+        "reaction_sequence": [
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Serine thermal recycling route",
+        "description": "Hydrothermal decomposition of L-serine recycles a C3 amino acid back to glycine and formaldehyde.",
+        "reaction_sequence": [
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_015",
+          "mol_003"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Threonine thermal route I",
+        "description": "Thermal decomposition of L-threonine gives glycine as a major product under hydrothermal conditions.",
+        "reaction_sequence": [
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Threonine thermal route II",
+        "description": "Alternative characterized threonine decomposition path yielding glycine plus ethylene oxide.",
+        "reaction_sequence": [
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_016",
+          "mol_017"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Asparagine hydrolytic decomposition route",
+        "description": "High-temperature hydrolytic breakdown of L-asparagine produces glycine under hydrothermal vent conditions.",
+        "reaction_sequence": [
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_018"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Hydrothermal formaldehyde-glycolic branch connected to glycine pool",
+        "description": "Formaldehyde enters hydrothermal Cannizzaro-type chemistry to glycolic acid, which links to the glyoxylate-glycine C2 network even though not a direct final step to glycine in the reviewed studies.",
+        "reaction_sequence": [
+          "rxn_007"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Surface acetate photoredox branch connected to glycine pool",
+        "description": "Surface UV photoredox chemistry converts acetate to glycolic acid, feeding the broader C2 network associated with glyoxylate and glycine accumulation before biochemical incorporation.",
+        "reaction_sequence": [
+          "rxn_008"
+        ],
+        "key_intermediates": [
+          "mol_013",
+          "mol_012"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_006",
+      "mol_008",
+      "mol_012",
+      "mol_003",
+      "mol_005"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_008",
+        "incoming_reactions": [
+          "rxn_003",
+          "rxn_004"
+        ],
+        "outgoing_reactions": [
+          "rxn_005",
+          "rxn_006"
+        ]
+      },
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_002",
+          "rxn_005",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "outgoing_reactions": [
+          "rxn_014"
+        ]
+      },
+      {
+        "molecule_id": "mol_012",
+        "incoming_reactions": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_008"
+        ],
+        "outgoing_reactions": []
+      },
+      {
+        "molecule_id": "mol_003",
+        "incoming_reactions": [
+          "rxn_010"
+        ],
+        "outgoing_reactions": [
+          "rxn_001",
+          "rxn_007"
+        ]
+      },
+      {
+        "molecule_id": "mol_005",
+        "incoming_reactions": [
+          "rxn_001"
+        ],
+        "outgoing_reactions": [
+          "rxn_002"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Glycine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_002": 0.97
+        },
+        "chemical_feasibility": 0.92,
+        "pathway_coherence": 0.95,
+        "environmental_progression": 0.9,
+        "target_achievement": 1.0,
+        "overall_confidence": 0.94,
+        "feedback": "This is the strongest pathway in the network. It closely matches the literature-supported Strecker/aminonitrile route: formaldehyde + HCN + NH3 to aminoacetonitrile, followed by aqueous hydrolysis to glycine. The hydrolysis step is especially well aligned with Patel et al. (2015). Minor concern: the network summary omits required surface mineral agents and does not explicitly mention cyanosulfidic sulfur species or wet-dry context for aminonitrile formation.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Specify a surface mineral agent such as TiO2 or sulfide mineral support to satisfy network requirements for surface reactions",
+          "State aqueous ambient conditions and wet-dry cycling more explicitly for aminoacetonitrile hydrolysis",
+          "If literature fidelity is prioritized, note that aminoacetonitrile formation is embedded in cyanosulfidic chemistry rather than a generic Strecker step alone"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_003": 0.95,
+          "rxn_005": 0.97
+        },
+        "chemical_feasibility": 0.96,
+        "pathway_coherence": 0.97,
+        "environmental_progression": 0.93,
+        "target_achievement": 1.0,
+        "overall_confidence": 0.96,
+        "feedback": "Excellent hydrothermal pathway and best aligned with the literature. Isocitrate cleavage to glyoxylate + succinate and subsequent iron-promoted reductive amination of glyoxylate with hydroxylamine are both directly supported by Muchowska et al. (2019). This pathway has strong mechanistic coherence and a clear hub intermediate in glyoxylate. Main issue is formal compliance: hydrothermal mineral agents are not explicitly listed in the network summary, though Fe2+ and iron promotion are mentioned in the reaction names.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Explicitly include Fe0 and Fe2+ as agents for rxn_005 and Fe2+ for rxn_003",
+          "Specify 343 K aqueous hydrothermal conditions for closer literature fidelity",
+          "Acknowledge hydroxylamine availability as a network bottleneck"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_004": 0.95,
+          "rxn_005": 0.97
+        },
+        "chemical_feasibility": 0.95,
+        "pathway_coherence": 0.96,
+        "environmental_progression": 0.95,
+        "target_achievement": 1.0,
+        "overall_confidence": 0.95,
+        "feedback": "A very good cross-environment pathway. UV-driven dehydration of 2,2-dihydroxyacetic acid to glyoxylate is well supported by Liu et al. (2021), and the hydrothermal glyoxylate-to-glycine conversion is strongly supported by Muchowska et al. (2019). This pathway nicely demonstrates Surface to Hydrothermal interconnection. The main deficiency is again missing explicit mineral/agent specification for the surface step and hydrothermal iron minerals in the formal network description.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Explicitly identify UV/TiO2 or mineral context for the surface photochemical step if following network formatting constraints",
+          "List Fe0 and Fe2+ in the hydrothermal step",
+          "Clarify transport or environmental handoff of glyoxylate from surface pools to hydrothermal or pooled aqueous settings"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_009": 0.9
+        },
+        "chemical_feasibility": 0.88,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.82,
+        "target_achievement": 1.0,
+        "overall_confidence": 0.89,
+        "feedback": "This pathway is directly tied to Aubrey et al. (2008) and is plausible as a one-step hydrothermal glycine route. However, its confidence is slightly lower than P2 and P3 because the prebiotic availability of peracetic acid is itself an open challenge highlighted in the literature. The pathway reaches the target cleanly but depends on a less secure precursor source within the presented network.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Add an upstream literature-grounded route to peracetic acid formation or explicitly mark it as a precursor imported from the hydrothermal oxidant pool",
+          "Specify hydrothermal temperature range and any mineral context if available",
+          "Discuss the known uncertainty around peracetic acid accumulation"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_010": 0.96
+        },
+        "chemical_feasibility": 0.94,
+        "pathway_coherence": 0.89,
+        "environmental_progression": 0.78,
+        "target_achievement": 1.0,
+        "overall_confidence": 0.89,
+        "feedback": "The serine thermal decomposition route is strongly supported by Bada et al. (1978) and chemically plausible. It also usefully regenerates formaldehyde, reinforcing network connectivity. Its weakness is not the glycine-forming step itself, but the lack of an upstream route to serine in the submitted network, making it more of a recycling module than a full synthesis pathway from simple feedstocks.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Add an upstream serine formation route, ideally glycine + formaldehyde via aldol-like chemistry, to make this pathway fully integrated",
+          "Specify hydrothermal thermal regime",
+          "Frame this explicitly as amino-acid recycling rather than de novo synthesis"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_011": 0.92
+        },
+        "chemical_feasibility": 0.9,
+        "pathway_coherence": 0.85,
+        "environmental_progression": 0.76,
+        "target_achievement": 1.0,
+        "overall_confidence": 0.86,
+        "feedback": "This pathway aligns with Vallentyne (1964) and is plausible as a hydrothermal degradation route to glycine. As with the serine route, the issue is incompleteness: threonine is not synthesized elsewhere in the network. It therefore functions as a thermodynamic recycling branch rather than a full origin pathway from simple molecules.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Connect threonine to upstream prebiotic chemistry or mark it clearly as an imported amino acid from the shared pool",
+          "Differentiate this route from P7 by clarifying whether it is a lumped net reaction versus a mechanistically specified branch",
+          "Add conditions from the cited decomposition literature"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_012": 0.95
+        },
+        "chemical_feasibility": 0.93,
+        "pathway_coherence": 0.86,
+        "environmental_progression": 0.76,
+        "target_achievement": 1.0,
+        "overall_confidence": 0.88,
+        "feedback": "This route is well supported by Bada et al. (1978), and the explicit co-product ethylene oxide improves mechanistic realism relative to P6. Like P6, however, it is a degradation/recycling route from threonine rather than a complete synthesis route from primitive feedstocks in the current network.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Provide an upstream source for threonine or indicate pool import",
+          "Clarify whether P6 and P7 are alternative representations of the same literature pathway",
+          "Include hydrothermal temperature range and decomposition context"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_013": 0.62
+        },
+        "chemical_feasibility": 0.6,
+        "pathway_coherence": 0.7,
+        "environmental_progression": 0.72,
+        "target_achievement": 0.8,
+        "overall_confidence": 0.69,
+        "feedback": "This is the weakest literature-aligned pathway because the network appears to mis-specify stoichiometry. The curated literature states L-asparagine + H2O -> 2 glycine, whereas the network summary lists only one glycine as output. That is a substantial fidelity problem. The general idea of hydrolytic decomposition to glycine is literature-supported, but the represented reaction is incomplete and undercounts product formation.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Correct rxn_013 stoichiometry to produce 2 equivalents of glycine",
+          "Add intermediate decomposition logic or note that the reaction is a net transformation",
+          "Provide an upstream source for asparagine if this pathway is intended as more than a recycling branch"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_007": 0.58
+        },
+        "chemical_feasibility": 0.45,
+        "pathway_coherence": 0.42,
+        "environmental_progression": 0.55,
+        "target_achievement": 0.2,
+        "overall_confidence": 0.41,
+        "feedback": "This branch is connected to the glycine network only indirectly and does not itself produce glycine. More importantly, the formaldehyde-to-glycolic acid step is represented too simplistically as a one-substrate conversion, whereas the literature review indicates a more complex Cannizzaro/disproportionation scenario involving effectively two formaldehyde equivalents and/or additional redox logic. As submitted, this is not a valid standalone pathway to the target.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_007"
+        ],
+        "suggestions": [
+          "Correct rxn_007 stoichiometry to reflect two-formaldehyde disproportionation or otherwise represent the literature net chemistry more faithfully",
+          "Extend the branch from glycolic acid back to glyoxylate and then to glycine if it is to count as a target-producing pathway",
+          "Do not label this as a glycine pathway unless it reaches glycine explicitly"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_008": 0.78
+        },
+        "chemical_feasibility": 0.72,
+        "pathway_coherence": 0.48,
+        "environmental_progression": 0.7,
+        "target_achievement": 0.2,
+        "overall_confidence": 0.5,
+        "feedback": "The acetate photoredox to glycolic acid transformation is literature-supported in broad outline by Liu et al. (2021), though the network reaction stoichiometry is somewhat odd and compressed. The larger problem is that this branch does not proceed to glycine in the submitted pathway definition. It is therefore better treated as an upstream support branch for the C2 network rather than a true target pathway.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_008"
+        ],
+        "suggestions": [
+          "Represent the acetate photoredox stoichiometry more clearly",
+          "Connect glycolic acid to glyoxylate and then to glycine if this is intended as a target-reaching pathway",
+          "Include explicit surface agents/minerals to satisfy the network rules"
+        ]
+      }
+    ],
+    "best_pathway_id": "P2",
+    "overall_confidence": 0.83,
+    "network_feedback": "The network is strong overall and successfully reaches glycine through multiple literature-supported routes. Topologically it is dense, connected, and convergent, with glycine, glyoxylate, formaldehyde, aminoacetonitrile, and glycolic acid functioning as sensible hubs. Literature alignment is generally good, especially for the aminonitrile hydrolysis route, the isocitrate/glyoxylate iron network, the photochemical glyoxylate route, peracetic acid amination, and serine/threonine decomposition. Environmental interconnection is also a strength: the network clearly shows Surface to Hydrothermal to Biochemical flow, and some bidirectional conceptual exchange. The main weaknesses are formal compliance and a few reaction-level inaccuracies. Hydrothermal and Surface reactions are required to specify mineral agents, but the submitted summary mostly omits them. Several branches labeled as pathways to glycine are actually support branches that stop at glycolic acid rather than the target. The asparagine decomposition step appears stoichiometrically inconsistent with the cited literature. Formaldehyde to glycolic acid is oversimplified. The final biochemical step is also likely under-stoichiometric, since glycylglycine should require two glycine units rather than one. Despite these issues, the core network is viable and several individual pathways are clearly approvable.",
+    "approved": true,
+    "hub_quality": 0.9,
+    "convergence_quality": 0.88
+  },
+  "success": false,
+  "attempts": 1,
+  "notes": null
+}

@@ -1,0 +1,1238 @@
+{
+  "target_molecule": "Glutamate",
+  "network": {
+    "target_molecule": "Glutamate",
+    "overall_strategy": "This network models the prebiotic synthesis of glutamate through two major convergence paradigms: (1) the iron-sulfur world / reverse TCA cycle analog producing \u03b1-ketoglutarate, which is then aminated via three distinct mechanisms (mineral-catalyzed transamination, NADH-mediated reductive amination, and direct hydrothermal reductive amination), and (2) the cyanosulfidic / Strecker paradigm producing 2-aminopentanedinitrile, which is hydrolyzed to glutamate via two distinct routes (direct hydrolysis and cyanamide-assisted hydrolysis). The rTCA pathway is expanded stepwise through C2\u2192C3\u2192C4\u2192C5 intermediates on specific mineral surfaces (greigite, magnetite, pyrite, pyrrhotite) following W\u00e4chtersh\u00e4user's iron-sulfur world and Menor-Salv\u00e1n et al. (2013). The Strecker/cyanosulfidic pathways follow Sutherland (2016) and the Miller-Urey reanalyses of Johnson et al. (2008) and Parker et al. (2014). A pyroglutamate stabilization cycle captures the thermal cycling behavior documented in hydrothermal stability studies. Environmental flow runs from Hydrothermal (CO2 fixation, mineral catalysis) through Surface (Strecker, cyanosulfidic, UV photochemistry) to Biochemical (NADH reductive amination, final assembly).",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen gas",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "ammonia",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "H2O",
+        "iupac_name": "water",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_005",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_006",
+        "formula": "H2S",
+        "iupac_name": "hydrogen sulfide",
+        "common_name": "hydrogen sulfide",
+        "inchi": "InChI=1S/H2S/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_007",
+        "formula": "CO",
+        "iupac_name": "carbon monoxide",
+        "common_name": "carbon monoxide",
+        "inchi": "InChI=1S/CO/c1-2",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_008",
+        "formula": "CHO2-",
+        "iupac_name": "formate",
+        "common_name": "formate",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)/p-1",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_009",
+        "formula": "CH2O",
+        "iupac_name": "formaldehyde",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C3H4O",
+        "iupac_name": "prop-2-enal",
+        "common_name": "acrolein",
+        "inchi": "InChI=1S/C3H4O/c1-2-3-4/h2-3H,1H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C4H5NO",
+        "iupac_name": "4-oxobutanenitrile",
+        "common_name": "3-cyanopropanal",
+        "inchi": "InChI=1S/C4H5NO/c5-3-1-2-4-6/h4H,1-2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C5H7N3",
+        "iupac_name": "2-aminopentanedinitrile",
+        "common_name": "2-aminopentanedinitrile",
+        "inchi": "InChI=1S/C5H7N3/c6-3-1-2-5(8)4-7/h5H,1-2,8H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C3H4OS",
+        "iupac_name": "S-methyl thioacetate",
+        "common_name": "acetyl thioester",
+        "inchi": "InChI=1S/C3H6OS/c1-3(4)5-2/h1-2H3",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvate",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C4H4O5",
+        "iupac_name": "oxobutanedioic acid",
+        "common_name": "oxaloacetate",
+        "inchi": "InChI=1S/C4H4O5/c5-2(4(8)9)1-3(6)7/h1H2,(H,6,7)(H,8,9)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C4H6O4",
+        "iupac_name": "butanedioic acid",
+        "common_name": "succinate",
+        "inchi": "InChI=1S/C4H6O4/c5-3(6)1-2-4(7)8/h1-2H2,(H,5,6)(H,7,8)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_017",
+        "formula": "C5H6O3S",
+        "iupac_name": "S-methyl 3-carboxypropanethioate",
+        "common_name": "succinyl thioester",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_018",
+        "formula": "C5H6O5",
+        "iupac_name": "2-oxopentanedioic acid",
+        "common_name": "alpha-ketoglutarate",
+        "inchi": "InChI=1S/C5H6O5/c6-3(5(9)10)1-2-4(7)8/h1-2H2,(H,7,8)(H,9,10)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_019",
+        "formula": "C2H5NO2",
+        "iupac_name": "2-aminoacetic acid",
+        "common_name": "glycine",
+        "inchi": "InChI=1S/C2H5NO2/c3-1-2(4)5/h1,3H2,(H,4,5)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_020",
+        "formula": "C21H27N7O14P2",
+        "iupac_name": "nicotinamide adenine dinucleotide (reduced)",
+        "common_name": "NADH",
+        "inchi": "InChI=1S/C21H29N7O14P2/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(32)14(30)11(41-21)6-39-44(36,37)42-43(34,35)38-5-10-13(29)15(31)20(40-10)27-3-1-2-9(4-27)18(23)33/h1,3-4,7-8,10-11,13-16,20-21,29-32H,2,5-6H2,(H2,23,33)(H,34,35)(H,36,37)(H2,22,24,25)/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_021",
+        "formula": "C5H9NO4",
+        "iupac_name": "2-aminopentanedioic acid",
+        "common_name": "glutamate",
+        "inchi": "InChI=1S/C5H9NO4/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H,7,8)(H,9,10)/t3-/m0/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_022",
+        "formula": "C5H7NO3",
+        "iupac_name": "5-oxoproline",
+        "common_name": "pyroglutamate",
+        "inchi": "InChI=1S/C5H7NO3/c7-4-2-1-3(6-4)5(8)9/h3H,1-2H2,(H,6,7)(H,8,9)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_023",
+        "formula": "CH2N2",
+        "iupac_name": "cyanamide",
+        "common_name": "cyanamide",
+        "inchi": "InChI=1S/CH2N2/c2-1-3/h2H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_024",
+        "formula": "C2H2O3",
+        "iupac_name": "oxoacetic acid",
+        "common_name": "glyoxylate",
+        "inchi": "InChI=1S/C2H2O3/c3-1-2(4)5/h1H,(H,4,5)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "CO2 reduction to formate on greigite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-200 bar)",
+          "catalyst": "greigite (Fe3S4)",
+          "aqueous": true,
+          "other": "Alkaline hydrothermal vent conditions, pH 9-11, H2-rich serpentinization fluid"
+        },
+        "mechanism": "CO2 is adsorbed onto the greigite surface, which acts as a structural analog of biological [Fe4S4] clusters. H2 dissociates on the mineral surface to provide hydride equivalents. The CO2 undergoes a two-electron reduction to formate (HCOO\u207b) via surface-bound intermediates. Mackinawite serves as a precursor/co-catalyst.",
+        "reasoning": "Greigite-catalyzed CO2 reduction to formate is a foundational reaction of the iron-sulfur world hypothesis (W\u00e4chtersh\u00e4user, 1988). Experimental demonstration of CO2 hydrogenation to formate on native iron and iron-sulfur minerals under hydrothermal conditions has been reported under alkaline vent-like conditions. This is the first committed step of carbon fixation in the acetyl-CoA pathway analog."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Reverse water-gas shift reaction on magnetite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_007",
+          "mol_004"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high (100-300 bar)",
+          "catalyst": "magnetite (Fe3O4)",
+          "aqueous": true,
+          "other": "Black smoker or high-temperature vent conditions"
+        },
+        "mechanism": "The reverse water-gas shift reaction (CO2 + H2 \u2192 CO + H2O) proceeds on the magnetite surface through a redox mechanism. CO2 is adsorbed and reduced to CO via lattice oxygen exchange on the Fe3O4 surface, while H2 reoxidizes the reduced iron sites. This is thermodynamically favored at higher temperatures.",
+        "reasoning": "Magnetite catalyzes Fischer-Tropsch-type reactions including the RWGS step. CO production from CO2 on magnetite surfaces at elevated temperatures is well established in heterogeneous catalysis and is prebiotically plausible in high-temperature hydrothermal settings. CO is a critical C1 feedstock for acetyl-CoA pathway chemistry (Huber and W\u00e4chtersh\u00e4user, 1997)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Carbonyl insertion to form acetyl thioester on FeNiS",
+        "inputs": [
+          "mol_007",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "elemental nickel-iron sulfide (FeNiS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-200 bar)",
+          "catalyst": "FeNiS mixed sulfide (analog of acetyl-CoA synthase active site)",
+          "aqueous": true,
+          "other": "Alkaline vent conditions, methanethiol (CH3SH) as thiol donor, pH ~9"
+        },
+        "mechanism": "CO binds to the Ni center of the FeNiS mineral surface. A methyl group derived from CO/H2 reduction (via surface-bound methyl intermediate) undergoes migratory insertion with CO to form an acetyl intermediate. The acetyl group is then transferred to a thiolate (CH3S\u207b from H2S/methanethiol) to yield the acetyl thioester product. This mirrors the biochemistry of the Wood-Ljungdahl pathway.",
+        "reasoning": "Huber and W\u00e4chtersh\u00e4user (1997, Science) demonstrated the formation of activated acetic acid (methyl thioacetate) from CO and CH3SH on coprecipitated NiS/FeS at 100\u00b0C. This is a key demonstration that thioester chemistry, the energetic precursor to phosphate metabolism, can arise on mineral surfaces under hydrothermal conditions. The acetyl thioester is the entry point to the proto-metabolic rTCA cycle."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Reductive carboxylation of acetyl thioester to pyruvate",
+        "inputs": [
+          "mol_013",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-200 bar)",
+          "catalyst": "greigite with pyrite as electron donor",
+          "aqueous": true,
+          "other": "CO2-rich hydrothermal fluid, alkaline pH, FeS\u2192FeS2 provides reducing equivalents"
+        },
+        "mechanism": "The thioester-activated acetyl group undergoes nucleophilic carboxylation by dissolved CO2. The CO2 attacks the \u03b1-carbon of the acetyl thioester, forming a \u03b2-keto acid thioester intermediate. Hydrolytic release of the thiol group yields pyruvate (2-oxopropanoic acid). The formation of pyrite from FeS provides the thermodynamic driving force (\u0394G = -42 kJ/mol for FeS + H2S \u2192 FeS2 + H2).",
+        "reasoning": "This reaction is the prebiotic analog of pyruvate synthase (pyruvate:ferredoxin oxidoreductase) in the reductive acetyl-CoA pathway. W\u00e4chtersh\u00e4user (1990, PNAS) proposed that the FeS/FeS2 couple provides the reducing potential for CO2 fixation into pyruvate. Cody et al. (2000, Science) demonstrated related carbonylation and carboxylation reactions under hydrothermal conditions with FeS catalysts. Pyruvate is a central C3 metabolic hub."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Carboxylation of pyruvate to oxaloacetate",
+        "inputs": [
+          "mol_014",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-200 bar)",
+          "catalyst": "magnetite and greigite co-catalysis",
+          "aqueous": true,
+          "other": "CO2-saturated alkaline fluid, mineral surface template"
+        },
+        "mechanism": "Pyruvate undergoes \u03b2-carboxylation through CO2 addition at the C3 methyl position. The magnetite surface activates CO2 and positions it adjacent to the adsorbed pyruvate. The carboxylation produces oxaloacetate (2-oxobutanedioic acid), a C4 dicarboxylic acid. This is the prebiotic analog of pyruvate carboxylase in the reductive TCA cycle.",
+        "reasoning": "The carboxylation of pyruvate to oxaloacetate is a key step in the reverse (reductive) Krebs cycle. Muchowska et al. (2017, Nature Ecology & Evolution) showed that Fe\u2070 and other iron species can drive multiple steps of a proto-metabolic cycle including carboxylations. This step extends the carbon chain from C3 to C4, moving toward \u03b1-ketoglutarate."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Reduction of oxaloacetate to succinate",
+        "inputs": [
+          "mol_015",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_016"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "native iron and pyrite",
+          "aqueous": true,
+          "other": "Reducing hydrothermal fluid with dissolved H2, sequential reduction through malate and fumarate intermediates"
+        },
+        "mechanism": "Oxaloacetate is reduced stepwise: first the keto group is reduced to a hydroxyl (forming malate), then dehydration yields fumarate, and finally reduction of the double bond produces succinate. On Fe\u2070 and FeS2 surfaces, the dissolved H2 provides reducing equivalents. Each step is thermodynamically favorable under the highly reducing hydrothermal conditions. The overall transformation OAA\u2192malate\u2192fumarate\u2192succinate compresses three rTCA steps but each is a discrete surface-catalyzed event.",
+        "reasoning": "Muchowska et al. (2019, Nature) demonstrated that Fe\u2070 nanoparticles at 70-100\u00b0C in aqueous solution can drive the interconversion of TCA cycle intermediates including the reduction of oxaloacetate through to succinate. Varma et al. (2018, Nature Ecology & Evolution) showed similar results with native metals. The stepwise nature of this reduction (keto reduction \u2192 dehydration \u2192 double bond reduction) is well characterized in both enzymatic and non-enzymatic contexts."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Thioester activation of succinate",
+        "inputs": [
+          "mol_016",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrrhotite (Fe7S8)"
+        ],
+        "conditions": {
+          "temperature": "350-360K (85\u00b0C)",
+          "pressure": "moderate",
+          "catalyst": "natural pyrrhotite",
+          "aqueous": true,
+          "other": "H2S or methanethiol as thiol source, mildly acidic to neutral pH"
+        },
+        "mechanism": "Succinate is activated through condensation with a thiol (H2S-derived methanethiol or surface-bound sulfhydryl groups) on the pyrrhotite surface. The mineral surface provides both the activation energy and the thiol equivalents via its sulfide groups. The resulting succinyl thioester is a high-energy intermediate analogous to succinyl-CoA in extant metabolism.",
+        "reasoning": "Menor-Salv\u00e1n et al. (2013, Life) demonstrated that pyrrhotite catalyzes thioester-related chemistry at 85\u00b0C in one-pot experiments. Thioester activation of carboxylic acids on iron-sulfide mineral surfaces is central to the iron-sulfur world hypothesis (W\u00e4chtersh\u00e4user, 1988; de Duve, 1991). The thioester bond provides the necessary activation energy for subsequent carboxylation."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Oxidative carboxylation of succinyl thioester to alpha-ketoglutarate",
+        "inputs": [
+          "mol_017",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_018"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrrhotite (Fe7S8)"
+        ],
+        "conditions": {
+          "temperature": "350-360K (85\u00b0C)",
+          "pressure": "moderate",
+          "catalyst": "natural pyrrhotite",
+          "aqueous": true,
+          "other": "CO2-saturated solution, pH ~6-7"
+        },
+        "mechanism": "The activated succinyl thioester undergoes carboxylation at the \u03b1-carbon position adjacent to the thioester carbonyl. CO2 inserts into the C-H bond activated by the thioester group, forming a C5 \u03b2-keto diacid thioester. Hydrolysis of the thioester releases \u03b1-ketoglutarate (2-oxopentanedioic acid). This is the prebiotic analog of \u03b1-ketoglutarate synthase (2-oxoglutarate:ferredoxin oxidoreductase).",
+        "reasoning": "Menor-Salv\u00e1n et al. (2013, Life) explicitly demonstrated the carbon fixation step from succinyl-thioesters to \u03b1-ketoglutarate catalyzed by natural pyrrhotite at 85\u00b0C. This is a critical experiment validating the reverse Krebs cycle on mineral surfaces. The resulting \u03b1-ketoglutarate is the immediate precursor to glutamate via amination."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Transamination of alpha-ketoglutarate with glycine on pyrrhotite",
+        "inputs": [
+          "mol_018",
+          "mol_019"
+        ],
+        "outputs": [
+          "mol_021",
+          "mol_024"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrrhotite (Fe7S8)"
+        ],
+        "conditions": {
+          "temperature": "350-360K (85\u00b0C)",
+          "pressure": "moderate",
+          "catalyst": "natural pyrrhotite",
+          "aqueous": true,
+          "other": "One-pot with \u03b1-ketoglutarate synthesis, glycine as amine donor"
+        },
+        "mechanism": "Glycine donates its amino group to \u03b1-ketoglutarate via a non-enzymatic transamination mechanism. The reaction proceeds through a Schiff base (aldimine) intermediate formed between glycine and a carbonyl cofactor (possibly pyridoxal or mineral-bound aldehyde analog). The amino group is transferred to the \u03b1-keto position of \u03b1-ketoglutarate, producing glutamate and releasing glyoxylate as the deaminated glycine product. The pyrrhotite surface templates the reaction geometry.",
+        "reasoning": "Menor-Salv\u00e1n et al. (2013, Life) demonstrated that in a one-pot system at 85\u00b0C, \u03b1-ketoglutarate synthesized on pyrrhotite underwent non-enzymatic transamination with glycine to produce glutamate. The primary recovered product was pyroglutamic acid (~35% yield) due to thermal cyclization of glutamate under the experimental conditions. This directly demonstrates a mineral-catalyzed prebiotic route to glutamate."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Reduction of formate to formaldehyde on magnetite",
+        "inputs": [
+          "mol_008",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high",
+          "catalyst": "magnetite",
+          "aqueous": true,
+          "other": "Fischer-Tropsch-type reduction in H2-rich hydrothermal fluid"
+        },
+        "mechanism": "Formate adsorbs on the magnetite surface and undergoes further two-electron reduction by H2 to yield formaldehyde. The reaction proceeds through a surface-bound formyl intermediate. Magnetite provides the catalytic surface for H2 dissociation and hydride transfer to the formate carbon. This is the second step of Fischer-Tropsch-type carbon reduction on oxide surfaces.",
+        "reasoning": "Fischer-Tropsch-type (FTT) synthesis on magnetite surfaces produces a range of reduced C1-C4 products from CO/CO2 and H2, including formaldehyde, methanol, and longer-chain aldehydes. This has been demonstrated experimentally under hydrothermal conditions (McCollom and Seewald, 2006, Earth and Planetary Science Letters). Formaldehyde is a critical C1 building block that feeds into both the formose reaction and Strecker synthesis pathways."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Aldol condensation of formaldehyde to acrolein on clay",
+        "inputs": [
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite clay (acid-base bifunctional catalyst)",
+          "aqueous": true,
+          "other": "Evaporitic pool or tidal flat, wet-dry cycling concentrates formaldehyde, mildly alkaline pH 8-9"
+        },
+        "mechanism": "Three equivalents of formaldehyde undergo sequential aldol condensations on the montmorillonite surface. First, two formaldehyde molecules condense to form glycolaldehyde (HOCH2CHO) via an aldol reaction catalyzed by the clay's basic sites. Glycolaldehyde then undergoes an aldol-crotonization sequence with a third formaldehyde: aldol addition produces a C3 aldol, which dehydrates (crotonization) to yield acrolein (CH2=CH-CHO). The clay surface acts as an acid-base bifunctional catalyst, concentrating reactants in interlayer galleries and facilitating the dehydration step via surface acid sites.",
+        "reasoning": "Acrolein is identified as a 'robust product of atmospheric discharges' and a 'prebiotic hub' for multiple amino acids in the literature review. The aldol condensation of formaldehyde to produce C2-C3 aldehydes is well established in the formose reaction context (Breslow, 1959; Ricardo et al., 2004). Montmorillonite catalysis of aldol reactions is documented (Ferris et al., 1996). The specific route 3 HCHO \u2192 acrolein via glycolaldehyde intermediate involves an aldol-crotonization cascade that is thermodynamically favorable under concentration conditions. Johnson et al. (2008, Science) and Parker et al. (2011, PNAS) detect acrolein and acrolein-derived amino acids in Miller-Urey reanalyses."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Michael addition of HCN to acrolein forming 3-cyanopropanal",
+        "inputs": [
+          "mol_010",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite",
+          "aqueous": true,
+          "other": "Mildly alkaline conditions (pH 8-9) to generate CN\u207b nucleophile, evaporitic pool"
+        },
+        "mechanism": "Under mildly alkaline conditions, HCN deprotonates to the cyanide ion (CN\u207b), which acts as a soft nucleophile. CN\u207b undergoes conjugate (1,4-) addition to the \u03b1,\u03b2-unsaturated aldehyde acrolein. The cyanide adds to the \u03b2-carbon (C3) of acrolein via Michael addition, producing 4-oxobutanenitrile (3-cyanopropanal, NC-CH2-CH2-CHO). The montmorillonite surface catalyzes this reaction by concentrating both reactants and providing Br\u00f8nsted acid sites to protonate the enolate intermediate.",
+        "reasoning": "The 1,4-conjugate addition of cyanide to \u03b1,\u03b2-unsaturated carbonyl compounds is a well-known reaction in organic chemistry and is prebiotically plausible under conditions where CN\u207b is available (Commeyras et al., 2002, Origins of Life and Evolution of the Biosphere). This reaction extends the carbon chain from C3 to C4 while introducing the second nitrile group needed for glutamate. The resulting 3-cyanopropanal retains an aldehyde functional group, setting up the subsequent Strecker step."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Strecker synthesis on 3-cyanopropanal to 2-aminopentanedinitrile",
+        "inputs": [
+          "mol_011",
+          "mol_003",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite",
+          "aqueous": true,
+          "other": "Concentrated evaporitic pool with high [NH3] and [HCN], pH 8-9, as required by Strecker kinetics"
+        },
+        "mechanism": "This is a classic Strecker synthesis on the aldehyde group of 3-cyanopropanal. Step 1: Ammonia attacks the aldehyde carbonyl of 3-cyanopropanal to form a hemiaminal, which dehydrates to an imine (Schiff base). This step is favored at pH > 8 (Commeyras et al., 2002). Step 2: Cyanide ion (CN\u207b) adds to the electrophilic carbon of the imine, forming the \u03b1-aminonitrile product: 2-aminopentanedinitrile. The clay surface concentrates reactants and provides acid-base catalysis for imine formation.",
+        "reasoning": "The Strecker synthesis is 'widely considered the primary chemical pathway responsible for the formation of amino acids in Miller-Urey type environments and in carbonaceous chondrites' per the literature. The specific application to 3-cyanopropanal yields 2-aminopentanedinitrile, which is the key intermediate identified by Sutherland (2016, Nature Reviews Chemistry) in the cyanosulfidic framework. The requirement for concentrated ammonia at pH > 8 (Commeyras et al., 2002; Menor-Salv\u00e1n and Mar\u00edn-Yaseli, 2012) constrains this reaction to evaporitic/concentrated environments."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Cyanosulfidic reductive homologation to 2-aminopentanedinitrile",
+        "inputs": [
+          "mol_005",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "stibnite (Sb2S3)",
+          "TiO2 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "Cu(I/II) photoredox cycling, phosphate buffer",
+          "aqueous": true,
+          "other": "UV irradiation at 254 nm, intermittent wet-dry cycling, flow chemistry regime in streams/pools"
+        },
+        "mechanism": "In the cyanosulfidic systems chemistry framework, HCN undergoes reductive homologation driven by UV-mediated photoredox cycling of copper ions. H2S serves as the terminal reductant, being oxidized to elemental sulfur or polysulfides. HCN molecules are sequentially reduced and coupled: (1) HCN is partially reduced to form cyanohydrin/aminonitrile intermediates, (2) chain extension occurs through further HCN additions, and (3) the C5 dinitrile skeleton of 2-aminopentanedinitrile is assembled through this iterative process. Phosphate buffers prevent accumulation of dead-end products. TiO2 (anatase) provides additional UV photocatalytic activity, and stibnite provides sulfide-mediated electron transfer.",
+        "reasoning": "Sutherland (2016, Nature Reviews Chemistry) describes the cyanosulfidic network where HCN, H2S, and UV radiation produce 2-aminopentanedinitrile as the direct precursor to glutamate and glutamine. The same conditions also produce precursors for pyrimidine ribonucleotides (2-aminooxazole), demonstrating a unified 'co-emergence' of metabolites and informational molecules. The use of Cu(I/II) photoredox catalysis and phosphate buffers is specified in the Sutherland framework."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Hydrolysis of 2-aminopentanedinitrile to glutamate",
+        "inputs": [
+          "mol_012",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_021"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite acid-base catalysis, phosphate mineral co-catalysis",
+          "aqueous": true,
+          "other": "Wet-dry cycling accelerates hydrolysis, mildly acidic to neutral pH"
+        },
+        "mechanism": "The two nitrile groups of 2-aminopentanedinitrile are hydrolyzed sequentially in a four-step process. Each nitrile undergoes: (1) nucleophilic addition of water to give a primary amide (\u2212CONH2), then (2) further hydrolysis of the amide to a carboxylic acid (\u2212COOH) with release of NH3. The overall transformation is: R(CN)2 + 4H2O \u2192 R(COOH)2 + 2NH3. Montmorillonite catalyzes the hydrolysis through its Br\u00f8nsted acid sites, which protonate the nitrile nitrogen and activate it toward water addition. This is the rate-limiting step of the overall Strecker pathway.",
+        "reasoning": "Nitrile hydrolysis to carboxylic acids is the final and rate-limiting step of the Strecker synthesis, as noted in the literature. The hydrolysis 'can be accelerated by acidic or basic conditions, as well as by specific catalysts like clays or metal oxides.' Clay minerals, particularly montmorillonite, are well-documented catalysts for nitrile hydrolysis (Ferris et al., 1996). Partial hydrolysis to glutamine (one nitrile \u2192 amide, one \u2192 acid) can also occur, consistent with Sutherland's (2016) observation that both glutamate and glutamine are products."
+      },
+      {
+        "id": "rxn_016",
+        "name": "Cyanamide-assisted hydrolysis of 2-aminopentanedinitrile to glutamate",
+        "inputs": [
+          "mol_012",
+          "mol_023",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_021"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite, cyanamide as condensing/activating agent",
+          "aqueous": true,
+          "other": "Intermittent addition of cyanamide, wet-dry cycling, simulating Parker et al. (2014) conditions"
+        },
+        "mechanism": "Cyanamide (H2N-CN) acts as a bifunctional reagent that both activates nitrile hydrolysis and facilitates peptide condensation. Cyanamide activates the nitrile groups of 2-aminopentanedinitrile by forming carbodiimide intermediates that are more susceptible to hydrolysis. Additionally, cyanamide can react with the amino group to form a guanidinium intermediate that undergoes intramolecular cyclization-hydrolysis, releasing the free amino acid. The net effect is enhanced conversion of 2-aminopentanedinitrile to glutamate under milder conditions than uncatalyzed hydrolysis.",
+        "reasoning": "Parker et al. (2014, Angewandte Chemie) reanalyzed Miller's 1958 cyanamide experiments and confirmed the presence of glutamic acid among 12 amino acids. The cyanamide not only facilitated amino acid formation but also promoted oligomerization to dipeptides and diketopiperazines. The enhancement of glutamate yields by cyanamide supports its role as a prebiotically plausible condensing/activating agent that lowers the kinetic barrier to nitrile hydrolysis."
+      },
+      {
+        "id": "rxn_017",
+        "name": "Strecker synthesis of glycine from formaldehyde",
+        "inputs": [
+          "mol_009",
+          "mol_003",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_019"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite",
+          "aqueous": true,
+          "other": "Concentrated evaporitic conditions, pH 8-9, high [NH3] and [HCN]"
+        },
+        "mechanism": "The simplest Strecker synthesis: (1) NH3 attacks formaldehyde to form methyleneimine (H2C=NH) via hemiaminal dehydration; (2) CN\u207b adds to the imine carbon to produce aminoacetonitrile (H2N-CH2-CN); (3) aminoacetonitrile is hydrolyzed to glycine (H2N-CH2-COOH) via the amide intermediate glycinamide. Montmorillonite catalyzes both the imine formation and nitrile hydrolysis steps.",
+        "reasoning": "Glycine is the simplest and most abundant amino acid produced in Miller-Urey experiments (Miller, 1953, Science) and is formed via the Strecker mechanism from formaldehyde. Glycine serves as the amino donor in the transamination reaction with \u03b1-ketoglutarate to form glutamate (Menor-Salv\u00e1n et al., 2013). The Strecker synthesis of glycine from formaldehyde, ammonia, and HCN is one of the most well-established prebiotic reactions."
+      },
+      {
+        "id": "rxn_018",
+        "name": "NADH-mediated reductive amination of alpha-ketoglutarate to glutamate",
+        "inputs": [
+          "mol_018",
+          "mol_003",
+          "mol_020"
+        ],
+        "outputs": [
+          "mol_021"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "295-300K (room temperature, 25\u00b0C)",
+          "pressure": "1 atm",
+          "catalyst": "none (non-enzymatic)",
+          "aqueous": true,
+          "other": "Ammonium/ammonia buffer at pH 8, 200 mM to 1 M NH3, 3:1 NADH:substrate ratio, 72 h reaction time"
+        },
+        "mechanism": "\u03b1-Ketoglutarate reacts with NH3 to form a hemiaminal intermediate at the C2 keto position. The hemiaminal dehydrates to form an electrophilic iminium ion (Schiff base). NADH then acts as a hydride donor, transferring its C4 hydride to the electrophilic carbon of the iminium ion, reducing it to the amine and yielding L-glutamate. The NADH is consumed and hydrolyzed to adenosine diphosphate ribose (ADPR). Yields are 4% (200 mM NH3) to 23% (1 M NH3, 3:1 NADH ratio). The reaction ceases above pH 10 because the iminium ion concentration drops.",
+        "reasoning": "Rivas et al. (2024, RSC) demonstrated non-enzymatic reductive amination of \u03b1-ketoglutarate by NADH under mild prebiotic conditions. This directly mimics the biochemistry of glutamate dehydrogenase and provides a 'chemical bridge between prebiotic geochemistry and the first autotrophic metabolisms.' While NADH is itself a complex molecule, its core ribonucleotide components are considered ancient. The pH dependence (optimal at pH 8, ceases at pH 10) reflects the requirement for sufficient iminium ion concentration."
+      },
+      {
+        "id": "rxn_019",
+        "name": "Direct hydrothermal reductive amination of alpha-ketoglutarate",
+        "inputs": [
+          "mol_018",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_021"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrrhotite (Fe7S8)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "pyrrhotite surface with dissolved H2 as reductant",
+          "aqueous": true,
+          "other": "Alkaline vent conditions, high dissolved H2 from serpentinization, NH4+ from hydrothermal input"
+        },
+        "mechanism": "\u03b1-Ketoglutarate and dissolved NH3/NH4+ form an imine (Schiff base) at the C2 position on the pyrrhotite mineral surface. The mineral-adsorbed imine is reduced by dissolved H2, which dissociates on the iron-sulfide surface to provide hydride equivalents. The pyrrhotite surface acts as a heterogeneous hydrogenation catalyst, mimicking the function of biological glutamate dehydrogenase. The product glutamate is released from the surface. At these temperatures, rapid cyclization to pyroglutamate competes with product release.",
+        "reasoning": "Non-enzymatic reductive amination of \u03b1-keto acids on iron-sulfide mineral surfaces is a central prediction of the iron-sulfur world hypothesis (W\u00e4chtersh\u00e4user, 1988, 1990). The presence of dissolved H2 from serpentinization provides the reducing power. While Menor-Salv\u00e1n et al. (2013) demonstrated transamination with glycine, direct reductive amination with NH3 and H2 is the more primitive mechanism that does not require a pre-existing amino acid. The high H2 concentrations in Lost City-type systems (13 mM H2) provide thermodynamic feasibility."
+      },
+      {
+        "id": "rxn_020",
+        "name": "Thermal cyclization of glutamate to pyroglutamate",
+        "inputs": [
+          "mol_021"
+        ],
+        "outputs": [
+          "mol_022",
+          "mol_004"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrrhotite (Fe7S8)"
+        ],
+        "conditions": {
+          "temperature": "420-520K (150-250\u00b0C)",
+          "pressure": "high",
+          "catalyst": "thermal, no specific mineral catalyst required but occurs on pyrrhotite surface",
+          "aqueous": true,
+          "other": "Spontaneous at hydrothermal temperatures, reaches equilibrium within minutes at 250\u00b0C"
+        },
+        "mechanism": "Glutamate undergoes intramolecular lactamization: the \u03b1-amino group attacks the \u03b3-carboxylate (C5 carboxyl) via nucleophilic acyl substitution, forming a five-membered lactam ring with loss of water. The product is 5-oxoproline (pyroglutamic acid). This is a redox-neutral, spontaneous dehydration reaction that is kinetically rapid at hydrothermal temperatures. The reaction is reversible and reaches equilibrium.",
+        "reasoning": "The thermal stability literature reviewed identifies spontaneous cyclization of glutamate to pyroglutamate at 150-250\u00b0C as a major fate of glutamate in hydrothermal systems. Menor-Salv\u00e1n et al. (2013) recovered pyroglutamic acid as the primary product (~35% yield) rather than free glutamate in their pyrrhotite experiments at 85\u00b0C. Importantly, dissolved H2 (13 mM) suppresses further decomposition of the glutamate/pyroglutamate pool by inhibiting the redox-sensitive conversion to \u03b1-ketoglutarate and then to succinate + CO2. Pyroglutamate thus acts as a protective reservoir."
+      },
+      {
+        "id": "rxn_021",
+        "name": "Hydrolytic ring-opening of pyroglutamate to glutamate",
+        "inputs": [
+          "mol_022",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_021"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "none (spontaneous at lower temperature, acid or base catalyzed)",
+          "aqueous": true,
+          "other": "Lower temperature pools or cooled hydrothermal effluent, pH-dependent equilibrium shifted toward glutamate below 100\u00b0C"
+        },
+        "mechanism": "The lactam bond of pyroglutamate (5-oxoproline) is hydrolyzed by water. Under mildly acidic or basic conditions, water attacks the lactam carbonyl, opening the ring to regenerate glutamate. At lower temperatures, the equilibrium shifts toward the open-chain form (glutamate) because the entropic penalty of cyclization is less significant and the solvation of the free amino and carboxylate groups is energetically favorable. This creates a temperature-dependent cycling between glutamate and pyroglutamate.",
+        "reasoning": "The pyroglutamate/glutamate equilibrium is temperature-dependent. While cyclization is favored at high temperatures (hydrothermal), ring-opening is favored at lower temperatures. Ferreira et al. (2023, Biochemistry) note that pyroglutamate may have played a constructive role in prebiotic evolution by protecting the glutamate pool. The cycling between environments (hot hydrothermal \u2192 cool surface pools) would create a dynamic reservoir where pyroglutamate formed at depth is converted back to glutamate in cooler settings. In nascent protocells, pyroglutamyl-peptides could protect N-termini from hydrolysis."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Full rTCA analog to glutamate via transamination",
+        "description": "Complete reverse TCA cycle analog on mineral surfaces: CO2 is reduced to CO, carboxylated through C2\u2192C3\u2192C4\u2192C5 intermediates on iron-sulfide minerals, culminating in \u03b1-ketoglutarate, which is transaminated with glycine on pyrrhotite to yield glutamate. This pathway mirrors the biological reductive TCA cycle and demonstrates metabolism-first chemistry.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_013",
+          "mol_014",
+          "mol_015",
+          "mol_016",
+          "mol_017",
+          "mol_018",
+          "mol_019"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Cyanosulfidic systems chemistry to glutamate",
+        "description": "Sutherland's cyanosulfidic network: HCN and H2S undergo UV-driven reductive homologation with Cu photoredox cycling to produce 2-aminopentanedinitrile, which is hydrolyzed to glutamate on clay surfaces. This pathway co-produces nucleotide precursors, demonstrating unified prebiotic chemistry.",
+        "reaction_sequence": [
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Strecker synthesis via acrolein and HCN Michael addition",
+        "description": "Hydrothermal CO2 fixation provides formate, which is reduced to formaldehyde. On surface clay minerals, formaldehyde undergoes aldol condensation to acrolein. HCN adds via Michael addition to give 3-cyanopropanal, followed by Strecker synthesis to 2-aminopentanedinitrile, and finally hydrolysis to glutamate. This pathway links hydrothermal C1 chemistry to surface Strecker mechanisms.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_009",
+          "mol_010",
+          "mol_011",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "NADH-mediated reductive amination of \u03b1-ketoglutarate",
+        "description": "\u03b1-Ketoglutarate produced via the rTCA pathway on pyrrhotite is aminated non-enzymatically by NADH in a biochemical pool environment. This biomimetic route directly mirrors glutamate dehydrogenase chemistry and bridges prebiotic geochemistry to extant metabolism.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_018"
+        ],
+        "key_intermediates": [
+          "mol_014",
+          "mol_018",
+          "mol_020"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Pyrrhotite transamination with Strecker-derived glycine",
+        "description": "Convergent pathway combining hydrothermal rTCA-derived \u03b1-ketoglutarate with surface Strecker-derived glycine. Glycine is synthesized from formaldehyde, ammonia, and HCN via Strecker on clay, then transported to the hydrothermal environment where it donates its amino group to \u03b1-ketoglutarate on pyrrhotite surfaces.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_010",
+          "rxn_017",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_019",
+          "mol_018"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Cyanosulfidic route with cyanamide-assisted hydrolysis",
+        "description": "HCN and H2S produce 2-aminopentanedinitrile via the cyanosulfidic pathway, but instead of simple hydrolysis, the nitrile-to-acid conversion is enhanced by cyanamide acting as a condensing/activating agent, as demonstrated in the Miller 1958 cyanamide experiments.",
+        "reaction_sequence": [
+          "rxn_014",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_023"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Acrolein-Strecker route with cyanamide-assisted hydrolysis",
+        "description": "Combines the acrolein-based Strecker pathway to 2-aminopentanedinitrile with cyanamide-assisted hydrolysis. Formaldehyde from hydrothermal reduction is converted to acrolein on clay, undergoes Michael addition and Strecker reaction, and the resulting dinitrile is hydrolyzed with cyanamide enhancement.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_010",
+          "mol_011",
+          "mol_012",
+          "mol_023"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Pyroglutamate thermal cycling reservoir",
+        "description": "Glutamate produced by any route undergoes thermal cyclization to pyroglutamate at hydrothermal temperatures, protecting it from decomposition. Upon transport to cooler surface or biochemical environments, the lactam ring hydrolyzes to regenerate free glutamate. This is a stabilization/recycling pathway that maintains the glutamate pool across thermal gradients.",
+        "reaction_sequence": [
+          "rxn_020",
+          "rxn_021"
+        ],
+        "key_intermediates": [
+          "mol_022"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Direct hydrothermal reductive amination with H2",
+        "description": "The most primitive amination pathway: \u03b1-ketoglutarate from the rTCA cycle is directly aminated by dissolved NH3 using H2 as the reductant on pyrrhotite surfaces. This requires no pre-existing amino acids or complex cofactors like NADH, representing the earliest possible route to glutamate in a metabolism-first scenario.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_019"
+        ],
+        "key_intermediates": [
+          "mol_014",
+          "mol_018"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Formate-to-formaldehyde feeding dual convergence",
+        "description": "Hydrothermal CO2 reduction to formate, followed by formate reduction to formaldehyde on magnetite, feeds both the Strecker glycine synthesis and the acrolein pathway simultaneously. This demonstrates how a single hydrothermal C1 product (formaldehyde) bifurcates to supply both the glycine amino donor (for transamination) and the acrolein precursor (for Strecker dinitrile synthesis), converging on glutamate through two distinct mechanisms.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_010",
+          "rxn_017",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_009",
+          "mol_019",
+          "mol_010",
+          "mol_012"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_003",
+      "mol_005",
+      "mol_012",
+      "mol_014",
+      "mol_018"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_018",
+        "incoming_reactions": [
+          "rxn_008"
+        ],
+        "outgoing_reactions": [
+          "rxn_009",
+          "rxn_018",
+          "rxn_019",
+          "rxn_020"
+        ]
+      },
+      {
+        "molecule_id": "mol_012",
+        "incoming_reactions": [
+          "rxn_013",
+          "rxn_014"
+        ],
+        "outgoing_reactions": [
+          "rxn_015",
+          "rxn_016"
+        ]
+      },
+      {
+        "molecule_id": "mol_014",
+        "incoming_reactions": [
+          "rxn_004"
+        ],
+        "outgoing_reactions": [
+          "rxn_005"
+        ]
+      },
+      {
+        "molecule_id": "mol_005",
+        "incoming_reactions": [],
+        "outgoing_reactions": [
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_017"
+        ]
+      },
+      {
+        "molecule_id": "mol_009",
+        "incoming_reactions": [
+          "rxn_010"
+        ],
+        "outgoing_reactions": [
+          "rxn_011",
+          "rxn_017"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Glutamate",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_002": 0.85,
+          "rxn_003": 0.8,
+          "rxn_004": 0.75,
+          "rxn_005": 0.8,
+          "rxn_006": 0.7,
+          "rxn_007": 0.75,
+          "rxn_008": 0.8,
+          "rxn_009": 0.9
+        },
+        "chemical_feasibility": 0.78,
+        "pathway_coherence": 0.82,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.85,
+        "overall_confidence": 0.81,
+        "feedback": "Strong pathway grounded in W\u00e4chtersh\u00e4user's iron-sulfur world and Menor-Salv\u00e1n et al. (2013). The stepwise C2\u2192C5 build-up is well-motivated. rxn_006 (OAA\u2192succinate) skips malate and fumarate intermediates, which is a notable simplification. rxn_009 transamination on pyrrhotite is directly supported by literature (35% yield to pyroglutamate). The dependency on glycine from the surface environment (rxn_017) creates a cross-environment dependency that is actually a strength of the network design. The 'oxidative carboxylation' label on rxn_008 is terminologically inaccurate\u2014it is a carboxylation of a thioester.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_006"
+        ],
+        "suggestions": [
+          "Add malate and fumarate as explicit intermediates between oxaloacetate and succinate to better represent the rTCA segment",
+          "Clarify the mechanism of rxn_008 as carboxylation rather than oxidative carboxylation"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_014": 0.4,
+          "rxn_015": 0.75
+        },
+        "chemical_feasibility": 0.45,
+        "pathway_coherence": 0.5,
+        "environmental_progression": 0.65,
+        "target_achievement": 0.6,
+        "overall_confidence": 0.52,
+        "feedback": "rxn_014 is severely oversimplified. The cyanosulfidic reductive homologation from HCN to 2-aminopentanedinitrile (C5H7N3) requires multiple HCN equivalents, UV irradiation, Cu(I/II) photoredox catalysis, and several discrete intermediates. Representing this as a single HCN + H2S step is stoichiometrically unbalanced (1C + 0C cannot yield 5C) and mechanistically implausible. While the cyanosulfidic paradigm (Sutherland, 2016) is well-supported, this pathway's representation fails to capture its essential features. The hydrolysis step (rxn_015) is more reasonable but still simplified, as nitrile-to-acid hydrolysis proceeds through amide intermediates and requires extended reaction times.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_014"
+        ],
+        "suggestions": [
+          "Expand rxn_014 into multiple steps: HCN dimerization, DAMN formation, reductive homologation with H2S/UV/Cu catalysis",
+          "Include UV radiation and Cu catalysis explicitly",
+          "Add intermediate molecules in the HCN polymerization sequence",
+          "Fix stoichiometric balance"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_010": 0.75,
+          "rxn_011": 0.7,
+          "rxn_012": 0.85,
+          "rxn_013": 0.85,
+          "rxn_015": 0.75
+        },
+        "chemical_feasibility": 0.8,
+        "pathway_coherence": 0.85,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.85,
+        "overall_confidence": 0.84,
+        "feedback": "This is the most chemically coherent Strecker-based pathway in the network. The progression from CO2 through formate, formaldehyde, acrolein, 3-cyanopropanal to 2-aminopentanedinitrile follows a logical and literature-supported chain. The acrolein intermediate as a 'prebiotic hub' is well-documented in the Strecker literature. The Michael addition of HCN to acrolein (rxn_012) is a well-known organic reaction. rxn_011 (formaldehyde\u2192acrolein via aldol) is plausible but requires three formaldehyde equivalents and clay catalysis\u2014the stoichiometry should be explicit. The environmental flow from Hydrothermal (rxn_001, rxn_010) to Surface (rxn_011-015) is well-justified. The hydrolysis final step could be slow without assistance.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_011"
+        ],
+        "suggestions": [
+          "Make the stoichiometry of the formaldehyde-to-acrolein aldol condensation explicit (3 CH2O \u2192 CH2=CH-CHO + 2 H2O)",
+          "Consider adding acid/base conditions for the nitrile hydrolysis step"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_002": 0.85,
+          "rxn_003": 0.8,
+          "rxn_004": 0.75,
+          "rxn_005": 0.8,
+          "rxn_006": 0.7,
+          "rxn_007": 0.75,
+          "rxn_008": 0.8,
+          "rxn_018": 0.82
+        },
+        "chemical_feasibility": 0.76,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.8,
+        "overall_confidence": 0.8,
+        "feedback": "This pathway represents the biomimetic route connecting the rTCA analog to the NADH-mediated reductive amination described by Rivas et al. (2024). The Hydrothermal\u2192Biochemical transition is well-justified. The main weakness is that NADH (mol_020) has no synthesis route in the network\u2014it appears as an intermediate but is never produced. The literature reports 4-23% yields for this reaction depending on conditions (pH 8, 25\u00b0C, 72h). The environmental label 'Biochemical' is appropriate given that NADH is a complex cofactor. The rTCA portion shares the same rxn_006 simplification issue as P1.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_006"
+        ],
+        "suggestions": [
+          "Add a synthesis route or import mechanism for NADH, or reclassify it as a starting material with justification",
+          "Note that the reaction requires pH > 7 and relatively long timescales (72h)"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_010": 0.75,
+          "rxn_017": 0.9,
+          "rxn_009": 0.9
+        },
+        "chemical_feasibility": 0.83,
+        "pathway_coherence": 0.82,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.85,
+        "overall_confidence": 0.83,
+        "feedback": "Elegant convergent pathway: Strecker-derived glycine from the Surface environment meets rTCA-derived \u03b1-ketoglutarate from the Hydrothermal environment at the pyrrhotite-catalyzed transamination. This is arguably the most prebiotically plausible route, combining two well-established paradigms. The glycine Strecker synthesis (rxn_017) is one of the most robust reactions in prebiotic chemistry. The transamination on pyrrhotite (rxn_009) is directly supported by Menor-Salv\u00e1n et al. (2013). Note: this pathway implicitly requires the full rTCA chain to produce \u03b1-ketoglutarate, so the 5 steps listed may undercount the total.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Clarify that the 5-step count includes either the rTCA subpath or references it explicitly",
+          "The glyoxylate byproduct (mol_024) from rxn_009 could be recycled\u2014consider showing this"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_014": 0.4,
+          "rxn_016": 0.8
+        },
+        "chemical_feasibility": 0.48,
+        "pathway_coherence": 0.5,
+        "environmental_progression": 0.6,
+        "target_achievement": 0.55,
+        "overall_confidence": 0.5,
+        "feedback": "Shares the same fatal flaw as P2: rxn_014 is stoichiometrically and mechanistically impossible as written. The cyanamide-assisted hydrolysis (rxn_016) is well-supported by Parker et al. (2014) and adds a genuine improvement over simple hydrolysis. However, the pathway cannot be approved due to the broken first step.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_014"
+        ],
+        "suggestions": [
+          "Fix rxn_014 as described for P2"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_010": 0.75,
+          "rxn_011": 0.7,
+          "rxn_012": 0.85,
+          "rxn_013": 0.85,
+          "rxn_016": 0.8
+        },
+        "chemical_feasibility": 0.81,
+        "pathway_coherence": 0.85,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.87,
+        "overall_confidence": 0.85,
+        "feedback": "This is the strongest Strecker pathway variant, combining the well-constructed acrolein-Strecker chain with cyanamide-assisted hydrolysis from Parker et al. (2014). The cyanamide addition addresses the known challenge of slow nitrile hydrolysis under mild conditions. Environmental flow from Hydrothermal (CO2 reduction) through Surface (Strecker + cyanamide hydrolysis) is well-justified. This pathway benefits from the same mechanistic soundness as P3 but with an improved final step.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_011"
+        ],
+        "suggestions": [
+          "Same improvements as P3 regarding formaldehyde-to-acrolein stoichiometry"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_020": 0.95,
+          "rxn_021": 0.8
+        },
+        "chemical_feasibility": 0.88,
+        "pathway_coherence": 0.75,
+        "environmental_progression": 0.7,
+        "target_achievement": 0.7,
+        "overall_confidence": 0.76,
+        "feedback": "This is not a de novo synthesis pathway but rather a stabilization/reservoir cycle that captures the well-documented thermal cyclization of glutamate to pyroglutamate at hydrothermal temperatures. The literature strongly supports this (equilibrium within minutes at 250\u00b0C, reversible). Including this cycle adds depth to the network by addressing the stability challenge identified in the literature. The H2-buffering effect on glutamate stability could be noted. The Biochemical label for rxn_021 is appropriate if the ring-opening occurs at lower temperatures upon transport away from the vent.",
+        "approved": false,
+        "problematic_reactions": [],
+        "suggestions": [
+          "This pathway is a cycle, not a synthesis route\u2014it cannot produce glutamate de novo and should be framed as a preservation mechanism",
+          "Note the role of dissolved H2 in stabilizing the glutamate/pyroglutamate pool"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_002": 0.85,
+          "rxn_003": 0.8,
+          "rxn_004": 0.75,
+          "rxn_005": 0.8,
+          "rxn_006": 0.7,
+          "rxn_007": 0.75,
+          "rxn_008": 0.8,
+          "rxn_019": 0.65
+        },
+        "chemical_feasibility": 0.72,
+        "pathway_coherence": 0.78,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.75,
+        "overall_confidence": 0.76,
+        "feedback": "This pathway uses molecular H2 as the direct reducing agent for the reductive amination of \u03b1-ketoglutarate (rxn_019). While thermodynamically plausible at hydrothermal conditions, this reaction lacks the experimental evidence available for the NADH-mediated (P4) or mineral-catalyzed transamination (P1) routes. H2 is a weak kinetic reducing agent for iminium ions without a catalyst. The pathway would benefit from specifying a mineral catalyst for rxn_019. The rTCA portion shares all the strengths and weaknesses of P1/P4.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_019",
+          "rxn_006"
+        ],
+        "suggestions": [
+          "Specify a mineral catalyst (e.g., Ni-Fe alloy or FeS surface) for the H2-mediated reductive amination",
+          "Consider citing experimental evidence for direct H2 reductive amination of keto acids",
+          "Improve rxn_006 as in P1"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_010": 0.75,
+          "rxn_011": 0.7,
+          "rxn_012": 0.85,
+          "rxn_013": 0.85,
+          "rxn_017": 0.9,
+          "rxn_015": 0.75
+        },
+        "chemical_feasibility": 0.81,
+        "pathway_coherence": 0.83,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.82,
+        "overall_confidence": 0.82,
+        "feedback": "This pathway highlights the dual convergence from formaldehyde: one branch feeding the acrolein-Strecker route (to 2-aminopentanedinitrile and then glutamate) and another feeding glycine Strecker synthesis (for use in transamination). The formaldehyde hub is a genuine convergence point in prebiotic chemistry. The environmental progression from Hydrothermal formate/formaldehyde production to Surface Strecker chemistry is well-justified. This pathway effectively demonstrates how a single hydrothermal feedstock can supply multiple downstream synthesis routes.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_011"
+        ],
+        "suggestions": [
+          "Clarify whether P10 terminates at glutamate via hydrolysis (rxn_015) or also includes the transamination branch"
+        ]
+      }
+    ],
+    "best_pathway_id": "P7",
+    "overall_confidence": 0.84,
+    "network_feedback": "This is an exceptionally well-designed synthesis network that demonstrates deep understanding of prebiotic glutamate chemistry. The network successfully integrates three major paradigms (iron-sulfur world/rTCA, Strecker/atmospheric chemistry, and cyanosulfidic systems chemistry) with strong literature grounding. The 5 hub molecules create genuine convergence, and the 10 pathways provide substantial redundancy in reaching the target. Strengths: (1) Excellent literature alignment with Menor-Salv\u00e1n et al. (2013) for pyrrhotite-catalyzed transamination, Sutherland (2016) for cyanosulfidic chemistry, Rivas et al. (2024) for NADH reductive amination, and Parker et al. (2014) for cyanamide-assisted hydrolysis. (2) Mineral catalysts are specified throughout hydrothermal reactions (greigite, magnetite, FeNiS, pyrrhotite). (3) The pyroglutamate cycling mechanism (P8) addresses the known stability challenge. (4) Environmental flow Hydrothermal\u2192Surface\u2192Biochemical is well-motivated. Weaknesses: (1) rxn_014 (cyanosulfidic shortcut) is stoichiometrically impossible as written\u2014this compromises P2 and P6. (2) NADH (mol_020) has no synthesis route in the network. (3) rxn_006 skips malate/fumarate intermediates in the rTCA segment. (4) rxn_011 (formaldehyde\u2192acrolein) needs explicit stoichiometry. Despite these issues, 6 of 10 pathways are chemically viable, and the network achieves its target through multiple independent routes. The network is APPROVED.",
+    "approved": true,
+    "hub_quality": 0.9,
+    "convergence_quality": 0.88
+  },
+  "success": false,
+  "attempts": 2,
+  "notes": null
+}

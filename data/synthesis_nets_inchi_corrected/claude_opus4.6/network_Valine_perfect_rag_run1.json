@@ -1,0 +1,1334 @@
+{
+  "target_molecule": "Valine",
+  "network": {
+    "target_molecule": "L-Valine",
+    "overall_strategy": "This synthesis network constructs L-valine through multiple convergent prebiotic pathways anchored in the experimentally demonstrated cyanosulfidic protometabolism of Patel et al. (2015). The network begins with hydrothermal CO2 fixation on iron-sulfur minerals to produce C1 feedstocks (formate, formaldehyde) and C3 metabolic intermediates (pyruvate). These feed into surface formose-type chemistry to generate C3 sugar derivatives (dihydroxyacetone, hydroxyacetone), which undergo Cu/H2S-mediated reductive deoxygenation to acetone \u2014 the central hub molecule. Acetone enters the cyanosulfidic pathway: cyanohydrin formation \u2192 thioamide conversion \u2192 Cu/H2S reductive rearrangement with chain extension \u2192 amination \u2192 hydrolysis to valine. A parallel hydrothermal route proceeds via pyruvate condensation to \u03b1-ketoisovalerate followed by reductive amination. A third route produces the C6 aminonitrile via iterative cyanosulfidic chain extension. A Strecker route via isobutyraldehyde provides additional convergence on the key aminonitrile intermediate. The biochemical stage incorporates valine into peptides on clay surfaces.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "Carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "Hydrogen gas",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "H2O",
+        "iupac_name": "water",
+        "common_name": "Water",
+        "inchi": "InChI=1S/H2O/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "CHN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "HCN",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_005",
+        "formula": "H2S",
+        "iupac_name": "hydrogen sulfide",
+        "common_name": "Sulfidic acid",
+        "inchi": "InChI=1S/H2S/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_006",
+        "formula": "H3N",
+        "iupac_name": "ammonia",
+        "common_name": "Ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_007",
+        "formula": "CHO2-",
+        "iupac_name": "formate",
+        "common_name": "Formate",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)/p-1",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_008",
+        "formula": "CH2O",
+        "iupac_name": "formaldehyde",
+        "common_name": "Formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C2H4O2",
+        "iupac_name": "glycolaldehyde",
+        "common_name": "Glycolaldehyde",
+        "inchi": "InChI=1S/C2H4O2/c3-1-2-4/h1,4H,2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C3H6O3",
+        "iupac_name": "1,3-dihydroxypropan-2-one",
+        "common_name": "Dihydroxyacetone",
+        "inchi": "InChI=1S/C3H6O3/c4-1-3(6)2-5/h4-5H,1-2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C3H6O2",
+        "iupac_name": "1-hydroxypropan-2-one",
+        "common_name": "Hydroxyacetone",
+        "inchi": "InChI=1S/C3H6O2/c1-3(5)2-4/h4H,2H2,1H3",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C3H6O",
+        "iupac_name": "propan-2-one",
+        "common_name": "Acetone",
+        "inchi": "InChI=1S/C3H6O/c1-3(2)4/h1-2H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C4H7NO",
+        "iupac_name": "2-hydroxy-2-methylpropanenitrile",
+        "common_name": "Acetone cyanohydrin",
+        "inchi": "InChI=1S/C4H7NO/c1-4(2,6)3-5/h6H,1-2H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C4H9NOS",
+        "iupac_name": "2-hydroxy-2-methylpropanethioamide",
+        "common_name": "2-Hydroxy-2-methylpropanethioamide",
+        "inchi": "InChI=1S/C4H9NOS/c1-4(2,6)3(5)7/h6H,1-2H3,(H2,5,7)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C5H9NO",
+        "iupac_name": "2-hydroxy-3-methylbutanenitrile",
+        "common_name": "2-Hydroxy-3-methylbutanenitrile",
+        "inchi": "InChI=1S/C5H9NO/c1-4(2)5(7)3-6/h4-5,7H,1-2H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C5H10N2",
+        "iupac_name": "2-amino-3-methylbutanenitrile",
+        "common_name": "2-Amino-3-methylbutanenitrile",
+        "inchi": "InChI=1S/C5H10N2/c1-4(2)5(7)3-6/h4-5H,7H2,1-2H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_017",
+        "formula": "C6H12N2",
+        "iupac_name": "2-amino-4-methylpentanenitrile",
+        "common_name": "2-Amino-4-methylpentanenitrile",
+        "inchi": "InChI=1S/C6H12N2/c1-5(2)3-6(8)4-7/h5-6H,3,8H2,1-2H3",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_018",
+        "formula": "H2S2",
+        "iupac_name": "disulfane",
+        "common_name": "Disulfane",
+        "inchi": "InChI=1S/H2S2/c1-2/h1-2H",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_019",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "Pyruvate",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_020",
+        "formula": "C5H8O4",
+        "iupac_name": "2-hydroxy-2-methyl-3-oxobutanoic acid",
+        "common_name": "Acetolactate",
+        "inchi": "InChI=1S/C5H8O4/c1-3(6)5(2,9)4(7)8/h9H,1-2H3,(H,7,8)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_021",
+        "formula": "C5H8O3",
+        "iupac_name": "3-methyl-2-oxobutanoic acid",
+        "common_name": "alpha-Ketoisovalerate",
+        "inchi": "InChI=1S/C5H8O3/c1-3(2)4(6)5(7)8/h3H,1-2H3,(H,7,8)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_022",
+        "formula": "C4H8O",
+        "iupac_name": "2-methylpropanal",
+        "common_name": "Isobutyraldehyde",
+        "inchi": "InChI=1S/C4H8O/c1-4(2)3-5/h3-4H,1-2H3",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_023",
+        "formula": "C5H9NOS",
+        "iupac_name": "2-hydroxy-3-methylbutanethioamide",
+        "common_name": "2-Hydroxy-3-methylbutanethioamide",
+        "inchi": "InChI=1S/C5H11NOS/c1-3(2)4(7)5(6)8/h3-4,7H,1-2H3,(H2,6,8)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_024",
+        "formula": "C6H11NO",
+        "iupac_name": "2-hydroxy-4-methylpentanenitrile",
+        "common_name": "2-Hydroxy-4-methylpentanenitrile",
+        "inchi": "InChI=1S/C6H11NO/c1-5(2)3-6(8)4-7/h5-6,8H,3H2,1-2H3",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_025",
+        "formula": "C5H11NO2",
+        "iupac_name": "2-amino-3-methylbutanoic acid",
+        "common_name": "L-Valine",
+        "inchi": "InChI=1S/C5H11NO2/c1-3(2)4(6)5(7)8/h3-4H,6H2,1-2H3,(H,7,8)",
+        "role": "target",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_026",
+        "formula": "C2H5NO2",
+        "iupac_name": "2-aminoacetic acid",
+        "common_name": "Glycine",
+        "inchi": "InChI=1S/C2H5NO2/c3-1-2(4)5/h1,3H2,(H,4,5)",
+        "role": "starting",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_027",
+        "formula": "C7H14N2O3",
+        "iupac_name": "2-[[2-amino-3-methylbutanoyl]amino]acetic acid",
+        "common_name": "Val-Gly dipeptide",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "CO2 hydrogenation to formate on greigite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (>50 bar)",
+          "catalyst": "greigite (Fe3S4)",
+          "aqueous": true,
+          "other": "Alkaline hydrothermal vent, pH 9-11, H2-rich fluid"
+        },
+        "mechanism": "CO2 is reduced to formate via surface-adsorbed hydride transfer on greigite, an analog of biological [Fe4S4] clusters. H2 dissociates on the mineral surface providing reducing equivalents for CO2 reduction to HCOO-.",
+        "reasoning": "Greigite-catalyzed CO2 reduction to formate is well-established in hydrothermal prebiotic chemistry (Roldan et al., 2015; Herschy et al., 2014). This provides the first carbon fixation step analogous to the Wood-Ljungdahl pathway."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Formate reduction to formaldehyde on magnetite",
+        "inputs": [
+          "mol_007",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_008",
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "370-450K",
+          "pressure": "high (>50 bar)",
+          "catalyst": "magnetite (Fe3O4)",
+          "aqueous": true,
+          "other": "Subseafloor hydrothermal, reducing conditions"
+        },
+        "mechanism": "Formate is further reduced on magnetite surfaces via hydrogen transfer, losing oxygen as water and producing formaldehyde (HCHO). Magnetite provides the catalytic surface for Fischer-Tropsch-type single carbon reduction.",
+        "reasoning": "Magnetite-catalyzed reduction of C1 oxygenates is supported by Fischer-Tropsch-type (FTT) synthesis experiments (McCollom & Seewald, 2007). Formaldehyde is a key C1 building block for formose-type sugar synthesis, providing the upstream feedstock for the entire valine pathway."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Pyruvate synthesis from CO2 reduction on greigite/magnetite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_019",
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (>50 bar)",
+          "catalyst": "greigite and magnetite mixed mineral surfaces",
+          "aqueous": true,
+          "other": "Alkaline hydrothermal vent, pH gradient, multi-step on mineral surface"
+        },
+        "mechanism": "Sequential CO2 reduction and C-C bond formation on mixed iron-sulfur/iron-oxide mineral surfaces. CO2 is first reduced to C1 intermediates (CO, formate), which undergo further reduction and coupling to form the C3 alpha-keto acid pyruvate. This mirrors the reductive acetyl-CoA pathway in reverse.",
+        "reasoning": "Hydrothermal synthesis of pyruvate from CO2 and H2 on iron-sulfur mineral surfaces has been demonstrated by Cody et al. (2000, Science) and discussed in the context of the iron-sulfur world hypothesis (Wachtershauser, 1990). Pyruvate is a central metabolic hub connecting to amino acid synthesis."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Formose reaction: formaldehyde dimerization to glycolaldehyde",
+        "inputs": [
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite clay",
+          "calcium hydroxide (Ca(OH)2)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite with Ca(OH)2",
+          "aqueous": true,
+          "other": "Evaporitic pool, alkaline pH, formose reaction conditions"
+        },
+        "mechanism": "Two molecules of formaldehyde undergo aldol condensation catalyzed by Ca(OH)2 on montmorillonite clay surfaces to form glycolaldehyde. This is the initial step of the formose reaction, the base-catalyzed self-condensation of formaldehyde to form C2 sugars.",
+        "reasoning": "The formose reaction (Butlerov, 1861) produces glycolaldehyde as the first sugar from formaldehyde under alkaline conditions. Clay minerals concentrate and orient reactants (Ferris et al., 1996). Borate minerals can stabilize products (Ricardo et al., 2004)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Aldol condensation: formaldehyde + glycolaldehyde to dihydroxyacetone",
+        "inputs": [
+          "mol_008",
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite)",
+          "montmorillonite clay"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "borate minerals with montmorillonite",
+          "aqueous": true,
+          "other": "Evaporitic pool, borate stabilization of triose intermediates"
+        },
+        "mechanism": "Aldol condensation of formaldehyde with glycolaldehyde on borate-mineral surfaces produces dihydroxyacetone (DHA). Borate minerals complex with the vicinal diol products, stabilizing them against degradation and shifting equilibrium toward C3 sugar formation.",
+        "reasoning": "Borate-stabilized formose chemistry preferentially yields C3 sugars including DHA (Ricardo et al., 2004, Science). Montmorillonite provides additional catalytic surfaces. DHA is specifically identified as a key upstream feedstock for valine in the Patel et al. (2015) cyanosulfidic network."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Aldol condensation: formaldehyde + glycolaldehyde to hydroxyacetone",
+        "inputs": [
+          "mol_008",
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite clay",
+          "calcium hydroxide (Ca(OH)2)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite with Ca(OH)2",
+          "aqueous": true,
+          "other": "Evaporitic pool, slightly less alkaline than DHA route, kinetic product"
+        },
+        "mechanism": "Aldol condensation of formaldehyde with glycolaldehyde followed by tautomerization and partial reduction yields hydroxyacetone (acetol). Under slightly different conditions (lower pH, different mineral surface), the condensation favors the methylated triose over DHA.",
+        "reasoning": "Hydroxyacetone (acetol) is a known product of formose-type reactions and isomer of DHA formed under variant conditions (Breslow, 1959). Patel et al. (2015) identify hydroxyacetone as an alternative entry point to the valine cyanosulfidic pathway."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Reductive deoxygenation of DHA to acetone (Cu/H2S)",
+        "inputs": [
+          "mol_010",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_012",
+          "mol_003"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "elemental copper (Cu0)",
+          "sulfidic acid (H2S)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "elemental copper and H2S in cyanosulfidic solution",
+          "aqueous": true,
+          "other": "Cyanosulfidic surface pool, UV irradiation may assist"
+        },
+        "mechanism": "Copper acts as a single-electron reductant in concert with hydrogen sulfide, stripping both hydroxymethyl groups from dihydroxyacetone and reducing the C3 backbone to acetone. Cu is oxidized to Cu+/Cu2+ while H2S is partially oxidized to disulfane.",
+        "reasoning": "Experimentally demonstrated by Patel, Percivalle, Ritson, Duffy, and Sutherland (2015, Nature Chemistry, DOI: 10.1038/nchem.2202). Elemental copper and H2S mediate the reductive deoxygenation of sugar derivatives to ketones. This is a key step converting sugar feedstocks to the central acetone intermediate."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Reductive deoxygenation of hydroxyacetone to acetone (Cu/H2S)",
+        "inputs": [
+          "mol_011",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_012",
+          "mol_003"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "elemental copper (Cu0)",
+          "sulfidic acid (H2S)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "elemental copper and H2S in cyanosulfidic solution",
+          "aqueous": true,
+          "other": "Cyanosulfidic surface pool"
+        },
+        "mechanism": "Copper/H2S-mediated reductive removal of the hydroxyl group from hydroxyacetone (acetol), yielding acetone. The mechanism is analogous to rxn_007 but requires removal of only one oxygen, making it a more facile transformation.",
+        "reasoning": "Experimentally demonstrated by Patel et al. (2015, Nature Chemistry, DOI: 10.1038/nchem.2202). This provides a second convergent route to acetone from a different C3 sugar derivative, establishing acetone as a robust hub intermediate."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Cyanohydrin formation: acetone + HCN to acetone cyanohydrin",
+        "inputs": [
+          "mol_012",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfidic acid (H2S)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "cyanosulfidic solution (mild base from H2S/CN- equilibrium)",
+          "aqueous": true,
+          "other": "Cyanosulfidic pool, CN- generated in situ from HCN"
+        },
+        "mechanism": "Nucleophilic addition of cyanide ion (CN-) to the electrophilic carbonyl carbon of acetone. The cyanide attacks the sp2 carbon, forming a new C-C bond, and subsequent protonation of the resulting alkoxide yields the tertiary cyanohydrin. This is the ketone variant of the Kiliani reaction.",
+        "reasoning": "Experimentally demonstrated by Patel et al. (2015, Nature Chemistry, DOI: 10.1038/nchem.2202). Cyanohydrin formation from ketones with HCN is a well-established reaction in organic chemistry. The use of acetone (rather than an aldehyde) produces the branched skeleton characteristic of valine."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Thioamide formation: acetone cyanohydrin + H2S",
+        "inputs": [
+          "mol_013",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfidic acid (H2S)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "H2S as both reagent and solvent component",
+          "aqueous": true,
+          "other": "Cyanosulfidic pool, ambient conditions"
+        },
+        "mechanism": "Hydrogen sulfide adds across the nitrile (C\u2261N) triple bond of the cyanohydrin. The sulfur nucleophile attacks the electrophilic nitrile carbon, and proton transfer completes conversion to a thioamide (C(=S)NH2). This activates the nitrile for subsequent reductive rearrangement chemistry.",
+        "reasoning": "Experimentally demonstrated by Patel et al. (2015, Nature Chemistry, DOI: 10.1038/nchem.2202). Conversion of nitriles to thioamides via H2S is a key step in the cyanosulfidic framework that activates the carbon backbone for Cu-mediated chain extension."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Reductive rearrangement and chain extension (Cu/H2S/HCN)",
+        "inputs": [
+          "mol_014",
+          "mol_004",
+          "mol_005",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_015",
+          "mol_018"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "elemental copper (Cu0)",
+          "sulfidic acid (H2S)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "elemental copper as single-electron reductant, H2S as co-reductant",
+          "aqueous": true,
+          "other": "Cyanosulfidic pool, critical C-C bond forming step"
+        },
+        "mechanism": "Complex multi-step Cu/H2S-mediated reductive rearrangement. The thioamide nitrogen is lost, and a new C-C bond is formed by incorporation of a second HCN unit. Copper provides single-electron reducing equivalents while H2S acts as co-reductant and sulfur acts as leaving group, being oxidized to disulfane (H2S2). The net result is chain extension from C4 to C5, establishing the branched valine carbon skeleton as an alpha-hydroxynitrile.",
+        "reasoning": "Experimentally demonstrated by Patel et al. (2015, Nature Chemistry, DOI: 10.1038/nchem.2202). This is the critical and most mechanistically complex step in valine synthesis \u2014 the Cu/H2S-mediated reductive rearrangement that builds the branched C5 skeleton from the C4 thioamide and HCN. The detailed radical/polar mechanism remains under active investigation."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Strecker-type amination: hydroxynitrile + ammonia to aminonitrile",
+        "inputs": [
+          "mol_015",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_016",
+          "mol_003"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfidic acid (H2S)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "cyanosulfidic conditions, NH3 from volcanic/atmospheric sources",
+          "aqueous": true,
+          "other": "Cyanosulfidic pool, nucleophilic substitution"
+        },
+        "mechanism": "Nucleophilic substitution of the alpha-hydroxyl group by ammonia. NH3 displaces the OH at the alpha-carbon adjacent to the nitrile, converting the hydroxynitrile to an aminonitrile. This is a classic Strecker-type amination producing the direct aminonitrile precursor of valine.",
+        "reasoning": "Experimentally demonstrated by Patel et al. (2015, Nature Chemistry, DOI: 10.1038/nchem.2202). Amination of alpha-hydroxynitriles by ammonia to give aminonitriles is the penultimate step in the Strecker synthesis of amino acids, well-established in prebiotic chemistry (Miller, 1957; Strecker, 1850)."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Nitrile hydrolysis of C5 aminonitrile to L-valine",
+        "inputs": [
+          "mol_016",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_025",
+          "mol_006"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite clay"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "clay surface catalysis, mildly acidic or neutral aqueous",
+          "aqueous": true,
+          "other": "Surface pool, extended hydrolysis period, clay may catalyze hydrolysis"
+        },
+        "mechanism": "Hydrolysis of the nitrile group of 2-amino-3-methylbutanenitrile to a carboxylic acid. Water attacks the electrophilic nitrile carbon, forming an amide intermediate (2-amino-3-methylbutanamide), which further hydrolyzes to the free carboxylic acid L-valine with release of ammonia. The two water equivalents are consumed sequentially.",
+        "reasoning": "Experimentally demonstrated by Patel et al. (2015, Nature Chemistry, DOI: 10.1038/nchem.2202). Nitrile hydrolysis to carboxylic acids is the final step of the Strecker synthesis. Clay minerals may catalyze the hydrolysis (Ferris, 2005). This completes the conversion of the aminonitrile to the amino acid."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Pyruvate self-condensation to acetolactate",
+        "inputs": [
+          "mol_019"
+        ],
+        "outputs": [
+          "mol_020",
+          "mol_001"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "pyrite and mackinawite mineral surfaces",
+          "aqueous": true,
+          "other": "Alkaline hydrothermal vent, analogous to acetolactate synthase reaction"
+        },
+        "mechanism": "Two molecules of pyruvate undergo condensation on iron-sulfide mineral surfaces. One pyruvate is decarboxylated to an activated acetaldehyde equivalent (bound to the mineral surface), which then attacks the second pyruvate at its carbonyl carbon, forming the C5 alpha-acetolactate with loss of CO2. This mirrors the biological acetolactate synthase reaction.",
+        "reasoning": "The condensation of pyruvate to form acetolactate is a well-known biochemical reaction catalyzed by acetolactate synthase. Iron-sulfide minerals can promote decarboxylation and C-C bond formation from alpha-keto acids (Cody et al., 2000, Science). The prebiotic plausibility of pyruvate self-condensation on mineral surfaces is supported by the iron-sulfur world hypothesis (Wachtershauser, 1990)."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Acetolactate rearrangement/reduction to alpha-ketoisovalerate",
+        "inputs": [
+          "mol_020",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_021",
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "370-420K",
+          "pressure": "high",
+          "catalyst": "magnetite and greigite mineral surfaces",
+          "aqueous": true,
+          "other": "Hydrothermal vent, reductive conditions with H2"
+        },
+        "mechanism": "Acetolactate undergoes rearrangement (1,2-methyl shift analogous to the biological acetohydroxy acid isomeroreductase reaction) and reduction on mineral surfaces to yield alpha-ketoisovalerate (3-methyl-2-oxobutanoic acid). H2 provides reducing equivalents, and the mineral surfaces template the rearrangement.",
+        "reasoning": "This reaction mirrors the biological valine biosynthesis pathway (acetolactate \u2192 alpha-ketoisovalerate). While the exact prebiotic version is speculative, mineral-catalyzed rearrangements and reductions of alpha-keto acids are supported by the iron-sulfur world framework (Wachtershauser, 1990; Cody et al., 2000). The reaction is included to provide an alternative hydrothermal route to the valine carbon skeleton."
+      },
+      {
+        "id": "rxn_016",
+        "name": "Reductive amination of alpha-ketoisovalerate to L-valine",
+        "inputs": [
+          "mol_021",
+          "mol_006",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_025",
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite mineral surface, H2 as reductant",
+          "aqueous": true,
+          "other": "Alkaline hydrothermal vent, NH3 dissolved in vent fluid"
+        },
+        "mechanism": "Ammonia attacks the alpha-keto carbon of alpha-ketoisovalerate forming an imine (Schiff base) intermediate. The imine is then reduced by H2 on the greigite mineral surface to yield the amine product, L-valine. This is a classic reductive amination proceeding through an imine intermediate.",
+        "reasoning": "Reductive amination of alpha-keto acids to amino acids on mineral surfaces is a well-established prebiotic pathway (Huber & Wachtershauser, 2006; Barge et al., 2019). Greigite provides both the catalytic surface and reducing environment. This represents the hydrothermal counterpart to the surface cyanosulfidic route."
+      },
+      {
+        "id": "rxn_017",
+        "name": "Decarboxylation of alpha-ketoisovalerate to isobutyraldehyde",
+        "inputs": [
+          "mol_021"
+        ],
+        "outputs": [
+          "mol_022",
+          "mol_001"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "370-420K",
+          "pressure": "high",
+          "catalyst": "pyrite mineral surface, thermal decarboxylation",
+          "aqueous": true,
+          "other": "Hydrothermal, thermal decarboxylation of alpha-keto acid"
+        },
+        "mechanism": "Thermal decarboxylation of alpha-ketoisovalerate proceeds through loss of CO2 from the alpha-keto acid functionality, yielding isobutyraldehyde (2-methylpropanal). The pyrite surface may stabilize the transition state and promote the decarboxylation. This is analogous to the well-known decarboxylation of pyruvate to acetaldehyde.",
+        "reasoning": "Thermal decarboxylation of alpha-keto acids is well-established in prebiotic chemistry (Cody et al., 2000; Cooper et al., 2011). Pyruvate decarboxylation to acetaldehyde on mineral surfaces is documented by Novikov & Copley (2013). The branched alpha-keto acid alpha-ketoisovalerate would similarly decarboxylate to isobutyraldehyde."
+      },
+      {
+        "id": "rxn_018",
+        "name": "Strecker synthesis from isobutyraldehyde to valine aminonitrile",
+        "inputs": [
+          "mol_022",
+          "mol_004",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_016",
+          "mol_003"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite clay",
+          "sulfidic acid (H2S)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite surface catalysis",
+          "aqueous": true,
+          "other": "Surface pool, classic Strecker conditions, aldehyde + HCN + NH3"
+        },
+        "mechanism": "Classic Strecker amino acid synthesis: ammonia reacts with isobutyraldehyde to form an imine (Schiff base) intermediate (2-methylpropanimine). HCN then attacks the electrophilic imine carbon, yielding the alpha-aminonitrile 2-amino-3-methylbutanenitrile. The aldehyde-based Strecker synthesis converges on the same aminonitrile produced by the cyanosulfidic pathway.",
+        "reasoning": "The Strecker synthesis is one of the oldest and most robust prebiotic amino acid synthesis routes (Strecker, 1850; Miller, 1957). Applied to isobutyraldehyde, it produces 2-amino-3-methylbutanenitrile \u2014 the direct precursor to valine. This creates a convergence point where the hydrothermal decarboxylation route feeds into the surface Strecker chemistry to reach the same key aminonitrile intermediate."
+      },
+      {
+        "id": "rxn_019",
+        "name": "Iterative cyanosulfidic chain extension: hydroxynitrile to C6 thioamide and rearrangement",
+        "inputs": [
+          "mol_015",
+          "mol_005",
+          "mol_004",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_024",
+          "mol_018"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "elemental copper (Cu0)",
+          "sulfidic acid (H2S)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "elemental copper as reductant, H2S as co-reductant and reagent",
+          "aqueous": true,
+          "other": "Cyanosulfidic pool, second round of thioamide-rearrangement chemistry"
+        },
+        "mechanism": "The C5 hydroxynitrile (2-hydroxy-3-methylbutanenitrile) undergoes a second round of cyanosulfidic processing: (1) H2S converts the nitrile to a thioamide (2-hydroxy-3-methylbutanethioamide); (2) Cu/H2S-mediated reductive rearrangement with an additional HCN equivalent extends the chain by one carbon, yielding the C6 alpha-hydroxynitrile 2-hydroxy-4-methylpentanenitrile. Disulfane is produced as a byproduct of the sulfur redox chemistry.",
+        "reasoning": "This iterative application of the cyanosulfidic chain extension mechanism from Patel et al. (2015, Nature Chemistry) is proposed as the source of the C6 aminonitrile that also yields valine. The same thioamide \u2192 Cu/H2S rearrangement \u2192 hydroxynitrile sequence that converts C4 \u2192 C5 can operate on the C5 substrate to produce C6. This addresses the gap in the previous network where the C6 aminonitrile lacked a production reaction."
+      },
+      {
+        "id": "rxn_020",
+        "name": "Amination of C6 hydroxynitrile to C6 aminonitrile",
+        "inputs": [
+          "mol_024",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_017",
+          "mol_003"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfidic acid (H2S)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "cyanosulfidic conditions",
+          "aqueous": true,
+          "other": "Cyanosulfidic pool, NH3 substitution"
+        },
+        "mechanism": "Nucleophilic substitution of the alpha-hydroxyl group in 2-hydroxy-4-methylpentanenitrile by ammonia, yielding 2-amino-4-methylpentanenitrile. This is the same Strecker-type amination mechanism as rxn_012 but operating on the C6 hydroxynitrile substrate.",
+        "reasoning": "This step parallels the amination in Pathway 1 (rxn_012) and completes the C6 aminonitrile production, as described in the Patel et al. (2015) cyanosulfidic framework. The C6 aminonitrile was identified in the literature as an alternative precursor to valine through hydrolysis with chain shortening."
+      },
+      {
+        "id": "rxn_021",
+        "name": "Nitrile hydrolysis of C6 aminonitrile to L-valine (with chain shortening)",
+        "inputs": [
+          "mol_017",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_025",
+          "mol_006"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite clay"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "clay surface, aqueous hydrolysis",
+          "aqueous": true,
+          "other": "Surface pool, extended reaction time, chain shortening mechanism"
+        },
+        "mechanism": "Hydrolysis of the nitrile group of 2-amino-4-methylpentanenitrile with concomitant loss of one carbon, converting the C6 aminonitrile to the C5 amino acid L-valine. The chain shortening likely proceeds through a retro-aldol or decarboxylative mechanism under aqueous conditions, releasing ammonia and CO2 or formaldehyde.",
+        "reasoning": "Described by Patel et al. (2015, Nature Chemistry, DOI: 10.1038/nchem.2202) as an alternative route to valine from a C6 aminonitrile. The literature acknowledges that the mechanism of chain shortening during hydrolysis is not fully characterized and remains an open question (see Open Questions #6 in literature review)."
+      },
+      {
+        "id": "rxn_022",
+        "name": "Peptide bond formation: valine + glycine on clay",
+        "inputs": [
+          "mol_025",
+          "mol_026"
+        ],
+        "outputs": [
+          "mol_027",
+          "mol_003"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "montmorillonite clay"
+        ],
+        "conditions": {
+          "temperature": "330-370K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite clay surface",
+          "aqueous": false,
+          "other": "Wet-dry cycling in evaporitic pool, dehydration condensation on clay"
+        },
+        "mechanism": "Condensation of the carboxyl group of valine with the amino group of glycine on montmorillonite clay surfaces during wet-dry cycling. Dehydration during the dry phase drives peptide bond formation, while clay surfaces orient and activate the amino acids. The Val-Gly dipeptide is released during the wet phase.",
+        "reasoning": "Peptide bond formation on montmorillonite clay during wet-dry cycling is well-established (Ferris et al., 1996; Lahav et al., 1978; Rode, 1999). This represents the biochemical assembly stage where valine, produced by surface cyanosulfidic chemistry, is incorporated into peptides as the first step toward functional proto-proteins."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Full hydrothermal-to-surface cyanosulfidic route via DHA (primary Patel pathway)",
+        "description": "Complete pathway from CO2 fixation through formaldehyde, formose chemistry to DHA, reductive deoxygenation to acetone, then the full cyanosulfidic sequence (cyanohydrin \u2192 thioamide \u2192 rearrangement \u2192 amination \u2192 hydrolysis) to L-valine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_007",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_010",
+          "mol_012",
+          "mol_013",
+          "mol_015",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Full hydrothermal-to-surface cyanosulfidic route via hydroxyacetone",
+        "description": "Same as P1 but diverges at the sugar stage: formaldehyde + glycolaldehyde \u2192 hydroxyacetone instead of DHA. Converges on acetone and follows the same downstream cyanosulfidic chemistry to valine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_006",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_011",
+          "mol_012",
+          "mol_013",
+          "mol_015",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "DHA cyanosulfidic pathway (surface only, starting from DHA)",
+        "description": "Surface-only pathway starting from available DHA, through acetone and the full cyanosulfidic sequence to valine. Assumes DHA is available from formose or photochemical synthesis.",
+        "reaction_sequence": [
+          "rxn_007",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_013",
+          "mol_015",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Hydroxyacetone cyanosulfidic pathway (surface only)",
+        "description": "Surface-only pathway starting from available hydroxyacetone, through acetone and the cyanosulfidic sequence to valine.",
+        "reaction_sequence": [
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_013",
+          "mol_015",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "C6 aminonitrile route via iterative cyanosulfidic chain extension from DHA",
+        "description": "Extends the cyanosulfidic pathway through a second round of chain extension, producing the C6 hydroxynitrile, which is aminated and then hydrolyzed with chain shortening to yield valine.",
+        "reaction_sequence": [
+          "rxn_007",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_019",
+          "rxn_020",
+          "rxn_021"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_013",
+          "mol_015",
+          "mol_024",
+          "mol_017"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "C6 aminonitrile route via iterative cyanosulfidic chain extension from hydroxyacetone",
+        "description": "Same as P5 but enters via hydroxyacetone \u2192 acetone. The C6 aminonitrile is produced by double chain extension and hydrolyzes to valine.",
+        "reaction_sequence": [
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_019",
+          "rxn_020",
+          "rxn_021"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_013",
+          "mol_015",
+          "mol_024",
+          "mol_017"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Hydrothermal pyruvate \u2192 acetolactate \u2192 alpha-ketoisovalerate \u2192 reductive amination to valine",
+        "description": "Entirely hydrothermal pathway: CO2 is fixed to pyruvate, two pyruvates condense to acetolactate, which rearranges to alpha-ketoisovalerate, and reductive amination with NH3 yields valine. This mirrors the biological valine biosynthesis pathway.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_014",
+          "rxn_015",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_019",
+          "mol_020",
+          "mol_021"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Hydrothermal keto acid \u2192 decarboxylation \u2192 surface Strecker to valine",
+        "description": "Hybrid hydrothermal-surface pathway: pyruvate condenses to alpha-ketoisovalerate in hydrothermal vents, which decarboxylates to isobutyraldehyde. The aldehyde is transported to surface pools where classic Strecker synthesis (aldehyde + HCN + NH3) yields the aminonitrile, which hydrolyzes to valine.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_014",
+          "rxn_015",
+          "rxn_017",
+          "rxn_018",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_019",
+          "mol_021",
+          "mol_022",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Full network pathway: hydrothermal CO2 fixation \u2192 pyruvate \u2192 isobutyraldehyde \u2192 Strecker aminonitrile \u2192 valine",
+        "description": "Complete hydrothermal-to-surface pathway starting from CO2 fixation to pyruvate, through the keto acid condensation branch, decarboxylation to isobutyraldehyde, and surface Strecker synthesis converging on the valine aminonitrile.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_014",
+          "rxn_015",
+          "rxn_017",
+          "rxn_018",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_019",
+          "mol_020",
+          "mol_021",
+          "mol_022",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Valine to Val-Gly dipeptide (biochemical assembly)",
+        "description": "Downstream biochemical pathway: valine produced by any upstream route is incorporated into a dipeptide with glycine on montmorillonite clay during wet-dry cycling, representing the first step toward proto-protein assembly.",
+        "reaction_sequence": [
+          "rxn_007",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_022"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_016",
+          "mol_025"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_008",
+      "mol_012",
+      "mol_016",
+      "mol_021"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_008",
+        "incoming_reactions": [
+          "rxn_002"
+        ],
+        "outgoing_reactions": [
+          "rxn_004",
+          "rxn_005",
+          "rxn_006"
+        ]
+      },
+      {
+        "molecule_id": "mol_012",
+        "incoming_reactions": [
+          "rxn_007",
+          "rxn_008"
+        ],
+        "outgoing_reactions": [
+          "rxn_009"
+        ]
+      },
+      {
+        "molecule_id": "mol_016",
+        "incoming_reactions": [
+          "rxn_012",
+          "rxn_018"
+        ],
+        "outgoing_reactions": [
+          "rxn_013"
+        ]
+      },
+      {
+        "molecule_id": "mol_021",
+        "incoming_reactions": [
+          "rxn_015"
+        ],
+        "outgoing_reactions": [
+          "rxn_016",
+          "rxn_017"
+        ]
+      },
+      {
+        "molecule_id": "mol_015",
+        "incoming_reactions": [
+          "rxn_011"
+        ],
+        "outgoing_reactions": [
+          "rxn_012",
+          "rxn_019"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "L-Valine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_002": 0.65,
+          "rxn_004": 0.75,
+          "rxn_005": 0.75,
+          "rxn_007": 0.92,
+          "rxn_009": 0.95,
+          "rxn_010": 0.93,
+          "rxn_011": 0.88,
+          "rxn_012": 0.9,
+          "rxn_013": 0.92
+        },
+        "chemical_feasibility": 0.82,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.93,
+        "overall_confidence": 0.86,
+        "feedback": "Strong full pathway from CO2 to valine. The hydrothermal CO2 \u2192 formate step is well-supported, but rxn_002 (formate \u2192 formaldehyde) is thermodynamically challenging and less well-demonstrated. Formose steps (rxn_004, rxn_005) lack explicit mineral agent specification (e.g., borate, Ca(OH)2). The core cyanosulfidic steps (rxn_007-013) closely replicate the Patel et al. (2015) pathway and are well-supported by experimental evidence.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_002"
+        ],
+        "suggestions": [
+          "Specify mineral catalyst for formose steps (e.g., borate minerals for selectivity)",
+          "Consider alternative routes to formaldehyde (e.g., UV photoreduction of CO2, serpentinization-derived)"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_002": 0.65,
+          "rxn_004": 0.75,
+          "rxn_006": 0.73,
+          "rxn_008": 0.9,
+          "rxn_009": 0.95,
+          "rxn_010": 0.93,
+          "rxn_011": 0.88,
+          "rxn_012": 0.9,
+          "rxn_013": 0.92
+        },
+        "chemical_feasibility": 0.81,
+        "pathway_coherence": 0.86,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.93,
+        "overall_confidence": 0.85,
+        "feedback": "Parallel to P1 via hydroxyacetone instead of DHA. The formaldehyde + glycolaldehyde \u2192 hydroxyacetone aldol (rxn_006) is slightly less selective than the DHA route. Same formate-to-formaldehyde concern applies. The pathway provides valuable redundancy and convergence with P1 at the acetone hub.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_002"
+        ],
+        "suggestions": [
+          "Clarify selectivity of aldol condensation toward hydroxyacetone vs DHA"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_007": 0.92,
+          "rxn_009": 0.95,
+          "rxn_010": 0.93,
+          "rxn_011": 0.88,
+          "rxn_012": 0.9,
+          "rxn_013": 0.92
+        },
+        "chemical_feasibility": 0.92,
+        "pathway_coherence": 0.95,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.95,
+        "overall_confidence": 0.91,
+        "feedback": "This is the core Patel et al. (2015) Pathway 1 \u2014 the best-supported route in the network. Every step is directly demonstrated experimentally. Operates entirely in the surface cyanosulfidic environment with Cu/H2S. Slightly lower environmental progression score since it operates in a single environment only. This is the highest-confidence pathway to valine.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Consider noting that racemic valine is produced; chirality enrichment mechanism needed"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_008": 0.9,
+          "rxn_009": 0.95,
+          "rxn_010": 0.93,
+          "rxn_011": 0.88,
+          "rxn_012": 0.9,
+          "rxn_013": 0.92
+        },
+        "chemical_feasibility": 0.91,
+        "pathway_coherence": 0.93,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.95,
+        "overall_confidence": 0.9,
+        "feedback": "Parallel surface-only cyanosulfidic route from hydroxyacetone. Also experimentally supported by Patel et al. (2015). Converges with P3 at acetone and all downstream steps are identical. Provides redundancy in feedstock.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": []
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_007": 0.92,
+          "rxn_009": 0.95,
+          "rxn_010": 0.93,
+          "rxn_011": 0.88,
+          "rxn_019": 0.7,
+          "rxn_020": 0.8,
+          "rxn_021": 0.55
+        },
+        "chemical_feasibility": 0.72,
+        "pathway_coherence": 0.75,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.65,
+        "overall_confidence": 0.72,
+        "feedback": "The iterative chain extension (rxn_019) is a plausible extrapolation of Patel et al. cyanosulfidic chemistry but adds complexity. The critical weakness is rxn_021 \u2014 the chain shortening from C6 aminonitrile to C5 valine \u2014 which is mechanistically unclear. The literature acknowledges this as an open question. The conversion of 2-amino-4-methylpentanenitrile to valine with carbon loss lacks a clear mechanism.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_019",
+          "rxn_021"
+        ],
+        "suggestions": [
+          "Clarify the C6\u2192C5 chain shortening mechanism",
+          "Consider if the C6 aminonitrile might instead produce leucine (which would be 6 carbons)"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_008": 0.9,
+          "rxn_009": 0.95,
+          "rxn_010": 0.93,
+          "rxn_011": 0.88,
+          "rxn_019": 0.7,
+          "rxn_020": 0.8,
+          "rxn_021": 0.55
+        },
+        "chemical_feasibility": 0.72,
+        "pathway_coherence": 0.73,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.65,
+        "overall_confidence": 0.71,
+        "feedback": "Same issues as P5 \u2014 the chain shortening mechanism in rxn_021 is the weakest link. The upstream steps are sound but the final conversion is questionable.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_019",
+          "rxn_021"
+        ],
+        "suggestions": [
+          "Same as P5"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_003": 0.7,
+          "rxn_014": 0.72,
+          "rxn_015": 0.55,
+          "rxn_016": 0.75
+        },
+        "chemical_feasibility": 0.65,
+        "pathway_coherence": 0.78,
+        "environmental_progression": 0.7,
+        "target_achievement": 0.72,
+        "overall_confidence": 0.7,
+        "feedback": "This hydrothermal route mirrors the biochemical valine biosynthesis pathway. While conceptually elegant, several steps have limited prebiotic experimental support. rxn_003 (CO2 \u2192 pyruvate) has been demonstrated but with very low yields. rxn_014 (pyruvate self-condensation to acetolactate) requires specific conditions. rxn_015 (acetolactate \u2192 KIV) is the most problematic: this conversion normally requires the enzyme acetohydroxy acid isomeroreductase in biology, and its prebiotic analogue is not well-established. Reductive amination (rxn_016) is plausible on mineral surfaces under hydrothermal conditions.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Search for mineral catalysts that might facilitate the acetolactate rearrangement",
+          "Consider if hydrothermal conditions (high T, metal sulfides) could promote non-enzymatic isomeroreductive decarboxylation"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_003": 0.7,
+          "rxn_014": 0.72,
+          "rxn_015": 0.55,
+          "rxn_017": 0.85,
+          "rxn_018": 0.9,
+          "rxn_013": 0.92
+        },
+        "chemical_feasibility": 0.73,
+        "pathway_coherence": 0.82,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.82,
+        "overall_confidence": 0.78,
+        "feedback": "This pathway cleverly bridges hydrothermal and surface chemistry. Once KIV is formed, the decarboxylation to isobutyraldehyde (rxn_017) is well-known, and the Strecker synthesis (rxn_018) is a classic prebiotic reaction with strong experimental support. The pathway shows good Hydrothermal \u2192 Surface environmental flow. The main weakness remains rxn_015 (acetolactate \u2192 KIV). This pathway converges nicely with the cyanosulfidic route at the aminonitrile (mol_016).",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Strengthen the acetolactate \u2192 KIV step with mineral catalyst evidence"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_003": 0.7,
+          "rxn_014": 0.72,
+          "rxn_015": 0.55,
+          "rxn_017": 0.85,
+          "rxn_018": 0.9,
+          "rxn_013": 0.92
+        },
+        "chemical_feasibility": 0.73,
+        "pathway_coherence": 0.82,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.82,
+        "overall_confidence": 0.78,
+        "feedback": "Essentially identical to P8 \u2014 same reactions in the same order. Provides good convergence between the hydrothermal keto acid route and the surface Strecker/cyanosulfidic pathways. Same acetolactate \u2192 KIV concern.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Deduplicate with P8 or clarify distinction"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_022": 0.82
+        },
+        "chemical_feasibility": 0.82,
+        "pathway_coherence": 0.85,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.85,
+        "overall_confidence": 0.84,
+        "feedback": "Peptide bond formation on clay surfaces is well-established in prebiotic chemistry (Lahav et al., Bujdak & Rode). This extends the network to the biochemical stage, demonstrating that valine produced in the cyanosulfidic system can be incorporated into peptides. The environmental transition from surface to biochemical is well-justified. Note this pathway implicitly includes a complete upstream pathway to produce valine.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Specify clay mineral type (e.g., montmorillonite)",
+          "Consider including activation chemistry (e.g., carbonyl sulfide activation of amino acids)"
+        ]
+      }
+    ],
+    "best_pathway_id": "P3",
+    "overall_confidence": 0.88,
+    "network_feedback": "This is an excellent, well-constructed synthesis network for L-valine that closely follows and extends the experimentally demonstrated Patel et al. (2015) cyanosulfidic protometabolism. The network excels in several areas: (1) **Literature alignment** is outstanding \u2014 the core cyanosulfidic pathways (P3, P4) faithfully reproduce the published experimental results, with all key intermediates (acetone cyanohydrin, thioamide, hydroxynitrile, aminonitrile) correctly identified. (2) **Network topology** is rich with 27 molecules, 22 reactions, 5 hub molecules, and 5 convergence points, showing genuine convergent synthesis. (3) **Environmental interconnection** shows clear Hydrothermal \u2192 Surface \u2192 Biochemical flow with appropriate conditions and mineral/reagent specification. (4) **Convergence** is a key strength \u2014 acetone serves as a central hub molecule receiving input from both DHA and hydroxyacetone routes, while the aminonitrile (mol_016) serves as a convergence point for the cyanosulfidic and Strecker routes. Key weaknesses: (1) The formate \u2192 formaldehyde reduction (rxn_002) is thermodynamically unfavorable and poorly demonstrated. (2) The acetolactate \u2192 alpha-ketoisovalerate conversion (rxn_015) lacks prebiotic experimental support. (3) The C6 aminonitrile chain shortening (rxn_021) has no established mechanism. (4) Surface formose reactions (rxn_004-006) should specify mineral catalysts. (5) The network does not address the chirality problem \u2014 all pathways produce racemic valine. Despite these concerns, the primary pathways (P3, P4) are robustly supported by the Patel et al. (2015) experimental work, making this network highly credible for prebiotic valine synthesis.",
+    "approved": true,
+    "hub_quality": 0.91,
+    "convergence_quality": 0.89
+  },
+  "success": true,
+  "attempts": 3,
+  "notes": "Max retries reached. Best confidence: 0.880"
+}

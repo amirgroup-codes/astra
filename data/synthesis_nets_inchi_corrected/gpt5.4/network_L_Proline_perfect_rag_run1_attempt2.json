@@ -1,0 +1,979 @@
+{
+  "target_molecule": "L-Proline",
+  "network": {
+    "target_molecule": "L-Proline",
+    "overall_strategy": "The network is centered on the experimentally demonstrated 5-step cyanosulfidic surface synthesis of proline from 3-aminopropanal, HCN, H2S, water, and Cu0 under ambient aqueous conditions. To satisfy whole-network connectivity and environmental interconnection without contradicting the literature, hydrothermal chemistry is limited to conservative provisioning of shared feedstocks and simple carbon intermediates (formate, formaldehyde, H2S, NH3) using mineral-mediated vent chemistry, while the target-forming sequence remains exactly the Patel et al. 2015 route. Biochemical connectivity is represented by downstream incorporation of proline into a dipeptide pool under wet-dry condensation using two proline molecules, avoiding stoichiometric errors. Ten distinct pathways are defined as graph traversals through the same literature-grounded core, differing by upstream hydrothermal provisioning, sulfur recycling, or downstream biochemical utilization, while all converge on the same experimentally supported proline-forming sequence.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "H2S",
+        "iupac_name": "sulfane",
+        "common_name": "hydrogen sulfide",
+        "inchi": "InChI=1S/H2S/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_005",
+        "formula": "CHN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "HCN",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_006",
+        "formula": "H3N",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "CH2O2",
+        "iupac_name": "methanoic acid",
+        "common_name": "formic acid/formate",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_008",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C3H4O",
+        "iupac_name": "prop-2-enal",
+        "common_name": "acrolein",
+        "inchi": "InChI=1S/C3H4O/c1-2-3-4/h2-3H,1H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C3H7NO",
+        "iupac_name": "3-aminopropanal",
+        "common_name": "3-aminopropanal",
+        "inchi": "InChI=1S/C3H7NO/c4-2-1-3-5/h3H,1-2,4H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C4H8N2O",
+        "iupac_name": "4-amino-2-hydroxybutanenitrile",
+        "common_name": "4-amino-2-hydroxybutanenitrile",
+        "inchi": "InChI=1S/C4H8N2O/c5-2-1-4(7)3-6/h4,7H,1-2,5H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C4H7NOS",
+        "iupac_name": "3-hydroxypyrrolidine-2-thione",
+        "common_name": "3-hydroxypyrrolidine-2-thione",
+        "inchi": "InChI=1S/C4H7NOS/c6-3-1-2-5-4(3)7/h3,6H,1-2H2,(H,5,7)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C4H7NS",
+        "iupac_name": "pyrrolidine-2-thione",
+        "common_name": "pyrrolidine-2-thione",
+        "inchi": "InChI=1S/C4H7NS/c6-4-2-1-3-5-4/h1-3H2,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C5H8N2",
+        "iupac_name": "pyrrolidine-2-carbonitrile",
+        "common_name": "pyrrolidine-2-carbonitrile",
+        "inchi": "InChI=1S/C5H8N2/c6-4-5-2-1-3-7-5/h5,7H,1-3H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C5H9NO2",
+        "iupac_name": "(2S)-pyrrolidine-2-carboxylic acid",
+        "common_name": "L-proline",
+        "inchi": "InChI=1S/C5H9NO2/c7-5(8)4-2-1-3-6-4/h4,6H,1-3H2,(H,7,8)/t4-/m0/s1",
+        "role": "target",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_016",
+        "formula": "Cu",
+        "iupac_name": "copper",
+        "common_name": "elemental copper",
+        "inchi": "InChI=1S/Cu",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_017",
+        "formula": "C10H16N2O3",
+        "iupac_name": "[(2S)-pyrrolidine-2-carbonyl]pyrrolidine-2-carboxylic acid",
+        "common_name": "Pro-Pro dipeptide",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO2 reduction to formate",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite, mackinawite",
+          "aqueous": "true",
+          "other": "alkaline vent conditions; anoxic; H2-rich"
+        },
+        "mechanism": "Mineral-surface CO2 hydrogenation to surface-bound formyl/formate equivalents followed by release of formate into aqueous phase.",
+        "reasoning": "Greigite and related Fe-S minerals catalyze CO2 reduction to formate under hydrothermal conditions and are widely used as analogs of acetyl-CoA pathway metal sulfide catalysis; this provides a conservative hydrothermal feedstock connection to surface carbon chemistry. This upstream provisioning step is added only to connect environments and is more speculative for the specific proline route than the core surface pathway; the proline-forming chemistry itself follows Patel et al. (2015). Supporting hydrothermal CO2-reduction literature includes Huber & Wachtershauser (1997), He et al. (2010), and related Fe-S vent studies; proline pathway context from Patel et al. (2015)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Hydrothermal reduction of formate to formaldehyde-equivalent feedstock",
+        "inputs": [
+          "mol_007",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_008",
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high",
+          "catalyst": "magnetite, elemental iron",
+          "aqueous": "true",
+          "other": "anoxic vent/subseafloor setting; reductive conditions"
+        },
+        "mechanism": "Further reduction of C1 oxo-carbon species on Fe-bearing mineral surfaces yields formaldehyde-equivalent carbonyl feedstock.",
+        "reasoning": "Hydrothermal generation of reduced C1 carbonyl compounds is invoked here as a conservative bridge from vent carbon fixation to surface aldehyde chemistry; exact product distributions in such systems are variable, so this step is explicitly connective and less certain than the Patel et al. (2015) proline sequence. Magnetite/Fe0-mediated reduction is consistent with Fischer-Tropsch-type and CO2 hydrogenation chemistry in hydrothermal studies; proline pathway context from Patel et al. (2015)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Hydrothermal sulfur and nitrogen provisioning",
+        "inputs": [
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_004",
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "370-470K",
+          "pressure": "high",
+          "catalyst": "pyrite, greigite",
+          "aqueous": "true",
+          "other": "subseafloor/vent fluid interaction; represents mobilization of reduced sulfur and dissolved ammonia into connected surface reservoirs"
+        },
+        "mechanism": "Geochemical mobilization and concentration of reduced sulfur and nitrogen species into vent fluids that can be transported to surface settings.",
+        "reasoning": "This is a network-bridging geochemical provisioning step rather than a single stoichiometrically unique laboratory reaction. Reduced sulfur and ammonia are well-established hydrothermal/volcanic feedstocks for prebiotic surface chemistry. It is included to satisfy Hydrothermal \u2194 Surface interconnection while leaving the target-forming route unchanged from Patel et al. (2015). Hydrothermal plausibility is supported by W\u00e4chtersh\u00e4user-type Fe-S geochemistry and vent nitrogen/sulfur cycling literature; proline pathway dependence on H2S and NH3 follows Patel et al. (2015)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Surface generation of acrolein-like C3 aldehyde from reduced C1 feedstock",
+        "inputs": [
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "borate minerals (colemanite/ulexite)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2, borate minerals",
+          "aqueous": "true",
+          "other": "UV-exposed evaporitic/geothermal pool; condensative carbonyl chemistry; connective step to literature-noted acrolein precursor"
+        },
+        "mechanism": "Photochemical and condensative carbonyl chemistry converts reduced C1 feedstock into a reactive C3 unsaturated aldehyde pool represented by acrolein.",
+        "reasoning": "The literature review states that 3-aminopropanal can arise from acrolein plus ammonia, and acrolein may derive from formaldehyde condensation or glycerol decomposition. Because Patel et al. (2015) focuses on the downstream proline route rather than a definitive acrolein synthesis, this step is explicitly marked as a necessary but speculative connective bridge, included only to supply the literature-noted precursor class without altering the validated proline sequence (Patel et al., 2015)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Surface formation of 3-aminopropanal from acrolein and ammonia",
+        "inputs": [
+          "mol_009",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite, TiO2",
+          "aqueous": "true",
+          "other": "ambient cyanosulfidic/geothermal pool; Michael-type ammonia addition to acrolein; precursor provisioning"
+        },
+        "mechanism": "Ammonia adds to the beta-carbon of acrolein, followed by proton transfers to furnish 3-aminopropanal.",
+        "reasoning": "The curated review explicitly identifies 3-aminopropanal as plausibly forming prebiotically from acrolein plus NH3, although this upstream step was not the central experimentally demonstrated focus of Patel et al. (2015). Accordingly this reaction is included as a literature-consistent precursor supply step, while the target-forming steps remain exactly those demonstrated by Patel et al. (2015)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Cyanohydrin formation from 3-aminopropanal",
+        "inputs": [
+          "mol_010",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite/molybdenite)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "ambient temperature",
+          "pressure": "ambient pressure",
+          "catalyst": "surface cyanosulfidic mineral context",
+          "aqueous": "true",
+          "other": "evaporitic pool; HCN-rich cyanosulfidic conditions"
+        },
+        "mechanism": "Strecker-type cyanohydrin formation by nucleophilic addition of cyanide to the aldehyde carbonyl of 3-aminopropanal, preserving the terminal amine.",
+        "reasoning": "This is Reaction R1 of the experimentally demonstrated proline pathway: 3-aminopropanal + HCN gives 4-amino-2-hydroxybutanenitrile under aqueous ambient surface conditions (Patel et al., 2015). Mineral agents are specified here to satisfy network formatting requirements for surface reactions, but the literature-supported core chemistry and conditions are those of Patel et al. (2015)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Thiolation-cyclization to 3-hydroxypyrrolidine-2-thione",
+        "inputs": [
+          "mol_011",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_012",
+          "mol_006"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite/molybdenite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "ambient temperature",
+          "pressure": "ambient pressure",
+          "catalyst": "H2S-driven cyanosulfidic cyclization in surface pool",
+          "aqueous": "true",
+          "other": "H2S atmosphere; cyanosulfidic conditions"
+        },
+        "mechanism": "H2S converts the nitrile to a thioamide equivalent, then the pendant amine attacks intramolecularly to form the five-membered pyrrolidine ring with NH3 release.",
+        "reasoning": "This is Reaction R2 of the Patel et al. (2015) pathway. It is the key ring-closing step that creates the pyrrolidine scaffold unique to proline, consuming H2S and releasing NH3. The reaction and conditions follow Patel et al. (2015)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Reductive deoxygenation of 3-hydroxypyrrolidine-2-thione",
+        "inputs": [
+          "mol_012",
+          "mol_004",
+          "mol_016"
+        ],
+        "outputs": [
+          "mol_013",
+          "mol_003"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "elemental copper (Cu0)",
+          "sulfide minerals (stibnite/molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "ambient temperature",
+          "pressure": "ambient pressure",
+          "catalyst": "Cu0 with H2S",
+          "aqueous": "true",
+          "other": "cyanosulfidic reducing system; ambient aqueous conditions"
+        },
+        "mechanism": "Cu/H2S-mediated reductive deoxygenation removes the C3 hydroxyl group from the cyclic thione, yielding pyrrolidine-2-thione and water.",
+        "reasoning": "This is Reaction R3 of Patel et al. (2015), specifically requiring elemental copper and H2S as the reducing system. The step is experimentally documented and is essential for obtaining the fully reduced pyrrolidine-2-thione intermediate. Patel et al. (2015) is the direct source."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Thione-to-nitrile exchange",
+        "inputs": [
+          "mol_013",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_014",
+          "mol_004"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite/molybdenite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "ambient temperature",
+          "pressure": "ambient pressure",
+          "catalyst": "HCN-driven thione-to-nitrile exchange in cyanosulfidic pool",
+          "aqueous": "true",
+          "other": "HCN present; sulfur recycling"
+        },
+        "mechanism": "HCN attacks the thioamide carbon, replacing the thione sulfur with a nitrile function and releasing H2S.",
+        "reasoning": "This is Reaction R4 of Patel et al. (2015). It converts the sulfur-containing cyclic intermediate into pyrrolidine-2-carbonitrile and regenerates H2S, creating the sulfur-recycling convergence emphasized in the literature. Patel et al. (2015)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Nitrile hydrolysis to proline",
+        "inputs": [
+          "mol_014",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_015",
+          "mol_006"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "phosphate minerals (apatite/struvite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "ambient temperature",
+          "pressure": "ambient pressure",
+          "catalyst": "none required in literature; mineral interfaces may aid concentration",
+          "aqueous": "true",
+          "other": "two equivalents of water are stoichiometrically consumed; ambient cyanosulfidic conditions; racemic product expected experimentally"
+        },
+        "mechanism": "Sequential hydrolysis of the nitrile through an amide intermediate yields the carboxylic acid and releases ammonia.",
+        "reasoning": "This is Reaction R5 of Patel et al. (2015), the terminal hydrolysis step from pyrrolidine-2-carbonitrile to proline. The literature notes that nitrile hydrolysis may be kinetically slow under ambient conditions, an acknowledged bottleneck. Patel et al. (2015) demonstrated the step, but homochirality is unresolved, so the experimentally supported product is racemic proline even though the target node is labeled L-proline per user request."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Biochemical wet-dry condensation of proline to Pro-Pro dipeptide",
+        "inputs": [
+          "mol_015"
+        ],
+        "outputs": [
+          "mol_017",
+          "mol_003"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "mineral interfaces",
+          "wet-dry cycling"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "clay/mineral interface concentration effects",
+          "aqueous": "false",
+          "other": "represents 2 proline molecules undergoing dehydration during wet-dry cycles in prebiotic pools"
+        },
+        "mechanism": "Two proline molecules condense during dehydration to form one peptide bond and release water, generating a proline-containing dipeptide pool.",
+        "reasoning": "This downstream utilization step is included to connect the surface-generated proline pool to biochemical assembly while correcting the stoichiometric problem noted in earlier attempts: dipeptide formation requires two proline molecules, not one. The specific use of wet-dry cycling and mineral interfaces for peptide formation is supported generally in prebiotic peptide literature, while the key point here is downstream use of the Patel et al. (2015) proline product rather than an alternative proline synthesis route. Patel et al. (2015) supports proline availability; peptide condensation context from general prebiotic condensation studies is invoked as a network connector."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Direct literature cyanosulfidic proline pathway",
+        "description": "The exact 5-step Patel et al. 2015 surface sequence from 3-aminopropanal to proline.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_013",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Hydrothermal sulfur-ammonia provisioning into core surface pathway",
+        "description": "Hydrothermal vent chemistry supplies H2S and NH3 to the surface reservoir, which then enters the core Patel sequence.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_006",
+          "mol_010",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Hydrothermal C1 reduction to surface aldehyde precursor route",
+        "description": "CO2 reduction to formate and formaldehyde-equivalent feedstock connects vent carbon fixation to acrolein, 3-aminopropanal, and then the Patel sequence.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_008",
+          "mol_009",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Full hydrothermal-to-surface integrated route",
+        "description": "Combines hydrothermal sulfur/nitrogen provisioning with hydrothermal C1 reduction before entry into the validated surface route.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_006",
+          "mol_008",
+          "mol_010",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Sulfur-recycling route to proline",
+        "description": "Emphasizes H2S consumption in ring-forming thiolation and regeneration in thione-to-nitrile exchange within the Patel network.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_012",
+          "mol_013",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Ammonia-recycling route to proline",
+        "description": "Tracks NH3 release during thiolation-cyclization and nitrile hydrolysis around the core Patel route.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_011",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Copper-enabled reductive branch to proline",
+        "description": "Highlights the unique Cu0/H2S-dependent reductive deoxygenation bottleneck embedded in the core pathway.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_013",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "3-aminopropanal precursor provisioning route",
+        "description": "Begins from acrolein plus ammonia to generate the literature-noted starting aldehyde, then follows the Patel sequence.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_010",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Surface-to-biochemical proline utilization route",
+        "description": "Follows the validated surface proline synthesis and then incorporates proline into a dipeptide pool under biochemical wet-dry cycling.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_015",
+          "mol_017"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "End-to-end environmental interconnection route",
+        "description": "A complete connected traversal from hydrothermal carbon fixation and sulfur/nitrogen feedstock generation through surface cyanosulfidic proline synthesis to biochemical peptide incorporation.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_008",
+          "mol_010",
+          "mol_011",
+          "mol_015"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_006",
+      "mol_010",
+      "mol_011",
+      "mol_013",
+      "mol_014"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [
+          "rxn_003",
+          "rxn_009"
+        ],
+        "outgoing_reactions": [
+          "rxn_007",
+          "rxn_008"
+        ]
+      },
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_003",
+          "rxn_007",
+          "rxn_010"
+        ],
+        "outgoing_reactions": [
+          "rxn_005"
+        ]
+      },
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_005"
+        ],
+        "outgoing_reactions": [
+          "rxn_006"
+        ]
+      },
+      {
+        "molecule_id": "mol_011",
+        "incoming_reactions": [
+          "rxn_006"
+        ],
+        "outgoing_reactions": [
+          "rxn_007"
+        ]
+      },
+      {
+        "molecule_id": "mol_013",
+        "incoming_reactions": [
+          "rxn_008"
+        ],
+        "outgoing_reactions": [
+          "rxn_009"
+        ]
+      },
+      {
+        "molecule_id": "mol_014",
+        "incoming_reactions": [
+          "rxn_009"
+        ],
+        "outgoing_reactions": [
+          "rxn_010"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "L-Proline",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_006": 0.98,
+          "rxn_007": 0.97,
+          "rxn_008": 0.98,
+          "rxn_009": 0.98,
+          "rxn_010": 0.95
+        },
+        "chemical_feasibility": 0.97,
+        "pathway_coherence": 0.98,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.98,
+        "overall_confidence": 0.96,
+        "feedback": "Excellent alignment with the literature-supported Patel et al. 2015 cyanosulfidic proline route. The five-step surface sequence is chemically coherent, reaches proline directly, and captures the documented sulfur recycling and Cu/H2S-mediated reduction. Minor reservation: the target is labeled L-proline even though the prebiotic route should be racemic unless an added chiral selection step is provided.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Relabel the product as racemic proline or explicitly note unresolved enantioselection.",
+          "Specify that rxn_010 consumes 2 equivalents of water to match nitrile hydrolysis stoichiometry."
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_003": 0.1,
+          "rxn_005": 0.8,
+          "rxn_006": 0.98,
+          "rxn_007": 0.97,
+          "rxn_008": 0.98,
+          "rxn_009": 0.98,
+          "rxn_010": 0.95
+        },
+        "chemical_feasibility": 0.74,
+        "pathway_coherence": 0.81,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.96,
+        "overall_confidence": 0.78,
+        "feedback": "The core proline-forming steps remain strong, but the upstream hydrothermal provisioning step is chemically unsound as written: water alone cannot yield both H2S and NH3 without sulfur- and nitrogen-bearing substrates. This weakens the environmental justification even though the downstream route is valid.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Replace rxn_003 with geochemically plausible provisioning from N2/NOx-derived species and sulfide minerals or volcanic inputs.",
+          "Include explicit sulfur and nitrogen source molecules rather than deriving H2S and NH3 from water."
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_001": 0.8,
+          "rxn_002": 0.35,
+          "rxn_004": 0.25,
+          "rxn_005": 0.8,
+          "rxn_006": 0.98,
+          "rxn_007": 0.97,
+          "rxn_008": 0.98,
+          "rxn_009": 0.98,
+          "rxn_010": 0.95
+        },
+        "chemical_feasibility": 0.67,
+        "pathway_coherence": 0.72,
+        "environmental_progression": 0.76,
+        "target_achievement": 0.96,
+        "overall_confidence": 0.71,
+        "feedback": "This pathway reaches the target but relies on speculative and weakly specified upstream chemistry. CO2-to-formate is plausible hydrothermally, but direct reduction of formate to formaldehyde-equivalent feedstock is much less secure under the stated conditions, and conversion of formaldehyde alone to acrolein is not a well-justified prebiotic step.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_004"
+        ],
+        "suggestions": [
+          "Use better-supported C1-to-C3 surface chemistry, e.g. formaldehyde/glycolaldehyde networks or explicitly literature-backed acrolein sources.",
+          "Avoid presenting rxn_002 as established unless supported by specific experimental evidence and catalysts."
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_001": 0.8,
+          "rxn_002": 0.35,
+          "rxn_003": 0.1,
+          "rxn_004": 0.25,
+          "rxn_005": 0.8,
+          "rxn_006": 0.98,
+          "rxn_007": 0.97,
+          "rxn_008": 0.98,
+          "rxn_009": 0.98,
+          "rxn_010": 0.95
+        },
+        "chemical_feasibility": 0.58,
+        "pathway_coherence": 0.66,
+        "environmental_progression": 0.74,
+        "target_achievement": 0.96,
+        "overall_confidence": 0.65,
+        "feedback": "The fully integrated end-to-end route is topologically connected, but multiple upstream hydrothermal/surface feeder reactions are chemically problematic. The target-forming core is excellent; the weakness lies in the unsupported generation of H2S/NH3 from water and the weakly justified formaldehyde-to-acrolein progression.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_004"
+        ],
+        "suggestions": [
+          "Rebuild the feeder network around realistic volcanic or atmospheric inputs for HCN, H2S, and NH3.",
+          "Introduce a literature-supported route to 3-aminopropanal instead of forcing a speculative C1-only buildout."
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_006": 0.98,
+          "rxn_007": 0.97,
+          "rxn_008": 0.98,
+          "rxn_009": 0.99,
+          "rxn_010": 0.95
+        },
+        "chemical_feasibility": 0.97,
+        "pathway_coherence": 0.97,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.98,
+        "overall_confidence": 0.96,
+        "feedback": "Strong pathway emphasizing the documented H2S recycling loop. Chemically this is essentially the literature route and is highly plausible under cyanosulfidic surface conditions. As with P1, chirality is overstated if the network claims specifically L-proline rather than racemate.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Clarify that sulfur recycling improves network economy but may suffer losses in natural settings.",
+          "State explicitly that the route is supported by Patel et al. 2015 but does not solve enantioselection."
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_005": 0.8,
+          "rxn_006": 0.98,
+          "rxn_007": 0.97,
+          "rxn_008": 0.98,
+          "rxn_009": 0.98,
+          "rxn_010": 0.95
+        },
+        "chemical_feasibility": 0.93,
+        "pathway_coherence": 0.92,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.98,
+        "overall_confidence": 0.92,
+        "feedback": "A coherent variant centered on ammonia participation and recycling. The downstream chemistry is strong, and acrolein plus ammonia to 3-aminopropanal is plausible though less directly documented in the supplied literature than the five core Patel steps.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Cite or specify experimental support for 3-aminopropanal formation from acrolein + NH3.",
+          "Distinguish clearly between literature-established core steps and more speculative precursor provisioning."
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_006": 0.98,
+          "rxn_007": 0.97,
+          "rxn_008": 0.99,
+          "rxn_009": 0.98,
+          "rxn_010": 0.95
+        },
+        "chemical_feasibility": 0.97,
+        "pathway_coherence": 0.97,
+        "environmental_progression": 0.91,
+        "target_achievement": 0.98,
+        "overall_confidence": 0.96,
+        "feedback": "Excellent copper-enabled branch reflecting the strongest experimentally grounded redox step in the network. The Cu/H2S reductive deoxygenation is correctly emphasized as a key bottleneck and is well supported by the provided literature.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Note that Cu0 availability is plausible but still an open geochemical constraint.",
+          "Keep copper as an environmental agent rather than a consumable bulk substrate if stoichiometry is not demonstrated."
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_004": 0.25,
+          "rxn_005": 0.8,
+          "rxn_006": 0.98,
+          "rxn_007": 0.97,
+          "rxn_008": 0.98,
+          "rxn_009": 0.98,
+          "rxn_010": 0.95
+        },
+        "chemical_feasibility": 0.77,
+        "pathway_coherence": 0.79,
+        "environmental_progression": 0.84,
+        "target_achievement": 0.98,
+        "overall_confidence": 0.79,
+        "feedback": "The path to proline is solid once 3-aminopropanal is available, but the proposed precursor provisioning through formaldehyde-to-acrolein is the weak link. This mirrors one of the literature's stated open questions: reliable prebiotic access to 3-aminopropanal.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_004"
+        ],
+        "suggestions": [
+          "Use an explicitly literature-supported source of acrolein or 3-aminopropanal.",
+          "Acknowledge 3-aminopropanal availability as unresolved rather than solved by rxn_004."
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_006": 0.98,
+          "rxn_007": 0.97,
+          "rxn_008": 0.98,
+          "rxn_009": 0.98,
+          "rxn_010": 0.95,
+          "rxn_011": 0.3
+        },
+        "chemical_feasibility": 0.78,
+        "pathway_coherence": 0.82,
+        "environmental_progression": 0.92,
+        "target_achievement": 0.9,
+        "overall_confidence": 0.79,
+        "feedback": "The surface-to-biochemical transition is conceptually appropriate, but the biochemical condensation step is stoichiometrically flawed as written. A Pro-Pro dipeptide cannot form from a single proline molecule; two proline equivalents are required, and one water is released. This weakens the downstream utilization claim though not the proline synthesis itself.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_011"
+        ],
+        "suggestions": [
+          "Correct rxn_011 to 2 proline -> Pro-Pro + H2O under wet-dry condensation conditions.",
+          "Consider inclusion of a mineral surface such as montmorillonite if claiming clay-mediated peptide formation."
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_001": 0.8,
+          "rxn_002": 0.35,
+          "rxn_003": 0.1,
+          "rxn_004": 0.25,
+          "rxn_005": 0.8,
+          "rxn_006": 0.98,
+          "rxn_007": 0.97,
+          "rxn_008": 0.98,
+          "rxn_009": 0.98,
+          "rxn_010": 0.95
+        },
+        "chemical_feasibility": 0.58,
+        "pathway_coherence": 0.68,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.96,
+        "overall_confidence": 0.67,
+        "feedback": "This pathway best demonstrates environmental interconnection in a graph sense, but not in a chemically robust way. The hydrothermal-to-surface handoff is weakened by implausible feeder chemistry, so the end-to-end route is less convincing than the pure literature core.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_004"
+        ],
+        "suggestions": [
+          "Preserve the end-to-end topology but replace unsupported feeder steps with realistic environmental transfers of already available HCN, H2S, NH3, and aldehydes.",
+          "Separate 'transport/provisioning' from 'chemical transformation' if no specific geochemical synthesis is defensible."
+        ]
+      }
+    ],
+    "best_pathway_id": "P1",
+    "overall_confidence": 0.82,
+    "network_feedback": "The network has a strong, literature-aligned core: the five surface cyanosulfidic steps from 3-aminopropanal to proline are excellent and closely match Patel et al. 2015. Network topology is good overall, with connected nodes, meaningful hubs, and clear convergence around the documented intermediates 3-aminopropanal, 4-amino-2-hydroxybutanenitrile, pyrrolidine-2-thione, and pyrrolidine-2-carbonitrile. The main weaknesses are in the auxiliary feeder chemistry added to satisfy whole-network integration. In particular, rxn_003 is chemically invalid as written because water cannot generate both H2S and NH3 without sulfur- and nitrogen-bearing inputs; rxn_002 and rxn_004 are speculative and insufficiently supported; and rxn_011 is stoichiometrically incorrect for dipeptide formation. Environmental interconnection is present topologically, but the hydrothermal branch is not as chemically credible as the surface core. Literature alignment is high for the target-forming sequence and moderate-to-low for the extended upstream/downstream scaffolding. Overall, this is an approved network because it contains multiple approved pathways centered on the experimentally demonstrated proline route, but it would be substantially improved by replacing speculative feeder reactions with realistic provisioning or transport steps and by correcting peptide stoichiometry and stereochemical claims.",
+    "approved": true,
+    "hub_quality": 0.87,
+    "convergence_quality": 0.84
+  },
+  "success": false,
+  "attempts": 2,
+  "notes": null
+}

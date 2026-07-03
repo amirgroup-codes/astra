@@ -1,0 +1,153 @@
+2026-06-14 20:01:28,700 - core.network_workflow - INFO - Starting network synthesis workflow for: Arginine
+2026-06-14 20:01:28,700 - core.network_workflow - INFO - Config: deep_research_msdisc
+2026-06-14 20:01:28,700 - core.network_workflow - INFO - Settings: threshold=0.9, retries=3, deep_research=True, perfect_rag=False
+2026-06-14 20:01:28,701 - core.network_workflow - INFO - I/O logging enabled: logs/io/Arginine_deep_research_msdisc_run1_20260614_200128.jsonl
+2026-06-14 20:01:28,789 - core.network_workflow - INFO - ============================================================
+2026-06-14 20:01:28,789 - core.network_workflow - INFO - CACHED DEEP RESEARCH: Loading from reports/deep_research_msdisc/Arginine-Run1.txt
+2026-06-14 20:01:28,789 - core.network_workflow - INFO - ============================================================
+2026-06-14 20:01:28,790 - core.network_workflow - INFO - Cached deep research loaded: 24124 chars, 0 citations
+2026-06-14 20:01:28,791 - core.network_workflow - INFO - Research context prepared: 24192 chars total
+2026-06-14 20:01:28,791 - core.network_workflow - INFO - 
+============================================================
+2026-06-14 20:01:28,791 - core.network_workflow - INFO - ATTEMPT 1/3
+2026-06-14 20:01:28,791 - core.network_workflow - INFO - ============================================================
+2026-06-14 20:01:28,791 - core.network_workflow - INFO - Step 1: Generating synthesis network (LLM call 1/10)...
+2026-06-14 20:02:46,715 - core.network_workflow - ERROR - Network generation LLM error (retry 1/10): Failed to generate synthesis network: 1 validation error for SynthesisNetwork
+molecules.14.formula
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+2026-06-14 20:02:46,715 - core.network_workflow - INFO - Waiting 120 seconds before retrying network generation...
+2026-06-14 20:04:46,717 - core.network_workflow - INFO - Step 1: Generating synthesis network (LLM call 2/10)...
+2026-06-14 20:06:03,742 - core.network_workflow - ERROR - Network generation LLM error (retry 2/10): Failed to generate synthesis network: 4 validation errors for SynthesisNetwork
+molecules.14.formula
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+molecules.15.formula
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+molecules.16.formula
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+molecules.17.formula
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+2026-06-14 20:06:03,742 - core.network_workflow - INFO - Waiting 120 seconds before retrying network generation...
+2026-06-14 20:08:03,743 - core.network_workflow - INFO - Step 1: Generating synthesis network (LLM call 3/10)...
+2026-06-14 20:09:26,883 - core.network_workflow - INFO - Generated network: 17 molecules, 12 reactions, 10 pathways
+2026-06-14 20:09:26,883 - core.network_workflow - INFO - Step 2: Using research findings for evaluation
+2026-06-14 20:09:26,883 - core.network_workflow - INFO - Step 3: Critic evaluation (LLM call 1/10)...
+2026-06-14 20:10:17,990 - core.network_workflow - INFO - Evaluation: confidence=0.630, approved=False
+2026-06-14 20:10:17,994 - core.network_workflow - INFO - Results saved to: outputs/gpt5.4_agent_azure/network_Arginine_20260614_200128_deep_research_msdisc_run1_attempt1.json
+2026-06-14 20:10:17,994 - core.network_workflow - INFO - Network REJECTED (confidence 0.630 < 0.9)
+2026-06-14 20:10:17,994 - core.network_workflow - INFO - 
+============================================================
+2026-06-14 20:10:17,994 - core.network_workflow - INFO - ATTEMPT 2/3
+2026-06-14 20:10:17,994 - core.network_workflow - INFO - ============================================================
+2026-06-14 20:10:17,994 - core.network_workflow - INFO - Step 1: Generating synthesis network (LLM call 1/10)...
+2026-06-14 20:11:34,560 - core.network_workflow - INFO - Generated network: 20 molecules, 10 reactions, 10 pathways
+2026-06-14 20:11:34,560 - core.network_workflow - INFO - Step 2: Using research findings for evaluation
+2026-06-14 20:11:34,561 - core.network_workflow - INFO - Step 3: Critic evaluation (LLM call 1/10)...
+2026-06-14 20:12:19,225 - core.network_workflow - INFO - Evaluation: confidence=0.720, approved=False
+2026-06-14 20:12:19,227 - core.network_workflow - INFO - Results saved to: outputs/gpt5.4_agent_azure/network_Arginine_20260614_200128_deep_research_msdisc_run1_attempt2.json
+2026-06-14 20:12:19,227 - core.network_workflow - INFO - Network REJECTED (confidence 0.720 < 0.9)
+2026-06-14 20:12:19,228 - core.network_workflow - INFO - 
+============================================================
+2026-06-14 20:12:19,228 - core.network_workflow - INFO - ATTEMPT 3/3
+2026-06-14 20:12:19,228 - core.network_workflow - INFO - ============================================================
+2026-06-14 20:12:19,228 - core.network_workflow - INFO - Step 1: Generating synthesis network (LLM call 1/10)...
+2026-06-14 20:13:35,537 - core.network_workflow - INFO - Generated network: 16 molecules, 11 reactions, 10 pathways
+2026-06-14 20:13:35,537 - core.network_workflow - INFO - Step 2: Using research findings for evaluation
+2026-06-14 20:13:35,537 - core.network_workflow - INFO - Step 3: Critic evaluation (LLM call 1/10)...
+2026-06-14 20:14:21,442 - core.network_workflow - INFO - Evaluation: confidence=0.740, approved=False
+2026-06-14 20:14:21,446 - core.network_workflow - INFO - Results saved to: outputs/gpt5.4_agent_azure/network_Arginine_20260614_200128_deep_research_msdisc_run1_attempt3.json
+2026-06-14 20:14:21,446 - core.network_workflow - INFO - Network REJECTED (confidence 0.740 < 0.9)
+2026-06-14 20:14:21,446 - core.network_workflow - WARNING - Max retries reached. Returning best result (confidence=0.740)
+2026-06-14 20:14:21,448 - core.network_workflow - INFO - Results saved to: outputs/gpt5.4_agent_azure/network_Arginine_20260614_200128_deep_research_msdisc_run1.json
+2026-06-14 20:17:21,453 - core.network_workflow - INFO - Starting network synthesis workflow for: Threonine
+2026-06-14 20:17:21,454 - core.network_workflow - INFO - Config: deep_research_msdisc
+2026-06-14 20:17:21,454 - core.network_workflow - INFO - Settings: threshold=0.9, retries=3, deep_research=True, perfect_rag=False
+2026-06-14 20:17:21,454 - core.network_workflow - INFO - I/O logging enabled: logs/io/Threonine_deep_research_msdisc_run1_20260614_201721.jsonl
+2026-06-14 20:17:21,535 - core.network_workflow - INFO - ============================================================
+2026-06-14 20:17:21,536 - core.network_workflow - INFO - CACHED DEEP RESEARCH: Loading from reports/deep_research_msdisc/Threonine-Run1.txt
+2026-06-14 20:17:21,536 - core.network_workflow - INFO - ============================================================
+2026-06-14 20:17:21,537 - core.network_workflow - INFO - Cached deep research loaded: 32656 chars, 0 citations
+2026-06-14 20:17:21,538 - core.network_workflow - INFO - Research context prepared: 32724 chars total
+2026-06-14 20:17:21,538 - core.network_workflow - INFO - 
+============================================================
+2026-06-14 20:17:21,538 - core.network_workflow - INFO - ATTEMPT 1/3
+2026-06-14 20:17:21,538 - core.network_workflow - INFO - ============================================================
+2026-06-14 20:17:21,538 - core.network_workflow - INFO - Step 1: Generating synthesis network (LLM call 1/10)...
+2026-06-14 20:18:32,046 - core.network_workflow - INFO - Generated network: 16 molecules, 12 reactions, 10 pathways
+2026-06-14 20:18:32,047 - core.network_workflow - INFO - Step 2: Using research findings for evaluation
+2026-06-14 20:18:32,047 - core.network_workflow - INFO - Step 3: Critic evaluation (LLM call 1/10)...
+2026-06-14 20:19:15,480 - core.network_workflow - INFO - Evaluation: confidence=0.720, approved=False
+2026-06-14 20:19:15,483 - core.network_workflow - INFO - Results saved to: outputs/gpt5.4_agent_azure/network_Threonine_20260614_201721_deep_research_msdisc_run1_attempt1.json
+2026-06-14 20:19:15,483 - core.network_workflow - INFO - Network REJECTED (confidence 0.720 < 0.9)
+2026-06-14 20:19:15,483 - core.network_workflow - INFO - 
+============================================================
+2026-06-14 20:19:15,484 - core.network_workflow - INFO - ATTEMPT 2/3
+2026-06-14 20:19:15,484 - core.network_workflow - INFO - ============================================================
+2026-06-14 20:19:15,484 - core.network_workflow - INFO - Step 1: Generating synthesis network (LLM call 1/10)...
+2026-06-14 20:20:36,266 - core.network_workflow - INFO - Generated network: 20 molecules, 13 reactions, 10 pathways
+2026-06-14 20:20:36,266 - core.network_workflow - INFO - Step 2: Using research findings for evaluation
+2026-06-14 20:20:36,266 - core.network_workflow - INFO - Step 3: Critic evaluation (LLM call 1/10)...
+2026-06-14 20:21:19,777 - core.network_workflow - INFO - Evaluation: confidence=0.820, approved=False
+2026-06-14 20:21:19,781 - core.network_workflow - INFO - Results saved to: outputs/gpt5.4_agent_azure/network_Threonine_20260614_201721_deep_research_msdisc_run1_attempt2.json
+2026-06-14 20:21:19,781 - core.network_workflow - INFO - Network REJECTED (confidence 0.820 < 0.9)
+2026-06-14 20:21:19,781 - core.network_workflow - INFO - 
+============================================================
+2026-06-14 20:21:19,781 - core.network_workflow - INFO - ATTEMPT 3/3
+2026-06-14 20:21:19,781 - core.network_workflow - INFO - ============================================================
+2026-06-14 20:21:19,782 - core.network_workflow - INFO - Step 1: Generating synthesis network (LLM call 1/10)...
+2026-06-14 20:22:56,053 - core.network_workflow - INFO - Generated network: 20 molecules, 18 reactions, 10 pathways
+2026-06-14 20:22:56,053 - core.network_workflow - INFO - Step 2: Using research findings for evaluation
+2026-06-14 20:22:56,053 - core.network_workflow - INFO - Step 3: Critic evaluation (LLM call 1/10)...
+2026-06-14 20:23:41,327 - core.network_workflow - INFO - Evaluation: confidence=0.780, approved=False
+2026-06-14 20:23:41,330 - core.network_workflow - INFO - Results saved to: outputs/gpt5.4_agent_azure/network_Threonine_20260614_201721_deep_research_msdisc_run1_attempt3.json
+2026-06-14 20:23:41,330 - core.network_workflow - INFO - Network REJECTED (confidence 0.780 < 0.9)
+2026-06-14 20:23:41,331 - core.network_workflow - WARNING - Max retries reached. Returning best result (confidence=0.820)
+2026-06-14 20:23:41,333 - core.network_workflow - INFO - Results saved to: outputs/gpt5.4_agent_azure/network_Threonine_20260614_201721_deep_research_msdisc_run1.json
+2026-06-14 20:26:41,339 - core.network_workflow - INFO - Starting network synthesis workflow for: Valine
+2026-06-14 20:26:41,339 - core.network_workflow - INFO - Config: deep_research_msdisc
+2026-06-14 20:26:41,339 - core.network_workflow - INFO - Settings: threshold=0.9, retries=3, deep_research=True, perfect_rag=False
+2026-06-14 20:26:41,340 - core.network_workflow - INFO - I/O logging enabled: logs/io/Valine_deep_research_msdisc_run1_20260614_202641.jsonl
+2026-06-14 20:26:41,421 - core.network_workflow - INFO - ============================================================
+2026-06-14 20:26:41,422 - core.network_workflow - INFO - CACHED DEEP RESEARCH: Loading from reports/deep_research_msdisc/Valine-Run1.txt
+2026-06-14 20:26:41,422 - core.network_workflow - INFO - ============================================================
+2026-06-14 20:26:41,423 - core.network_workflow - INFO - Cached deep research loaded: 30152 chars, 0 citations
+2026-06-14 20:26:41,424 - core.network_workflow - INFO - Research context prepared: 30220 chars total
+2026-06-14 20:26:41,424 - core.network_workflow - INFO - 
+============================================================
+2026-06-14 20:26:41,424 - core.network_workflow - INFO - ATTEMPT 1/3
+2026-06-14 20:26:41,424 - core.network_workflow - INFO - ============================================================
+2026-06-14 20:26:41,425 - core.network_workflow - INFO - Step 1: Generating synthesis network (LLM call 1/10)...
+2026-06-14 20:28:03,468 - core.network_workflow - INFO - Generated network: 18 molecules, 12 reactions, 10 pathways
+2026-06-14 20:28:03,469 - core.network_workflow - INFO - Step 2: Using research findings for evaluation
+2026-06-14 20:28:03,469 - core.network_workflow - INFO - Step 3: Critic evaluation (LLM call 1/10)...
+2026-06-14 20:28:48,314 - core.network_workflow - INFO - Evaluation: confidence=0.740, approved=False
+2026-06-14 20:28:48,333 - core.network_workflow - INFO - Results saved to: outputs/gpt5.4_agent_azure/network_Valine_20260614_202641_deep_research_msdisc_run1_attempt1.json
+2026-06-14 20:28:48,333 - core.network_workflow - INFO - Network REJECTED (confidence 0.740 < 0.9)
+2026-06-14 20:28:48,333 - core.network_workflow - INFO - 
+============================================================
+2026-06-14 20:28:48,333 - core.network_workflow - INFO - ATTEMPT 2/3
+2026-06-14 20:28:48,334 - core.network_workflow - INFO - ============================================================
+2026-06-14 20:28:48,334 - core.network_workflow - INFO - Step 1: Generating synthesis network (LLM call 1/10)...
+2026-06-14 20:30:11,653 - core.network_workflow - INFO - Generated network: 17 molecules, 12 reactions, 10 pathways
+2026-06-14 20:30:11,654 - core.network_workflow - INFO - Step 2: Using research findings for evaluation
+2026-06-14 20:30:11,654 - core.network_workflow - INFO - Step 3: Critic evaluation (LLM call 1/10)...
+2026-06-14 20:30:57,025 - core.network_workflow - INFO - Evaluation: confidence=0.720, approved=False
+2026-06-14 20:30:57,028 - core.network_workflow - INFO - Results saved to: outputs/gpt5.4_agent_azure/network_Valine_20260614_202641_deep_research_msdisc_run1_attempt2.json
+2026-06-14 20:30:57,028 - core.network_workflow - INFO - Network REJECTED (confidence 0.720 < 0.9)
+2026-06-14 20:30:57,028 - core.network_workflow - INFO - 
+============================================================
+2026-06-14 20:30:57,028 - core.network_workflow - INFO - ATTEMPT 3/3
+2026-06-14 20:30:57,029 - core.network_workflow - INFO - ============================================================
+2026-06-14 20:30:57,029 - core.network_workflow - INFO - Step 1: Generating synthesis network (LLM call 1/10)...
+2026-06-14 20:32:23,262 - core.network_workflow - INFO - Generated network: 17 molecules, 13 reactions, 10 pathways
+2026-06-14 20:32:23,263 - core.network_workflow - INFO - Step 2: Using research findings for evaluation
+2026-06-14 20:32:23,263 - core.network_workflow - INFO - Step 3: Critic evaluation (LLM call 1/10)...
+2026-06-14 20:43:09,802 - core.network_workflow - INFO - Evaluation: confidence=0.740, approved=False
+2026-06-14 20:43:09,805 - core.network_workflow - INFO - Results saved to: outputs/gpt5.4_agent_azure/network_Valine_20260614_202641_deep_research_msdisc_run1_attempt3.json
+2026-06-14 20:43:09,805 - core.network_workflow - INFO - Network REJECTED (confidence 0.740 < 0.9)
+2026-06-14 20:43:09,805 - core.network_workflow - WARNING - Max retries reached. Returning best result (confidence=0.740)
+2026-06-14 20:43:09,807 - core.network_workflow - INFO - Results saved to: outputs/gpt5.4_agent_azure/network_Valine_20260614_202641_deep_research_msdisc_run1.json

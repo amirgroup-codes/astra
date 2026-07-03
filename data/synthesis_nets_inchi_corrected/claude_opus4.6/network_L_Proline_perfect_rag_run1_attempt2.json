@@ -1,0 +1,1145 @@
+{
+  "target_molecule": "L-Proline",
+  "network": {
+    "target_molecule": "Proline (racemic, prebiotically produced)",
+    "overall_strategy": "The network implements the experimentally demonstrated cyanosulfidic proline synthesis from Patel et al. (2015, Nature Chemistry) as the core 5-step pathway, embedded within a broader prebiotic feedstock-generation network spanning hydrothermal, surface, and biochemical environments. The core pathway converts 3-aminopropanal through cyanohydrin formation, H\u2082S-mediated thiolation-cyclization, Cu/H\u2082S reductive deoxygenation, thione-to-nitrile exchange, and nitrile hydrolysis to yield proline. Upstream, hydrothermal CO\u2082 fixation on greigite/magnetite produces formate, formaldehyde, and acetaldehyde; formate condenses with NH\u2083 on mackinawite to yield formamide, which decomposes to HCN. Independently, atmospheric UV photochemistry of N\u2082/CH\u2084 mixtures provides a second HCN source. Surface aldol condensation of formaldehyde and acetaldehyde on montmorillonite yields 3-hydroxypropanal, which dehydrates to acrolein; Michael addition of NH\u2083 to acrolein produces 3-aminopropanal. HCN and H\u2082S are hub molecules: HCN participates in both cyanohydrin formation (step 1) and thione-to-nitrile exchange (step 4); H\u2082S is consumed in thiolation-cyclization (step 2) and regenerated in thione-to-nitrile exchange (step 4), creating a catalytic sulfur cycle. NH\u2083 is consumed in Michael addition and regenerated in cyclization and hydrolysis steps, establishing nitrogen economy. Note: the cyanosulfidic pathway produces racemic proline; enantioselection to L-proline remains an open question, potentially involving chiral mineral surfaces or autocatalytic amplification.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen gas",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "H2O",
+        "iupac_name": "water",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "H3N",
+        "iupac_name": "ammonia",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_005",
+        "formula": "CHN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "HCN",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_006",
+        "formula": "H2S",
+        "iupac_name": "hydrogen sulfide",
+        "common_name": "hydrogen sulfide",
+        "inchi": "InChI=1S/H2S/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "CHO2-",
+        "iupac_name": "formate",
+        "common_name": "formate",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)/p-1",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_008",
+        "formula": "CH2O",
+        "iupac_name": "formaldehyde",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_009",
+        "formula": "CH3NO",
+        "iupac_name": "formamide",
+        "common_name": "formamide",
+        "inchi": "InChI=1S/CH3NO/c2-1-3/h1H,(H2,2,3)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C2H4O",
+        "iupac_name": "acetaldehyde",
+        "common_name": "acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C3H6O2",
+        "iupac_name": "3-hydroxypropanal",
+        "common_name": "3-hydroxypropanal",
+        "inchi": "InChI=1S/C3H6O2/c4-2-1-3-5/h2,5H,1,3H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C3H4O",
+        "iupac_name": "prop-2-enal",
+        "common_name": "acrolein",
+        "inchi": "InChI=1S/C3H4O/c1-2-3-4/h2-3H,1H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C3H7NO",
+        "iupac_name": "3-aminopropanal",
+        "common_name": "3-aminopropanal",
+        "inchi": "InChI=1S/C3H7NO/c4-2-1-3-5/h3H,1-2,4H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C4H8N2O",
+        "iupac_name": "4-amino-2-hydroxybutanenitrile",
+        "common_name": "4-amino-2-hydroxybutanenitrile",
+        "inchi": "InChI=1S/C4H8N2O/c5-2-1-4(7)3-6/h4,7H,1-2,5H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C4H7NOS",
+        "iupac_name": "3-hydroxypyrrolidine-2-thione",
+        "common_name": "3-hydroxypyrrolidine-2-thione",
+        "inchi": "InChI=1S/C4H7NOS/c6-3-1-2-5-4(3)7/h3,6H,1-2H2,(H,5,7)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C4H7NS",
+        "iupac_name": "pyrrolidine-2-thione",
+        "common_name": "pyrrolidine-2-thione",
+        "inchi": "InChI=1S/C4H7NS/c6-4-2-1-3-5-4/h1-3H2,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_017",
+        "formula": "C5H8N2",
+        "iupac_name": "pyrrolidine-2-carbonitrile",
+        "common_name": "pyrrolidine-2-carbonitrile",
+        "inchi": "InChI=1S/C5H8N2/c6-4-5-2-1-3-7-5/h5,7H,1-3H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_018",
+        "formula": "C5H9NO2",
+        "iupac_name": "proline",
+        "common_name": "proline (racemic)",
+        "inchi": "InChI=1S/C5H9NO2/c7-5(8)4-2-1-3-6-4/h4,6H,1-3H2,(H,7,8)/t4-/m0/s1",
+        "role": "target",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_019",
+        "formula": "Cu",
+        "iupac_name": "elemental copper",
+        "common_name": "native copper",
+        "inchi": "InChI=1S/Cu",
+        "role": "starting",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_020",
+        "formula": "N2",
+        "iupac_name": "dinitrogen",
+        "common_name": "nitrogen gas",
+        "inchi": "InChI=1S/N2/c1-2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_021",
+        "formula": "CH4",
+        "iupac_name": "methane",
+        "common_name": "methane",
+        "inchi": "InChI=1S/CH4/h1H4",
+        "role": "starting",
+        "environment_formed": null
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO\u2082 reduction to formate",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe\u2083S\u2084)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (hydrothermal)",
+          "catalyst": "greigite (Fe\u2083S\u2084)",
+          "aqueous": "true",
+          "other": "Alkaline hydrothermal vent conditions, H\u2082-rich serpentinization fluids, pH 9-11"
+        },
+        "mechanism": "CO\u2082 is reduced by H\u2082 on the surface of greigite (Fe\u2083S\u2084), which serves as a structural and functional analog of biological [Fe\u2084S\u2084] clusters. The mineral surface activates H\u2082 and facilitates hydride transfer to the carbon of CO\u2082, producing formate (HCOO\u207b). This is the first step of carbon fixation analogous to the Wood-Ljungdahl pathway.",
+        "reasoning": "Greigite-catalyzed CO\u2082 reduction to formate at hydrothermal conditions is experimentally demonstrated (Preiner et al., 2020, Nature Ecology & Evolution; Herschy et al., 2014). This provides the C1 building block for downstream organic synthesis. Formate is the primary product of abiotic CO\u2082 hydrogenation under alkaline vent conditions."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Formate reduction to formaldehyde",
+        "inputs": [
+          "mol_007",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe\u2083O\u2084)",
+          "pyrite (FeS\u2082)"
+        ],
+        "conditions": {
+          "temperature": "370-450K",
+          "pressure": "high (hydrothermal)",
+          "catalyst": "magnetite (Fe\u2083O\u2084)",
+          "aqueous": "true",
+          "other": "Subseafloor hydrothermal conditions, moderate pH"
+        },
+        "mechanism": "Formate is further reduced by H\u2082 on magnetite/pyrite mineral surfaces to yield formaldehyde (HCHO). The mineral surface adsorbs formate and facilitates two-electron reduction with loss of the hydroxide/water. This is a thermodynamically challenging step driven by the high H\u2082 fugacity in serpentinization systems.",
+        "reasoning": "Formaldehyde production from formate reduction on iron oxide/sulfide minerals has been explored under hydrothermal conditions (Muchowska et al., 2017). While yields are low, the continuous production in flow-through hydrothermal systems and removal by downstream reactions shifts the equilibrium. Formaldehyde is a critical C1 feedstock for aldol chemistry."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Fischer-Tropsch-type synthesis of acetaldehyde",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_010",
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe\u2083O\u2084)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high (hydrothermal)",
+          "catalyst": "magnetite (Fe\u2083O\u2084)",
+          "aqueous": "true",
+          "other": "Fischer-Tropsch-type conditions at black smoker or subseafloor hydrothermal systems"
+        },
+        "mechanism": "Fischer-Tropsch-type (FTT) synthesis on magnetite surfaces: CO\u2082 is first reduced to CO, which binds to the magnetite surface. Sequential hydrogenation and C\u2013C coupling on the mineral surface produces C2 oxygenates including acetaldehyde (CH\u2083CHO). The magnetite surface provides the catalytic sites for CO dissociation, hydrogenation, and chain growth.",
+        "reasoning": "Fischer-Tropsch-type synthesis of C1-C3 oxygenates on magnetite and other iron minerals under hydrothermal conditions has been experimentally demonstrated (McCollom et al., 1999, Origins of Life and Evolution of Biospheres; Holm & Charlou, 2001). Acetaldehyde is among the products detected in FTT synthesis experiments with iron catalysts."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Formamide synthesis from formate and ammonia",
+        "inputs": [
+          "mol_007",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_009",
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "370-420K",
+          "pressure": "high (hydrothermal)",
+          "catalyst": "mackinawite (FeS)",
+          "aqueous": "true",
+          "other": "Alkaline hydrothermal vent wall, pH gradient driven condensation"
+        },
+        "mechanism": "Condensation of formate with ammonia on mackinawite (FeS) mineral surfaces. The mineral surface activates formate toward nucleophilic attack by ammonia, forming formamide with loss of water. The alkaline vent pH gradient and elevated temperature drive the thermodynamically unfavorable condensation by coupling to the proton gradient across vent walls.",
+        "reasoning": "Formamide formation from ammonium formate has been demonstrated at elevated temperatures (Saladino et al., 2012, Chemistry & Biodiversity). FeS minerals catalyze condensation reactions in hydrothermal settings (Huber & W\u00e4chtersh\u00e4user, 1997). The vent pH gradient provides the thermodynamic driving force for this endergonic condensation (Lane & Martin, 2012)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Thermal decomposition of formamide to HCN",
+        "inputs": [
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_005",
+          "mol_003"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO\u2082 (anatase)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "320-370K",
+          "pressure": "1 atm",
+          "catalyst": "TiO\u2082 (anatase)",
+          "aqueous": "false",
+          "other": "Subaerial geothermal field, dry conditions, UV exposure; mineral-catalyzed dehydration"
+        },
+        "mechanism": "Formamide undergoes dehydration to hydrogen cyanide on TiO\u2082 and clay mineral surfaces. The mineral surface adsorbs formamide and catalyzes the elimination of water, forming HCN. TiO\u2082 photocatalysis under UV irradiation can also drive this transformation. Montmorillonite provides additional surface area and acid-base catalysis.",
+        "reasoning": "TiO\u2082-catalyzed and UV-driven decomposition of formamide to HCN is well documented (Saladino et al., 2001, 2004, Bioorganic & Medicinal Chemistry). Mineral-catalyzed formamide decomposition is a major proposed route to HCN on early Earth surfaces. This connects hydrothermal formamide production to surface HCN availability for cyanosulfidic chemistry."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Atmospheric UV photochemistry producing HCN",
+        "inputs": [
+          "mol_020",
+          "mol_021"
+        ],
+        "outputs": [
+          "mol_005",
+          "mol_002"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO\u2082 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "280-330K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "false",
+          "other": "Upper atmosphere UV photolysis of N\u2082/CH\u2084 mixtures; HCN rains out to surface pools; TiO\u2082 particles in atmospheric dust may catalyze reactions"
+        },
+        "mechanism": "UV photolysis of N\u2082 and CH\u2084 in the anoxic early Earth atmosphere produces radical intermediates (N atoms, CH\u2083 radicals, CH\u2082 radicals) that recombine to form HCN. The HCN is transported to the surface via rainout and dissolution in surface water bodies. This is analogous to the well-characterized HCN photochemistry observed in Titan's atmosphere.",
+        "reasoning": "Atmospheric HCN production from N\u2082/CH\u2084 photochemistry is extensively studied (Zahnle, 1986; Tian et al., 2011, Earth and Planetary Science Letters). This is considered a major prebiotic HCN source on early Earth, especially under reducing atmospheric conditions. The HCN yield depends on atmospheric CH\u2084/CO\u2082 ratio and UV flux. TiO\u2082 dust particles referenced as plausible atmospheric photocatalyst (Cleaves et al., 2008)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Aldol condensation of formaldehyde and acetaldehyde",
+        "inputs": [
+          "mol_008",
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite",
+          "aqueous": "true",
+          "other": "Mildly alkaline evaporitic pool; clay mineral catalysis; Ca(OH)\u2082 or Mg(OH)\u2082 as base"
+        },
+        "mechanism": "Base-catalyzed aldol condensation: the \u03b1-hydrogen of acetaldehyde is abstracted to form an enolate, which attacks the carbonyl carbon of formaldehyde in a nucleophilic addition. This forms the \u03b2-hydroxy aldehyde 3-hydroxypropanal (hydracrylic aldehyde). Montmorillonite clay provides Br\u00f8nsted base sites and concentrates the reactants on its interlayer surfaces.",
+        "reasoning": "Aldol condensation of simple aldehydes is a well-established prebiotic reaction (Breslow, 1959; Ricardo et al., 2004). Montmorillonite catalysis of aldol reactions has been documented (Joshi et al., 2009). This two-step approach (aldol then dehydration) to acrolein avoids the chemically questionable single-step formaldehyde trimerization criticized in the previous attempt. 3-Hydroxypropanal is the expected kinetic aldol product."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Dehydration of 3-hydroxypropanal to acrolein",
+        "inputs": [
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_012",
+          "mol_003"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals (apatite)"
+        ],
+        "conditions": {
+          "temperature": "330-370K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite",
+          "aqueous": "false",
+          "other": "Wet-dry cycling in evaporitic pool; dehydration during dry phase; mild heating"
+        },
+        "mechanism": "Acid-catalyzed elimination (E1cb or E2 mechanism): the hydroxyl group at C3 of 3-hydroxypropanal is lost as water, with simultaneous formation of the C2=C3 double bond, yielding acrolein (prop-2-enal). This \u03b2-elimination is thermodynamically favorable and is promoted by clay mineral acid sites and heating during the dry phase of wet-dry cycles.",
+        "reasoning": "Dehydration of \u03b2-hydroxy aldehydes to \u03b1,\u03b2-unsaturated aldehydes is a facile reaction under mildly acidic or thermal conditions (March, Advanced Organic Chemistry). Wet-dry cycling provides the thermal energy and reduced water activity needed for elimination. Montmorillonite clay provides Br\u00f8nsted acid catalysis. This step, combined with rxn_007, provides a chemically rigorous two-step route to acrolein from C1+C2 aldehydes."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Michael addition of ammonia to acrolein",
+        "inputs": [
+          "mol_012",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite",
+          "aqueous": "true",
+          "other": "Aqueous evaporitic pool; slightly acidic to neutral pH for amine nucleophilicity"
+        },
+        "mechanism": "1,4-conjugate addition (Michael addition): the lone pair of ammonia acts as a nucleophile, attacking the \u03b2-carbon (C3) of the \u03b1,\u03b2-unsaturated aldehyde acrolein. The resulting enolate tautomerizes to the aldehyde, yielding 3-aminopropanal. This is a straightforward 1,4-addition that preserves the aldehyde functionality needed for the subsequent Strecker-type cyanohydrin formation.",
+        "reasoning": "Michael addition of amines to \u03b1,\u03b2-unsaturated carbonyls is well established in prebiotic chemistry. Patel et al. (2015) note that 3-aminopropanal can form from acrolein + NH\u2083 in the cyanosulfidic reaction network. Montmorillonite clay concentrates both ammonia and acrolein on its surface, promoting the bimolecular reaction. This provides the key C3 amino-aldehyde starting material for the proline ring synthesis."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Cyanohydrin formation (Strecker-type)",
+        "inputs": [
+          "mol_013",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "Cyanosulfidic surface pool; ambient conditions; montmorillonite may concentrate reactants"
+        },
+        "mechanism": "Nucleophilic addition of cyanide to the aldehyde carbonyl of 3-aminopropanal: HCN dissociates to CN\u207b, which attacks the electrophilic carbonyl carbon of 3-aminopropanal, forming a new C\u2013C bond. Protonation of the resulting alkoxide yields the \u03b1-hydroxynitrile (cyanohydrin) 4-amino-2-hydroxybutanenitrile. The free primary amine at C4 is preserved for subsequent cyclization.",
+        "reasoning": "Strecker-type cyanohydrin formation is Step 1 of the cyanosulfidic proline pathway demonstrated by Patel, Percivalle, Ritson, Duffy, and Sutherland (2015, Nature Chemistry, DOI: 10.1038/nchem.2202). This C\u2013C bond-forming step extends the C3 amino-aldehyde to the C4 aminonitrile, establishing the chain length required for five-membered pyrrolidine ring formation."
+      },
+      {
+        "id": "rxn_011",
+        "name": "H\u2082S-mediated thiolation and intramolecular cyclization",
+        "inputs": [
+          "mol_014",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_015",
+          "mol_004"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "stibnite (Sb\u2082S\u2083)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "Cyanosulfidic conditions; H\u2082S atmosphere or dissolved H\u2082S; stibnite as sulfide mineral source"
+        },
+        "mechanism": "Two sequential transformations in one pot: (1) Thiolation \u2014 H\u2082S attacks the electrophilic nitrile carbon of 4-amino-2-hydroxybutanenitrile, converting the C\u2261N triple bond to a thioamide (C=S) functional group. (2) Intramolecular cyclization \u2014 the primary amine at C4 performs nucleophilic attack on the thioamide carbon, closing the five-membered pyrrolidine ring with expulsion of NH\u2083. The product is 3-hydroxypyrrolidine-2-thione.",
+        "reasoning": "This is Step 2 of the cyanosulfidic proline pathway from Patel et al. (2015, Nature Chemistry, DOI: 10.1038/nchem.2202). The simultaneous thiolation-cyclization is characteristic of cyanosulfidic chemistry, where H\u2082S activates nitriles toward ring closure. NH\u2083 released here is recycled into upstream Michael addition (rxn_009). Stibnite and other sulfide minerals serve as local H\u2082S sources in surface settings."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Cu/H\u2082S reductive deoxygenation",
+        "inputs": [
+          "mol_015",
+          "mol_019",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_016",
+          "mol_003"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "elemental copper (Cu\u2070)",
+          "sulfide minerals"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "elemental copper (Cu\u2070)",
+          "aqueous": "true",
+          "other": "Cyanosulfidic surface conditions; native copper deposits from Cu\u00b2\u207a reduction by H\u2082S"
+        },
+        "mechanism": "Reductive deoxygenation: the Cu\u2070/H\u2082S reducing system donates electrons to cleave the C3\u2013OH bond of 3-hydroxypyrrolidine-2-thione. Elemental copper provides the reducing equivalents, with H\u2082S serving as a co-reductant and proton donor. The hydroxyl group is lost as water, yielding pyrrolidine-2-thione with a fully reduced pyrrolidine ring.",
+        "reasoning": "This is Step 3 of the cyanosulfidic proline pathway from Patel et al. (2015, Nature Chemistry, DOI: 10.1038/nchem.2202). Elemental copper is prebiotically plausible \u2014 native copper deposits form when dissolved Cu\u00b2\u207a ions are reduced by H\u2082S in surface geochemical settings associated with sulfide mineralization. The Cu/H\u2082S system provides the exact reducing equivalents needed for C\u2013OH bond cleavage. Copper is represented as mol_019 in the network."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Thione-to-nitrile exchange with HCN",
+        "inputs": [
+          "mol_016",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_017",
+          "mol_006"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "Cyanosulfidic conditions; HCN present in solution; montmorillonite concentrates reactants"
+        },
+        "mechanism": "Cyanide displaces the thione sulfur at C2 of pyrrolidine-2-thione: HCN acts as a nucleophile, attacking the electrophilic thioamide carbon. The C=S bond is broken with release of H\u2082S, and a new C\u2013CN bond is formed, yielding pyrrolidine-2-carbonitrile. This converts a sulfur-containing functional group to a nitrogen-containing nitrile \u2014 a key interconversion in cyanosulfidic chemistry. The released H\u2082S is recycled back for use in rxn_011.",
+        "reasoning": "This is Step 4 of the cyanosulfidic proline pathway from Patel et al. (2015, Nature Chemistry, DOI: 10.1038/nchem.2202). The thione-to-nitrile exchange demonstrates the elegant sulfur cycling central to cyanosulfidic chemistry: H\u2082S consumed in rxn_011 (thiolation-cyclization) is regenerated here, making sulfur catalytic. HCN is the second hub molecule consumed in this network (also used in rxn_010)."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Nitrile hydrolysis to proline",
+        "inputs": [
+          "mol_017",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_018",
+          "mol_004"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite",
+          "aqueous": "true",
+          "other": "Aqueous surface pool; 2 equivalents of H\u2082O consumed; metal ions (Fe\u00b2\u207a, Zn\u00b2\u207a) may catalyze hydrolysis; montmorillonite provides acid-base catalysis"
+        },
+        "mechanism": "Sequential hydrolysis of the nitrile group (C\u2261N) of pyrrolidine-2-carbonitrile: (1) water attacks the nitrile carbon nucleophilically, forming a primary amide intermediate (pyrrolidine-2-carboxamide); (2) a second hydrolysis cleaves the amide to the carboxylic acid with release of ammonia. Two equivalents of water are consumed overall. The product is proline (racemic).",
+        "reasoning": "This is Step 5 (final) of the cyanosulfidic proline pathway from Patel et al. (2015, Nature Chemistry, DOI: 10.1038/nchem.2202). Two H\u2082O are consumed (correcting the stoichiometry from the previous attempt). The released NH\u2083 is recycled into upstream reactions (rxn_009). Nitrile hydrolysis at ambient T and neutral pH can be slow (days-weeks); Fe\u00b2\u207a and Zn\u00b2\u207a ions or montmorillonite clay may catalyze the reaction. This rate-limiting step is an acknowledged open question in the literature."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Proline incorporation into oligopeptides via wet-dry cycling",
+        "inputs": [
+          "mol_018"
+        ],
+        "outputs": [
+          "mol_018"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "330-370K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite",
+          "aqueous": "true",
+          "other": "Wet-dry cycling on clay surfaces; repeated dehydration-rehydration; proline introduces kinks and turns in peptide chains"
+        },
+        "mechanism": "Peptide bond formation via condensation: the secondary amine of proline reacts with the carboxylic acid of another amino acid (or proline itself) during the dry phase, losing water to form a peptide bond. Montmorillonite clay catalyzes the reaction by adsorbing and concentrating amino acids on its surface, and by providing Lewis acid catalysis. Repeated wet-dry cycles drive iterative peptide elongation.",
+        "reasoning": "Clay-catalyzed peptide bond formation under wet-dry cycling is extensively demonstrated (Lahav et al., 1978; Bujd\u00e1k & Rode, 1999; Forsythe et al., 2015, Angewandte Chemie). Proline, as a cyclic imino acid with a rigid pyrrolidine ring, introduces conformational constraints (kinks, turns) into oligopeptides. This connects the surface-synthesized proline to biologically relevant macromolecule assembly. Note: this reaction is shown as self-referencing to indicate proline enters the peptide pool while remaining available."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Complete hydrothermal-to-surface cyanosulfidic pipeline",
+        "description": "The most complete pathway from CO\u2082 through hydrothermal carbon fixation, surface aldol chemistry for acrolein/3-aminopropanal synthesis, hydrothermal formamide-derived HCN, and the full 5-step Patel et al. cyanosulfidic core to proline.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_008",
+          "mol_009",
+          "mol_010",
+          "mol_012",
+          "mol_013",
+          "mol_014",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Atmospheric HCN + hydrothermal organics route",
+        "description": "HCN is sourced from atmospheric UV photochemistry of N\u2082/CH\u2084 (rxn_006), while C1-C2 aldehyde feedstocks come from hydrothermal CO\u2082 fixation. These converge at the surface for aldol \u2192 acrolein \u2192 3-aminopropanal \u2192 cyanosulfidic core \u2192 proline.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_008",
+          "mol_010",
+          "mol_013",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Hydrothermal formamide-to-HCN pathway",
+        "description": "HCN is generated via a two-step hydrothermal-to-surface route: formate + NH\u2083 \u2192 formamide (hydrothermal, rxn_004), then formamide \u2192 HCN (surface thermal/UV, rxn_005). This HCN feeds into both the cyanohydrin step (rxn_010) and the thione-to-nitrile exchange (rxn_013) of the core cyanosulfidic pathway.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_004",
+          "rxn_005",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_009",
+          "mol_005",
+          "mol_014",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Core cyanosulfidic proline synthesis (Patel et al. 2015)",
+        "description": "The experimentally demonstrated 5-step surface cyanosulfidic pathway from 3-aminopropanal + HCN through cyanohydrin formation, H\u2082S-mediated thiolation-cyclization, Cu/H\u2082S reductive deoxygenation, thione-to-nitrile exchange, and nitrile hydrolysis to proline. This is the literature-established core.",
+        "reaction_sequence": [
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_014",
+          "mol_015",
+          "mol_016",
+          "mol_017"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Fischer-Tropsch acetaldehyde to 3-aminopropanal route",
+        "description": "Acetaldehyde from hydrothermal Fischer-Tropsch-type synthesis (rxn_003) is combined with hydrothermal-derived formaldehyde via surface aldol condensation (rxn_007) \u2192 dehydration to acrolein (rxn_008) \u2192 Michael addition of NH\u2083 (rxn_009) \u2192 cyanosulfidic core \u2192 proline. Emphasizes the hydrothermal C2 oxygenate supply.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_001",
+          "rxn_002",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_010",
+          "mol_008",
+          "mol_011",
+          "mol_012",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Full pipeline from CO\u2082 to proline-containing peptides",
+        "description": "The complete prebiotic pipeline spanning all three environments: hydrothermal CO\u2082 fixation to C1-C2 building blocks, surface cyanosulfidic proline synthesis, and biochemical incorporation into oligopeptides via wet-dry cycling on clay. This pathway shows the full journey from inorganic carbon to biologically relevant macromolecules.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_010",
+          "mol_013",
+          "mol_016",
+          "mol_018"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Dual HCN source convergence pathway",
+        "description": "Demonstrates redundancy in HCN supply: atmospheric photochemistry (rxn_006) and hydrothermal formamide decomposition (rxn_004 \u2192 rxn_005) independently produce HCN, which converges at the surface pool where it is consumed by both cyanohydrin formation (rxn_010) and thione-to-nitrile exchange (rxn_013). This pathway highlights the network robustness from multiple HCN sources.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_009",
+          "mol_013",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "H\u2082S sulfur cycling route (hydrothermal supply \u2192 catalytic turnover)",
+        "description": "Traces the complete lifecycle of H\u2082S: produced in hydrothermal vents, transported to surface pools where it is consumed in thiolation-cyclization (rxn_011) and reductive deoxygenation (rxn_012), then regenerated in thione-to-nitrile exchange (rxn_013). The regenerated H\u2082S feeds back into rxn_011, creating a catalytic sulfur cycle. Complete route from hydrothermal H\u2082S through all core steps to proline.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_014",
+          "mol_015",
+          "mol_016",
+          "mol_017"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "NH\u2083 nitrogen economy route (consumption and regeneration)",
+        "description": "Traces the nitrogen economy: NH\u2083 is consumed in Michael addition to acrolein (rxn_009, producing 3-aminopropanal) and regenerated in both thiolation-cyclization (rxn_011, 1 equiv NH\u2083) and nitrile hydrolysis (rxn_014, 1 equiv NH\u2083). The regenerated NH\u2083 re-enters the cycle at rxn_009. Complete route from atmospherically-sourced HCN through all steps to proline, emphasizing autocatalytic nitrogen cycling.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_003",
+          "rxn_002",
+          "rxn_001",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_012",
+          "mol_013",
+          "mol_016",
+          "mol_018"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Formate-to-formaldehyde aldol route to 3-aminopropanal",
+        "description": "Focuses on the formaldehyde supply chain: hydrothermal CO\u2082 fixation produces formate (rxn_001), which is reduced to formaldehyde (rxn_002). Formaldehyde undergoes aldol condensation with acetaldehyde (rxn_007) \u2192 3-hydroxypropanal \u2192 acrolein (rxn_008) \u2192 3-aminopropanal (rxn_009). This route through the C1\u2192C3 chain elongation feeds into the cyanosulfidic core to produce proline.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_008",
+          "mol_011",
+          "mol_012",
+          "mol_013"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_005",
+      "mol_006",
+      "mol_013",
+      "mol_016"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_005",
+        "incoming_reactions": [
+          "rxn_005",
+          "rxn_006"
+        ],
+        "outgoing_reactions": [
+          "rxn_010",
+          "rxn_013"
+        ]
+      },
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [
+          "rxn_011",
+          "rxn_014"
+        ],
+        "outgoing_reactions": [
+          "rxn_004",
+          "rxn_009"
+        ]
+      },
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_013"
+        ],
+        "outgoing_reactions": [
+          "rxn_011",
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_013",
+        "incoming_reactions": [
+          "rxn_009"
+        ],
+        "outgoing_reactions": [
+          "rxn_010"
+        ]
+      },
+      {
+        "molecule_id": "mol_016",
+        "incoming_reactions": [
+          "rxn_012"
+        ],
+        "outgoing_reactions": [
+          "rxn_013"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Proline (racemic, prebiotically produced)",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_002": 0.75,
+          "rxn_004": 0.78,
+          "rxn_005": 0.9,
+          "rxn_007": 0.82,
+          "rxn_008": 0.88,
+          "rxn_009": 0.85,
+          "rxn_010": 0.92,
+          "rxn_011": 0.92,
+          "rxn_012": 0.9,
+          "rxn_013": 0.92,
+          "rxn_014": 0.88
+        },
+        "chemical_feasibility": 0.85,
+        "pathway_coherence": 0.87,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.92,
+        "overall_confidence": 0.87,
+        "feedback": "Comprehensive pipeline from CO\u2082/H\u2082 through hydrothermal feedstock generation to surface cyanosulfidic proline synthesis. The core pathway (rxn_010\u2013014) faithfully implements Patel et al. (2015). Upstream steps are chemically reasonable but rxn_002 (formate\u2192formaldehyde) and the aldol condensation route to 3-aminopropanal are less experimentally constrained than the core cyanosulfidic steps. Mineral catalysts are properly specified (greigite/magnetite, mackinawite, montmorillonite). Environmental transitions from hydrothermal to surface are well justified.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_002"
+        ],
+        "suggestions": [
+          "Provide more specific mineral catalyst or conditions for formate-to-formaldehyde reduction; consider citing Preiner et al. (2020) or similar for hydrothermal CO\u2082 fixation steps"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_002": 0.75,
+          "rxn_003": 0.7,
+          "rxn_006": 0.88,
+          "rxn_007": 0.82,
+          "rxn_008": 0.88,
+          "rxn_009": 0.85,
+          "rxn_010": 0.92,
+          "rxn_011": 0.92,
+          "rxn_012": 0.9,
+          "rxn_013": 0.92,
+          "rxn_014": 0.88
+        },
+        "chemical_feasibility": 0.83,
+        "pathway_coherence": 0.85,
+        "environmental_progression": 0.86,
+        "target_achievement": 0.92,
+        "overall_confidence": 0.85,
+        "feedback": "Uses atmospheric UV photochemistry (rxn_006) as HCN source instead of the formamide decomposition route. This is well-supported by atmospheric chemistry literature. The FTT acetaldehyde synthesis (rxn_003) is the weakest link\u2014while Fischer-Tropsch-type chemistry on mineral surfaces is established, direct acetaldehyde production is less well-documented than C1 products. Overall still a viable route.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_003",
+          "rxn_002"
+        ],
+        "suggestions": [
+          "Consider whether acetaldehyde might form via formaldehyde self-condensation or other better-documented routes"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_004": 0.78,
+          "rxn_005": 0.9,
+          "rxn_010": 0.92,
+          "rxn_011": 0.92,
+          "rxn_012": 0.9,
+          "rxn_013": 0.92,
+          "rxn_014": 0.88
+        },
+        "chemical_feasibility": 0.87,
+        "pathway_coherence": 0.83,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.8,
+        "overall_confidence": 0.83,
+        "feedback": "Focuses on the formamide-to-HCN route (hydrothermal formate + NH\u2083 \u2192 formamide \u2192 HCN). Chemically sound, but this subset pathway only traces HCN generation into the core proline synthesis; it doesn't include the 3-aminopropanal feedstock generation. As a partial pathway it is coherent but incomplete as a standalone route to proline.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Clarify that this pathway must be combined with the 3-aminopropanal generation route for completeness"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_010": 0.93,
+          "rxn_011": 0.93,
+          "rxn_012": 0.91,
+          "rxn_013": 0.93,
+          "rxn_014": 0.89
+        },
+        "chemical_feasibility": 0.93,
+        "pathway_coherence": 0.95,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.95,
+        "overall_confidence": 0.92,
+        "feedback": "This is the core Patel et al. (2015) cyanosulfidic pathway, directly experimentally demonstrated. All five steps are supported by published experimental data. The cyanohydrin formation, thiolation-cyclization, Cu/H\u2082S reductive deoxygenation, thione-to-nitrile exchange, and nitrile hydrolysis are all chemically validated. Environmental progression score is slightly lower because all steps occur in surface environment (no cross-environment flow), but this is faithful to the experimental conditions. The H\u2082S recycling (consumed in step 2, regenerated in step 4) is elegant and correctly represented.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Consider noting that nitrile hydrolysis (rxn_014) may be kinetically slow at ambient temperature; metal ion catalysis or mild heating could accelerate it"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_003": 0.7,
+          "rxn_001": 0.88,
+          "rxn_002": 0.75,
+          "rxn_007": 0.82,
+          "rxn_008": 0.88,
+          "rxn_009": 0.85,
+          "rxn_010": 0.92,
+          "rxn_011": 0.92,
+          "rxn_012": 0.9,
+          "rxn_013": 0.92,
+          "rxn_014": 0.88
+        },
+        "chemical_feasibility": 0.82,
+        "pathway_coherence": 0.84,
+        "environmental_progression": 0.86,
+        "target_achievement": 0.9,
+        "overall_confidence": 0.84,
+        "feedback": "Routes through Fischer-Tropsch-type acetaldehyde synthesis. The FTT step (rxn_003) is the weakest link, as direct acetaldehyde production from CO\u2082/H\u2082 under hydrothermal conditions is less specifically documented than formate or methanol production. The rest of the pathway is sound.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Provide specific mineral catalyst (e.g., awaruite, Ni\u2083Fe) for FTT acetaldehyde and cite experimental evidence"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_002": 0.75,
+          "rxn_004": 0.78,
+          "rxn_005": 0.9,
+          "rxn_007": 0.82,
+          "rxn_008": 0.88,
+          "rxn_009": 0.85,
+          "rxn_010": 0.92,
+          "rxn_011": 0.92,
+          "rxn_012": 0.9,
+          "rxn_013": 0.92,
+          "rxn_014": 0.88,
+          "rxn_015": 0.5
+        },
+        "chemical_feasibility": 0.82,
+        "pathway_coherence": 0.83,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.85,
+        "overall_confidence": 0.83,
+        "feedback": "End-to-end route from CO\u2082 to proline-containing peptides. The inclusion of the biochemical step (rxn_015) completes the environmental flow (Hydrothermal\u2192Surface\u2192Biochemical). However, rxn_015 is modeled as a self-loop (mol_018\u2192mol_018), which is topologically degenerate and doesn't actually represent a chemical transformation to a new product. The wet-dry cycling peptide formation is plausible but should produce an oligopeptide product node rather than recycling proline to itself.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_015",
+          "rxn_002"
+        ],
+        "suggestions": [
+          "Replace self-loop rxn_015 with a proper peptide product node; specify clay mineral catalyst for wet-dry cycling peptide bond formation"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_004": 0.78,
+          "rxn_005": 0.9,
+          "rxn_006": 0.88,
+          "rxn_010": 0.92,
+          "rxn_011": 0.92,
+          "rxn_012": 0.9,
+          "rxn_013": 0.92,
+          "rxn_014": 0.88
+        },
+        "chemical_feasibility": 0.88,
+        "pathway_coherence": 0.87,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.9,
+        "overall_confidence": 0.87,
+        "feedback": "Highlights the convergence of two independent HCN sources (formamide thermal decomposition and atmospheric UV photochemistry) feeding into the cyanosulfidic core. This convergence is a strong feature of the network, providing robustness through redundant feedstock generation. Both HCN routes are well-supported by literature.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Could note relative flux estimates for the two HCN sources to assess which dominates"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_011": 0.92,
+          "rxn_012": 0.9,
+          "rxn_013": 0.92
+        },
+        "chemical_feasibility": 0.91,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.75,
+        "overall_confidence": 0.83,
+        "feedback": "Correctly identifies the catalytic H\u2082S cycle: consumed in thiolation-cyclization (rxn_011) and regenerated in thione-to-nitrile exchange (rxn_013). This is a key feature of the Patel et al. cyanosulfidic framework. The sulfur economy is well-represented. As a partial pathway focused on the sulfur cycle, it doesn't independently achieve the target but demonstrates an important mechanistic feature.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Note that H\u2082S loss to mineral sulfide precipitation and atmospheric escape may limit catalytic turnover, as acknowledged in the literature review"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_009": 0.85,
+          "rxn_011": 0.92,
+          "rxn_014": 0.88
+        },
+        "chemical_feasibility": 0.88,
+        "pathway_coherence": 0.85,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.75,
+        "overall_confidence": 0.82,
+        "feedback": "Traces NH\u2083 economy: consumed in Michael addition to acrolein (rxn_009), regenerated in cyclization (rxn_011) and nitrile hydrolysis (rxn_014). This nitrogen cycling is correctly represented and adds to the network's biochemical plausibility. Like P8, this is a partial pathway illustrating atom economy.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Quantify NH\u2083 stoichiometry: one NH\u2083 consumed (rxn_009), one released (rxn_011), one released (rxn_014) \u2014 net production of 1 NH\u2083 per proline"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_002": 0.75,
+          "rxn_003": 0.7,
+          "rxn_007": 0.82,
+          "rxn_008": 0.88,
+          "rxn_009": 0.85,
+          "rxn_010": 0.92,
+          "rxn_011": 0.92,
+          "rxn_012": 0.9,
+          "rxn_013": 0.92
+        },
+        "chemical_feasibility": 0.83,
+        "pathway_coherence": 0.84,
+        "environmental_progression": 0.86,
+        "target_achievement": 0.88,
+        "overall_confidence": 0.84,
+        "feedback": "Traces the formate\u2192formaldehyde\u2192aldol\u2192acrolein\u21923-aminopropanal route feeding into the cyanosulfidic core. The aldol condensation on montmorillonite is a reasonable surface process. The weakest step remains rxn_002 (formate reduction to formaldehyde).",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Consider Cannizzaro disproportionation of formaldehyde as an alternative source or UV-driven reduction of formate"
+        ]
+      }
+    ],
+    "best_pathway_id": "P4",
+    "overall_confidence": 0.88,
+    "network_feedback": "This is an excellent prebiotic synthesis network for racemic proline. The core strength is the faithful implementation of the Patel et al. (2015) cyanosulfidic pathway (P4), which is experimentally validated and correctly represented with all five steps, proper intermediates, and the Cu/H\u2082S reducing system. The network embeds this core within a broader feedstock-generation framework spanning hydrothermal CO\u2082 fixation, atmospheric photochemistry, and surface organic chemistry, creating a well-connected multi-environment network.\n\nStrengths: (1) Direct alignment with published experimental work (Patel et al. 2015, Nature Chemistry). (2) Dual HCN sources (formamide decomposition + atmospheric photochemistry) providing convergent feedstock generation. (3) Proper representation of H\u2082S and NH\u2083 catalytic cycling. (4) Mineral agents specified for hydrothermal and surface steps (greigite, magnetite, mackinawite, montmorillonite, native copper). (5) Honest acknowledgment that the pathway produces racemic proline with chirality as an open question.\n\nWeaknesses: (1) rxn_002 (formate\u2192formaldehyde) is less experimentally constrained. (2) rxn_003 (FTT acetaldehyde) lacks specific mineral catalyst citation. (3) rxn_015 is a degenerate self-loop that doesn't properly represent peptide formation. (4) mol_013 (3-aminopropanal) and mol_016 (pyrrolidine-2-thione) are labeled as hub molecules but only have degree 2 in the network graph. (5) The network could benefit from explicit H\u2082S source specification (e.g., hydrothermal vent outgassing).\n\nOverall, the network is well-designed, chemically sound, and strongly literature-supported. The topology has good connectivity with genuine hub molecules (HCN, H\u2082S, NH\u2083) and meaningful convergence points.",
+    "approved": true,
+    "hub_quality": 0.83,
+    "convergence_quality": 0.86
+  },
+  "success": false,
+  "attempts": 2,
+  "notes": null
+}

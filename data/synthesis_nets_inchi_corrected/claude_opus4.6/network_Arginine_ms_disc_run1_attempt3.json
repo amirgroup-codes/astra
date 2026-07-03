@@ -1,0 +1,1199 @@
+{
+  "target_molecule": "Arginine",
+  "network": {
+    "target_molecule": "Arginine",
+    "overall_strategy": "Arginine is decomposed into two key modules: (1) ornithine, the carbon-nitrogen backbone, and (2) the guanidino group appended to ornithine's \u03b4-amino group. Ornithine is synthesized via glutamate, which is produced through two convergent routes: hydrothermal reductive TCA chemistry (CO2 \u2192 pyruvate \u2192 oxaloacetate \u2192 \u03b1-ketoglutarate \u2192 glutamate) and surface transamination (glycine + \u03b1-ketoglutarate \u2192 glutamate). Glutamate undergoes phosphate-activated \u03b3-carboxyl reduction (using Fe\u00b2\u207a/H2S as reductant) to glutamate-5-semialdehyde, followed by reductive amination to ornithine. The guanidino group is installed via two independent routes: (a) direct guanidinylation with cyanamide produced from cyanosulfidic UV photochemistry of HCN/NH3/H2S, or (b) guanidine produced by nucleophilic addition of NH3 to cyanamide, which then transfers its guanidino group to ornithine under phosphate activation and wet-dry cycling. HCN serves as a master hub connecting carbon fixation (via formate/formamide) to both amino acid synthesis (Strecker) and guanidino group formation (cyanamide/guanidine). This network addresses the acknowledged difficulty of prebiotic arginine synthesis by providing multiple redundant pathways through well-characterized prebiotic chemistry.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "CHN",
+        "iupac_name": "formonitrile",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_005",
+        "formula": "H2S",
+        "iupac_name": "hydrogen sulfide",
+        "common_name": "hydrogen sulfide",
+        "inchi": "InChI=1S/H2S/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_006",
+        "formula": "CHO2-",
+        "iupac_name": "formate",
+        "common_name": "formate",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)/p-1",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "CH3NO",
+        "iupac_name": "formamide",
+        "common_name": "formamide",
+        "inchi": "InChI=1S/CH3NO/c2-1-3/h1H,(H2,2,3)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_008",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C3H3O3-",
+        "iupac_name": "2-oxopropanoate",
+        "common_name": "pyruvate",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)/p-1",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C4H3O5-",
+        "iupac_name": "3-carboxy-2-oxopropanoate",
+        "common_name": "oxaloacetate",
+        "inchi": "InChI=1S/C4H4O5/c5-2(4(8)9)1-3(6)7/h1H2,(H,6,7)(H,8,9)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C5H5O5-",
+        "iupac_name": "2-oxopentanedioate",
+        "common_name": "alpha-ketoglutarate",
+        "inchi": "InChI=1S/C5H6O5/c6-3(5(9)10)1-2-4(7)8/h1-2H2,(H,7,8)(H,9,10)/p-2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C5H8NO4-",
+        "iupac_name": "2-aminopentanedioate",
+        "common_name": "glutamate",
+        "inchi": "InChI=1S/C5H9NO4/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H,7,8)(H,9,10)/p-2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C5H9NO3",
+        "iupac_name": "(S)-2-amino-5-oxopentanoic acid",
+        "common_name": "glutamate-5-semialdehyde",
+        "inchi": "InChI=1S/C5H9NO3/c6-4(5(8)9)2-1-3-7/h3-4H,1-2,6H2,(H,8,9)/t4-/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C5H12N2O2",
+        "iupac_name": "2,5-diaminopentanoic acid",
+        "common_name": "ornithine",
+        "inchi": "InChI=1S/C5H12N2O2/c6-3-1-2-4(7)5(8)9/h4H,1-3,6-7H2,(H,8,9)",
+        "role": "hub_intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_015",
+        "formula": "CH2N2",
+        "iupac_name": "cyanamide",
+        "common_name": "cyanamide",
+        "inchi": "InChI=1S/CH2N2/c2-1-3/h2H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_016",
+        "formula": "CH5N3",
+        "iupac_name": "guanidine",
+        "common_name": "guanidine",
+        "inchi": "InChI=1S/CH5N3/c2-1(3)4/h(H5,2,3,4)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_017",
+        "formula": "C6H14N4O2",
+        "iupac_name": "(S)-2-amino-5-guanidinopentanoic acid",
+        "common_name": "arginine",
+        "inchi": "InChI=1S/C6H14N4O2/c7-4(5(11)12)2-1-3-10-6(8)9/h4H,1-3,7H2,(H,11,12)(H4,8,9,10)/t4-/m0/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_018",
+        "formula": "H3PO4",
+        "iupac_name": "phosphoric acid",
+        "common_name": "inorganic phosphate",
+        "inchi": "InChI=1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_019",
+        "formula": "C2H5NO2",
+        "iupac_name": "2-aminoacetic acid",
+        "common_name": "glycine",
+        "inchi": "InChI=1S/C2H5NO2/c3-1-2(4)5/h1,3H2,(H,4,5)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_020",
+        "formula": "C2HO3-",
+        "iupac_name": "oxoacetate",
+        "common_name": "glyoxylate",
+        "inchi": "InChI=1S/C2H2O3/c3-1-2(4)5/h1H,(H,4,5)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "CO2 hydrogenation to formate on greigite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-100 bar)",
+          "catalyst": "greigite (Fe3S4)",
+          "aqueous": true,
+          "other": "Alkaline hydrothermal vent conditions, pH 9-11, H2-rich serpentinization fluid"
+        },
+        "mechanism": "CO2 adsorbs on the Fe3S4 surface, which has structural and functional analogy to [Fe4S4] clusters in acetyl-CoA pathway enzymes. H2 dissociates on the mineral surface providing hydride equivalents. CO2 is reduced to formate (HCOO\u207b) via surface-bound formylate intermediate. The reaction is thermodynamically favored under high H2 fugacity.",
+        "reasoning": "Greigite-catalyzed CO2 reduction to formate is well-established in prebiotic chemistry. Preiner et al. (2020) demonstrated CO2 fixation on native iron and iron sulfide minerals under hydrothermal conditions. Herschy et al. (2014) showed formate production in simulated alkaline vent conditions. Yamaguchi et al. (2014) demonstrated CO2 reduction on Fe-Ni sulfides. This is considered one of the most robust prebiotic carbon fixation reactions."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Formate reduction to formaldehyde on native iron",
+        "inputs": [
+          "mol_006",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron (Fe0)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "370-420K",
+          "pressure": "high (50-100 bar)",
+          "catalyst": "elemental iron (Fe0)",
+          "aqueous": true,
+          "other": "Reducing conditions, subseafloor hydrothermal alteration zone"
+        },
+        "mechanism": "Formate is further reduced on Fe0 surfaces via two-electron reduction. The Fe0 acts as a strong reductant donating electrons to the carbonyl carbon of formate, removing one oxygen as water and yielding formaldehyde (CH2O). Magnetite forms as a byproduct of iron oxidation and can further catalyze the reaction.",
+        "reasoning": "Reduction of C1 oxygenates on native iron surfaces has been demonstrated in Fischer-Tropsch-type (FTT) synthesis experiments. Varma et al. (2018) showed that native iron promotes stepwise reduction of CO2 through formate to more reduced C1 species. The reduction to formaldehyde is a key step in bridging hydrothermal C1 chemistry with surface aldehyde chemistry. Ba\u00f1ez and Or\u00f3 (1971) emphasized formaldehyde as a critical prebiotic precursor."
+      },
+      {
+        "id": "rxn_003",
+        "name": "CO2 reductive fixation to pyruvate on native iron/magnetite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron (Fe0)",
+          "magnetite (Fe3O4)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-100 bar)",
+          "catalyst": "native iron and magnetite",
+          "aqueous": true,
+          "other": "Represents net multi-step process: CO2 \u2192 formate \u2192 acetate \u2192 pyruvate via sequential reductions and C-C coupling on iron mineral surfaces"
+        },
+        "mechanism": "This is a net reaction representing the multi-step reductive fixation of CO2 to pyruvate. CO2 is first reduced to formate on greigite, then to a surface-bound formyl/methyl species. C-C bond formation occurs via carbonylation (CO insertion) yielding an acetyl intermediate, analogous to the Wood-Ljungdahl pathway. Further carboxylation of the acetyl group produces pyruvate. Each step occurs on iron/iron-sulfide mineral surfaces with H2 as the reductant.",
+        "reasoning": "Varma et al. (2018) demonstrated that native iron promotes CO2 fixation yielding pyruvate among other products under mild hydrothermal conditions (100\u00b0C, ambient pressure). Muchowska et al. (2017, 2019) showed that Fe(0) and Fe\u00b2\u207a can promote multiple steps analogous to the reductive TCA cycle, converting CO2 to pyruvate via intermediates. Cody et al. (2000) demonstrated carbonyl-insertion chemistry relevant to pyruvate formation on FeS/NiS surfaces."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Reductive carboxylation of pyruvate to oxaloacetate",
+        "inputs": [
+          "mol_009",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "mackinawite (FeS)",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "mackinawite (FeS)",
+          "aqueous": true,
+          "other": "CO2-saturated alkaline vent fluid, pH 8-10"
+        },
+        "mechanism": "Pyruvate undergoes reductive carboxylation at the C3 position, adding a CO2 molecule to form the C4 dicarboxylic acid oxaloacetate. The FeS mineral surface activates CO2 and facilitates C-C bond formation via a carbanion-like intermediate at the methyl group of pyruvate. This is the prebiotic analog of pyruvate carboxylase in the reductive TCA cycle.",
+        "reasoning": "Muchowska et al. (2017) demonstrated that Fe\u00b2\u207a promotes the interconversion of TCA cycle intermediates including the pyruvate-to-oxaloacetate carboxylation step. Keller et al. (2014) showed non-enzymatic TCA-like reactions promoted by sulfate radicals and metal ions. This reaction is a core step in the proposed prebiotic reductive TCA cycle operating at hydrothermal vents."
+      },
+      {
+        "id": "rxn_005",
+        "name": "rTCA sequence: oxaloacetate to alpha-ketoglutarate via citrate and isocitrate",
+        "inputs": [
+          "mol_010",
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "pyrite (FeS2)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite and pyrite surfaces",
+          "aqueous": true,
+          "other": "Represents multi-step rTCA sequence: oxaloacetate + acetyl (from pyruvate) \u2192 citrate \u2192 isocitrate \u2192 alpha-ketoglutarate, all occurring on iron-sulfur mineral surfaces in alkaline vent environment. Pyruvate serves as the acetyl donor via oxidative decarboxylation to acetyl-thioester analog on FeS surface."
+        },
+        "mechanism": "Pyruvate first undergoes oxidative decarboxylation on FeS to yield a surface-bound acetyl species (analogous to acetyl-CoA). This acetyl species condenses with oxaloacetate in an aldol-type reaction to form citrate (analogous to citrate synthase). Citrate isomerizes to isocitrate via aconitase-like dehydration/rehydration on the mineral surface. Isocitrate undergoes oxidative decarboxylation on pyrite surface to yield alpha-ketoglutarate and CO2. Each step is facilitated by the iron-sulfur mineral surfaces.",
+        "reasoning": "Muchowska et al. (2017, 2019) demonstrated a complete non-enzymatic analog of the reductive TCA cycle promoted by Fe\u00b2\u207a/FeS at 70\u00b0C. The sequence from oxaloacetate through citrate, isocitrate, to alpha-ketoglutarate was observed. Keller et al. (2014) independently showed similar transformations with metal catalysts. W\u00e4chtersh\u00e4user (1990) originally proposed iron-sulfur surface catalysis of these reactions in his iron-sulfur world hypothesis."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Reductive amination of alpha-ketoglutarate to glutamate",
+        "inputs": [
+          "mol_011",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-370K",
+          "pressure": "high",
+          "catalyst": "pyrite surface with Fe\u00b2\u207a as electron donor",
+          "aqueous": true,
+          "other": "NH3 from serpentinization, mildly alkaline pH 8-9"
+        },
+        "mechanism": "Alpha-ketoglutarate reacts with ammonia to form an imine (Schiff base) intermediate at the C2 keto position. The imine is then reduced by electrons from Fe\u00b2\u207a/FeS surface to yield glutamate. The pyrite surface concentrates both substrates and provides the reducing equivalents. This is the prebiotic analog of glutamate dehydrogenase.",
+        "reasoning": "Reductive amination of alpha-keto acids on mineral surfaces is one of the best-established prebiotic amino acid synthesis routes. Huber and W\u00e4chtersh\u00e4user (2003) demonstrated reductive amination on FeS/NiS surfaces. Barge et al. (2019) showed amino acid formation from keto acids and ammonia at iron oxyhydroxide minerals. Yanagawa and Kobayashi (1992) demonstrated amino acid synthesis in submarine hydrothermal systems via reductive amination pathways. The reaction is thermodynamically favorable under the reducing conditions of alkaline vents."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Thermal dehydration of formate and ammonia to formamide, then UV photolysis to HCN",
+        "inputs": [
+          "mol_006",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "330-370K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 anatase as UV photocatalyst",
+          "aqueous": false,
+          "other": "Two-step process: (1) Thermal condensation of formate + NH3 \u2192 formamide at 330-370K during dry phase on montmorillonite surface; (2) UV photodehydration of formamide \u2192 HCN + H2O under solar UV irradiation. Formamide (mol_007) is a transient intermediate."
+        },
+        "mechanism": "Step 1: Ammonium formate undergoes thermal dehydration on clay surfaces during the dry phase of wet-dry cycles, forming formamide (HCONH2). The clay surface catalyzes water loss. Step 2: Formamide absorbs UV photons (\u03bb < 300 nm) and undergoes photodehydration to HCN + H2O. TiO2 enhances the UV photocatalysis. This provides a surface-environment source of HCN from hydrothermal formate.",
+        "reasoning": "Formamide is a well-established prebiotic precursor that forms readily from ammonium formate by thermal dehydration (Saladino et al., 2012). The photolysis of formamide to HCN is documented in multiple studies (Barks et al., 2010; Ferus et al., 2015). TiO2 photocatalysis of formamide decomposition has been demonstrated by Saladino et al. (2013). This pathway provides the critical environmental interconnection: hydrothermal formate is transported to surface pools where UV drives HCN formation, linking the two environments."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Strecker synthesis of glycine from formaldehyde, HCN, and ammonia",
+        "inputs": [
+          "mol_008",
+          "mol_004",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_019"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite clay surface",
+          "aqueous": true,
+          "other": "Aqueous evaporitic pool, slightly alkaline pH 7-9"
+        },
+        "mechanism": "Formaldehyde reacts with ammonia to form an imine (methyleneimine, CH2=NH). HCN then adds to the imine via nucleophilic addition to form aminoacetonitrile (H2N-CH2-CN). Hydrolysis of the nitrile group by water yields glycine (H2N-CH2-COOH) via an amide intermediate. Montmorillonite concentrates the reactants and catalyzes the hydrolysis step.",
+        "reasoning": "The Strecker synthesis is the most well-established prebiotic amino acid synthesis route. Miller (1953, 1957) identified Strecker intermediates as the mechanism for amino acid formation in electric discharge experiments. The Strecker synthesis of glycine from formaldehyde, HCN, and NH3 has been replicated in numerous studies (Peltzer et al., 1984; Cleaves et al., 2008). Montmorillonite has been shown to adsorb and concentrate reactants, promoting the Strecker reaction (Ferris et al., 1996). This connects hydrothermal formaldehyde to surface amino acid synthesis."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Non-enzymatic transamination of glycine with alpha-ketoglutarate to glutamate",
+        "inputs": [
+          "mol_019",
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_020",
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite, trace Fe\u00b2\u207a/Cu\u00b2\u207a metal ions",
+          "aqueous": true,
+          "other": "Warm evaporitic pool, pH 6-8, metal ion catalysis"
+        },
+        "mechanism": "Glycine and alpha-ketoglutarate undergo transamination via Schiff base intermediates. Glycine condenses with pyridoxal analog (or directly with keto acid in the presence of metal ions) to form an aldimine. Tautomerization to the ketimine, followed by hydrolysis, yields glyoxylate and glutamate. Metal ions (Fe\u00b2\u207a, Cu\u00b2\u207a) from dissolved pyrite catalyze the tautomerization step. This provides a second independent route to glutamate from surface chemistry.",
+        "reasoning": "Non-enzymatic transamination between amino acids and alpha-keto acids is well-documented in prebiotic chemistry. Herbst and Engel (1984) showed transamination can occur without enzymes at elevated temperatures. W\u00e4chtersh\u00e4user (1992) proposed mineral-catalyzed transamination as a key prebiotic process. Metal ions, especially Cu\u00b2\u207a and Fe\u00b2\u207a, are known to catalyze non-enzymatic transamination (Snell, 1945; Metzler and Snell, 1952). This reaction provides the convergent second route to glutamate, combining hydrothermal alpha-ketoglutarate with surface-derived glycine."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Cyanosulfidic photochemical synthesis of cyanamide from HCN, ammonia, and hydrogen sulfide",
+        "inputs": [
+          "mol_004",
+          "mol_003",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "stibnite (Sb2S3)",
+          "TiO2 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "stibnite as cyanosulfidic photocatalyst, TiO2 for UV absorption",
+          "aqueous": true,
+          "other": "UV irradiation (\u03bb < 300 nm), cyanide-rich reducing pool with dissolved H2S, pH 8-9"
+        },
+        "mechanism": "In a cyanide-rich, reducing aqueous environment containing dissolved H2S, UV irradiation drives the photochemical transformation of HCN. H2S acts as a reductant and electron shuttle. HCN first reacts with NH3 to form an ammonium cyanide ion pair. Under UV irradiation on the sulfide mineral surface, a one-electron oxidation-reduction cascade occurs: the cyanide carbon is activated, ammonia attacks as a nucleophile, and dehydrogenation (with H2S as electron acceptor, forming elemental sulfur) produces cyanamide (H2N-C\u2261N). The stibnite surface facilitates electron transfer and UV energy transduction.",
+        "reasoning": "Cyanamide is a key prebiotic reagent widely invoked in origins of life chemistry. The cyanosulfidic scenario of Patel et al. (2015) and Sutherland and coworkers demonstrates that HCN and H2S interact under UV to produce diverse prebiotic intermediates. The formation of cyanamide from HCN/NH3 mixtures under UV has been reported in several prebiotic chemistry studies (Sanchez et al., 1966). The literature specifically identifies a cyanide-rich reducing environment containing hydrogen sulfide as a proposed route for prebiotic arginine precursor synthesis (Sources 21332). Stibnite and molybdenite have been identified as relevant cyanosulfidic photocatalysts (Ritson and Sutherland, 2012)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Nucleophilic addition of ammonia to cyanamide yielding guanidine",
+        "inputs": [
+          "mol_015",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_016"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite (adsorption and concentration)",
+          "aqueous": true,
+          "other": "Mildly alkaline evaporitic pool, pH 8-10"
+        },
+        "mechanism": "Ammonia acts as a nucleophile attacking the electrophilic carbon of cyanamide (H2N-C\u2261N). The lone pair on NH3 adds to the C\u2261N triple bond, forming an amidine intermediate which tautomerizes to guanidine (HN=C(NH2)2). This is a simple nucleophilic addition to a nitrile and is thermodynamically favorable in aqueous solution. Montmorillonite concentrates both reactants on its surface.",
+        "reasoning": "The addition of ammonia to cyanamide to form guanidine is a well-known, straightforward reaction in organic chemistry. In the prebiotic context, this provides the connection between UV-produced cyanamide and the guanidine needed for arginine synthesis. The formation of guanidine from irradiation of ammonium cyanide is directly supported by literature published in the Journal of Molecular Evolution (as identified in the research findings). Mechanistically, the ammonium cyanide photochemistry likely proceeds through cyanamide as an intermediate before ammonia addition completes the formation of guanidine."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Phosphate-activated reduction of glutamate gamma-carboxyl to glutamate-5-semialdehyde",
+        "inputs": [
+          "mol_012",
+          "mol_018",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "struvite (MgNH4PO4\u00b76H2O)",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "340-370K",
+          "pressure": "1 atm",
+          "catalyst": "struvite as phosphorylating agent, pyrite-derived Fe\u00b2\u207a as electron donor",
+          "aqueous": true,
+          "other": "Two-step process: (1) Phosphorylation of glutamate \u03b3-carboxyl by struvite under mild heating to form a mixed anhydride (glutamate-5-phosphate analog); (2) Selective reduction of the activated acyl-phosphate to the aldehyde by Fe\u00b2\u207a/H2S. Wet-dry cycling drives phosphorylation during dry phase, reduction occurs upon rewetting with Fe\u00b2\u207a/H2S-containing fluid."
+        },
+        "mechanism": "Step 1: During the dry heating phase, the \u03b3-carboxyl group of glutamate reacts with the phosphate mineral struvite to form a mixed acyl-phosphate anhydride (glutamate-5-phosphate). This activates the carboxyl group toward reduction. Step 2: Upon rewetting with Fe\u00b2\u207a-containing, H2S-rich solution, the acyl-phosphate undergoes two-electron reduction. Fe\u00b2\u207a donates electrons (being oxidized to Fe\u00b3\u207a), and H2S acts as an additional reductant and proton source. The phosphate is released and the aldehyde product glutamate-5-semialdehyde is formed. This mimics the biological glutamate kinase + glutamate-5-semialdehyde dehydrogenase pathway.",
+        "reasoning": "This is the acknowledged bottleneck in prebiotic ornithine synthesis. The biological pathway uses ATP-dependent phosphorylation followed by NADPH-dependent reduction. Prebiotically, struvite and other phosphate minerals can drive phosphorylation under wet-dry cycling conditions (Pasek et al., 2013; Burcar et al., 2016). The use of Fe\u00b2\u207a as a prebiotic reductant for activated carboxyls is supported by Barge et al. (2019) and the broader iron-sulfur world framework of W\u00e4chtersh\u00e4user (1988). H2S as a co-reductant is consistent with the cyanosulfidic scenario. The two-step activation-reduction mechanism overcomes the thermodynamic barrier of direct carboxyl-to-aldehyde reduction."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Reductive amination of glutamate-5-semialdehyde to ornithine",
+        "inputs": [
+          "mol_013",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "montmorillonite",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite clay surface, Fe\u00b2\u207a ions from pyrite dissolution",
+          "aqueous": true,
+          "other": "Mild aqueous conditions, pH 7-9, Fe\u00b2\u207a as reducing agent for imine reduction"
+        },
+        "mechanism": "The aldehyde group at C5 of glutamate-5-semialdehyde reacts with ammonia to form a Schiff base (imine). The imine is then reduced by Fe\u00b2\u207a electrons on the montmorillonite surface to yield the primary amine, producing ornithine (2,5-diaminopentanoic acid). The clay surface adsorbs the substrate and positions the imine for efficient reduction. This is analogous to the biological ornithine aminotransferase reaction.",
+        "reasoning": "Reductive amination of aldehydes with ammonia is one of the most straightforward prebiotic amino group installation reactions. The reaction of aldehydes with ammonia and subsequent reduction is thermodynamically favorable and has been demonstrated under mild conditions (Huber and W\u00e4chtersh\u00e4user, 2003). Fe\u00b2\u207a as a reductant for imines has been demonstrated in prebiotic chemistry contexts (Barge et al., 2019). Montmorillonite catalyzes similar condensation and reduction reactions (Ferris, 2005). This step converts the glutamate-semialdehyde intermediate to the critical ornithine precursor."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Guanidinylation of ornithine by cyanamide to form arginine",
+        "inputs": [
+          "mol_014",
+          "mol_015"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals (apatite)"
+        ],
+        "conditions": {
+          "temperature": "330-370K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite (concentrates reactants, template effect)",
+          "aqueous": true,
+          "other": "Wet-dry cycling in evaporitic pool; cyanamide acts as an electrophilic guanidinylating agent. Concentration during dry phase drives equilibrium. Mild heating promotes condensation."
+        },
+        "mechanism": "The \u03b4-amino group of ornithine (-CH2-NH2) acts as a nucleophile, attacking the electrophilic carbon of cyanamide (H2N-C\u2261N). This nucleophilic addition to the nitrile triple bond yields an amidine intermediate, which tautomerizes to the guanidino group. The product is arginine: H2N-C(=NH)-NH-(CH2)3-CH(NH2)-COOH. Montmorillonite adsorbs and concentrates both reactants. Wet-dry cycling provides the concentration and mild dehydration conditions to drive the condensation to completion.",
+        "reasoning": "Cyanamide is one of the most effective prebiotic condensing and guanidinylating agents. The reaction of cyanamide with amines to form guanidino groups is well-established in organic chemistry (Sheehan and McGregor, 1962). In prebiotic chemistry, cyanamide has been widely used as an activating agent (Steinman et al., 1964). The guanidinylation of amino groups by cyanamide under wet-dry cycling conditions on clay surfaces represents the most chemically plausible route to install the guanidino group on ornithine. This is the primary route to arginine in this network."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Phosphoguanidine-mediated guanidinylation of ornithine to form arginine",
+        "inputs": [
+          "mol_014",
+          "mol_016",
+          "mol_018"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "apatite (Ca5(PO4)3(OH))",
+          "struvite (MgNH4PO4\u00b76H2O)"
+        ],
+        "conditions": {
+          "temperature": "340-370K",
+          "pressure": "1 atm",
+          "catalyst": "apatite and struvite as phosphate source for activation",
+          "aqueous": true,
+          "other": "Two-step process: (1) Guanidine reacts with polyphosphate (from struvite thermal processing) to form phosphoguanidine, an activated guanidinylating agent; (2) Phosphoguanidine reacts with the \u03b4-amino group of ornithine, transferring the guanidino group and releasing phosphate. Wet-dry cycling drives the phosphorylation step during heating."
+        },
+        "mechanism": "Step 1: Guanidine reacts with inorganic polyphosphate (generated from struvite/apatite heating) to form phosphoguanidine (H2N-C(=NH)-NH-PO3\u00b2\u207b), analogous to the high-energy phosphagen creatine phosphate. Step 2: The \u03b4-amino group of ornithine attacks the activated guanidino carbon of phosphoguanidine, displacing inorganic phosphate and forming the guanidino-NH bond of arginine. The phosphate activation overcomes the thermodynamic barrier of direct guanidine-amine condensation.",
+        "reasoning": "Direct condensation of guanidine with an amine is thermodynamically unfavorable without activation, as noted in previous attempts. Phosphate activation resolves this issue. The formation of phosphoguanidine from guanidine and polyphosphate is thermodynamically analogous to creatine phosphate synthesis. Pasek et al. (2013) demonstrated polyphosphate formation from mineral heating. The guanidine source via ammonium cyanide UV irradiation is directly supported by J. Mol. Evol. literature (as noted in research findings). This provides the second independent route to arginine's guanidino group, distinct from the cyanamide route."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Hydrothermal rTCA to glutamate, phosphate-activated ornithine, cyanamide guanidinylation",
+        "description": "The primary pathway: CO2 is fixed to pyruvate via native iron in hydrothermal vents, then processed through the reductive TCA cycle to alpha-ketoglutarate, reductively aminated to glutamate, reduced via phosphate activation to glutamate-5-semialdehyde, aminated to ornithine, and finally guanidinylated by cyanamide to form arginine.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_011",
+          "mol_012",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Hydrothermal rTCA to glutamate, phosphoguanidine guanidinylation",
+        "description": "Same as P1 for the carbon backbone (rTCA to ornithine), but the guanidino group is installed via guanidine (produced from cyanamide + NH3) activated by phosphate to form phosphoguanidine.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_012",
+          "rxn_013",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_011",
+          "mol_012",
+          "mol_014",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "CO2\u2192formate\u2192HCN\u2192glycine\u2192transamination\u2192glutamate\u2192ornithine\u2192arginine (cyanamide)",
+        "description": "CO2 is reduced to formate hydrothermally, formate is transported to the surface where UV converts it to HCN via formamide. HCN enters Strecker synthesis to make glycine, which transaminates with hydrothermal alpha-ketoglutarate to produce glutamate. Glutamate is converted to ornithine and guanidinylated by cyanamide.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_007",
+          "rxn_002",
+          "rxn_008",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_009",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_004",
+          "mol_019",
+          "mol_012",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "CO2\u2192formate\u2192HCN\u2192glycine\u2192transamination\u2192glutamate\u2192ornithine\u2192arginine (phosphoguanidine)",
+        "description": "Same backbone as P3 (formate\u2192HCN\u2192glycine\u2192transamination\u2192glutamate\u2192ornithine) but uses the phosphoguanidine guanidinylation route.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_007",
+          "rxn_002",
+          "rxn_008",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_009",
+          "rxn_012",
+          "rxn_013",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_004",
+          "mol_019",
+          "mol_012",
+          "mol_014",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Dual glutamate convergence with cyanamide guanidinylation",
+        "description": "Both hydrothermal reductive amination (rxn_006) and surface transamination (rxn_009) produce glutamate, which converges at the glutamate hub. Glutamate is processed to ornithine and guanidinylated by cyanamide. This demonstrates the robustness of the glutamate convergence point.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_001",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_012",
+          "mol_014",
+          "mol_015"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Cyanosulfidic cyanamide to guanidine, rTCA ornithine, phosphoguanidine assembly",
+        "description": "HCN and H2S undergo cyanosulfidic photochemistry to produce cyanamide, which reacts with ammonia to form guanidine. Meanwhile, the rTCA cycle produces ornithine. Guanidine is phosphate-activated and transfers its guanidino group to ornithine.",
+        "reaction_sequence": [
+          "rxn_010",
+          "rxn_011",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_012",
+          "rxn_013",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_015",
+          "mol_016",
+          "mol_012",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "HCN hub: dual role as Strecker reagent and cyanamide precursor",
+        "description": "HCN serves as the central hub, contributing to both amino acid backbone synthesis (via Strecker glycine \u2192 transamination \u2192 glutamate) and guanidino group installation (via cyanamide). This pathway highlights HCN as the master prebiotic reagent for arginine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_019",
+          "mol_015",
+          "mol_012",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Formate\u2192formaldehyde\u2192Strecker glycine, parallel to rTCA alpha-ketoglutarate supply",
+        "description": "Hydrothermal formate is reduced to formaldehyde, which is transported to the surface for Strecker glycine synthesis. Independently, the rTCA cycle produces alpha-ketoglutarate hydrothermally. These converge at the surface transamination step to make glutamate, then proceed to arginine via cyanamide guanidinylation.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_007",
+          "rxn_008",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_009",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_008",
+          "mol_004",
+          "mol_011",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Minimal hydrothermal: direct CO2-to-pyruvate with surface completion",
+        "description": "The most streamlined route using direct CO2 fixation to pyruvate on native iron, rapid rTCA to alpha-ketoglutarate, hydrothermal reductive amination to glutamate, then surface/biochemical assembly to ornithine and arginine via cyanamide. Represents the fastest plausible route with fewest steps.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_010",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_012",
+          "mol_015",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Maximal convergence: all routes to glutamate and both guanidinylation routes",
+        "description": "The complete network operating simultaneously. Both hydrothermal reductive amination and surface transamination feed the glutamate pool. Both cyanamide direct guanidinylation and phosphoguanidine-mediated guanidinylation are available for the final arginine assembly. This represents the full redundancy of the prebiotic network, providing maximum robustness against fluctuating environmental conditions.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_009",
+          "mol_011",
+          "mol_012",
+          "mol_014",
+          "mol_015"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_011",
+      "mol_012",
+      "mol_014",
+      "mol_015"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [
+          "rxn_007"
+        ],
+        "outgoing_reactions": [
+          "rxn_008",
+          "rxn_010"
+        ]
+      },
+      {
+        "molecule_id": "mol_011",
+        "incoming_reactions": [
+          "rxn_005"
+        ],
+        "outgoing_reactions": [
+          "rxn_006",
+          "rxn_009"
+        ]
+      },
+      {
+        "molecule_id": "mol_012",
+        "incoming_reactions": [
+          "rxn_006",
+          "rxn_009"
+        ],
+        "outgoing_reactions": [
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_014",
+        "incoming_reactions": [
+          "rxn_013"
+        ],
+        "outgoing_reactions": [
+          "rxn_014",
+          "rxn_015"
+        ]
+      },
+      {
+        "molecule_id": "mol_015",
+        "incoming_reactions": [
+          "rxn_010"
+        ],
+        "outgoing_reactions": [
+          "rxn_011",
+          "rxn_014"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Arginine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_003": 0.85,
+          "rxn_004": 0.78,
+          "rxn_005": 0.58,
+          "rxn_006": 0.85,
+          "rxn_010": 0.78,
+          "rxn_012": 0.55,
+          "rxn_013": 0.52,
+          "rxn_014": 0.62
+        },
+        "chemical_feasibility": 0.65,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.65,
+        "overall_confidence": 0.72,
+        "feedback": "Most direct route with good environmental flow (Hydrothermal\u2192Surface\u2192Biochemical). The rTCA steps to glutamate are well-supported, but rxn_005 incorrectly uses pyruvate as co-reactant rather than acetyl-CoA or its prebiotic analog for citrate formation. The phosphate-activated reduction of glutamate \u03b3-carboxyl (rxn_012) is speculative and lacks strong prebiotic precedent. Glutamate-5-semialdehyde is known to spontaneously cyclize to \u0394\u00b9-pyrroline-5-carboxylate, competing with the desired reductive amination to ornithine (rxn_013). Cyanamide guanidinylation (rxn_014) is plausible but faces selectivity issues between \u03b4-NH\u2082 and \u03b1-NH\u2082 of ornithine.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_005",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "suggestions": [
+          "Correct rxn_005 stoichiometry: rTCA requires acetyl-CoA equivalent + oxaloacetate \u2192 citrate, not pyruvate + oxaloacetate",
+          "Address glutamate-5-semialdehyde cyclization problem; consider alternative ornithine synthesis (e.g., direct Strecker on glutaraldehyde)",
+          "Specify reducing agent for rxn_013 reductive amination (e.g., Fe\u00b2\u207a/H\u2082S)",
+          "Discuss selectivity of cyanamide for \u03b4-NH\u2082 vs \u03b1-NH\u2082; consider protecting group strategies or pH-dependent selectivity"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_003": 0.85,
+          "rxn_004": 0.78,
+          "rxn_005": 0.58,
+          "rxn_006": 0.85,
+          "rxn_010": 0.78,
+          "rxn_011": 0.88,
+          "rxn_012": 0.55,
+          "rxn_013": 0.52,
+          "rxn_015": 0.5
+        },
+        "chemical_feasibility": 0.62,
+        "pathway_coherence": 0.75,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.6,
+        "overall_confidence": 0.68,
+        "feedback": "Similar to P1 but uses phosphoguanidine-mediated guanidinylation. The cyanamide\u2192guanidine step (rxn_011) is well-established. However, the phosphoguanidine transfer to ornithine (rxn_015) is highly speculative with no clear prebiotic experimental precedent. The mechanism of guanidino transfer from phosphoguanidine to an amine is not well-characterized under prebiotic conditions.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_005",
+          "rxn_012",
+          "rxn_013",
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Provide mechanistic detail for phosphoguanidine-mediated guanidinylation",
+          "Consider whether polyphosphate or trimetaphosphate could serve as better activating agents",
+          "Address same ornithine synthesis issues as P1"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_002": 0.68,
+          "rxn_007": 0.68,
+          "rxn_008": 0.9,
+          "rxn_003": 0.85,
+          "rxn_004": 0.78,
+          "rxn_005": 0.58,
+          "rxn_009": 0.78,
+          "rxn_010": 0.78,
+          "rxn_012": 0.55,
+          "rxn_013": 0.52,
+          "rxn_014": 0.62
+        },
+        "chemical_feasibility": 0.65,
+        "pathway_coherence": 0.72,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.62,
+        "overall_confidence": 0.69,
+        "feedback": "Longer pathway through formate\u2192formaldehyde\u2192Strecker glycine\u2192transamination. The glycine Strecker synthesis (rxn_008) is one of the strongest reactions in the network. However, the formate\u2192formaldehyde reduction (rxn_002) has limited support. The transamination (rxn_009) requires \u03b1-ketoglutarate from the parallel rTCA route, creating a dependency that adds complexity. Still shares the problematic ornithine synthesis and guanidinylation steps.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_005",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Consider alternative formaldehyde sources (e.g., direct photoreduction of CO\u2082)",
+          "Specify mineral catalysts for Surface transamination reaction"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_002": 0.68,
+          "rxn_007": 0.68,
+          "rxn_008": 0.9,
+          "rxn_003": 0.85,
+          "rxn_004": 0.78,
+          "rxn_005": 0.58,
+          "rxn_009": 0.78,
+          "rxn_010": 0.78,
+          "rxn_011": 0.88,
+          "rxn_012": 0.55,
+          "rxn_013": 0.52,
+          "rxn_015": 0.5
+        },
+        "chemical_feasibility": 0.6,
+        "pathway_coherence": 0.7,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.58,
+        "overall_confidence": 0.66,
+        "feedback": "Longest variant combining Strecker glycine with phosphoguanidine assembly. Accumulates weaknesses from both the glycine transamination branch and the phosphoguanidine guanidinylation. The number of speculative steps reduces overall confidence.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_005",
+          "rxn_012",
+          "rxn_013",
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Pathway is too long with too many uncertain steps; consider simplification"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_003": 0.85,
+          "rxn_004": 0.78,
+          "rxn_005": 0.58,
+          "rxn_006": 0.85,
+          "rxn_008": 0.9,
+          "rxn_009": 0.78,
+          "rxn_010": 0.78,
+          "rxn_012": 0.55,
+          "rxn_013": 0.52,
+          "rxn_014": 0.62
+        },
+        "chemical_feasibility": 0.66,
+        "pathway_coherence": 0.78,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.65,
+        "overall_confidence": 0.72,
+        "feedback": "Dual glutamate convergence (rTCA + transamination) strengthens the glutamate production step, which is the strongest part of the network. The convergence is a genuine advantage. However, the bottleneck remains in the ornithine synthesis and guanidinylation steps downstream.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_005",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Focus improvement efforts on the ornithine synthesis steps rather than adding more glutamate routes"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_003": 0.85,
+          "rxn_004": 0.78,
+          "rxn_005": 0.58,
+          "rxn_006": 0.85,
+          "rxn_010": 0.78,
+          "rxn_011": 0.88,
+          "rxn_012": 0.55,
+          "rxn_013": 0.52,
+          "rxn_015": 0.5
+        },
+        "chemical_feasibility": 0.63,
+        "pathway_coherence": 0.75,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.6,
+        "overall_confidence": 0.68,
+        "feedback": "Combines cyanosulfidic cyanamide\u2192guanidine with rTCA ornithine and phosphoguanidine assembly. The cyanosulfidic branch is well-conceived and supported by Patel et al. (2015) type chemistry. However, phosphoguanidine transfer remains the weakest link.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_005",
+          "rxn_012",
+          "rxn_013",
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Direct guanidinylation by cyanamide (rxn_014) may be preferable to phosphoguanidine route"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_007": 0.68,
+          "rxn_008": 0.9,
+          "rxn_010": 0.78,
+          "rxn_009": 0.78,
+          "rxn_012": 0.55,
+          "rxn_013": 0.52,
+          "rxn_014": 0.62
+        },
+        "chemical_feasibility": 0.68,
+        "pathway_coherence": 0.82,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.65,
+        "overall_confidence": 0.73,
+        "feedback": "Highlights HCN's dual role as Strecker reagent and cyanamide precursor, which is a clever network feature. HCN as a hub molecule is well-supported by prebiotic chemistry literature (Sutherland group, Oro, etc.). This pathway best captures the systems chemistry approach.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Strengthen HCN production step; consider direct HCN from volcanic outgassing rather than only formate route"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_002": 0.68,
+          "rxn_007": 0.68,
+          "rxn_008": 0.9,
+          "rxn_003": 0.85,
+          "rxn_004": 0.78,
+          "rxn_005": 0.58,
+          "rxn_009": 0.78,
+          "rxn_012": 0.55,
+          "rxn_013": 0.52,
+          "rxn_014": 0.62
+        },
+        "chemical_feasibility": 0.65,
+        "pathway_coherence": 0.72,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.62,
+        "overall_confidence": 0.69,
+        "feedback": "Parallel supply pathways for Strecker glycine and rTCA alpha-ketoglutarate. Good illustration of environmental cooperation but shares all downstream weaknesses.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_005",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Same as P3 suggestions"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_003": 0.85,
+          "rxn_004": 0.78,
+          "rxn_005": 0.58,
+          "rxn_006": 0.85,
+          "rxn_010": 0.78,
+          "rxn_012": 0.55,
+          "rxn_013": 0.52,
+          "rxn_014": 0.62
+        },
+        "chemical_feasibility": 0.67,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.65,
+        "overall_confidence": 0.73,
+        "feedback": "Minimal hydrothermal route is the most parsimonious. Relies on direct CO2-to-pyruvate (Varma et al. 2018) which is experimentally supported. Good environmental progression. Still hampered by ornithine synthesis issues.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_005",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "This is a good candidate for refinement; focus on fixing the ornithine and guanidinylation steps"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_002": 0.68,
+          "rxn_003": 0.85,
+          "rxn_004": 0.78,
+          "rxn_005": 0.58,
+          "rxn_006": 0.85,
+          "rxn_007": 0.68,
+          "rxn_008": 0.9,
+          "rxn_009": 0.78,
+          "rxn_010": 0.78,
+          "rxn_011": 0.88,
+          "rxn_012": 0.55,
+          "rxn_013": 0.52,
+          "rxn_014": 0.62,
+          "rxn_015": 0.5
+        },
+        "chemical_feasibility": 0.65,
+        "pathway_coherence": 0.75,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.65,
+        "overall_confidence": 0.71,
+        "feedback": "Maximal convergence pathway leverages all network redundancy. While impressive in scope, the additional routes do not compensate for the shared weaknesses in the ornithine synthesis and guanidinylation steps. Redundancy in glutamate production is genuine, but the bottleneck is downstream.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_005",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Network redundancy is a strength but focus revision on the weakest links: ornithine and guanidinylation chemistry"
+        ]
+      }
+    ],
+    "best_pathway_id": "P9",
+    "overall_confidence": 0.72,
+    "network_feedback": "This is a thoughtfully constructed network with excellent topology and a sophisticated systems chemistry approach. The strategy of decomposing arginine into an ornithine backbone + guanidino group is sound and mirrors the biological pathway. The network has genuine strengths: (1) Multiple convergent glutamate synthesis routes via rTCA and transamination are well-supported. (2) HCN as a master hub connecting carbon fixation and nitrogen chemistry is elegant and literature-supported. (3) Cyanamide from cyanosulfidic chemistry as a guanidino group source is creative and aligns with Patel et al.-type photochemistry. (4) Environmental progression from Hydrothermal\u2192Surface\u2192Biochemical is logical. However, three critical weaknesses prevent approval: (A) rxn_005 incorrectly uses pyruvate as co-reactant for the oxaloacetate\u2192\u03b1-ketoglutarate step; in rTCA, this requires acetyl-CoA or an analog condensing with oxaloacetate to form citrate. (B) The ornithine synthesis via glutamate-5-semialdehyde (rxn_012-013) is the most speculative part: the phosphate-activated \u03b3-carboxyl reduction lacks strong prebiotic precedent, and glutamate-5-semialdehyde spontaneously cyclizes to \u0394\u00b9-pyrroline-5-carboxylate, competing with the desired reductive amination. (C) Guanidinylation selectivity (rxn_014/015) for ornithine's \u03b4-NH\u2082 over \u03b1-NH\u2082 is not addressed. The literature review confirms that arginine-specific prebiotic synthesis lacks experimental validation, and this network honestly addresses a genuinely difficult problem. With corrections to rxn_005 stoichiometry, a more robust ornithine synthesis route (perhaps direct Strecker on glutaraldehyde or 4-aminobutanal), and consideration of selectivity in guanidinylation, the network could reach approval threshold. Some mineral catalysts for Surface reactions are underspecified.",
+    "approved": false,
+    "hub_quality": 0.88,
+    "convergence_quality": 0.85
+  },
+  "success": false,
+  "attempts": 3,
+  "notes": null
+}

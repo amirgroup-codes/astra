@@ -1,0 +1,949 @@
+{
+  "target_molecule": "Acetyl-CoA",
+  "network": {
+    "target_molecule": "Acetyl-CoA",
+    "overall_strategy": "This literature-guided network treats acetyl-CoA as the formal target while explicitly grounding all experimentally supported chemistry in prebiotic acetyl-thioester formation and proto-CoA subunit generation. The network therefore converges on S-methyl thioacetate, acetyl phosphate, acetyl-pantetheine, and pantetheine as the strongest literature-supported intermediates, and includes a final explicitly speculative completion to full acetyl-CoA only to satisfy the requested target. Ten distinct pathways are encoded by recombining five experimentally grounded entry routes: W\u00e4chtersh\u00e4user iron-sulfur carbonylation, Russell-Martin alkaline vent C1 reduction, native-metal CO2 fixation, Cody high-pressure organometallic pyruvate synthesis, and Sutherland-Leqraa cyanosulfidic/UV pyruvate-to-thioester chemistry, together with Fairchild-Powner pantetheine synthesis and acetyl-group transfer chemistry. Environmental interconnection is implemented as Hydrothermal generation of CO, formate, acetate, methanethiol and pyruvate; Surface generation of pyruvate and UV-driven thioester precursors; and Biochemical transfer/exchange to pantetheine-derived proto-cofactors and the speculative CoA endpoint.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "CO",
+        "iupac_name": "carbon monoxide",
+        "common_name": "carbon monoxide",
+        "inchi": "InChI=1S/CO/c1-2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_004",
+        "formula": "CH2O2",
+        "iupac_name": "methanoic acid",
+        "common_name": "formate/formic acid",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_005",
+        "formula": "C2H4O2",
+        "iupac_name": "acetic acid",
+        "common_name": "acetate/acetic acid",
+        "inchi": "InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_006",
+        "formula": "CH4S",
+        "iupac_name": "methanethiol",
+        "common_name": "methyl mercaptan",
+        "inchi": "InChI=1S/CH4S/c1-2/h2H,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvic acid/pyruvate",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_008",
+        "formula": "CH3S2CH3",
+        "iupac_name": "dimethyl disulfide",
+        "common_name": "dimethyl disulfide",
+        "inchi": "InChI=1S/C2H6S2/c1-3-4-2/h1-2H3",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C3H3NO",
+        "iupac_name": "2-oxopropanenitrile",
+        "common_name": "pyruvonitrile",
+        "inchi": "InChI=1S/C3H3NO/c1-3(5)2-4/h1H3",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C3H6O3S",
+        "iupac_name": "S-methyl thioacetate",
+        "common_name": "methyl thioacetate",
+        "inchi": "InChI=1S/C3H6OS/c1-3(4)5-2/h1-2H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C2H5O5P",
+        "iupac_name": "acetyl dihydrogen phosphate",
+        "common_name": "acetyl phosphate",
+        "inchi": "InChI=1S/C2H5O5P/c1-2(3)7-8(4,5)6/h1H3,(H2,4,5,6)",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C11H22N2O4S",
+        "iupac_name": "2,4-dihydroxy-3,3-dimethyl-N-(2-sulfanylethyl)butanamide",
+        "common_name": "pantetheine",
+        "inchi": "InChI=1S/C11H22N2O4S/c1-11(2,7-14)9(16)10(17)13-4-3-8(15)12-5-6-18/h9,14,16,18H,3-7H2,1-2H3,(H,12,15)(H,13,17)/t9-/m0/s1",
+        "role": "hub_intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C13H24N2O5S2",
+        "iupac_name": "S-(2-{3-[(2,4-dihydroxy-3,3-dimethylbutanamido)ethyl]sulfanyl}ethyl) ethanethioate",
+        "common_name": "acetyl-pantetheine",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C23H38N7O17P3S",
+        "iupac_name": "[(3-{[2-(acetylsulfanyl)ethyl]carbamoyl}-2,2-dimethyl-4-oxobutyl) hydrogen phosphate]-3'-phosphoadenosine 5'-diphosphate",
+        "common_name": "acetyl-coenzyme A",
+        "inchi": "InChI=1S/C23H38N7O17P3S/c1-12(31)51-7-6-25-14(32)4-5-26-21(35)18(34)23(2,3)9-44-50(41,42)47-49(39,40)43-8-13-17(46-48(36,37)38)16(33)22(45-13)30-11-29-15-19(24)27-10-28-20(15)30/h10-11,13,16-18,22,33-34H,4-9H2,1-3H3,(H,25,32)(H,26,35)(H,39,40)(H,41,42)(H2,24,27,28)(H2,36,37,38)/t13-,16-,17-,18?,22-/m1/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_015",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO2 reduction to formate on greigite/awaruite-like surfaces",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "373K",
+          "pressure": "high CO2/H2; hydrothermal, comparable to 25 bar to 40 bar experimental regimes",
+          "catalyst": "greigite/magnetite with Ni-Fe hydrothermal analogs",
+          "aqueous": "true",
+          "other": "alkaline solution, vent-like conditions; formate reported up to 200 mM"
+        },
+        "mechanism": "Mineral-catalyzed H2-driven reduction of CO2 to the first stable C1 product, formate, on Fe-S and Fe-oxide surfaces.",
+        "reasoning": "Preiner et al. (2020) demonstrated H2 + CO2 conversion to abundant formate on greigite, magnetite, and awaruite at 100\u00b0C in alkaline hydrothermal conditions; Beyazay et al. (2023) extended analogous product spectra to lower temperature Ni3Fe systems. This is a core Wood-Ljungdahl analog branch."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Hydrothermal CO2 reduction to CO on Ni-Fe sulfide surfaces",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "mackinawite (FeS)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "Ni-bearing FeS/greigite-like vent precipitates",
+          "aqueous": "true",
+          "other": "alkaline hydrothermal vent pH gradient ~3-5 units; geoelectrochemical reduction analog"
+        },
+        "mechanism": "CO2 is reduced to surface-bound CO on metal sulfide centers resembling CODH/ACS active-site chemistry.",
+        "reasoning": "W\u00e4chtersh\u00e4user (1988) and Russell (1994) proposed CO2-to-CO generation on FeS/NiS minerals; Martin and Russell (2007) detailed vent electrochemical driving forces; Kitadai et al. (2021) showed CO accumulation on partially electroreduced NiS during CO2 electroreduction. This is the pivotal C1 carbonyl hub."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Native metal CO2 fixation to acetate and pyruvate",
+        "inputs": [
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_005",
+          "mol_007",
+          "mol_004"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron (Fe0)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "303-373K",
+          "pressure": "1-40 bar CO2",
+          "catalyst": "native iron",
+          "aqueous": "true",
+          "other": "anoxic aqueous CO2; acetate up to 280 \u00b5M reported; pyruvate also formed"
+        },
+        "mechanism": "Direct reduction of CO2 by zero-valent iron yields a network of fixed-carbon products including formate, acetate, and pyruvate.",
+        "reasoning": "Varma et al. (2018) showed Fe0 reduces CO2 to acetate, pyruvate, and formate at 30-100\u00b0C and 1-40 bar CO2, bypassing biological electron-bifurcation requirements. This provides a second convergent route to formate and pyruvate and an acetate branch."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Hydrothermal H2/CO2 fixation to pyruvate on greigite/magnetite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "373K",
+          "pressure": "high H2/CO2 hydrothermal pressure",
+          "catalyst": "greigite/magnetite",
+          "aqueous": "true",
+          "other": "alkaline hydrothermal conditions; pyruvate reported around 10 \u00b5M"
+        },
+        "mechanism": "Sequential mineral-mediated C1 reduction and C-C coupling gives pyruvate as a branch-point keto acid.",
+        "reasoning": "Preiner et al. (2020) reported pyruvate production from H2 + CO2 on hydrothermal minerals including greigite and magnetite at 100\u00b0C. Goldford et al. (2017) identified pyruvate as a central proto-metabolic hub, justifying its network role."
+      },
+      {
+        "id": "rxn_005",
+        "name": "High-pressure organometallic pyruvate synthesis from CO and thiols",
+        "inputs": [
+          "mol_003",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "mackinawite (FeS)",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "523K",
+          "pressure": "50-200 MPa",
+          "catalyst": "iron sulfide carbonyl phases",
+          "aqueous": "true",
+          "other": "deep hydrothermal organometallic regime with alkyl thiols"
+        },
+        "mechanism": "CO inserts into iron-sulfur-thiolate organometallic intermediates under pressure, producing pyruvate.",
+        "reasoning": "Cody et al. (2000) demonstrated pyruvic acid formation from CO, FeS, and alkyl thiols at 250\u00b0C and 50-200 MPa via organometallic Fe-S-carbonyl intermediates analogous to CODH/ACS chemistry."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Iron-sulfur world carbonylation of methanethiol to S-methyl thioacetate",
+        "inputs": [
+          "mol_003",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "373K",
+          "pressure": "1.05 bar CO",
+          "catalyst": "NiS/FeS coprecipitate represented by FeS minerals in vent setting",
+          "aqueous": "true",
+          "other": "anaerobic sealed aqueous system, initial pH ~8, 7 days; detectable methyl thioacetate"
+        },
+        "mechanism": "Nickel/iron sulfide mediated carbonylation forms an acetyl-metal intermediate followed by thiolysis to methyl thioacetate.",
+        "reasoning": "Huber and W\u00e4chtersh\u00e4user (1997) demonstrated methyl thioacetate formation from CO and methanethiol on NiS/FeS at 100\u00b0C. W\u00e4chtersh\u00e4user (1988) proposed this as a mineral analog of acetyl-CoA synthase chemistry."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Geoelectrochemical room-temperature thioester synthesis on partially reduced sulfides",
+        "inputs": [
+          "mol_001",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_003",
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "mackinawite (FeS)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "298K",
+          "pressure": "ambient to hydrothermal geoelectrochemical",
+          "catalyst": "partially electroreduced NiS/CoS-like sulfides in vent redox gradients",
+          "aqueous": "true",
+          "other": "-0.6 to -1.0 V vs SHE, neutral pH; up to 35% yield on NiS_PERM and 56% with CoS"
+        },
+        "mechanism": "Electroreduction of sulfide surfaces accumulates surface CO from CO2, which then carbonylates methanethiol to methyl thioacetate.",
+        "reasoning": "Kitadai et al. (2021) showed geoelectrochemically reduced NiS surfaces accumulate CO from CO2 and produce methyl thioacetate at room temperature and neutral pH. The mineral logic follows vent redox-gradient chemistry proposed by Russell and Martin (2007)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Cyanosulfidic UV route to pyruvate precursor pool",
+        "inputs": [
+          "mol_015"
+        ],
+        "outputs": [
+          "mol_009",
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (molybdenite/stibnite)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "UV photoredox with sulfide mineral assistance and photocatalytic mineral surfaces",
+          "aqueous": "true",
+          "other": "anoxic surface pools, UV-driven cyanosulfidic network; pyruvate reported in ~14% yield via alpha-hydroxy acid oxidation branch"
+        },
+        "mechanism": "HCN-derived cyanosulfidic chemistry under UV generates nitrile intermediates and oxidized carbonyl products converging on pyruvate.",
+        "reasoning": "Patel et al. (2015) established cyanosulfidic systems chemistry from HCN/H2S/UV; Ritson (2021) reported pyruvate generation through UV-driven oxidation of alpha-hydroxy acids. This reaction is compressed but literature-grounded as a surface entry into the pyruvate hub."
+      },
+      {
+        "id": "rxn_009",
+        "name": "UV pyruvate-to-thioacetate ester formation via disulfide chemistry",
+        "inputs": [
+          "mol_007",
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-320K",
+          "pressure": "1 atm",
+          "catalyst": "UV irradiation on mineral-rich drying-wetting interfaces",
+          "aqueous": "true",
+          "other": "surface irradiated pools; no external oxidant required"
+        },
+        "mechanism": "Pyruvate undergoes UV-driven oxidative decarboxylative thioesterification with disulfides to form thioacetate esters.",
+        "reasoning": "Leqraa et al. (2020) showed pyruvate reacts with disulfides under UV irradiation to yield thioacetate esters without external oxidant. This provides the key bridge from Sutherland-type pyruvate chemistry to prebiotic thioesters."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Thioester-phosphate exchange to acetyl phosphate",
+        "inputs": [
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null,
+          null
+        ],
+        "conditions": {
+          "temperature": "298-323K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "requires inorganic phosphate in concentrated pool or interface; cooler and near-neutral conditions favor thioester persistence"
+        },
+        "mechanism": "Activated acetyl thioester transfers the acetyl group to phosphate, generating the higher phosphoryl-potential mixed anhydride acetyl phosphate.",
+        "reasoning": "Martin and Russell (2007) argued acetyl phosphate was a primordial energy currency derived from acetyl thioesters, and the deep research summary explicitly identifies nonenzymatic formation of acetyl phosphate from acetyl thioesters and inorganic phosphate. This is literature-supported as a protoenergetic bridge."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Prebiotic pantetheine synthesis",
+        "inputs": [
+          "mol_015"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null,
+          null
+        ],
+        "conditions": {
+          "temperature": "298K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "room-temperature aqueous nitrile chemistry; condensed representation of multi-step chemoselective sequence"
+        },
+        "mechanism": "Chemoselective nitrile chemistry generates pantetheine, the catalytically active thiol subunit of coenzyme A.",
+        "reasoning": "Fairchild et al. (2024) reported the first prebiotically plausible synthesis of pantetheine through chemoselective nitrile chemistry in water at room temperature. This network intentionally uses pantetheine, not full CoA, as the experimentally grounded cofactor hub, addressing the CoA complexity gap noted by the literature."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Acetyl transfer from methyl thioacetate to pantetheine",
+        "inputs": [
+          "mol_010",
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null,
+          null
+        ],
+        "conditions": {
+          "temperature": "296-323K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "neutral aqueous thiol-thioester exchange; faster than hydrolysis under mild conditions"
+        },
+        "mechanism": "Pantetheine thiol performs thiol-thioester exchange with methyl thioacetate to generate acetyl-pantetheine.",
+        "reasoning": "The deep research summary notes that thiol-thioester exchange is several orders faster than thioester hydrolysis and that pantetheine can substitute for CoA in proto-metabolism (Goldford et al., 2017). This specific transfer step is a necessary but still partially inferential connector grounded by thioester exchange kinetics (Brosnan et al., 2011) and the pantetheine breakthrough of Fairchild et al. (2024)."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Speculative completion from acetyl-pantetheine to acetyl-CoA",
+        "inputs": [
+          "mol_013"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null,
+          null
+        ],
+        "conditions": {
+          "temperature": "variable",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "explicitly unresolved; requires attachment of the 3'-phospho-ADP moiety absent from demonstrated prebiotic chemistry"
+        },
+        "mechanism": "Formal cofactor completion by appending the nucleotide-phosphate portion of coenzyme A to acetyl-pantetheine.",
+        "reasoning": "This step is explicitly speculative and included only because the requested target is acetyl-CoA. The supplied literature states that the CoA complexity gap remains unresolved and that pantetheine, not full CoA, is the experimentally accessible functional subunit (Fairchild et al., 2024; Goldford et al., 2017). The network therefore marks this as a non-demonstrated endpoint rather than a validated prebiotic reaction."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "W\u00e4chtersh\u00e4user direct carbonylation route",
+        "description": "Classical iron-sulfur world path from CO2-derived CO to methyl thioacetate, then acetyl transfer to pantetheine and formal completion to acetyl-CoA.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_006",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Geoelectrochemical vent route",
+        "description": "Room-temperature vent redox gradients produce surface CO and methyl thioacetate directly from CO2 and methanethiol, then feed proto-cofactor chemistry.",
+        "reaction_sequence": [
+          "rxn_007",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Preiner hydrothermal pyruvate to surface thioester route",
+        "description": "Hydrothermal H2/CO2 fixation generates pyruvate, which is transferred to surface UV/disulfide chemistry to make methyl thioacetate before pantetheine acetylation.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_009",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Native iron pyruvate branch",
+        "description": "Fe0-driven CO2 fixation generates pyruvate directly, followed by UV disulfide thioesterification and pantetheine acetylation.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_009",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Cody high-pressure organometallic branch",
+        "description": "Deep hydrothermal CO plus thiol chemistry yields pyruvate under pressure, which then reaches methyl thioacetate in a cooler surface compartment.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_005",
+          "rxn_009",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_007",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Cyanosulfidic surface-only thioester entry",
+        "description": "HCN-fed cyanosulfidic chemistry generates pyruvate on the surface; UV disulfide chemistry converts it to methyl thioacetate, then pantetheine captures the acetyl group.",
+        "reaction_sequence": [
+          "rxn_008",
+          "rxn_009",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Formate-supported hydrothermal convergence route",
+        "description": "Hydrothermal CO2 reduction first accumulates formate, while a parallel CO branch supplies carbonyl chemistry; both converge at methyl thioacetate and then proto-CoA chemistry.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_006",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_003",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Acetyl phosphate protoenergetic route",
+        "description": "Hydrothermal thioester synthesis is coupled to nonenzymatic phosphate capture, creating acetyl phosphate as an energy-rich bridge before acetyl transfer into pantetheine-based chemistry.",
+        "reaction_sequence": [
+          "rxn_007",
+          "rxn_010",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_010",
+          "mol_011",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Pantetheine-first convergence route",
+        "description": "Independent prebiotic pantetheine synthesis converges with hydrothermally generated methyl thioacetate to produce acetyl-pantetheine, then the formal acetyl-CoA endpoint.",
+        "reaction_sequence": [
+          "rxn_011",
+          "rxn_007",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Dual-hub integrated vent-to-pool route",
+        "description": "Native-metal CO2 fixation provides pyruvate/formate while a parallel vent carbonylation branch provides CO; the network converges through methyl thioacetate, acetyl phosphate, and acetyl-pantetheine en route to the formal target.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_002",
+          "rxn_006",
+          "rxn_010",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_003",
+          "mol_010",
+          "mol_011"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_003",
+      "mol_007",
+      "mol_010",
+      "mol_012",
+      "mol_004"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_003",
+        "incoming_reactions": [
+          "rxn_002",
+          "rxn_007"
+        ],
+        "outgoing_reactions": [
+          "rxn_005",
+          "rxn_006"
+        ]
+      },
+      {
+        "molecule_id": "mol_007",
+        "incoming_reactions": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_008"
+        ],
+        "outgoing_reactions": [
+          "rxn_009"
+        ]
+      },
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_009"
+        ],
+        "outgoing_reactions": [
+          "rxn_010",
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_012",
+        "incoming_reactions": [
+          "rxn_011"
+        ],
+        "outgoing_reactions": [
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [
+          "rxn_001",
+          "rxn_003"
+        ],
+        "outgoing_reactions": [
+          "rxn_007"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Acetyl-CoA",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_002": 0.95,
+          "rxn_006": 0.97,
+          "rxn_012": 0.82,
+          "rxn_013": 0.12
+        },
+        "chemical_feasibility": 0.72,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.38,
+        "overall_confidence": 0.72,
+        "feedback": "Strong literature alignment for hydrothermal CO generation and Ni/Fe-sulfide-mediated thioester formation, and a reasonable transfer to pantetheine chemistry. The main weakness is the final conversion from acetyl-pantetheine to full acetyl-CoA, which is explicitly speculative and unsupported by the cited prebiotic literature.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Reframe the endpoint as acetyl-pantetheine or S-methyl thioacetate rather than full acetyl-CoA",
+          "If acetyl-CoA must remain the target, include explicit adenylation/phosphorylation subunit assembly steps and mark them as unresolved literature gaps"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_007": 0.96,
+          "rxn_012": 0.82,
+          "rxn_013": 0.12
+        },
+        "chemical_feasibility": 0.73,
+        "pathway_coherence": 0.89,
+        "environmental_progression": 0.86,
+        "target_achievement": 0.38,
+        "overall_confidence": 0.73,
+        "feedback": "This is one of the best-supported entry routes because the geoelectrochemical NiS-derived thioester synthesis closely matches Kitadai et al. 2021. The route remains chemically coherent up to acetyl-pantetheine, but does not credibly complete the transition to full acetyl-CoA.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Keep this as a high-confidence route to prebiotic acetyl thioesters",
+          "Separate the proto-cofactor network from the full CoA completion step"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_004": 0.9,
+          "rxn_009": 0.86,
+          "rxn_012": 0.82,
+          "rxn_013": 0.12
+        },
+        "chemical_feasibility": 0.68,
+        "pathway_coherence": 0.85,
+        "environmental_progression": 0.94,
+        "target_achievement": 0.38,
+        "overall_confidence": 0.7,
+        "feedback": "Good environmental interconnection from hydrothermal pyruvate generation to surface UV thioester chemistry. However, the pyruvate-to-thioacetate step depends on disulfide photochemistry and is somewhat less direct and less general than the Ni/Fe-sulfide carbonylation routes. Final target completion remains unsupported.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Specify the exact disulfide and UV conditions more clearly",
+          "Add an explicit justification for the source and persistence of dimethyl disulfide in surface settings"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_003": 0.83,
+          "rxn_009": 0.86,
+          "rxn_012": 0.82,
+          "rxn_013": 0.12
+        },
+        "chemical_feasibility": 0.66,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.38,
+        "overall_confidence": 0.68,
+        "feedback": "The native-iron branch is literature-grounded for producing acetate, pyruvate, and formate from CO2, but the reaction as summarized is overly compressed because one node generates multiple products directly from CO2 without explicit H2/Fe0 accounting. The downstream surface and biochemical handoff is plausible, yet the endpoint to acetyl-CoA remains speculative.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_003",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Split native-metal CO2 fixation into separate reactions for formate, acetate, and pyruvate",
+          "Include Fe0 and pressure explicitly in the reaction description and conditions"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_002": 0.95,
+          "rxn_005": 0.78,
+          "rxn_009": 0.86,
+          "rxn_012": 0.82,
+          "rxn_013": 0.12
+        },
+        "chemical_feasibility": 0.67,
+        "pathway_coherence": 0.79,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.38,
+        "overall_confidence": 0.69,
+        "feedback": "The Cody-inspired high-pressure branch is partially aligned with the literature, but the represented stoichiometry for pyruvate synthesis from CO and methanethiol is too simplified relative to the organometallic FeS-carbonyl chemistry actually demonstrated. It is directionally plausible as a route to pyruvate, but not cleanly encoded. The final acetyl-CoA completion remains the major weakness.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_005",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Represent Cody chemistry as FeS/CO/alkyl thiol mediated organometallic pyruvate formation with pressure explicitly included",
+          "Avoid implying a simple binary CO + CH3SH stoichiometry to pyruvate"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_008": 0.63,
+          "rxn_009": 0.86,
+          "rxn_012": 0.82,
+          "rxn_013": 0.12
+        },
+        "chemical_feasibility": 0.59,
+        "pathway_coherence": 0.73,
+        "environmental_progression": 0.76,
+        "target_achievement": 0.38,
+        "overall_confidence": 0.61,
+        "feedback": "This is the weakest route because the network encodes HCN directly yielding both pyruvonitrile and pyruvate in one step, which oversimplifies the cyanosulfidic systems chemistry. The literature supports pyruvate formation through multistep UV/H2S/Cu photoredox chemistry rather than a single direct conversion. Downstream thioester chemistry is more defensible.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_008",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Expand the cyanosulfidic sequence into a multistep precursor network rather than one compressed reaction",
+          "Include sulfide and UV-active metal mediation explicitly"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_001": 0.93,
+          "rxn_002": 0.95,
+          "rxn_007": 0.96,
+          "rxn_012": 0.82,
+          "rxn_013": 0.12
+        },
+        "chemical_feasibility": 0.74,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.38,
+        "overall_confidence": 0.74,
+        "feedback": "This is a well-connected hydrothermal convergence pathway using formate and CO as realistic vent intermediates before thioester capture. It aligns well with Russell-Martin and Kitadai-style chemistry. As elsewhere, the pathway is convincing to acetyl thioesters and acetyl-pantetheine, but not to full acetyl-CoA.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Leverage formate more explicitly as a branch toward methyl equivalents rather than leaving it mainly topological",
+          "Treat acetyl-pantetheine as the experimentally grounded terminus"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_006": 0.97,
+          "rxn_010": 0.84,
+          "rxn_012": 0.82,
+          "rxn_013": 0.12
+        },
+        "chemical_feasibility": 0.69,
+        "pathway_coherence": 0.82,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.38,
+        "overall_confidence": 0.68,
+        "feedback": "The protoenergetic logic is sound: acetyl thioesters can plausibly exchange with phosphate to form acetyl phosphate, consistent with Martin and Russell. However, the network does not clearly show whether acetyl phosphate contributes mechanistically to the final CoA assembly, so this branch feels partly parallel rather than directly productive toward the target.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Clarify whether acetyl phosphate is a side branch or a true precursor to later thioester transfer steps",
+          "Add a route from acetyl phosphate to pantetheine acylation if intended"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_011": 0.9,
+          "rxn_012": 0.82,
+          "rxn_013": 0.12
+        },
+        "chemical_feasibility": 0.61,
+        "pathway_coherence": 0.78,
+        "environmental_progression": 0.74,
+        "target_achievement": 0.38,
+        "overall_confidence": 0.63,
+        "feedback": "Pantetheine-first convergence is compelling because Fairchild et al. 2024 strongly supports prebiotic pantetheine synthesis. However, encoding pantetheine from HCN alone is too compressed and omits the nitrile-based chemoselective assembly logic. The route is strong conceptually but under-specified chemically, and full acetyl-CoA remains unattained in a literature-grounded way.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_011",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Expand pantetheine synthesis into intermediate nitrile-bearing precursors",
+          "Distinguish pantetheine plausibility from full CoA plausibility"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_002": 0.95,
+          "rxn_004": 0.9,
+          "rxn_009": 0.86,
+          "rxn_011": 0.9,
+          "rxn_012": 0.82,
+          "rxn_013": 0.12
+        },
+        "chemical_feasibility": 0.7,
+        "pathway_coherence": 0.91,
+        "environmental_progression": 0.96,
+        "target_achievement": 0.38,
+        "overall_confidence": 0.75,
+        "feedback": "This is the most integrated vent-to-pool route and best captures the intended systems-level story: hydrothermal C1 fixation, surface pyruvate/thioester chemistry, and biochemical transfer to pantetheine. It excels in topology and environmental progression. Its weakness is not the network design but the remaining chemical gap from acetyl-pantetheine to full acetyl-CoA.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Present this as the best systems-chemistry pathway to a proto-CoA thioester ensemble",
+          "Add explicit acknowledgment that adenine/ribose/phosphate installation is unresolved and currently outside experimental support"
+        ]
+      }
+    ],
+    "best_pathway_id": "P10",
+    "overall_confidence": 0.77,
+    "network_feedback": "This is a strong and thoughtfully literature-guided prebiotic network for acetyl-thioester chemistry and proto-CoA intermediates, but not for full acetyl-CoA itself. Topologically, the network is good: it has sufficient nodes, multiple hubs, clear convergence around CO, pyruvate, and methyl thioacetate, and good hydrothermal-to-surface-to-biochemical connectivity. Environmental interconnection is a major strength, and the chosen hubs match the literature well. Chemical plausibility is high for the hydrothermal thioester core, especially rxn_002, rxn_006, and rxn_007, and reasonably good for the pyruvate/thioester bridging chemistry. The biggest limitations are compressed reaction encoding for rxn_003, rxn_005, rxn_008, and rxn_011, which oversimplify literature-supported multistep systems. The decisive problem is target achievement: the network honestly acknowledges that acetyl-CoA itself is not experimentally supported prebiotically, and rxn_013 is speculative. Therefore the network aligns well with literature on acetyl-thioester and pantetheine formation, but does not achieve the declared target in a literature-grounded manner. It should be considered a high-quality network for proto-acetyl-CoA chemistry, not an approved network for full acetyl-CoA synthesis.",
+    "approved": false,
+    "hub_quality": 0.88,
+    "convergence_quality": 0.86
+  },
+  "success": false,
+  "attempts": 3,
+  "notes": null
+}

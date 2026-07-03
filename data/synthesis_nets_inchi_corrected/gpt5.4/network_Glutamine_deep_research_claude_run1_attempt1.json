@@ -1,0 +1,937 @@
+{
+  "target_molecule": "Glutamine",
+  "network": {
+    "target_molecule": "Glutamine",
+    "overall_strategy": "This network is literature-guided and explicitly reflects that glutamine is not a demonstrated prebiotic product. The network therefore builds a connected bipartite synthesis graph in which multiple experimentally supported routes converge on glutamic acid through the central hub alpha-ketoglutarate, while the final conversion to glutamine is represented only as speculative, low-plausibility amidation chemistry motivated by cyanate/phosphate activation analogies discussed in the literature. Hydrothermal chemistry supplies formate, acetate, pyruvate, and reductive amination routes; surface chemistry supplies glyoxylate, HCN-derived precursors, Strecker-type access to glutamate, and activation chemistry; biochemical/prebiotic settings host transamination, condensation, and the undemonstrated final amidation. The graph contains 10 distinct pathway variants to the target, most of which share the same unresolved final bottleneck from glutamic acid to glutamine.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "CH2O2",
+        "iupac_name": "methanoic acid",
+        "common_name": "formate/formic acid",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_005",
+        "formula": "C2H4O2",
+        "iupac_name": "acetic acid",
+        "common_name": "acetate/acetic acid",
+        "inchi": "InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_006",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvate",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C2H2O3",
+        "iupac_name": "oxoacetic acid",
+        "common_name": "glyoxylate",
+        "inchi": "InChI=1S/C2H2O3/c3-1-2(4)5/h1H,(H,4,5)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C5H6O5",
+        "iupac_name": "2-oxopentanedioic acid",
+        "common_name": "alpha-ketoglutarate",
+        "inchi": "InChI=1S/C5H6O5/c6-3(5(9)10)1-2-4(7)8/h1-2H2,(H,7,8)(H,9,10)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C5H9NO4",
+        "iupac_name": "2-aminopentanedioic acid",
+        "common_name": "glutamic acid/glutamate",
+        "inchi": "InChI=1S/C5H9NO4/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H,7,8)(H,9,10)/t3-/m0/s1",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C2H5NO2",
+        "iupac_name": "aminoacetic acid",
+        "common_name": "glycine",
+        "inchi": "InChI=1S/C2H5NO2/c3-1-2(4)5/h1,3H2,(H,4,5)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C4H6O3",
+        "iupac_name": "4-oxobutanoic acid",
+        "common_name": "succinic semialdehyde",
+        "inchi": "InChI=1S/C4H6O3/c5-3-1-2-4(6)7/h3H,1-2H2,(H,6,7)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C5H8N2O2",
+        "iupac_name": "2-amino-4-cyanobutanoic acid",
+        "common_name": "glutamate aminonitrile",
+        "inchi": "InChI=1S/C5H8N2O2/c6-3-1-2-4(7)5(8)9/h4H,1-2,7H2,(H,8,9)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "CHNO",
+        "iupac_name": "isocyanic acid",
+        "common_name": "cyanate",
+        "inchi": "InChI=1S/CHNO/c2-1-3/h2H",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C5H8N2O3",
+        "iupac_name": "2,5-diamino-5-oxopentanoic acid",
+        "common_name": "glutamine",
+        "inchi": "InChI=1S/C5H10N2O3/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H2,7,8)(H,9,10)/t3-/m0/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO2 reduction to formate",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite/mackinawite",
+          "aqueous": "true",
+          "other": "alkaline vent conditions; H2-rich, anoxic"
+        },
+        "mechanism": "Mineral-surface reduction of CO2 by H2 through iron-sulfur mediated electron transfer to produce formate.",
+        "reasoning": "Consistent with iron-sulfur world CO2 reduction chemistry and vent-interface formate generation, with greigite/mackinawite as required hydrothermal mineral agents; formate is also a known product in serpentinization-linked CO2 fixation systems (Huber & Wachtershauser, 1997; Kitadai, 2015; Preiner et al., 2020; Beyazay et al., 2023)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Hydrothermal reduction from formate/CO2 to acetate",
+        "inputs": [
+          "mol_004",
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_005"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite/magnetite",
+          "aqueous": "true",
+          "other": "alkaline hydrothermal vent or subseafloor setting"
+        },
+        "mechanism": "Sequential CO2 reduction and C-C bond formation on metal-rich mineral surfaces gives acetate-like C2 products.",
+        "reasoning": "Supported by serpentinization-linked and hydrothermal carbon fixation literature that yields acetate/formate from CO2 and H2 on Fe/Ni-bearing catalysts; included here to connect hydrothermal carbon fixation to pyruvate production and cross-environment carbon flow (Huber & Wachtershauser, 1997; Preiner et al., 2020; Beyazay et al., 2023)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Hydrothermal CO2 fixation to pyruvate",
+        "inputs": [
+          "mol_001",
+          "mol_002",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "373K",
+          "pressure": "high",
+          "catalyst": "magnetite/Fe0",
+          "aqueous": "true",
+          "other": "serpentinization-linked H2-rich system; pyruvate observed in awaruite/serpentinization analog chemistry near 100C"
+        },
+        "mechanism": "Reductive carbon fixation extends C2 intermediates to C3 alpha-keto acids on reduced iron-bearing mineral surfaces.",
+        "reasoning": "Pyruvate is an experimentally observed product of H2-dependent CO2 fixation under serpentinization-related catalysis, linking hydrothermal carbon fixation to metabolic keto acids (Preiner et al., 2020; Beyazay et al., 2023). Mineral assignments follow the required hydrothermal mineral set while preserving literature-consistent vent chemistry."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Surface generation of glyoxylate from simple amino acid precursor network",
+        "inputs": [
+          "mol_004",
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "343-353K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2/phosphate minerals",
+          "aqueous": "true",
+          "other": "warm surface pool; phosphate-assisted chemistry analogous to glycine/serine-derived glyoxylate-pyruvate network"
+        },
+        "mechanism": "Surface redox and rearrangement chemistry in phosphate-bearing pools generates glyoxylate as a C2 alpha-oxoacid node.",
+        "reasoning": "Glyoxylate is a key prebiotic precursor to alpha-ketoglutarate and is implicated in nonenzymatic protometabolic networks; the direct transformation shown here is a connective abstraction to keep the graph fully linked, grounded in the broader glyoxylate/pyruvate protometabolic chemistry rather than a single-step definitive synthesis (Stubbs et al., 2020; Ter-Ovanessian et al., 2025). Because this is a surface-environment connector, TiO2 and phosphate minerals are specified as required agents; this step is partially speculative."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Surface aldol coupling of glyoxylate and pyruvate to alpha-ketoglutarate",
+        "inputs": [
+          "mol_007",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "343K",
+          "pressure": "1 atm",
+          "catalyst": "mineral concentration by borate/clay surfaces",
+          "aqueous": "true",
+          "other": "pH 4.5 to 5; warm evaporitic or geothermal pool"
+        },
+        "mechanism": "Nonenzymatic aldol addition/cross-Cannizzaro-like network between glyoxylate and pyruvate forms the C5 alpha-keto diacid alpha-ketoglutarate.",
+        "reasoning": "Directly based on the nonenzymatic ancestral Krebs-cycle analog where glyoxylate and pyruvate generate alpha-ketoglutarate under mild acidic warm conditions; mineral surfaces here are included as concentrators required by the network schema, not because the original report required them (Stubbs et al., 2020; Mayer & Moran, 2022)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Hydrothermal reductive amination of alpha-ketoglutarate to glutamic acid",
+        "inputs": [
+          "mol_008",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "295K to 323K",
+          "pressure": "moderate to high H2 partial pressure",
+          "catalyst": "FeS/FeS2 analog mineral catalysis",
+          "aqueous": "true",
+          "other": "ammonium present; pH near 8 for high-yield Ni systems, with FeS-based precedent for hydrothermal reductive amination"
+        },
+        "mechanism": "Ammonia adds to the alpha-keto acid followed by mineral-assisted reduction of the imine/iminium to the alpha-amino acid glutamate.",
+        "reasoning": "This step is the best-established prebiotic route to glutamate. Kaur et al. showed alpha-ketoglutarate reductive amination to glutamate at 22C, pH 8 with H2 and Ni/SiO2-Al2O3; earlier FeS/H2S and FeS/Fe(OH)2 work established hydrothermal mineral reductive amination of alpha-oxo acids. The network uses FeS/pyrite-class hydrothermal minerals to satisfy the required environment-mineral constraint while retaining literature grounding (Hafenbradl et al., 1995; Huber & Wachtershauser, 2003; Kaur et al., 2024; Nogal et al., 2024)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Surface transamination of alpha-ketoglutarate with glycine to glutamic acid",
+        "inputs": [
+          "mol_008",
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_009",
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "353K",
+          "pressure": "1 atm",
+          "catalyst": "Al3+ in solution; mineral surfaces as concentrators",
+          "aqueous": "true",
+          "other": "pH 5; metal-ion-catalyzed transamination regime"
+        },
+        "mechanism": "Amino transfer from glycine to alpha-ketoglutarate forms glutamate within a nonenzymatic transamination network, with glyoxylate regenerated.",
+        "reasoning": "Directly based on the ancestral Krebs-cycle analog showing alpha-ketoglutarate plus glycine gives glutamate in 44% yield at 80C and pH 5 with Al3+ catalysis; glyoxylate is regenerated within the network. Surface minerals are included as concentration/templating agents required by the schema, though soluble Al3+ is the key catalyst in the literature (Degani & Halmann, 1967; Stubbs et al., 2020; Muchowska et al., 2021)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Surface HCN-based formation of succinic semialdehyde",
+        "inputs": [
+          "mol_011",
+          "mol_004",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "sulfide minerals (stibnite/molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "UV-photochemical mineral assistance",
+          "aqueous": "true",
+          "other": "electric discharge/photochemical atmosphere-ocean transfer analog; strongly reducing/anoxic"
+        },
+        "mechanism": "HCN-rich photochemical and atmospheric chemistry generates higher aldehydes including C4 carbonyls that partition into aqueous surface reservoirs.",
+        "reasoning": "The literature identifies succinic semialdehyde as the required Strecker aldehyde precursor for glutamate, and Miller-type discharge chemistry is the best-supported source of C4 aldehydes/semialdehydes in prebiotic inventories, although no direct dedicated prebiotic synthesis of this precursor was demonstrated. This connecting step is therefore literature-motivated but partly speculative (Miller, 1955; Johnson et al., 2008; Parker et al., 2011)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Surface Strecker synthesis of glutamate aminonitrile",
+        "inputs": [
+          "mol_012",
+          "mol_003",
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite/molybdenite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "mineral concentration in aqueous pool",
+          "aqueous": "true",
+          "other": "classical Strecker regime in anoxic waters"
+        },
+        "mechanism": "Aldehyde reacts with ammonia to form an imine/hemiaminal, then cyanide addition gives the alpha-aminonitrile precursor to glutamate.",
+        "reasoning": "This is the literature-supported mechanistic logic for Miller-Urey amino acid synthesis, specifically extended to glutamate via the required aldehyde succinic semialdehyde. The report notes that this exact glutamate Strecker route remains plausible but not directly demonstrated from prebiotically sourced succinic semialdehyde, so this step is necessary but partly speculative (Miller, 1955; Johnson et al., 2008; Parker et al., 2011)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Surface hydrolysis of glutamate aminonitrile to glutamic acid",
+        "inputs": [
+          "mol_013"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "320-370K",
+          "pressure": "1 atm",
+          "catalyst": "mineral-assisted hydrolysis/concentration",
+          "aqueous": "true",
+          "other": "extended aqueous aging or wet-dry cycling"
+        },
+        "mechanism": "Aminonitrile hydrolyzes through amide intermediates to the corresponding amino acid glutamic acid.",
+        "reasoning": "Hydrolysis of Strecker aminonitriles to amino acids is the accepted downstream step in spark-discharge amino acid synthesis and explains glutamate recovery after hydrolysis-based analyses. Specific isolation of glutamate aminonitrile has not been reported in the cited studies, so this node is a mechanistic reconstruction required to connect literature routes (Miller, 1955; Johnson et al., 2008; Parker et al., 2011)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Surface hydrolysis of HCN polymer to glutamic acid",
+        "inputs": [
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "UV exposure and mineral adsorption",
+          "aqueous": "true",
+          "other": "HCN oligomerization/polymer hydrolysis in acidic or basic workup"
+        },
+        "mechanism": "HCN oligomerization yields polymeric nitrile-rich solids that release amino acids including glutamic acid upon hydrolysis.",
+        "reasoning": "Directly grounded in the classic HCN polymer literature and later reviews showing glutamic acid among hydrolysis products of HCN-derived polymers, while acknowledging product assignments can be analytically challenging (Matthews & Moser, 1967; Ferris, Sanchez & Orgel, 1966-1978; Ruiz-Bermejo et al., 2013; Cleaves et al., 2010)."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Biochemical/prebiotic amidation of glutamic acid to glutamine",
+        "inputs": [
+          "mol_009",
+          "mol_003",
+          "mol_014"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "null"
+        ],
+        "conditions": {
+          "temperature": "295-333K",
+          "pressure": "1 atm",
+          "catalyst": "none demonstrated",
+          "aqueous": "true",
+          "other": "speculative cyanate-activated amidation in concentrated pool; competing cyclization to pyroglutamate expected"
+        },
+        "mechanism": "Putative activation of the gamma-carboxyl of glutamic acid by cyanate-derived mixed anhydride or intramolecular anhydride chemistry followed by ammonolysis to give the side-chain amide.",
+        "reasoning": "This is the unresolved bottleneck. The literature states that no prebiotic experiment has demonstrated glutamine formation, and cyanate-mediated activation of dicarboxylic acids is identified as the most promising but undemonstrated route. This reaction is therefore explicitly speculative and included only because the user requested a network to glutamine (Danger et al., 2012; Leman et al., 2004; Weber & Miller, 1981; Higgs & Pudritz, 2009; de Carvalho Fernandes et al., 2022)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Hydrothermal carbon fixation to reductive amination route",
+        "description": "CO2 is reduced hydrothermally to formate and acetate, extended to pyruvate, coupled with glyoxylate on the surface to alpha-ketoglutarate, then reductively aminated to glutamate and speculatively amidated to glutamine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_006",
+          "mol_007",
+          "mol_008",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Pyruvate-glyoxylate aldol plus transamination route",
+        "description": "Hydrothermal pyruvate feeds surface aldol formation of alpha-ketoglutarate, which undergoes nonenzymatic transamination with glycine to glutamate before speculative amidation.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_007",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_008",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Formate-assisted protometabolic route",
+        "description": "Hydrothermal formate enters a surface protometabolic network to glyoxylate, then alpha-ketoglutarate, glutamate, and finally speculative glutamine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_007",
+          "mol_008",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Strecker route from HCN and succinic semialdehyde",
+        "description": "Surface HCN chemistry supplies succinic semialdehyde, which undergoes Strecker synthesis to glutamate aminonitrile and hydrolysis to glutamate, followed by speculative amidation.",
+        "reaction_sequence": [
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_013",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "HCN polymer hydrolysis route",
+        "description": "HCN oligomerization/polymerization produces glutamic acid upon hydrolysis, which then faces the unresolved amidation bottleneck to glutamine.",
+        "reaction_sequence": [
+          "rxn_011",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Alpha-ketoglutarate reductive amination minimal route",
+        "description": "Once alpha-ketoglutarate is available from pyruvate and glyoxylate, hydrothermal reductive amination gives glutamate, followed by speculative cyanate-mediated amidation.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_006",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Alpha-ketoglutarate transamination minimal route",
+        "description": "Alpha-ketoglutarate formed on the surface is converted to glutamate by glycine-dependent transamination, then speculatively amidated.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_007",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Hydrothermal-to-surface mixed route via acetate and pyruvate",
+        "description": "A longer mixed-environment path in which hydrothermal acetate and pyruvate production feed surface alpha-ketoglutarate formation and then glutamate synthesis.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_005",
+          "rxn_006",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_005",
+          "mol_006",
+          "mol_008",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Hydrothermal pyruvate to surface alpha-ketoglutarate to transamination route",
+        "description": "Hydrothermal pyruvate enters the surface aldol network to alpha-ketoglutarate and then the transamination branch to glutamate and speculative glutamine.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_005",
+          "rxn_007",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_008",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Convergent glutamate pool route",
+        "description": "Multiple glutamate-producing routes converge into a common glutamate reservoir, any of which could in principle feed the unresolved final amidation step to glutamine.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_009"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_006",
+      "mol_008",
+      "mol_009",
+      "mol_011"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_008",
+        "incoming_reactions": [
+          "rxn_005"
+        ],
+        "outgoing_reactions": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_009",
+        "incoming_reactions": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_010",
+          "rxn_011"
+        ],
+        "outgoing_reactions": [
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_003"
+        ],
+        "outgoing_reactions": [
+          "rxn_005",
+          "rxn_004"
+        ]
+      },
+      {
+        "molecule_id": "mol_011",
+        "incoming_reactions": [],
+        "outgoing_reactions": [
+          "rxn_008",
+          "rxn_009",
+          "rxn_011"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Glutamine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_001": 0.78,
+          "rxn_002": 0.68,
+          "rxn_003": 0.62,
+          "rxn_004": 0.18,
+          "rxn_005": 0.9,
+          "rxn_006": 0.52,
+          "rxn_012": 0.08
+        },
+        "chemical_feasibility": 0.46,
+        "pathway_coherence": 0.74,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.12,
+        "overall_confidence": 0.47,
+        "feedback": "This route is topologically coherent and captures the literature emphasis on hydrothermal carbon fixation feeding surface protometabolism, but two steps are major weaknesses: the proposed surface generation of glyoxylate from formate and glycine is not a literature-supported glutamate precursor route, and the final glutamate-to-glutamine amidation remains explicitly undemonstrated. The aldol step to alpha-ketoglutarate is strong and well aligned with the literature, but reductive amination of alpha-ketoglutarate is better supported under mild Ni-catalyzed or FeS conditions than generic hydrothermal H2 chemistry.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_004",
+          "rxn_006",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Replace rxn_004 with literature-supported glyoxylate/pyruvate generation chemistry from serine/glycine plus phosphate/Cu2+ or equivalent reported networks",
+          "Constrain rxn_006 to mild vent-mixing or room-temperature Ni/SiO2-Al2O3, FeS/H2S, or pyrite-photochemical conditions documented in the literature",
+          "Downgrade target achievement further unless rxn_012 is reformulated as a speculative activation step rather than successful glutamine synthesis"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_003": 0.62,
+          "rxn_004": 0.18,
+          "rxn_005": 0.9,
+          "rxn_007": 0.84,
+          "rxn_012": 0.08
+        },
+        "chemical_feasibility": 0.52,
+        "pathway_coherence": 0.79,
+        "environmental_progression": 0.81,
+        "target_achievement": 0.12,
+        "overall_confidence": 0.53,
+        "feedback": "This is one of the better routes because the pyruvate plus glyoxylate to alpha-ketoglutarate step and the alpha-ketoglutarate transamination to glutamate are both well supported in the literature. However, the network's glyoxylate source is weak, and the final amidation to glutamine is unsupported. The route succeeds to glutamate plausibly but not to glutamine.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_004",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Use a literature-grounded source of glyoxylate instead of rxn_004",
+          "Keep transamination conditions close to reported Al3+-mediated or related metal-ion conditions",
+          "Represent glutamine as an aspirational target with an unresolved bottleneck, not an achieved product"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_001": 0.78,
+          "rxn_002": 0.68,
+          "rxn_003": 0.62,
+          "rxn_005": 0.9,
+          "rxn_006": 0.52,
+          "rxn_012": 0.08
+        },
+        "chemical_feasibility": 0.56,
+        "pathway_coherence": 0.75,
+        "environmental_progression": 0.77,
+        "target_achievement": 0.12,
+        "overall_confidence": 0.52,
+        "feedback": "The hydrothermal protometabolic framing is reasonable, and the carbon-fixation backbone to pyruvate is broadly plausible in serpentinization-associated systems. The route improves if glyoxylate is assumed externally available, because alpha-ketoglutarate formation is strong. Still, literature support for direct alpha-ketoglutarate reductive amination under the stated generalized hydrothermal conditions is weaker than for mild Ni-catalyzed or FeS-mediated systems, and glutamine formation is not demonstrated.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_006",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Specify the environmental source of glyoxylate if this pathway uses it implicitly",
+          "Anchor rxn_006 to published catalysts and conditions",
+          "Do not count the route as achieving glutamine without experimental amidation evidence"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_008": 0.2,
+          "rxn_009": 0.58,
+          "rxn_010": 0.8,
+          "rxn_012": 0.08
+        },
+        "chemical_feasibility": 0.42,
+        "pathway_coherence": 0.68,
+        "environmental_progression": 0.63,
+        "target_achievement": 0.12,
+        "overall_confidence": 0.4,
+        "feedback": "This route aligns with the literature in recognizing a Strecker-type entry to glutamate through succinic semialdehyde and glutamate aminonitrile, but the weakest point is the origin of succinic semialdehyde from HCN, formate, and acetate, which is not experimentally established in the provided literature. Hydrolysis of an aminonitrile to glutamate is plausible, but the path to the required C4 aldehyde is speculative, and the final amidation is unresolved.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_008",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Mark rxn_008 explicitly as highly speculative or replace it with a documented source of succinic semialdehyde",
+          "Retain the aminonitrile hydrolysis logic but tie it to spark-discharge-derived aldehyde inventories if possible",
+          "Separate glutamate production confidence from glutamine production confidence"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_011": 0.55,
+          "rxn_012": 0.08
+        },
+        "chemical_feasibility": 0.3,
+        "pathway_coherence": 0.58,
+        "environmental_progression": 0.42,
+        "target_achievement": 0.1,
+        "overall_confidence": 0.27,
+        "feedback": "The literature does support that HCN polymers can hydrolyze to release glutamic acid among mixtures of amino acids, but the molecular path is poorly characterized and low-specificity. As a direct route to glutamine this pathway is very weak because it relies on an unresolved and low-plausibility amidation step after a diffuse polymer hydrolysis process.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_011",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Treat rxn_011 as mixture-generating chemistry rather than a selective single-product reaction",
+          "Include uncertainty about amino acid assignments from HCN polymers",
+          "Do not present this pathway as a serious route to glutamine without a validated activation chemistry"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_005": 0.9,
+          "rxn_006": 0.52,
+          "rxn_012": 0.08
+        },
+        "chemical_feasibility": 0.5,
+        "pathway_coherence": 0.73,
+        "environmental_progression": 0.66,
+        "target_achievement": 0.12,
+        "overall_confidence": 0.46,
+        "feedback": "This minimal route captures the central importance of alpha-ketoglutarate, but it starts too late in the network to demonstrate a full prebiotic origin. Alpha-ketoglutarate to glutamate is literature-supported under selected catalysts and mild conditions; alpha-ketoglutarate to glutamine is not. The final step dominates the weakness of the pathway.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_006",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Specify catalyst identity and mild conditions for rxn_006",
+          "Clarify whether alpha-ketoglutarate is imported from earlier network chemistry",
+          "Remove any implication that glutamine is actually produced with meaningful plausibility"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_005": 0.9,
+          "rxn_007": 0.84,
+          "rxn_012": 0.08
+        },
+        "chemical_feasibility": 0.61,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.71,
+        "target_achievement": 0.12,
+        "overall_confidence": 0.56,
+        "feedback": "This is the strongest chemistry to glutamate in the network: alpha-ketoglutarate formation by aldol chemistry and transamination to glutamate are both directly aligned with the literature. However, as in all pathways, glutamine itself is not convincingly achieved because the amidation step lacks prebiotic demonstration and competes with decomposition and cyclization.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Present this pathway as a validated route to glutamate rather than glutamine",
+          "Refine transamination conditions to the literature-reported pH and temperature window",
+          "If keeping glutamine as target, explicitly label the pathway incomplete at the final step"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_001": 0.78,
+          "rxn_002": 0.68,
+          "rxn_003": 0.62,
+          "rxn_004": 0.18,
+          "rxn_005": 0.9,
+          "rxn_007": 0.84,
+          "rxn_012": 0.08
+        },
+        "chemical_feasibility": 0.51,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.84,
+        "target_achievement": 0.12,
+        "overall_confidence": 0.52,
+        "feedback": "This mixed hydrothermal-to-surface route is environmentally well structured and demonstrates the intended cross-environment flow. Its chemistry is strongest once pyruvate and glyoxylate are present. The weak points remain the unsupported glyoxylate-generation step and the speculative final amidation to glutamine.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_004",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Strengthen the pyruvate-to-glyoxylate connection using literature-supported chemistry",
+          "Preserve the environmental interconnection because it is one of the network's best features",
+          "Treat glutamine synthesis as an open problem rather than a completed step"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_003": 0.62,
+          "rxn_005": 0.9,
+          "rxn_007": 0.84,
+          "rxn_012": 0.08
+        },
+        "chemical_feasibility": 0.59,
+        "pathway_coherence": 0.81,
+        "environmental_progression": 0.79,
+        "target_achievement": 0.12,
+        "overall_confidence": 0.56,
+        "feedback": "This is among the most coherent mixed-environment routes. Hydrothermal pyruvate feeding surface alpha-ketoglutarate formation and transamination to glutamate is consistent with current prebiotic metabolism literature. Yet it still fails at the glutamate-to-glutamine step, which remains the universal bottleneck and is not rescued by the preceding good chemistry.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Retain this as a high-quality route to glutamate",
+          "Document glyoxylate provenance explicitly for full coherence",
+          "Do not score this pathway as target-achieving until amidation is experimentally grounded"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_006": 0.52,
+          "rxn_007": 0.84,
+          "rxn_010": 0.8,
+          "rxn_011": 0.55,
+          "rxn_012": 0.08
+        },
+        "chemical_feasibility": 0.56,
+        "pathway_coherence": 0.86,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.12,
+        "overall_confidence": 0.58,
+        "feedback": "This pathway best captures the literature reality: many distinct routes converge on a glutamate pool, but the final conversion to glutamine is unresolved. As a network concept it is strong, because it accurately reflects experimental convergence on glutamic acid and a shared bottleneck at glutamine formation. As a successful synthesis pathway to the target, however, it remains unconvincing.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Reframe the network objective as robust prebiotic glutamate synthesis with speculative glutamine extension",
+          "Add explicit uncertainty on direct HCN-polymer-to-glutamate specificity",
+          "Use this pathway as the conceptual best path because it mirrors the literature bottleneck"
+        ]
+      }
+    ],
+    "best_pathway_id": "P10",
+    "overall_confidence": 0.58,
+    "network_feedback": "The network is topologically solid and unusually honest about the literature: it correctly represents glutamine as an unsolved prebiotic target and places the main bottleneck at glutamic acid amidation. Its strongest features are convergence on alpha-ketoglutarate and glutamate, multiple environmental routes, and recognition that most of the chemistry is experimentally supported only up to glutamate. The weakest features are chemical overstatement in several reactions and incomplete alignment with the cited literature conditions. In particular, rxn_005 and rxn_007 are well aligned with published prebiotic chemistry, while rxn_006 is plausible but underspecified and should reflect mild Ni-, FeS-, or pyrite-mediated conditions rather than generic hydrothermal conversion. rxn_004 and rxn_008 are the least supported transformations in the network as written. rxn_011 is directionally supported by HCN polymer hydrolysis literature but should not be represented as a selective single-product reaction. Most critically, rxn_012 should not be treated as an achieved prebiotic synthesis of glutamine; the literature explicitly says no such demonstration exists, cyanate chemistry is only a speculative activation analogy, and glutamine is thermally and hydrolytically fragile. The network therefore performs well on topology, convergence, and environmental storytelling, moderately on chemistry to glutamate, and poorly on actual target achievement and strict literature alignment for the final step. It should not be approved as a viable synthesis network to glutamine, but it is a good network model of why glutamine remains missing from prebiotic inventories.",
+    "approved": false,
+    "hub_quality": 0.88,
+    "convergence_quality": 0.9
+  },
+  "success": false,
+  "attempts": 1,
+  "notes": null
+}

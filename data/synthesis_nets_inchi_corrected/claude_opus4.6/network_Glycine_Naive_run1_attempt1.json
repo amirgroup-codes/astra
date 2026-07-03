@@ -1,0 +1,96 @@
+{
+  "target_molecule": "Glycine",
+  "network": {
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2"
+      },
+      {
+        "id": "mol_002",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3"
+      },
+      {
+        "id": "mol_003",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2"
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "formonitrile",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H"
+      },
+      {
+        "id": "mol_005",
+        "formula": "CH3N",
+        "iupac_name": "methanimine",
+        "common_name": "methyleneimine",
+        "inchi": "InChI=1S/CH3N/c1-2/h2H,1H2"
+      },
+      {
+        "id": "mol_006",
+        "formula": "C2H4N2",
+        "iupac_name": "2-aminoacetonitrile",
+        "common_name": "aminoacetonitrile",
+        "inchi": "InChI=1S/C2H4N2/c3-1-2-4/h1,3H2"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C2H5NO2",
+        "iupac_name": "2-aminoacetic acid",
+        "common_name": "glycine",
+        "inchi": "InChI=1S/C2H5NO2/c3-1-2(4)5/h1,3H2,(H,4,5)"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Condensation",
+        "description": "Formaldehyde reacts with ammonia to form an imine (Schiff base), releasing water.",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_005",
+          "mol_003"
+        ]
+      },
+      {
+        "id": "rxn_002",
+        "name": "Nucleophilic addition",
+        "description": "Hydrogen cyanide attacks the electrophilic carbon of the imine, forming aminoacetonitrile.",
+        "inputs": [
+          "mol_005",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_006"
+        ]
+      },
+      {
+        "id": "rxn_003",
+        "name": "Hydrolysis",
+        "description": "Aminoacetonitrile undergoes hydrolysis in aqueous solution, converting the nitrile group to a carboxylic acid and releasing ammonia.",
+        "inputs": [
+          "mol_006",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_007",
+          "mol_002"
+        ]
+      }
+    ]
+  }
+}

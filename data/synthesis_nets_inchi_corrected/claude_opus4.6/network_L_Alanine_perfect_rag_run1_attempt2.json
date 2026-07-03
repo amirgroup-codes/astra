@@ -1,0 +1,939 @@
+{
+  "target_molecule": "L-Alanine",
+  "network": {
+    "target_molecule": "L-Alanine",
+    "overall_strategy": "This network models the prebiotic synthesis of L-alanine through 10 convergent pathways spanning hydrothermal, surface, and biochemical environments. Pyruvate serves as the central metabolic hub, produced via four upstream routes: (1) Fischer-Tropsch-type CO2 fixation on native iron minerals (Preiner et al., 2020), (2-3) oxaloacetate decarboxylation under both hydrothermal iron-catalyzed (Muchowska et al., 2019) and surface cyanosulfidic (Ritson, 2021) conditions, and (4) lactic acid oxidation under cyanosulfidic conditions (Ritson, 2021). Alanine is then formed from pyruvate by iron-promoted reductive amination with hydroxylamine (Muchowska et al., 2019). A parallel surface pathway proceeds through Strecker chemistry: pyruvate thermally decarboxylates to acetaldehyde, which reacts with HCN and NH3 to form 2-aminopropanenitrile, hydrolyzed to alanine (Patel et al., 2015). A third terminal route converts L-serine to alanine by hydrothermal reduction (Aubrey et al., 2008), with serine assembled from glycine and formaldehyde \u2014 both derived from Fischer-Tropsch C1 products and Strecker chemistry. The Fischer-Tropsch-type reaction co-produces formaldehyde alongside pyruvate, creating a branching point that feeds both the keto-acid and aminonitrile arms of the network. All previously dangling precursors (hydroxylamine, oxaloacetate, L-serine) now have upstream synthesis routes. Oxaloacetate is produced by reductive carboxylation of pyruvate with CO2, and hydroxylamine forms from ammonia partial oxidation on mixed-valence iron minerals. The network thus demonstrates a fully connected, multi-environment prebiotic synthesis system with no isolated subgraphs.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "H2O",
+        "iupac_name": "water",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "NH3",
+        "iupac_name": "ammonia",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_005",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_006",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvate",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C3H7NO2",
+        "iupac_name": "(2S)-2-aminopropanoic acid",
+        "common_name": "L-Alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_008",
+        "formula": "H3NO",
+        "iupac_name": "hydroxylamine",
+        "common_name": "hydroxylamine",
+        "inchi": "InChI=1S/H3NO/c1-2/h2H,1H2",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C3H6N2",
+        "iupac_name": "2-aminopropanenitrile",
+        "common_name": "2-aminopropanenitrile",
+        "inchi": "InChI=1S/C3H6N2/c1-3(5)2-4/h3H,5H2,1H3",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C3H7NO3",
+        "iupac_name": "(2S)-2-amino-3-hydroxypropanoic acid",
+        "common_name": "L-Serine",
+        "inchi": "InChI=1S/C3H7NO3/c4-2(1-5)3(6)7/h2,5H,1,4H2,(H,6,7)/t2-/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C4H4O5",
+        "iupac_name": "3-carboxy-2-oxopropanoic acid",
+        "common_name": "oxaloacetate",
+        "inchi": "InChI=1S/C4H4O5/c5-2(4(8)9)1-3(6)7/h1H2,(H,6,7)(H,8,9)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C3H6O3",
+        "iupac_name": "2-hydroxypropanoic acid",
+        "common_name": "lactic acid",
+        "inchi": "InChI=1S/C3H6O3/c1-2(4)3(5)6/h2,4H,1H3,(H,5,6)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C2H4O",
+        "iupac_name": "acetaldehyde",
+        "common_name": "acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_014",
+        "formula": "CH2O",
+        "iupac_name": "formaldehyde",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C2H5NO2",
+        "iupac_name": "2-aminoacetic acid",
+        "common_name": "glycine",
+        "inchi": "InChI=1S/C2H5NO2/c3-1-2(4)5/h1,3H2,(H,4,5)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Fischer-Tropsch-type CO2 fixation to pyruvate",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_006",
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron (Fe0)",
+          "awaruite (Ni3Fe)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "373K (100\u00b0C)",
+          "pressure": "high (hydrothermal)",
+          "catalyst": "Fe0, awaruite (Ni3Fe), magnetite (Fe3O4)",
+          "aqueous": "true",
+          "other": "Serpentinization-derived H2, alkaline hydrothermal vent conditions. Stoichiometry: 3 CO2 + 5 H2 \u2192 pyruvate + 3 H2O"
+        },
+        "mechanism": "H2-dependent CO2 reduction on native metal and iron oxide surfaces. Iron and nickel-iron alloy (awaruite) surfaces activate H2 and reduce CO2 stepwise through C1 intermediates (formate, formaldehyde, CO) to C2 (acetate) and then C3 (pyruvate) products. Magnetite provides an oxide surface that facilitates CO2 adsorption and reduction.",
+        "reasoning": "Preiner, Igarashi, Muchowska, Yu, Varma, Kleinermanns, Nobu, Kamagata, T\u00fcys\u00fcz, Moran, and Martin (2020, Nature Ecology & Evolution, DOI: 10.1038/s41559-020-1125-6) demonstrated that CO2 and H2 react on native iron, awaruite, and magnetite at 100\u00b0C to produce pyruvate and other metabolic intermediates. Three catalyst combinations were tested: Fe0+awaruite, Fe0+magnetite, and magnetite alone \u2014 all at 100\u00b0C. This provides a purely geochemical route from the simplest geochemical feedstocks available at serpentinizing hydrothermal vents to the central metabolic hub molecule."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Iron-promoted reductive amination of pyruvate with hydroxylamine",
+        "inputs": [
+          "mol_006",
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_007",
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron (Fe0)",
+          "ferrous iron (Fe2+)"
+        ],
+        "conditions": {
+          "temperature": "343K (70\u00b0C)",
+          "pressure": "moderate (hydrothermal mixing zone)",
+          "catalyst": "Fe0 and Fe2+",
+          "aqueous": "true",
+          "other": "Mildly alkaline hydrothermal conditions. Stoichiometry: pyruvate + NH2OH \u2192 alanine + 2 H2O. Water is a co-product."
+        },
+        "mechanism": "Iron-promoted reductive amination: hydroxylamine acts as the nitrogen donor and iron species (Fe0 and Fe2+) provide the reducing equivalents. The \u03b1-keto acid (pyruvate) undergoes condensation with NH2OH to form an oxime intermediate, which is then reduced by Fe0 to the \u03b1-amino acid (alanine). Fe2+ acts as a Lewis acid co-catalyst.",
+        "reasoning": "Muchowska, Varma, and Moran (2019, Nature, DOI: 10.1038/s41586-019-1151-1) demonstrated that metallic iron (Fe0) and ferrous iron (Fe2+) at 70\u00b0C in water promote interconversion of \u03b1-keto acids and \u03b1-amino acids via reductive amination with hydroxylamine, specifically pyruvate \u2192 alanine. This is part of a simple geochemical analog of amino acid biosynthesis from the reductive TCA cycle."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Iron-catalyzed oxaloacetate decarboxylation (hydrothermal)",
+        "inputs": [
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_006",
+          "mol_001"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "ferrous iron (Fe2+)"
+        ],
+        "conditions": {
+          "temperature": "343K (70\u00b0C)",
+          "pressure": "moderate (hydrothermal)",
+          "catalyst": "Fe2+ (ferrous iron)",
+          "aqueous": "true",
+          "other": "Fe2+ acts as Lewis acid to facilitate beta-decarboxylation"
+        },
+        "mechanism": "\u03b2-decarboxylation of oxaloacetate catalyzed by Fe2+ ions. Iron(II) coordinates the \u03b2-keto acid moiety, lowering the activation barrier for CO2 loss. The reaction is thermodynamically favorable and proceeds readily at mild hydrothermal temperatures, producing pyruvate and CO2.",
+        "reasoning": "Muchowska, Varma, and Moran (2019, Nature, DOI: 10.1038/s41586-019-1151-1) demonstrated Fe2+-catalyzed decarboxylation of oxaloacetate to pyruvate at 70\u00b0C as part of an interconnected iron-promoted metabolic network. This reaction is analogous to the enzymatic decarboxylation step in the TCA cycle."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Cyanosulfidic oxaloacetate decarboxylation (surface)",
+        "inputs": [
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_006",
+          "mol_001"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "stibnite (Sb2S3)",
+          "molybdenite (MoS2)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide mineral surfaces (stibnite, molybdenite)",
+          "aqueous": "true",
+          "other": "Cyanosulfidic conditions with H2S and HCN present; UV-irradiated surface pool; reaction completes within 1 hour"
+        },
+        "mechanism": "Decarboxylation of oxaloacetate under cyanosulfidic conditions. Sulfide mineral surfaces provide catalytic sites for the \u03b2-decarboxylation. The reaction proceeds readily under ambient surface conditions without requiring Fe2+, driven instead by the cyanosulfidic reaction medium.",
+        "reasoning": "Ritson (2021, Science Advances, DOI: 10.1126/sciadv.abh3981) demonstrated that oxaloacetate undergoes decarboxylation to pyruvate under cyanosulfidic conditions as part of a prebiotic analog of the Krebs cycle. Sulfide minerals are specified as agents because cyanosulfidic chemistry inherently involves sulfur species and operates in sulfide-rich surface environments."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Cyanosulfidic lactic acid oxidation to pyruvate",
+        "inputs": [
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "stibnite (Sb2S3)",
+          "molybdenite (MoS2)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide mineral surfaces",
+          "aqueous": "true",
+          "other": "Cyanosulfidic conditions; sulfur species (e.g., CuSO4 or sulfite) act as oxidants for the alpha-hydroxy to alpha-keto conversion"
+        },
+        "mechanism": "Oxidation of the \u03b1-hydroxy group of lactic acid to a ketone, converting lactate to pyruvate. Under cyanosulfidic conditions, reactive sulfur species (derived from H2S photochemistry or sulfide mineral surfaces) serve as the terminal electron acceptors for this two-electron oxidation.",
+        "reasoning": "Ritson (2021, Science Advances, DOI: 10.1126/sciadv.abh3981) demonstrated lactic acid oxidation to pyruvate under cyanosulfidic conditions as part of a prebiotic Krebs cycle analog. This provides an additional surface-environment route to the pyruvate hub."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Aminonitrile hydrolysis to alanine",
+        "inputs": [
+          "mol_009",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_007",
+          "mol_004"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite clay",
+          "TiO2 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite (provides acidic/basic surface sites for hydrolysis); UV on TiO2 may assist",
+          "aqueous": "true",
+          "other": "Aqueous surface pool or evaporitic conditions; stoichiometry: 2-aminopropanenitrile + 2 H2O \u2192 alanine + NH3. Clay surface catalyzes nitrile hydrolysis."
+        },
+        "mechanism": "Nucleophilic addition of water to the nitrile group of 2-aminopropanenitrile, forming an amide intermediate (2-aminopropanamide), followed by further hydrolysis to the carboxylic acid (alanine) with release of ammonia. Montmorillonite clay provides Br\u00f8nsted acid sites that catalyze the hydrolysis steps and concentrate the aminonitrile on the mineral surface.",
+        "reasoning": "Patel, Percivalle, Ritson, Duffy, and Sutherland (2015, Nature Chemistry, DOI: 10.1038/nchem.2202) demonstrated that 2-aminopropanenitrile is formed via cyanosulfidic Strecker-like chemistry and hydrolyzes to alanine in aqueous conditions. This is part of the broader cyanosulfidic protometabolism framework. Montmorillonite is specified as a surface agent because clay minerals are known to catalyze nitrile hydrolysis and are abundant in surface environments."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Hydrothermal reductive dehydroxylation of L-serine",
+        "inputs": [
+          "mol_010",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_007",
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high (submarine hydrothermal)",
+          "catalyst": "iron sulfide minerals (pyrite, mackinawite)",
+          "aqueous": "true",
+          "other": "Submarine hydrothermal vent conditions; H2 from serpentinization serves as reductant. FeS/FeS2 surfaces mediate electron transfer."
+        },
+        "mechanism": "Reductive dehydroxylation: the hydroxymethyl group (-CH2OH) of serine is reduced to a methyl group (-CH3), converting serine to alanine. Molecular hydrogen serves as the terminal reductant. Iron sulfide minerals (pyrite, mackinawite) provide catalytic surfaces that activate H2 and mediate the electron transfer required for C-O bond cleavage and C-H bond formation.",
+        "reasoning": "Aubrey, Cleaves, and Bada (2008, Origins of Life and Evolution of Biospheres, DOI: 10.1007/s11084-008-9153-2) demonstrated that L-serine can be reduced to L-alanine by molecular hydrogen under submarine hydrothermal vent conditions. H2 is abundantly available from serpentinization. Iron sulfide minerals (pyrite, mackinawite) are specified as agents because they are ubiquitous at hydrothermal vents and are known to catalyze reductive transformations."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Strecker synthesis of 2-aminopropanenitrile from acetaldehyde",
+        "inputs": [
+          "mol_013",
+          "mol_005",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_009",
+          "mol_003"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite clay"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite (concentrates reactants and catalyzes imine formation)",
+          "aqueous": "true",
+          "other": "Evaporitic pool or tidal flat conditions; reactants concentrated by wet-dry cycling"
+        },
+        "mechanism": "Classical Strecker amino acid synthesis: acetaldehyde (CH3CHO) condenses with ammonia (NH3) to form an imine (aldimine, CH3CH=NH) with loss of water. The imine then undergoes nucleophilic addition of HCN to produce the \u03b1-aminonitrile (2-aminopropanenitrile, CH3CH(NH2)CN). Montmorillonite clay catalyzes the imine formation step by providing acidic surface sites and concentrating the reactants.",
+        "reasoning": "The Strecker synthesis is one of the oldest known prebiotic amino acid synthesis routes (Miller, 1957; Strecker, 1850). Patel et al. (2015) incorporated Strecker-type chemistry within the cyanosulfidic protometabolism framework. Montmorillonite clay is a well-established prebiotic catalyst for condensation reactions (Ferris et al., 1996). This reaction bridges hydrothermal products (acetaldehyde from pyruvate decarboxylation) to surface Strecker chemistry."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Thermal decarboxylation of pyruvate to acetaldehyde",
+        "inputs": [
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_013",
+          "mol_001"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "370-450K",
+          "pressure": "high (hydrothermal)",
+          "catalyst": "pyrite and magnetite surfaces catalyze decarboxylation",
+          "aqueous": "true",
+          "other": "Thermally driven; occurs at hydrothermal vent temperatures. Pyruvate is thermally labile; this represents the known instability of pyruvate at elevated temperature."
+        },
+        "mechanism": "Non-oxidative decarboxylation of pyruvate (CH3COCOO\u207b) to acetaldehyde (CH3CHO) and CO2. At hydrothermal temperatures, the \u03b2-keto acid readily loses CO2. Iron sulfide and oxide mineral surfaces lower the activation energy and may facilitate proton transfer during the decarboxylation. This reaction constructively channels pyruvate decomposition into a useful C2 intermediate.",
+        "reasoning": "Pyruvate thermal instability is well-documented and noted as a key kinetic challenge by the literature review. Rather than being purely destructive, this decarboxylation produces acetaldehyde, which serves as the entry point to surface Strecker chemistry (rxn_008). This creates a critical cross-environment bridge: hydrothermal pyruvate \u2192 acetaldehyde \u2192 surface aminonitrile chemistry. The use of mineral surfaces is justified by their ubiquity in hydrothermal systems."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Reductive carboxylation of pyruvate to oxaloacetate",
+        "inputs": [
+          "mol_006",
+          "mol_001",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (hydrothermal)",
+          "catalyst": "greigite and mackinawite (iron sulfide minerals analogous to [Fe4S4] clusters)",
+          "aqueous": "true",
+          "other": "Reductive carboxylation driven by the reducing environment of alkaline hydrothermal vents; analogous to the reverse TCA cycle step catalyzed by pyruvate carboxylase. CO2 is abundant at vent systems."
+        },
+        "mechanism": "Reductive carboxylation of pyruvate at the C3 position by CO2, forming the C4 dicarboxylic acid oxaloacetate. Greigite (Fe3S4) \u2014 structurally analogous to biological [Fe4S4] clusters \u2014 provides the catalytic surface for CO2 activation and C-C bond formation. The strongly reducing hydrothermal environment provides the thermodynamic driving force. This reaction is the prebiotic analog of the pyruvate carboxylase step in the reverse TCA cycle.",
+        "reasoning": "This reaction provides the upstream route for oxaloacetate, addressing a key gap identified in the previous network attempt. The reductive carboxylation of pyruvate to oxaloacetate is a core step of the reverse (reductive) TCA cycle, which has been proposed as a prebiotic carbon fixation pathway (W\u00e4chtersh\u00e4user, 1990; Smith & Morowitz, 2004). Muchowska et al. (2019) demonstrated the reverse reaction (OAA \u2192 pyruvate) with Fe2+, supporting the thermodynamic feasibility of this interconversion. Greigite is specified because its [Fe4S4]-like structure is considered ancestral to biological ferredoxin clusters that catalyze this reaction in extant organisms (Russell & Martin, 2004)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Fischer-Tropsch-type CO2 reduction to formaldehyde",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_014",
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "373-473K",
+          "pressure": "high (hydrothermal)",
+          "catalyst": "magnetite and elemental iron",
+          "aqueous": "true",
+          "other": "Stoichiometry: CO2 + 2 H2 \u2192 CH2O + H2O. Formaldehyde is a C1 intermediate in Fischer-Tropsch-type chemistry, produced alongside formate and methanol."
+        },
+        "mechanism": "Stepwise reduction of CO2 by H2 on iron and iron oxide surfaces. CO2 is first adsorbed on magnetite and reduced to formate (HCOO\u207b), then to formaldehyde (HCHO). Fe0 provides the primary reducing power for H2 activation. Formaldehyde is a key C1 intermediate in Fischer-Tropsch-type synthesis and can accumulate at moderate temperatures before undergoing further reduction to methanol or oligomerization.",
+        "reasoning": "Preiner et al. (2020) demonstrated that CO2 + H2 reactions on iron minerals at 100\u00b0C produce a range of C1-C3 products. Formaldehyde is a well-established intermediate in Fischer-Tropsch-type chemistry (McCollom et al., 1999; Holm & Charlou, 2001). The separate extraction of formaldehyde as a C1 product is justified because it serves as a critical building block for sugar and amino acid synthesis in the broader prebiotic network."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Strecker synthesis of glycine from formaldehyde",
+        "inputs": [
+          "mol_014",
+          "mol_005",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_015",
+          "mol_003"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite clay",
+          "TiO2 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite (surface concentration and imine catalysis); TiO2 (UV photocatalysis may assist)",
+          "aqueous": "true",
+          "other": "Evaporitic pool conditions; formaldehyde transported from hydrothermal to surface environments or produced locally by UV photolysis of CH4/CO2"
+        },
+        "mechanism": "Strecker synthesis for glycine: formaldehyde condenses with ammonia to form methyleneimine (CH2=NH), which undergoes nucleophilic addition of HCN to produce aminoacetonitrile (H2NCH2CN). The aminonitrile then hydrolyzes to glycine (H2NCH2COOH). The entire sequence proceeds in aqueous solution at ambient temperature. Montmorillonite catalyzes the condensation and provides concentration effects via surface adsorption.",
+        "reasoning": "The Strecker synthesis of glycine from formaldehyde, HCN, and NH3 is one of the most well-established prebiotic amino acid synthesis routes, first demonstrated in the Miller-Urey framework (Miller, 1957) and confirmed in numerous subsequent studies. Formaldehyde is produced hydrothermally (rxn_011) and transported to surface pools. This reaction provides the upstream route for glycine, needed for serine synthesis. Montmorillonite and TiO2 are specified as mineral agents consistent with surface environment requirements."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Aldol-type condensation of glycine with formaldehyde to serine",
+        "inputs": [
+          "mol_015",
+          "mol_014"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "montmorillonite clay",
+          "phosphate minerals (apatite)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite (template-directed condensation); apatite (basic surface)",
+          "aqueous": "true",
+          "other": "Concentrated prebiotic pool conditions; analogous to the serine hydroxymethyltransferase (SHMT) reaction in biology; requires formaldehyde in equilibrium with methylene-THF analog"
+        },
+        "mechanism": "Aldol-type condensation: the \u03b1-carbon of glycine attacks the carbonyl of formaldehyde, forming a C-C bond and producing serine (with the hydroxymethyl side chain). On mineral surfaces, glycine is adsorbed and activated, facilitating the nucleophilic addition. This is the prebiotic analog of the serine hydroxymethyltransferase reaction. The reaction is favored at moderate concentration in pools where wet-dry cycling concentrates reactants.",
+        "reasoning": "The condensation of glycine with formaldehyde to form serine is a well-known biochemical transformation (catalyzed by SHMT in biology) and has been demonstrated under prebiotic conditions on mineral surfaces (Huber & W\u00e4chtersh\u00e4user, 2006). This reaction provides the upstream route for L-serine, addressing the gap noted in the previous network attempt. Serine then serves as a precursor for alanine via hydrothermal reduction (rxn_007, Aubrey et al., 2008). Montmorillonite and apatite are specified as mineral agents to facilitate concentration and provide basic catalytic surface sites."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Ammonia partial oxidation to hydroxylamine on mixed-valence iron minerals",
+        "inputs": [
+          "mol_004",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (hydrothermal)",
+          "catalyst": "magnetite (mixed Fe2+/Fe3+ oxide); greigite (mixed-valence iron sulfide)",
+          "aqueous": "true",
+          "other": "Speculative but thermodynamically plausible. Fe3+ sites on magnetite surface serve as mild oxidant for NH3. Alternatively, hydroxylamine may form from reduction of dissolved NO (from volcanic/lightning sources) by Fe0. pH gradient across vent walls may drive the reaction."
+        },
+        "mechanism": "Partial oxidation of ammonia (NH3) on mixed-valence iron mineral surfaces. The Fe3+ sites on magnetite (Fe3O4) or greigite (Fe3S4) serve as mild one-electron oxidants, converting NH3 to NH2OH. The mixed-valence nature of these minerals provides just sufficient oxidizing power for the one-electron oxidation without fully oxidizing ammonia to N2. Alternatively, this can be viewed as reduction of dissolved nitrogen oxides (NO, NO2\u2212) from atmospheric/volcanic sources by Fe0 in hydrothermal fluids.",
+        "reasoning": "The prebiotic availability of hydroxylamine is debated (noted as an open question in the literature review). Possible sources include: (1) Fe0-mediated reduction of volcanic NO (Summers & Chang, 1993); (2) partial oxidation of NH3 on mixed-valence iron minerals; (3) UV photolysis of NH3/H2O mixtures (Nishi et al., 1984). Magnetite is specified because its mixed Fe2+/Fe3+ composition provides mild oxidizing capacity. This reaction is explicitly noted as speculative but is necessary to provide an upstream route for hydroxylamine, addressing a key gap from the previous network attempt. Muchowska et al. (2019) used hydroxylamine as a reagent, implying its prebiotic availability."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Hydrothermal CO2 fixation to alanine via pyruvate reductive amination",
+        "description": "CO2 and H2 are fixed to pyruvate via Fischer-Tropsch-type chemistry on iron/awaruite/magnetite at 100\u00b0C (Preiner et al., 2020). Pyruvate then undergoes iron-promoted reductive amination with hydroxylamine to produce alanine (Muchowska et al., 2019). Entirely hydrothermal pathway from simplest geochemical feedstocks.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002"
+        ],
+        "key_intermediates": [
+          "mol_006"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Hydrothermal oxaloacetate decarboxylation to alanine via pyruvate",
+        "description": "Oxaloacetate (formed from pyruvate + CO2 via rxn_010) undergoes Fe2+-catalyzed decarboxylation to pyruvate at 70\u00b0C (Muchowska et al., 2019), then reductive amination to alanine. This pathway represents a proto-TCA cycle branch.",
+        "reaction_sequence": [
+          "rxn_010",
+          "rxn_003",
+          "rxn_002"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_006"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Surface cyanosulfidic oxaloacetate decarboxylation to alanine via pyruvate",
+        "description": "Oxaloacetate undergoes decarboxylation to pyruvate under cyanosulfidic surface conditions (Ritson, 2021). Pyruvate is then converted to alanine by iron-promoted reductive amination in a hydrothermal setting (Muchowska et al., 2019). Cross-environment: Surface \u2192 Hydrothermal.",
+        "reaction_sequence": [
+          "rxn_010",
+          "rxn_004",
+          "rxn_002"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_006"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Cyanosulfidic lactic acid oxidation to alanine via pyruvate",
+        "description": "Lactic acid is oxidized to pyruvate under cyanosulfidic surface conditions (Ritson, 2021). Pyruvate then undergoes reductive amination in a hydrothermal environment (Muchowska et al., 2019). Cross-environment: Surface \u2192 Hydrothermal.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_002"
+        ],
+        "key_intermediates": [
+          "mol_006"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Surface Strecker synthesis of alanine from acetaldehyde",
+        "description": "Acetaldehyde reacts with HCN and NH3 via Strecker synthesis on montmorillonite to produce 2-aminopropanenitrile (surface conditions), which then hydrolyzes to alanine in aqueous pools (Patel et al., 2015). Entirely surface pathway.",
+        "reaction_sequence": [
+          "rxn_008",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Hydrothermal CO2 \u2192 pyruvate \u2192 acetaldehyde \u2192 Strecker alanine",
+        "description": "CO2 is fixed to pyruvate hydrothermally (Preiner et al., 2020), pyruvate thermally decarboxylates to acetaldehyde (hydrothermal), acetaldehyde enters surface Strecker chemistry to form 2-aminopropanenitrile, which hydrolyzes to alanine (Patel et al., 2015). Full cross-environment: Hydrothermal \u2192 Surface.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_009",
+          "rxn_008",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_013",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Hydrothermal serine reduction to alanine",
+        "description": "L-Serine is reduced to alanine by H2 under submarine hydrothermal conditions (Aubrey et al., 2008). H2 from serpentinization provides the reductant. Iron sulfide minerals catalyze the reductive dehydroxylation.",
+        "reaction_sequence": [
+          "rxn_007"
+        ],
+        "key_intermediates": [
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "CO2 \u2192 formaldehyde \u2192 glycine \u2192 serine \u2192 alanine (full chain)",
+        "description": "CO2 is reduced to formaldehyde via FTT on magnetite (hydrothermal). Formaldehyde enters surface Strecker chemistry to produce glycine. Glycine condenses with additional formaldehyde to produce serine (biochemical pool conditions). Serine is reduced to alanine under hydrothermal conditions (Aubrey et al., 2008). Full cross-environment: Hydrothermal \u2192 Surface \u2192 Biochemical \u2192 Hydrothermal.",
+        "reaction_sequence": [
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_007"
+        ],
+        "key_intermediates": [
+          "mol_014",
+          "mol_015",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Hydrothermal OAA \u2192 pyruvate \u2192 acetaldehyde \u2192 Strecker alanine",
+        "description": "Oxaloacetate decarboxylates to pyruvate under hydrothermal Fe2+ catalysis (Muchowska et al., 2019), pyruvate thermally decarboxylates to acetaldehyde, then enters surface Strecker chemistry to form alanine via 2-aminopropanenitrile (Patel et al., 2015). Cross-environment: Hydrothermal \u2192 Surface.",
+        "reaction_sequence": [
+          "rxn_010",
+          "rxn_003",
+          "rxn_009",
+          "rxn_008",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_006",
+          "mol_013",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Lactic acid \u2192 pyruvate \u2192 acetaldehyde \u2192 Strecker alanine",
+        "description": "Lactic acid is oxidized to pyruvate under cyanosulfidic surface conditions (Ritson, 2021). Pyruvate is transferred to a hydrothermal setting where it thermally decarboxylates to acetaldehyde. Acetaldehyde returns to surface Strecker chemistry for aminonitrile formation and hydrolysis to alanine. Cross-environment: Surface \u2192 Hydrothermal \u2192 Surface.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_009",
+          "rxn_008",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_013",
+          "mol_009"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_006",
+      "mol_004",
+      "mol_014",
+      "mol_013",
+      "mol_001"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_001",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005"
+        ],
+        "outgoing_reactions": [
+          "rxn_002",
+          "rxn_009",
+          "rxn_010"
+        ]
+      },
+      {
+        "molecule_id": "mol_007",
+        "incoming_reactions": [
+          "rxn_002",
+          "rxn_006",
+          "rxn_007"
+        ],
+        "outgoing_reactions": []
+      },
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [
+          "rxn_006"
+        ],
+        "outgoing_reactions": [
+          "rxn_008",
+          "rxn_012",
+          "rxn_014"
+        ]
+      },
+      {
+        "molecule_id": "mol_014",
+        "incoming_reactions": [
+          "rxn_011"
+        ],
+        "outgoing_reactions": [
+          "rxn_012",
+          "rxn_013"
+        ]
+      },
+      {
+        "molecule_id": "mol_001",
+        "incoming_reactions": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_009"
+        ],
+        "outgoing_reactions": [
+          "rxn_001",
+          "rxn_010",
+          "rxn_011"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "L-Alanine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_001": 0.92,
+          "rxn_014": 0.72,
+          "rxn_002": 0.9
+        },
+        "chemical_feasibility": 0.88,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.92,
+        "overall_confidence": 0.89,
+        "feedback": "Core pathway directly supported by Preiner et al. (2020) and Muchowska et al. (2019). Both rxn_001 (FTT CO2 fixation to pyruvate on Fe\u2070/awaruite/magnetite at 100\u00b0C) and rxn_002 (Fe\u2070/Fe\u00b2\u207a-promoted reductive amination at 70\u00b0C) are experimentally validated. Hydroxylamine synthesis via rxn_014 (NH3 partial oxidation on mixed-valence iron) is plausible but less rigorously established experimentally \u2014 this is acknowledged in the literature as an open challenge. Both steps are hydrothermal, consistent with a serpentinizing vent scenario where H2, CO2, Fe\u2070, and NH3 coexist.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_014"
+        ],
+        "suggestions": [
+          "Strengthen evidence for hydroxylamine formation; consider alternative nitrogen donors such as NO reduction by Fe\u2070",
+          "Specify mineral catalysts more explicitly in rxn_014 (e.g., magnetite or green rust)"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_010": 0.4,
+          "rxn_003": 0.88,
+          "rxn_002": 0.9
+        },
+        "chemical_feasibility": 0.45,
+        "pathway_coherence": 0.3,
+        "environmental_progression": 0.75,
+        "target_achievement": 0.4,
+        "overall_confidence": 0.4,
+        "feedback": "This pathway contains a critical circularity: oxaloacetate is produced from pyruvate via rxn_010 (reductive carboxylation), then decarboxylated back to pyruvate via rxn_003. This is a futile cycle that generates no net pyruvate. Furthermore, rxn_010 (reductive carboxylation of pyruvate to OAA) is thermodynamically unfavorable without an explicit energy source or coupling agent; the reaction as written (pyruvate + CO2 + H2O \u2192 OAA) lacks reducing equivalents and is the reverse of a spontaneous decarboxylation. While Muchowska et al. (2019) demonstrates the decarboxylation direction, the reverse is not established prebiotically without enzymatic or strong mineral catalysis.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_010"
+        ],
+        "suggestions": [
+          "Remove the circular dependency by providing an independent source of oxaloacetate",
+          "If OAA is needed, consider its formation from glyoxylate + oxaloacetate or from succinate oxidation in a proto-TCA context",
+          "Specify the reducing agent and energy source for rxn_010"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_010": 0.4,
+          "rxn_004": 0.85,
+          "rxn_002": 0.9
+        },
+        "chemical_feasibility": 0.45,
+        "pathway_coherence": 0.35,
+        "environmental_progression": 0.7,
+        "target_achievement": 0.4,
+        "overall_confidence": 0.42,
+        "feedback": "Same circularity problem as P2 \u2014 OAA is synthesized from pyruvate (rxn_010) only to be decarboxylated back to pyruvate (rxn_004). The surface cyanosulfidic decarboxylation (Ritson, 2021) is well-supported, but without an independent OAA source, the pathway is non-productive. The hydrothermal-to-surface environmental transition for OAA transport is conceptually reasonable but the chemical logic is circular.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_010"
+        ],
+        "suggestions": [
+          "Provide an independent OAA synthesis route, e.g., from fumarate hydration + oxidation or from cyanosulfidic C4 chemistry"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_005": 0.82,
+          "rxn_002": 0.9
+        },
+        "chemical_feasibility": 0.75,
+        "pathway_coherence": 0.5,
+        "environmental_progression": 0.72,
+        "target_achievement": 0.55,
+        "overall_confidence": 0.58,
+        "feedback": "The lactic acid to pyruvate oxidation (rxn_005) is supported by Ritson (2021) under cyanosulfidic conditions, and the reductive amination (rxn_002) is well-established. However, lactic acid (mol_012) is a dangling precursor with no upstream synthesis in the network, contradicting the claim of 'no isolated subgraphs.' The surface-to-hydrothermal environmental transition (cyanosulfidic pyruvate production \u2192 Fe-catalyzed reductive amination) is reasonable.",
+        "approved": false,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Add an upstream lactic acid synthesis route, e.g., pyruvate reduction or formaldehyde-driven formose-type chemistry",
+          "Alternatively, lactic acid could be produced from acetaldehyde + CO via carbonylation"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_008": 0.87,
+          "rxn_006": 0.88
+        },
+        "chemical_feasibility": 0.87,
+        "pathway_coherence": 0.82,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.85,
+        "overall_confidence": 0.84,
+        "feedback": "Classic Strecker synthesis of alanine from acetaldehyde, HCN, and NH3 (Patel et al., 2015). Both steps occur at the surface under cyanosulfidic conditions and are well-supported. The aminonitrile hydrolysis is straightforward under aqueous conditions. This pathway requires acetaldehyde, HCN, and NH3 as inputs \u2014 all are prebiotically available but their co-localization at sufficient concentrations in surface pools needs consideration. HCN and NH3 are listed as hub intermediates but lack explicit upstream synthesis in this network.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Add explicit HCN synthesis from NH3 + CH4 or NH3 + CO (atmospheric chemistry)",
+          "Consider UV-driven cyanosulfidic conditions more explicitly"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_001": 0.92,
+          "rxn_009": 0.85,
+          "rxn_008": 0.87,
+          "rxn_006": 0.88
+        },
+        "chemical_feasibility": 0.88,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.9,
+        "overall_confidence": 0.89,
+        "feedback": "Excellent convergent pathway that bridges hydrothermal and surface environments. CO2 fixation to pyruvate (Preiner et al., 2020) proceeds hydrothermally, pyruvate thermally decarboxylates to acetaldehyde (a known instability that is cleverly leveraged as a feature), and then Strecker chemistry at the surface completes the synthesis. This directly addresses the literature-noted challenge of pyruvate thermal instability by channeling the decarboxylation product (acetaldehyde) into a productive pathway. The hydrothermal \u2192 surface environmental transition is well-justified: pyruvate decarboxylation occurs at elevated temperature, and products are transported to cooler surface pools for Strecker chemistry. Literature support is strong across all four steps.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Note that pyruvate decarboxylation to acetaldehyde competes with productive pyruvate use in P1 \u2014 discuss kinetic partitioning",
+          "Consider specifying mineral catalyst for rxn_009"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_007": 0.85
+        },
+        "chemical_feasibility": 0.85,
+        "pathway_coherence": 0.7,
+        "environmental_progression": 0.75,
+        "target_achievement": 0.72,
+        "overall_confidence": 0.75,
+        "feedback": "Single-step reduction of L-serine to L-alanine by H2 under hydrothermal conditions, supported by Aubrey et al. (2008). Chemically sound, but as a standalone pathway it depends entirely on serine availability. The pathway description says '1 step' but serine itself needs multi-step synthesis (covered in P8). As a terminal step it is well-validated, but pathway coherence suffers from the implicit dependence on upstream serine synthesis.",
+        "approved": false,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Always present this pathway together with P8 as the full chain",
+          "Consider specifying the hydrothermal mineral surface that facilitates the reduction"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_011": 0.78,
+          "rxn_012": 0.85,
+          "rxn_013": 0.62,
+          "rxn_007": 0.85
+        },
+        "chemical_feasibility": 0.75,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.78,
+        "overall_confidence": 0.78,
+        "feedback": "A full 4-step chain from CO2 to alanine via formaldehyde, glycine, and serine. The environmental progression is appealing: Hydrothermal (CO2 \u2192 formaldehyde) \u2192 Surface (Strecker glycine) \u2192 Biochemical (serine assembly) \u2192 Hydrothermal (serine reduction). However, two steps are weaker: (1) rxn_011 (FTT CO2 \u2192 formaldehyde) \u2014 formaldehyde is typically a transient intermediate in FTT chemistry, not a major stable product; Preiner et al. focused on pyruvate, not formaldehyde, as product. (2) rxn_013 (glycine + formaldehyde \u2192 serine) \u2014 labeled 'Biochemical' which implies enzymatic catalysis. Prebiotically, the aldol-type hydroxymethylation of glycine is plausible but not well-documented without pyridoxal-type cofactors. The serine-to-alanine final step (Aubrey et al., 2008) is solid.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_011",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Provide evidence for formaldehyde as a stable FTT product or cite formose chemistry literature",
+          "Reclassify rxn_013 as Surface with a mineral catalyst (e.g., clay minerals) and provide mechanistic justification",
+          "Consider alternative serine synthesis via glycolaldehyde + aminonitrile routes"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_010": 0.4,
+          "rxn_003": 0.88,
+          "rxn_009": 0.85,
+          "rxn_008": 0.87,
+          "rxn_006": 0.88
+        },
+        "chemical_feasibility": 0.5,
+        "pathway_coherence": 0.3,
+        "environmental_progression": 0.7,
+        "target_achievement": 0.4,
+        "overall_confidence": 0.38,
+        "feedback": "This 5-step pathway inherits the fatal circularity of P2/P3: OAA is made from pyruvate, decarboxylated back to pyruvate, then pyruvate is decarboxylated to acetaldehyde for Strecker chemistry. The pyruvate \u2192 OAA \u2192 pyruvate segment is a futile cycle. Additionally, this is the longest pathway in the network and the extra steps add no synthetic value. The downstream Strecker portion (rxn_009 \u2192 rxn_008 \u2192 rxn_006) is well-supported.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_010"
+        ],
+        "suggestions": [
+          "Eliminate the OAA detour entirely for this pathway \u2014 use P6 instead"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_005": 0.82,
+          "rxn_009": 0.85,
+          "rxn_008": 0.87,
+          "rxn_006": 0.88
+        },
+        "chemical_feasibility": 0.8,
+        "pathway_coherence": 0.55,
+        "environmental_progression": 0.75,
+        "target_achievement": 0.6,
+        "overall_confidence": 0.6,
+        "feedback": "Lactic acid \u2192 pyruvate \u2192 acetaldehyde \u2192 Strecker alanine. The downstream chemistry (rxn_009 through rxn_006) is well-supported and mirrors P6. However, lactic acid (mol_012) has no upstream synthesis in the network, making the pathway incomplete. The cyanosulfidic lactate oxidation (Ritson, 2021) is valid, but without a source for lactate, this pathway cannot start from available feedstocks within the network.",
+        "approved": false,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Add upstream lactic acid synthesis, e.g., from pyruvate reduction by Fe\u2070 (Muchowska et al. 2019)",
+          "This would create another circularity (pyruvate \u2192 lactate \u2192 pyruvate) unless lactate has an independent source"
+        ]
+      }
+    ],
+    "best_pathway_id": "P6",
+    "overall_confidence": 0.84,
+    "network_feedback": "This is a well-constructed and literature-grounded prebiotic synthesis network for L-alanine with strong support from five key publications. The network demonstrates sophisticated thinking about environmental transitions and hub molecule connectivity. Three pathways (P1, P5, P6) are approved with high confidence, providing robust alternative routes to the target.\n\n**Strengths**: (1) Pyruvate serves as an excellent central hub with literature-validated upstream synthesis (Preiner et al., 2020) and downstream conversion to alanine (Muchowska et al., 2019). (2) The clever use of pyruvate's thermal instability (decarboxylation to acetaldehyde) as a productive branching point feeding Strecker chemistry (P6) is elegant and addresses a known challenge from the literature. (3) Multiple terminal routes to alanine (reductive amination, Strecker hydrolysis, serine reduction) provide genuine convergence. (4) Literature citations are appropriately matched to each reaction.\n\n**Weaknesses**: (1) **Circular OAA dependency**: rxn_010 creates OAA from pyruvate, which is then decarboxylated back to pyruvate in rxn_003/rxn_004, making P2, P3, and P9 futile cycles. OAA needs an independent synthesis route. (2) **Dangling lactic acid**: mol_012 has no upstream synthesis, making P4 and P10 incomplete \u2014 this contradicts the strategy's claim of 'no isolated subgraphs.' (3) **Hydroxylamine synthesis** (rxn_014) is plausible but weakly supported experimentally. (4) **rxn_013** (glycine + formaldehyde \u2192 serine) labeled as 'Biochemical' is the weakest link in P8 \u2014 needs mineral catalyst specification or reclassification. (5) **HCN** (mol_005) is treated as a hub intermediate but has no upstream synthesis reaction.\n\nDespite these issues, the network successfully produces L-alanine through multiple chemically valid routes with strong experimental backing. The three approved pathways (P1, P5, P6) provide a robust core network.",
+    "approved": true,
+    "hub_quality": 0.82,
+    "convergence_quality": 0.78
+  },
+  "success": false,
+  "attempts": 2,
+  "notes": null
+}

@@ -1,0 +1,152 @@
+{
+  "target_molecule": "L-Histidine",
+  "network": {
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "HCN",
+        "iupac_name": "formonitrile",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H"
+      },
+      {
+        "id": "mol_002",
+        "formula": "C4H4N4",
+        "iupac_name": "2,3-diaminomaleonitrile",
+        "common_name": "DAMN",
+        "inchi": "InChI=1S/C4H4N4/c5-1-3(7)4(8)2-6/h7-8H2/b4-3-"
+      },
+      {
+        "id": "mol_003",
+        "formula": "C4H4N4",
+        "iupac_name": "4-amino-1H-imidazole-5-carbonitrile",
+        "common_name": "AICN",
+        "inchi": "InChI=1S/C4H4N4/c5-1-3-4(6)8-2-7-3/h2H,6H2,(H,7,8)"
+      },
+      {
+        "id": "mol_004",
+        "formula": "C4H4N2O",
+        "iupac_name": "1H-imidazole-4-carbaldehyde",
+        "common_name": "imidazole-4-carbaldehyde",
+        "inchi": "InChI=1S/C4H4N2O/c7-2-4-1-5-3-6-4/h1-3H,(H,5,6)"
+      },
+      {
+        "id": "mol_005",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2"
+      },
+      {
+        "id": "mol_006",
+        "formula": "C2H4O2",
+        "iupac_name": "2-hydroxyacetaldehyde",
+        "common_name": "glycolaldehyde",
+        "inchi": "InChI=1S/C2H4O2/c3-1-2-4/h1,4H,2H2"
+      },
+      {
+        "id": "mol_007",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C2H5NO",
+        "iupac_name": "2-aminoacetaldehyde",
+        "common_name": "aminoacetaldehyde",
+        "inchi": "InChI=1S/C2H5NO/c3-1-2-4/h2H,1,3H2"
+      },
+      {
+        "id": "mol_009",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C6H9N3O2",
+        "iupac_name": "(2S)-2-amino-3-(1H-imidazol-4-yl)propanoic acid",
+        "common_name": "L-histidine",
+        "inchi": "InChI=1S/C6H9N3O2/c7-5(6(10)11)1-4-2-8-3-9-4/h2-3,5H,1,7H2,(H,8,9)(H,10,11)/t5-/m0/s1"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "HCN tetramerization",
+        "inputs": [
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_002"
+        ],
+        "conditions": "aqueous solution, ambient temperature"
+      },
+      {
+        "id": "rxn_002",
+        "name": "UV photoisomerization",
+        "inputs": [
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_003"
+        ],
+        "conditions": "UV irradiation (~300 nm)"
+      },
+      {
+        "id": "rxn_003",
+        "name": "Nitrile hydrolysis",
+        "inputs": [
+          "mol_003",
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_004",
+          "mol_007"
+        ],
+        "conditions": "aqueous, mild heating"
+      },
+      {
+        "id": "rxn_004",
+        "name": "Formose reaction",
+        "inputs": [
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "conditions": "Ca(OH)\u2082 catalyst, warm aqueous"
+      },
+      {
+        "id": "rxn_005",
+        "name": "Reductive amination",
+        "inputs": [
+          "mol_006",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_008",
+          "mol_009"
+        ],
+        "conditions": "aqueous, mild reducing environment"
+      },
+      {
+        "id": "rxn_006",
+        "name": "Aldol condensation + Strecker synthesis",
+        "inputs": [
+          "mol_004",
+          "mol_008",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_010",
+          "mol_009"
+        ],
+        "conditions": "aqueous, followed by hydrolysis"
+      }
+    ]
+  }
+}

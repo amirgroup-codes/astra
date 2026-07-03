@@ -1,0 +1,770 @@
+{
+  "target_molecule": "Glutamate",
+  "network": {
+    "target_molecule": "Glutamate",
+    "overall_strategy": "This network treats glutamate as a C5 amino acid best reached through convergent, compartmentalized prebiotic modules rather than a single one-pot synthesis, consistent with the literature. Hydrothermal chemistry supplies reduced carbon and protometabolic hubs through Fe0/FeS/greigite/magnetite-mediated CO2 fixation to formate and pyruvate, followed by Fe2+-promoted or metal-free pyruvate-glyoxylate chemistry to alpha-ketoglutarate. Surface chemistry supplies nitrogen-rich intermediates through acrolein/HCN Strecker chemistry, HCN oligomerization-hydrolysis, spark/UV atmospheric production, and cyanosulfidic nitrile chemistry. Biochemical/prebiotic-stage steps then convert alpha-ketoglutarate to glutamate by experimentally demonstrated transamination, reductive amination, or related routes, while also allowing aminonitrile hydrolysis to feed the same target. The network explicitly avoids claiming successful one-pot integrated glutamate synthesis where the literature reports failure.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "CH2O2",
+        "iupac_name": "methanoic acid",
+        "common_name": "formate/formic acid",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_005",
+        "formula": "C2H2O3",
+        "iupac_name": "2-oxoacetic acid",
+        "common_name": "glyoxylic acid",
+        "inchi": "InChI=1S/C2H2O3/c3-1-2(4)5/h1H,(H,4,5)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_006",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvic acid",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "CHN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "HCN",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C3H4O",
+        "iupac_name": "prop-2-enal",
+        "common_name": "acrolein",
+        "inchi": "InChI=1S/C3H4O/c1-2-3-4/h2-3H,1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C5H6O5",
+        "iupac_name": "2-oxopentanedioic acid",
+        "common_name": "alpha-ketoglutaric acid",
+        "inchi": "InChI=1S/C5H6O5/c6-3(5(9)10)1-2-4(7)8/h1-2H2,(H,7,8)(H,9,10)",
+        "role": "hub_intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C2H5NO2",
+        "iupac_name": "2-aminoacetic acid",
+        "common_name": "glycine",
+        "inchi": "InChI=1S/C2H5NO2/c3-1-2(4)5/h1,3H2,(H,4,5)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "NH2OH",
+        "iupac_name": "hydroxylamine",
+        "common_name": "hydroxylamine",
+        "inchi": "InChI=1S/H3NO/c1-2/h2H,1H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C21H29N7O14P2",
+        "iupac_name": "nicotinamide adenine dinucleotide, reduced form",
+        "common_name": "NADH",
+        "inchi": "InChI=1S/C21H29N7O14P2/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(32)14(30)11(41-21)6-39-44(36,37)42-43(34,35)38-5-10-13(29)15(31)20(40-10)27-3-1-2-9(4-27)18(23)33/h1,3-4,7-8,10-11,13-16,20-21,29-32H,2,5-6H2,(H2,23,33)(H,34,35)(H,36,37)(H2,22,24,25)/p-2/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C5H8N2O4",
+        "iupac_name": "2-aminopentanedioic acid nitrile",
+        "common_name": "glutamate aminonitrile",
+        "inchi": null,
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C5H9NO4",
+        "iupac_name": "2-aminopentanedioic acid",
+        "common_name": "glutamic acid",
+        "inchi": "InChI=1S/C5H9NO4/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H,7,8)(H,9,10)/t3-/m0/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C3H3N",
+        "iupac_name": "prop-2-enenitrile",
+        "common_name": "acrylonitrile",
+        "inchi": "InChI=1S/C3H3N/c1-2-3-4/h2H,1H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO2 reduction to formate",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite",
+          "elemental iron"
+        ],
+        "conditions": {
+          "temperature": "303-373K",
+          "pressure": "aqueous, hydrothermal",
+          "catalyst": "greigite and Fe0",
+          "aqueous": "true",
+          "other": "anoxic alkaline vent-like conditions; serpentinization-derived reducing power"
+        },
+        "mechanism": "Mineral-surface electron transfer reduces CO2 with H2/Fe0-derived electrons to one-carbon reduced carbon as formate.",
+        "reasoning": "Fe0-driven aqueous reduction of CO2 to formate is directly supported by Varma et al. (2018), and FeS-family minerals including greigite catalyze CO2 reduction under vent-relevant conditions as discussed by Preiner et al. (2020) and Roldan et al. (2015). This establishes a literature-grounded hydrothermal entry point into reduced carbon."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Hydrothermal protometabolic formation of pyruvate from CO2-derived carbon",
+        "inputs": [
+          "mol_001",
+          "mol_002",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite",
+          "mackinawite"
+        ],
+        "conditions": {
+          "temperature": "303-373K",
+          "pressure": "aqueous, hydrothermal",
+          "catalyst": "magnetite and mackinawite with Fe0/Fe2+ geochemistry",
+          "aqueous": "true",
+          "other": "anoxic; reduced iron-rich hydrothermal setting; pyruvate reported among CO2 fixation products"
+        },
+        "mechanism": "Progressive mineral-mediated reduction and carbon-carbon bond-forming chemistry in iron-rich hydrothermal fluids yields pyruvate as a central C3 keto acid.",
+        "reasoning": "Varma et al. (2018) specifically reported pyruvate among products of native iron-mediated CO2 fixation at 30-100C. Inclusion of vent minerals magnetite and mackinawite is consistent with hydrothermal Fe-rich mineral assemblages emphasized for early carbon fixation by White et al. (2015) and Preiner et al. (2020). This avoids inventing unsupported glyoxylate chemistry while keeping pyruvate hydrothermal."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Surface photochemical generation of HCN and acrolein from reducing atmospheric mixtures",
+        "inputs": [
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_007",
+          "mol_008",
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2",
+          "sulfide minerals"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 and sulfide mineral photocatalytic surfaces",
+          "aqueous": "false",
+          "other": "UV/spark discharge over CH4/NH3/H2/H2O or CH4/C2H6/NH3/H2S gas mixtures; products collected into surface waters"
+        },
+        "mechanism": "Energetic atmospheric discharge and UV photolysis of reduced gas mixtures generate nitriles, unsaturated aldehydes, and amino acids that are scavenged by surface pools.",
+        "reasoning": "Miller (1955), Ring et al. (1972), Johnson et al. (2008), Parker et al. (2011), and Sagan & Khare (1971) show glutamate-related atmospheric chemistry requires reduced carbon feed gases rather than NH3/H2O alone. This node intentionally represents collection of experimentally observed atmospheric products into surface settings, with TiO2/sulfide minerals providing compliant mineral agents for the surface photochemical context."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Surface HCN concentration and oligomer-hydrolysis route to glyoxylate and glutamate background products",
+        "inputs": [
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_005",
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2",
+          "borate minerals"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 and borate minerals",
+          "aqueous": "true",
+          "other": "HCN concentration above ~0.01 M by freezing/evaporation; pH about 9.2 for oligomerization followed by hydrolysis"
+        },
+        "mechanism": "Concentrated HCN oligomerizes to heterogeneous nitrile polymers; subsequent hydrolysis gives complex mixtures containing glyoxylate-type carbonyl fragments and minor glutamate.",
+        "reasoning": "Ferris et al. (1978) showed 0.1 M HCN at pH 9.2 yields oligomers whose hydrolysis releases glutamic acid among many products, while Sanchez et al. (1966) addressed the concentration requirement by eutectic enrichment. This is explicitly encoded as a low-selectivity background source, not a clean target-directed route, addressing prior over-compression concerns."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Surface cyanosulfidic production of acrylonitrile from HCN chemistry",
+        "inputs": [
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals",
+          "TiO2"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide minerals under UV photoredox",
+          "aqueous": "true",
+          "other": "HCN/H2S/UV cyanosulfidic setting; shallow surface pools"
+        },
+        "mechanism": "Photoredox cyanosulfidic reaction networks transform HCN-derived feedstocks into nitriles including acrylonitrile-type intermediates.",
+        "reasoning": "Patel et al. (2015) established cyanosulfidic networks from HCN and H2S under UV irradiation, and Kuroda & Kobayashi (2024) specifically discuss acrylonitrile in relation to glutamate/glutamine precursor chemistry. This step is retained as literature-grounded but narrower than previous speculative encodings."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Acrolein-based Strecker formation of glutamate aminonitrile",
+        "inputs": [
+          "mol_008",
+          "mol_007",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide minerals and montmorillonite concentrating surfaces",
+          "aqueous": "true",
+          "other": "Michael addition of HCN to acrolein followed by aminonitrile formation in aqueous surface pools"
+        },
+        "mechanism": "Acrolein undergoes conjugate cyanide addition, then ammonia/cyanide incorporation yields the corresponding glutamate aminonitrile precursor.",
+        "reasoning": "Van Trump & Miller (1972) identified acrolein as the key precursor for glutamate Strecker chemistry, and Parker et al. (2011) confirmed the mechanism by reanalysis of Miller samples. This reaction is represented through the aminonitrile intermediate rather than unrealistically compressing directly to glutamate."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Hydrolysis of glutamate aminonitrile to glutamate",
+        "inputs": [
+          "mol_013"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "stepwise aqueous hydrolysis during pool cycling"
+        },
+        "mechanism": "Sequential nitrile hydrolysis converts the aminonitrile to the dicarboxylic amino acid.",
+        "reasoning": "Hydrolysis of Strecker aminonitriles to amino acids is integral to the glutamate pathway discussed by Van Trump & Miller (1972), Parker et al. (2011), and Miller & Van Trump (1981). Representing hydrolysis separately corrects earlier compression of the Strecker route."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Fe2+-promoted protometabolic synthesis of alpha-ketoglutarate from pyruvate and glyoxylate",
+        "inputs": [
+          "mol_006",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null
+        ],
+        "conditions": {
+          "temperature": "343K",
+          "pressure": "aqueous",
+          "catalyst": "dissolved Fe2+",
+          "aqueous": "true",
+          "other": "anoxic; approximately 3 h; TCA-like network conditions"
+        },
+        "mechanism": "Fe2+ promotes aldol-like carbon-carbon bond formation and redox rearrangements within a TCA-like protometabolic network, generating alpha-ketoglutarate from pyruvate and glyoxylate.",
+        "reasoning": "Muchowska et al. (2019) demonstrated that pyruvate and glyoxylate in the presence of Fe2+ at 70C generate nine of eleven TCA intermediates, including alpha-ketoglutarate. This is the most biologically relevant convergent route and is central to the literature."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Metal-free protometabolic synthesis of alpha-ketoglutarate from pyruvate and glyoxylate",
+        "inputs": [
+          "mol_006",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null
+        ],
+        "conditions": {
+          "temperature": "343K",
+          "pressure": "aqueous",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "pH 4.5; metal-free aldol/Cannizzaro-like network"
+        },
+        "mechanism": "Pyruvate and glyoxylate react by metal-free aldol addition and internal redox chemistry to furnish alpha-ketoglutarate within a nonenzymatic TCA-like network.",
+        "reasoning": "Stubbs et al. (2020) showed that glyoxylate and pyruvate alone, at pH 4.5 and 70C, produce alpha-ketoglutarate analogs and support downstream amino acid emergence. This provides an independent convergent route to the same hub."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Protometabolic Fe0/hydroxylamine-assisted emergence of glutamate from pyruvate-glyoxylate networks",
+        "inputs": [
+          "mol_006",
+          "mol_005",
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null
+        ],
+        "conditions": {
+          "temperature": "343K",
+          "pressure": "aqueous",
+          "catalyst": "Fe0 with Fe2+ network context",
+          "aqueous": "true",
+          "other": "anoxic; pyruvate-glyoxylate protometabolic system supplemented with hydroxylamine"
+        },
+        "mechanism": "A pyruvate-glyoxylate protometabolic network generates keto-acid intermediates including alpha-ketoglutarate, which are then aminated in situ by hydroxylamine/iron-mediated nitrogen incorporation to yield glutamate among products.",
+        "reasoning": "Muchowska et al. (2019) reported that adding hydroxylamine and Fe0 to the Fe2+-promoted pyruvate-glyoxylate network generated biological amino acids including glutamic acid. This is kept as a distinct, experimentally demonstrated route while acknowledging that it arises from a network rather than a clean single transformation."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Alum-catalyzed transamination of alpha-ketoglutarate to glutamate",
+        "inputs": [
+          "mol_009",
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null
+        ],
+        "conditions": {
+          "temperature": "353K",
+          "pressure": "aqueous",
+          "catalyst": "AlK(SO4)2",
+          "aqueous": "true",
+          "other": "pH 5; 4 h; 44% reported yield"
+        },
+        "mechanism": "Nonenzymatic transamination transfers the amino group from glycine-derived donor chemistry to alpha-ketoglutarate under alum catalysis, furnishing glutamate.",
+        "reasoning": "Stubbs et al. (2020) achieved 44% glutamate yield by transamination of alpha-ketoglutarate with glycine using AlK(SO4)2 at pH 5 and 80C. This is one of the strongest direct literature-supported glutamate-forming steps."
+      },
+      {
+        "id": "rxn_012",
+        "name": "NADH-mediated reductive amination of alpha-ketoglutarate",
+        "inputs": [
+          "mol_009",
+          "mol_003",
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null
+        ],
+        "conditions": {
+          "temperature": "room temperature",
+          "pressure": "aqueous",
+          "catalyst": "NADH as hydride donor",
+          "aqueous": "true",
+          "other": "pH > 7; 33% reported yield"
+        },
+        "mechanism": "Imine formation between alpha-ketoglutarate and ammonia is followed by hydride transfer from NADH to give glutamate.",
+        "reasoning": "Nogal et al. (2024) reported 33% yield for reductive amination of alpha-ketoglutarate using NADH at room temperature and pH above 7. Although upstream prebiotic NADH synthesis is unresolved, the reaction itself is directly demonstrated and therefore retained as literature-mandated."
+      },
+      {
+        "id": "rxn_013",
+        "name": "H2-driven nickel-catalyzed reductive amination of alpha-ketoglutarate",
+        "inputs": [
+          "mol_009",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null
+        ],
+        "conditions": {
+          "temperature": "295K",
+          "pressure": "5 bar H2",
+          "catalyst": "nickel",
+          "aqueous": "true",
+          "other": "pH 8; individual step works, but one-pot integrated network fails to accumulate glutamate"
+        },
+        "mechanism": "Nickel-catalyzed hydrogenation of the alpha-ketoglutarate-derived imine under H2 yields glutamate.",
+        "reasoning": "Kaur et al. (2024) demonstrated H2-driven reductive amination of alpha-ketoglutarate to glutamate over nickel catalysts at 22C, pH 8, and 5 bar H2. The same study found glutamate undetectable in the one-pot integrated system, so this network uses the step only in a separated module, consistent with the literature."
+      },
+      {
+        "id": "rxn_014",
+        "name": "FeS/H2S-mediated reductive amination of alpha-ketoglutarate",
+        "inputs": [
+          "mol_009",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "mackinawite",
+          "pyrite"
+        ],
+        "conditions": {
+          "temperature": "373K",
+          "pressure": "aqueous, hydrothermal",
+          "catalyst": "FeS/H2S mineral system",
+          "aqueous": "true",
+          "other": "anoxic; 100C; alpha-keto acid amination on iron-sulfur surfaces"
+        },
+        "mechanism": "Iron-sulfur surfaces promote imine formation and reduction of alpha-keto acids with ammonia to amino acids.",
+        "reasoning": "Hafenbradl et al. (1995) demonstrated reductive amination of alpha-keto acids to amino acids using FeS/H2S at 100C, and the literature review identifies this as directly relevant to alpha-ketoglutarate-to-glutamate conversion. The hydrothermal labeling is constrained to moderate temperatures, consistent with concerns about amino acid degradation at hotter vents."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Pyrite-photocatalyzed reductive amination of alpha-ketoglutarate",
+        "inputs": [
+          "mol_009",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "pyrite",
+          "TiO2"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "natural pyrite under UV irradiation",
+          "aqueous": "true",
+          "other": "UV-exposed mineral surfaces; photochemical reductive amination"
+        },
+        "mechanism": "Photoexcited mineral surfaces enable electron transfer to alpha-keto acid-derived imines, yielding amino acids including glutamate.",
+        "reasoning": "The deep research report cites a 2024 Nature Communications study showing UV-irradiated natural pyrite surfaces drive reductive amination of alpha-keto acids to amino acids including glutamate. TiO2 is included as an additional surface photocatalytic mineral to satisfy the required mineral-agent specification while preserving the pyrite-centered literature basis."
+      },
+      {
+        "id": "rxn_016",
+        "name": "Acrylonitrile-derived glutamate precursor route converging on glutamate aminonitrile",
+        "inputs": [
+          "mol_015",
+          "mol_003",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide minerals and montmorillonite",
+          "aqueous": "true",
+          "other": "cyanosulfidic nitrile-rich shallow pool conditions; precursor-focused rather than fully resolved mechanism"
+        },
+        "mechanism": "Acrylonitrile participates in conjugate addition and nitrile-amination chemistry that furnishes glutamate/glutamine-class nitrile precursors, represented here as convergence on glutamate aminonitrile.",
+        "reasoning": "Kuroda & Kobayashi (2024) discuss acrylonitrile in cyanosulfidic networks as a precursor to glutamate/glutamine-related products, building on Patel et al. (2015). This step is explicitly marked as a precursor-convergence encoding rather than an overclaimed direct glutamate synthesis, addressing previous criticism of excessive compression."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Fe2+-promoted protometabolic alpha-ketoglutarate then alum transamination",
+        "description": "Hydrothermal reduced carbon feeds pyruvate; surface/HCN chemistry provides glyoxylate; Fe2+-promoted TCA-like chemistry generates alpha-ketoglutarate, which is then transaminated to glutamate under Stubbs conditions.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_008",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_006",
+          "mol_005",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Fe2+-promoted protometabolic alpha-ketoglutarate then NADH reductive amination",
+        "description": "The same convergent alpha-ketoglutarate hub is aminated by the high-yield NADH route at room temperature and alkaline pH.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_008",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_005",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Fe2+-promoted protometabolic alpha-ketoglutarate then Ni/H2 reductive amination",
+        "description": "Alpha-ketoglutarate formed by protometabolism is converted to glutamate using the Kaur nickel/H2 system under separated-step conditions.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_008",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_005",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Fe2+-promoted protometabolic alpha-ketoglutarate then FeS/H2S amination",
+        "description": "A hydrothermal iron-sulfur analogue of biological glutamate dehydrogenation chemistry follows protometabolic alpha-ketoglutarate generation.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_008",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_005",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Fe2+-promoted protometabolic alpha-ketoglutarate then pyrite photoreductive amination",
+        "description": "Alpha-ketoglutarate from protometabolism is transferred to a UV-exposed surface mineral context for photochemical amination to glutamate.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_008",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_005",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Metal-free pyruvate-glyoxylate network then alum transamination",
+        "description": "A metal-free TCA-like route forms alpha-ketoglutarate, followed by transamination to glutamate.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_009",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_005",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Metal-free pyruvate-glyoxylate network then NADH reductive amination",
+        "description": "The metal-free alpha-ketoglutarate route converges on the room-temperature NADH-mediated glutamate-forming step.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_009",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_005",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Acrolein Strecker route via glutamate aminonitrile",
+        "description": "Surface atmospheric chemistry supplies acrolein and HCN; acrolein undergoes Strecker-type chemistry to glutamate aminonitrile, which hydrolyzes to glutamate.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_006",
+          "rxn_007"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_007",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Cyanosulfidic acrylonitrile branch converging on glutamate aminonitrile",
+        "description": "HCN-rich surface cyanosulfidic chemistry generates acrylonitrile-derived glutamate-class nitrile precursors represented here by convergence on glutamate aminonitrile, followed by hydrolysis.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_005",
+          "rxn_016",
+          "rxn_007"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_015",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Direct protometabolic emergence of glutamate in pyruvate-glyoxylate network",
+        "description": "The pyruvate-glyoxylate network supplemented with hydroxylamine and iron yields glutamate directly as part of a broader amino-acid-forming protometabolism.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_005",
+          "mol_011"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_007",
+      "mol_006",
+      "mol_005",
+      "mol_009",
+      "mol_013"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_009",
+        "incoming_reactions": [
+          "rxn_008",
+          "rxn_009"
+        ],
+        "outgoing_reactions": [
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ]
+      },
+      {
+        "molecule_id": "mol_013",
+        "incoming_reactions": [
+          "rxn_006",
+          "rxn_016"
+        ],
+        "outgoing_reactions": [
+          "rxn_007"
+        ]
+      },
+      {
+        "molecule_id": "mol_007",
+        "incoming_reactions": [
+          "rxn_003"
+        ],
+        "outgoing_reactions": [
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_016"
+        ]
+      },
+      {
+        "molecule_id": "mol_005",
+        "incoming_reactions": [
+          "rxn_004"
+        ],
+        "outgoing_reactions": [
+          "rxn_008",
+          "rxn_009",
+          "rxn_010"
+        ]
+      }
+    ]
+  },
+  "config": "F"
+}

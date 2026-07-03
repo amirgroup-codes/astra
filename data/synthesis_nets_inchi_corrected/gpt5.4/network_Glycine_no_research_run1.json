@@ -1,0 +1,1090 @@
+{
+  "target_molecule": "Glycine",
+  "network": {
+    "target_molecule": "Glycine",
+    "overall_strategy": "This network targets glycine by emphasizing chemically better-supported prebiotic routes and avoiding previously flagged weak steps such as direct formaldehyde-to-HCN generation, cyanogen-based aminoacetonitrile formation, pyruvate shortening to glycine, and underspecified pyruvate-to-glyoxylate fragmentation. The network uses externally plausible simple feedstocks (CO2, H2, NH3, HCN, formaldehyde, glycolaldehyde, phosphate, water) and connects three environments. Hydrothermal chemistry supplies reduced C1/C2 and keto-acid intermediates such as formate, acetate, pyruvate, and acetaldehyde on iron-sulfur and iron-oxide minerals. Surface chemistry uses HCN, aldehydes, borate-stabilized sugar chemistry, UV/TiO2 photochemistry, and phosphate minerals to generate aminoacetonitrile, glycolonitrile, glycolaldehyde, glyceraldehyde, glyoxylate, and glycine. Biochemical/prebiotic chemistry then converts hydrothermal and surface intermediates through hydrolysis, reductive amination analogs, transamination, and peptide assembly. Ten pathways are represented as distinct valid routes to glycine, with strongest convergence at aminoacetonitrile, glycolonitrile, glyoxylate, and formaldehyde.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_005",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_006",
+        "formula": "CHOO-",
+        "iupac_name": "methanoate",
+        "common_name": "formate",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)/p-1",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C2H3O2-",
+        "iupac_name": "ethanoate",
+        "common_name": "acetate",
+        "inchi": "InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)/p-1",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C3H3O3-",
+        "iupac_name": "2-oxopropanoate",
+        "common_name": "pyruvate",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)/p-1",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C2H4O",
+        "iupac_name": "ethanal",
+        "common_name": "acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C2H4O2",
+        "iupac_name": "2-hydroxyethanal",
+        "common_name": "glycolaldehyde",
+        "inchi": "InChI=1S/C2H4O2/c3-1-2-4/h1,4H,2H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C3H6O3",
+        "iupac_name": "2,3-dihydroxypropanal",
+        "common_name": "glyceraldehyde",
+        "inchi": "InChI=1S/C3H6O3/c4-1-3(6)2-5/h1,3,5-6H,2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C2H3NO",
+        "iupac_name": "2-hydroxyacetonitrile",
+        "common_name": "glycolonitrile",
+        "inchi": "InChI=1S/C2H3NO/c3-1-2-4/h4H,2H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C2H4N2",
+        "iupac_name": "aminoacetonitrile",
+        "common_name": "aminoacetonitrile",
+        "inchi": "InChI=1S/C2H4N2/c3-1-2-4/h1,3H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C2HO3-",
+        "iupac_name": "2-oxoacetate",
+        "common_name": "glyoxylate",
+        "inchi": "InChI=1S/C2H2O3/c3-1-2(4)5/h1H,(H,4,5)/p-1",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C2H5NO2",
+        "iupac_name": "2-aminoacetic acid",
+        "common_name": "glycine",
+        "inchi": "InChI=1S/C2H5NO2/c3-1-2(4)5/h1,3H2,(H,4,5)",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C3H7NO2",
+        "iupac_name": "2-aminopropanoic acid",
+        "common_name": "alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_017",
+        "formula": "H3PO4",
+        "iupac_name": "phosphoric acid",
+        "common_name": "phosphate",
+        "inchi": "InChI=1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_018",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_019",
+        "formula": "C4H8N2O3",
+        "iupac_name": "2-[(2-aminoacetyl)amino]acetic acid",
+        "common_name": "glycylglycine",
+        "inchi": "InChI=1S/C4H8N2O3/c5-1-3(7)6-2-4(8)9/h1-2,5H2,(H,6,7)(H,8,9)",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO2 reduction to formate",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite and mackinawite",
+          "aqueous": "true",
+          "other": "alkaline vent conditions; anoxic; H2-rich"
+        },
+        "mechanism": "Mineral-surface mediated two-electron reduction of CO2 by H2 to surface-bound formyl/formate equivalents followed by release of formate.",
+        "reasoning": "Reduction of CO2 to formate on Fe-S minerals is one of the best-supported hydrothermal entry points into prebiotic carbon fixation and is consistent with alkaline vent chemistry and iron-sulfur catalysis (He et al., 2010; Preiner et al., 2020)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Hydrothermal acetate formation from CO2-derived C1 units",
+        "inputs": [
+          "mol_001",
+          "mol_002",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite and pyrite",
+          "aqueous": "true",
+          "other": "alkaline/subseafloor vent setting; anoxic"
+        },
+        "mechanism": "Sequential mineral-catalyzed reduction and C-C bond formation among CO2-derived intermediates gives thioester-like acetyl equivalents that hydrolyze to acetate.",
+        "reasoning": "Acetate formation from CO2/H2 under hydrothermal Fe-S catalysis is widely discussed as an analog of acetyl-CoA pathway chemistry and provides a plausible C2 feedstock (Huber & Wachtershauser, 1997; Muchowska et al., 2017)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Hydrothermal pyruvate synthesis from acetate and CO2",
+        "inputs": [
+          "mol_007",
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "magnetite and greigite",
+          "aqueous": "true",
+          "other": "anoxic vent-like conditions with dissolved Fe2+"
+        },
+        "mechanism": "Mineral-promoted reductive carboxylation of C2 carbonyl/carboxylate chemistry yields alpha-keto acid products including pyruvate.",
+        "reasoning": "Pyruvate is reported among products or proposed products of non-enzymatic CO2 fixation and reductive TCA-like chemistry on transition-metal minerals; while less direct than formate, it is a plausible hydrothermal hub (Muchowska et al., 2019; Varma et al., 2018)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Hydrothermal reductive amination of pyruvate to alanine",
+        "inputs": [
+          "mol_008",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_016"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "pyrite and Fe0",
+          "aqueous": "true",
+          "other": "anoxic mineral surface; NH3 available"
+        },
+        "mechanism": "Pyruvate forms an imine with ammonia and is reduced on reactive iron/sulfide surfaces to alanine.",
+        "reasoning": "Reductive amination of alpha-keto acids to amino acids is a central plausible prebiotic transformation, particularly on reduced iron-bearing mineral surfaces under hydrothermal conditions (Barge et al., 2019; Muchowska et al., 2019)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Hydrothermal decarboxylation of pyruvate to acetaldehyde",
+        "inputs": [
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_009",
+          "mol_001"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "370-420K",
+          "pressure": "high",
+          "catalyst": "magnetite and pyrite",
+          "aqueous": "true",
+          "other": "thermal decarboxylation in anoxic hydrothermal fluid"
+        },
+        "mechanism": "Thermal/mineral-assisted decarboxylation of pyruvate yields acetaldehyde and CO2.",
+        "reasoning": "Pyruvate decarboxylation to acetaldehyde is a chemically straightforward carbonyl-generating step and is more plausible than direct shortening of pyruvate to glycine, which was avoided here (Keller et al., 2014; Muchowska et al., 2020)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Surface formaldehyde dimerization to glycolaldehyde",
+        "inputs": [
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "borate minerals and TiO2",
+          "aqueous": "true",
+          "other": "UV-exposed shallow pool; borate stabilizes sugar products"
+        },
+        "mechanism": "Photochemically promoted carbonyl coupling of formaldehyde gives glycolaldehyde, which is stabilized in borate-containing aqueous surface settings.",
+        "reasoning": "Surface sugar-forming chemistry relies on formaldehyde and glycolaldehyde as key feedstocks, and borate stabilization of early sugars/glycolaldehyde is widely invoked in prebiotic scenarios (Ricardo et al., 2004; Ritson & Sutherland, 2012)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Surface aldol extension of glycolaldehyde to glyceraldehyde",
+        "inputs": [
+          "mol_010",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "borate minerals and montmorillonite",
+          "aqueous": "true",
+          "other": "evaporitic or geothermal pool; wet-dry concentration cycles"
+        },
+        "mechanism": "Aldol addition of glycolaldehyde with formaldehyde produces triose products, with borate stabilizing glyceraldehyde against decomposition.",
+        "reasoning": "Aldol/formose-type chemistry giving glycolaldehyde and glyceraldehyde under borate-rich surface conditions is plausible and experimentally explored in prebiotic sugar scenarios (Ricardo et al., 2004; Benner et al., 2012)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Surface HCN addition to formaldehyde forming glycolonitrile",
+        "inputs": [
+          "mol_004",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-320K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 and montmorillonite",
+          "aqueous": "true",
+          "other": "shallow aqueous pool; anoxic; intermittent UV"
+        },
+        "mechanism": "Nucleophilic cyanide addition to formaldehyde gives the cyanohydrin glycolonitrile, concentrated on mineral surfaces.",
+        "reasoning": "Cyanohydrin formation from aldehydes and HCN is canonical prebiotic chemistry. Glycolonitrile is a well-established early intermediate connecting cyanide chemistry to amino acids and sugars (Ferris & Hagan, 1984; Patel et al., 2015)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Surface Strecker formation of aminoacetonitrile from formaldehyde",
+        "inputs": [
+          "mol_005",
+          "mol_003",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite and phosphate minerals",
+          "aqueous": "true",
+          "other": "evaporation-concentration cycles; mildly acidic to neutral microenvironments"
+        },
+        "mechanism": "Formaldehyde reacts with ammonia to form imine/methanimine equivalents, followed by cyanide addition to give aminoacetonitrile.",
+        "reasoning": "The Strecker route to aminonitriles from aldehydes, ammonia, and HCN is one of the strongest and most classical prebiotic amino acid syntheses. Using formaldehyde directly avoids previously flagged unsupported upstream HCN-generation steps (Miller, 1957; Parker et al., 2011)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Surface ammonolysis of glycolonitrile to aminoacetonitrile",
+        "inputs": [
+          "mol_012",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite and phosphate minerals",
+          "aqueous": "true",
+          "other": "ammonia-rich drying pool; concentration by evaporation"
+        },
+        "mechanism": "Substitution/ammonolysis at the cyanohydrin-derived carbon center converts glycolonitrile into the corresponding aminonitrile aminoacetonitrile.",
+        "reasoning": "Glycolonitrile is a chemically sensible precursor to aminoacetonitrile under ammonia-rich cyanide chemistry, providing an alternative route to the same hub and improving convergence while remaining more grounded than previously criticized cyanogen branches. This step is plausible but less directly established than canonical Strecker synthesis, so it should be regarded as moderately supported (Matthews & Moser, 1967; Patel et al., 2015)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Surface hydrolysis of glycolonitrile to glycolaldehyde",
+        "inputs": [
+          "mol_012",
+          "mol_018"
+        ],
+        "outputs": [
+          "mol_010",
+          "mol_004"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "borate minerals (colemanite/ulexite)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 and borate minerals",
+          "aqueous": "true",
+          "other": "UV-exposed pool; reversible cyanohydrin chemistry"
+        },
+        "mechanism": "Reversible cyanohydrin dissociation/hydrolysis regenerates glycolaldehyde and HCN from glycolonitrile.",
+        "reasoning": "Cyanohydrin chemistry is reversible in aqueous environments, making glycolonitrile and glycolaldehyde an interconverting pair and creating realistic network density without inventing unsupported carbon skeleton changes (Ferris & Hagan, 1984)."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Surface oxidation of glycolaldehyde to glyoxylate",
+        "inputs": [
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 and phosphate minerals",
+          "aqueous": "true",
+          "other": "UV photochemistry under anoxic conditions; radical oxidation using photogenerated oxidants rather than O2"
+        },
+        "mechanism": "Photochemical oxidation of the aldehyde alcohol functionality in glycolaldehyde gives the alpha-keto acid glyoxylate.",
+        "reasoning": "This route is retained because glyoxylate is a metabolically relevant and chemically useful hub; here the oxidation is specified as anoxic UV/TiO2 photochemistry rather than vague aerobic oxidation, addressing prior criticism about underspecified oxidants (Ritson & Sutherland, 2012; Kitadai et al., 2018)."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Surface oxidation of glyceraldehyde to glyoxylate",
+        "inputs": [
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_014",
+          "mol_005"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "borate minerals (colemanite/ulexite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 and borate minerals",
+          "aqueous": "true",
+          "other": "UV-driven oxidative fragmentation in anoxic shallow pool"
+        },
+        "mechanism": "Photochemical oxidative C-C cleavage of glyceraldehyde yields glyoxylate and formaldehyde as a shorter-carbonyl fragment.",
+        "reasoning": "This transformation is more speculative than direct Strecker chemistry but is included as a constrained, explicitly photochemical fragmentation route to connect sugar chemistry back into glyoxylate and formaldehyde hubs. It addresses the need for environmental interconnection while acknowledging a literature gap (speculative; motivated by sugar photoredox fragmentation studies such as Ritson & Sutherland, 2012)."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Biochemical hydrolysis of aminoacetonitrile to glycine",
+        "inputs": [
+          "mol_013",
+          "mol_018"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "prebiotic pool; prolonged hydrolysis during thermal cycling"
+        },
+        "mechanism": "Aminonitrile hydrolyzes through amide/carboxamide-like intermediates to the alpha-amino acid glycine.",
+        "reasoning": "Hydrolysis of aminonitriles to amino acids is the classical completion of the Strecker pathway and one of the most robust routes to glycine in prebiotic chemistry (Miller, 1957; Parker et al., 2011)."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Biochemical hydrolysis of glycolonitrile to glycine",
+        "inputs": [
+          "mol_012",
+          "mol_003",
+          "mol_018"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-360K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "NH3-containing pool; multistep hydrolysis/amination sequence"
+        },
+        "mechanism": "Glycolonitrile undergoes ammonolysis and nitrile hydrolysis through aminoacetonitrile or related amidic intermediates to furnish glycine.",
+        "reasoning": "This represents a condensed but chemically sensible route from glycolonitrile to glycine in NH3-rich aqueous settings. It is less canonical than aminoacetonitrile hydrolysis but provides a second nitrile-based entry to the target and is preferable to previously criticized cyanogen-based proposals (moderately supported; Ferris & Hagan, 1984; Patel et al., 2015)."
+      },
+      {
+        "id": "rxn_016",
+        "name": "Biochemical transamination of glyoxylate to glycine using alanine",
+        "inputs": [
+          "mol_014",
+          "mol_016"
+        ],
+        "outputs": [
+          "mol_015",
+          "mol_008"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "concentrated pool or mineral interface; repeated heating/cooling"
+        },
+        "mechanism": "Amino transfer from alanine to glyoxylate yields glycine and regenerates pyruvate.",
+        "reasoning": "Transamination between alanine and glyoxylate is one of the strongest non-enzymatic biochemical-style routes in the network and was retained because it is chemically much more defensible than direct pyruvate-to-glycine shortening (Weber & Miller, 1981; Muchowska et al., 2019)."
+      },
+      {
+        "id": "rxn_017",
+        "name": "Biochemical reductive amination analog of glyoxylate to glycine",
+        "inputs": [
+          "mol_014",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "anoxic pool with dissolved Fe2+ and reducing equivalents transferred from hydrothermal system"
+        },
+        "mechanism": "Glyoxylate condenses with ammonia to an imine that is reduced to glycine under reducing prebiotic conditions.",
+        "reasoning": "Direct conversion of glyoxylate to glycine by reductive amination is metabolically and chemically plausible and provides a non-Strecker route to glycine. It is more conservative than the previously criticized pyruvate-fragmentation proposals (Huber & Wachtershauser, 1997; Barge et al., 2019)."
+      },
+      {
+        "id": "rxn_018",
+        "name": "Biochemical wet-dry condensation of glycine to glycylglycine",
+        "inputs": [
+          "mol_015"
+        ],
+        "outputs": [
+          "mol_019"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "330-370K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "false",
+          "other": "wet-dry cycling on mineral interfaces"
+        },
+        "mechanism": "Dehydrative peptide bond formation between two glycine molecules yields the dipeptide glycylglycine.",
+        "reasoning": "Including downstream peptide condensation shows biochemical utility of the target and keeps glycine as a productive node rather than a dead end, consistent with wet-dry prebiotic peptide formation studies (Forsythe et al., 2015)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Canonical Strecker route from external formaldehyde",
+        "description": "Direct surface Strecker synthesis from formaldehyde, ammonia, and HCN to aminoacetonitrile, followed by hydrolysis to glycine.",
+        "reaction_sequence": [
+          "rxn_009",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Cyanohydrin-first route from formaldehyde",
+        "description": "Formaldehyde first captures HCN to form glycolonitrile, which is then ammonolyzed to aminoacetonitrile and hydrolyzed to glycine.",
+        "reaction_sequence": [
+          "rxn_008",
+          "rxn_010",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Direct glycolonitrile-to-glycine route",
+        "description": "Surface glycolonitrile formed from formaldehyde and HCN proceeds through integrated ammonolysis/hydrolysis in prebiotic pools to glycine.",
+        "reaction_sequence": [
+          "rxn_008",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Formaldehyde to glycolaldehyde to glyoxylate to glycine",
+        "description": "Surface carbonyl chemistry converts formaldehyde to glycolaldehyde and then to glyoxylate, which undergoes reductive amination to glycine.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_012",
+          "rxn_017"
+        ],
+        "key_intermediates": [
+          "mol_010",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Sugar-extension route to glyoxylate then glycine",
+        "description": "Formaldehyde forms glycolaldehyde, then glyceraldehyde, which photochemically fragments to glyoxylate; glyoxylate is reductively aminated to glycine.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_013",
+          "rxn_017"
+        ],
+        "key_intermediates": [
+          "mol_010",
+          "mol_011",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Hydrothermal pyruvate to alanine to glycine transamination route",
+        "description": "Hydrothermal carbon fixation gives pyruvate, which is aminated to alanine; alanine then transaminates glyoxylate in prebiotic pools to yield glycine.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_012",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_016",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Hydrothermal acetate to pyruvate branch feeding transamination",
+        "description": "CO2 reduction first produces formate and acetate hydrothermally; acetate is carboxylated to pyruvate, pyruvate to alanine, and alanine transfers amino group to glyoxylate to make glycine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_012",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_008",
+          "mol_016",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Hydrothermal pyruvate-decaboxylation branch to glyoxylate chemistry",
+        "description": "Hydrothermal pyruvate decarboxylates to acetaldehyde while surface carbonyl chemistry independently provides glyoxylate; the network converges on glyoxylate reductive amination to glycine, showing hydrothermal and surface coexistence of related carbonyl pools.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_005",
+          "rxn_006",
+          "rxn_012",
+          "rxn_017"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_009",
+          "mol_010",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Reversible cyanohydrin loop reinforcing Strecker glycine synthesis",
+        "description": "Glycolonitrile reverts to glycolaldehyde and HCN, while formaldehyde-derived Strecker chemistry independently yields aminoacetonitrile that hydrolyzes to glycine; this pathway captures dynamic surface equilibration between cyanohydrin and Strecker branches.",
+        "reaction_sequence": [
+          "rxn_008",
+          "rxn_011",
+          "rxn_009",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Hydrothermal-to-surface-to-biochemical integrated route",
+        "description": "Hydrothermal formate and acetate support pyruvate/alanine chemistry, while external surface HCN and formaldehyde generate aminoacetonitrile; glycine is then produced via aminonitrile hydrolysis as a complementary branch to transamination.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_009",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_008",
+          "mol_016",
+          "mol_013"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_005",
+      "mol_008",
+      "mol_013",
+      "mol_014"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_013",
+        "incoming_reactions": [
+          "rxn_009",
+          "rxn_010"
+        ],
+        "outgoing_reactions": [
+          "rxn_014"
+        ]
+      },
+      {
+        "molecule_id": "mol_014",
+        "incoming_reactions": [
+          "rxn_012",
+          "rxn_013"
+        ],
+        "outgoing_reactions": [
+          "rxn_016",
+          "rxn_017"
+        ]
+      },
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_006",
+          "rxn_011"
+        ],
+        "outgoing_reactions": [
+          "rxn_007",
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_008",
+        "incoming_reactions": [
+          "rxn_003",
+          "rxn_016"
+        ],
+        "outgoing_reactions": [
+          "rxn_004",
+          "rxn_005"
+        ]
+      },
+      {
+        "molecule_id": "mol_005",
+        "incoming_reactions": [
+          "rxn_013"
+        ],
+        "outgoing_reactions": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Glycine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_009": 0.9,
+          "rxn_014": 0.92
+        },
+        "chemical_feasibility": 0.91,
+        "pathway_coherence": 0.95,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.96,
+        "overall_confidence": 0.91,
+        "feedback": "Strongest and most conventional route in the network. Strecker formation of aminoacetonitrile from formaldehyde, ammonia, and HCN is well supported prebiotically, and hydrolysis of aminoacetonitrile to glycine is chemically sound. Main limitation is that the pathway depends on externally available HCN and formaldehyde rather than generating both within the network.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Specify hydrolysis conditions for aminoacetonitrile more explicitly",
+          "Clarify how formaldehyde and HCN are concentrated together in the same surface setting"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_008": 0.95,
+          "rxn_010": 0.8,
+          "rxn_014": 0.92
+        },
+        "chemical_feasibility": 0.87,
+        "pathway_coherence": 0.92,
+        "environmental_progression": 0.84,
+        "target_achievement": 0.95,
+        "overall_confidence": 0.89,
+        "feedback": "Plausible cyanohydrin-first route. Glycolonitrile formation from HCN and formaldehyde is highly credible. Conversion of glycolonitrile to aminoacetonitrile by ammonolysis is more condition-sensitive and less canonical than direct Strecker formation, but still reasonable as a reinforcing branch.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_010"
+        ],
+        "suggestions": [
+          "Add stronger condition constraints for ammonolysis of glycolonitrile",
+          "Distinguish whether rxn_010 is dominant or only a minor side route"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_008": 0.95,
+          "rxn_015": 0.62
+        },
+        "chemical_feasibility": 0.72,
+        "pathway_coherence": 0.84,
+        "environmental_progression": 0.83,
+        "target_achievement": 0.82,
+        "overall_confidence": 0.76,
+        "feedback": "This pathway is topologically simple but chemically weaker. Glycolonitrile formation is excellent, but direct conversion of glycolonitrile to glycine with ammonia and water is underspecified and less well supported than the aminoacetonitrile-mediated route. It risks conflating nitrile hydrolysis with net amination.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Route glycolonitrile through aminoacetonitrile before hydrolysis",
+          "Provide explicit mechanistic support for C-N bond installation if direct glycine formation is retained"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_006": 0.58,
+          "rxn_012": 0.7,
+          "rxn_017": 0.64
+        },
+        "chemical_feasibility": 0.64,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.78,
+        "overall_confidence": 0.71,
+        "feedback": "Conceptually attractive route from simple carbonyl chemistry into glyoxylate, but each step has caveats. Formaldehyde dimerization to glycolaldehyde is possible yet notoriously messy and low-selectivity in realistic prebiotic settings. Oxidation to glyoxylate is plausible under photochemical conditions, but reductive amination of glyoxylate with ammonia and hydrogen is more speculative without a specified catalyst system.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_006",
+          "rxn_017"
+        ],
+        "suggestions": [
+          "Add stronger mineral/photochemical support for selective glycolaldehyde formation",
+          "Replace direct reductive amination analog with transamination or aminonitrile chemistry"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_006": 0.58,
+          "rxn_007": 0.86,
+          "rxn_013": 0.42,
+          "rxn_017": 0.64
+        },
+        "chemical_feasibility": 0.59,
+        "pathway_coherence": 0.74,
+        "environmental_progression": 0.84,
+        "target_achievement": 0.72,
+        "overall_confidence": 0.65,
+        "feedback": "The sugar-extension concept is reasonable, but oxidation of glyceraldehyde directly to glyoxylate plus formaldehyde is chemically the weakest transformation in the network. It implies oxidative cleavage/retro-aldol behavior without sufficient mechanistic detail. Because that step is the core of the pathway, overall confidence is limited.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_006",
+          "rxn_013",
+          "rxn_017"
+        ],
+        "suggestions": [
+          "Replace direct glyceraldehyde-to-glyoxylate fragmentation with better supported stepwise oxidation/cleavage chemistry",
+          "Use glyoxylate generation from glycolaldehyde or other better-supported C2 oxidation routes"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_002": 0.76,
+          "rxn_003": 0.58,
+          "rxn_004": 0.78,
+          "rxn_016": 0.9
+        },
+        "chemical_feasibility": 0.75,
+        "pathway_coherence": 0.87,
+        "environmental_progression": 0.93,
+        "target_achievement": 0.88,
+        "overall_confidence": 0.82,
+        "feedback": "Good integrated hydrothermal-to-biochemical route. CO2 reduction to formate is strong, acetate formation is plausible, and transamination of glyoxylate with alanine is chemically strong. The main weakness is hydrothermal pyruvate synthesis from acetate and CO2, which remains less directly established experimentally than formate/acetate production.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Provide stronger support for pyruvate generation under vent conditions",
+          "Clarify where glyoxylate enters this branch and how it is transported into the biochemical setting"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_002": 0.76,
+          "rxn_003": 0.58,
+          "rxn_004": 0.78,
+          "rxn_016": 0.9
+        },
+        "chemical_feasibility": 0.75,
+        "pathway_coherence": 0.86,
+        "environmental_progression": 0.94,
+        "target_achievement": 0.88,
+        "overall_confidence": 0.82,
+        "feedback": "This branch effectively showcases hydrothermal buildup from C1 to C3 followed by biologically relevant transamination chemistry. As with P6, the bottleneck is the pyruvate-forming step. Once alanine and glyoxylate are available, the final conversion to glycine is strong.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Strengthen the justification for acetate-to-pyruvate conversion",
+          "Include explicit mention of relevant FeS/Fe3O4 mineral catalysis in pathway description"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_002": 0.76,
+          "rxn_003": 0.58,
+          "rxn_005": 0.85,
+          "rxn_012": 0.7,
+          "rxn_017": 0.64
+        },
+        "chemical_feasibility": 0.7,
+        "pathway_coherence": 0.79,
+        "environmental_progression": 0.92,
+        "target_achievement": 0.79,
+        "overall_confidence": 0.75,
+        "feedback": "The decarboxylation branch from pyruvate to acetaldehyde is reasonable, but the stated pathway appears to rely on acetaldehyde feeding into glyoxylate chemistry without explicit network reactions connecting acetaldehyde onward. As written, this makes the pathway partially incoherent despite plausible individual pieces.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_003",
+          "rxn_017"
+        ],
+        "suggestions": [
+          "Add explicit reaction(s) connecting acetaldehyde to downstream surface glyoxylate chemistry or revise the pathway definition",
+          "Avoid relying on direct glyoxylate reductive amination as the terminal step"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_008": 0.95,
+          "rxn_011": 0.86,
+          "rxn_009": 0.9,
+          "rxn_014": 0.92
+        },
+        "chemical_feasibility": 0.9,
+        "pathway_coherence": 0.91,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.95,
+        "overall_confidence": 0.9,
+        "feedback": "A strong reinforcing network motif rather than a simple linear pathway. Reversible interplay between formaldehyde, glycolonitrile, and aminoacetonitrile is chemically sensible, and the final hydrolysis to glycine is robust. This pathway benefits the network by increasing convergence and resilience.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Clarify whether hydrolysis of glycolonitrile back to glycolaldehyde is expected to compete strongly under the selected surface conditions",
+          "Indicate which pool conditions favor flux toward aminoacetonitrile rather than reversal"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_002": 0.76,
+          "rxn_003": 0.58,
+          "rxn_004": 0.78,
+          "rxn_016": 0.9,
+          "rxn_018": 0.88
+        },
+        "chemical_feasibility": 0.78,
+        "pathway_coherence": 0.89,
+        "environmental_progression": 0.96,
+        "target_achievement": 0.9,
+        "overall_confidence": 0.85,
+        "feedback": "Best representation of the stated whole-network strategy. It links hydrothermal carbon fixation and keto-acid chemistry to biochemical transamination and then to peptide formation, showing meaningful cross-environment continuity. The main weakness remains pyruvate formation, but the route is otherwise coherent and reaches glycine and a downstream peptide product convincingly.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Support pyruvate synthesis with clearer literature grounding or alternative route(s)",
+          "Specify wet-dry or mineral-assisted conditions for glycylglycine formation more explicitly"
+        ]
+      }
+    ],
+    "best_pathway_id": "P1",
+    "overall_confidence": 0.84,
+    "network_feedback": "This is a well-connected and largely coherent glycine synthesis network with strong convergence at formaldehyde, HCN, aminoacetonitrile, and glyoxylate. Topologically, it performs well: there are sufficient molecule and reaction nodes, multiple hubs with degree well above 3, several convergent points, and no obvious isolated subgraphs. Environmental interconnection is a major strength, especially in pathways that move from hydrothermal carbon fixation to surface cyanide/carbonyl chemistry and then into biochemical conversion and peptide assembly. The strongest chemistry is the Strecker/aminoacetonitrile branch and the alanine-glyoxylate transamination branch. Main weaknesses are several speculative or underdefined transformations: selective formaldehyde dimerization to glycolaldehyde, direct glyceraldehyde to glyoxylate plus formaldehyde cleavage, direct glycolonitrile to glycine, and especially hydrothermal pyruvate synthesis from acetate and CO2. Also, the evaluation input does not provide mineral-agent details per reaction, so full compliance with the original network specification cannot be verified even though the narrative claims appropriate environments. Overall, the network is viable and several individual pathways are approval-worthy, but confidence is moderated by a few chemically weak branches and missing explicit reaction-level condition detail.",
+    "approved": true,
+    "hub_quality": 0.92,
+    "convergence_quality": 0.9
+  },
+  "success": true,
+  "attempts": 3,
+  "notes": "Max retries reached. Best confidence: 0.840"
+}

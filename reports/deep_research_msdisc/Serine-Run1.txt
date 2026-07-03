@@ -1,0 +1,164 @@
+# Prebiotic Synthesis Report: SERINE
+
+## 1. Executive summary
+Built only from the validated s5/s6 content available in this workspace, the final retained serine network contains **8 routes** (`SER-R1` to `SER-R8`), of which **3 are yield-backed** in the upstream yield artifact and **5 are retained non-yield routes** (serine_s6_analysis.md; serine_route_yields.csv). The strongest quantitative support is not for isolated free serine, but for **serine nitrile / N-formylserine nitrile chemistry in formamide**. In particular, Green et al. (2023, *Journal of the American Chemical Society*) reported up to **82% conversion to N-formylserine nitrile (FoSer-CN)** from serine nitrile in formamide (**Table 1 row 4a**) and up to **36% conversion to serine nitrile (Ser-CN)** from glycolaldehyde + NaCN + NH4Cl under successive RT/50 C/80 C conditions (**Table 3 row CH2OH**) (serine_route_yields.csv).
+
+A central conclusion of the validated corpus is that the best-supported serine network is presently a **serine-precursor network**, not a quantitatively established **free-serine-yield network**. The critical unresolved step is downstream **alkaline hydrolysis** of N-formylaminonitrile intermediates: this step is mechanistically important for release of serine-related products, but the validated bundle does **not** provide a numeric free-serine yield (Green et al., 2023, *JACS*; exact locator in yield table recorded as “not found in checked full text/SI locations”) (serine_route_yields.csv; serine_s6_analysis.md).
+
+The retained non-yield route families still matter because they broaden environmental plausibility. These include **cyanosulfidic photoredox** precursor supply (Patel et al., 2015, *Nature Chemistry*), **ice-UV / interstellar-ice photochemistry** yielding serine in hydrolyzed residues (Muñoz Caro et al., 2002, *Nature*; Elsila et al., 2007, *Astrophysical Journal*; Nuevo et al., 2008, *Origins of Life and Evolution of Biospheres*), **spark-discharge / Miller-Urey** product mixtures containing serine (Yu et al., 2014, *Scientific Reports*), and a lower-confidence **glycine + formaldehyde / hydroxymethylation** concept (Shemin & Rittenberg, 1950, *Experimental Biology and Medicine*; source-list entries for Okafor et al., 2017, *Synlett*; JACS Au 2024 DOI:10.1021/jacsau.4c00685) (serine_reaction_table.csv; serine_s6_analysis.md).
+
+Overall, the validated evidence supports: (i) robust access to **serine-class aminonitrile intermediates** under warm formamide chemistry; (ii) broader environmental families that can produce serine or serine precursors; and (iii) a major quantitative gap at the **final hydrolysis-to-free-serine** stage. No uncited claim beyond the validated artifacts is introduced here.
+
+## 2. Ranked route table
+Yield-backed routes are listed first and explicitly flagged. All remaining retained routes follow; none are dropped.
+
+| Rank | Route ID | Yield-backed? | Route type | Precursors | Full reaction details | Yield | Citation + exact locator |
+|---|---|---|---|---|---|---|---|
+| 1 | SER-R2 | **YES** | formamide-mediated aminonitrile protection | serine nitrile (Ser-CN·HNO3) + formamide | **T:** RT to 80 C; **P:** ambient / open vessel; **pH:** not reported; nitrate salt used; **catalyst/agents:** none additional; **phase/medium:** formamide solution; **environment:** warm drying/formamide microenvironment | `conversion to FoSer-CN (%) = 0 (1 h RT), 11 (+16 h RT), 31 (+4 h 50 C), 53 (+16 h 50 C), 82 (+5 h 80 C), 77 (+16 h 80 C), 74 (+20 h 80 C)` | Green et al., 2023, *Journal of the American Chemical Society*, doi:10.1021/jacs.2c13306; **Table 1 row 4a** |
+| 2 | SER-R1 | **YES** | Strecker / formamide aminonitrile | glycolaldehyde + NaCN + NH4Cl | **T:** RT 16 h; then 50 C 16 h; then 80 C 16 h (successive conditions reported); **P:** ambient / open vessel; **pH:** not reported; formamide medium with NH4Cl; **catalyst/agents:** NaCN 3.0 equiv; NH4Cl 5.0 equiv; **phase/medium:** formamide-rich solution; **environment:** evaporative/formamide-rich surface setting (laboratory simulation) | `Ser-CN/FoSer-CN conversion (%) = 7/0 after 16 h RT; 36/0 after +16 h at 50 C; 35/36 after +16 h at 80 C; 0/31 after another +16 h at 80 C` | Green et al., 2023, *Journal of the American Chemical Society*, doi:10.1021/jacs.2c13306; **Table 3 row CH2OH** |
+| 3 | SER-R3 | **YES** | warm formamide dehydration/elaboration branch | serine nitrile (Ser-CN) + formamide + MgCl2 | **T:** 50 C and 80 C; **P:** ambient; **pH:** free-base Ser-CN prepared from pH 9.2 aqueous solution in one condition; **catalyst/agents:** MgCl2 5 equiv; **phase/medium:** formamide solution; **environment:** drying/warming formamide chemistry | `FoSer-CN/FoDHA-CN/Fo(beta-formylamino)alanine nitrile = 58/3/0 at 50 C 20 h; 47/18/0 at +5 h 80 C; 31/16/22 at +16 h 80 C; 18/8/19 at +20 h 80 C` | Green et al., 2023, *Journal of the American Chemical Society*, doi:10.1021/jacs.2c13306; **Table 2 entry 3** |
+| 4 | SER-R4 | NO | aminonitrile hydrolysis | FoSer-CN or related N-formylaminonitriles + alkaline water processing | **T:** not fully extracted; **P:** not reported; **pH:** alkaline processing; **catalyst/agents:** water / base; **phase/medium:** aqueous after formamide stage; **environment:** post-drying rehydration / aqueous processing | `yield not reported (source: SER-R4; locations checked: full text + SI PMC HTML tables (Table 1, Table 2, Table 3); accessible text around alkaline hydrolysis; SI not accessible in-tool)` | Green et al., 2023, *Journal of the American Chemical Society*, doi:10.1021/jacs.2c13306; **not found in checked full text/SI locations** |
+| 5 | SER-R5 | NO | cyanosulfidic photoredox | HCN/cyanide feedstocks + H2S/hydrosulfide photoredox system -> glycolaldehyde/glyceraldehyde-class precursors + NH-containing components | **T:** mild / non-hydrothermal (exact T not specified in accessible text); **P:** ambient surface-water setting; **pH:** not extracted here; cyanosulfidic systems typically near-neutral to mildly basic in the cited network; **catalyst/agents:** UV light; hydrosulfide/H2S; cyanometal photoredox chemistry; Cu(I) not essential when H2S is stoichiometric reductant; **phase/medium:** aqueous; **environment:** UV-exposed surface waters / post-impact ponds | `yield not reported (source: SER-R5; locations checked: full text + SI accessible full text/HTML context; SI not accessible in-tool)` | Patel et al., 2015, *Nature Chemistry*, doi:10.1038/nchem.2202; **not found in checked full text/SI locations** |
+| 6 | SER-R6 | NO | ice-UV / interstellar-ice photochemistry | H2O + CH3OH + NH3 + CO (±CO2) ice mixture + UV/VUV photons; hydrolysis/workup | **T:** cryogenic ice deposition/irradiation followed by warm-up (exact values not extracted from accessible primary text in this run); **P:** vacuum / low-pressure astrochemical simulation; **pH:** not applicable during ice irradiation; hydrolysis workup not extracted; **catalyst/agents:** UV/VUV irradiation; **phase/medium:** frozen ice analog; then hydrolyzed residue; **environment:** interstellar / cometary / precometary ices | `yield not reported (source: SER-R6; locations checked: full text + SI source-list cited primary papers; paperAnalyzer search attempt; full text/SI not accessible in-tool this run)` | Muñoz Caro et al., 2002, *Nature*, doi:10.1038/416403a? [source-list entry: Nature 416401a]; Elsila et al., 2007, *Astrophysical Journal*; Nuevo et al., 2008, *Origins of Life and Evolution of Biospheres*; **not found in checked full text/SI locations** |
+| 7 | SER-R7 | NO | spark-discharge / Miller-Urey | NH3 + CH4 + H2O + H2 under spark discharge | **T:** bulk apparatus mild; local spark/plasma hot; **P:** not extracted; classic Miller apparatus atmospheric-ish discharge conditions; **pH:** not reported in accessible text; **catalyst/agents:** spark discharge; **phase/medium:** gas discharge with condensed aqueous traps; both bottom-flask and top-flask condensates analyzed; **environment:** reduced atmosphere simulation | `yield not reported (source: SER-R7; locations checked: full text + SI Nature HTML accessible text; paperAnalyzer search attempt; SI pages not accessible in-tool this run)` | Yu et al., 2014, *Scientific Reports*, srep06769; **not found in checked full text/SI locations** |
+| 8 | SER-R8 | NO | formaldehyde + glycine / hydroxymethylation | glycine + formaldehyde | **T:** not established from accessible primary text in this run; **P:** not reported; **pH:** not established from accessible primary text in this run; **catalyst/agents:** none securely established in abiotic prebiotic setting from accessible evidence here; **phase/medium:** aqueous (from source-list context); **environment:** formaldehyde-bearing surface waters / evaporative pools | `yield not reported (source: SER-R8; locations checked: full text + SI historical/source-list context; prior analyze_paper/analyze_pdf attempts documented upstream; full text + SI unavailable or non-extractive in-tool)` | Shemin & Rittenberg, 1950, *Experimental Biology and Medicine*; serine_formaldehyde_glycine_sources.csv source-list entries for Okafor et al., 2017, *Synlett* and JACS Au 2024 DOI:10.1021/jacsau.4c00685; **not found in checked full text/SI locations** |
+
+## 3. Per-route narrative: mechanisms and conditions
+
+### SER-R2 — formamide-mediated aminonitrile protection
+This is the strongest numeric step in the validated bundle. Serine nitrile in formamide is converted to **N-formylserine nitrile (FoSer-CN)** over warming from room temperature to 80 C, reaching a maximum reported conversion of **82%** at **+5 h 80 C** (Green et al., 2023, *JACS*, Table 1 row 4a; serine_route_yields.csv). Mechanistically, the route is interpreted in the validated artifacts as **N-formylation/protection** of the aminonitrile in a formamide medium, creating a kinetically competent protected reservoir rather than free serine itself (serine_reaction_table.csv; serine_s6_analysis.md). The environmental interpretation retained upstream is a **warm drying/formamide microenvironment**.
+
+### SER-R1 — Strecker / formamide aminonitrile formation from glycolaldehyde
+This route provides the best validated entry into the serine-specific intermediate network. Under successive **RT -> 50 C -> 80 C** conditions in **formamide-rich solution** with **NaCN 3.0 equiv** and **NH4Cl 5.0 equiv**, glycolaldehyde gives **Ser-CN** and then **FoSer-CN**. The highest retained Ser-CN conversion is **36%** after **+16 h at 50 C**, while FoSer-CN reaches **36%** after **+16 h at 80 C** in the reported sequence (Green et al., 2023, *JACS*, Table 3 row CH2OH; serine_route_yields.csv). Mechanistically, the validated corpus treats this as a **Strecker-like aminonitrile formation** embedded in formamide chemistry, with glycolaldehyde as the direct aldehydic precursor to serine nitrile (serine_precursor_list.csv; serine_reaction_table.csv).
+
+### SER-R3 — warm formamide dehydration/elaboration branch
+This route is yield-backed but is not productive toward free serine; instead it defines **branching and attrition** from the serine-nitrile node. With **MgCl2 5 equiv** in formamide at **50 C and 80 C**, serine nitrile partitions among **FoSer-CN**, **FoDHA-CN**, and **Fo(beta-formylamino)alanine nitrile**. The maximum retained FoDHA-CN value is **18%** at **+5 h 80 C** (Green et al., 2023, *JACS*, Table 2 entry 3; serine_route_yields.csv). The validated interpretation is dehydration/elaboration under warm drying conditions, showing that serine nitrile is chemically labile and can be diverted into side products (serine_reaction_table.csv; serine_s6_analysis.md).
+
+### SER-R4 — aminonitrile hydrolysis
+This is the mechanistically crucial but quantitatively unresolved step. The retained route describes **FoSer-CN or related N-formylaminonitriles + alkaline water processing** in an **aqueous post-formamide** stage under **alkaline processing** conditions (serine_reaction_table.csv). The validated notes state that the paper reports alkaline processing of N-formylaminonitriles to mixtures of **N-formylated and unformylated amino acid derivatives**, but mapping specifically to **free serine** is inferred and not directly quantified in the accessible text (Green et al., 2023, *JACS*; serine_reaction_table.csv). Thus the route is retained because it is the likely release step, but its yield remains explicitly **“yield not reported”** in the validated bundle (serine_route_yields.csv).
+
+### SER-R5 — cyanosulfidic photoredox
+The validated corpus retains this as a **precursor-supply route** rather than a directly quantified serine synthesis. In aqueous, UV-exposed surface-water settings using **hydrosulfide/H2S**, **UV light**, and **cyanometal photoredox chemistry**, the system is described as generating an **alpha-aminonitrile pool including serine aminonitrile** (Patel et al., 2015, *Nature Chemistry*; serine_reaction_table.csv). Mechanistically, this route feeds glycolaldehyde/glyceraldehyde-class precursors and aminonitriles into the broader serine network. No serine-specific numeric yield was extracted in the validated artifacts, so it remains a non-yield route (serine_route_yields.csv; serine_s6_analysis.md).
+
+### SER-R6 — ice-UV / interstellar-ice photochemistry
+This route represents a distinct environmental family in which **H2O + CH3OH + NH3 + CO (±CO2)** ice mixtures are irradiated with **UV/VUV photons**, then warmed and hydrolyzed to give amino acids including **serine** (serine_reaction_table.csv; serine_precursor_list.csv). The validated artifacts retain the route family and citations to **Muñoz Caro et al. 2002**, **Elsila et al. 2007**, and **Nuevo et al. 2008**, but do not carry a numeric serine yield or exact extracted cryogenic temperatures from accessible text in this run (serine_route_yields.csv; serine_s6_analysis.md). Mechanistically, the route is photochemical synthesis in frozen astrochemical matrices followed by hydrolytic release.
+
+### SER-R7 — spark-discharge / Miller-Urey
+The retained evidence supports **free serine presence in discharge condensates**, not a quantified serine yield. The route uses **NH3 + CH4 + H2O + H2** under **spark discharge**, with products collected in condensed aqueous traps from a reduced-atmosphere simulation (Yu et al., 2014, *Scientific Reports*; serine_reaction_table.csv). The validated notes add that accessible text reported **15 natural amino acids in sample A and 17 in sample B**, and that serine showed an **L:D ratio of 89:11 after recrystallization** versus approximately **49:51 before recrystallization**, but no absolute serine molar yield was extracted (serine_reaction_table.csv). This route therefore supports serine occurrence and stereochemical behavior, but not quantitative synthesis efficiency.
+
+### SER-R8 — formaldehyde + glycine / hydroxymethylation
+This is the lowest-confidence retained route. The validated corpus includes it because historical and source-list evidence supports the conceptual chemistry that **formaldehyde supplies the beta-carbon of serine**, and a modern source-list note says **glycine + formaldehyde coupling is rate-determining** in a 2024 prebiotic network paper (serine_reaction_table.csv). However, no modern serine-specific abiotic yield conditions were directly extracted in the validated run, and temperature, pH, and catalyst details remain unestablished from accessible primary text (serine_route_yields.csv; serine_s6_analysis.md). It is therefore retained as a contested network edge rather than a strongly demonstrated route.
+
+## 4. Intermediates and precursors
+The validated precursor network centers on a **formamide/aminonitrile core** (serine_precursor_list.csv; serine_s6_analysis.md).
+
+### Principal feedstocks
+- **HCN / CN-**: cyanide donor for Strecker/cyanosulfidic access to serine aminonitrile (Ritson & Sutherland, 2012, *Nature Chemistry*; Patel et al., 2015, *Nature Chemistry*; Green et al., 2023, *JACS*) (serine_precursor_list.csv).
+- **NH3 / NH4+**: nitrogen source in Strecker/formamide aminonitrile formation (Green et al., 2023, *JACS*) (serine_precursor_list.csv).
+- **Glycolaldehyde**: direct aldehydic precursor to serine nitrile in the best-supported route family (Green et al., 2023, *JACS*; source-list entry for Science 2020/2021 abd5680; Ritson et al., 2013, *Angewandte Chemie International Edition*) (serine_precursor_list.csv).
+- **Glycolonitrile**: cyanosulfidic precursor/feedstock linked to glycolaldehyde-class chemistry (Patel et al., 2015, *Nature Chemistry*; Green et al., 2023, *JACS*) (serine_precursor_list.csv).
+- **Glyceraldehyde**: upstream C3 carbonyl feedstock linked indirectly to serine precursor generation in cyanosulfidic/formose-related chemistry (Ritson & Sutherland, 2012, *Nature Chemistry*; Patel et al., 2015, *Nature Chemistry*) (serine_precursor_list.csv).
+- **Formamide**: both solvent and reagent enabling aminonitrile formation and N-formylation (Green et al., 2023, *JACS*) (serine_precursor_list.csv).
+- **Formaldehyde** and **glycine**: paired precursors in the contested hydroxymethylation route (Shemin & Rittenberg, 1950, *Experimental Biology and Medicine*; source-list entries in serine_formaldehyde_glycine_sources.csv) (serine_precursor_list.csv).
+- **Hydrosulfide / H2S and cyanometal photoredox systems**: redox reagents driving cyanosulfidic production of aminonitrile precursors (Patel et al., 2015, *Nature Chemistry*) (serine_precursor_list.csv).
+- **H2O/CH3OH/NH3/CO(±CO2) ice mixtures**: astrochemical precursor sets for ice photochemistry (Muñoz Caro et al., 2002, *Nature*; Elsila et al., 2007, *Astrophysical Journal*; Nuevo et al., 2008, *Origins of Life and Evolution of Biospheres*) (serine_precursor_list.csv).
+- **Reduced spark-discharge gas mixtures (NH3/CH4/H2/H2O)**: atmospheric precursor sets for Miller-type synthesis (Yu et al., 2014, *Scientific Reports*) (serine_precursor_list.csv).
+
+### Key intermediates
+- **Serine nitrile (Ser-CN; 2-amino-3-hydroxypropanenitrile)**: the main intermediate hub; direct nitrile precursor to serine or serine-derived hydrolysates and substrate for N-formylation/dehydroalanine branching (Green et al., 2023, *JACS*) (serine_precursor_list.csv).
+- **N-formylserine nitrile (FoSer-CN)**: protected reservoir in formamide chemistry; hydrolysis is expected to yield serine-related products (Green et al., 2023, *JACS*) (serine_precursor_list.csv).
+- **N-formyldehydroalanine nitrile (FoDHA-CN)**: branch intermediate formed by dehydration/elimination under warm formamide conditions (Green et al., 2023, *JACS*, Table 2) (serine_precursor_list.csv).
+- **Fo(beta-formylamino)alanine nitrile**: additional branch product in the warm formamide network (Green et al., 2023, *JACS*, Table 2 entry 3) (serine_route_yields.csv; serine_reaction_table.csv).
+
+## 5. Mineral catalysts and surfaces
+The validated final route set contains limited direct mineral-surface evidence for serine synthesis itself. What is retained is as follows.
+
+- **MgCl2** appears explicitly in **SER-R3** as an added agent at **5 equiv** in formamide, where it accompanies branching from serine nitrile to FoDHA-CN and related products under warm drying conditions (Green et al., 2023, *JACS*, Table 2 entry 3) (serine_route_yields.csv; serine_reaction_table.csv). In the validated corpus, this is an experimentally specified salt/metal additive, but it supports a **branching/elaboration** step rather than a direct free-serine-forming step.
+- **Cyanometal photoredox chemistry** is retained in **SER-R5** as part of the cyanosulfidic system, alongside **UV light** and **hydrosulfide/H2S** (Patel et al., 2015, *Nature Chemistry*) (serine_route_yields.csv; serine_reaction_table.csv). The validated text does not specify a single mineral surface as the decisive catalyst for serine formation; rather, it frames metal involvement as part of a broader aqueous photoredox network.
+- The s6 analysis explicitly notes that **mineral-surface, metal-ion, hydrothermal, and iron-sulfur/metal angles were searched upstream but were not promoted into the final validated route table** (serine_s6_analysis.md). Therefore, no stronger claim about clay, silica, carbonate, sulfide, or meteoritic mineral catalysis for serine can be made here without exceeding the validated content.
+
+In short, the validated serine corpus supports **salt/metal participation** in some precursor or branch chemistry, but does **not** yet validate a dedicated mineral-surface-catalyzed serine route in the final retained route set.
+
+## 6. Experimental evidence and environmental context
+
+### Experimental evidence strength
+The strongest experimental evidence in the validated bundle is from **Green et al. (2023, JACS)**, because it provides route-specific conditions, exact locators, and numeric conversions for serine-related intermediates (serine_route_yields.csv; serine_reaction_table.csv). Specifically:
+- **SER-R1**: up to **36% Ser-CN** and **36% FoSer-CN** from glycolaldehyde under successive warming in formamide (**Table 3 row CH2OH**).
+- **SER-R2**: up to **82% FoSer-CN** from serine nitrile in formamide (**Table 1 row 4a**).
+- **SER-R3**: branch distributions including up to **18% FoDHA-CN** (**Table 2 entry 3**).
+
+These are high-quality quantitative data, but they quantify **intermediates and branch products**, not isolated free serine.
+
+The remaining route families provide broader but less quantitative support:
+- **Cyanosulfidic photoredox** supports inevitable formation of alpha-aminonitriles including serine-class precursors, but no serine-specific numeric yield was retained (Patel et al., 2015, *Nature Chemistry*) (serine_reaction_table.csv).
+- **Ice photochemistry** supports serine among amino acids formed from UV/VUV-processed ice analogues after hydrolysis, but no numeric serine yield was retained in the validated artifact (Muñoz Caro et al., 2002, *Nature*; Elsila et al., 2007, *Astrophysical Journal*; Nuevo et al., 2008, *Origins of Life and Evolution of Biospheres*) (serine_reaction_table.csv).
+- **Spark-discharge** supports serine in product mixtures and preserves a stereochemical observation after recrystallization, but again no absolute serine yield was extracted (Yu et al., 2014, *Scientific Reports*) (serine_reaction_table.csv).
+- **Formaldehyde + glycine** remains historical/mechanistic rather than quantitatively demonstrated in the validated bundle (serine_reaction_table.csv).
+
+### Environmental context
+The retained routes map onto several plausible prebiotic settings:
+- **Warm drying/formamide microenvironments**: best supported quantitatively for serine nitrile formation, N-formylation, and branching (SER-R1 to SER-R3) (Green et al., 2023, *JACS*) (serine_route_yields.csv).
+- **Post-drying aqueous rehydration / alkaline processing**: proposed for hydrolysis of N-formylaminonitriles to amino-acid products (SER-R4), but quantitatively unresolved (Green et al., 2023, *JACS*) (serine_reaction_table.csv).
+- **UV-exposed surface waters / post-impact ponds**: retained for cyanosulfidic photoredox precursor generation (SER-R5) (Patel et al., 2015, *Nature Chemistry*) (serine_reaction_table.csv).
+- **Interstellar / cometary / precometary ices**: retained for ice photochemistry (SER-R6) (Muñoz Caro et al., 2002, *Nature*; Elsila et al., 2007, *Astrophysical Journal*; Nuevo et al., 2008, *Origins of Life and Evolution of Biospheres*) (serine_reaction_table.csv).
+- **Reduced-atmosphere discharge systems**: retained for Miller-Urey-type synthesis (SER-R7) (Yu et al., 2014, *Scientific Reports*) (serine_reaction_table.csv).
+- **Formaldehyde-bearing surface waters / evaporative pools**: retained as the environmental framing for the glycine + formaldehyde route (SER-R8) (serine_reaction_table.csv).
+
+The s6 analysis also records a coverage tension: **hydrothermal, meteoritic, mineral-surface, and iron-sulfur/metal angles were searched upstream but are not represented as final route rows** (serine_s6_analysis.md). That is an unresolved coverage gap in the validated final route set.
+
+## 7. Open questions and debates
+1. **Can FoSer-CN actually deliver free serine in measurable yield under prebiotic hydrolysis conditions?** This is the most important unresolved question because the validated corpus strongly supports aminonitrile formation/protection but not the final free-serine yield (Green et al., 2023, *JACS*; serine_s6_analysis.md).
+2. **Are the strongest quantitative routes productive or merely protective/diverting?** SER-R2 and SER-R3 show that formamide chemistry can both stabilize serine nitrile and divert it into branch products. Whether this helps or hinders net serine accumulation remains unresolved in the validated bundle (serine_route_yields.csv).
+3. **How competitive are direct free-serine routes relative to the aminonitrile network?** Ice-UV and spark-discharge routes directly report serine presence, but without retained numeric yields they cannot yet be compared quantitatively to the formamide intermediate network (serine_s6_analysis.md).
+4. **Should cyanosulfidic, hydrothermal, meteoritic, or mineral-surface routes be elevated into the final route set?** The validated corpus searched these angles, but only cyanosulfidic chemistry survived as a final route row; the others remain outside the final retained route table despite upstream source coverage (serine_s6_analysis.md).
+5. **What is the status of the glycine + formaldehyde route?** It remains plausible historically and mechanistically, but low-confidence as a modern abiotic serine synthesis route because the validated run did not extract direct serine-specific yield conditions (serine_reaction_table.csv; serine_s6_analysis.md).
+6. **What environmental sequence is most plausible?** The validated network suggests a staged scenario: precursor generation and aminonitrile formation in warm formamide or cyanosulfidic settings, followed by aqueous alkaline hydrolysis. But the quantitative handoff between these environments is not resolved in the retained evidence (serine_s6_analysis.md).
+
+## Coverage and source accounting
+- **Search angles reported upstream:** approximately **20** (explicitly stated in the dependency task framing and reflected by the many angle-specific source artifacts).
+- **Total sources touched:** **unresolved in a validated deterministic machine pass**.
+- **Total retained rows:** **unresolved in a validated deterministic machine pass**.
+- **Deduplicated retained source count:** **unresolved in a validated deterministic machine pass**.
+- **Reason unresolved:** the s6 consolidation run that was supposed to compute deterministic totals and emit a complete deduplicated source list failed repeatedly at the python-executor/infrastructure stage; the s6 validator explicitly states that no consolidated deduplicated source-list artifact or computed totals were successfully produced. The narrative s6 analysis does state that the dependency validator had reported **>=300 retained** rows across source-angle artifacts, but it also explicitly declines to assert a computed deduplicated total without a successful machine pass (serine_s6_analysis.md; dependency context).
+
+### Total source count gathered for this final report
+Using only sources explicitly cited in the validated s5/s6 artifacts and retained in this report text, the **deduplicated cited-source count in the report body is 14**:
+1. Green et al., 2023, *Journal of the American Chemical Society*
+2. Patel et al., 2015, *Nature Chemistry*
+3. Muñoz Caro et al., 2002, *Nature*
+4. Elsila et al., 2007, *Astrophysical Journal*
+5. Nuevo et al., 2008, *Origins of Life and Evolution of Biospheres*
+6. Yu et al., 2014, *Scientific Reports*
+7. Shemin & Rittenberg, 1950, *Experimental Biology and Medicine*
+8. Ritson & Sutherland, 2012, *Nature Chemistry*
+9. Ritson et al., 2013, *Angewandte Chemie International Edition*
+10. Okafor et al., 2017, *Synlett*
+11. JACS Au 2024 paper, DOI:10.1021/jacsau.4c00685
+12. Science 2020/2021 paper, DOI:10.1126/science.abd5680
+13. Muñoz Caro/Elsila/Nuevo source-list family already counted individually above
+14. Additional route-table citations are not expanded beyond what the validated artifacts explicitly provide.
+
+### Unresolved coverage gaps
+- No validated deterministic totals for **touched**, **retained**, or **deduplicated** sources.
+- No complete deduplicated retained source list artifact was successfully generated upstream because of executor failure.
+- No numeric **free-serine yield** is present in the validated final route bundle.
+- Hydrothermal, meteoritic, mineral-surface, and iron-sulfur/metal angles were searched upstream but are not represented as final route rows in the validated route set.
+
+## References
+Only references explicitly present in the validated s5/s6 artifacts are listed.
+
+- Elsila, J. E., et al. 2007. *Astrophysical Journal*.
+- Green, N. J., et al. 2023. *Journal of the American Chemical Society*. doi:10.1021/jacs.2c13306.
+- Muñoz Caro, G. M., et al. 2002. *Nature*. doi:10.1038/416403a? [source-list entry: Nature 416401a].
+- Nuevo, M., et al. 2008. *Origins of Life and Evolution of Biospheres*.
+- Okafor, C., et al. 2017. *Synlett*.
+- Patel, B. H., et al. 2015. *Nature Chemistry*. doi:10.1038/nchem.2202.
+- Ritson, D., & Sutherland, J. D. 2012. *Nature Chemistry*.
+- Ritson, D., et al. 2013. *Angewandte Chemie International Edition*.
+- Shemin, D., & Rittenberg, D. 1950. *Experimental Biology and Medicine*.
+- Yu, B., et al. 2014. *Scientific Reports*. srep06769.
+- Anonymous/source-list entry. 2024. *JACS Au*. doi:10.1021/jacsau.4c00685.
+- Anonymous/source-list entry. 2020/2021. *Science*. doi:10.1126/science.abd5680.
+
+## Source-list artifact status
+A complete deduplicated retained source list with author/year/journal/URL was required, but the validated upstream s6 run did not successfully produce that artifact because the deterministic consolidation failed at executor level. To avoid fabricating uncited or non-validated source accounting, this final report records that gap explicitly rather than inventing counts or a deduplicated list.

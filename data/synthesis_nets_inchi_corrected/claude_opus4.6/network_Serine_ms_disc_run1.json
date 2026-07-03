@@ -1,0 +1,1011 @@
+{
+  "target_molecule": "Serine",
+  "network": {
+    "target_molecule": "Serine",
+    "overall_strategy": "This network constructs serine (L-2-amino-3-hydroxypropanoic acid, C3H7NO3) from simple C1 feedstocks (CO2, CO, H2, HCN, NH3) through multiple convergent prebiotic pathways spanning three environments. The hydrothermal environment generates C1 (formate, formaldehyde) and C3 (pyruvate) building blocks via mineral-catalyzed CO2 reduction and Fischer-Tropsch synthesis. The surface environment assembles these into C2 (glycolaldehyde) and C3 (glyceraldehyde, serinonitrile) intermediates via the formose reaction, Strecker synthesis, and Phosphoro-Strecker synthesis. The biochemical environment completes the synthesis through hydrolysis, reductive amination, and transamination. Four hub molecules (formaldehyde, glycolaldehyde, 3-hydroxypyruvate, pyruvate) create dense interconnections and ten distinct pathways to serine, ensuring network redundancy and robustness.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen gas",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "ammonia",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "CHN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "HCN",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_005",
+        "formula": "H2O",
+        "iupac_name": "water",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_006",
+        "formula": "CO",
+        "iupac_name": "carbon monoxide",
+        "common_name": "carbon monoxide",
+        "inchi": "InChI=1S/CO/c1-2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_007",
+        "formula": "CHO2-",
+        "iupac_name": "formate",
+        "common_name": "formate",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)/p-1",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_008",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C2H4O2",
+        "iupac_name": "2-hydroxyacetaldehyde",
+        "common_name": "glycolaldehyde",
+        "inchi": "InChI=1S/C2H4O2/c3-1-2-4/h1,4H,2H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C3H5NO2",
+        "iupac_name": "2-amino-3-hydroxypropionitrile",
+        "common_name": "serinonitrile",
+        "inchi": "InChI=1S/C3H6N2O/c4-2-1(3)5-6/h1,6H,3H2,(H,4,5)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "H4NO3P",
+        "iupac_name": "diamidophosphate",
+        "common_name": "DAP",
+        "inchi": "InChI=1S/H5N2O2P/c1-5(2,3)4/h(H5,1,2,3,4)/p-1",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_012",
+        "formula": "C3H6N2O4P",
+        "iupac_name": "N-phosphoro-2-amino-3-hydroxypropionitrile",
+        "common_name": "N-phosphoro-serinonitrile",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C3H6O3",
+        "iupac_name": "2,3-dihydroxypropanal",
+        "common_name": "glyceraldehyde",
+        "inchi": "InChI=1S/C3H6O3/c4-1-3(6)2-5/h1,3,5-6H,2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C3H4O4",
+        "iupac_name": "3-hydroxy-2-oxopropanoic acid",
+        "common_name": "3-hydroxypyruvate",
+        "inchi": "InChI=1S/C3H4O4/c4-1-2(5)3(6)7/h4H,1H2,(H,6,7)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvate",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C3H7NO2",
+        "iupac_name": "2-aminopropanoic acid",
+        "common_name": "alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_017",
+        "formula": "C3H7NO3",
+        "iupac_name": "2-amino-3-hydroxypropanoic acid",
+        "common_name": "serine",
+        "inchi": "InChI=1S/C3H7NO3/c4-2(1-5)3(6)7/h2,5H,1,4H2,(H,6,7)",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "CO2 hydrogenation to formate on greigite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-100 bar)",
+          "catalyst": "greigite (Fe3S4)",
+          "aqueous": true,
+          "other": "Alkaline hydrothermal vent conditions, pH 9-11, H2-rich serpentinization fluids"
+        },
+        "mechanism": "CO2 is adsorbed onto the Fe3S4 surface, which structurally resembles biological [Fe4S4] clusters. H2 dissociates on the mineral surface, providing hydride equivalents that reduce CO2 to formate via a surface-bound formate intermediate. The alkaline pH gradient across the vent wall thermodynamically favors the reduction.",
+        "reasoning": "Greigite-catalyzed CO2 reduction to formate has been demonstrated as the first step in abiotic carbon fixation at alkaline hydrothermal vents, analogous to the Wood-Ljungdahl pathway. This reaction is supported by Preiner et al. (2020) who showed native iron and iron minerals in serpentinizing systems reduce CO2 to formate and other C1 products. Also supported by Herschy et al. (2014) and the general framework of W\u00e4chtersh\u00e4user's iron-sulfur world hypothesis."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Formate reduction to formaldehyde on native iron",
+        "inputs": [
+          "mol_007",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_008",
+          "mol_005"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron (Fe0)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "370-420K",
+          "pressure": "high (50-100 bar)",
+          "catalyst": "elemental iron (Fe0)",
+          "aqueous": true,
+          "other": "Subseafloor hydrothermal conditions, iron-rich mineral assemblages"
+        },
+        "mechanism": "Formate adsorbs onto the Fe0 surface where further reduction occurs via H2 dissociation and hydride transfer. The C=O bond of formate is partially reduced to yield formaldehyde (methanal), which desorbs into the aqueous phase. Magnetite surfaces stabilize intermediate formate species and provide additional catalytic sites.",
+        "reasoning": "The stepwise reduction of CO2 \u2192 formate \u2192 formaldehyde on native iron surfaces is thermodynamically favorable under hydrothermal conditions with H2 as reductant. Preiner et al. (2020) demonstrated that Fe0 and magnetite promote multi-step CO2 reduction yielding formaldehyde among other products. Keefe et al. (1995) also investigated CO2 reduction using FeS/H2S systems yielding reduced carbon species. Formaldehyde is kinetically accessible at moderate hydrothermal temperatures (370-420K) before further reduction to methanol becomes dominant."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Fischer-Tropsch-type synthesis of formaldehyde",
+        "inputs": [
+          "mol_006",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high (>100 bar)",
+          "catalyst": "magnetite (Fe3O4)",
+          "aqueous": true,
+          "other": "Black smoker-type conditions, CO-rich hydrothermal fluids"
+        },
+        "mechanism": "CO adsorbs onto the magnetite surface and is hydrogenated via dissociatively adsorbed H2. The initial hydrogenation yields a surface-bound formyl (HCO*) species, which is further hydrogenated to formaldehyde (H2CO). At these temperatures, the reaction kinetics favor C1 oxygenate formation before chain growth to longer hydrocarbons.",
+        "reasoning": "Fischer-Tropsch-type (FTT) synthesis on magnetite surfaces has been extensively studied as a source of prebiotic organic molecules at hydrothermal vents. McCollom & Seewald (2007) demonstrated that FTT reactions on magnetite yield C1-C3 oxygenated products including formaldehyde, methanol, and formate. This provides an alternative route to formaldehyde independent of CO2 reduction, using CO directly available in hydrothermal fluids."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Fischer-Tropsch-type synthesis of glycolaldehyde",
+        "inputs": [
+          "mol_006",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high (>100 bar)",
+          "catalyst": "magnetite (Fe3O4)",
+          "aqueous": true,
+          "other": "High-temperature hydrothermal fluids with CO and H2, mixed Fe-oxide/sulfide mineral surfaces"
+        },
+        "mechanism": "CO chain growth on magnetite surface proceeds through insertion of a second CO into the surface-bound formyl (HCO*) intermediate, forming a C2 oxygenated species. Subsequent hydrogenation yields glycolaldehyde (HOCH2CHO), a C2 hydroxy aldehyde. Pyrite co-catalyst surfaces may facilitate CO dissociation and hydrogen spillover.",
+        "reasoning": "FTT synthesis on iron oxide and sulfide minerals produces a range of C1-C4 oxygenated organics. Cody et al. (2004) and McCollom & Seewald (2007) documented C2 oxygenated products including glycolaldehyde from FTT reactions under hydrothermal conditions. Glycolaldehyde has also been detected in interstellar clouds (J\u00f8rgensen et al., 2012), supporting its formation in reducing environments. This provides a direct hydrothermal route to the key C2 building block without requiring the formose reaction."
+      },
+      {
+        "id": "rxn_005",
+        "name": "CO2 reduction to pyruvate on iron minerals",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-100 bar)",
+          "catalyst": "greigite (Fe3S4) and Fe0",
+          "aqueous": true,
+          "other": "Alkaline hydrothermal conditions, pH 9-11, FeNiS mineral surfaces, multi-step CO2 fixation"
+        },
+        "mechanism": "Multi-step CO2 fixation on FeNiS and Fe0 surfaces proceeds through sequential reduction: CO2 \u2192 formate \u2192 acetyl intermediate \u2192 pyruvate. The initial CO2 reduction yields formate, which is further reduced and coupled on the mineral surface through an acetyl-CoA pathway analog. A third CO2 equivalent is fixed via carboxylation of the surface-bound C2 acetyl intermediate to yield C3 pyruvate. The reaction is thermodynamically driven by the strongly reducing conditions (H2-rich) at alkaline vents.",
+        "reasoning": "Muchowska et al. (2019) demonstrated that Fe0 and other iron minerals can promote a non-enzymatic analog of the reductive tricarboxylic acid cycle, producing pyruvate and other \u03b1-keto acids from CO2 and H2 under mild aqueous conditions. Varma et al. (2018) showed that native metals (Fe0, Ni0) reduce CO2 to pyruvate under alkaline hydrothermal conditions. While the yield is low and the multi-step mechanism is not fully resolved, this represents a plausible prebiotic route to C3 keto acids."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Formose reaction: aldol condensation of formaldehyde to glycolaldehyde",
+        "inputs": [
+          "mol_008",
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "Ca(OH)2 and borate minerals",
+          "aqueous": true,
+          "other": "Evaporitic pools with wet-dry cycling, alkaline pH 9-11, borate stabilizes intermediates"
+        },
+        "mechanism": "Two molecules of formaldehyde undergo an aldol condensation in alkaline aqueous solution. The first formaldehyde is deprotonated at the \u03b1-position to form a glycolaldehyde enediol intermediate via the Cannizzaro reaction or by Ca(OH)2-mediated base catalysis. Borate minerals form stable complexes with the diol products (glycolaldehyde, glyceraldehyde), preventing further uncontrolled oligomerization and channeling the reaction toward C2 products.",
+        "reasoning": "The formose reaction has been extensively studied as a prebiotic route to sugars and sugar-related aldehydes. Butlerov (1861) first demonstrated formaldehyde oligomerization. Ricardo et al. (2004) showed that borate minerals stabilize sugars (especially ribose and glyceraldehyde) formed in the formose reaction, preventing their degradation. This borate-stabilized formose reaction in surface evaporitic pools provides a robust route from formaldehyde to glycolaldehyde under mild conditions."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Aldol condensation of formaldehyde and glycolaldehyde to glyceraldehyde",
+        "inputs": [
+          "mol_008",
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "borate minerals",
+          "aqueous": true,
+          "other": "Alkaline evaporitic pool conditions, borate stabilization of glyceraldehyde product"
+        },
+        "mechanism": "Glycolaldehyde acts as the electrophilic acceptor and formaldehyde provides the nucleophilic carbon via its enediol tautomer. The cross-aldol condensation yields glyceraldehyde (C3), which is immediately stabilized by complexation with borate minerals, preventing racemization and retro-aldol degradation. Montmorillonite surfaces concentrate both reactants and provide Lewis acid catalytic sites.",
+        "reasoning": "This is a well-established step in the formose reaction network. The aldol condensation of formaldehyde with glycolaldehyde to form glyceraldehyde is documented in Breslow (1959) and subsequent studies of the formose reaction. Ricardo et al. (2004) demonstrated that borate stabilization of glyceraldehyde is critical for accumulating this C3 sugar. Kim et al. (2011) further showed that borate-glyceraldehyde complexes can persist under prebiotic conditions."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Strecker synthesis of serinonitrile from glycolaldehyde",
+        "inputs": [
+          "mol_009",
+          "mol_004",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite clay surface",
+          "aqueous": true,
+          "other": "Mildly acidic to neutral pH (5-7), aqueous solution with dissolved HCN and NH3"
+        },
+        "mechanism": "Step 1: Glycolaldehyde (HOCH2CHO) reacts with NH3 to form an imine (HOCH2CH=NH) via nucleophilic addition-elimination with loss of water. Step 2: HCN adds to the electrophilic carbon of the imine via nucleophilic addition, yielding the \u03b1-aminonitrile serinonitrile (HOCH2CH(NH2)CN). The montmorillonite surface concentrates reactants and provides acid-base catalytic sites that facilitate imine formation.",
+        "reasoning": "The Strecker reaction is one of the most robust and well-documented prebiotic amino acid synthesis pathways. Miller (1957) and subsequent studies demonstrated Strecker synthesis of various amino acids including serine from the corresponding aldehydes. The use of glycolaldehyde as the aldehyde substrate directly yields the serine precursor serinonitrile (2-amino-3-hydroxypropionitrile). This pathway is cited in the research as 'robust and plausible under early Earth conditions' (Sources 15634, 6942, 6940). Montmorillonite catalysis of amino acid synthesis is documented in Ferris et al. (1996)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Phosphoro-Strecker synthesis of N-phosphoro-serinonitrile",
+        "inputs": [
+          "mol_009",
+          "mol_011",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "phosphate minerals (apatite/struvite)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "phosphate minerals",
+          "aqueous": true,
+          "other": "Neutral pH (~7), aqueous solution, DAP as activated phosphorus and nitrogen source"
+        },
+        "mechanism": "Diamidophosphate (DAP) first reacts with glycolaldehyde to form an N-phosphoro-hemiaminal intermediate, where the phosphoramide nitrogen adds to the aldehyde carbonyl. HCN then adds to the electrophilic carbon of this activated intermediate, yielding N-phosphoro-serinonitrile. The phosphoryl group on nitrogen makes this intermediate more selective and avoids formation of non-biological byproducts (e.g., hydantoins).",
+        "reasoning": "The Phosphoro-Strecker synthesis was reported by Krishnamurthy et al. (2021, Source 21192) as a selective pathway for amino acid formation at neutral pH. DAP reacts with aldehydes and HCN to form N-phosphoroaminonitriles that selectively yield amino acids upon hydrolysis. This avoids the common side-reaction to hydantoins that plagues classical Strecker synthesis. DAP itself is a prebiotically plausible phosphorylating agent demonstrated by Gibard et al. (2018)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Oxidation of glyceraldehyde to 3-hydroxypyruvate by Fe3+",
+        "inputs": [
+          "mol_013"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "pyrite (FeS2)",
+          "TiO2 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "Fe3+ ions from pyrite dissolution; TiO2 photooxidation",
+          "aqueous": true,
+          "other": "Mildly acidic conditions (pH 4-6), dissolved Fe3+ as oxidant, UV irradiation can regenerate Fe3+ from Fe2+ via TiO2 photocatalysis"
+        },
+        "mechanism": "Glyceraldehyde undergoes two sequential two-electron oxidations mediated by Fe3+ (ferric iron). First oxidation: the aldehyde group of glyceraldehyde is oxidized to a carboxylate, yielding glyceric acid (HOCH2CHOHCOOH). Second oxidation: the secondary alcohol (C2-OH) of glyceric acid is oxidized to a ketone, yielding 3-hydroxypyruvate (HOCH2COCOOH). Fe3+ is reduced to Fe2+ in each step. UV-driven TiO2 photocatalysis regenerates Fe3+ from Fe2+, sustaining the catalytic cycle.",
+        "reasoning": "Muchowska et al. (2019, 2020) demonstrated that Fe3+ and other transition metal ions drive oxidation of organic substrates including aldehydes and alpha-hydroxy acids under prebiotic conditions. The oxidation of glyceraldehyde to hydroxypyruvate via glycerate is thermodynamically favorable with Fe3+ as oxidant. TiO2 photocatalysis for Fe3+ regeneration is supported by Ritson & Sutherland (2012). The two-step oxidation produces 3-hydroxypyruvate, a direct keto acid precursor to serine."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Reductive amination of pyruvate to alanine",
+        "inputs": [
+          "mol_015",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_016"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-100 bar)",
+          "catalyst": "FeS/FeS2 surfaces",
+          "aqueous": true,
+          "other": "NH3-rich alkaline hydrothermal fluids, H2 as reductant"
+        },
+        "mechanism": "Pyruvate first condenses with NH3 to form an imine intermediate (pyruvate imine, CH3C(=NH)COOH). The C=N bond is then reduced by H2 dissociated on the FeS/FeS2 mineral surface, yielding alanine (CH3CH(NH2)COOH). The mineral surface facilitates both the condensation and reduction steps by concentrating reactants and providing hydride equivalents.",
+        "reasoning": "Reductive amination of \u03b1-keto acids on mineral surfaces is well-established as a prebiotic amino acid synthesis route. Huber & W\u00e4chtersh\u00e4user (2003) demonstrated reductive amination of \u03b1-keto acids with NH3 in the presence of FeS. Wang et al. (2005) confirmed that pyruvate undergoes reductive amination to alanine under hydrothermal conditions. This reaction connects the central metabolic hub pyruvate to amino acid synthesis, providing the amino donor for downstream transamination reactions."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Hydrolysis of serinonitrile to serine",
+        "inputs": [
+          "mol_010",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": true,
+          "other": "Aqueous solution, mildly acidic to neutral pH (4-7), prolonged hydrolysis over hours to days. NH3 released as byproduct."
+        },
+        "mechanism": "The nitrile group (-CN) of serinonitrile undergoes stepwise hydrolysis: (1) nucleophilic addition of H2O to the nitrile carbon yields an amide intermediate (serinamide, HOCH2CH(NH2)CONH2), and (2) further hydrolysis of the amide yields the carboxylic acid product serine (HOCH2CH(NH2)COOH) with release of NH3. Both steps are acid- or base-catalyzed and proceed at moderate temperatures.",
+        "reasoning": "Nitrile hydrolysis to the corresponding carboxylic acid is the final step of the Strecker amino acid synthesis and is well-documented under prebiotic conditions. Miller (1957) and subsequent studies confirmed that aminonitrile hydrolysis proceeds readily in aqueous solution at moderate temperatures. The hydrolysis is thermodynamically favorable and kinetically accessible over prebiotic timescales (hours to days at 60-100\u00b0C). This represents the completion of the classical Strecker route to serine."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Hydrolysis of N-phosphoro-serinonitrile to serine",
+        "inputs": [
+          "mol_012",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": true,
+          "other": "Mildly basic conditions (pH 8-10), aqueous solution, phosphate released as byproduct"
+        },
+        "mechanism": "Under basic aqueous conditions, the N-phosphoroaminonitrile undergoes sequential hydrolysis: (1) the nitrile group is hydrolyzed to a carboxamide, then to a carboxylate; (2) the N-phosphoryl bond is cleaved, releasing inorganic phosphate and yielding free serine. The basic pH facilitates hydroxide attack on the nitrile carbon and promotes P-N bond hydrolysis.",
+        "reasoning": "Krishnamurthy et al. (2021, Source 21192) demonstrated that N-phosphoroaminonitriles undergo clean hydrolysis under mildly basic conditions to yield the corresponding amino acids without formation of hydantoins or other undesirable byproducts. This selectivity is a key advantage of the Phosphoro-Strecker pathway over classical Strecker synthesis. The reaction proceeds at room temperature to mild heating, consistent with prebiotic pool environments."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Reductive amination of 3-hydroxypyruvate to serine",
+        "inputs": [
+          "mol_014",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": true,
+          "other": "Aqueous prebiotic pool with dissolved NH3, mild reducing conditions (Fe2+ or H2 as reductant), pH 6-9"
+        },
+        "mechanism": "3-Hydroxypyruvate (HOCH2COCOOH) condenses with NH3 via nucleophilic attack of nitrogen on the ketone carbonyl carbon, forming an imine intermediate (HOCH2C(=NH)COOH) with loss of water. The imine C=N bond is then reduced by dissolved Fe2+ (as single-electron reductant) or H2, yielding serine (HOCH2CH(NH2)COOH). The reaction is analogous to modern enzymatic transamination/reductive amination but proceeds non-enzymatically at elevated temperature.",
+        "reasoning": "Non-enzymatic reductive amination of \u03b1-keto acids is a well-established prebiotic route to amino acids. Huber & W\u00e4chtersh\u00e4user (2003) demonstrated this for several keto acids. The specific conversion of 3-hydroxypyruvate to serine via reductive amination mirrors the biological biosynthetic pathway, consistent with the metabolic continuity hypothesis (Sources 6940, 6943). The reaction has been confirmed under mild aqueous conditions with Fe2+ or other mild reductants (Barge et al., 2019). This represents the biosynthetically relevant route to serine from its immediate keto acid precursor."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Transamination of 3-hydroxypyruvate with alanine to form serine",
+        "inputs": [
+          "mol_014",
+          "mol_016"
+        ],
+        "outputs": [
+          "mol_017",
+          "mol_015"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": true,
+          "other": "Aqueous phosphate buffer (pH 6-8), 25-30\u00b0C optimal, no enzyme required"
+        },
+        "mechanism": "Non-enzymatic transamination proceeds via a Schiff base mechanism: (1) alanine's amino group condenses with the keto group of 3-hydroxypyruvate to form a Schiff base (aldimine); (2) 1,3-prototropic shift converts the aldimine to a ketimine; (3) hydrolysis of the ketimine releases serine and pyruvate. The reaction is catalyzed by phosphate buffer, which facilitates proton transfers. Notably, pyruvate is regenerated, creating a catalytic cycle with rxn_011.",
+        "reasoning": "Non-enzymatic transamination between amino acids and \u03b1-keto acids has been experimentally demonstrated under prebiotic conditions. W\u00e4chtersh\u00e4user (1992) proposed transamination as a key prebiotic metabolic reaction. Smith & Morowitz (2004) noted that transamination of hydroxypyruvate to serine is thermodynamically favorable. The specific demonstration of non-enzymatic transamination in phosphate buffers at 25-30\u00b0C (Source 1024) supports this pathway. The regeneration of pyruvate creates an autocatalytic loop with the hydrothermal pyruvate synthesis (rxn_005) and alanine production (rxn_011)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Hydrothermal CO2 reduction \u2192 Surface Formose \u2192 Strecker \u2192 Serine",
+        "description": "CO2 is reduced to formate, then formaldehyde in hydrothermal vents. Formaldehyde undergoes the formose aldol condensation to glycolaldehyde at the surface. Strecker synthesis with HCN and NH3 yields serinonitrile, which hydrolyzes to serine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_006",
+          "rxn_008",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_008",
+          "mol_009",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Fischer-Tropsch formaldehyde \u2192 Surface Formose \u2192 Strecker \u2192 Serine",
+        "description": "CO and H2 react via Fischer-Tropsch synthesis on magnetite to produce formaldehyde. This feeds into the surface formose reaction to yield glycolaldehyde, followed by Strecker synthesis and hydrolysis to serine.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_006",
+          "rxn_008",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_009",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Hydrothermal CO2 reduction \u2192 Surface Formose \u2192 Phosphoro-Strecker \u2192 Serine",
+        "description": "Same initial hydrothermal and formose steps as P1, but glycolaldehyde enters the Phosphoro-Strecker pathway with DAP and HCN, yielding a more selective route to serine via N-phosphoro-serinonitrile.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_006",
+          "rxn_009",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_008",
+          "mol_009",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Fischer-Tropsch formaldehyde \u2192 Surface Formose \u2192 Phosphoro-Strecker \u2192 Serine",
+        "description": "Fischer-Tropsch-derived formaldehyde enters the formose reaction, producing glycolaldehyde which undergoes Phosphoro-Strecker synthesis with DAP to yield serine selectively.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_006",
+          "rxn_009",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_009",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Direct Fischer-Tropsch glycolaldehyde \u2192 Strecker \u2192 Serine",
+        "description": "Fischer-Tropsch synthesis on magnetite directly produces glycolaldehyde (C2 oxygenate) from CO + H2, bypassing the formose reaction. Glycolaldehyde enters Strecker synthesis to yield serine.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_008",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Direct Fischer-Tropsch glycolaldehyde \u2192 Phosphoro-Strecker \u2192 Serine",
+        "description": "Fischer-Tropsch glycolaldehyde feeds directly into the Phosphoro-Strecker pathway with DAP and HCN for selective serine synthesis.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_009",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Hydrothermal CO2 \u2192 Formose \u2192 Glyceraldehyde \u2192 Hydroxypyruvate \u2192 Reductive amination \u2192 Serine",
+        "description": "Formaldehyde from CO2 reduction undergoes formose and aldol reactions to produce glyceraldehyde, which is oxidized to 3-hydroxypyruvate. Reductive amination of hydroxypyruvate yields serine. This pathway parallels the modern biosynthetic route.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_006",
+          "rxn_007",
+          "rxn_010",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_008",
+          "mol_009",
+          "mol_013",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Fischer-Tropsch formaldehyde \u2192 Formose \u2192 Glyceraldehyde \u2192 Hydroxypyruvate \u2192 Reductive amination \u2192 Serine",
+        "description": "Fischer-Tropsch formaldehyde feeds into the formose and aldol condensation pathway to glyceraldehyde, which is oxidized to hydroxypyruvate and reductively aminated to serine.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_006",
+          "rxn_007",
+          "rxn_010",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_009",
+          "mol_013",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Hydrothermal CO2 \u2192 Pyruvate \u2192 Alanine + Glyceraldehyde \u2192 Hydroxypyruvate \u2192 Transamination \u2192 Serine",
+        "description": "CO2 is reduced to pyruvate in hydrothermal vents, then reductively aminated to alanine. In parallel, formaldehyde-derived glyceraldehyde is oxidized to hydroxypyruvate at the surface. Alanine and hydroxypyruvate undergo non-enzymatic transamination to yield serine and regenerate pyruvate, creating an autocatalytic loop.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_011",
+          "rxn_001",
+          "rxn_002",
+          "rxn_006",
+          "rxn_007",
+          "rxn_010",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_015",
+          "mol_016",
+          "mol_008",
+          "mol_009",
+          "mol_013",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Direct Fischer-Tropsch glycolaldehyde \u2192 Glyceraldehyde \u2192 Hydroxypyruvate \u2192 Transamination with alanine \u2192 Serine",
+        "description": "Fischer-Tropsch glycolaldehyde is directly elongated to glyceraldehyde via aldol condensation with formaldehyde, oxidized to hydroxypyruvate, and converted to serine by transamination with hydrothermal alanine. Pyruvate is regenerated in the transamination step.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_003",
+          "rxn_007",
+          "rxn_010",
+          "rxn_005",
+          "rxn_011",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_008",
+          "mol_013",
+          "mol_014",
+          "mol_015",
+          "mol_016"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_008",
+      "mol_009",
+      "mol_014",
+      "mol_015"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_008",
+        "incoming_reactions": [
+          "rxn_002",
+          "rxn_003"
+        ],
+        "outgoing_reactions": [
+          "rxn_006",
+          "rxn_007"
+        ]
+      },
+      {
+        "molecule_id": "mol_009",
+        "incoming_reactions": [
+          "rxn_004",
+          "rxn_006"
+        ],
+        "outgoing_reactions": [
+          "rxn_007",
+          "rxn_008",
+          "rxn_009"
+        ]
+      },
+      {
+        "molecule_id": "mol_014",
+        "incoming_reactions": [
+          "rxn_010"
+        ],
+        "outgoing_reactions": [
+          "rxn_014",
+          "rxn_015"
+        ]
+      },
+      {
+        "molecule_id": "mol_015",
+        "incoming_reactions": [
+          "rxn_005",
+          "rxn_015"
+        ],
+        "outgoing_reactions": [
+          "rxn_011"
+        ]
+      },
+      {
+        "molecule_id": "mol_017",
+        "incoming_reactions": [
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "outgoing_reactions": []
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Serine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_002": 0.75,
+          "rxn_006": 0.9,
+          "rxn_008": 0.9,
+          "rxn_012": 0.85
+        },
+        "chemical_feasibility": 0.85,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.92,
+        "target_achievement": 0.88,
+        "overall_confidence": 0.87,
+        "feedback": "Strong Strecker-based pathway from CO2. CO2 hydrogenation to formate on greigite is well-supported. Formate reduction to formaldehyde on native iron is thermodynamically challenging but plausible. Formose aldol and Strecker synthesis are classic prebiotic reactions strongly supported by literature (Sources 15634, 6942). Environmental progression H\u2192H\u2192S\u2192S\u2192B is ideal.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_002"
+        ],
+        "suggestions": [
+          "Specify conditions for formate reduction (e.g., temperature, pH). Consider whether awaruite or other Ni-Fe minerals might be more effective catalysts."
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_003": 0.85,
+          "rxn_006": 0.9,
+          "rxn_008": 0.9,
+          "rxn_012": 0.85
+        },
+        "chemical_feasibility": 0.87,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.88,
+        "overall_confidence": 0.88,
+        "feedback": "Efficient 4-step pathway. Fischer-Tropsch synthesis of formaldehyde is well-documented. Avoids the challenging formate reduction step. The Strecker route to serine from glycolaldehyde is the most literature-supported pathway. Should specify mineral catalyst for FTT (e.g., Ni-Fe alloy, magnetite).",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Specify mineral catalyst for rxn_003 (e.g., Ni-Fe alloy or native iron)."
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_002": 0.75,
+          "rxn_006": 0.9,
+          "rxn_009": 0.85,
+          "rxn_013": 0.8
+        },
+        "chemical_feasibility": 0.83,
+        "pathway_coherence": 0.86,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.85,
+        "overall_confidence": 0.85,
+        "feedback": "Phosphoro-Strecker variant adds selectivity according to literature (Source 21192). DAP as a reagent is prebiotically available but adds complexity. Hydrolysis of N-phosphoro-serinonitrile to serine is plausible but less well-characterized experimentally than simple nitrile hydrolysis.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Provide more detail on conditions for rxn_013 hydrolysis. Clarify DAP availability in prebiotic context."
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_003": 0.85,
+          "rxn_006": 0.9,
+          "rxn_009": 0.85,
+          "rxn_013": 0.8
+        },
+        "chemical_feasibility": 0.85,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.85,
+        "overall_confidence": 0.86,
+        "feedback": "Cleaner version of P3 bypassing formate step. Good literature support for Phosphoro-Strecker. The DAP requirement is a notable constraint but justified by recent prebiotic phosphorylation studies.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Specify mineral catalyst for FTT synthesis in rxn_003."
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_004": 0.8,
+          "rxn_008": 0.9,
+          "rxn_012": 0.85
+        },
+        "chemical_feasibility": 0.85,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.88,
+        "overall_confidence": 0.88,
+        "feedback": "Most elegant pathway - only 3 steps. Direct FTT synthesis of glycolaldehyde is experimentally demonstrated but with moderate selectivity. Strecker synthesis of serinonitrile and subsequent hydrolysis are well-established. The brevity of this pathway is a strength. H\u2192S\u2192B progression is clean.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Specify mineral catalyst and conditions for FTT glycolaldehyde synthesis (rxn_004). Consider yields and selectivity issues."
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_004": 0.8,
+          "rxn_009": 0.85,
+          "rxn_013": 0.8
+        },
+        "chemical_feasibility": 0.82,
+        "pathway_coherence": 0.87,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.85,
+        "overall_confidence": 0.85,
+        "feedback": "Short 3-step pathway using Phosphoro-Strecker. Shares strengths with P5 but adds DAP complexity. Literature-supported selectivity advantage may offset the additional reagent requirement.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Clarify whether DAP and HCN co-availability is realistic on mineral surfaces."
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_002": 0.75,
+          "rxn_006": 0.9,
+          "rxn_007": 0.9,
+          "rxn_010": 0.7,
+          "rxn_014": 0.8
+        },
+        "chemical_feasibility": 0.78,
+        "pathway_coherence": 0.82,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.82,
+        "overall_confidence": 0.82,
+        "feedback": "Longer pathway through glyceraldehyde and 3-hydroxypyruvate. The oxidation of glyceraldehyde to 3-hydroxypyruvate (rxn_010) is the weakest link - requires double oxidation (aldehyde to carboxylic acid and alcohol to ketone) by Fe3+. While Fe3+ is a competent oxidant, the selectivity for 3-hydroxypyruvate specifically is questionable. Reductive amination of 3-hydroxypyruvate to serine is plausible.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_010"
+        ],
+        "suggestions": [
+          "Provide experimental evidence for selective glyceraldehyde oxidation to 3-hydroxypyruvate. Consider whether this occurs stepwise or in one pot. May need to specify UV or specific mineral surfaces."
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_003": 0.85,
+          "rxn_006": 0.9,
+          "rxn_007": 0.9,
+          "rxn_010": 0.7,
+          "rxn_014": 0.8
+        },
+        "chemical_feasibility": 0.8,
+        "pathway_coherence": 0.84,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.82,
+        "overall_confidence": 0.83,
+        "feedback": "Cleaner version of P7 using FTT formaldehyde. Same concern about glyceraldehyde to 3-hydroxypyruvate oxidation selectivity. Otherwise chemically reasonable.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_010"
+        ],
+        "suggestions": [
+          "Address selectivity of Fe3+ oxidation of glyceraldehyde."
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_005": 0.8,
+          "rxn_011": 0.85,
+          "rxn_001": 0.9,
+          "rxn_002": 0.75,
+          "rxn_006": 0.9,
+          "rxn_007": 0.9,
+          "rxn_010": 0.7,
+          "rxn_015": 0.8
+        },
+        "chemical_feasibility": 0.78,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.82,
+        "overall_confidence": 0.8,
+        "feedback": "Most complex pathway (8 steps) showing convergent synthesis. Transamination of 3-hydroxypyruvate with alanine is supported by literature (Source 1024, non-enzymatic transamination at 25-30\u00b0C). Convergence of pyruvate\u2192alanine branch with glyceraldehyde\u2192hydroxypyruvate branch is elegant and prebiotically meaningful, linking to modern biochemistry's transamination pathways (Source 6940). The length and complexity reduce overall confidence.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_010"
+        ],
+        "suggestions": [
+          "Consider whether the transamination requires phosphate buffer catalyst. Specify conditions for non-enzymatic transamination."
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_004": 0.8,
+          "rxn_007": 0.9,
+          "rxn_010": 0.7,
+          "rxn_015": 0.8,
+          "rxn_005": 0.8,
+          "rxn_011": 0.85
+        },
+        "chemical_feasibility": 0.78,
+        "pathway_coherence": 0.76,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.8,
+        "overall_confidence": 0.79,
+        "feedback": "Long convergent pathway. rxn_007 requires formaldehyde + glycolaldehyde, but the pathway description implies only glycolaldehyde from FTT. An additional formaldehyde source (e.g., rxn_003) is implicitly needed but not explicitly stated, creating a gap in pathway description. The convergent transamination step is well-motivated by literature. The glyceraldehyde oxidation concern persists.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_010",
+          "rxn_007"
+        ],
+        "suggestions": [
+          "Explicitly include formaldehyde source in pathway description. rxn_007 requires both formaldehyde and glycolaldehyde. Address glyceraldehyde oxidation selectivity."
+        ]
+      }
+    ],
+    "best_pathway_id": "P5",
+    "overall_confidence": 0.86,
+    "network_feedback": "This is a well-constructed synthesis network for prebiotic serine with excellent topology, strong literature alignment, and proper environmental progression. Key strengths: (1) Multiple validated pathways including the literature-supported Strecker and Phosphoro-Strecker routes, (2) Four well-connected hub molecules creating genuine redundancy, (3) Clear Hydrothermal\u2192Surface\u2192Biochemical environmental flow, (4) Convergent architecture with the transamination pathway (P9/P10) connecting to modern biochemistry. The network correctly identifies glycolaldehyde (HOCH\u2082CHO) as the key aldehyde for serine's Strecker synthesis, consistent with Source 15634. The Phosphoro-Strecker variant (Source 21192) adds selectivity. Areas for improvement: (1) rxn_010 (glyceraldehyde\u21923-hydroxypyruvate oxidation by Fe3+) needs better justification for selectivity - this double oxidation is the weakest chemical step, (2) Some hydrothermal and surface reactions lack explicit mineral catalyst specifications (rxn_003, rxn_004 should name the FTT catalyst), (3) P10 has an implicit dependency on formaldehyde not captured in the pathway description, (4) The network could benefit from inclusion of glyoxylate as an alternative intermediate (mentioned in literature). Overall, this is an approved network with 9 of 10 pathways meeting confidence thresholds.",
+    "approved": true,
+    "hub_quality": 0.91,
+    "convergence_quality": 0.89
+  },
+  "success": true,
+  "attempts": 3,
+  "notes": "Max retries reached. Best confidence: 0.860"
+}

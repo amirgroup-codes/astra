@@ -1,0 +1,956 @@
+{
+  "target_molecule": "Tryptophan",
+  "network": {
+    "target_molecule": "Tryptophan",
+    "overall_strategy": "This network models prebiotic tryptophan as a convergence problem centered on the unresolved indole bottleneck. It integrates: (i) hydrothermal serpentinization chemistry generating H2, NH3, formate, pyruvate, alanine, and a speculative but literature-grounded Fe-rich saponite nanoreactor route to indole/tryptophan; (ii) surface chemistry generating HCN, formaldehyde-derived sugars, glyceraldehyde, serine, and aminonitrile intermediates under wet-dry/UV conditions; and (iii) biochemical/prebiotic assembly steps that connect indole, serine, indole-3-acetaldehyde, aminonitriles, and alanine through speculative condensation, Strecker-like, transamination, and confinement-assisted routes. Because no complete laboratory prebiotic synthesis of tryptophan is known, several terminal routes are explicitly marked speculative and are included only to satisfy network completeness while remaining consistent with the literature review.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_004",
+        "formula": "CH2O2",
+        "iupac_name": "methanoic acid",
+        "common_name": "formate/formic acid",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_005",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvate",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_006",
+        "formula": "C3H7NO2",
+        "iupac_name": "2-aminopropanoic acid",
+        "common_name": "alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_008",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C3H6O3",
+        "iupac_name": "2,3-dihydroxypropanal",
+        "common_name": "glyceraldehyde",
+        "inchi": "InChI=1S/C3H6O3/c4-1-3(6)2-5/h1,3,5-6H,2H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C3H7NO3",
+        "iupac_name": "2-amino-3-hydroxypropanoic acid",
+        "common_name": "serine",
+        "inchi": "InChI=1S/C3H7NO3/c4-2(1-5)3(6)7/h2,5H,1,4H2,(H,6,7)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C2H2",
+        "iupac_name": "ethyne",
+        "common_name": "acetylene",
+        "inchi": "InChI=1S/C2H2/c1-2/h1-2H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_012",
+        "formula": "C4H5N",
+        "iupac_name": "1H-pyrrole",
+        "common_name": "pyrrole",
+        "inchi": "InChI=1S/C4H5N/c1-2-4-5-3-1/h1-5H",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C8H7N",
+        "iupac_name": "1H-benzo[b]pyrrole",
+        "common_name": "indole",
+        "inchi": "InChI=1S/C8H7N/c1-2-4-8-7(3-1)5-6-9-8/h1-6,9H",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C10H9NO",
+        "iupac_name": "2-(1H-indol-3-yl)ethanal",
+        "common_name": "indole-3-acetaldehyde",
+        "inchi": "InChI=1S/C10H9NO/c12-6-5-8-7-11-10-4-2-1-3-9(8)10/h1-4,6-7,11H,5H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C11H11N3",
+        "iupac_name": "2-amino-3-(1H-indol-3-yl)propanenitrile",
+        "common_name": "tryptophan aminonitrile",
+        "inchi": "InChI=1S/C11H11N3/c12-6-8(13)5-9-7-14-11-4-2-1-3-10(9)11/h1-4,7-8,14H,5,13H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C11H12N2O2",
+        "iupac_name": "2-amino-3-(1H-indol-3-yl)propanoic acid",
+        "common_name": "tryptophan",
+        "inchi": "InChI=1S/C11H12N2O2/c12-9(11(14)15)5-7-6-13-10-4-2-1-3-8(7)10/h1-4,6,9,13H,5,12H2,(H,14,15)",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Serpentinization-driven generation of hydrogen and ammonia feedstock",
+        "inputs": [
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_002",
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "mackinawite (FeS)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "313-363K",
+          "pressure": "high",
+          "catalyst": "mackinawite (FeS), greigite (Fe3S4)",
+          "aqueous": "true",
+          "other": "alkaline vent setting, pH 9-11, serpentinization of olivine-rich rocks; NH3 included as reported product in M\u00e9nez et al. serpentinization interpretation"
+        },
+        "mechanism": "Rock-water serpentinization creates reducing hydrothermal fluids rich in H2 and associated reduced nitrogen species/ammonia available for downstream synthesis.",
+        "reasoning": "Alkaline hydrothermal vents of Lost City type generate H2 during serpentinization and provide the reducing setting emphasized for abiotic amino-acid formation; M\u00e9nez et al. specifically proposed H2 and NH3 generation in serpentinization environments linked to abiotic tryptophan occurrence. Mackinawite/greigite are appropriate vent-wall minerals in early Fe2+-rich systems (M\u00e9nez et al., 2018; Proskurowski et al., 2008; Russell & Hall, 1997; Martin & Russell, 2007; Santos-Carballal et al., 2018)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "CO2 reduction to formate on iron-sulfur vent minerals",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "348-400K",
+          "pressure": "high",
+          "catalyst": "greigite (Fe3S4)",
+          "aqueous": "true",
+          "other": "alkaline, H2-rich vent pores"
+        },
+        "mechanism": "Mineral-surface hydrogenation of CO2 yields one-carbon reduced products, especially formate, on Fe-S/Fe0 catalytic surfaces.",
+        "reasoning": "Reduction of CO2 to formate on greigite-like vent minerals is a standard hydrothermal carbon-fixation motif in iron-sulfur world scenarios and fits the required framework; such reduced C1 products connect hydrothermal carbon fixation to later surface chemistry (White et al., 2015; Russell & Hall, 1997; Martin & Russell, 2007)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Hydrothermal pyruvate synthesis from reduced carbon",
+        "inputs": [
+          "mol_001",
+          "mol_002",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_005"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "magnetite (Fe3O4), greigite (Fe3S4)",
+          "aqueous": "true",
+          "other": "subseafloor alkaline vent microcompartments"
+        },
+        "mechanism": "Progressive reduction and C-C bond formation from CO2-derived one-carbon intermediates on Fe mineral surfaces generate alpha-keto acid products such as pyruvate.",
+        "reasoning": "The network uses the hydrothermal pyruvate synthesis route specified in the framework because alpha-keto acids are central metabolic hubs and feed reductive amination/transamination chemistry. This is consistent with vent-based carbon fixation logic and thermodynamic favorability of amino acid precursor formation at moderate hydrothermal temperatures (Amend & Shock, 1998; White et al., 2015)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Mineral-catalyzed reductive amination of pyruvate to alanine",
+        "inputs": [
+          "mol_005",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "pyrite (FeS2), greigite (Fe3S4)",
+          "aqueous": "true",
+          "other": "anoxic, reducing hydrothermal pore waters"
+        },
+        "mechanism": "Pyruvate forms an imine/iminium with ammonia followed by mineral-assisted reduction to alanine.",
+        "reasoning": "Reductive amination of alpha-keto acids on Fe-S minerals is a canonical prebiotic route to amino acids, and pyrite photoredox/reductive amination chemistry supports the plausibility of keto-acid to amino-acid conversion even though specific alanine-from-pyruvate under these exact vent conditions remains a generalized network step (Nature Communications, 2024; Amend & Shock, 1998)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Surface photochemical generation of HCN feedstock",
+        "inputs": [
+          "mol_008",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "sulfide minerals (stibnite/molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 (anatase/rutile)",
+          "aqueous": "true",
+          "other": "UV-irradiated evaporitic pools under anoxic atmosphere; included as a connecting surface HCN source"
+        },
+        "mechanism": "UV-driven surface photochemistry generates cyanide-bearing species from simple carbonyl and reduced nitrogen feedstocks.",
+        "reasoning": "HCN is required by Strecker and cyanosulfidic chemistry and is a standard prebiotic surface intermediate. The deep review notes HCN oligomerization and cyanosulfidic networks as experimentally established for simpler products, though not for tryptophan; this reaction is therefore a necessary connecting step rather than a tryptophan-specific literature claim (Ferris et al., 1978; Patel et al., 2015; Saladino et al., 2012)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Formose-type generation of glyceraldehyde from formaldehyde",
+        "inputs": [
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_008",
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "borate minerals (colemanite/ulexite)",
+          "aqueous": "true",
+          "other": "wet-dry cycling in evaporitic pools; borate stabilizes sugars and glyceraldehyde"
+        },
+        "mechanism": "Reduced C1 carbon feeds surface carbonyl chemistry, yielding formaldehyde and then higher sugars via aldol/formose processes with borate stabilization.",
+        "reasoning": "The report identifies glyceraldehyde as a plausible serine precursor produced through formose chemistry from formaldehyde, with borate minerals stabilizing sugars in surface settings. Formose selectivity is poor, but glyceraldehyde is an accepted node in prebiotic sugar chemistry (Butlerow, 1861; Breslow, 1959; Li et al., 2024)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Strecker-type synthesis of serine from glyceraldehyde",
+        "inputs": [
+          "mol_009",
+          "mol_007",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite",
+          "aqueous": "true",
+          "other": "evaporitic or geothermal pools with intermittent concentration; hydrolysis of aminonitrile implied"
+        },
+        "mechanism": "Glyceraldehyde reacts with NH3 and HCN to an alpha-aminonitrile, which hydrolyzes to serine during aqueous cycling.",
+        "reasoning": "The literature review explicitly states that serine can form prebiotically by Strecker synthesis from glycolaldehyde or glyceraldehyde plus HCN and NH3. This provides the most direct literature-supported route to the serine co-substrate needed for speculative tryptophan assembly (Li et al., 2024; Kirschning, 2022; Miller, 1953; Johnson et al., 2008)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Hydrothermal synthesis of pyrrole from acetylene and ammonia",
+        "inputs": [
+          "mol_011",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "mackinawite (FeS)",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "378K",
+          "pressure": "moderate",
+          "catalyst": "NiS/CoS-like sulfide catalysis represented here within FeS-rich vent mineral assemblages",
+          "aqueous": "true",
+          "other": "anaerobic aqueous volcanic-hydrothermal conditions; 105C"
+        },
+        "mechanism": "Acetylene and ammonia undergo sulfide-catalyzed heterocycle formation to yield pyrrole.",
+        "reasoning": "Pyrrole formation from acetylene and ammonia under aqueous anaerobic hydrothermal conditions at 105C is directly supported experimentally, although the original catalysts were NiS and CoS. Because the framework requires specified hydrothermal minerals from the Fe-S set, FeS/FeS2 are listed as the vent mineral agents while the reasoning notes the literature precedent and the broader iron-sulfur-world compatibility (Seel et al., 2021; Russell & Hall, 1997)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Fe-rich saponite nanoreactor formation of indole",
+        "inputs": [
+          "mol_002",
+          "mol_003",
+          "mol_001",
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "313-473K",
+          "pressure": "high",
+          "catalyst": "Fe2+/Fe3+-rich saponite nanopores with associated Fe-sulfide vent minerals",
+          "aqueous": "true",
+          "other": "Lost City-type alkaline serpentinization environment, strongly reducing, moderate hydrothermal temperatures <200C"
+        },
+        "mechanism": "Within Fe-rich clay nanopores, reduced gases and inorganic carbon are proposed to build the indole scaffold; pyrrole is included here as a plausible connected heterocyclic precursor feeding the unresolved annulation bottleneck.",
+        "reasoning": "M\u00e9nez et al. detected indole together with tryptophan, skatole, and hydroxyanthranilic acid in serpentinized oceanic lithosphere and proposed indole formation from H2, NH3, and inorganic carbon in Fe-rich saponite nanoreactors. The exact Earth-prebiotic mechanism is unresolved, and no direct pyrrole-to-indole conversion has been demonstrated; therefore this step is literature-grounded but mechanistically speculative at the detailed level (M\u00e9nez et al., 2018; Kaiser et al., 2024; Seel et al., 2021)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Confinement-assisted direct condensation of indole with serine to tryptophan",
+        "inputs": [
+          "mol_013",
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_016"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "320-370K",
+          "pressure": "1 atm",
+          "catalyst": "none established; confinement in mineral or protocell interfaces",
+          "aqueous": "true",
+          "other": "geothermal cycling and compartmentalization to retain hydrophobic indole"
+        },
+        "mechanism": "Serine provides the amino-acid backbone and indole acts as nucleophilic aromatic partner, mimicking the net transformation of biological tryptophan synthase but without enzymatic channeling.",
+        "reasoning": "This route is explicitly speculative. The literature review identifies indole + serine as the modern biosynthetic logic, but emphasizes that no prebiotic condensation has been demonstrated and that indole retention is a major problem outside enzyme tunnels. It is included as a necessary biochemical connection consistent with the review's proposed experimental direction of testing indole in warm aqueous pools with serine and minerals (Palazzolo & Bhatt, 2020; Kirschning, 2022; M\u00e9nez et al., 2018)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Strecker-like conversion of indole-3-acetaldehyde to tryptophan aminonitrile",
+        "inputs": [
+          "mol_014",
+          "mol_007",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "none established",
+          "aqueous": "true",
+          "other": "mild aqueous pool chemistry; alpha-aminonitrile formation"
+        },
+        "mechanism": "Indole-3-acetaldehyde undergoes Strecker addition with HCN and NH3 to give the alpha-aminonitrile precursor to tryptophan.",
+        "reasoning": "The deep review identifies this as the classic theoretically sound but experimentally unverified route to tryptophan: indole-3-acetaldehyde + HCN + NH3 gives an aminonitrile that can hydrolyze to tryptophan. It must be labeled speculative because no prebiotic source of indole-3-acetaldehyde is known (Kirschning, 2022)."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Hydrolysis of tryptophan aminonitrile to tryptophan",
+        "inputs": [
+          "mol_015"
+        ],
+        "outputs": [
+          "mol_016"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "none established",
+          "aqueous": "true",
+          "other": "prolonged aqueous hydrolysis during geothermal cycling"
+        },
+        "mechanism": "Nitrile hydration and hydrolysis convert the aminonitrile to the alpha-amino acid tryptophan.",
+        "reasoning": "Hydrolysis of Strecker aminonitriles to amino acids is standard prebiotic logic, and for tryptophan this step is accepted in principle even though the overall route remains unproven due to the missing aldehyde precursor. Included here to complete the literature-discussed Strecker branch (Kirschning, 2022; Ferris et al., 1978)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "M\u00e9nez hydrothermal direct nanoreactor route",
+        "description": "Serpentinization generates H2/NH3; Fe-rich saponite-associated hydrothermal chemistry yields indole, followed by direct confinement-assisted indole-serine coupling to tryptophan.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_009",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_013",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Hydrothermal carbon fixation to serine then direct condensation",
+        "description": "CO2 reduction produces formate, formose chemistry yields glyceraldehyde, Strecker chemistry yields serine, which then condenses with hydrothermal indole to give tryptophan.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_006",
+          "rxn_007",
+          "rxn_009",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_009",
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Pyrrole-assisted hydrothermal indole route",
+        "description": "Acetylene and ammonia form pyrrole in hydrothermal sulfide systems; pyrrole feeds the unresolved annulation step to indole in Fe-rich saponite nanoreactors, then indole couples with serine.",
+        "reaction_sequence": [
+          "rxn_008",
+          "rxn_009",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_013",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Hydrothermal pyruvate-alanine branch feeding direct tryptophan formation",
+        "description": "Hydrothermal carbon fixation generates pyruvate and alanine as amino-donor/backbone components while indole forms in parallel; alanine-rich pools are taken as support for side-chain installation in Fe-saponite settings ending in tryptophan.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_009",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_006",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Surface HCN-serine route with hydrothermal indole input",
+        "description": "Surface photochemistry generates HCN; hydrothermal carbon feeds formose sugar chemistry to glyceraldehyde; Strecker serine then reacts with hydrothermal indole to furnish tryptophan.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_009",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_009",
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Strecker route from indole-3-acetaldehyde aminonitrile",
+        "description": "A literature-theoretical pathway in which indole-3-acetaldehyde undergoes Strecker chemistry to a tryptophan aminonitrile, followed by hydrolysis to tryptophan.",
+        "reaction_sequence": [
+          "rxn_011",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_014",
+          "mol_015"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Hydrothermal indole plus surface HCN-assisted aminonitrile route",
+        "description": "Hydrothermal indole formation is combined with surface cyanide chemistry through the indole-3-acetaldehyde node, giving tryptophan via aminonitrile hydrolysis.",
+        "reaction_sequence": [
+          "rxn_009",
+          "rxn_005",
+          "rxn_011",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_013",
+          "mol_007",
+          "mol_014",
+          "mol_015"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Pyrrole-to-indole coupled to aminonitrile branch",
+        "description": "Acetylene-derived pyrrole feeds indole production in hydrothermal nanoreactors; downstream conversion through the indole-3-acetaldehyde aminonitrile branch gives tryptophan.",
+        "reaction_sequence": [
+          "rxn_008",
+          "rxn_009",
+          "rxn_011",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_013",
+          "mol_014",
+          "mol_015"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Integrated hydrothermal-surface-biochemical route",
+        "description": "This fully cross-environment pathway begins with vent carbon fixation to formate and pyruvate, builds serine at the surface through glyceraldehyde and HCN, and terminates by direct indole-serine condensation.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_006",
+          "rxn_005",
+          "rxn_007",
+          "rxn_009",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_005",
+          "mol_007",
+          "mol_009",
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Dual-route convergence to tryptophan",
+        "description": "Two distinct final biochemical solutions are represented for the same precursor pool: direct indole-serine coupling and Strecker hydrolysis from indole-3-acetaldehyde, both ultimately converging on tryptophan.",
+        "reaction_sequence": [
+          "rxn_009",
+          "rxn_007",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_013",
+          "mol_010",
+          "mol_014",
+          "mol_015"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_007",
+      "mol_009",
+      "mol_010",
+      "mol_013"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [
+          "rxn_002"
+        ],
+        "outgoing_reactions": [
+          "rxn_003",
+          "rxn_006"
+        ]
+      },
+      {
+        "molecule_id": "mol_007",
+        "incoming_reactions": [
+          "rxn_005"
+        ],
+        "outgoing_reactions": [
+          "rxn_007",
+          "rxn_011"
+        ]
+      },
+      {
+        "molecule_id": "mol_009",
+        "incoming_reactions": [
+          "rxn_006"
+        ],
+        "outgoing_reactions": [
+          "rxn_007"
+        ]
+      },
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_007"
+        ],
+        "outgoing_reactions": [
+          "rxn_010"
+        ]
+      },
+      {
+        "molecule_id": "mol_013",
+        "incoming_reactions": [
+          "rxn_009"
+        ],
+        "outgoing_reactions": [
+          "rxn_010"
+        ]
+      },
+      {
+        "molecule_id": "mol_016",
+        "incoming_reactions": [
+          "rxn_010",
+          "rxn_012"
+        ],
+        "outgoing_reactions": []
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Tryptophan",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_001": 0.1,
+          "rxn_009": 0.35,
+          "rxn_010": 0.1
+        },
+        "chemical_feasibility": 0.18,
+        "pathway_coherence": 0.32,
+        "environmental_progression": 0.55,
+        "target_achievement": 0.2,
+        "overall_confidence": 0.24,
+        "feedback": "This pathway loosely reflects the M\u00e9nez hydrothermal hypothesis but is chemically underdefined and partly inconsistent with the literature. rxn_001 is chemically incorrect as written because serpentinization does not produce H2 and NH3 from CO2 alone. rxn_009 is aligned in spirit with M\u00e9nez et al. 2018 in invoking Fe-rich saponite and hydrothermal indole/tryptophan-related chemistry, but the explicit conversion from CO2/H2/NH3/pyrrole to indole is not experimentally demonstrated. rxn_010, direct condensation of indole with serine to tryptophan, is not supported by prebiotic evidence and ignores the mechanistic complexity highlighted by tryptophan synthase substrate channeling literature.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_001",
+          "rxn_009",
+          "rxn_010"
+        ],
+        "suggestions": [
+          "Rewrite serpentinization as rock-water reaction generating H2, with NH3 supplied independently or from nitrate/nitrite reduction rather than from CO2.",
+          "Distinguish clearly between the M\u00e9nez natural-occurrence inference and a lab-demonstrated synthetic step; mark indole formation as highly speculative.",
+          "Replace direct indole + serine condensation with a better-justified branch such as indole-3-acetaldehyde aminonitrile formation followed by hydrolysis, while still noting its speculative status."
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_002": 0.8,
+          "rxn_003": 0.55,
+          "rxn_006": 0.2,
+          "rxn_007": 0.45,
+          "rxn_010": 0.1
+        },
+        "chemical_feasibility": 0.42,
+        "pathway_coherence": 0.48,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.18,
+        "overall_confidence": 0.4,
+        "feedback": "The hydrothermal-to-surface-to-biochemical progression is conceptually good, and formate/pyruvate/serine are reasonable prebiotic intermediates. However, rxn_006 is poorly specified and chemically problematic because formate does not directly generate both formaldehyde and glyceraldehyde in a single formose-type step. rxn_007 is plausible as a Strecker-type route to serine from glyceraldehyde, HCN, and NH3, though actual serine synthesis would pass through an aminonitrile and hydrolysis. The terminal step rxn_010 remains the major weakness and prevents convincing target achievement.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_006",
+          "rxn_010"
+        ],
+        "suggestions": [
+          "Split rxn_006 into separate reductions and aldol/formose steps, likely formaldehyde formation first, then sugar homologation to glycolaldehyde/glyceraldehyde.",
+          "Introduce serine aminonitrile explicitly if Strecker chemistry is intended.",
+          "Avoid claiming direct prebiotic indole-serine coupling without strong caveats and a confinement catalyst/mechanism."
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_008": 0.8,
+          "rxn_009": 0.35,
+          "rxn_010": 0.1
+        },
+        "chemical_feasibility": 0.32,
+        "pathway_coherence": 0.45,
+        "environmental_progression": 0.62,
+        "target_achievement": 0.18,
+        "overall_confidence": 0.31,
+        "feedback": "This is one of the better literature-grounded indole branches because pyrrole from acetylene and ammonia has experimental support under sulfide catalysis. However, the network's hydrothermal pyrrole step lacks the NiS/CoS context emphasized in the literature and instead jumps to an unsupported pyrrole-to-indole conversion. The final tryptophan-forming condensation is again the critical failure.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_009",
+          "rxn_010"
+        ],
+        "suggestions": [
+          "Tie rxn_008 to Seel et al. 2021-style NiS/CoS conditions or explicitly note if the actual network omitted required minerals.",
+          "Treat pyrrole-to-indole annulation as an unresolved bottleneck rather than a productive step.",
+          "Use this pathway as a precursor-supply route to indole, not as a validated route to tryptophan."
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_002": 0.8,
+          "rxn_003": 0.55,
+          "rxn_004": 0.75,
+          "rxn_009": 0.35,
+          "rxn_010": 0.1
+        },
+        "chemical_feasibility": 0.5,
+        "pathway_coherence": 0.46,
+        "environmental_progression": 0.74,
+        "target_achievement": 0.18,
+        "overall_confidence": 0.43,
+        "feedback": "The carbon-fixation-to-alanine branch is plausible and reasonably aligned with hydrothermal literature on reduced carbon chemistry and reductive amination. However, alanine does not actually feed the stated direct tryptophan formation reaction, so the pathway is topologically present but chemically incoherent near the end. The pathway also depends on the unsupported indole and direct condensation steps.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_009",
+          "rxn_010"
+        ],
+        "suggestions": [
+          "Only count alanine as relevant if it is used in a side-chain installation step consistent with the M\u00e9nez Friedel-Crafts concept.",
+          "Add a specific alanine-derived electrophile if invoking alanyl side-chain attachment.",
+          "Clarify whether this pathway is evidence-based or only an analogical extension from M\u00e9nez et al. 2018."
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_005": 0.15,
+          "rxn_006": 0.2,
+          "rxn_007": 0.45,
+          "rxn_009": 0.35,
+          "rxn_010": 0.1
+        },
+        "chemical_feasibility": 0.24,
+        "pathway_coherence": 0.42,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.18,
+        "overall_confidence": 0.29,
+        "feedback": "The cross-environment logic is good, but the chemistry is weak. rxn_005 is not a credible route to HCN from formaldehyde and ammonia under generic surface photochemistry. rxn_006 again collapses multiple sugar-forming steps into an implausible single reaction. Serine formation is somewhat plausible, but the target step remains unsupported. This pathway overextends cyanide chemistry beyond what the literature supports for aromatic amino acids.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_005",
+          "rxn_006",
+          "rxn_010"
+        ],
+        "suggestions": [
+          "Source HCN from atmospheric photochemistry or geochemical cyanide reservoirs rather than formaldehyde + ammonia.",
+          "Use better-established cyanosulfidic or Strecker-compatible intermediates.",
+          "Acknowledge that Sutherland-type chemistry has not produced tryptophan or other aromatic amino acids."
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_011": 0.55,
+          "rxn_012": 0.85
+        },
+        "chemical_feasibility": 0.65,
+        "pathway_coherence": 0.72,
+        "environmental_progression": 0.58,
+        "target_achievement": 0.62,
+        "overall_confidence": 0.61,
+        "feedback": "This is the strongest local route in the network. A Strecker-like conversion of indole-3-acetaldehyde to tryptophan aminonitrile followed by hydrolysis is chemically sensible and specifically noted in the literature as theoretically sound. The limitation is that the precursor indole-3-acetaldehyde has no established prebiotic source in the network as summarized, so the pathway is coherent only conditionally.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_011"
+        ],
+        "suggestions": [
+          "Add a plausible source for indole-3-acetaldehyde or clearly mark this as a conditional salvage pathway.",
+          "Introduce the corresponding aminonitrile hydrolysis conditions explicitly if evaluating full target realization.",
+          "Consider this the best-supported terminal chemistry, but not a complete origin route."
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_009": 0.35,
+          "rxn_005": 0.15,
+          "rxn_011": 0.55,
+          "rxn_012": 0.85
+        },
+        "chemical_feasibility": 0.42,
+        "pathway_coherence": 0.5,
+        "environmental_progression": 0.76,
+        "target_achievement": 0.48,
+        "overall_confidence": 0.44,
+        "feedback": "This integrated aminonitrile route is better than the direct condensation route, but it still inherits two major unresolved inputs: HCN generation is poorly represented, and indole formation is speculative. The final two steps are sensible; the earlier supply chemistry is not sufficiently grounded.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_005",
+          "rxn_009"
+        ],
+        "suggestions": [
+          "Replace rxn_005 with a geochemically credible HCN source.",
+          "Use exogenous indole delivery from Kaiser-type interstellar chemistry if the aim is literature alignment.",
+          "Keep the aminonitrile branch as the preferred terminal assembly route."
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_008": 0.8,
+          "rxn_009": 0.35,
+          "rxn_011": 0.55,
+          "rxn_012": 0.85
+        },
+        "chemical_feasibility": 0.56,
+        "pathway_coherence": 0.59,
+        "environmental_progression": 0.7,
+        "target_achievement": 0.5,
+        "overall_confidence": 0.52,
+        "feedback": "This is one of the more defensible pathways because pyrrole formation has support and the aminonitrile-to-tryptophan conversion is plausible. The main weakness is the unsupported annulation from pyrrole to indole, exactly the bottleneck identified in the literature. Overall, this pathway is scientifically honest if treated as promising but unresolved.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_009"
+        ],
+        "suggestions": [
+          "Flag the pyrrole-to-indole step as the key open experimental gap rather than treating it as established.",
+          "If possible, insert an exogenous indole input branch instead of forcing terrestrial annulation.",
+          "Retain the aminonitrile hydrolysis branch for the terminal steps."
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_002": 0.8,
+          "rxn_006": 0.2,
+          "rxn_007": 0.45,
+          "rxn_008": 0.8,
+          "rxn_009": 0.35,
+          "rxn_005": 0.15,
+          "rxn_011": 0.55,
+          "rxn_012": 0.85
+        },
+        "chemical_feasibility": 0.48,
+        "pathway_coherence": 0.63,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.5,
+        "overall_confidence": 0.5,
+        "feedback": "This is the most complete integrated network pathway and best demonstrates hydrothermal-surface-biochemical connectivity. Topologically it is strong. Chemically, however, it still relies on weak HCN sourcing, oversimplified sugar chemistry, and the unresolved indole bottleneck. It is a good systems-level sketch but not a high-confidence synthesis route.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_005",
+          "rxn_006",
+          "rxn_009"
+        ],
+        "suggestions": [
+          "Preserve this as the main systems pathway but downgrade unsupported reactions more explicitly.",
+          "Improve environmental transfer logic by including exogenous indole delivery or natural concentration/confinement steps.",
+          "Separate well-supported precursor generation from speculative aromatic assembly."
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_010": 0.1,
+          "rxn_011": 0.55,
+          "rxn_012": 0.85,
+          "rxn_009": 0.35,
+          "rxn_007": 0.45
+        },
+        "chemical_feasibility": 0.46,
+        "pathway_coherence": 0.67,
+        "environmental_progression": 0.72,
+        "target_achievement": 0.52,
+        "overall_confidence": 0.49,
+        "feedback": "The dual-route comparison is valuable because it makes clear that the aminonitrile branch is superior to direct condensation. The pathway is coherent as a convergence analysis, but one branch is very weak and drags down confidence. The best part of this pathway is its recognition of alternative terminal strategies.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_010",
+          "rxn_009"
+        ],
+        "suggestions": [
+          "Favor the aminonitrile route over direct condensation in the final network interpretation.",
+          "Do not present direct indole + serine coupling as competitive with the Strecker-like branch.",
+          "Explicitly rank the two routes by evidential support."
+        ]
+      }
+    ],
+    "best_pathway_id": "P6",
+    "overall_confidence": 0.43,
+    "network_feedback": "The network is topologically adequate and commendably honest about the unresolved nature of prebiotic tryptophan synthesis, but it falls well short of approval. Strengths include a connected graph, multiple hubs, clear cross-environment flow, and explicit recognition of the indole bottleneck. The best-supported chemistry lies in hydrothermal CO2 reduction to formate, reductive amination to alanine, pyrrole formation from acetylene and ammonia, serine via Strecker-type chemistry, and hydrolysis of a tryptophan aminonitrile. The major weaknesses are chemical and literature-level: rxn_001 is chemically incorrect, rxn_005 is not a credible HCN source, rxn_006 compresses implausible sugar chemistry into one step, rxn_009 treats the central unresolved indole-forming bottleneck as if it were a productive reaction, and rxn_010 proposes direct indole-serine condensation despite literature emphasizing the difficulty even in biology. Literature alignment is mixed: the network correctly centers M\u00e9nez et al. 2018 and Kaiser et al. 2024 themes, and it respects that several routes are speculative, but it still overstates unsupported terrestrial indole and tryptophan-forming steps. Environmental interconnection is good in design, yet hydrothermal and surface reaction definitions as provided omit required mineral details, which is a schema-level deficiency. Overall this is a useful hypothesis network, not a viable high-confidence synthesis network for tryptophan.",
+    "approved": false,
+    "hub_quality": 0.78,
+    "convergence_quality": 0.74
+  },
+  "success": false,
+  "attempts": 1,
+  "notes": null
+}

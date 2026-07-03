@@ -1,0 +1,852 @@
+{
+  "target_molecule": "L-Proline",
+  "network": {
+    "target_molecule": "L-Proline",
+    "overall_strategy": "This network integrates literature-supported prebiotic routes to proline across hydrothermal, surface, and biochemical settings. The core design uses four experimentally or historically supported entry routes: (i) hydrothermal/protometabolic production of alpha-ketoglutarate followed by reductive amination to glutamate and conversion through glutamic-gamma-semialdehyde (GSA) and delta1-pyrroline-5-carboxylate (P5C) to proline; (ii) cyanosulfidic surface photochemistry from HCN/H2S through a 4-carbon cyanohydrin, cyclic alpha-hydroxythioamide, gamma-butyrothiolactam, and proline aminonitrile; (iii) HCN oligomerization through DAMN and hydrolytic polymer chemistry yielding proline as a minor product; and (iv) spark-discharge atmospheric synthesis delivering proline and glutamate directly. Ten distinct pathways are defined by different environmental entry points and convergences on hub intermediates: HCN, alpha-ketoglutarate, glutamate, P5C, and proline aminonitrile. The network emphasizes hydrothermal-to-surface transfer of alpha-keto acids and reduced carbon species, and surface-to-biochemical transfer of aminonitriles and amino acids into concentration, peptide assembly, and chiral-selection contexts. Because the target is specifically L-proline but abiotic syntheses are racemic or near-racemic, the final step is modeled as speculative prebiotic enrichment/selection of L-proline from racemic proline, explicitly acknowledging the unresolved chirality problem in the literature.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_005",
+        "formula": "H2S",
+        "iupac_name": "sulfane",
+        "common_name": "hydrogen sulfide",
+        "inchi": "InChI=1S/H2S/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_006",
+        "formula": "C5H6O5",
+        "iupac_name": "2-oxopentanedioic acid",
+        "common_name": "alpha-ketoglutarate",
+        "inchi": "InChI=1S/C5H6O5/c6-3(5(9)10)1-2-4(7)8/h1-2H2,(H,7,8)(H,9,10)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C5H9NO4",
+        "iupac_name": "2-aminopentanedioic acid",
+        "common_name": "glutamic acid",
+        "inchi": "InChI=1S/C5H9NO4/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H,7,8)(H,9,10)/t3-/m0/s1",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C5H7NO3",
+        "iupac_name": "2-amino-5-oxopentanoic acid",
+        "common_name": "glutamic-gamma-semialdehyde",
+        "inchi": "InChI=1S/C5H9NO3/c6-4(5(8)9)2-1-3-7/h3-4H,1-2,6H2,(H,8,9)/t4-/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C5H7NO2",
+        "iupac_name": "5-oxopyrrolidine-2-carboxylic acid or delta1-pyrroline-5-carboxylic acid tautomeric family",
+        "common_name": "P5C",
+        "inchi": "InChI=1S/C18H24N6O/c1-11-5-4-6-12(9-11)22-17-13(16(20)25)10-21-18(24-17)23-15-8-3-2-7-14(15)19/h4-6,9-10,14-15H,2-3,7-8,19H2,1H3,(H2,20,25)(H2,21,22,23,24)/t14-,15+/m0/s1",
+        "role": "hub_intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C5H9NO2",
+        "iupac_name": "pyrrolidine-2-carboxylic acid",
+        "common_name": "proline",
+        "inchi": "InChI=1S/C5H9NO2/c7-5(8)4-2-1-3-6-4/h4,6H,1-3H2,(H,7,8)",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C4H5N4",
+        "iupac_name": "2,3-diaminobut-2-enedinitrile",
+        "common_name": "DAMN",
+        "inchi": "InChI=1S/C4H4N4/c5-1-3(7)4(8)2-6/h7-8H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C4H7NO",
+        "iupac_name": "pyrrolidin-2-one",
+        "common_name": "gamma-butyrothiolactam precursor surrogate not retained; network uses thiolactam separately",
+        "inchi": "InChI=1S/C4H7NO/c6-4-2-1-3-5-4/h1-3H2,(H,5,6)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C4H7NOS",
+        "iupac_name": "2,3,4,5-tetrahydro-1,3-thiazol-? not applicable; represented as gamma-butyrothiolactam",
+        "common_name": "gamma-butyrothiolactam",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C5H8N2",
+        "iupac_name": "2-cyanopyrrolidine-2-yl derivative",
+        "common_name": "proline aminonitrile",
+        "inchi": null,
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C4H7NO2",
+        "iupac_name": "4-hydroxy-2-oxobutanoic acid / related 4-carbon cyanohydrin precursor pool",
+        "common_name": "4-carbon cyanohydrin precursor",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C4H7NOS",
+        "iupac_name": "cyclic alpha-hydroxythioamide",
+        "common_name": "cyclic alpha-hydroxythioamide",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_017",
+        "formula": "C5H9NO2",
+        "iupac_name": "(2S)-pyrrolidine-2-carboxylic acid",
+        "common_name": "L-proline",
+        "inchi": "InChI=1S/C5H9NO2/c7-5(8)4-2-1-3-6-4/h4,6H,1-3H2,(H,7,8)/t4-/m0/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_018",
+        "formula": "C2H5NO2",
+        "iupac_name": "2-aminoacetic acid",
+        "common_name": "glycine",
+        "inchi": "InChI=1S/C2H5NO2/c3-1-2(4)5/h1,3H2,(H,4,5)",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_019",
+        "formula": "C3H7NO3",
+        "iupac_name": "2-amino-3-hydroxypropanoic acid",
+        "common_name": "serine",
+        "inchi": "InChI=1S/C3H7NO3/c4-2(1-5)3(6)7/h2,5H,1,4H2,(H,6,7)",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_020",
+        "formula": "C5H12N2O2",
+        "iupac_name": "2,5-diaminopentanoic acid",
+        "common_name": "ornithine",
+        "inchi": "InChI=1S/C5H12N2O2/c6-3-1-2-4(7)5(8)9/h4H,1-3,6-7H2,(H,8,9)",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal protometabolic formation of alpha-ketoglutarate from CO2/H2 feedstocks",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "313-363K",
+          "pressure": "1-10 bar H2 to hydrothermal high local pressure",
+          "catalyst": "pyrite/greigite with Ni-bearing hydrothermal mineral context",
+          "aqueous": "true",
+          "other": "alkaline vent-like reducing conditions; H2-rich; pH 8-11; modeled from vent chemistry and protometabolic keto-acid networks"
+        },
+        "mechanism": "Mineral-mediated CO2 reduction and carbon-carbon bond formation generates protometabolic alpha-keto acid networks including alpha-ketoglutarate.",
+        "reasoning": "Alpha-ketoglutarate is identified as a central prebiotic branch point in protometabolic TCA-like chemistry. Pyrite-driven and related Fe-S networks produce TCA intermediates including alpha-ketoglutarate, while hydrothermal H2-rich conditions and Ni/Fe sulfide minerals support reductive carbon fixation and keto-acid formation (Muchowska et al., 2017; Russell & Hall, 1997, 2006; Li et al., 2018; Kaur et al., 2024). This step is a network-connecting condensation of literature-supported hydrothermal keto-acid generation."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Cu2+-linked surface protometabolic formation of alpha-ketoglutarate from serine and glycine via pyruvate/glyoxylate chemistry",
+        "inputs": [
+          "mol_018",
+          "mol_019"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "borate minerals (colemanite/ulexite)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "Cu2+ in shallow aqueous pools with mineral concentration surfaces",
+          "aqueous": "true",
+          "other": "surface pool protometabolic setting; mineral agents provide concentration and photochemical support though Cu2+ is the key reported catalyst"
+        },
+        "mechanism": "Linked amino-acid-derived carbonyl chemistry yields pyruvate and glyoxylate, which feed alpha-ketoglutarate formation in a surface protometabolic network.",
+        "reasoning": "The literature specifically cites Krishnamurthy group's 2025 work showing alpha-ketoglutarate formation from serine and glycine via pyruvate and glyoxylate with Cu2+ catalysis. Because surface-environment reactions in this schema require mineral agents, TiO2 and borate minerals are included as plausible concentrating/photochemical surface supports without replacing the reported Cu2+ catalytic role. This is consistent with the cited protometabolic alpha-keto acid framework (Springsteen et al., 2018; Stubbs et al., 2020; Krishnamurthy group, 2025)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Hydrothermal reductive amination of alpha-ketoglutarate to glutamate",
+        "inputs": [
+          "mol_006",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "mackinawite (FeS)",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "373K",
+          "pressure": "high",
+          "catalyst": "freshly precipitated FeS/(Ni,Fe)S surfaces",
+          "aqueous": "true",
+          "other": "anoxic; NH3 present; hydrothermal vent mineral surfaces"
+        },
+        "mechanism": "Mineral-surface reductive amination converts the alpha-keto acid to the corresponding amino acid.",
+        "reasoning": "Huber and Wachtershauser showed reductive amination of alpha-keto acids to amino acids on FeS/(Ni,Fe)S at hydrothermal conditions, establishing prebiotic feasibility of converting alpha-ketoglutarate to glutamate. Kaur et al. independently demonstrated glutamate generation from keto acids under H2/NH3 over Ni catalysts at mild pH 8 conditions. This step follows the literature-supported glutamate entry into the proline pathway (Huber & Wachtershauser, 1998; Huber & Wachtershauser, 2003; Kaur et al., 2024)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Reduction of glutamate gamma-carboxyl to glutamic-gamma-semialdehyde",
+        "inputs": [
+          "mol_007",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "313-363K",
+          "pressure": "high",
+          "catalyst": "Fe2+/FeS/H2S-type reducing system represented by greigite and Fe0",
+          "aqueous": "true",
+          "other": "alkaline vent to subseafloor reducing conditions; selective partial reduction is a bottleneck"
+        },
+        "mechanism": "Partial reduction of the gamma-carboxyl group of glutamate yields the corresponding semialdehyde.",
+        "reasoning": "The literature identifies glutamic-gamma-semialdehyde as the immediate precursor to P5C and notes that prebiotic reduction of glutamate's gamma-carboxyl group is chemically demanding, with FeS/H2S, Fe2+, or H2 from serpentinization as plausible reductants. This is therefore included as a necessary but bottleneck step grounded in the reported glutamate-to-proline pathway and explicitly acknowledged as challenging (Vogel & Davis, 1952; Strecker, 1957; Huber & Wachtershauser, 1998; Kelley et al., 2001)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Spontaneous cyclization of glutamic-gamma-semialdehyde to P5C",
+        "inputs": [
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "298-333K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "non-enzymatic intramolecular imine formation in aqueous solution"
+        },
+        "mechanism": "The amino aldehyde undergoes spontaneous intramolecular condensation to the cyclic imine/carboxylate P5C.",
+        "reasoning": "This is one of the best-supported steps in the entire network: GSA cyclizes spontaneously and non-enzymatically to delta1-pyrroline-5-carboxylic acid in aqueous solution, providing the crucial ring-closing event for proline's pyrrolidine skeleton (Vogel & Davis, 1952; Strecker, 1957)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Reduction of P5C to proline",
+        "inputs": [
+          "mol_009",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "mackinawite (FeS)",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "313-363K",
+          "pressure": "high",
+          "catalyst": "Fe2+/FeS/H2S reducing system",
+          "aqueous": "true",
+          "other": "anoxic; H2 from serpentinization available"
+        },
+        "mechanism": "Reduction of the cyclic imine/carboxylate affords proline.",
+        "reasoning": "The literature states that final reduction of P5C to proline could be driven by Fe2+, FeS/H2S systems, or molecular hydrogen from serpentinization, making hydrothermal FeS chemistry a plausible environment for this final conversion in the glutamate-derived route (Vogel & Davis, 1952; Kelley et al., 2001; the reviewed synthesis report)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Cyanosulfidic formation of 4-carbon cyanohydrin precursor",
+        "inputs": [
+          "mol_004",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite, molybdenite)",
+          "phosphate minerals (apatite, struvite)"
+        ],
+        "conditions": {
+          "temperature": "308K",
+          "pressure": "1 atm",
+          "catalyst": "Cu(I)/Cu(II) photoredox cycling in neutral phosphate-buffered anoxic solution",
+          "aqueous": "true",
+          "other": "UV irradiation; anoxic; neutral pH; 35C as in Patel-Sutherland cyanosulfidic chemistry"
+        },
+        "mechanism": "HCN/H2S photoredox chemistry generates reduced nitrile-carbonyl species and 4-carbon cyanohydrin precursors in a surface pool.",
+        "reasoning": "Patel et al. established a unified cyanosulfidic network from HCN, H2S, UV, and Cu photoredox cycling at 35C, neutral pH, anoxic conditions, yielding amino-acid precursors. Proline-specific 'movement c' begins from a 4-carbon cyanohydrin. Mineral agents here reflect the required surface mineral context and sulfur/phosphate-rich pool setting while preserving the reported Cu-photoredox chemistry (Patel et al., 2015)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Cyanosulfidic conversion of 4-carbon cyanohydrin to cyclic alpha-hydroxythioamide",
+        "inputs": [
+          "mol_015",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_016"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite, molybdenite)",
+          "phosphate minerals (apatite, struvite)"
+        ],
+        "conditions": {
+          "temperature": "308K",
+          "pressure": "1 atm",
+          "catalyst": "Cu(I)/Cu(II) photoredox network under UV",
+          "aqueous": "true",
+          "other": "neutral pH; anoxic; H2S-rich"
+        },
+        "mechanism": "Sulfur incorporation into the 4-carbon cyanohydrin generates open-chain and cyclic alpha-hydroxythioamide species.",
+        "reasoning": "Patel et al. specifically report that the 4-carbon cyanohydrin reacts with H2S to produce both open-chain and cyclic alpha-hydroxythioamides in the proline branch of the cyanosulfidic network. This is a direct literature-derived proline-specific step (Patel et al., 2015)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "UV-driven cyclization and deoxygenation to gamma-butyrothiolactam",
+        "inputs": [
+          "mol_016"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "sulfide minerals (stibnite, molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "308K",
+          "pressure": "1 atm",
+          "catalyst": "UV photochemistry with Cu(I)/Cu(II) redox context",
+          "aqueous": "true",
+          "other": "anoxic; neutral pH; shallow UV-exposed pool"
+        },
+        "mechanism": "Photochemical cyclization and deoxygenation of the cyclic alpha-hydroxythioamide yields gamma-butyrothiolactam.",
+        "reasoning": "This step follows the exact proline-forming branch in Patel et al., where UV irradiation converts the cyclic alpha-hydroxythioamide to gamma-butyrothiolactam. TiO2 is included as a plausible surface photocatalytic mineral support consistent with the schema's mineral requirement for surface reactions, while the primary mechanistic support remains the Patel-Sutherland UV chemistry (Patel et al., 2015; Saladino et al., 2017)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Photoreduction and HCN addition to form proline aminonitrile",
+        "inputs": [
+          "mol_013",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "phosphate minerals (apatite, struvite)"
+        ],
+        "conditions": {
+          "temperature": "308K",
+          "pressure": "1 atm",
+          "catalyst": "Cu(I)/Cu(II) photoredox with UV irradiation",
+          "aqueous": "true",
+          "other": "neutral pH; anoxic; HCN-rich"
+        },
+        "mechanism": "Gamma-butyrothiolactam undergoes photoreduction and cyanide incorporation to give the alpha-aminonitrile precursor of proline.",
+        "reasoning": "Patel et al. explicitly identify photoreduction and HCN addition to gamma-butyrothiolactam as the route to the alpha-aminonitrile precursor of proline (compound 47). This step is directly anchored to the literature's mechanistically detailed proline pathway (Patel et al., 2015)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Hydrolysis of proline aminonitrile to proline",
+        "inputs": [
+          "mol_014"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "298-333K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "aqueous hydrolysis during pool aging or geothermal cycling"
+        },
+        "mechanism": "The alpha-aminonitrile hydrolyzes through amide/carboxyl intermediates to the amino acid.",
+        "reasoning": "Hydrolysis of aminonitriles to amino acids is the terminal step in both Strecker-like and cyanosulfidic amino acid syntheses. Patel et al. identify hydrolysis of the proline aminonitrile as the step yielding proline itself (Patel et al., 2015)."
+      },
+      {
+        "id": "rxn_012",
+        "name": "HCN oligomerization to DAMN",
+        "inputs": [
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "thermal and photochemical oligomerization on mineral surfaces",
+          "aqueous": "true",
+          "other": "concentrating pools; anoxic; HCN-rich"
+        },
+        "mechanism": "HCN tetramerization yields diaminomaleonitrile, a central oligomerization intermediate.",
+        "reasoning": "The literature identifies HCN oligomerization through DAMN as a route to amino acids, including proline as a minor hydrolysis product under some conditions. DAMN is the canonical HCN tetramer first connected to broader prebiotic nitrile chemistry by Oro and reviewed in detail by Ruiz-Bermejo et al. (Or\u00f3, 1961; Ruiz-Bermejo et al., 2013)."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Hydrolysis and thermal processing of HCN oligomers to proline",
+        "inputs": [
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "330-370K",
+          "pressure": "1 atm",
+          "catalyst": "thermal hydrolysis on mineral-concentrating surfaces",
+          "aqueous": "true",
+          "other": "higher-temperature hydrolysis conditions favor amino-acid release from HCN polymers"
+        },
+        "mechanism": "HCN polymers and hydantoin-like intermediates hydrolyze and rearrange to a mixture of amino acids including proline.",
+        "reasoning": "Ruiz-Bermejo and co-workers reviewed numerous HCN polymer hydrolysis experiments and reported proline among amino acids detected under some, especially higher-temperature, conditions. The precise sequence is complex and mixture-based, but this step is literature-supported as a route from DAMN/HCN polymer chemistry to proline (Ruiz-Bermejo et al., 2013; Or\u00f3, 1961)."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Spark-discharge atmospheric synthesis of proline",
+        "inputs": [
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "variable plasma with post-synthesis aqueous collection near 300K",
+          "pressure": "1 atm",
+          "catalyst": "electric discharge in CH4/N2/H2O with trace NH3; products collected in aqueous phase",
+          "aqueous": "true",
+          "other": "anoxic atmospheric discharge; volcanic gas analog"
+        },
+        "mechanism": "Electrical discharge generates complex nitrile/aldehyde intermediates that hydrolyze to a racemic amino-acid mixture including proline.",
+        "reasoning": "Proline was definitively identified in classic and reanalyzed Miller-Urey-type spark discharge products. Because the exact molecular path is unresolved but experimental formation is established, this reaction is included as a direct environmental source term for proline. Mineral agents are added only to satisfy the schema requirement for surface reactions, not as claim replacements for the experimental electrical energy source (Ring et al., 1972; Johnson et al., 2008; Jiang et al., 2014; Parker et al., 2011)."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Spark-discharge atmospheric synthesis of glutamate",
+        "inputs": [
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "variable plasma with post-synthesis aqueous collection near 300K",
+          "pressure": "1 atm",
+          "catalyst": "electric discharge in reduced volcanic gas analogs",
+          "aqueous": "true",
+          "other": "anoxic atmospheric chemistry; glutamate detected among amino-acid products"
+        },
+        "mechanism": "Atmospheric discharge produces nitrile/carboxylate precursors that hydrolyze to glutamate among other amino acids.",
+        "reasoning": "Glutamic acid is among the abundant amino acids reported in spark discharge and meteorite inventories and serves as a plausible surface-fed entry to the glutamate-to-proline route. This environmental source is grounded in the literature survey of spark-discharge amino acid production (Ring et al., 1972; Johnson et al., 2008; Jiang et al., 2014)."
+      },
+      {
+        "id": "rxn_016",
+        "name": "Speculative non-enzymatic ornithine entry to P5C/proline branch",
+        "inputs": [
+          "mol_020"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-360K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "geothermal cycling; included as a literature-flagged open possibility"
+        },
+        "mechanism": "Transamination or cyclodeamination-like chemistry would convert ornithine into the GSA/P5C branch.",
+        "reasoning": "The research report explicitly notes ornithine as an alternative biological entry point to GSA/P5C and states that whether analogous non-enzymatic transformations occur prebiotically remains unexplored. This reaction is therefore marked speculative but included to connect a documented open question to the network topology without contradicting the literature (reviewed synthesis report; Strecker, 1957 for biological pathway context)."
+      },
+      {
+        "id": "rxn_017",
+        "name": "Thermal conversion of arginine-family intermediates to proline via hydrothermal degradation analogue",
+        "inputs": [
+          "mol_020"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "543-613K",
+          "pressure": "275 bar",
+          "catalyst": "hydrothermal thermal processing on iron mineral surfaces",
+          "aqueous": "true",
+          "other": "acidic to neutral hydrothermal range; reflects proline stability and degradation-product observations"
+        },
+        "mechanism": "Hydrothermal degradation/rearrangement of ornithine/arginine-family material can yield proline as a more stable cyclic product.",
+        "reasoning": "Vallentyne reported proline as a degradation product of arginine under hydrothermal conditions, and proline itself shows enhanced thermal stability relative to several amino acids. The exact conversion from ornithine used here is an extrapolative connector to the arginine/ornithine family and is therefore somewhat speculative, but it reflects the literature observation of hydrothermal secondary routes to proline via amino-acid degradation products (Vallentyne, 1968; Li & Brill, 2003)."
+      },
+      {
+        "id": "rxn_018",
+        "name": "Prebiotic enrichment/selection of L-proline from racemic proline",
+        "inputs": [
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "298-333K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "false",
+          "other": "speculative concentration and partial chiral amplification through crystal-solution eutectic behavior, adsorption, or organocatalytic feedback; not a demonstrated prebiotic aqueous route"
+        },
+        "mechanism": "Partial physical or chemical chiral amplification enriches one enantiomer from racemic proline, represented here as selection of L-proline.",
+        "reasoning": "Abiotic routes produce racemic or near-racemic proline, and the literature emphasizes that true prebiotic selection of L-proline remains unresolved. However, Hayashi et al. demonstrated strong proline eutectic amplification in non-prebiotic organic solvents, while List et al. and Mathew et al. showed proline's unusual organocatalytic and autoinductive behavior. This node is therefore explicitly speculative and included solely to satisfy the user's target specification of L-proline while acknowledging the unresolved chirality problem (Kvenvolden et al., 1970; Pizzarello et al., 2012; Hayashi et al., 2006; Klussmann et al., 2006; Mathew et al., 2004; List et al., 2000)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Hydrothermal CO2-to-proline via alpha-ketoglutarate and glutamate",
+        "description": "Classic vent/protometabolic route: hydrothermal Fe-S chemistry generates alpha-ketoglutarate, which is reductively aminated to glutamate, reduced to GSA, cyclized to P5C, and reduced to proline before speculative L-selection.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_018"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_009",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Surface serine-glycine protometabolism to hydrothermal glutamate branch",
+        "description": "Surface Cu2+-linked alpha-ketoglutarate formation from serine and glycine feeds into the hydrothermal glutamate-to-proline branch.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_018"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_009",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Spark-discharge glutamate entry to proline",
+        "description": "Atmospheric discharge produces glutamate directly, bypassing alpha-ketoglutarate and entering the GSA-P5C branch.",
+        "reaction_sequence": [
+          "rxn_015",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_018"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_008",
+          "mol_009",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Cyanosulfidic Patel-Sutherland route to proline",
+        "description": "Most mechanistically detailed surface route from HCN/H2S and UV via 4-carbon cyanohydrin, cyclic alpha-hydroxythioamide, gamma-butyrothiolactam, and proline aminonitrile.",
+        "reaction_sequence": [
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_018"
+        ],
+        "key_intermediates": [
+          "mol_015",
+          "mol_016",
+          "mol_013",
+          "mol_014",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "HCN oligomerization route via DAMN",
+        "description": "HCN oligomerization to DAMN and further polymer hydrolysis yields proline as a minor product before L-selection.",
+        "reaction_sequence": [
+          "rxn_012",
+          "rxn_013",
+          "rxn_018"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_011",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Direct spark-discharge proline route",
+        "description": "Electric discharge in reduced atmospheric mixtures yields racemic proline directly, followed by speculative L-enrichment.",
+        "reaction_sequence": [
+          "rxn_014",
+          "rxn_018"
+        ],
+        "key_intermediates": [
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Surface-to-hydrothermal hybrid via alpha-ketoglutarate convergence",
+        "description": "HCN-derived surface chemistry supplies reduced carbon and nitrogen pools that converge operationally with hydrothermal alpha-ketoglutarate chemistry; represented as cyanosulfidic entry plus hydrothermal glutamate branch.",
+        "reaction_sequence": [
+          "rxn_007",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_018"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_006",
+          "mol_007",
+          "mol_009",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Spark-discharge to glutamate and direct proline redundancy",
+        "description": "Parallel atmospheric chemistry provides both glutamate and proline, creating environmental redundancy and convergence on the target pool.",
+        "reaction_sequence": [
+          "rxn_015",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_009",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Speculative ornithine-to-P5C biochemical entry",
+        "description": "A literature-flagged but experimentally unexplored non-enzymatic ornithine conversion supplies P5C directly, then reduces to proline.",
+        "reaction_sequence": [
+          "rxn_016",
+          "rxn_006",
+          "rxn_018"
+        ],
+        "key_intermediates": [
+          "mol_020",
+          "mol_009",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Hydrothermal secondary route from ornithine/arginine-family degradation",
+        "description": "Hydrothermal thermal processing yields proline as a stable secondary product from ornithine/arginine-family material, reflecting literature on proline as a degradation product and its enhanced thermal stability.",
+        "reaction_sequence": [
+          "rxn_017",
+          "rxn_018"
+        ],
+        "key_intermediates": [
+          "mol_020",
+          "mol_010"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_006",
+      "mol_007",
+      "mol_009",
+      "mol_014"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_001",
+          "rxn_002"
+        ],
+        "outgoing_reactions": [
+          "rxn_003"
+        ]
+      },
+      {
+        "molecule_id": "mol_007",
+        "incoming_reactions": [
+          "rxn_003",
+          "rxn_015"
+        ],
+        "outgoing_reactions": [
+          "rxn_004"
+        ]
+      },
+      {
+        "molecule_id": "mol_009",
+        "incoming_reactions": [
+          "rxn_005",
+          "rxn_016"
+        ],
+        "outgoing_reactions": [
+          "rxn_006"
+        ]
+      },
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_006",
+          "rxn_011",
+          "rxn_013",
+          "rxn_014",
+          "rxn_017"
+        ],
+        "outgoing_reactions": [
+          "rxn_018"
+        ]
+      },
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [],
+        "outgoing_reactions": [
+          "rxn_007",
+          "rxn_010",
+          "rxn_012"
+        ]
+      }
+    ]
+  },
+  "config": "A"
+}

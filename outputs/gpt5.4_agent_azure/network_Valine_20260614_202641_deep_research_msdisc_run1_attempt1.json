@@ -1,0 +1,916 @@
+{
+  "target_molecule": "Valine",
+  "network": {
+    "target_molecule": "Valine",
+    "overall_strategy": "This network follows the literature-guided evidence bundle for prebiotic valine synthesis and fate. It centers on four hub intermediates/feedstocks that connect atmospheric discharge, Strecker chemistry, inferred branched-ketoacid chemistry, and downstream prebiotic assembly/fate: isobutyraldehyde, valine aminonitrile, 2-ketoisovalerate, and valine. The strongest quantitative support comes from spark-discharge routes using isobutane or methane feeds under Ring & Miller (1984) conditions, with isobutyraldehyde as the mechanistic bridge to Strecker chemistry. Additional literature-supported but non-yield-backed routes include direct Strecker formation/hydrolysis, shock chemistry, VUV ice photochemistry, and inferred alpha-ketoacid amination. Surface and biochemical steps are added only where necessary to connect known literature routes into a single connected bipartite graph and to represent adsorption, oligomerization, and degradation constraints documented in the research bundle.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "C4H10",
+        "iupac_name": "2-methylpropane",
+        "common_name": "isobutane",
+        "inchi": "InChI=1S/C4H10/c1-4(2)3/h4H,1-3H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "CH4",
+        "iupac_name": "methane",
+        "common_name": "methane",
+        "inchi": "InChI=1S/CH4/h1H4",
+        "role": "starting",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_003",
+        "formula": "N2",
+        "iupac_name": "dinitrogen",
+        "common_name": "nitrogen",
+        "inchi": "InChI=1S/N2/c1-2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_005",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_006",
+        "formula": "C4H8O",
+        "iupac_name": "2-methylpropanal",
+        "common_name": "isobutyraldehyde",
+        "inchi": "InChI=1S/C4H8O/c1-4(2)3-5/h3-4H,1-2H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_007",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C5H10N2",
+        "iupac_name": "2-amino-3-methylbutanenitrile",
+        "common_name": "valine aminonitrile",
+        "inchi": "InChI=1S/C5H10N2/c1-4(2)5(6)3-7/h4-5H,6H2,1-2H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C5H11NO2",
+        "iupac_name": "2-amino-3-methylbutanoic acid",
+        "common_name": "valine",
+        "inchi": "InChI=1S/C5H11NO2/c1-3(2)4(6)5(7)8/h3-4H,6H2,1-2H3,(H,7,8)",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C5H8O3",
+        "iupac_name": "3-methyl-2-oxobutanoic acid",
+        "common_name": "2-ketoisovalerate",
+        "inchi": "InChI=1S/C5H8O3/c1-3(2)4(6)5(7)8/h3H,1-2H3,(H,7,8)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C2H6",
+        "iupac_name": "ethane",
+        "common_name": "ethane",
+        "inchi": "InChI=1S/C2H6/c1-2/h1-2H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_012",
+        "formula": "CO",
+        "iupac_name": "carbon monoxide",
+        "common_name": "carbon monoxide",
+        "inchi": "InChI=1S/CO/c1-2",
+        "role": "starting",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_013",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_014",
+        "formula": "CH4O",
+        "iupac_name": "methanol",
+        "common_name": "methanol",
+        "inchi": "InChI=1S/CH4O/c1-2/h2H,1H3",
+        "role": "starting",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C10H20N2O3",
+        "iupac_name": "2-[(2-amino-3-methylbutanoyl)amino]-3-methylbutanoic acid",
+        "common_name": "valine dipeptide",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_016",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_017",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvate",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_018",
+        "formula": "mixed",
+        "iupac_name": "mixed cryogenic ice feedstock",
+        "common_name": "mixed ices (H2O/CO/CO2/CH3OH/CH4/NH3)",
+        "inchi": null,
+        "role": "starting",
+        "environment_formed": null
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Spark discharge with isobutane feed producing valine via branched aldehyde/Strecker chemistry",
+        "inputs": [
+          "mol_001",
+          "mol_003",
+          "mol_004",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_006",
+          "mol_008",
+          "mol_009",
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "~298K bulk flask; localized spark much hotter",
+          "pressure": "N2 80 torr; hydrocarbon 150 torr; water vapor ~25 torr",
+          "catalyst": "electric spark with tungsten electrodes; 0.05 M NH4Cl aqueous trap adjusted to pH 8.7; post-run 3 M HCl hydrolysis",
+          "aqueous": true,
+          "other": "Yield-backed route; valine/glycine mole ratio 34.0; inferred valine yield \u22480.01224% carbon basis"
+        },
+        "mechanism": "Atmospheric plasma oxidizes/rearranges isobutane to branched carbonyl intermediates including isobutyraldehyde; aqueous NH3 and HCN then enable Strecker aminonitrile formation followed by hydrolytic release of valine.",
+        "reasoning": "This is the best-supported productive valine route in the provided literature bundle. Exact conditions and inferred yield follow Ring & Miller 1984 Table I isobutane experiment. The mechanistic interpretation that isobutane is oxidized to isobutyraldehyde hydrate and then enters Strecker chemistry is explicitly retained in the research summary; the mineral agents here represent a connected surface-pool setting needed by the network and are therefore auxiliary rather than primary demonstrated catalysts. (Ring & Miller, 1984; Strecker reaction and alpha-aminonitriles, 2018; Gargaud et al., 2022)"
+      },
+      {
+        "id": "rxn_002",
+        "name": "Spark discharge with methane feed producing valine and precursor pool",
+        "inputs": [
+          "mol_002",
+          "mol_003",
+          "mol_004",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_007",
+          "mol_006",
+          "mol_008",
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2",
+          "phosphate minerals"
+        ],
+        "conditions": {
+          "temperature": "298K bulk flask in CH4-A/B/C; ~353K in CH4-80\u00b0 experiment; localized spark much hotter",
+          "pressure": "CH4 300 torr; N2 80 torr; NH3 0.02, 0.5, or 2.5 torr; water vapor ~25 torr at 25 \u00b0C and ~350 torr at 80 \u00b0C",
+          "catalyst": "electric spark with tungsten electrodes; 0.05 M NH4Cl solution adjusted to pH 8.7; post-run 3 M HCl hydrolysis",
+          "aqueous": true,
+          "other": "Yield-backed route; baseline inferred valine yield \u22480.00204% carbon basis"
+        },
+        "mechanism": "Reducing methane discharge generates nitriles, aldehydes, and related reactive carbon compounds that feed branched Strecker chemistry; hydrolysis in the trap releases amino acids including valine.",
+        "reasoning": "This is the second yield-backed valine route in the literature bundle and uses the exact Ring & Miller 1984 methane discharge conditions and quantitative inference. Valine is a minor product relative to the isobutane case, but the route is directly supported. Auxiliary mineral agents are included only to satisfy the network's surface bipartite specification and to place the discharge products into mineral-bearing surface pools. (Ring & Miller, 1984; Gargaud et al., 2022)"
+      },
+      {
+        "id": "rxn_003",
+        "name": "Strecker formation of valine aminonitrile from isobutyraldehyde",
+        "inputs": [
+          "mol_006",
+          "mol_004",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "borate minerals"
+        ],
+        "conditions": {
+          "temperature": "not reported",
+          "pressure": "1 atm",
+          "catalyst": "NH3/NH4+ and HCN/CN- in aqueous or mixed aqueous medium",
+          "aqueous": true,
+          "other": "Near-neutral to mildly basic/acidic window not valine-specifically resolved; cyanide-bearing pond or evaporative lagoon context"
+        },
+        "mechanism": "Aldehyde imine/iminium formation with ammonia is trapped by cyanide to yield the alpha-aminonitrile precursor to valine.",
+        "reasoning": "This reaction is directly retained as VAL-R1 in the evidence bundle: isobutyraldehyde + NH3/NH4+ + HCN/CN- gives valine aminonitrile. No valine-specific numeric yield was recovered, so this route is source-supported but not yield-backed. Mineral agents reflect plausible evaporitic/surface concentration contexts and are not claimed as literature-proven catalysts for valine-specific yield enhancement. (Strecker reaction and alpha-aminonitriles, 2018; Gargaud et al., 2022; Prebiotic syntheses of vitamin coenzymes II, J. Mol. Evol. source context)"
+      },
+      {
+        "id": "rxn_004",
+        "name": "Hydrolysis of valine aminonitrile to valine",
+        "inputs": [
+          "mol_008",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "378K (105 \u00b0C) laboratory hydrolysis analogue",
+          "pressure": "1 atm",
+          "catalyst": "water; acidic laboratory hydrolysis analogue",
+          "aqueous": true,
+          "other": "Prebiotic hydrolysis conditions unresolved; 24 h analogue retained from source context"
+        },
+        "mechanism": "Sequential nitrile hydration and amidic hydrolysis converts the alpha-aminonitrile into the free amino acid valine.",
+        "reasoning": "This is VAL-R2 in the evidence bundle, the second half of the Strecker sequence. The retained literature gives 105 \u00b0C laboratory hydrolysis analogue conditions but notes that prebiotic hydrolysis remains unresolved and no valine-specific yield was recovered. (Strecker reaction and alpha-aminonitriles, 2018; Gargaud et al., 2022)"
+      },
+      {
+        "id": "rxn_005",
+        "name": "Shock synthesis in reduced gas mixture generating valine and branched precursors",
+        "inputs": [
+          "mol_002",
+          "mol_011",
+          "mol_004",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_006",
+          "mol_008",
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2",
+          "sulfide minerals"
+        ],
+        "conditions": {
+          "temperature": "transient high-T shock; exact value not extracted",
+          "pressure": "transient high-P shock; exact value not extracted",
+          "catalyst": "shock wave energy",
+          "aqueous": false,
+          "other": "Primitive atmosphere or atmosphere-ocean interface simulation; yield not reported"
+        },
+        "mechanism": "Impact-like shock chemistry in a reduced gas mixture forms carbonyl and nitrile intermediates that can collapse into amino acid products including valine.",
+        "reasoning": "This reaction follows VAL-R5 from the literature bundle. The source support is qualitative and based on Bar-Nun et al. 1970 as summarized in Ring & Miller 1984, with no exact valine yield extracted. Inclusion of branched precursor outputs reflects the network need to connect shock chemistry to the Strecker hub while staying within the reported route family. (Bar-Nun et al., 1970, as summarized in Ring & Miller, 1984)"
+      },
+      {
+        "id": "rxn_006",
+        "name": "VUV photochemistry of mixed ices followed by hydrolysis yielding valine and precursor pool",
+        "inputs": [
+          "mol_018"
+        ],
+        "outputs": [
+          "mol_007",
+          "mol_008",
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "10-80K irradiation; warm-up to room temperature; hydrolysis 378K for 24 h",
+          "pressure": "static vacuum ~10^-5 mbar during residue handling",
+          "catalyst": "VUV photons; acid hydrolysis in analytical workflow",
+          "aqueous": false,
+          "other": "Interstellar/cometary ice analogue; valine-specific yield not extracted and assignment weaker than route-family support"
+        },
+        "mechanism": "VUV processing of simple cryogenic ices creates complex organic residues that, upon warm-up and hydrolysis, release amino acids and precursor nitrile species including valine-related products.",
+        "reasoning": "This is VAL-R6 from the literature bundle. The route family is robust for amino-acid formation, but valine-specific support is explicitly weaker/contested and no valine-specific yield was recovered. Mineral/surface context in the research mentions MgF2 or Cu substrates depending on experiment; because the required schema restricts surface mineral agents to the provided list, TiO2 and montmorillonite are used here only as auxiliary surface-context placeholders, not as substitutes for the reported irradiation substrate. (Nuevo et al., 2008; Bernstein et al., 2002; Munoz Caro et al., 2002)"
+      },
+      {
+        "id": "rxn_007",
+        "name": "Hydrothermal pyruvate synthesis and branched alpha-ketoacid feeder formation",
+        "inputs": [
+          "mol_013",
+          "mol_016",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_017",
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite",
+          "magnetite"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite and magnetite",
+          "aqueous": true,
+          "other": "Represents hydrothermal pyruvate synthesis plus inferred entry into branched alpha-ketoacid feeder network"
+        },
+        "mechanism": "Mineral-catalyzed CO2 reduction under vent conditions generates central ketoacid intermediates such as pyruvate; network extension then feeds the branched alpha-ketoacid pool represented by 2-ketoisovalerate.",
+        "reasoning": "The deep research findings explicitly retain a 'pyruvate-derived branched alpha-ketoacid network' as an inferred upstream feeder to 2-ketoisovalerate, and the system instructions require hydrothermal carbon-fixation chemistry with pyruvate synthesis on magnetite/greigite. This connecting reaction is therefore necessary but partly speculative at the branch-extension step; it is included to connect literature-supported KIV context to the hydrothermal module. (Liu et al., 2022; valine ketoisovalerate amination source context; Huber & Wachtershauser, 1997 as general hydrothermal carbon fixation context; Cody et al. hydrothermal pyruvate context)"
+      },
+      {
+        "id": "rxn_008",
+        "name": "Alpha-ketoacid amination of 2-ketoisovalerate to valine",
+        "inputs": [
+          "mol_010",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_009",
+          "mol_017"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "not reported",
+          "pressure": "not reported",
+          "catalyst": "nitrogen donor/reductant; cyanate discussed in general alpha-ketoacid route",
+          "aqueous": true,
+          "other": "Metabolism-like aqueous network or non-extreme hydrothermal fringe; yield not reported"
+        },
+        "mechanism": "Reductive amination/transamination-like conversion of branched alpha-ketoacid precursor to the corresponding amino acid valine within a proto-metabolic aqueous network.",
+        "reasoning": "This corresponds to VAL-R7 in the literature bundle: 2-ketoisovalerate + nitrogen donor/reductant to valine. The report states this route is mechanistically attractive but not directly demonstrated as an enzyme-free prebiotic valine synthesis with measured yield, so it is retained as a literature-supported but unresolved route. Pyruvate is included as a co-product to preserve network connectivity for ketoacid transamination logic. (Liu et al., 2022; Drotman et al., 1972; 2021 Life computational analysis as cited in the report)"
+      },
+      {
+        "id": "rxn_009",
+        "name": "Dry high-pressure oligomerization of valine to valine-containing peptide",
+        "inputs": [
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "423-473K (150-200 \u00b0C)",
+          "pressure": "50-150 MPa",
+          "catalyst": "none reported",
+          "aqueous": false,
+          "other": "Non-aqueous solid-state/dehydrating diagenetic setting; retained as sink/assembly route"
+        },
+        "mechanism": "Dehydrative condensation of valine in hot, pressurized, water-poor settings yields oligomeric/peptidic products.",
+        "reasoning": "This is VAL-R8 in the evidence bundle. The report explicitly states it is a downstream sink/assembly route from valine rather than a productive synthesis route to free valine, but it is important for valine fate and biochemical assembly context. (Furukawa et al., 2012)"
+      },
+      {
+        "id": "rxn_010",
+        "name": "Hydrothermal degradation of valine in subcritical water",
+        "inputs": [
+          "mol_009",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_004",
+          "mol_012",
+          "mol_013"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite",
+          "mackinawite"
+        ],
+        "conditions": {
+          "temperature": "563-603K (290-330 \u00b0C)",
+          "pressure": "subcritical water conditions; exact pressure not extracted",
+          "catalyst": "hot compressed water",
+          "aqueous": true,
+          "other": "Constraint/sink route; degradation kinetics reported qualitatively in source bundle"
+        },
+        "mechanism": "Subcritical-water exposure destroys free valine, returning nitrogen and carbon to simpler small-molecule pools under hydrothermal conditions.",
+        "reasoning": "This is VAL-R9 in the literature bundle and is retained as a constraint showing many hydrothermal settings are destructive for free valine accumulation. Exact degradation products were not fully extracted in the report, so the outputs here are simplified to connected small-molecule pools needed for graph closure and should be treated as a network-level abstraction. (Kobayashi et al., 2010; ChemSusChem review, 2021)"
+      },
+      {
+        "id": "rxn_011",
+        "name": "Hydrothermal Fischer-Tropsch-type generation of methane and methanol feedstocks",
+        "inputs": [
+          "mol_012",
+          "mol_016"
+        ],
+        "outputs": [
+          "mol_002",
+          "mol_014"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite",
+          "elemental iron"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high",
+          "catalyst": "magnetite and Fe0",
+          "aqueous": true,
+          "other": "Fischer-Tropsch-type hydrocarbon and alcohol generation"
+        },
+        "mechanism": "Reduced hydrothermal mineral surfaces convert CO and H2 into simple hydrocarbons and alcohols that can transfer to surface atmospheric and pool chemistry.",
+        "reasoning": "This reaction is included to satisfy the required Hydrothermal \u2194 Surface interconnection using system-specified hydrothermal chemistry. It provides a plausible source of methane-like reduced carbon feeding the validated methane discharge route, while staying within the allowed hydrothermal reaction families. This connector is literature-consistent but auxiliary to the valine-specific evidence bundle. (system-required hydrothermal framework; McCollom and Seewald hydrothermal FTT context; Huber & Wachtershauser, 1997 as general Fe-S prebiotic framework)"
+      },
+      {
+        "id": "rxn_012",
+        "name": "Hydrothermal CO2 reduction to ammonia-linked reactive carbon pool",
+        "inputs": [
+          "mol_013",
+          "mol_016"
+        ],
+        "outputs": [
+          "mol_012",
+          "mol_004"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite",
+          "mackinawite"
+        ],
+        "conditions": {
+          "temperature": "350-450K",
+          "pressure": "high",
+          "catalyst": "greigite and mackinawite",
+          "aqueous": true,
+          "other": "Represents vent-generated reducing equivalents and coupled nitrogen/carbon activation feeding surface chemistry"
+        },
+        "mechanism": "Fe-S mineral catalysis under alkaline hydrothermal conditions generates reduced carbon species and supports reactive nitrogen pools that can feed later atmospheric and surface synthesis.",
+        "reasoning": "The valine report emphasizes that hydrothermal settings are not strongly supported as net productive for free valine, but the network must remain environmentally connected. This reaction is therefore an auxiliary hydrothermal feeder consistent with the required vent chemistry and with the report's open question about whether hydrothermal settings mostly supply precursors rather than net valine. It is partially speculative in the explicit ammonia output but justified as a connector to the literature-supported NH3-dependent routes. (On the prebiotic role of iron and sulfur, 2001; Huber & Wachtershauser, 1997; open-question framing in the provided report)"
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Yield-backed isobutane spark direct route",
+        "description": "Direct productive route from isobutane discharge to valine under Ring & Miller 1984 isobutane conditions.",
+        "reaction_sequence": [
+          "rxn_001"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Yield-backed methane spark direct route",
+        "description": "Direct productive route from methane discharge to valine under Ring & Miller 1984 methane conditions.",
+        "reaction_sequence": [
+          "rxn_002"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Classical Strecker route from spark-generated isobutyraldehyde",
+        "description": "Spark discharge produces isobutyraldehyde and HCN, which then pass through discrete Strecker aminonitrile formation and hydrolysis to valine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_003",
+          "rxn_004"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Methane discharge to discrete Strecker route",
+        "description": "Methane spark chemistry generates the precursor pool, then valine forms through separate aminonitrile and hydrolysis steps.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_004"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Standalone Strecker route in cyanide-bearing surface pool",
+        "description": "Isobutyraldehyde from surface inventory enters a classical Strecker sequence to valine.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Shock synthesis direct route",
+        "description": "Impact-like shock chemistry in reduced gas mixtures yields valine directly.",
+        "reaction_sequence": [
+          "rxn_005"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Shock-to-Strecker route",
+        "description": "Shock chemistry first generates branched aldehyde and aminonitrile precursor pools, which then resolve through hydrolysis to valine.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_004"
+        ],
+        "key_intermediates": [
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "VUV ice photochemistry direct route",
+        "description": "Mixed-ice VUV processing followed by warm-up and hydrolysis produces valine-containing residues.",
+        "reaction_sequence": [
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "VUV ice to aminonitrile hydrolysis route",
+        "description": "Photochemical ice processing produces valine aminonitrile-like precursors that hydrolyze to valine.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_004"
+        ],
+        "key_intermediates": [
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Hydrothermal ketoacid feeder to valine route",
+        "description": "Hydrothermal pyruvate/branched alpha-ketoacid chemistry feeds 2-ketoisovalerate, which then aminates to valine in a proto-metabolic aqueous setting.",
+        "reaction_sequence": [
+          "rxn_007",
+          "rxn_008"
+        ],
+        "key_intermediates": [
+          "mol_017",
+          "mol_010"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_006",
+      "mol_008",
+      "mol_010",
+      "mol_009"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_005"
+        ],
+        "outgoing_reactions": [
+          "rxn_003"
+        ]
+      },
+      {
+        "molecule_id": "mol_008",
+        "incoming_reactions": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_005",
+          "rxn_006"
+        ],
+        "outgoing_reactions": [
+          "rxn_004"
+        ]
+      },
+      {
+        "molecule_id": "mol_009",
+        "incoming_reactions": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_008"
+        ],
+        "outgoing_reactions": [
+          "rxn_009",
+          "rxn_010"
+        ]
+      },
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [
+          "rxn_010",
+          "rxn_012"
+        ],
+        "outgoing_reactions": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_005",
+          "rxn_007",
+          "rxn_008"
+        ]
+      },
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_007"
+        ],
+        "outgoing_reactions": [
+          "rxn_008"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Valine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_001": 0.9
+        },
+        "chemical_feasibility": 0.83,
+        "pathway_coherence": 0.92,
+        "environmental_progression": 0.72,
+        "target_achievement": 0.9,
+        "overall_confidence": 0.86,
+        "feedback": "Strongest literature-aligned pathway. The isobutane spark-discharge route matches the best-supported route in the evidence bundle and correctly captures direct formation of valine alongside isobutyraldehyde, HCN, and aminonitrile-like intermediates. Main issue is formal mismatch with the required surface-mineral framework: spark discharge is plausible, but no mineral agent is specified, and the network compresses discharge chemistry plus hydrolysis into one reaction node.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Separate spark-discharge precursor formation from post-run acid hydrolysis into distinct reaction nodes",
+          "Record exact Ring & Miller 1984 conditions in the reaction metadata",
+          "Clarify that mineral catalysis is not part of this specific literature-backed route rather than implying generic surface chemistry"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_002": 0.86
+        },
+        "chemical_feasibility": 0.8,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.72,
+        "target_achievement": 0.88,
+        "overall_confidence": 0.84,
+        "feedback": "Good literature alignment with the second yield-backed route from Ring & Miller 1984. Chemically plausible as an atmospheric discharge route, but weaker than the isobutane pathway because valine yield is much lower and the generation of branched precursor isobutyraldehyde from methane feed is more indirect. As in P1, the route is compressed and lacks explicit hydrolysis separation and mineral-agent specification.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Represent methane discharge as precursor-pool generation with lower confidence for direct valine formation",
+          "Add explicit linkage from methane discharge products to isobutyraldehyde formation before Strecker chemistry",
+          "Capture the NH3 partial-pressure dependence noted in Ring & Miller 1984"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_003": 0.88,
+          "rxn_004": 0.72
+        },
+        "chemical_feasibility": 0.81,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.84,
+        "target_achievement": 0.83,
+        "overall_confidence": 0.84,
+        "feedback": "This is the most chemically interpretable multistep pathway: spark chemistry supplies isobutyraldehyde and HCN, then classical Strecker chemistry gives valine aminonitrile, followed by hydrolysis to valine. This is well aligned with the literature narrative. The main weakness is rxn_004: aminonitrile hydrolysis is plausible but prebiotically unresolved, and the network places it in 'Biochemical' rather than an acidic aqueous post-synthesis setting. The first step still conflates product formation and hydrolysis-derived outputs.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_004"
+        ],
+        "suggestions": [
+          "Move aminonitrile hydrolysis to a dedicated aqueous post-synthesis environment with acidic or thermal qualifier",
+          "Avoid listing free valine as simultaneous output of the spark step if aminonitrile hydrolysis is also modeled separately",
+          "Quantify confidence drop due to unresolved prebiotic hydrolysis conditions"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_002": 0.84,
+          "rxn_003": 0.88,
+          "rxn_004": 0.72
+        },
+        "chemical_feasibility": 0.78,
+        "pathway_coherence": 0.87,
+        "environmental_progression": 0.84,
+        "target_achievement": 0.82,
+        "overall_confidence": 0.81,
+        "feedback": "Valid extension of the methane spark route into explicit Strecker chemistry. Coherent overall, but less compelling than the isobutane-based version because methane-to-isobutyraldehyde conversion is not explicitly resolved in the literature bundle and is likely distributed over many plasma products. Hydrolysis concerns remain the same as in P3.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_004"
+        ],
+        "suggestions": [
+          "Insert an explicit branched aldehyde generation node or reduce confidence in that transformation",
+          "Use literature wording that branched aldehyde formation from methane discharge is indirect/inferred",
+          "Separate analytical hydrolysis from genuine prebiotic hydrolysis"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_003": 0.88,
+          "rxn_004": 0.72
+        },
+        "chemical_feasibility": 0.8,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.8,
+        "overall_confidence": 0.8,
+        "feedback": "Classical Strecker route is chemically sound and literature-supported as a qualitative valine pathway. However, it lacks valine-specific yield support and depends on prior availability of isobutyraldehyde and HCN. The hydrolysis step remains the weakest point under prebiotic rather than laboratory conditions.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_004"
+        ],
+        "suggestions": [
+          "Add explicit source of isobutyraldehyde within the same local surface environment",
+          "State that this route is mechanistically grounded but not quantitatively established for valine",
+          "Constrain hydrolysis conditions using the 105 C laboratory analogue from the evidence bundle"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_005": 0.68
+        },
+        "chemical_feasibility": 0.7,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.7,
+        "target_achievement": 0.75,
+        "overall_confidence": 0.73,
+        "feedback": "Shock chemistry is literature-retained but only qualitatively for valine. The network overstates certainty by making valine, isobutyraldehyde, and aminonitrile all direct outputs of one shock step. Plausible as a broad precursor-generating event, but not well constrained for direct valine synthesis.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_005"
+        ],
+        "suggestions": [
+          "Downgrade shock chemistry to precursor-pool generation rather than direct target formation",
+          "Use explicit transient high-T/high-P language and cite secondary support only",
+          "Avoid assigning specific intermediates unless directly supported"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_005": 0.68,
+          "rxn_004": 0.72
+        },
+        "chemical_feasibility": 0.69,
+        "pathway_coherence": 0.74,
+        "environmental_progression": 0.75,
+        "target_achievement": 0.74,
+        "overall_confidence": 0.72,
+        "feedback": "This route inherits the uncertainty of the shock step and adds the hydrolysis uncertainty. It is topologically valid but literature support for a shock-generated valine aminonitrile pool feeding productive hydrolysis is weak.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_005",
+          "rxn_004"
+        ],
+        "suggestions": [
+          "Treat shock chemistry as speculative support for upstream nitrile or aldehyde generation only",
+          "Require explicit evidence before using aminonitrile as direct shock product",
+          "Reduce pathway prominence relative to spark and Strecker routes"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_006": 0.58
+        },
+        "chemical_feasibility": 0.62,
+        "pathway_coherence": 0.72,
+        "environmental_progression": 0.68,
+        "target_achievement": 0.65,
+        "overall_confidence": 0.64,
+        "feedback": "The VUV ice route is retained in the literature as a weak/contested valine-specific pathway. The network likely overclaims by making valine and valine aminonitrile direct outputs from mixed ices. General amino acid precursor chemistry is plausible, but valine-specific assignment is not well supported in the accessible evidence.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_006"
+        ],
+        "suggestions": [
+          "Represent this route as amino-acid precursor generation with contested valine assignment",
+          "Separate ice irradiation from later hydrolysis/analysis workflow",
+          "Lower confidence or remove direct valine aminonitrile output unless directly supported"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_006": 0.58,
+          "rxn_004": 0.72
+        },
+        "chemical_feasibility": 0.61,
+        "pathway_coherence": 0.7,
+        "environmental_progression": 0.72,
+        "target_achievement": 0.66,
+        "overall_confidence": 0.64,
+        "feedback": "This route compounds two uncertain steps: contested valine/aminonitrile production from VUV ices and unresolved prebiotic hydrolysis. It is connected but not strongly supported by the literature bundle.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_006",
+          "rxn_004"
+        ],
+        "suggestions": [
+          "Use this only as a low-confidence auxiliary pathway",
+          "Clarify that hydrolysis in the literature was analytical/laboratory, not necessarily prebiotic",
+          "Emphasize precursor delivery rather than direct target synthesis"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_007": 0.28,
+          "rxn_008": 0.52
+        },
+        "chemical_feasibility": 0.38,
+        "pathway_coherence": 0.55,
+        "environmental_progression": 0.62,
+        "target_achievement": 0.52,
+        "overall_confidence": 0.49,
+        "feedback": "This is the weakest pathway. The hydrothermal production of both pyruvate and 2-ketoisovalerate directly from CO2 + H2 + NH3 is not supported by the provided valine literature bundle and is inconsistent with the bundle's caution that hydrothermal settings are more often destructive for valine. The 2-ketoisovalerate amination step is explicitly described in the evidence as mechanistically attractive but not directly demonstrated prebiotically. This pathway appears substantially speculative.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_007",
+          "rxn_008"
+        ],
+        "suggestions": [
+          "Remove direct hydrothermal generation of 2-ketoisovalerate unless supported by specific literature",
+          "Treat the ketoacid amination route as hypothesis-level only",
+          "Use hydrothermal chemistry as feedstock generation or degradation context, not a primary valine synthesis path"
+        ]
+      }
+    ],
+    "best_pathway_id": "P1",
+    "overall_confidence": 0.74,
+    "network_feedback": "The network is topologically strong and reasonably well connected, with multiple convergent routes to valine centered on isobutyraldehyde, valine aminonitrile, and valine. It captures the main literature-supported story: strongest support from Ring and Miller 1984 spark-discharge routes, mechanistic linkage through branched aldehyde/Strecker chemistry, and downstream valine fate via oligomerization and degradation. However, overall confidence is reduced by several major issues. First, the network departs from the required reaction formalism by compressing multistage experiments into single reactions, especially spark and VUV routes where product generation, hydrolysis, and analysis are conflated. Second, hydrothermal chemistry is overstated: rxn_007 and rxn_012 are weakly supported or chemically implausible in the specific forms given, and the literature bundle explicitly flags hydrothermal production as uncertain while hydrothermal degradation is better supported. Third, required mineral-agent specification is effectively absent for the listed Hydrothermal and Surface reactions, which is a major schema and environmental-interconnection failure. Fourth, several outputs are overassigned, especially direct valine and aminonitrile production in shock and ice-photochemistry routes. Literature alignment is good for the two spark routes, acceptable for the generic Strecker sequence, and weak for the ketoacid/hydrothermal branch. As a literature-guided valine network it is useful and mostly coherent, but it does not meet approval threshold for a high-confidence complete synthesis network.",
+    "approved": false,
+    "hub_quality": 0.84,
+    "convergence_quality": 0.82
+  },
+  "success": false,
+  "attempts": 1,
+  "notes": null
+}

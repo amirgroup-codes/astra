@@ -1,0 +1,902 @@
+{
+  "target_molecule": "Arginine",
+  "network": {
+    "target_molecule": "Arginine",
+    "overall_strategy": "This network is literature-guided and explicitly reflects that prebiotic arginine synthesis is unresolved. It centers the best-supported constructive branch: cyanosulfidic surface photochemistry from HCN-derived feedstocks to an arginine alpha-aminonitrile precursor, followed by hydrolysis to arginine. Additional target-reaching pathways are built by recombining experimentally grounded subroutes documented in the literature: direct guanylation of ornithine by cyanamide, cyanate/citrulline analog chemistry, and trace supercritical CO2/H2O formation. Hydrothermal chemistry is used conservatively to supply simple reduced-carbon feedstocks and environmental interconnection, while surface pools perform the key cyanamide- and HCN-driven assembly under UV, Cu photoredox, phosphate buffering, and mineral concentration. Biochemical/prebiotic steps emphasize stabilization, adsorption, and downstream incorporation rather than claiming a solved endogenous biosynthetic route.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "CH2O2",
+        "iupac_name": "methanoic acid",
+        "common_name": "formate/formic acid",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "HCN",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_005",
+        "formula": "C2H2",
+        "iupac_name": "ethyne",
+        "common_name": "acetylene",
+        "inchi": "InChI=1S/C2H2/c1-2/h1-2H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_006",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_007",
+        "formula": "H2S",
+        "iupac_name": "sulfane",
+        "common_name": "hydrogen sulfide",
+        "inchi": "InChI=1S/H2S/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_008",
+        "formula": "CH2CHCN",
+        "iupac_name": "prop-2-enenitrile",
+        "common_name": "acrylonitrile",
+        "inchi": "InChI=1S/C3H3N/c1-2-3-4/h2H,1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C3H6N2",
+        "iupac_name": "3-aminopropanenitrile",
+        "common_name": "beta-aminopropionitrile",
+        "inchi": "InChI=1S/C3H6N2/c4-2-1-3-5/h1-2,4H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C3H7NO",
+        "iupac_name": "3-aminopropanal",
+        "common_name": "beta-aminopropionaldehyde",
+        "inchi": "InChI=1S/C3H7NO/c4-2-1-3-5/h3H,1-2,4H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "CH2N2",
+        "iupac_name": "cyanamide",
+        "common_name": "cyanamide",
+        "inchi": "InChI=1S/CH2N2/c2-1-3/h2H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C4H6N4",
+        "iupac_name": "diamino maleonitrile",
+        "common_name": "DAMN",
+        "inchi": "InChI=1S/C4H4N4/c5-1-3(7)4(8)2-6/h7-8H2/b4-3-",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "CH4N2O",
+        "iupac_name": "urea",
+        "common_name": "urea",
+        "inchi": "InChI=1S/CH4N2O/c2-1(3)4/h(H4,2,3,4)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "CH5N3",
+        "iupac_name": "guanidine",
+        "common_name": "guanidine",
+        "inchi": "InChI=1S/CH5N3/c2-1(3)4/h(H5,2,3,4)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C5H12N2O2",
+        "iupac_name": "2,5-diaminopentanoic acid",
+        "common_name": "ornithine",
+        "inchi": "InChI=1S/C5H12N2O2/c6-3-1-2-4(7)5(8)9/h4H,1-3,6-7H2,(H,8,9)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C6H13N5",
+        "iupac_name": "2-amino-5-(diaminomethylideneamino)pentanenitrile",
+        "common_name": "arginine alpha-aminonitrile precursor",
+        "inchi": null,
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_017",
+        "formula": "C6H14N4O2",
+        "iupac_name": "2-amino-5-(diaminomethylideneamino)pentanoic acid",
+        "common_name": "arginine",
+        "inchi": "InChI=1S/2C6H14N4O2/c2*7-4(5(11)12)2-1-3-10-6(8)9/h2*4H,1-3,7H2,(H,11,12)(H4,8,9,10)",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_018",
+        "formula": "C5H10N2O3",
+        "iupac_name": "2-amino-5-ureidopentanoic acid",
+        "common_name": "citrulline",
+        "inchi": "InChI=1S/C6H13N3O3/c7-4(5(10)11)2-1-3-9-6(8)12/h4H,1-3,7H2,(H,10,11)(H3,8,9,12)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_019",
+        "formula": "CNO-",
+        "iupac_name": "cyanate",
+        "common_name": "cyanate",
+        "inchi": "InChI=1S/CNO/c2-1-3/q-1",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_020",
+        "formula": "C5H9NO4",
+        "iupac_name": "2-aminopentanedioic acid",
+        "common_name": "glutamic acid",
+        "inchi": "InChI=1S/C5H9NO4/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H,7,8)(H,9,10)/t3-/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_021",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvic acid",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_022",
+        "formula": "NH2OH",
+        "iupac_name": "hydroxylamine",
+        "common_name": "hydroxylamine",
+        "inchi": "InChI=1S/H3NO/c1-2/h2H,1H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_023",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_024",
+        "formula": "C12H24N8O4",
+        "iupac_name": "2-amino-N-(1-amino-1-oxo-5-(diaminomethylideneamino)pentan-2-yl)-5-(diaminomethylideneamino)pentanamide",
+        "common_name": "arginyl-arginine",
+        "inchi": "InChI=1S/C12H26N8O3/c13-7(3-1-5-18-11(14)15)9(21)20-8(10(22)23)4-2-6-19-12(16)17/h7-8H,1-6,13H2,(H,20,21)(H,22,23)(H4,14,15,18)(H4,16,17,19)/t7-,8-/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO2 reduction to formate",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite/mackinawite",
+          "aqueous": "true",
+          "other": "alkaline vent, anoxic, H2-rich serpentinization setting"
+        },
+        "mechanism": "Mineral-surface CO2 hydrogenation on iron-sulfur phases yields reduced one-carbon products including formate.",
+        "reasoning": "Used as a conservative hydrothermal carbon-fixation entry node consistent with Fe-S vent chemistry and greigite/mackinawite catalysis discussed for prebiotic CO2 reduction; this step provides environmental interconnection rather than a direct validated arginine branch (Huber & Wachtershauser, 1997; Jordan et al., 2021; Kitadai, 2015)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Hydrothermal synthesis of pyruvate from reduced carbon",
+        "inputs": [
+          "mol_001",
+          "mol_002",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_021"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "magnetite/greigite",
+          "aqueous": "true",
+          "other": "anoxic vent-ocean interface; included as hydrothermal feedstock generation"
+        },
+        "mechanism": "Successive mineral-catalyzed C1/C2 coupling and reduction produce alpha-keto-acid level carbon skeletons including pyruvate.",
+        "reasoning": "This step is included because pyruvate is a documented input in the only abiotic trace arginine report and because hydrothermal alpha-keto-acid generation is widely discussed in Fe-mineral protometabolism, though not specifically established as a productive arginine route. It is therefore a necessary but partly speculative connector and is not presented as a validated direct arginine synthesis step (Kitadai, 2015; Amend & Shock, 1998; Barge et al., 2019; Fujioka et al., 2009)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "HCN oligomerization to DAMN",
+        "inputs": [
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 photocatalysis with mineral concentration",
+          "aqueous": "true",
+          "other": "UV-irradiated shallow pool, anoxic"
+        },
+        "mechanism": "HCN oligomerizes under irradiation and concentration to tetra-cyanide intermediates represented by DAMN.",
+        "reasoning": "HCN oligomerization to DAMN and related nitrile-rich products is part of classical prebiotic HCN chemistry and supplies the documented hydrolysate pool from which citrulline and urea have been reported. TiO2 and montmorillonite are included as required surface mineral agents for photocatalysis/concentration without changing the literature route (Ferris et al., 1978; Ferris & Chen, 1975)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Hydrolysis of HCN oligomers to citrulline, urea, and cyanate-bearing products",
+        "inputs": [
+          "mol_012",
+          "mol_023"
+        ],
+        "outputs": [
+          "mol_018",
+          "mol_013",
+          "mol_019"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "mineral-assisted hydrolysis/concentration",
+          "aqueous": "true",
+          "other": "wet-dry hydrolysis of HCN oligomer products; anoxic"
+        },
+        "mechanism": "Complex HCN oligomer hydrolysates generate ureido-containing amino acids and small carbamoyl equivalents including urea/cyanate.",
+        "reasoning": "This node is intentionally phrased as a hydrolysate pool rather than a falsely exact stoichiometric conversion, addressing prior overstatement. Ferris et al. reported citrulline in HCN oligomer hydrolysates; urea is also a known hydrolysis product, and cyanate is included as a chemically connected carbamoyl equivalent discussed for prebiotic carbamoylation (Ferris et al., 1978; Juarez et al., 2021)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Photochemical formation of cyanamide from reduced atmospheric precursors",
+        "inputs": [
+          "mol_006",
+          "mol_023"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "sulfide minerals (stibnite/molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "UV-active mineral surfaces",
+          "aqueous": "true",
+          "other": "UV irradiation of reduced atmosphere/ocean interface analog; anoxic"
+        },
+        "mechanism": "Photochemical nitrile-forming chemistry in reduced gas mixtures generates cyanamide, which partitions into surface waters.",
+        "reasoning": "Cyanamide is a central documented prebiotic reagent for guanylation and condensation chemistry. Its formation under UV irradiation of CH4/NH3/H2O mixtures is directly supported, while the explicit surface minerals here provide plausible concentration/photocatalytic support required by the schema (Schimpl, Lemmon & Calvin, 1965; Patel et al., 2015; Lohrmann & Orgel, 1968)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "UV ammonium cyanide chemistry to guanidine",
+        "inputs": [
+          "mol_004",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "298-303K",
+          "pressure": "1 atm",
+          "catalyst": "iron-assisted UV photochemistry on pyrite/TiO2 surfaces",
+          "aqueous": "true",
+          "other": "pH 8.4-8.5, 254 nm UV, 7 days to 10 weeks, anoxic ammonium cyanide solution"
+        },
+        "mechanism": "Extended UV irradiation of ammonium cyanide solutions produces guanidine among stable nitrogen-rich products.",
+        "reasoning": "Lohrmann demonstrated guanidine in 8-20% yield from UV-irradiated ammonium cyanide with iron catalyst; pyrite is used here as the iron-sulfur mineral surface consistent with documented catalytic relevance of pyrite for amino-acid-related prebiotic chemistry. Guanidine is included as a side branch because the literature emphasizes its accessibility and stability, though not as a solved route to arginine (Lohrmann, 1972; Robertson & Miller, 1995; Cleaves et al., 2010)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Cyanosulfidic cross-coupling of HCN and acetylene to acrylonitrile",
+        "inputs": [
+          "mol_004",
+          "mol_005",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite/molybdenite)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "308K",
+          "pressure": "1 atm",
+          "catalyst": "Cu(I)/Cu(II) photoredox in phosphate buffer on sulfide mineral surfaces",
+          "aqueous": "true",
+          "other": "35C, anaerobic, UV-driven cyanosulfidic photochemistry"
+        },
+        "mechanism": "Cu photoredox cyanosulfidic chemistry couples HCN-derived carbon with acetylene to give acrylonitrile.",
+        "reasoning": "This is the first committed step of the best-supported arginine-precursor route and follows the Patel/Tsanakopoulou cyanosulfidic network: HCN + acetylene under Cu photoredox, H2S, phosphate, UV, 35C anaerobic conditions. Mineral agents are specified as schema-required environmental supports without altering the literature core chemistry (Patel et al., 2015; Tsanakopoulou & Sutherland, 2017)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Addition of ammonia to acrylonitrile forming beta-aminopropionitrile",
+        "inputs": [
+          "mol_008",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "308K",
+          "pressure": "1 atm",
+          "catalyst": "mineral concentration in phosphate-buffered surface pool",
+          "aqueous": "true",
+          "other": "35C, anaerobic, following cyanosulfidic sequence"
+        },
+        "mechanism": "Nucleophilic conjugate addition of ammonia to the activated nitrile alkene yields beta-aminopropionitrile.",
+        "reasoning": "This step is explicitly described in the Patel et al. route toward arginine/proline precursors. Mineral concentration is added only as environmental support required by schema, while the chemistry itself follows the literature sequence (Patel et al., 2015; Tsanakopoulou & Sutherland, 2017)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Photoreduction of beta-aminopropionitrile to beta-aminopropionaldehyde",
+        "inputs": [
+          "mol_009",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite/molybdenite)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "308K",
+          "pressure": "1 atm",
+          "catalyst": "Cu(I)/Cu(II) photoredox with H2S and UV on mineral surfaces",
+          "aqueous": "true",
+          "other": "35C, anaerobic cyanosulfidic reduction sequence"
+        },
+        "mechanism": "Photoredox reduction converts the nitrile-derived intermediate pool toward the corresponding amino aldehyde.",
+        "reasoning": "Patel et al. and Tsanakopoulou & Sutherland identify beta-aminopropionaldehyde as the key aldehyde that reacts especially efficiently with cyanamide. This node captures that documented intermediate under the same cyanosulfidic photoredox regime (Patel et al., 2015; Tsanakopoulou & Sutherland, 2017)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Guanylation of beta-aminopropionaldehyde by cyanamide",
+        "inputs": [
+          "mol_010",
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_016"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "308K",
+          "pressure": "1 atm",
+          "catalyst": "mineral concentration in phosphate-buffered aqueous pool",
+          "aqueous": "true",
+          "other": "35C, anaerobic; especially efficient guanylation noted in cyanosulfidic network; subsequent HCN addition/photoreduction folded into same precursor node"
+        },
+        "mechanism": "Primary amine attack on cyanamide installs the guanidino functionality; within the cyanosulfidic network this feeds the arginine alpha-aminonitrile precursor pool.",
+        "reasoning": "Patel et al. explicitly state that the especially efficient reaction of beta-aminopropionaldehyde with cyanamide suggests production of compound 46, the alpha-aminonitrile precursor of arginine, alongside the proline precursor; Tsanakopoulou & Sutherland confirm the route. The exact isolated guanylated subintermediate and subsequent HCN/photoreduction sequence are collapsed here into the literature-referenced precursor node to avoid inventing unsupported intermediates (Patel et al., 2015; Tsanakopoulou & Sutherland, 2017)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Hydrolysis of arginine alpha-aminonitrile precursor to arginine",
+        "inputs": [
+          "mol_016",
+          "mol_023"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "aqueous hydrolysis in concentrated prebiotic pool; anoxic"
+        },
+        "mechanism": "Aminonitrile hydrolysis converts the nitrile to the alpha-amino acid carboxylate.",
+        "reasoning": "Hydrolysis of alpha-aminonitriles to amino acids is standard in Strecker-type prebiotic chemistry, and Patel/Tsanakopoulou specifically identify compound 46 as the alpha-aminonitrile precursor of arginine. This is one of the strongest literature-grounded target-forming steps in the network, though a full continuous experiment to arginine was not reported (Patel et al., 2015; Tsanakopoulou & Sutherland, 2017; Miller & Orgel, 1974)."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Direct guanylation of ornithine by cyanamide to arginine",
+        "inputs": [
+          "mol_015",
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null
+        ],
+        "conditions": {
+          "temperature": "373K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "aqueous guanylation; conceptually prebiotic, though the highest-yield modern demonstration used scandium triflate and 100C"
+        },
+        "mechanism": "The delta-amino group of ornithine attacks cyanamide electrophilic carbon to form the guanidinium side chain of arginine.",
+        "reasoning": "This is the central conceptual two-phase arginine route identified by the literature: first obtain ornithine, then guanylate with cyanamide. The reaction was first demonstrated by Schulze & Winterstein using base, and modern aqueous guanylation by cyanamide is highly efficient under non-prebiotic Sc(OTf)3 catalysis. Because a fully prebiotic end-to-end demonstration is lacking, this node is retained but should be interpreted as plausible rather than established (Schulze & Winterstein, 1899; Tsubokura et al., 2014; Patel et al., 2015)."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Cyanate carbamoylation of ornithine to citrulline",
+        "inputs": [
+          "mol_015",
+          "mol_019"
+        ],
+        "outputs": [
+          "mol_018"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "mild aqueous carbamoylation using kinetically persistent cyanate"
+        },
+        "mechanism": "The terminal amino group of ornithine is carbamoylated by cyanate to give citrulline.",
+        "reasoning": "Juarez et al. argue that cyanate is a more kinetically stable prebiotic carbamoyl donor than carbamoyl phosphate, making ornithine-to-citrulline plausible in a prebiotic urea-cycle analog. This remains hypothetical and is included as an explicitly exploratory branch rather than an established route (Juarez et al., 2021; Ferris et al., 1978)."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Speculative conversion of citrulline and cyanamide to arginine pool",
+        "inputs": [
+          "mol_018",
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "concentrated drying pool; mechanistically unresolved"
+        },
+        "mechanism": "Hypothetical guanyl-transfer/rearrangement chemistry connects ureido and guanyl pools to arginine.",
+        "reasoning": "This step is explicitly speculative and is included only because the literature discusses a prebiotic urea-cycle analog as a proposed route to arginine. No direct experimental demonstration was identified for citrulline plus cyanamide giving arginine, so this node addresses the literature gap rather than claiming validation (Ferris et al., 1978; Juarez et al., 2021; Miller & Orgel, 1974)."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Trace arginine formation from pyruvic acid and hydroxylamine in supercritical CO2/H2O",
+        "inputs": [
+          "mol_021",
+          "mol_022",
+          "mol_001",
+          "mol_023"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "333K",
+          "pressure": ">73 atm",
+          "catalyst": "supercritical CO2/H2O with mineral surfaces",
+          "aqueous": "true",
+          "other": "60C, supercritical CO2/H2O after acid hydrolysis workup; trace yield"
+        },
+        "mechanism": "Complex multistep condensation/reduction chemistry under supercritical CO2/H2O reportedly gives trace arginine after hydrolysis, though the mechanism is unresolved.",
+        "reasoning": "Fujioka et al. reported 0.32 micromol arginine from hydroxylamine hydrochloride plus pyruvic acid under supercritical CO2/H2O conditions, but the yield was trace and the mechanism was not elucidated. This node is therefore retained as a literature-backed but very weak branch, explicitly subordinate to the cyanosulfidic route and constrained to the reported conditions (Fujioka et al., 2009; K\u00f6rner et al., 2021)."
+      },
+      {
+        "id": "rxn_016",
+        "name": "Montmorillonite-mediated selective adsorption and protection of arginine",
+        "inputs": [
+          "mol_017"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null
+        ],
+        "conditions": {
+          "temperature": "278-313K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "pH 5-7 clay-water interface; cation-exchange adsorption"
+        },
+        "mechanism": "Arginine partitions into montmorillonite interlayers through guanidinium cation exchange, increasing concentration and protection.",
+        "reasoning": "Catalano et al. show that montmorillonite selectively adsorbs arginine 30-50 times more strongly than neutral amino acids, providing a realistic post-synthesis preservation and concentration mechanism. The self-loop form is used to keep the molecule graph connected while representing a documented state transition rather than a new covalent product (Catalano et al., 2024)."
+      },
+      {
+        "id": "rxn_017",
+        "name": "Dry-heat condensation of arginine to arginyl-arginine",
+        "inputs": [
+          "mol_017"
+        ],
+        "outputs": [
+          "mol_024"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null
+        ],
+        "conditions": {
+          "temperature": "373-393K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "false",
+          "other": "dry high-temperature clay-assisted peptide bond formation"
+        },
+        "mechanism": "Concentrated arginine undergoes dehydration-condensation to short peptides under dry heat, facilitated by clay interlayers.",
+        "reasoning": "Zhou et al. reported peptide bond formation in montmorillonite-arginine interlayer complexes under dry high-temperature conditions. This step is used only as downstream biochemical utilization of any arginine formed, not as evidence for arginine synthesis itself (Zhou et al., 2019; Catalano et al., 2024)."
+      },
+      {
+        "id": "rxn_018",
+        "name": "Environmental delivery of ornithine from spark-discharge or meteoritic source into surface pools",
+        "inputs": [
+          "mol_006",
+          "mol_004",
+          "mol_023"
+        ],
+        "outputs": [
+          "mol_015",
+          "mol_020"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "surface mineral concentration of exogenous/endogenous amino acid inventory",
+          "aqueous": "true",
+          "other": "represents documented prebiotic availability in spark discharge samples and meteorite delivery rather than a single mechanistically resolved transformation"
+        },
+        "mechanism": "Atmospheric discharge and exogenous input populate surface pools with glutamate and ornithine, where mineral surfaces concentrate them.",
+        "reasoning": "The literature strongly supports prebiotic availability of ornithine and glutamate, but not a resolved in situ synthesis from simple feedstocks within the arginine network. To avoid inventing unsupported ornithine-forming chemistry while keeping the graph connected, this node explicitly represents environmental delivery/concentration consistent with Miller reanalysis and meteoritic findings (Johnson et al., 2008; Parker et al., 2011; Meierhenrich et al., 2004; Naraoka et al., 2023)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Canonical cyanosulfidic arginine precursor pathway",
+        "description": "Best-supported literature route from HCN chemistry through acrylonitrile, beta-aminopropionitrile, beta-aminopropionaldehyde, cyanamide guanylation, and alpha-aminonitrile hydrolysis to arginine.",
+        "reaction_sequence": [
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_009",
+          "mol_010",
+          "mol_011",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Cyanamide-supported cyanosulfidic pathway with independent cyanamide source",
+        "description": "Same core Sutherland route but explicitly sourcing cyanamide from UV photochemistry before guanylation.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_008",
+          "mol_009",
+          "mol_010",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Ornithine direct guanylation pathway",
+        "description": "Documented conceptual two-phase route in which environmentally available ornithine reacts directly with cyanamide to yield arginine.",
+        "reaction_sequence": [
+          "rxn_018",
+          "rxn_005",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_015",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Ornithine guanylation followed by clay protection",
+        "description": "Direct guanylation of ornithine to arginine followed by montmorillonite adsorption for preservation and concentration.",
+        "reaction_sequence": [
+          "rxn_018",
+          "rxn_005",
+          "rxn_012",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_015",
+          "mol_011",
+          "mol_017"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Ornithine guanylation with peptide-utilization branch",
+        "description": "Arginine formed by direct guanylation is subsequently incorporated into a short peptide under dry-heating biochemical conditions.",
+        "reaction_sequence": [
+          "rxn_018",
+          "rxn_005",
+          "rxn_012",
+          "rxn_017"
+        ],
+        "key_intermediates": [
+          "mol_015",
+          "mol_011",
+          "mol_017"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "HCN oligomer hydrolysate to citrulline analog pathway",
+        "description": "Exploratory pathway using citrulline detected in HCN oligomer hydrolysates as entry to a hypothetical prebiotic urea-cycle analog toward arginine.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_018",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Ornithine cyanate carbamoylation to citrulline then speculative arginine",
+        "description": "Hypothetical prebiotic urea-cycle analog starting from environmentally available ornithine, carbamoylation by cyanate to citrulline, then unresolved conversion to arginine.",
+        "reaction_sequence": [
+          "rxn_018",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_015",
+          "mol_019",
+          "mol_018"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Hydrothermal feedstock to trace supercritical arginine",
+        "description": "Weak literature branch linking hydrothermal pyruvate generation to the trace supercritical CO2/H2O arginine report.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_021",
+          "mol_022"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Hydrothermal carbon to surface cyanosulfidic arginine pathway",
+        "description": "Cross-environment pathway emphasizing hydrothermal reduced-carbon generation feeding surface inventories that ultimately support cyanosulfidic arginine precursor synthesis.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_005",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_021",
+          "mol_011",
+          "mol_008",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "HCN oligomer hydrolysate and ornithine convergence pathway",
+        "description": "Convergent exploratory route where HCN oligomer hydrolysis provides cyanate/citrulline chemistry while independent ornithine availability supplies the C5 backbone before final arginine emergence.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_018",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_019",
+          "mol_015",
+          "mol_018"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_011",
+      "mol_015",
+      "mol_016",
+      "mol_017"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_011",
+        "incoming_reactions": [
+          "rxn_005"
+        ],
+        "outgoing_reactions": [
+          "rxn_010",
+          "rxn_012",
+          "rxn_014"
+        ]
+      },
+      {
+        "molecule_id": "mol_015",
+        "incoming_reactions": [
+          "rxn_018"
+        ],
+        "outgoing_reactions": [
+          "rxn_012",
+          "rxn_013"
+        ]
+      },
+      {
+        "molecule_id": "mol_017",
+        "incoming_reactions": [
+          "rxn_011",
+          "rxn_012",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "outgoing_reactions": [
+          "rxn_016",
+          "rxn_017"
+        ]
+      },
+      {
+        "molecule_id": "mol_018",
+        "incoming_reactions": [
+          "rxn_004",
+          "rxn_013"
+        ],
+        "outgoing_reactions": [
+          "rxn_014"
+        ]
+      }
+    ]
+  },
+  "config": "C"
+}

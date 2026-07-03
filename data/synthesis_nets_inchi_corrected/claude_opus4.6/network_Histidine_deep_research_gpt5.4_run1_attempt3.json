@@ -1,0 +1,1139 @@
+{
+  "target_molecule": "Histidine",
+  "network": {
+    "target_molecule": "Histidine",
+    "overall_strategy": "The network implements the experimentally demonstrated Shen et al. (1987, 1990) route as its validated core: erythrose + formamidine \u2192 imidazole-4-acetaldehyde \u2192 Strecker \u2192 histidine, with the critical imidazole-4-acetaldehyde serving as the central hub. Four hub molecules (HCN, formaldehyde, erythrose, imidazole-4-acetaldehyde) create a densely connected graph. Upstream carbon enters via two independent routes: (1) hydrothermal CO\u2082 reduction on greigite/magnetite \u2192 formate \u2192 formaldehyde \u2192 formose sugars, and (2) UV-driven HCN photoredox \u2192 glycolaldehyde/glyceraldehyde (Ritson & Sutherland, 2012). Both converge on erythrose via aldol chemistry. Three parallel routes generate imidazole-4-acetaldehyde: direct condensation (1.6% yield), glycol dehydration (via 6.8% glycol), and ethanol oxidation (via 5.4% ethanol). Two Strecker endpoints address the pH staging problem identified in the literature: classic Strecker at pH 9\u201310 and phosphoro-Strecker at pH ~7 (Ashe et al., 2019). The ethanol oxidation step (rxn_012) and phosphoro-Strecker for imidazole-substituted aldehydes (rxn_015) are explicitly flagged as speculative but prebiotically motivated. Pathways that compound speculative steps are identified as lower-confidence hypotheses for experimental testing.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "Carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "Hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "ammonia",
+        "common_name": "Ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "Hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_005",
+        "formula": "CHOO-",
+        "iupac_name": "formate",
+        "common_name": "Formate",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)/p-1",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_006",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "Formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C2H4O2",
+        "iupac_name": "2-hydroxyacetaldehyde",
+        "common_name": "Glycolaldehyde",
+        "inchi": "InChI=1S/C2H4O2/c3-1-2-4/h1,4H,2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C4H8O4",
+        "iupac_name": "(2R,3R)-2,3,4-trihydroxybutanal",
+        "common_name": "D-Erythrose",
+        "inchi": "InChI=1S/C4H8O4/c5-1-3(7)4(8)2-6/h1,3-4,6-8H,2H2/t3-,4+/m0/s1",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "CH4N2",
+        "iupac_name": "methanimidamide",
+        "common_name": "Formamidine",
+        "inchi": "InChI=1S/CH4N2/c2-1-3/h1H,(H3,2,3)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C5H6N2O",
+        "iupac_name": "2-(1H-imidazol-4-yl)acetaldehyde",
+        "common_name": "Imidazole-4-acetaldehyde",
+        "inchi": "InChI=1S/C5H6N2O/c8-2-1-5-3-6-4-7-5/h2-4H,1H2,(H,6,7)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C5H8N2O2",
+        "iupac_name": "1-(1H-imidazol-4-yl)ethane-1,2-diol",
+        "common_name": "Imidazole-4-glycol",
+        "inchi": "InChI=1S/C5H8N2O2/c8-2-5(9)4-1-6-3-7-4/h1,3,5,8-9H,2H2,(H,6,7)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C5H8N2O",
+        "iupac_name": "2-(1H-imidazol-4-yl)ethanol",
+        "common_name": "Imidazole-4-ethanol",
+        "inchi": "InChI=1S/C5H8N2O/c8-2-1-5-3-6-4-7-5/h3-4,8H,1-2H2,(H,6,7)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C6H7N4",
+        "iupac_name": "2-amino-3-(1H-imidazol-4-yl)propanenitrile",
+        "common_name": "Histidyl-aminonitrile",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C6H9N3O2",
+        "iupac_name": "(S)-2-amino-3-(1H-imidazol-4-yl)propanoic acid",
+        "common_name": "L-Histidine",
+        "inchi": "InChI=1S/C6H9N3O2/c7-5(6(10)11)1-4-2-8-3-9-4/h2-3,5H,1,7H2,(H,8,9)(H,10,11)/t5-/m0/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C3H6O3",
+        "iupac_name": "(2R)-2,3-dihydroxypropanal",
+        "common_name": "D-Glyceraldehyde",
+        "inchi": "InChI=1S/C3H6O3/c4-1-3(6)2-5/h1,3,5-6H,2H2/t3-/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_016",
+        "formula": "H6N2O2P",
+        "iupac_name": "diamidophosphate",
+        "common_name": "DAP (Diamidophosphate)",
+        "inchi": "InChI=1S/H5N2O2P/c1-5(2,3)4/h(H5,1,2,3,4)/p-1",
+        "role": "starting",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_017",
+        "formula": "C6H9N4O3P",
+        "iupac_name": "N-phosphoryl-2-amino-3-(1H-imidazol-4-yl)propanenitrile",
+        "common_name": "N-Phosphoryl-histidyl-aminonitrile",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_018",
+        "formula": "H2O",
+        "iupac_name": "water",
+        "common_name": "Water",
+        "inchi": "InChI=1S/H2O/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO\u2082 reduction to formate on greigite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_005"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe\u2083S\u2084)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-200 bar)",
+          "catalyst": "greigite (Fe\u2083S\u2084)",
+          "aqueous": "true",
+          "other": "Alkaline hydrothermal vent, pH 9-11, H\u2082-rich serpentinization fluids"
+        },
+        "mechanism": "CO\u2082 is reduced to formate via surface-catalyzed hydrogenation on greigite (Fe\u2083S\u2084), which is structurally analogous to the [Fe\u2084S\u2084] clusters in modern acetyl-CoA pathway enzymes. H\u2082 from serpentinization provides reducing equivalents. The reaction proceeds through a surface-bound carboxylate intermediate.",
+        "reasoning": "Greigite-catalyzed CO\u2082 reduction to formate is well-established in hydrothermal prebiotic chemistry as an analog of the Wood-Ljungdahl pathway. This provides the first carbon fixation step. The reaction is thermodynamically favorable under alkaline vent conditions with abundant H\u2082 from serpentinization (reviewed in multiple origins-of-life contexts). Formate serves as the precursor to formaldehyde in the next step."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Hydrothermal formate reduction to formaldehyde",
+        "inputs": [
+          "mol_005",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_006",
+          "mol_018"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe\u2083O\u2084)",
+          "elemental iron (Fe\u2070)"
+        ],
+        "conditions": {
+          "temperature": "370-420K",
+          "pressure": "high (50-200 bar)",
+          "catalyst": "magnetite (Fe\u2083O\u2084) and Fe\u2070",
+          "aqueous": "true",
+          "other": "Strongly reducing conditions, native iron surfaces, subseafloor hydrothermal"
+        },
+        "mechanism": "Formate is further reduced to formaldehyde on native iron or magnetite surfaces. Fe\u2070 acts as a strong electron donor, converting formate to formaldehyde via two-electron reduction. The reaction is thermodynamically challenging at equilibrium but may be kinetically accessible on reactive mineral surfaces under high H\u2082 fugacity.",
+        "reasoning": "Formate-to-formaldehyde reduction is thermodynamically uphill under many conditions but becomes more favorable under high H\u2082 pressure and on strongly reducing mineral surfaces (Fe\u2070, magnetite). Fischer-Tropsch-type chemistry on magnetite demonstrates reduction of C\u2081 oxygenates. This step provides formaldehyde for downstream formose chemistry. The difficulty of this step is a recognized bottleneck; alternative formaldehyde sources (e.g., photoreduction of CO\u2082, meteoritic delivery) may supplement."
+      },
+      {
+        "id": "rxn_003",
+        "name": "UV photoredox synthesis of sugars from HCN",
+        "inputs": [
+          "mol_004",
+          "mol_018"
+        ],
+        "outputs": [
+          "mol_007",
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO\u2082 (anatase)",
+          "copper cyanide (CuCN) photocatalyst"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "Cu(I) cyanometallate complexes",
+          "aqueous": "true",
+          "other": "UV irradiation (\u03bb < 300 nm, no ozone layer), shallow pools, cyanide-rich solution"
+        },
+        "mechanism": "HCN undergoes Cu-catalyzed photoreduction in UV-irradiated aqueous solution. Cu(CN)\u2093 complexes act as photocatalysts that disproportionate HCN: one equivalent is reduced to form C-H bonds (generating glycolaldehyde and glyceraldehyde) while another is oxidized to cyanate or cyanogen. The mechanism involves Cu(I)/Cu(II) cycling driven by UV photons.",
+        "reasoning": "Ritson & Sutherland (2012, Nature Chemistry) demonstrated that simple sugars including glycolaldehyde and glyceraldehyde can be formed from HCN by UV irradiation in the presence of copper cyanide complexes. This photoredox pathway provides an independent, non-formose route to the C\u2082 and C\u2083 sugar building blocks needed for erythrose synthesis, operating under surface UV conditions plausible for early Earth without an ozone layer. TiO\u2082 (anatase) in mineral beds provides additional UV photocatalytic activity."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Formose reaction: formaldehyde dimerization to glycolaldehyde",
+        "inputs": [
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "330-370K",
+          "pressure": "1 atm",
+          "catalyst": "Ca(OH)\u2082 and borate minerals",
+          "aqueous": "true",
+          "other": "Warm evaporitic pools, alkaline pH 10-11, requires glycolaldehyde trace as autocatalytic initiator"
+        },
+        "mechanism": "The formose reaction begins with the umpolung (Cannizzaro-type) dimerization of formaldehyde to glycolaldehyde, catalyzed by base (Ca(OH)\u2082). Once glycolaldehyde is present, the reaction becomes autocatalytic. Borate minerals complex with glycolaldehyde, selectively stabilizing it against further uncontrolled aldol reactions and preventing tar formation.",
+        "reasoning": "The formose reaction is the classic prebiotic route to sugars from formaldehyde, well-documented since Butlerow (1861). Borate stabilization of sugars against degradation was demonstrated by Ricardo et al. (2004), who showed borate complexation channels formose products toward specific pentoses and tetroses rather than intractable tar. This reaction provides glycolaldehyde as the key C\u2082 building block for erythrose synthesis via aldol condensation. Shen et al. (1987) cite prior demonstrations of monosaccharide formation including erythrose as established prebiotic chemistry."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Aldol condensation of glycolaldehyde to erythrose",
+        "inputs": [
+          "mol_007",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "Borate minerals for product stabilization, clay surface catalysis",
+          "aqueous": "true",
+          "other": "Evaporitic pool, mildly alkaline pH ~8-9, concentration by evaporation assists coupling"
+        },
+        "mechanism": "Two molecules of glycolaldehyde undergo base-catalyzed aldol condensation. The enolate of one glycolaldehyde attacks the carbonyl of the other, forming the C\u2084 tetrose erythrose. Borate minerals complex with the diol products, stabilizing erythrose against further aldol reaction or retro-aldol fragmentation. Montmorillonite provides surface for concentration and mild base catalysis.",
+        "reasoning": "Aldol condensation of glycolaldehyde to tetroses (erythrose and threose) is a standard step in formose chemistry. Borate stabilization of the tetrose product prevents runaway polymerization to complex sugars and tar (Ricardo et al., 2004). Shen et al. (1987) explicitly state that erythrose can be produced under prebiotic conditions and use it as a feedstock for imidazole synthesis. The concentration requirement (Shen used 0.03 M erythrose) implies evaporitic environments for achieving sufficient local concentrations."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Aldol condensation of glyceraldehyde and formaldehyde to erythrose",
+        "inputs": [
+          "mol_015",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "Borate minerals, clay surface concentration",
+          "aqueous": "true",
+          "other": "Evaporitic pool, mildly alkaline pH, C\u2083 + C\u2081 aldol"
+        },
+        "mechanism": "Glyceraldehyde (C\u2083) undergoes aldol addition with formaldehyde (C\u2081) at the terminal position, forming the C\u2084 aldose erythrose. This is the C\u2083 + C\u2081 homologation branch of formose chemistry. Borate stabilizes the product.",
+        "reasoning": "C\u2083 + C\u2081 aldol condensation is a known branch of formose chemistry that provides an alternative route to erythrose independent of glycolaldehyde self-aldol. This pathway is important because it connects the photochemical glyceraldehyde (from Ritson & Sutherland 2012) directly to erythrose when combined with hydrothermal formaldehyde, creating a cross-environment convergence. The reaction represents standard aldehyde aldol chemistry under mild aqueous conditions."
+      },
+      {
+        "id": "rxn_007",
+        "name": "HCN-ammonia condensation to formamidine",
+        "inputs": [
+          "mol_004",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "Montmorillonite for concentration/adsorption",
+          "aqueous": "true",
+          "other": "Requires concentration mechanism (evaporation, clay adsorption, or eutectic freezing); problematic under dilute conditions"
+        },
+        "mechanism": "HCN reacts with ammonia to form formamidine (HC(=NH)NH\u2082) via nucleophilic addition of NH\u2083 to the CN triple bond, followed by tautomerization. The initial product is aminomethanimine, which equilibrates to formamidine. Montmorillonite concentrates HCN and NH\u2083 on its interlayer surfaces, partially overcoming the dilution problem.",
+        "reasoning": "Shen et al. (1987) identify formamidine as a known intermediate in HCN-to-purine oligomerization chemistry and cite it as a plausible prebiotic reagent. However, they explicitly note that 'there are problems of synthesizing formamidine under dilute NH\u2083 + HCN conditions' (citing Sanchez et al.). This is a recognized bottleneck. Concentration on montmorillonite surfaces or in evaporitic settings may partially address the dilution challenge. Formamidine is also produced in HCN tetramer (DAMN) chemistry relevant to nucleobase synthesis."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Erythrose-formamidine condensation to imidazole-4-acetaldehyde (direct)",
+        "inputs": [
+          "mol_008",
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals (apatite)"
+        ],
+        "conditions": {
+          "temperature": "353K (80\u00b0C)",
+          "pressure": "1 atm",
+          "catalyst": "None required (homogeneous aqueous); montmorillonite assists concentration",
+          "aqueous": "true",
+          "other": "pH ~6 (optimum from Shen et al. Fig. 8), 0.03 M erythrose + 0.03 M formamidine, 12 hours. Yield: 1.6% based on erythrose."
+        },
+        "mechanism": "Erythrose undergoes condensation with formamidine to directly form imidazole-4-acetaldehyde. Shen et al. propose that erythrose may first dehydrate to a glyoxal-type derivative (hydroxyethylglyoxal), which then reacts with formamidine to construct the imidazole ring with the acetaldehyde side chain intact. The pH optimum near 6 reflects balance between acid-catalyzed dehydration and base-assisted ring closure.",
+        "reasoning": "Shen et al. (1987, Origins of Life and Evolution of the Biosphere) report formation of imidazole-4-acetaldehyde at 1.6% yield (based on erythrose) from erythrose + formamidine at 80\u00b0C, pH ~6, 12 hours. Product identification used TLC, HPLC, and LC-MS comparison to authentic standard. This is the most direct route to the critical aldehyde hub. Shen et al. discuss the pH dependence (their Figure 8) showing a clear optimum near pH 6 with drop-off at both higher and lower pH. Montmorillonite assists by pre-concentrating reactants from dilute solution."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Erythrose-formamidine condensation to imidazole-4-glycol",
+        "inputs": [
+          "mol_008",
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals (apatite)"
+        ],
+        "conditions": {
+          "temperature": "353K (80\u00b0C)",
+          "pressure": "1 atm",
+          "catalyst": "None required; montmorillonite for concentration",
+          "aqueous": "true",
+          "other": "pH ~6, same conditions as rxn_008 (same reaction mixture). Yield: 6.8% based on erythrose (higher than aldehyde)."
+        },
+        "mechanism": "Erythrose condenses with formamidine to form imidazole-4-glycol, a diol intermediate. This is produced in the same reaction mixture as imidazole-4-acetaldehyde (rxn_008) but represents a less-dehydrated product where the side chain retains two hydroxyl groups. The higher yield (6.8% vs 1.6%) suggests the glycol is kinetically favored under these conditions.",
+        "reasoning": "Shen et al. (1987, Origins of Life and Evolution of the Biosphere) report imidazole-4-glycol at 6.8% yield from erythrose + formamidine, identified by LC/MS. The glycol is the MAJOR imidazole product of this reaction, and Shen et al. explicitly discuss its dehydration as a route to imidazole-4-acetaldehyde. They compare this chemistry to the enzymatic synthesis of imidazole glycerol phosphate in modern histidine biosynthesis, suggesting chemical continuity between prebiotic and biochemical pathways. The glycol thus serves as a reservoir that can be funneled to the aldehyde via dehydration (rxn_010)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Acid-catalyzed dehydration of imidazole-4-glycol to imidazole-4-acetaldehyde",
+        "inputs": [
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_010",
+          "mol_018"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "sulfide minerals (stibnite)"
+        ],
+        "conditions": {
+          "temperature": "340-370K",
+          "pressure": "1 atm",
+          "catalyst": "Acid catalysis (pH < 6), clay surface dehydration",
+          "aqueous": "true",
+          "other": "Wet-dry cycling drives dehydration; clay surface provides mild Br\u00f8nsted acid sites. Sequential from rxn_009: glycol forms at pH ~6 then dehydrates under drying/acidification."
+        },
+        "mechanism": "Imidazole-4-glycol undergoes acid-catalyzed dehydration. Loss of one hydroxyl as water, followed by tautomerization, yields imidazole-4-acetaldehyde. The diol-to-aldehyde conversion proceeds through a vinyl alcohol (enol) intermediate. Montmorillonite clay provides Br\u00f8nsted acid sites and reduced water activity during dry phases that favor elimination.",
+        "reasoning": "Shen et al. (1987) explicitly propose dehydration of imidazole-4-glycol as a route to imidazole-4-acetaldehyde and 'sketch acid-catalyzed dehydration possibilities and likely intermediates.' This is a chemically straightforward diol dehydration. Wet-dry cycling in evaporitic surface settings naturally provides the pH and water-activity transitions needed: the glycol forms in aqueous solution at pH ~6, then drying on clay surfaces acidifies and removes water, driving the equilibrium toward the aldehyde. This addresses the pH staging challenge because glycol formation and its dehydration can occur sequentially in the same pool over a wet-dry cycle."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Erythrose + formaldehyde + ammonia condensation to imidazole-4-ethanol",
+        "inputs": [
+          "mol_008",
+          "mol_006",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals (apatite)"
+        ],
+        "conditions": {
+          "temperature": "353K (80\u00b0C)",
+          "pressure": "1 atm",
+          "catalyst": "None required; montmorillonite for concentration",
+          "aqueous": "true",
+          "other": "pH ~6, aqueous. Yield: 5.4% based on erythrose. Avoids formamidine requirement by using CH\u2082O + NH\u2083 instead."
+        },
+        "mechanism": "Erythrose reacts with formaldehyde and ammonia to form imidazole-4-ethanol. Shen et al. propose that formaldehyde + ammonia generates an aminomethanol or related imine in situ that substitutes for formamidine in the ring-closure reaction. The ethanol product retains full side-chain reduction relative to the aldehyde.",
+        "reasoning": "Shen et al. (1987, Origins of Life and Evolution of the Biosphere) report imidazole-4-ethanol at 5.4% yield from erythrose + formaldehyde + ammonia. This is significant because it BYPASSES the formamidine bottleneck: instead of requiring pre-formed formamidine (which is problematic under dilute conditions, as Shen et al. note), the imidazole ring is constructed from formaldehyde + ammonia directly. The 5.4% yield is actually higher than the 1.6% yield of direct aldehyde formation via formamidine. However, conversion to the aldehyde (rxn_012) requires oxidation, which is an open problem."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Oxidation of imidazole-4-ethanol to imidazole-4-acetaldehyde (SPECULATIVE)",
+        "inputs": [
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS\u2082)",
+          "magnetite (Fe\u2083O\u2084)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "moderate to high",
+          "catalyst": "Pyrite surface (Fe\u00b3\u207a/Fe\u00b2\u207a redox cycling), ferric iron",
+          "aqueous": "true",
+          "other": "SPECULATIVE: This oxidation has not been experimentally demonstrated for this specific substrate. Shen et al. (1987) suggest ferric ion, elemental sulfur, and aldehydes as possible oxidants but provide no experimental validation. Hydrothermal Fe\u00b3\u207a/Fe\u00b2\u207a cycling on pyrite surfaces is proposed as the most prebiotically plausible mechanism."
+        },
+        "mechanism": "Primary alcohol oxidation to aldehyde via Fe\u00b3\u207a-mediated dehydrogenation on pyrite surfaces. Imidazole-4-ethanol adsorbs on the pyrite surface, undergoes two-electron oxidation to the aldehyde, and Fe\u00b3\u207a is reduced to Fe\u00b2\u207a. Fe\u00b2\u207a is re-oxidized to Fe\u00b3\u207a by cycling through oxidizing hydrothermal conditions or by coupling to sulfur redox chemistry on the pyrite surface.",
+        "reasoning": "Shen et al. (1987) explicitly state that 'the oxidizing agent is unclear' for the ethanol-to-aldehyde conversion and suggest 'plausible dehydrogenation agents could include aldehydes themselves, elemental sulfur, and traces of ferric ion' on the primitive Earth. This is flagged as the MOST SPECULATIVE step in the network. Pyrite and ferric iron are proposed because they are abundant in hydrothermal settings and well-documented as prebiotic electron acceptors. Madrigal-Trejo et al. (2021) demonstrate that histidine interacts with pyrite surfaces at close approach distances, supporting the premise that imidazole-bearing molecules can adsorb on pyrite for surface chemistry. However, direct experimental demonstration of this specific oxidation on mineral surfaces remains an explicit open problem in the literature."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Strecker synthesis: imidazole-4-acetaldehyde + HCN + NH\u2083 \u2192 histidyl-aminonitrile",
+        "inputs": [
+          "mol_010",
+          "mol_004",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "None (homogeneous aqueous Strecker)",
+          "aqueous": "true",
+          "other": "pH 9-10 (alkaline, near pKa of NH\u2084\u207a/NH\u2083 for optimal imine formation). Requires spatial or temporal pH shift from the pH ~6 imidazole-forming conditions. HCN at \u226510\u207b\u2076 M sufficient for Strecker (Stribling & Miller, 1987)."
+        },
+        "mechanism": "Classic Strecker synthesis: (1) NH\u2083 attacks the aldehyde carbonyl of imidazole-4-acetaldehyde to form a carbinolamine, (2) dehydration gives an imine (Schiff base), (3) nucleophilic addition of CN\u207b to the imine gives the \u03b1-aminonitrile (histidyl-aminonitrile). Alkaline pH favors both free NH\u2083 (for imine formation) and CN\u207b (for nucleophilic addition).",
+        "reasoning": "Shen et al. (1990, Journal of Molecular Evolution) report conversion of imidazole-4-acetaldehyde to histidine by addition of HCN and ammonia, with 3.5% yield relative to erythrose. The Strecker mechanism (aldehyde + NH\u2083 + HCN \u2192 aminonitrile \u2192 amino acid) is the canonical route and is explicitly invoked by Shen et al. (1987, 1990). The pH requirement (9-10) creates a staging challenge relative to imidazole formation (pH ~6), which Shen et al. acknowledge. Stribling & Miller (1987) estimate that oceanic HCN at ~4\u00d710\u207b\u2076 M (pH 8, 0\u00b0C) can sustain Strecker chemistry, though concentrated microenvironments are more favorable."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Hydrolysis of histidyl-aminonitrile to histidine",
+        "inputs": [
+          "mol_013",
+          "mol_018"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "None (hydrolysis in aqueous solution)",
+          "aqueous": "true",
+          "other": "Mild heating accelerates hydrolysis. Nitrile \u2192 amide \u2192 carboxylic acid. Acidification from alkaline Strecker pH can assist. Can occur gradually over days to weeks at ambient temperature."
+        },
+        "mechanism": "The nitrile group of histidyl-aminonitrile undergoes stepwise hydrolysis: first to the amide (histidinamide) by nucleophilic attack of water on the nitrile carbon, then to the carboxylic acid (histidine) by further hydrolysis of the amide. The overall transformation is \u03b1-aminonitrile \u2192 \u03b1-amino acid.",
+        "reasoning": "Nitrile hydrolysis to carboxylic acid is the final step of the Strecker synthesis and is well-established in prebiotic chemistry. Shen et al. (1990) report the complete conversion without isolating the aminonitrile intermediate, indicating that hydrolysis occurs readily under their conditions. The overall yield of 3.5% histidine relative to erythrose (Shen et al., 1990) encompasses both the Strecker addition and hydrolysis steps. Thermospray LC-MS/MS confirmed histidine identity."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Phosphoro-Strecker synthesis of N-phosphoryl-histidyl-aminonitrile at neutral pH (SPECULATIVE for this substrate)",
+        "inputs": [
+          "mol_010",
+          "mol_004",
+          "mol_016"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "phosphate minerals (struvite/apatite)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "DAP (diamidophosphate) as stoichiometric reagent; phosphate minerals may generate DAP",
+          "aqueous": "true",
+          "other": "pH ~7 (neutral, optimal for phosphoro-Strecker per Ashe et al. 2019). SPECULATIVE: Ashe et al. demonstrated this for simple aldehydes but not for imidazole-4-acetaldehyde specifically. Resolves pH staging problem: imidazole formation (pH ~6) and phosphoro-Strecker (pH ~7) are nearly compatible."
+        },
+        "mechanism": "The phosphoro-Strecker modifies classic Strecker by replacing NH\u2083 with diamidophosphate (DAP). DAP attacks the aldehyde to form a phosphorylated hemiaminal, which loses water to give a phosphorylated imine. CN\u207b adds to give N-phosphorylated aminonitrile. The key advantage is that DAP's nucleophilicity at neutral pH obviates the need for alkaline conditions required by free NH\u2083.",
+        "reasoning": "Ashe et al. (2019, Communications Chemistry) demonstrated that aldehyde + HCN + diamidophosphate yields N-phosphorylated aminonitriles at pH ~7 with high yields across diverse aldehydes, explicitly contrasting this with 'typical Strecker reactions that require alkaline (pH 9-10) conditions.' This is highly relevant for histidine because it resolves the pH staging problem: imidazole-4-acetaldehyde forms optimally at pH ~6 (Shen et al., 1987), and phosphoro-Strecker operates at pH ~7, making the two steps nearly compatible in the same environment without drastic pH shifts. HOWEVER, Ashe et al. did not test imidazole-4-acetaldehyde, so this extrapolation is flagged as speculative. The imidazole ring's nitrogen atoms could potentially interfere with or participate in DAP chemistry, requiring experimental validation."
+      },
+      {
+        "id": "rxn_016",
+        "name": "Hydrolysis of N-phosphoryl-histidyl-aminonitrile to histidine",
+        "inputs": [
+          "mol_017",
+          "mol_018"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "None (aqueous hydrolysis)",
+          "aqueous": "true",
+          "other": "Sequential hydrolysis: dephosphorylation of N-P bond, then nitrile hydrolysis to carboxylic acid. Mild heating or extended time."
+        },
+        "mechanism": "N-phosphoryl-aminonitrile undergoes hydrolytic dephosphorylation (releasing phosphate/phosphoramidate), followed by nitrile hydrolysis (nitrile \u2192 amide \u2192 carboxylic acid) to yield histidine. The two hydrolysis steps may occur in either order depending on conditions.",
+        "reasoning": "Ashe et al. (2019) report that N-phosphorylated aminonitriles hydrolyze to yield free amino acids, providing a complete route from aldehyde to amino acid via the phosphoro-Strecker. The hydrolysis step releases the phosphoryl group and converts the nitrile to carboxylic acid. While not demonstrated for the imidazole-substituted substrate, the mechanism is general for N-phosphoryl aminonitriles."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Hydrothermal formose \u2192 direct aldehyde \u2192 classic Strecker (primary validated route)",
+        "description": "The most literature-supported pathway. Hydrothermal CO\u2082 reduction provides formaldehyde for formose chemistry, which generates erythrose. Erythrose + formamidine condenses directly to imidazole-4-acetaldehyde at pH ~6 (1.6% yield, Shen et al. 1987). Classic Strecker with HCN + NH\u2083 at alkaline pH converts to histidine (3.5% overall yield, Shen et al. 1990). Requires pH staging from ~6 to ~9-10.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_007",
+          "rxn_008",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_008",
+          "mol_009",
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Photochemical HCN sugars \u2192 direct aldehyde \u2192 classic Strecker",
+        "description": "Alternative upstream carbon source via Ritson & Sutherland (2012) photoredox chemistry. UV-driven HCN reduction to glycolaldehyde, then aldol to erythrose. Same downstream chemistry as P1. Advantages: does not require hydrothermal formaldehyde (avoids thermodynamically challenging rxn_002). Disadvantages: still requires formamidine and alkaline pH staging.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_005",
+          "rxn_007",
+          "rxn_008",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_008",
+          "mol_009",
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Hydrothermal formose \u2192 glycol \u2192 dehydration \u2192 aldehyde \u2192 classic Strecker",
+        "description": "Uses the HIGHER-YIELDING glycol intermediate (6.8% vs 1.6%). Erythrose + formamidine produces imidazole-4-glycol as the major imidazole product, which then dehydrates to the aldehyde during wet-dry cycling. This pathway leverages the kinetic preference for glycol formation and uses environmental cycling (evaporation/drying) to drive the dehydration step, naturally staging from aqueous glycol formation to drying-induced aldehyde generation.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_007",
+          "rxn_009",
+          "rxn_010",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_008",
+          "mol_009",
+          "mol_011",
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Photochemical sugars \u2192 glycol \u2192 dehydration \u2192 aldehyde \u2192 classic Strecker",
+        "description": "Combines photochemical sugar generation (Ritson & Sutherland, 2012) with the higher-yielding glycol route (Shen et al., 1987). Environmentally, this pathway operates primarily in surface settings: UV pools for sugar generation, warm evaporitic pools for imidazole chemistry, and wet-dry cycling for dehydration.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_005",
+          "rxn_007",
+          "rxn_009",
+          "rxn_010",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_008",
+          "mol_009",
+          "mol_011",
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Formamidine-free route: ethanol branch \u2192 oxidation \u2192 classic Strecker (CONTAINS SPECULATIVE STEP)",
+        "description": "Bypasses the formamidine bottleneck entirely by using CH\u2082O + NH\u2083 instead of formamidine (Shen et al. 1987, 5.4% yield to ethanol). However, this pathway requires the SPECULATIVE oxidation step (rxn_012) to convert ethanol to aldehyde. Shen et al. suggest Fe\u00b3\u207a or S as oxidants but provide no experimental validation. The oxidation is placed in a hydrothermal setting where pyrite-surface Fe\u00b3\u207a/Fe\u00b2\u207a cycling is plausible. This pathway's main advantage\u2014avoiding formamidine\u2014is offset by introducing the unvalidated oxidation.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_008",
+          "mol_012",
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Hybrid photochemical + hydrothermal \u2192 glyceraldehyde aldol \u2192 direct aldehyde \u2192 classic Strecker",
+        "description": "Cross-environment pathway. Photochemical HCN reduction yields glyceraldehyde (C\u2083, Ritson & Sutherland 2012), which combines with hydrothermal formaldehyde (C\u2081) via aldol condensation to form erythrose (C\u2084). This C\u2083+C\u2081 route is an alternative to the C\u2082+C\u2082 glycolaldehyde self-aldol. Then direct formamidine condensation to aldehyde, followed by classic Strecker.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_015",
+          "mol_008",
+          "mol_009",
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Hydrothermal formose \u2192 direct aldehyde \u2192 phosphoro-Strecker (pH-compatible, SPECULATIVE endpoint)",
+        "description": "Uses the Ashe et al. (2019) phosphoro-Strecker to resolve the pH staging problem. Imidazole-4-acetaldehyde forms at pH ~6, and the phosphoro-Strecker operates at pH ~7\u2014a much smaller pH shift than classic Strecker (pH 9-10). SPECULATIVE: phosphoro-Strecker has not been validated for imidazole-substituted aldehydes. This pathway's advantage is improved environmental plausibility (minimal pH staging), but it introduces an untested chemistry.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_007",
+          "rxn_008",
+          "rxn_015",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_008",
+          "mol_009",
+          "mol_010",
+          "mol_017"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Photochemical sugars \u2192 direct aldehyde \u2192 phosphoro-Strecker (pH-compatible, SPECULATIVE endpoint)",
+        "description": "Combines the photochemical sugar route (avoiding hydrothermal formaldehyde challenges) with the phosphoro-Strecker endpoint. This is the most environmentally streamlined pathway: all steps occur in surface settings at near-neutral pH. SPECULATIVE at the phosphoro-Strecker step (not validated for imidazole-substituted aldehyde).",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_005",
+          "rxn_007",
+          "rxn_008",
+          "rxn_015",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_008",
+          "mol_009",
+          "mol_010",
+          "mol_017"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Hybrid C\u2083+C\u2081 \u2192 glycol \u2192 dehydration \u2192 phosphoro-Strecker (pH-compatible throughout)",
+        "description": "The most pH-compatible complete pathway. Photochemical glyceraldehyde + hydrothermal formaldehyde \u2192 erythrose (aldol at pH ~8). Erythrose + formamidine \u2192 glycol (pH ~6). Glycol dehydration (wet-dry cycling). Phosphoro-Strecker at pH ~7. All steps within pH 6-8 range, avoiding the dramatic pH jump to 9-10 required by classic Strecker. SPECULATIVE at rxn_015 (untested substrate for phosphoro-Strecker).",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_006",
+          "rxn_007",
+          "rxn_009",
+          "rxn_010",
+          "rxn_015",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_015",
+          "mol_008",
+          "mol_009",
+          "mol_011",
+          "mol_010",
+          "mol_017"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Formamidine-free ethanol route \u2192 photochemical sugars \u2192 oxidation \u2192 phosphoro-Strecker (DOUBLY SPECULATIVE)",
+        "description": "Lowest-confidence pathway combining two unvalidated steps: ethanol oxidation (rxn_012) AND phosphoro-Strecker for imidazole aldehyde (rxn_015). Included to illustrate the theoretically optimal route that avoids BOTH the formamidine bottleneck AND the pH staging problem, but flagged as requiring experimental validation at two critical junctures. Best viewed as a hypothesis for targeted experimental testing rather than a validated route. The advantage is that no step requires pH > 7 and formamidine is not needed.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_005",
+          "rxn_011",
+          "rxn_012",
+          "rxn_015",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_008",
+          "mol_012",
+          "mol_010",
+          "mol_017"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_006",
+      "mol_008",
+      "mol_010"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_008",
+        "incoming_reactions": [
+          "rxn_005",
+          "rxn_006"
+        ],
+        "outgoing_reactions": [
+          "rxn_008",
+          "rxn_009",
+          "rxn_011"
+        ]
+      },
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_008",
+          "rxn_010",
+          "rxn_012"
+        ],
+        "outgoing_reactions": [
+          "rxn_013",
+          "rxn_015"
+        ]
+      },
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_002"
+        ],
+        "outgoing_reactions": [
+          "rxn_004",
+          "rxn_006",
+          "rxn_011"
+        ]
+      },
+      {
+        "molecule_id": "mol_014",
+        "incoming_reactions": [
+          "rxn_014",
+          "rxn_016"
+        ],
+        "outgoing_reactions": []
+      },
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [],
+        "outgoing_reactions": [
+          "rxn_003",
+          "rxn_007",
+          "rxn_013",
+          "rxn_015"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Histidine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_001": 0.85,
+          "rxn_002": 0.7,
+          "rxn_004": 0.8,
+          "rxn_005": 0.75,
+          "rxn_007": 0.7,
+          "rxn_008": 0.9,
+          "rxn_013": 0.88,
+          "rxn_014": 0.9
+        },
+        "chemical_feasibility": 0.82,
+        "pathway_coherence": 0.92,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.92,
+        "overall_confidence": 0.87,
+        "feedback": "Primary validated route directly implementing Shen et al. (1987, 1990). Upstream hydrothermal carbon fixation via greigite-catalyzed CO\u2082 reduction is plausible; formate-to-formaldehyde step (rxn_002) is the weakest hydrothermal link. Formamidine formation from HCN + NH\u2083 (rxn_007) faces the dilution/concentration challenge acknowledged in the literature (Sanchez et al.). The core erythrose + formamidine \u2192 imidazole-4-acetaldehyde \u2192 Strecker \u2192 histidine route is the best-supported prebiotic histidine pathway in the literature (1.6% aldehyde, 3.5% histidine yield). The pH staging issue between aldehyde formation (~pH 6) and Strecker (~pH 9-10) is a real constraint that must be managed by compartmentalization or sequential processing.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_007"
+        ],
+        "suggestions": [
+          "Specify mineral catalyst for rxn_002 (e.g., FeS or awaruite for formate reduction)",
+          "Address formamidine concentration mechanism explicitly\u2014perhaps evaporative/eutectic concentration",
+          "Acknowledge pH mismatch between rxn_008 (pH ~6 optimum) and rxn_013 (pH 9-10) and propose spatial or temporal staging"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_003": 0.85,
+          "rxn_005": 0.75,
+          "rxn_007": 0.7,
+          "rxn_008": 0.9,
+          "rxn_013": 0.88,
+          "rxn_014": 0.9
+        },
+        "chemical_feasibility": 0.84,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.72,
+        "target_achievement": 0.9,
+        "overall_confidence": 0.84,
+        "feedback": "Clean photochemical pathway via Ritson & Sutherland (2012) UV photoredox sugar synthesis from HCN. Fewer steps than P1 and avoids the uncertain formate\u2192formaldehyde conversion. The glycolaldehyde aldol to erythrose (rxn_005) has selectivity issues inherent to sugar chemistry. Environmental progression lacks a hydrothermal stage, which somewhat reduces the multi-environment interconnection score, but is compensated by being a more self-consistent surface chemistry route. Correctly leverages cyanometallate photocatalysis.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_007"
+        ],
+        "suggestions": [
+          "Specify Cu(CN) or Fe(CN) as the photoredox catalyst in rxn_003 per Ritson & Sutherland",
+          "Discuss selectivity for glycolaldehyde vs. other sugar products in rxn_003",
+          "Consider borate minerals for stabilizing erythrose in rxn_005"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_001": 0.85,
+          "rxn_002": 0.7,
+          "rxn_004": 0.8,
+          "rxn_005": 0.75,
+          "rxn_007": 0.7,
+          "rxn_009": 0.9,
+          "rxn_010": 0.8,
+          "rxn_013": 0.88,
+          "rxn_014": 0.9
+        },
+        "chemical_feasibility": 0.81,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.87,
+        "target_achievement": 0.9,
+        "overall_confidence": 0.86,
+        "feedback": "Glycol intermediate pathway well-supported by Shen et al. (6.8% glycol yield is actually higher than the 1.6% direct aldehyde yield). The dehydration step (rxn_010) is mechanistically discussed by Shen et al. as acid-catalyzed, making this potentially the more realistic route through the imidazole-4-glycol intermediate. Longer pathway but each step is individually supported. The glycol-to-aldehyde conversion may be the more kinetically favorable route to imidazole-4-acetaldehyde in acidic microenvironments.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_007"
+        ],
+        "suggestions": [
+          "Emphasize that the glycol yield (6.8%) exceeds the direct aldehyde yield (1.6%), making this potentially the dominant route",
+          "Specify acid conditions for rxn_010 dehydration"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_003": 0.85,
+          "rxn_005": 0.75,
+          "rxn_007": 0.7,
+          "rxn_009": 0.9,
+          "rxn_010": 0.8,
+          "rxn_013": 0.88,
+          "rxn_014": 0.9
+        },
+        "chemical_feasibility": 0.83,
+        "pathway_coherence": 0.87,
+        "environmental_progression": 0.72,
+        "target_achievement": 0.9,
+        "overall_confidence": 0.83,
+        "feedback": "Combines photochemical sugar synthesis with the well-supported glycol intermediate pathway. Solid alternative that avoids hydrothermal steps. Environmental progression is Surface\u2192Biochemical, which is valid but less interconnected than pathways incorporating hydrothermal chemistry.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_007"
+        ],
+        "suggestions": [
+          "Could be strengthened by specifying mineral surfaces for glycol dehydration"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_001": 0.85,
+          "rxn_002": 0.7,
+          "rxn_004": 0.8,
+          "rxn_005": 0.75,
+          "rxn_011": 0.85,
+          "rxn_012": 0.45,
+          "rxn_013": 0.88,
+          "rxn_014": 0.9
+        },
+        "chemical_feasibility": 0.68,
+        "pathway_coherence": 0.78,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.7,
+        "overall_confidence": 0.72,
+        "feedback": "The formamidine-free route is an important alternative that addresses the formamidine concentration problem. The ethanol formation (rxn_011, 5.4% yield) is experimentally demonstrated by Shen et al. However, rxn_012 (oxidation of imidazole-4-ethanol to aldehyde) is correctly flagged as speculative\u2014Shen et al. explicitly note the oxidant is unclear and suggest ferric ion, sulfur, or aldehyde dehydrogenation. This is a legitimate experimental hypothesis but cannot be considered validated. The pathway's value is primarily as a testable alternative.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Specify candidate oxidants: ferric minerals (e.g., hematite, ferrihydrite), elemental sulfur, or MnO\u2082",
+          "Consider UV-driven photooxidation as an alternative mechanism",
+          "This pathway should be experimentally prioritized given the formamidine bottleneck it bypasses"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_003": 0.85,
+          "rxn_001": 0.85,
+          "rxn_002": 0.7,
+          "rxn_006": 0.75,
+          "rxn_007": 0.7,
+          "rxn_008": 0.9,
+          "rxn_013": 0.88,
+          "rxn_014": 0.9
+        },
+        "chemical_feasibility": 0.8,
+        "pathway_coherence": 0.85,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.88,
+        "overall_confidence": 0.84,
+        "feedback": "Hybrid pathway showing genuine convergence between photochemical (glyceraldehyde) and hydrothermal (formaldehyde) feedstocks. The C3+C1 aldol (rxn_006) to make erythrose is chemically reasonable but the specific selectivity for erythrose vs. other C4 products should be noted. This pathway best demonstrates the network's convergent architecture and multi-environment interconnection. Good representation of how different geochemical settings could cooperate.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_006",
+          "rxn_007"
+        ],
+        "suggestions": [
+          "Specify mineral catalyst for aldol step (e.g., borate, hydrotalcite)",
+          "Discuss stereoselectivity issues\u2014aldol can give erythrose or threose"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_001": 0.85,
+          "rxn_002": 0.7,
+          "rxn_004": 0.8,
+          "rxn_005": 0.75,
+          "rxn_007": 0.7,
+          "rxn_008": 0.9,
+          "rxn_015": 0.55,
+          "rxn_016": 0.8
+        },
+        "chemical_feasibility": 0.74,
+        "pathway_coherence": 0.85,
+        "environmental_progression": 0.83,
+        "target_achievement": 0.78,
+        "overall_confidence": 0.78,
+        "feedback": "Addresses the critical pH staging problem by using phosphoro-Strecker chemistry (Ashe et al. 2019) at neutral pH. This is a chemically motivated and important hypothesis but, as the literature notes, phosphoro-Strecker has not been validated for imidazole-substituted aldehydes specifically. The DAP requirement adds a precursor dependency. The pathway is scientifically valuable as a testable prediction that could resolve the pH mismatch between imidazole-4-acetaldehyde formation (~pH 6) and classical Strecker (~pH 9-10).",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_015",
+          "rxn_002"
+        ],
+        "suggestions": [
+          "Prioritize experimental testing of phosphoro-Strecker with imidazole-4-acetaldehyde",
+          "Add DAP synthesis/delivery pathway for completeness",
+          "Note that Ashe et al. demonstrated broad substrate scope, which supports extrapolation"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_003": 0.85,
+          "rxn_005": 0.75,
+          "rxn_007": 0.7,
+          "rxn_008": 0.9,
+          "rxn_015": 0.55,
+          "rxn_016": 0.8
+        },
+        "chemical_feasibility": 0.75,
+        "pathway_coherence": 0.83,
+        "environmental_progression": 0.7,
+        "target_achievement": 0.78,
+        "overall_confidence": 0.76,
+        "feedback": "Compact pathway combining photochemical sugars with phosphoro-Strecker endpoint. Same phosphoro-Strecker caveat as P7. Fewest steps among non-trivial pathways, which is appealing for yield considerations. Environmental progression is primarily Surface\u2192Biochemical.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Could become strongest pathway if phosphoro-Strecker is validated for imidazole aldehydes"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_003": 0.85,
+          "rxn_001": 0.85,
+          "rxn_002": 0.7,
+          "rxn_006": 0.75,
+          "rxn_007": 0.7,
+          "rxn_009": 0.9,
+          "rxn_010": 0.8,
+          "rxn_015": 0.55,
+          "rxn_016": 0.8
+        },
+        "chemical_feasibility": 0.73,
+        "pathway_coherence": 0.82,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.75,
+        "overall_confidence": 0.77,
+        "feedback": "Longest pathway combining hybrid upstream, glycol intermediate, and phosphoro-Strecker endpoint. Interesting for pH compatibility throughout (noted in strategy text). Each upstream step is validated but the phosphoro-Strecker endpoint remains speculative for this substrate. The 'pH-compatible throughout' claim is the key selling point and a genuinely important design consideration.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_015",
+          "rxn_002"
+        ],
+        "suggestions": [
+          "Explicit pH tracking along the pathway would strengthen the pH-compatibility claim"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_003": 0.85,
+          "rxn_005": 0.75,
+          "rxn_011": 0.85,
+          "rxn_012": 0.45,
+          "rxn_015": 0.55,
+          "rxn_016": 0.8
+        },
+        "chemical_feasibility": 0.6,
+        "pathway_coherence": 0.72,
+        "environmental_progression": 0.68,
+        "target_achievement": 0.6,
+        "overall_confidence": 0.62,
+        "feedback": "Honestly flagged as 'doubly speculative' (rxn_012 + rxn_015). Combines two unvalidated steps: the ethanol oxidation and the phosphoro-Strecker for imidazole aldehydes. Appropriate to include as a boundary-case hypothesis but should not be treated as a reliable route. Value is primarily heuristic\u2014if both speculative steps were validated, this would be a very clean, pH-compatible, formamidine-free pathway.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012",
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Correctly identified as lowest-confidence pathway; maintain as a testable hypothesis only"
+        ]
+      }
+    ],
+    "best_pathway_id": "P1",
+    "overall_confidence": 0.87,
+    "network_feedback": "This is an exceptionally well-designed synthesis network for histidine that demonstrates deep engagement with the primary literature. The network's greatest strength is its faithful implementation of the Shen et al. (1987, 1990) experimentally validated core pathway while providing meaningful alternatives that address known bottlenecks. Key observations:\n\n1. **Literature alignment is excellent.** The network directly implements the only well-characterized prebiotic histidine synthesis (Shen et al.), correctly cites yields (1.6%, 5.4%, 6.8%), addresses the pH staging problem with Ashe et al. (2019) phosphoro-Strecker, and incorporates Ritson & Sutherland (2012) photochemistry for upstream sugar access. Speculative steps are honestly flagged.\n\n2. **Network topology is strong.** Four hub molecules (HCN, formaldehyde, erythrose, imidazole-4-acetaldehyde) are well-chosen and each has degree \u22653. The five convergence points create genuine redundancy. The 18-node, 16-reaction, 10-pathway architecture is among the most thoroughly developed networks for a difficult amino acid target.\n\n3. **Environmental flow is well-staged.** Hydrothermal CO\u2082 reduction feeds surface formose/aldol chemistry, which feeds biochemical Strecker steps. The H\u2192S\u2192B progression is maintained across primary pathways. Minor weakness: some surface reactions lack explicit mineral catalyst specification.\n\n4. **The central bottleneck\u2014imidazole-4-acetaldehyde formation\u2014is addressed through three parallel routes** (direct condensation, glycol dehydration, ethanol oxidation), correctly reflecting the literature's emphasis that this is the highest-leverage challenge.\n\n5. **Areas for improvement:** (a) More explicit mineral specifications for surface reactions (borate for sugar stabilization, clays for concentration); (b) Formamidine availability remains the weakest upstream link and deserves more attention; (c) The concentration problem (0.03 M required vs. dilute ocean) should be explicitly addressed with evaporative or freeze-concentration mechanisms; (d) Threose/erythrose selectivity in aldol steps should be noted.\n\nOverall, this network meets the standard for approval with five pathways scoring \u22650.83 confidence, led by the primary validated route (P1) at 0.87.",
+    "approved": true,
+    "hub_quality": 0.93,
+    "convergence_quality": 0.91
+  },
+  "success": false,
+  "attempts": 3,
+  "notes": null
+}

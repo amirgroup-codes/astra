@@ -1,0 +1,177 @@
+{
+  "target_molecule": "Threonine",
+  "network": {
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO",
+        "iupac_name": "carbon monoxide",
+        "common_name": "carbon monoxide",
+        "inchi": "InChI=1S/CO/c1-2"
+      },
+      {
+        "id": "mol_002",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3"
+      },
+      {
+        "id": "mol_003",
+        "formula": "CH4",
+        "iupac_name": "methane",
+        "common_name": "methane",
+        "inchi": "InChI=1S/CH4/h1H4"
+      },
+      {
+        "id": "mol_004",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2"
+      },
+      {
+        "id": "mol_005",
+        "formula": "N2",
+        "iupac_name": "dinitrogen",
+        "common_name": "nitrogen gas",
+        "inchi": "InChI=1S/N2/c1-2"
+      },
+      {
+        "id": "mol_006",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C2H4O",
+        "iupac_name": "acetaldehyde",
+        "common_name": "acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C3H6O2",
+        "iupac_name": "2-hydroxypropanal",
+        "common_name": "lactaldehyde",
+        "inchi": "InChI=1S/C3H6O2/c1-3(5)2-4/h2-3,5H,1H3"
+      },
+      {
+        "id": "mol_009",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C3H7NO",
+        "iupac_name": "2-hydroxypropan-1-imine",
+        "common_name": "lactaldehyde imine",
+        "inchi": null
+      },
+      {
+        "id": "mol_011",
+        "formula": "HCN",
+        "iupac_name": "formonitrile",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C4H8N2O",
+        "iupac_name": "2-amino-3-hydroxybutanenitrile",
+        "common_name": "threonine aminonitrile",
+        "inchi": "InChI=1S/C4H8N2O/c1-3(7)4(6)2-5/h3-4,7H,6H2,1H3"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C4H9NO3",
+        "iupac_name": "2-amino-3-hydroxybutanoic acid",
+        "common_name": "threonine",
+        "inchi": "InChI=1S/C4H9NO3/c1-2(6)3(5)4(7)8/h2-3,6H,5H2,1H3,(H,7,8)"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Photolysis / electric discharge (formaldehyde formation)",
+        "inputs": [
+          "mol_001",
+          "mol_002",
+          "mol_003",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "conditions": "UV radiation, lightning, early Earth atmosphere"
+      },
+      {
+        "id": "rxn_002",
+        "name": "Photoreduction / spark discharge (acetaldehyde formation)",
+        "inputs": [
+          "mol_003",
+          "mol_001",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "conditions": "UV radiation, mineral surfaces"
+      },
+      {
+        "id": "rxn_003",
+        "name": "Aldol condensation",
+        "inputs": [
+          "mol_006",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "conditions": "Clay minerals, Ca2+ or Mg2+ catalysis, aqueous solution"
+      },
+      {
+        "id": "rxn_004",
+        "name": "Imine (Schiff base) formation",
+        "inputs": [
+          "mol_008",
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_010",
+          "mol_004"
+        ],
+        "conditions": "Aqueous solution, mildly alkaline pH"
+      },
+      {
+        "id": "rxn_005",
+        "name": "Strecker cyanohydrin addition",
+        "inputs": [
+          "mol_010",
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "conditions": "Aqueous solution, ambient temperature"
+      },
+      {
+        "id": "rxn_006",
+        "name": "Hydrolysis of aminonitrile",
+        "inputs": [
+          "mol_012",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_013",
+          "mol_009"
+        ],
+        "conditions": "Aqueous solution, heat or prolonged contact, acidic or neutral pH"
+      }
+    ]
+  }
+}

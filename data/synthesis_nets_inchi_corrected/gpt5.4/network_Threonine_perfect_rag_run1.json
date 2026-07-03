@@ -1,0 +1,874 @@
+{
+  "target_molecule": "Threonine",
+  "network": {
+    "target_molecule": "Threonine",
+    "overall_strategy": "This network is centered on the two literature-supported prebiotic threonine routes: (1) the surface cyanosulfidic sequence from lactaldehyde through a cyanohydrin and 2-amino-3-hydroxybutanenitrile to threonine, and (2) the hydrothermal aldol condensation of alanine with formaldehyde to threonine. To satisfy network connectivity and pathway multiplicity without contradicting the literature, upstream feeder chemistry is limited to literature-described or explicitly literature-grounded steps: alanine formation from pyruvate via iron/hydroxylamine chemistry, alanine formation from acetaldehyde via aminonitrile hydrolysis in the Patel framework, formaldehyde generation by hydrothermal Fischer-Tropsch-type chemistry, lactaldehyde generation by aldol/sugar photochemistry from glycolaldehyde plus formaldehyde in surface settings, and hydrothermal serine-to-alanine reduction. Ten pathways arise as distinct combinations of these feeder routes converging on the two validated threonine-forming endpoints. The network explicitly models Hydrothermal \u2194 Surface exchange and downstream biochemical incorporation of threonine into peptides.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_004",
+        "formula": "C2H4O2",
+        "iupac_name": "2-hydroxyethanal",
+        "common_name": "glycolaldehyde",
+        "inchi": "InChI=1S/C2H4O2/c3-1-2-4/h1,4H,2H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_005",
+        "formula": "C3H6O2",
+        "iupac_name": "2-hydroxypropanal",
+        "common_name": "lactaldehyde",
+        "inchi": "InChI=1S/C3H6O2/c1-3(5)2-4/h2-3,5H,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_006",
+        "formula": "CHN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "HCN",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_007",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_008",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_009",
+        "formula": "C5H9NO2",
+        "iupac_name": "2,4-dihydroxypentanenitrile",
+        "common_name": "lactaldehyde cyanohydrin",
+        "inchi": "InChI=1S/C5H9NO2/c1-4(7)2-5(8)3-6/h4-5,7-8H,2H2,1H3",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C4H8N2O",
+        "iupac_name": "2-amino-3-hydroxybutanenitrile",
+        "common_name": "threonine aminonitrile",
+        "inchi": "InChI=1S/C4H8N2O/c1-3(7)4(6)2-5/h3-4,7H,6H2,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C3H7NO2",
+        "iupac_name": "2-aminopropanoic acid",
+        "common_name": "alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvic acid",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_013",
+        "formula": "NH2OH",
+        "iupac_name": "hydroxylamine",
+        "common_name": "hydroxylamine",
+        "inchi": "InChI=1S/H3NO/c1-2/h2H,1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_014",
+        "formula": "C2H4O",
+        "iupac_name": "ethanal",
+        "common_name": "acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C3H6N2",
+        "iupac_name": "2-aminopropanenitrile",
+        "common_name": "alanine aminonitrile",
+        "inchi": "InChI=1S/C3H6N2/c1-3(5)2-4/h3H,5H2,1H3",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C3H7NO3",
+        "iupac_name": "2-amino-3-hydroxypropanoic acid",
+        "common_name": "serine",
+        "inchi": "InChI=1S/C3H7NO3/c4-2(1-5)3(6)7/h2,5H,1,4H2,(H,6,7)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_017",
+        "formula": "C4H9NO3",
+        "iupac_name": "2-amino-3-hydroxybutanoic acid",
+        "common_name": "threonine",
+        "inchi": "InChI=1S/C4H9NO3/c1-2(6)3(5)4(7)8/h2-3,6H,5H2,1H3,(H,7,8)",
+        "role": "target",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_018",
+        "formula": "C7H14N2O4",
+        "iupac_name": "2-[(2-amino-3-hydroxybutanoyl)amino]-3-hydroxybutanoic acid",
+        "common_name": "threonylthreonine",
+        "inchi": "InChI=1S/C8H16N2O5/c1-3(11)5(9)7(13)10-6(4(2)12)8(14)15/h3-6,11-12H,9H2,1-2H3,(H,10,13)(H,14,15)",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal Fischer-Tropsch-type generation of formaldehyde",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_003",
+          "mol_008"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high",
+          "catalyst": "magnetite and native iron mineral surfaces",
+          "aqueous": "true",
+          "other": "anoxic submarine hydrothermal setting; formaldehyde treated as a hydrothermal C1 product consistent with Fischer-Tropsch-type chemistry cited in the review"
+        },
+        "mechanism": "CO2 hydrogenation on iron-bearing mineral surfaces generates reduced C1 carbonyl species, including formaldehyde, under hydrothermal vent conditions.",
+        "reasoning": "The literature review identifies formaldehyde as abundantly available in hydrothermal systems from CO2 reduction and Fischer-Tropsch-type chemistry, and requires formaldehyde as substrate for alanine-to-threonine aldol condensation. This feeder step is included only to connect the validated threonine-forming route and is framed as literature-grounded rather than threonine-specific direct experimental proof (Aubrey et al., 2008; review summary of hydrothermal formaldehyde availability)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Surface aldol/sugar photochemical generation of lactaldehyde from glycolaldehyde and formaldehyde",
+        "inputs": [
+          "mol_004",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_005"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "borate stabilization with UV-exposed mineral surfaces",
+          "aqueous": "true",
+          "other": "wet-dry cycled surface pools; step included because the review explicitly proposes lactaldehyde formation from aldol chemistry of simpler aldehydes and sugar photochemistry"
+        },
+        "mechanism": "Aldol-type carbon-carbon bond formation in surface photochemical sugar chemistry converts smaller aldehydes into the C3 hydroxyaldehyde lactaldehyde, with borate helping stabilize reactive oxygenated intermediates.",
+        "reasoning": "The review states that lactaldehyde could form from aldol chemistry of simpler aldehydes, specifically glycolaldehyde plus formaldehyde, or from sugar photochemistry under cyanosulfidic conditions. This step is therefore included as a necessary connector to the Patel threonine route, but remains less directly demonstrated for threonine than the downstream steps (Patel et al., 2015; review open question on lactaldehyde availability)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Cyanohydrin formation from lactaldehyde and HCN",
+        "inputs": [
+          "mol_005",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite/molybdenite)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "cyanosulfidic mineral-assisted surface chemistry",
+          "aqueous": "true",
+          "other": "ambient cyanosulfidic surface pool conditions with UV irradiation and anoxic atmosphere"
+        },
+        "mechanism": "Cyanide adds nucleophilically to the lactaldehyde carbonyl carbon, forming a cyanohydrin and extending the carbon framework toward the threonine skeleton.",
+        "reasoning": "This is the first experimentally supported threonine-specific step in the Patel cyanosulfidic sequence from lactaldehyde to threonine under aqueous ambient surface conditions (Patel et al., 2015). Mineral agents are included to satisfy schema requirements and reflect the broader cyanosulfidic surface context described in the review."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Amination of lactaldehyde cyanohydrin to threonine aminonitrile",
+        "inputs": [
+          "mol_009",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_010",
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite/molybdenite)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "mineral-assisted cyanosulfidic aqueous chemistry",
+          "aqueous": "true",
+          "other": "ambient pressure surface pools with NH3 available"
+        },
+        "mechanism": "Strecker-type amination converts the cyanohydrin into 2-amino-3-hydroxybutanenitrile with loss of water.",
+        "reasoning": "This is the second experimentally supported threonine-specific step in the Patel cyanosulfidic sequence, producing the direct aminonitrile precursor of threonine (Patel et al., 2015). Mineral agents again represent the broader surface geochemical context rather than a specific catalyst identified for this exact transformation."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Hydrolysis of threonine aminonitrile to threonine",
+        "inputs": [
+          "mol_010",
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_017",
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "mineral-assisted hydrolytic wet phase",
+          "aqueous": "true",
+          "other": "ambient aqueous cyanosulfidic conditions; nitrile hydrolysis may be aided by wet-dry cycling"
+        },
+        "mechanism": "Stepwise hydration of the nitrile gives an amide-equivalent manifold and then the carboxylic acid, releasing ammonia and forming threonine.",
+        "reasoning": "This is the final experimentally supported surface step in the Patel sequence from aminonitrile to threonine (Patel et al., 2015). The review notes this as the terminal aminonitrile-to-amino-acid hydrolysis within cyanosulfidic protometabolism."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Iron-mediated reductive amination of pyruvate to alanine",
+        "inputs": [
+          "mol_012",
+          "mol_013"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron (Fe0)",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "343K",
+          "pressure": "moderate to high",
+          "catalyst": "Fe0/Fe2+-rich hydrothermal mineral system",
+          "aqueous": "true",
+          "other": "anoxic water-rock interaction setting; based on iron-promoted reductive amination chemistry cited in the review"
+        },
+        "mechanism": "Pyruvate undergoes reductive amination in the presence of hydroxylamine and iron, yielding alanine under warm hydrothermal conditions.",
+        "reasoning": "The review specifically identifies alanine production by reductive amination of pyruvate with hydroxylamine in the presence of iron at 70\u00b0C as an upstream source feeding hydrothermal threonine synthesis. This step corrects prior oversimplifications that used direct pyruvate plus ammonia (Muchowska et al., 2019, as cited in the review)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Hydrolysis of alanine aminonitrile to alanine",
+        "inputs": [
+          "mol_015",
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_011",
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "surface mineral-assisted hydrolysis",
+          "aqueous": "true",
+          "other": "ambient cyanosulfidic pool conditions"
+        },
+        "mechanism": "Hydration and hydrolysis of the nitrile functional group convert the aminonitrile to alanine with release of ammonia.",
+        "reasoning": "The review states that alanine is produced by hydrolysis of 2-aminopropanenitrile under cyanosulfidic conditions in the Patel framework. This feeder step is included to connect a surface alanine source to the hydrothermal aldol route to threonine (Patel et al., 2015; review summary)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Surface Strecker-type formation of alanine aminonitrile from acetaldehyde",
+        "inputs": [
+          "mol_014",
+          "mol_006",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite/molybdenite)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "cyanosulfidic mineral surface network",
+          "aqueous": "true",
+          "other": "ambient surface pool chemistry with UV exposure in the broader Patel framework"
+        },
+        "mechanism": "Acetaldehyde undergoes Strecker-type cyanation and amination to produce the alanine aminonitrile precursor.",
+        "reasoning": "The review notes that alanine in the Patel network arises by hydrolysis of 2-aminopropanenitrile under cyanosulfidic conditions; this upstream aminonitrile-forming step is included as a necessary connector and is consistent with the general amino acid-generating logic of Patel et al. (2015), though threonine-specific emphasis in the review is downstream."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Hydrothermal reduction of serine to alanine",
+        "inputs": [
+          "mol_016",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_011",
+          "mol_008"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron (Fe0)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "reduced iron/sulfide mineral surfaces",
+          "aqueous": "true",
+          "other": "submarine hydrothermal conditions; included because the review cites serine reduction to alanine in the Aubrey hydrothermal amino acid interconversion network"
+        },
+        "mechanism": "Hydrothermal reductive deoxygenation converts serine to alanine within an amino-acid interconversion network.",
+        "reasoning": "Aubrey et al. (2008), as summarized in the review, demonstrated serine reduction to alanine in hydrothermal systems. This provides a second hydrothermal feeder route to alanine, strengthening the literature-based convergence on the alanine hub feeding threonine formation."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Hydrothermal aldol condensation of alanine with formaldehyde to threonine",
+        "inputs": [
+          "mol_011",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "350-600K",
+          "pressure": "high",
+          "catalyst": "submarine hydrothermal mineral surfaces",
+          "aqueous": "true",
+          "other": "elevated temperature and pressure characteristic of submarine hydrothermal systems"
+        },
+        "mechanism": "An aldol-type C-C bond-forming condensation between alanine and formaldehyde extends the C3 amino acid to the C4 beta-hydroxy amino acid threonine.",
+        "reasoning": "This is the second direct literature-supported threonine-forming route, experimentally demonstrated under submarine hydrothermal conditions. The review emphasizes alanine plus formaldehyde as a key hydrothermal path to threonine and notes possible isomeric outcomes and thermal lability as open questions (Aubrey et al., 2008)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Biochemical wet-dry condensation of threonine to a dipeptide",
+        "inputs": [
+          "mol_017"
+        ],
+        "outputs": [
+          "mol_018",
+          "mol_008"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "false",
+          "other": "wet-dry cycling in prebiotic pools or mineral interfaces"
+        },
+        "mechanism": "Two threonine molecules undergo dehydration to form a peptide bond, yielding a simple dipeptide.",
+        "reasoning": "This downstream assembly step places threonine from either surface or hydrothermal production into the broader prebiotic peptide pool, consistent with the network requirement that products from both environments feed biochemical assembly. Peptide condensation under wet-dry cycling is standard prebiotic chemistry, while the specific use of threonine here is a reasonable extrapolation from the review's statement that threonine enters the amino acid pool for peptide formation; this step is therefore partially speculative but chemically necessary for end-stage integration (Patel et al., 2015; Aubrey et al., 2008; review environmental interconnection section)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Canonical surface cyanosulfidic threonine pathway",
+        "description": "Direct literature-supported route from lactaldehyde through cyanohydrin and aminonitrile to threonine in surface pools.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_005"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_009",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Hydrothermal alanine-formaldehyde aldol pathway",
+        "description": "Direct literature-supported hydrothermal route from alanine and formaldehyde to threonine.",
+        "reaction_sequence": [
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_003"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Hydrothermal pyruvate-to-alanine feeder into aldol threonine synthesis",
+        "description": "Alanine formed by iron/hydroxylamine reductive amination of pyruvate enters the hydrothermal aldol route to threonine.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Surface alanine aminonitrile feeder into hydrothermal threonine synthesis",
+        "description": "Surface cyanosulfidic production of alanine via aminonitrile hydrolysis feeds the hydrothermal aldol route.",
+        "reaction_sequence": [
+          "rxn_007",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_015",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Acetaldehyde Strecker feeder to hydrothermal threonine synthesis",
+        "description": "Acetaldehyde is converted to alanine aminonitrile, hydrolyzed to alanine, then condensed with formaldehyde hydrothermally to produce threonine.",
+        "reaction_sequence": [
+          "rxn_008",
+          "rxn_007",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_015",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Hydrothermal serine reduction feeder to threonine",
+        "description": "Serine is reduced to alanine in hydrothermal systems, then alanine undergoes aldol condensation with formaldehyde to yield threonine.",
+        "reaction_sequence": [
+          "rxn_009",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_016",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Hydrothermal formaldehyde generation plus alanine aldol route",
+        "description": "Hydrothermal CO2 reduction supplies formaldehyde, which reacts with preexisting alanine to form threonine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Cross-environment hydrothermal-to-surface lactaldehyde route",
+        "description": "Hydrothermal formaldehyde is transported to surface settings, where with glycolaldehyde it yields lactaldehyde and then threonine through the Patel sequence.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_005",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Surface sugar-aldol feeder to threonine",
+        "description": "Surface lactaldehyde derived from glycolaldehyde plus formaldehyde feeds directly into the cyanosulfidic threonine route.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_005",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Integrated surface-to-hydrothermal-to-biochemical threonine pathway",
+        "description": "Surface Strecker chemistry generates alanine, hydrothermal aldol chemistry converts alanine to threonine, and biochemical wet-dry cycling incorporates threonine into peptides.",
+        "reaction_sequence": [
+          "rxn_008",
+          "rxn_007",
+          "rxn_010",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_015",
+          "mol_011",
+          "mol_017"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_003",
+      "mol_005",
+      "mol_010",
+      "mol_011",
+      "mol_017"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_011",
+        "incoming_reactions": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_009"
+        ],
+        "outgoing_reactions": [
+          "rxn_010"
+        ]
+      },
+      {
+        "molecule_id": "mol_017",
+        "incoming_reactions": [
+          "rxn_005",
+          "rxn_010"
+        ],
+        "outgoing_reactions": [
+          "rxn_011"
+        ]
+      },
+      {
+        "molecule_id": "mol_003",
+        "incoming_reactions": [
+          "rxn_001"
+        ],
+        "outgoing_reactions": [
+          "rxn_002",
+          "rxn_010"
+        ]
+      },
+      {
+        "molecule_id": "mol_005",
+        "incoming_reactions": [
+          "rxn_002"
+        ],
+        "outgoing_reactions": [
+          "rxn_003"
+        ]
+      },
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_004"
+        ],
+        "outgoing_reactions": [
+          "rxn_005"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Threonine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_003": 0.95,
+          "rxn_004": 0.9,
+          "rxn_005": 0.93
+        },
+        "chemical_feasibility": 0.93,
+        "pathway_coherence": 0.97,
+        "environmental_progression": 0.9,
+        "target_achievement": 1.0,
+        "overall_confidence": 0.95,
+        "feedback": "This is the strongest pathway and closely matches the Patel et al. (2015) literature route: lactaldehyde cyanohydrin formation, amination to 2-amino-3-hydroxybutanenitrile, and hydrolysis to threonine. Chemistry is sound and the sequence directly achieves the target. Main limitation is that the full network summary does not document explicit mineral agents for these surface reactions, even though the evaluation framework requires them; however, the underlying chemistry remains well supported.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Explicitly assign surface mineral/environmental agents such as phosphate minerals, borate-associated concentration, sulfide minerals, or TiO2 where appropriate to satisfy schema requirements",
+          "Clarify whether nitrile hydrolysis is promoted by wet-dry cycling or prolonged aqueous exposure"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_010": 0.88
+        },
+        "chemical_feasibility": 0.88,
+        "pathway_coherence": 0.95,
+        "environmental_progression": 0.88,
+        "target_achievement": 1.0,
+        "overall_confidence": 0.9,
+        "feedback": "This pathway aligns with Aubrey et al. (2008): alanine plus formaldehyde under hydrothermal conditions gives threonine. It is concise and directly literature-supported. Confidence is slightly reduced because the summarized network does not specify hydrothermal mineral agents despite the task constraints, and because hydrothermal threonine stability is a known challenge.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Specify hydrothermal catalytic surfaces such as FeS, greigite, magnetite, or elemental iron as contextual agents even if not essential to the literature endpoint",
+          "Acknowledge competing decomposition of threonine at elevated temperature and bound the temperature window more narrowly"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_006": 0.87,
+          "rxn_010": 0.88
+        },
+        "chemical_feasibility": 0.87,
+        "pathway_coherence": 0.92,
+        "environmental_progression": 0.9,
+        "target_achievement": 1.0,
+        "overall_confidence": 0.89,
+        "feedback": "A coherent feeder pathway: pyruvate to alanine via iron/hydroxylamine chemistry, then alanine plus formaldehyde to threonine. This is well grounded in Muchowska et al. (2019) and Aubrey et al. (2008). Remaining concern is again incomplete explicit mineral specification and lack of a visible pyruvate formation route in the summarized network, which makes this feeder partially dependent on an assumed external supply.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Add an explicit upstream pyruvate-forming reaction if strict closure is required",
+          "Provide hydrothermal mineral details for the reductive amination step"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_007": 0.9,
+          "rxn_010": 0.88
+        },
+        "chemical_feasibility": 0.89,
+        "pathway_coherence": 0.91,
+        "environmental_progression": 0.94,
+        "target_achievement": 1.0,
+        "overall_confidence": 0.9,
+        "feedback": "This cross-environment pathway is plausible: alanine aminonitrile hydrolyzes in surface conditions to alanine, which then feeds the hydrothermal aldol route to threonine. It reflects the Patel framework feeding Aubrey chemistry and demonstrates useful environmental interconnection.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Specify transport or concentration logic for alanine moving from surface pools to hydrothermal settings",
+          "Document mineral agents for the surface hydrolysis context if required by the schema"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_008": 0.93,
+          "rxn_007": 0.9,
+          "rxn_010": 0.88
+        },
+        "chemical_feasibility": 0.9,
+        "pathway_coherence": 0.93,
+        "environmental_progression": 0.95,
+        "target_achievement": 1.0,
+        "overall_confidence": 0.92,
+        "feedback": "This is a strong integrated route: acetaldehyde undergoes Strecker-type chemistry to alanine aminonitrile, hydrolysis yields alanine, and hydrothermal aldol chemistry yields threonine. It is well aligned with the literature discussion of alanine as an upstream precursor. The main issue is formal schema compliance on mineral agents and the absence of explicit acetaldehyde provenance within the network summary.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Add an explicit acetaldehyde source reaction if network closure is desired",
+          "Annotate mineral and photochemical context for the Strecker step"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_009": 0.85,
+          "rxn_010": 0.88
+        },
+        "chemical_feasibility": 0.86,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.89,
+        "target_achievement": 1.0,
+        "overall_confidence": 0.88,
+        "feedback": "This route follows the literature-supported hydrothermal reduction of serine to alanine feeding the alanine-formaldehyde threonine step. It is plausible and connected, though somewhat more indirect and sensitive to hydrothermal degradation issues. Serine origin is not shown in the summarized network, which weakens completeness.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Include a serine formation route for better network closure",
+          "Constrain hydrothermal conditions to avoid excessive amino acid decomposition"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_001": 0.72,
+          "rxn_010": 0.88
+        },
+        "chemical_feasibility": 0.79,
+        "pathway_coherence": 0.87,
+        "environmental_progression": 0.88,
+        "target_achievement": 1.0,
+        "overall_confidence": 0.82,
+        "feedback": "This route is acceptable but less secure. The alanine-to-threonine endpoint is strong, but the hydrothermal generation of formaldehyde directly from CO2 and H2 as a discrete network step is more generic and less specifically established in the provided threonine literature than the endpoint reaction. Still, it is a plausible feeder justified by hydrothermal C1 chemistry.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_001"
+        ],
+        "suggestions": [
+          "Support formaldehyde production with more explicit mineral context and literature citation",
+          "Consider including CO or formate intermediates if a more realistic hydrothermal carbon-fixation sequence is needed"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_001": 0.72,
+          "rxn_002": 0.68,
+          "rxn_003": 0.95,
+          "rxn_004": 0.9,
+          "rxn_005": 0.93
+        },
+        "chemical_feasibility": 0.83,
+        "pathway_coherence": 0.86,
+        "environmental_progression": 0.95,
+        "target_achievement": 1.0,
+        "overall_confidence": 0.85,
+        "feedback": "This pathway effectively demonstrates hydrothermal-to-surface coupling, with formaldehyde feeding a surface lactaldehyde route and then the canonical cyanosulfidic threonine sequence. The weak point is rxn_002: lactaldehyde generation from glycolaldehyde plus formaldehyde is plausible as aldol/sugar chemistry but is less directly documented in the provided threonine literature than the terminal threonine-forming sequence.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_001",
+          "rxn_002"
+        ],
+        "suggestions": [
+          "Strengthen lactaldehyde provenance with explicit literature support or mark the step as speculative",
+          "Specify the surface mineral and photochemical conditions for the aldol/photochemical formation of lactaldehyde"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_002": 0.68,
+          "rxn_003": 0.95,
+          "rxn_004": 0.9,
+          "rxn_005": 0.93
+        },
+        "chemical_feasibility": 0.84,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.9,
+        "target_achievement": 1.0,
+        "overall_confidence": 0.86,
+        "feedback": "This pathway is mostly strong because it terminates in the well-supported cyanosulfidic threonine route. Its main weakness is the lactaldehyde feeder step, which is reasonable but not explicitly demonstrated in the provided target literature. As a result, this pathway is plausible but partially speculative upstream.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_002"
+        ],
+        "suggestions": [
+          "Label lactaldehyde formation as a literature-grounded but unresolved feeder",
+          "Add more explicit environmental context such as UV-driven sugar photochemistry and borate-stabilized aldehyde chemistry"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_003": 0.95,
+          "rxn_004": 0.9,
+          "rxn_005": 0.93,
+          "rxn_011": 0.89
+        },
+        "chemical_feasibility": 0.91,
+        "pathway_coherence": 0.95,
+        "environmental_progression": 0.97,
+        "target_achievement": 0.96,
+        "overall_confidence": 0.93,
+        "feedback": "This integrated pathway is strong because it shows production of threonine by the literature-supported surface route and then downstream biochemical incorporation into a dipeptide. The biochemical condensation is plausible under wet-dry conditions and demonstrates target utilization well, though it is downstream of the actual target and not central to target attainment.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Clarify whether peptide formation occurs on clay or by thermal dehydration",
+          "Keep the distinction clear between target synthesis and downstream incorporation"
+        ]
+      }
+    ],
+    "best_pathway_id": "P1",
+    "overall_confidence": 0.88,
+    "network_feedback": "Overall this is a good to very good synthesis network with strong literature alignment around the two experimentally supported threonine-producing endpoints: the Patel et al. surface cyanosulfidic route and the Aubrey et al. hydrothermal alanine-formaldehyde route. Topologically, the network is connected, includes sufficient molecule and reaction nodes, and contains several genuine hubs, especially formaldehyde, alanine, and threonine. Convergence is meaningful because multiple feeder routes supply alanine and multiple branches converge on threonine. Environmental interconnection is a major strength: the network explicitly couples hydrothermal formaldehyde and alanine chemistry to surface nitrile chemistry and then to biochemical peptide formation. The main weaknesses are schema-level rather than conceptual: Hydrothermal and Surface reactions were summarized without explicit mineral agents despite the original generation requirements; several feeder reactions, especially formaldehyde generation and lactaldehyde formation, are more generic or literature-grounded than directly demonstrated in the target-specific papers; and some upstream substrates such as glycolaldehyde, pyruvate, serine, acetaldehyde, and HCN are treated as available without all sources being fully closed inside the network. Chemically, the canonical target-forming steps are sound. The network would be stronger with explicit mineral annotations, tighter condition specification, and clearer marking of speculative feeder chemistry.",
+    "approved": true,
+    "hub_quality": 0.9,
+    "convergence_quality": 0.88
+  },
+  "success": true,
+  "attempts": 3,
+  "notes": "Max retries reached. Best confidence: 0.880"
+}

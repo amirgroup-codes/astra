@@ -1,0 +1,944 @@
+{
+  "target_molecule": "L-Proline",
+  "network": {
+    "target_molecule": "L-Proline",
+    "overall_strategy": "This network is literature-guided and intentionally distinguishes well-supported precursor chemistry from the unresolved final target-forming step. It builds a connected hydrothermal-to-surface-to-biochemical bipartite graph centered on documented prebiotic hubs relevant to proline chemistry: formate, formaldehyde, HCN, glycolonitrile, glyoxylate, pyruvate, oxaloacetate, glycine, and N-phosphoroaminonitrile intermediates. Multiple convergent pathways generate these hubs across alkaline hydrothermal, tidal-flat, evaporitic-pool, and protometabolic settings. The final appearance of L-proline is represented only through the limited literature-supported evidence that proline can arise in reduced hydrothermal mixtures involving formaldehyde addition to glycine, while explicitly acknowledging in reaction reasoning that direct, mechanistically resolved, stereoselective prebiotic synthesis of free L-proline remains unproven.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "CH2O2",
+        "iupac_name": "methanoic acid",
+        "common_name": "formate/formic acid",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_004",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_005",
+        "formula": "CHN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "HCN",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_006",
+        "formula": "C2H3NO",
+        "iupac_name": "2-hydroxyacetonitrile",
+        "common_name": "glycolonitrile",
+        "inchi": "InChI=1S/C2H3NO/c3-1-2-4/h4H,2H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_007",
+        "formula": "CH3NO",
+        "iupac_name": "methanamide",
+        "common_name": "formamide",
+        "inchi": "InChI=1S/CH3NO/c2-1-3/h1H,(H2,2,3)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C2H2O3",
+        "iupac_name": "2-oxoacetic acid",
+        "common_name": "glyoxylic acid",
+        "inchi": "InChI=1S/C2H2O3/c3-1-2(4)5/h1H,(H,4,5)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvic acid",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C4H4O5",
+        "iupac_name": "2-oxosuccinic acid",
+        "common_name": "oxaloacetic acid",
+        "inchi": "InChI=1S/C4H4O5/c5-2(4(8)9)1-3(6)7/h1H2,(H,6,7)(H,8,9)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_011",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_012",
+        "formula": "C2H5NO2",
+        "iupac_name": "2-aminoacetic acid",
+        "common_name": "glycine",
+        "inchi": "InChI=1S/C2H5NO2/c3-1-2(4)5/h1,3H2,(H,4,5)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "CH6N2O5P",
+        "iupac_name": "diamidophosphoric acid",
+        "common_name": "diamidophosphate",
+        "inchi": "InChI=1S/H5N2O2P/c1-5(2,3)4/h(H5,1,2,3,4)",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_014",
+        "formula": "C2H5N2O3P",
+        "iupac_name": "N-phosphono-2-aminoacetonitrile",
+        "common_name": "glycine N-phosphoroaminonitrile",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C3H4O4",
+        "iupac_name": "propanedioic acid",
+        "common_name": "malonic acid",
+        "inchi": "InChI=1S/C3H4O4/c4-2(5)1-3(6)7/h1H2,(H,4,5)(H,6,7)",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_016",
+        "formula": "C5H9NO2",
+        "iupac_name": "(2S)-pyrrolidine-2-carboxylic acid",
+        "common_name": "L-proline",
+        "inchi": "InChI=1S/C5H9NO2/c7-5(8)4-2-1-3-6-4/h4,6H,1-3H2,(H,7,8)/t4-/m0/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO2 reduction to formate",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite/mackinawite",
+          "aqueous": "true",
+          "other": "alkaline vent conditions; anoxic; H2-rich serpentinization setting"
+        },
+        "mechanism": "Mineral-surface electron transfer reduces CO2 to formate on Fe-S phases.",
+        "reasoning": "CO2 reduction to formate on Fe-S minerals is a core vent reaction in iron-sulfur world and alkaline hydrothermal scenarios, and is explicitly consistent with the supplied framework for greigite/mackinawite catalysis; this provides a literature-grounded hydrothermal carbon entry point feeding surface chemistry (Huber & Wachtershauser, 1997; Russell & Hall, 1997)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Hydrothermal Fischer-Tropsch-type generation of formaldehyde-equivalent C1 carbon",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high",
+          "catalyst": "magnetite/Fe0",
+          "aqueous": "true",
+          "other": "anoxic hydrothermal system; reduced gas mixture; product treated as formaldehyde-equivalent feedstock transferred to surface pools"
+        },
+        "mechanism": "CO2/CO hydrogenation on iron oxide/metal surfaces yields reduced C1 organics including aldehyde-equivalent products.",
+        "reasoning": "The supplied research identifies formaldehyde as a foundational feedstock for proline-relevant chemistry and notes reduced hydrothermal mixtures as plausible environments. Direct quantitative formaldehyde synthesis under exact proline-specific conditions is sparse, so this step is included as a necessary connector grounded in general hydrothermal FTT-style carbon reduction rather than a proline-specific demonstration; it should be regarded as a plausible feeder step, not a resolved proline-forming reaction (Cody et al., 2000; McCollom & Seewald, 2007; speculative connector consistent with the provided hydrothermal framework)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Surface cyanohydrin formation to glycolonitrile",
+        "inputs": [
+          "mol_004",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "sulfide minerals (stibnite/molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "borate and sulfide mineral surfaces",
+          "aqueous": "true",
+          "other": "evaporitic pool or volcanic hot spring; mild concentration by drying"
+        },
+        "mechanism": "HCN adds to formaldehyde to form the cyanohydrin glycolonitrile.",
+        "reasoning": "The research report identifies formaldehyde plus HCN to glycolonitrile as a critical precursor step for proline-relevant prebiotic chemistry. Mineral assignment follows the mandated surface-mineral schema; the central chemistry is strongly literature-supported even if mineral specificity is broader than the proline literature itself (Patel et al., 2015; Ritson & Sutherland, 2012)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "UV hydration of HCN to formamide",
+        "inputs": [
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 photocatalyst",
+          "aqueous": "true",
+          "other": "UV-irradiated shallow pool; anoxic atmosphere"
+        },
+        "mechanism": "Photochemical hydration/oxidation-state reorganization of HCN gives formamide as a reactive C-N intermediate pool component.",
+        "reasoning": "The supplied framework includes UV photochemistry from HCN to formamide in surface settings. While not a direct proline step, it connects the HCN hub to broader nitrogen chemistry and keeps the graph connected using literature-recognized prebiotic photochemical logic (Saladino et al., 2012; Ferus et al., 2015)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Surface glycolonitrile conversion to glyoxylate-class carbonyls",
+        "inputs": [
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "borate minerals (colemanite/ulexite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2/borate-assisted photochemical and aqueous transformation",
+          "aqueous": "true",
+          "other": "UV exposure; wet-dry cycling; oxidant-free but photochemically active surface environment"
+        },
+        "mechanism": "Glycolonitrile undergoes hydrolysis/photochemical rearrangement toward glyoxylate-class aldehyde-acid products.",
+        "reasoning": "The research identifies glycolonitrile as a major proline-relevant precursor and also highlights glyoxylate as an important small-molecule feedstock in prebiotic networks. The exact glycolonitrile-to-glyoxylate route is not singled out in the report as a single canonical experiment, so this is a connective but chemically reasonable step bridging two literature-supported hubs (Ritson & Sutherland, 2012; Patel et al., 2015; speculative connector explicitly added to integrate identified intermediates)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Hydrothermal pyruvate synthesis from reduced carbon fixation",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "magnetite/greigite",
+          "aqueous": "true",
+          "other": "anoxic alkaline/subseafloor hydrothermal conditions"
+        },
+        "mechanism": "Sequential mineral-catalyzed CO2 reduction and C-C bond formation yield \u03b1-keto acid products including pyruvate.",
+        "reasoning": "Pyruvate is specifically highlighted in the supplied hydrothermal framework as a product of CO2 + H2 chemistry on magnetite/greigite and is a central metabolic hub for amino acid chemistry. Including it is therefore directly required by the prompt and consistent with hydrothermal protometabolic literature (Cody et al., 2000; Muchowska et al., 2019)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Fe2+-driven protometabolic coupling of glyoxylate and pyruvate to oxaloacetate",
+        "inputs": [
+          "mol_008",
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "343K",
+          "pressure": "1 atm to moderate",
+          "catalyst": "Fe2+ in solution with iron-mineral surfaces",
+          "aqueous": "true",
+          "other": "approximately 70C; inert atmosphere; protometabolic network conditions"
+        },
+        "mechanism": "Fe2+-promoted carbon-carbon coupling within glyoxylate/\u03b1-keto acid networks generates TCA-like intermediates including oxaloacetate.",
+        "reasoning": "The report explicitly identifies Fe2+-catalyzed formation of oxaloacetate and related protometabolic intermediates at 70C under inert atmosphere, and identifies oxaloacetate as relevant to proline precursor chemistry. Mineral agents are specified here to satisfy the network schema while preserving the cited Fe2+-driven chemistry (Muchowska, Varma & Moran, 2019; Stubbs et al., 2020)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Surface Strecker synthesis of glycine from formaldehyde, ammonia, and HCN",
+        "inputs": [
+          "mol_004",
+          "mol_011",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "sulfide minerals (stibnite/molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "mineral-assisted concentration and adsorption",
+          "aqueous": "true",
+          "other": "evaporitic pool or tidal-flat aqueous phase; classic Strecker-type chemistry"
+        },
+        "mechanism": "Ammonia and HCN react with formaldehyde-derived imine/cyanohydrin intermediates, followed by hydrolysis to glycine.",
+        "reasoning": "The supplied research explicitly identifies Strecker synthesis as a major prebiotic amino-acid pathway and lists formaldehyde and HCN as foundational feedstocks. Glycine is needed because the only direct proline-related evidence in the report involves formaldehyde addition to glycine in reduced mixtures (Miller, 1957; Cleaves, 2008; foundational Strecker literature as summarized in the report)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Surface phosphoro-Strecker formation of glycine N-phosphoroaminonitrile",
+        "inputs": [
+          "mol_004",
+          "mol_011",
+          "mol_005",
+          "mol_013"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "phosphate minerals (apatite/struvite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "diamidophosphate with phosphate mineral surfaces",
+          "aqueous": "true",
+          "other": "neutral pH; prebiotic phosphoro-Strecker conditions"
+        },
+        "mechanism": "DAP-mediated phosphoro-Strecker chemistry traps the aminonitrile as an N-phosphorylated intermediate selectively from aldehydes.",
+        "reasoning": "The report specifically identifies N-phosphoroaminonitriles formed from aldehydes, DAP, and HCN at neutral pH as important prebiotic intermediates. This reaction therefore closely follows the supplied literature and adds a second route from the formaldehyde/HCN/ammonia hub into glycine-related chemistry (Krishnamurthy et al., 2019; Gibard et al., 2018 as summarized by the report)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Hydrolysis of glycine N-phosphoroaminonitrile to glycine",
+        "inputs": [
+          "mol_014"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "neutral to mildly aqueous pool conditions; post-phosphoro-Strecker hydrolysis"
+        },
+        "mechanism": "Aqueous hydrolysis converts the N-phosphoroaminonitrile reservoir into free amino acid product.",
+        "reasoning": "The report states that N-phosphoroaminonitriles can transform into downstream aminonitriles and amino-acid-related products depending on environmental conditions. This hydrolysis step is included as the literature-consistent resolution of the phosphoro-Strecker branch into the glycine hub (Krishnamurthy et al., 2019; Gibard et al., 2018)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Mannich-type protometabolic entry from glyoxylate and malonate to oxaloacetate-class network",
+        "inputs": [
+          "mol_008",
+          "mol_015",
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "mineral-assisted concentration in aqueous-dry cycling interface",
+          "aqueous": "true",
+          "other": "evaporitic pool; Mannich/diversion chemistry in malonate-glyoxylate systems"
+        },
+        "mechanism": "Small-molecule carbonyl chemistry in malonate/glyoxylate systems with ammonia feeds oxaloacetate-related protometabolic intermediates.",
+        "reasoning": "The report explicitly identifies glyoxylate, pyruvate, malonate, and Mannich chemistry as relevant small-molecule feedstocks and routes leading toward amino-acid precursor networks, and separately identifies oxaloacetate as a key intermediate. Although not a direct proline-forming step, this provides a second convergent route to the oxaloacetate hub from surface chemistry (Stubbs et al., 2020; Muchowska et al., 2020)."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Reduced-mixture formaldehyde addition to glycine yielding proline among amino-acid products",
+        "inputs": [
+          "mol_012",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_016"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "variable aqueous heating; reduced-mixture conditions",
+          "pressure": "1 atm to hydrothermal-like reduced mixture",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "modeled on reduced hydrothermal mixtures with elevated formaldehyde concentration; product distribution includes proline but exact free L-selective route unresolved"
+        },
+        "mechanism": "Formaldehyde reacts within reduced amino-acid-forming mixtures containing glycine, producing more substituted/cyclic amino-acid products including proline through multistep condensation/reduction/cyclization not fully resolved.",
+        "reasoning": "This is the only target-forming step retained because the supplied research explicitly states that addition of formaldehyde to glycine under prebiotic reduced-mixture conditions has been identified as a pathway producing amino acids including proline, while also emphasizing that yields are small, concentrations used may be unrealistically high, and mechanistic resolution plus stereoselective formation of free L-proline remain unresolved. Therefore this step should be interpreted as literature-supported target appearance, not a solved selective pathway to homochiral product (Lazcano & Miller, 1994/1996-type reduced mixture experiments as summarized in source 2595; the report itself notes this as an upper-limit, not definitive environmental proof)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Hydrothermal C1 reduction to Strecker glycine to proline",
+        "description": "CO2 reduction in vents supplies formaldehyde-equivalent carbon that combines with HCN and NH3 in surface Strecker chemistry to give glycine, followed by reduced-mixture formaldehyde addition giving proline-containing product pools.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_008",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Formate-supported hydrothermal carbon entry to glycine route",
+        "description": "Hydrothermal CO2 reduction first establishes a reduced carbon pool, parallel hydrothermal C1 reduction supplies formaldehyde, and surface Strecker chemistry yields glycine before target appearance.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_008",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_004",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Cyanohydrin branch via glycolonitrile feeding glyoxylate and protometabolism",
+        "description": "Formaldehyde and HCN form glycolonitrile, which is converted to glyoxylate; hydrothermal pyruvate formation then converges with glyoxylate to oxaloacetate before returning to glycine/formaldehyde-mediated proline appearance.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_008",
+          "mol_009",
+          "mol_010",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Direct hydrothermal pyruvate to oxaloacetate convergence branch",
+        "description": "Hydrothermal pyruvate converges with surface-derived glyoxylate in an Fe2+-driven protometabolic step to oxaloacetate, linking vent carbon fixation to amino-acid chemistry that shares glycine and formaldehyde hubs with target formation.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_005",
+          "rxn_007",
+          "rxn_008",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_008",
+          "mol_010",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Phosphoro-Strecker glycine route to proline",
+        "description": "Formaldehyde, NH3, HCN, and DAP give an N-phosphoroaminonitrile intermediate, which hydrolyzes to glycine and then enters the reduced-mixture proline-forming step.",
+        "reaction_sequence": [
+          "rxn_009",
+          "rxn_010",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_014",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Hydrothermal formaldehyde plus phosphoro-Strecker branch",
+        "description": "Hydrothermal formaldehyde-equivalent production is coupled to surface phosphoro-Strecker chemistry and hydrolysis to glycine before proline appearance.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_009",
+          "rxn_010",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_014",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Glycolonitrile-centered route to glycine and proline",
+        "description": "Formaldehyde and HCN generate glycolonitrile as a literature-identified proline precursor hub; the same formaldehyde/HCN pool independently forms glycine by Strecker chemistry, enabling convergence on the target-forming reduced-mixture step.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_008",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "HCN photochemistry-assisted nitrogen pool route",
+        "description": "HCN surface photochemistry generates formamide while the same HCN pool also participates in Strecker glycine synthesis; this pathway highlights a connected nitrogen chemistry branch converging on glycine before proline appearance.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_008",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Mannich-malonate oxaloacetate branch to shared glycine target step",
+        "description": "Surface glyoxylate and malonate chemistry with ammonia generates oxaloacetate-class intermediates in parallel with glycine production from the same C1/HCN feedstock network; both branches converge on the final proline-containing product step.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_011",
+          "rxn_008",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_010",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Fully integrated hydrothermal-surface-biochemical network route",
+        "description": "This maximal route connects hydrothermal formate and formaldehyde generation, surface glycolonitrile formation, glyoxylate production, hydrothermal pyruvate synthesis, oxaloacetate convergence, phosphoro-Strecker glycine production, and final literature-limited proline appearance.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_009",
+          "rxn_010",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_004",
+          "mol_006",
+          "mol_008",
+          "mol_009",
+          "mol_010",
+          "mol_014",
+          "mol_012"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_005",
+      "mol_006",
+      "mol_008",
+      "mol_012"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [
+          "rxn_002"
+        ],
+        "outgoing_reactions": [
+          "rxn_003",
+          "rxn_008",
+          "rxn_009",
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_008",
+        "incoming_reactions": [
+          "rxn_005"
+        ],
+        "outgoing_reactions": [
+          "rxn_007",
+          "rxn_011"
+        ]
+      },
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_007",
+          "rxn_011"
+        ],
+        "outgoing_reactions": []
+      },
+      {
+        "molecule_id": "mol_012",
+        "incoming_reactions": [
+          "rxn_008",
+          "rxn_010"
+        ],
+        "outgoing_reactions": [
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_005",
+        "incoming_reactions": [],
+        "outgoing_reactions": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_008",
+          "rxn_009"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "L-Proline",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_002": 0.62,
+          "rxn_008": 0.9,
+          "rxn_012": 0.42
+        },
+        "chemical_feasibility": 0.62,
+        "pathway_coherence": 0.74,
+        "environmental_progression": 0.84,
+        "target_achievement": 0.46,
+        "overall_confidence": 0.66,
+        "feedback": "Coherent hydrothermal-to-surface-to-biochemical route, and the glycine-formaldehyde entry to proline is aligned with the limited literature signal. However, hydrothermal generation of free formaldehyde from CO2/H2 is only moderately supported under the stated framing, and the final conversion of glycine plus formaldehyde directly to L-proline is not mechanistically resolved or stereoselectively justified. This is better viewed as a weak target-assignment pathway than a demonstrated synthesis.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Downgrade the target claim from L-proline specifically to proline among mixed amino-acid products unless chiral induction is justified.",
+          "Clarify that rxn_012 is an empirical product-association step from reduced mixtures rather than a resolved single-step mechanism.",
+          "Support rxn_002 with a more explicit hydrothermal mineral context and note formaldehyde may be represented as a transient C1 equivalent rather than accumulated bulk product."
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_002": 0.62,
+          "rxn_008": 0.9,
+          "rxn_012": 0.42
+        },
+        "chemical_feasibility": 0.69,
+        "pathway_coherence": 0.7,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.46,
+        "overall_confidence": 0.67,
+        "feedback": "This pathway gains plausibility from a strong hydrothermal CO2-to-formate step, but formate is not actually used in the minimal route to the target and therefore contributes more to network connectivity than target synthesis. The glycine formation is credible, but the final proline step remains the core weakness. Good environmental linkage, moderate direct relevance.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Make formate functionally relevant to downstream chemistry or remove it from this pathway description.",
+          "Add an explicit literature-backed transformation connecting formate/formaldehyde chemistry if intended as a true route rather than contextual support.",
+          "Temper target confidence because the final step is unresolved."
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_002": 0.62,
+          "rxn_003": 0.95,
+          "rxn_005": 0.55,
+          "rxn_007": 0.82,
+          "rxn_011": 0.71,
+          "rxn_012": 0.42
+        },
+        "chemical_feasibility": 0.64,
+        "pathway_coherence": 0.61,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.4,
+        "overall_confidence": 0.61,
+        "feedback": "The glycolonitrile-centered branch is well aligned with the literature as a precursor network, and cyanohydrin formation is strong. The weak point is that glycolonitrile-to-glyoxylate is represented too generically, and the oxaloacetate/protometabolic branch does not actually deliver a validated proline precursor sequence. This is a good precursor-network pathway but a weak target pathway.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_005",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Specify the chemistry for glycolonitrile conversion, potentially including sulfite/sulfonate intermediates if claimed from literature.",
+          "Separate precursor-generation pathways from target-forming pathways to avoid overstating direct relevance to proline.",
+          "Do not imply oxaloacetate branch meaningfully reaches proline without additional supported steps."
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_006": 0.78,
+          "rxn_007": 0.82,
+          "rxn_008": 0.9,
+          "rxn_012": 0.42,
+          "rxn_002": 0.62
+        },
+        "chemical_feasibility": 0.69,
+        "pathway_coherence": 0.58,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.41,
+        "overall_confidence": 0.62,
+        "feedback": "Hydrothermal pyruvate synthesis and Fe2+-promoted oxaloacetate formation are plausible protometabolic chemistry and consistent with the literature context. But the branch is only loosely connected to the target, because oxaloacetate is not converted into a validated proline precursor sequence. This pathway is chemically respectable as network scaffolding, not as a convincing proline route.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Reframe this as a convergence pathway supporting core metabolism analogs rather than a direct target pathway.",
+          "If oxaloacetate is retained, connect it to a literature-supported amino acid sequence with explicit reactions.",
+          "Avoid counting shared glycine/proline endpoint as evidence that oxaloacetate meaningfully contributes to target synthesis."
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_009": 0.86,
+          "rxn_010": 0.84,
+          "rxn_012": 0.42
+        },
+        "chemical_feasibility": 0.71,
+        "pathway_coherence": 0.79,
+        "environmental_progression": 0.83,
+        "target_achievement": 0.46,
+        "overall_confidence": 0.71,
+        "feedback": "This is one of the better pathways because phosphoro-Strecker chemistry is well aligned with the literature and the glycine N-phosphoroaminonitrile intermediate is a strong, specific precursor node. The pathway remains limited by the same unresolved final proline-forming step. Strong literature alignment for the precursor section, weak target closure.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012"
+        ],
+        "suggestions": [
+          "State explicitly that this pathway robustly supports glycine production, not definitive L-proline synthesis.",
+          "Include neutral-pH and DAP/HCN conditions if available to increase literature specificity.",
+          "Avoid assigning chirality to the product without evidence."
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_002": 0.62,
+          "rxn_009": 0.86,
+          "rxn_010": 0.84,
+          "rxn_012": 0.42
+        },
+        "chemical_feasibility": 0.69,
+        "pathway_coherence": 0.76,
+        "environmental_progression": 0.84,
+        "target_achievement": 0.46,
+        "overall_confidence": 0.69,
+        "feedback": "This integrated branch combines a moderate hydrothermal C1 source with a strong phosphoro-Strecker glycine route. It is a sensible cross-environment design and literature aware. The chief issue remains the same: final conversion to free L-proline is not established. Better than generic Strecker-only routes because the aminonitrile chemistry is more specific.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Clarify whether formaldehyde accumulation is plausible enough for downstream phosphoro-Strecker chemistry.",
+          "Cite the phosphoro-Strecker literature explicitly in the reaction rationale if absent in the underlying JSON.",
+          "Treat the target as provisional rather than achieved."
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_003": 0.95,
+          "rxn_008": 0.9,
+          "rxn_012": 0.42
+        },
+        "chemical_feasibility": 0.69,
+        "pathway_coherence": 0.66,
+        "environmental_progression": 0.68,
+        "target_achievement": 0.45,
+        "overall_confidence": 0.63,
+        "feedback": "Good local chemistry around HCN/formaldehyde/glycolonitrile and glycine formation, but this pathway is conceptually compressed. Glycolonitrile is described as central, yet the route to glycine shown here bypasses it via direct Strecker chemistry. Thus the pathway label and actual reaction logic are somewhat mismatched. Final target support remains weak.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Either include a true glycolonitrile-to-glycine transformation or rename the pathway to reflect direct Strecker glycine formation.",
+          "Improve environmental progression by explicitly noting where concentration and hydrolysis occur.",
+          "Do not overstate glycolonitrile's role if it is not chemically traversed in the pathway."
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_004": 0.72,
+          "rxn_008": 0.9,
+          "rxn_012": 0.42
+        },
+        "chemical_feasibility": 0.63,
+        "pathway_coherence": 0.57,
+        "environmental_progression": 0.67,
+        "target_achievement": 0.44,
+        "overall_confidence": 0.58,
+        "feedback": "HCN photochemistry to formamide is plausible in a broad prebiotic sense, but its contribution to the actual target route is weak because formamide is not then used in glycine or proline formation here. This makes the pathway more of a nitrogen-pool side branch than a target-directed route.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_004",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Only include formamide in a target pathway if it participates in subsequent documented chemistry.",
+          "Reclassify this as supporting network context rather than a main target route.",
+          "Strengthen by linking formamide chemistry to downstream HCN or aminonitrile transformations if supported."
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_011": 0.71,
+          "rxn_008": 0.9,
+          "rxn_012": 0.42,
+          "rxn_005": 0.55
+        },
+        "chemical_feasibility": 0.63,
+        "pathway_coherence": 0.56,
+        "environmental_progression": 0.72,
+        "target_achievement": 0.42,
+        "overall_confidence": 0.59,
+        "feedback": "The Mannich-malonate chemistry is literature-relevant for protometabolic oxaloacetate-class chemistry, but not for proline specifically. Like several other branches, it feeds network richness more than target synthesis. The connection from oxaloacetate-class chemistry back to the glycine/proline endpoint is indirect and not demonstrated.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_011",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Avoid presenting the Mannich branch as target-relevant unless a documented bridge to proline precursors is included.",
+          "Differentiate network-supporting protometabolism from actual synthetic route steps.",
+          "Add more specific literature-grounded intermediates if this branch is retained."
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_002": 0.62,
+          "rxn_003": 0.95,
+          "rxn_005": 0.55,
+          "rxn_006": 0.78,
+          "rxn_007": 0.82,
+          "rxn_009": 0.86,
+          "rxn_010": 0.84,
+          "rxn_012": 0.42
+        },
+        "chemical_feasibility": 0.72,
+        "pathway_coherence": 0.81,
+        "environmental_progression": 0.91,
+        "target_achievement": 0.47,
+        "overall_confidence": 0.74,
+        "feedback": "This is the strongest network-level pathway because it captures the intended hydrothermal-to-surface-to-biochemical integration and uses multiple literature-supported precursor classes: formate, formaldehyde, glycolonitrile, pyruvate, oxaloacetate, and N-phosphoroaminonitrile. The main limitation is still decisive: the network convincingly builds a precursor web around proline chemistry, but does not convincingly demonstrate a validated prebiotic synthesis of free L-proline. Excellent as a precursor network, not fully successful as a target synthesis pathway.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_005",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Present the network as a precursor-centric proline chemical landscape rather than a completed synthesis to L-proline.",
+          "Specify rxn_005 with literature-supported intermediate states or downgrade it as speculative.",
+          "Replace 'L-proline' with 'proline/proline-like product assignment' unless enantioselective evidence is given."
+        ]
+      }
+    ],
+    "best_pathway_id": "P10",
+    "overall_confidence": 0.72,
+    "network_feedback": "This is a strong connected precursor network with good topology and environmental integration, but only moderate success as a true target synthesis network for L-proline. Topologically, it performs well: 16 molecule nodes and 12 reaction nodes satisfy the requested scale, the graph is connected, and the designated hubs are mostly appropriate. Formaldehyde, HCN, glycolonitrile, glyoxylate, and glycine are genuine network hubs with multiple incoming/outgoing edges, and convergence around glycine and oxaloacetate is clear. Environmental interconnection is also a strength: hydrothermal C1 and keto-acid chemistry feeds surface cyanide and phosphoro-Strecker chemistry, which in turn feeds a biochemical finishing stage. This matches the requested Hydrothermal \u2194 Surface \u2192 Biochemical logic reasonably well.\n\nChemically, the network is mixed. Strong elements include hydrothermal CO2 reduction to formate, cyanohydrin formation of glycolonitrile from formaldehyde and HCN, Strecker synthesis of glycine, phosphoro-Strecker generation of N-phosphoroaminonitriles, and Fe2+-driven protometabolic coupling to oxaloacetate-class intermediates. These align well with the supplied literature, especially regarding key intermediates such as glycolonitrile, oxaloacetate, and N-phosphoroaminonitriles. The network also correctly acknowledges major literature uncertainty around cyclic amino acid formation.\n\nThe main weaknesses are target-specific. First, the final step glycine + formaldehyde -> L-proline is not a resolved mechanistic prebiotic reaction in the literature summary; only limited evidence suggests proline may appear among products in reduced hydrothermal mixtures with formaldehyde, and even that is under high-concentration, upper-limit conditions. Second, assigning the product specifically as L-proline is not justified by the cited evidence; prebiotic syntheses generally produce racemic mixtures unless a chiral amplification mechanism is explicitly demonstrated. Third, several branches enrich the precursor landscape without materially advancing target formation, especially the oxaloacetate and formamide branches. Fourth, one important reaction, glycolonitrile -> glyoxylate, is too underspecified relative to the literature, which mentions more specialized intermediates such as sulfonate species.\n\nLiterature alignment is therefore good for precursor chemistry and honest about open problems, but only moderate for final target achievement. The network is scientifically useful if interpreted as a literature-guided prebiotic precursor web surrounding proline chemistry. It is not yet an approved complete synthesis network to L-proline.",
+    "approved": false,
+    "hub_quality": 0.88,
+    "convergence_quality": 0.84
+  },
+  "success": false,
+  "attempts": 3,
+  "notes": "Max retries reached. Best confidence: 0.720"
+}

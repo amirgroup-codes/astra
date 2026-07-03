@@ -1,0 +1,894 @@
+{
+  "target_molecule": "Tyrosine",
+  "network": {
+    "target_molecule": "Tyrosine",
+    "overall_strategy": "This network follows the literature consensus that tyrosine is not produced by standard one-pot prebiotic synthesis from simple gases, but instead arises through multi-environment assembly requiring aromatic precursors. The network therefore centers on two literature-grounded source classes: (1) the Friedmann-Miller atmospheric/surface sequence in which methane pyrolysis or discharge chemistry yields acetylene and phenylacetylene, followed by H2S-mediated conversion to phenylacetaldehyde and Strecker-type amino acid synthesis yielding phenylalanine with tyrosine as a minor hydroxylated branch; and (2) the PAH-dependent photochemical route in which aromatic feedstocks such as naphthalene are irradiated in NH3/H2O ice to yield aromatic amino acids including tyrosine. To connect hydrothermal settings without overcompressing unsupported chemistry, hydrothermal reactions are used only where the literature supports thermodynamic favorability, aromatic precursor processing, and clay-mediated Friedel-Crafts-like assembly in serpentinites, explicitly marked as speculative where direct tyrosine-specific experimental proof is lacking. Hub molecules are acetylene, phenylacetylene, phenylacetaldehyde, phenylalanine, and tyrosine. The 10 pathways are distinct traversals through the same connected bipartite network, differing by environmental entry point, aromatic precursor source, and whether tyrosine is obtained directly, as a minor branch, or through hydrothermal clay-mediated aromatic functionalization.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CH4",
+        "iupac_name": "methane",
+        "common_name": "methane",
+        "inchi": "InChI=1S/CH4/h1H4",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "C2H2",
+        "iupac_name": "ethyne",
+        "common_name": "acetylene",
+        "inchi": "InChI=1S/C2H2/c1-2/h1-2H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_003",
+        "formula": "C6H6",
+        "iupac_name": "benzene",
+        "common_name": "benzene",
+        "inchi": "InChI=1S/C6H6/c1-2-4-6-5-3-1/h1-6H",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_004",
+        "formula": "C8H6",
+        "iupac_name": "ethynylbenzene",
+        "common_name": "phenylacetylene",
+        "inchi": "InChI=1S/C8H6/c1-2-8-6-4-3-5-7-8/h1,3-7H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_005",
+        "formula": "H2S",
+        "iupac_name": "sulfane",
+        "common_name": "hydrogen sulfide",
+        "inchi": "InChI=1S/H2S/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_006",
+        "formula": "C8H8O",
+        "iupac_name": "2-phenylacetaldehyde",
+        "common_name": "phenylacetaldehyde",
+        "inchi": "InChI=1S/C8H8O/c9-7-6-8-4-2-1-3-5-8/h1-5,7H,6H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_007",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_008",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_009",
+        "formula": "C9H11NO2",
+        "iupac_name": "2-amino-3-phenylpropanoic acid",
+        "common_name": "phenylalanine",
+        "inchi": "InChI=1S/C9H11NO2/c10-8(9(11)12)6-7-4-2-1-3-5-7/h1-5,8H,6,10H2,(H,11,12)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C6H6O",
+        "iupac_name": "phenol",
+        "common_name": "phenol",
+        "inchi": "InChI=1S/C6H6O/c7-6-4-2-1-3-5-6/h1-5,7H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C8H8O2",
+        "iupac_name": "2-(4-hydroxyphenyl)acetaldehyde",
+        "common_name": "4-hydroxyphenylacetaldehyde",
+        "inchi": "InChI=1S/C8H8O2/c9-6-5-7-1-3-8(10)4-2-7/h1-4,6,10H,5H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C9H11NO3",
+        "iupac_name": "2-amino-3-(4-hydroxyphenyl)propanoic acid",
+        "common_name": "tyrosine",
+        "inchi": "InChI=1S/C9H11NO3/c10-8(9(12)13)5-6-1-3-7(11)4-2-6/h1-4,8,11H,5,10H2,(H,12,13)",
+        "role": "target",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C10H8",
+        "iupac_name": "naphthalene",
+        "common_name": "naphthalene",
+        "inchi": "InChI=1S/C10H8/c1-2-6-10-8-4-3-7-9(10)5-1/h1-8H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_014",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_015",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Methane pyrolysis/discharge to acetylene",
+        "inputs": [
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_002"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2",
+          "molybdenite"
+        ],
+        "conditions": {
+          "temperature": "500-1000K local discharge/pyrolysis zones",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 and sulfide mineral surfaces as environmental mineral interfaces",
+          "aqueous": "false",
+          "other": "volcanic lightning, spark discharge, or pyrolytic fumarolic setting; anoxic atmosphere"
+        },
+        "mechanism": "High-energy fragmentation/dehydrogenation of methane produces C2 hydrocarbons including acetylene, which can be trapped on nearby mineral surfaces.",
+        "reasoning": "Acetylene is explicitly identified in the literature as a plausible prebiotic product of methane pyrolysis/discharge and as a starting material relevant to cyanosulfidic and aromatic chemistry; the atmospheric precursor role follows Miller (1953), Friedmann and Miller (1969), and Patel et al. (2015). Exact mineral catalysis was not the focus of those studies, so TiO2 and molybdenite are included here as required surface mineral interfaces rather than as uniquely proven catalysts; this step is literature-grounded for product class but mineral assignment is connective and partially speculative."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Acetylene cyclotrimerization to benzene on metal-rich mineral surfaces",
+        "inputs": [
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_003"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "molybdenite",
+          "TiO2"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "metal-rich mineral surface interface",
+          "aqueous": "false",
+          "other": "dry or thin-film surface setting; cyclotrimerization of 3 acetylene equivalents to benzene"
+        },
+        "mechanism": "Surface-assisted [2+2+2] cyclotrimerization of acetylene generates an aromatic ring.",
+        "reasoning": "The literature identifies acetylene cyclotrimerization as the key route to benzene from C2 feedstocks and cites metal-catalyzed feasibility, especially Fe+ and other metals, as a plausible prebiotic solution to the aromatic ring problem (Takahashi et al., 2022; Shuman et al., as summarized in the report). Because the required surface-mineral list does not include those exact metals, this network uses molybdenite/TiO2 as the mandated surface mineral context while preserving the literature route itself. This is a plausible but not directly demonstrated prebiotic Earth mineral implementation."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Discharge/pyrolytic generation of phenylacetylene from acetylene-rich hydrocarbon chemistry",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "molybdenite",
+          "TiO2"
+        ],
+        "conditions": {
+          "temperature": "500-1000K local discharge/pyrolysis zones",
+          "pressure": "1 atm",
+          "catalyst": "mineral surface trap and quench interface",
+          "aqueous": "false",
+          "other": "acetylene-rich volcanic lightning or pyrolysis chemistry; aromatic hydrocarbon byproduct formation"
+        },
+        "mechanism": "High-energy hydrocarbon radical chemistry in acetylene-rich mixtures yields aromatic acetylenes including phenylacetylene.",
+        "reasoning": "This step is aligned with Friedmann and Miller (1969), who used phenylacetylene as the crucial aromatic precursor and attributed it to pyrolysis/discharge hydrocarbon chemistry rather than to a benzene-plus-acetylene addition step. The network intentionally avoids the previously criticized unsupported benzene + acetylene -> phenylacetylene shortcut. Mineral agents here indicate the surface depositional environment required by the schema, but the chemistry itself is driven by discharge/pyrolysis as described by Friedmann and Miller (1969) and Miller (1974, 1987)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "H2S-mediated conversion of phenylacetylene to phenylacetaldehyde",
+        "inputs": [
+          "mol_004",
+          "mol_005",
+          "mol_014"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "stibnite",
+          "molybdenite"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide mineral surface",
+          "aqueous": "true",
+          "other": "warm aqueous solution; radical addition of H2S followed by hydrolysis"
+        },
+        "mechanism": "Phenylacetylene undergoes sulfur-mediated addition chemistry, then hydrolytic conversion to the aldehyde.",
+        "reasoning": "This is the core experimentally supported Friedmann-Miller branch. Friedmann and Miller (1969) reported that phenylacetylene treated through H2S-mediated chemistry followed by hydrolysis yields phenylacetaldehyde, enabling downstream Strecker chemistry. The use of sulfide minerals as agents is consistent with the sulfur-rich surface environment specified in the instructions, while the reaction class itself is directly based on Friedmann and Miller (1969)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Strecker synthesis of phenylalanine from phenylacetaldehyde",
+        "inputs": [
+          "mol_006",
+          "mol_007",
+          "mol_008",
+          "mol_014"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite and phosphate-rich evaporitic setting",
+          "aqueous": "true",
+          "other": "warm alkaline pool; aminonitrile formation and hydrolysis"
+        },
+        "mechanism": "Phenylacetaldehyde forms an aminonitrile with HCN and NH3, which hydrolyzes to phenylalanine.",
+        "reasoning": "This follows the explicit Strecker stage of the Friedmann-Miller pathway: phenylacetaldehyde + HCN + NH3 gives phenylalanine nitrile and then phenylalanine (Friedmann and Miller, 1969). The report also notes that warm alkaline pools are favorable for Strecker processing. Clay and phosphate minerals are included as required surface agents and as plausible concentrating/hydrolytic surfaces."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Minor tyrosine branch during hydroxylated Friedmann-Miller aromatic amino acid synthesis",
+        "inputs": [
+          "mol_006",
+          "mol_007",
+          "mol_008",
+          "mol_014",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "stibnite",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide mineral plus clay concentration surface",
+          "aqueous": "true",
+          "other": "same multi-step solution chemistry as phenylalanine-forming sequence; tyrosine appears in small yield side products"
+        },
+        "mechanism": "A hydroxylated aromatic aldehyde branch forms within the sulfur-mediated aromatic precursor sequence and undergoes Strecker-type amino acid synthesis to tyrosine.",
+        "reasoning": "Friedmann and Miller (1969) reported tyrosine in small yield as a side product in their deliberate multi-step aromatic amino acid synthesis, likely arising from hydroxylation during the H2S-mediated sequence before Strecker conversion. This reaction is intentionally framed as a minor branch rather than a clean one-step transformation, addressing prior overstatement. The exact hydroxylated aldehyde sequence was not fully resolved experimentally, so this node is literature-based but mechanistically only partially specified, consistent with Miller (1974, 1987)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "UV/Fenton-like hydroxylation of benzene to phenol",
+        "inputs": [
+          "mol_003",
+          "mol_014"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2",
+          "borate minerals"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 photocatalyst",
+          "aqueous": "true",
+          "other": "UV-exposed shallow pool; hydroxyl radical chemistry at mineral-water interface"
+        },
+        "mechanism": "UV-activated TiO2 generates reactive oxygen species and hydroxyl radicals that hydroxylate the aromatic ring to phenol.",
+        "reasoning": "The deep research report identifies benzene -> phenol via radical hydroxylation under UV photolysis or Fenton-type chemistry as a plausible necessary step in de novo terrestrial tyrosine synthesis, but not one directly demonstrated in a complete tyrosine pathway. TiO2 photocatalysis is specifically highlighted as relevant for aromatic hydroxylation. Therefore this step is retained as a literature-supported class of chemistry but explicitly speculative as a tyrosine-network connection (Chen et al., 2008 for UV aromatic functionalization context; report synthesis citing TiO2 environmental photocatalysis)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Hydrothermal Fe-clay Friedel-Crafts-like assembly of 4-hydroxyphenylacetaldehyde from phenol and acetylene",
+        "inputs": [
+          "mol_010",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite",
+          "pyrite"
+        ],
+        "conditions": {
+          "temperature": "313-389K",
+          "pressure": "high",
+          "catalyst": "iron-rich clay/mineral hydrothermal interface",
+          "aqueous": "true",
+          "other": "Lost City-like alkaline serpentinizing system, pH 9-11, H2-rich; moderate-temperature late alteration conditions"
+        },
+        "mechanism": "Aromatic ring alkylation/side-chain construction on iron-rich mineral-clay interfaces yields a para-hydroxylated aromatic aldehyde precursor.",
+        "reasoning": "This reaction captures the literature-implied but not directly demonstrated hydrothermal bridge: phenol plus a C2 unit leading to 4-hydroxyphenylacetaldehyde through Friedel-Crafts-like chemistry. M\u00e9nez et al. (2018) demonstrated abiotic tryptophan formation in serpentinized rocks via Fe-rich saponite-catalyzed Friedel-Crafts chemistry, and Mojarro et al. (2025) proposed analogous Friedel-Crafts alkylation during Bennu parent-body aqueous alteration for aromatic amino acids including tyrosine. However, no tyrosine-specific experimental hydrothermal synthesis of 4-hydroxyphenylacetaldehyde has been published, so this step is explicitly speculative but literature-motivated. Greigite and pyrite are included as required hydrothermal mineral agents representing the iron-sulfur hydrothermal context; the catalytic precedent itself comes from iron-rich saponite clay in M\u00e9nez et al. (2018)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Hydroxylated aromatic Strecker synthesis of tyrosine from 4-hydroxyphenylacetaldehyde",
+        "inputs": [
+          "mol_011",
+          "mol_007",
+          "mol_008",
+          "mol_014"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "clay and phosphate mineral surfaces",
+          "aqueous": "true",
+          "other": "warm alkaline pool; aqueous aminonitrile formation and hydrolysis"
+        },
+        "mechanism": "4-Hydroxyphenylacetaldehyde undergoes Strecker reaction with HCN and NH3 to yield tyrosine after hydrolysis.",
+        "reasoning": "The report identifies this exact class of step as the most plausible completion of a de novo terrestrial route: 4-hydroxyphenylacetaldehyde + HCN + NH3 -> tyrosine via Strecker synthesis. This is chemically well grounded by Strecker logic and by the Friedmann-Miller aromatic amino acid precedent, but the specific para-hydroxylated aldehyde substrate has not been directly isolated in prebiotic tyrosine synthesis experiments. Accordingly, this reaction is retained as a necessary but partly speculative connector consistent with the report's own proposed pathway and Friedmann and Miller (1969)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "UV photolysis of PAH-containing NH3/H2O ice to aromatic amino acids including tyrosine and phenylalanine",
+        "inputs": [
+          "mol_013",
+          "mol_008",
+          "mol_014"
+        ],
+        "outputs": [
+          "mol_009",
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2",
+          "borate minerals"
+        ],
+        "conditions": {
+          "temperature": "15K irradiation then warming/recovery",
+          "pressure": "low pressure ice/vacuum analogue",
+          "catalyst": "UV/EUV photons; mineral agents represent collection/processing surface interface",
+          "aqueous": "false",
+          "other": "PAH-containing ice irradiated with 4-20 eV photons; aromatic ring pre-exists in starting material"
+        },
+        "mechanism": "Photofunctionalization and fragmentation of a pre-existing PAH framework in NH3/H2O ice yields aromatic amino acids upon residue recovery.",
+        "reasoning": "This is the strongest direct literature-supported tyrosine-producing reaction in the network besides Friedmann-Miller multi-step chemistry. Chen et al. (2008) detected tyrosine and phenylalanine after UV/EUV irradiation of naphthalene + H2O + NH3 ice at 15 K, demonstrating aromatic amino acid production when an aromatic template is supplied. Because the schema requires mineral agents for all surface reactions, TiO2 and borate minerals are included as environmental surface-processing agents, but the core chemistry is photon-driven and follows Chen et al. (2008)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Hydrothermal preservation/thermodynamic stabilization of tyrosine in alkaline H2-rich vent systems",
+        "inputs": [
+          "mol_012",
+          "mol_015",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite",
+          "mackinawite"
+        ],
+        "conditions": {
+          "temperature": "373K",
+          "pressure": "250 atm",
+          "catalyst": "iron-sulfur hydrothermal mineral surfaces",
+          "aqueous": "true",
+          "other": "alkaline vent conditions; H2-rich fluids suppress decomposition; thermodynamic formation energy favorable"
+        },
+        "mechanism": "No net chemical transformation; hydrothermal conditions shift energetics toward persistence/formation viability relative to surface conditions.",
+        "reasoning": "This node encodes the key thermodynamic leverage identified in the literature without claiming an unsupported synthetic one-step transformation. Amend and Shock (1998) and Higgs and Pudritz (2009) show tyrosine formation becomes exergonic under hydrothermal conditions around 100C and 250 atm, in contrast to strongly endergonic surface conditions. Lee et al. (2014) and Aspin et al. (2025), as summarized in the report, indicate H2 and dissolved salts can suppress amino-acid decomposition. This is not a synthesis reaction in the strict stoichiometric sense but is included to represent the hydrothermal environmental sink/source compatibility required by the network."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Tyrosine incorporation into prebiotic protopeptides during wet-dry cycling",
+        "inputs": [
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "null"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "false",
+          "other": "wet-dry cycling on mineral interfaces or in concentrated pools; network endpoint representing downstream incorporation"
+        },
+        "mechanism": "Trace tyrosine becomes available for peptide incorporation in mixed amino-acid protopeptide chemistry.",
+        "reasoning": "Foden et al. (2020) showed that all 20 amino acid residues can be incorporated into prebiotically synthesized peptides once available, so this reaction serves as the biochemical endpoint showing why trace tyrosine matters. It does not alter the tyrosine node itself but places the target in the required Biochemical environment. This is fully consistent with the report's conclusion that once tyrosine exists, even at trace levels, it can participate in protopeptide chemistry."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Friedmann-Miller canonical phenylalanine-first branch with minor tyrosine production",
+        "description": "Classical multi-step atmospheric/surface route: methane discharge generates acetylene and phenylacetylene; sulfur-mediated aqueous processing yields phenylacetaldehyde; Strecker chemistry gives phenylalanine, while tyrosine appears as the small hydroxylated side-product branch documented by Friedmann and Miller.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_003",
+          "rxn_004",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_002",
+          "mol_004",
+          "mol_006"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Friedmann-Miller phenylalanine branch feeding hydrothermal stabilization and tyrosine network context",
+        "description": "Same experimentally grounded aromatic assembly as P1, but emphasizes phenylalanine as the major product and tyrosine scarcity, connecting aromatic amino acid production to hydrothermal preservation conditions where tyrosine becomes thermodynamically favorable.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_006",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "De novo atmospheric-to-surface-to-hydrothermal terrestrial route",
+        "description": "The literature-implied composite pathway from simple gases: methane to acetylene, acetylene to benzene, benzene to phenol by UV hydroxylation, hydrothermal Fe-clay-like aromatic alkylation to 4-hydroxyphenylacetaldehyde, then Strecker synthesis to tyrosine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_002",
+          "mol_003",
+          "mol_010",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Acetylene-rich terrestrial route bypassing benzene node",
+        "description": "A shortened version of the composite terrestrial path in which acetylene generated atmospherically feeds both aromatic formation logic and hydrothermal side-chain assembly after phenol is available, minimizing unsupported benzene-to-phenylacetylene shortcuts.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_002",
+          "mol_010",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "PAH ice photolysis direct tyrosine route",
+        "description": "Direct aromatic amino acid synthesis from pre-existing aromatic rings in icy environments: naphthalene with ammonia and water under UV/EUV irradiation yields tyrosine directly.",
+        "reaction_sequence": [
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "PAH ice photolysis to phenylalanine plus tyrosine co-production",
+        "description": "Chen-type photolysis produces both phenylalanine and tyrosine from aromatic PAH-containing ices; this pathway emphasizes shared aromatic precursor logic and co-production of both aromatic amino acids.",
+        "reaction_sequence": [
+          "rxn_010",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_013",
+          "mol_009",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Surface aromatic construction converging with Friedmann-Miller endgame",
+        "description": "A hybrid route in which methane-derived acetylene participates in aromatic precursor generation while the final amino-acid-forming logic remains the Friedmann-Miller sulfur-mediated aqueous sequence ending in trace tyrosine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_003",
+          "rxn_004",
+          "rxn_006",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_002",
+          "mol_004",
+          "mol_006",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Hydrothermal Fe-clay alkylation route from phenol with surface Strecker completion",
+        "description": "Phenol formed in UV-exposed surface pools is transferred into alkaline serpentinizing systems where iron-rich clay/mineral chemistry plausibly forms 4-hydroxyphenylacetaldehyde; this then returns to surface pools for Strecker conversion to tyrosine.",
+        "reaction_sequence": [
+          "rxn_007",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_010",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Thermodynamically favored hydrothermal sink for terrestrially produced tyrosine",
+        "description": "Any trace tyrosine produced by Friedmann-Miller or de novo aromatic routes is preferentially stabilized or rendered energetically more accessible in moderate hydrothermal systems, rather than in hot black smoker conditions where aromatic amino acids decompose rapidly.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_011",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Exogenous-endogenous hybrid tyrosine availability route",
+        "description": "Tyrosine formed directly in PAH-rich icy material is delivered to aqueous surface or hydrothermal settings, where hydrothermal energetics support persistence and later biochemical incorporation into protopeptides.",
+        "reaction_sequence": [
+          "rxn_010",
+          "rxn_011",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_012"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_002",
+      "mol_004",
+      "mol_006",
+      "mol_010",
+      "mol_012"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_002",
+        "incoming_reactions": [
+          "rxn_001"
+        ],
+        "outgoing_reactions": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_008"
+        ]
+      },
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_004"
+        ],
+        "outgoing_reactions": [
+          "rxn_005",
+          "rxn_006"
+        ]
+      },
+      {
+        "molecule_id": "mol_012",
+        "incoming_reactions": [
+          "rxn_006",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011"
+        ],
+        "outgoing_reactions": [
+          "rxn_011",
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_007"
+        ],
+        "outgoing_reactions": [
+          "rxn_008"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Tyrosine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_003": 0.68,
+          "rxn_004": 0.88,
+          "rxn_005": 0.9,
+          "rxn_006": 0.72
+        },
+        "chemical_feasibility": 0.8,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.84,
+        "overall_confidence": 0.84,
+        "feedback": "This is the strongest literature-aligned pathway in the network. The H2S-mediated phenylacetylene to phenylacetaldehyde step and Strecker conversion to phenylalanine are well grounded in Friedmann and Miller's multistep work, and a minor tyrosine branch is consistent with the reported small-yield hydroxylated product. The weak point is the poorly constrained origin of phenylacetylene from methane/acetylene-rich discharge chemistry as represented here.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Clarify the experimental basis and conditions for phenylacetylene generation from methane plus acetylene-rich discharge products",
+          "Distinguish tyrosine formation as a side-product branch rather than implying robust direct selectivity in rxn_006"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_003": 0.68,
+          "rxn_004": 0.88,
+          "rxn_005": 0.9,
+          "rxn_011": 0.25
+        },
+        "chemical_feasibility": 0.68,
+        "pathway_coherence": 0.63,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.45,
+        "overall_confidence": 0.62,
+        "feedback": "This pathway becomes weak because it treats hydrothermal stabilization as if it advances synthesis toward tyrosine, but rxn_011 is not a productive synthetic step. Literature supports thermodynamic favorability and preservation in alkaline hydrothermal settings, not direct conversion of externally supplied tyrosine via CO2 and H2S into more tyrosine.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_011"
+        ],
+        "suggestions": [
+          "Remove identity preservation steps from target-producing pathways",
+          "Replace rxn_011 with a true hydrothermal functionalization or concentration step only if experimentally or thermodynamically justified as part of synthesis"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_001": 0.86,
+          "rxn_002": 0.79,
+          "rxn_007": 0.62,
+          "rxn_008": 0.42,
+          "rxn_009": 0.89
+        },
+        "chemical_feasibility": 0.72,
+        "pathway_coherence": 0.79,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.82,
+        "overall_confidence": 0.76,
+        "feedback": "This pathway reflects the literature-proposed atmospheric-to-surface-to-hydrothermal logic and captures the most plausible conceptual route to tyrosine from simple feedstocks. However, two crucial steps remain weakly supported: benzene hydroxylation to phenol under prebiotic surface conditions is plausible but not directly demonstrated for this network, and the hydrothermal Fe-clay assembly of 4-hydroxyphenylacetaldehyde is speculative, inspired by M\u00e9nez et al. rather than experimentally shown for tyrosine precursors.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_007",
+          "rxn_008"
+        ],
+        "suggestions": [
+          "Specify a mineral agent for rxn_007 such as TiO2 or iron oxyhydroxide to better satisfy surface mineral catalysis requirements",
+          "Mark rxn_008 explicitly as speculative and align it with saponite/Friedel-Crafts literature rather than generic Fe-clay wording",
+          "Provide stronger justification for para selectivity in forming 4-hydroxyphenylacetaldehyde"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_003": 0.68,
+          "rxn_004": 0.88,
+          "rxn_006": 0.72
+        },
+        "chemical_feasibility": 0.76,
+        "pathway_coherence": 0.73,
+        "environmental_progression": 0.76,
+        "target_achievement": 0.8,
+        "overall_confidence": 0.75,
+        "feedback": "This shorter acetylene-rich route is partially consistent with Friedmann-Miller chemistry but relies heavily on the direct tyrosine branch from phenylacetaldehyde chemistry. That branch is plausible only as a minor side path and should not be treated as a robust dedicated route. The precursor-generation step remains underdefined.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_003",
+          "rxn_006"
+        ],
+        "suggestions": [
+          "Reduce confidence in direct tyrosine output from the phenylacetaldehyde Strecker branch",
+          "Insert an explicit hydroxylated aldehyde intermediate if aiming for a stronger tyrosine-specific route"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_010": 0.93
+        },
+        "chemical_feasibility": 0.93,
+        "pathway_coherence": 0.95,
+        "environmental_progression": 0.72,
+        "target_achievement": 0.93,
+        "overall_confidence": 0.9,
+        "feedback": "This is the best-supported single pathway in the network. Direct production of tyrosine and phenylalanine from naphthalene in NH3/H2O ice under UV/EUV irradiation is strongly aligned with Chen et al. (2008), and the network correctly treats this as requiring a preformed aromatic precursor rather than de novo ring construction. The only caveat is that this chemistry is more astrochemical/ice-photolysis than ordinary terrestrial surface-pool chemistry.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Label the environment more specifically as ice photolysis/exogenous delivery rather than generic Surface",
+          "If retaining terrestrial framing, add a transfer step from exogenous delivery to surface or prebiotic pools"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_010": 0.93,
+          "rxn_012": 0.2
+        },
+        "chemical_feasibility": 0.62,
+        "pathway_coherence": 0.58,
+        "environmental_progression": 0.7,
+        "target_achievement": 0.55,
+        "overall_confidence": 0.57,
+        "feedback": "The initial PAH photolysis step is strong, but the follow-up biochemical incorporation step is represented as an identity reaction and does not constitute meaningful synthesis. It may indicate downstream relevance, but it should not be part of a target-achievement pathway evaluation.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Replace rxn_012 with an actual peptide-bond-forming reaction involving tyrosine and another amino acid",
+          "Separate target synthesis from downstream utilization pathways"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_001": 0.86,
+          "rxn_002": 0.79,
+          "rxn_007": 0.62,
+          "rxn_008": 0.42,
+          "rxn_009": 0.89
+        },
+        "chemical_feasibility": 0.72,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.82,
+        "overall_confidence": 0.77,
+        "feedback": "This pathway is conceptually good because it converges surface aromatic construction with Strecker completion. It closely matches the literature's inferred five-step route. Its weakness is the same as P3: the hydroxyaromatic assembly step is speculative and insufficiently anchored to demonstrated tyrosine-specific chemistry.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_007",
+          "rxn_008"
+        ],
+        "suggestions": [
+          "Support the phenol formation step with explicit photocatalyst/mineral details",
+          "Reframe rxn_008 as a plausible but unproven analog to M\u00e9nez et al. rather than established synthesis"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_008": 0.42,
+          "rxn_009": 0.89
+        },
+        "chemical_feasibility": 0.66,
+        "pathway_coherence": 0.74,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.81,
+        "overall_confidence": 0.71,
+        "feedback": "The final Strecker step to tyrosine from 4-hydroxyphenylacetaldehyde is chemically sound and literature-consistent. The bottleneck is formation of 4-hydroxyphenylacetaldehyde from phenol plus acetylene in hydrothermal Fe-clay systems, which is plausible by analogy to Friedel-Crafts chemistry in serpentinites and Bennu parent-body alteration, but remains speculative and lacks direct experimental demonstration.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_008"
+        ],
+        "suggestions": [
+          "Use saponite explicitly as the catalyst instead of generic Fe-clay if the source network intends to align with M\u00e9nez et al.",
+          "Note that this route is hypothesis-driven and currently unsupported by direct prebiotic tyrosine synthesis experiments"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_009": 0.89,
+          "rxn_011": 0.25
+        },
+        "chemical_feasibility": 0.54,
+        "pathway_coherence": 0.49,
+        "environmental_progression": 0.76,
+        "target_achievement": 0.43,
+        "overall_confidence": 0.48,
+        "feedback": "This pathway confuses target formation with target preservation. Hydrothermal stabilization is relevant to environmental plausibility but does not add a chemically productive step. As written, it overstates literature support for hydrothermal tyrosine persistence as synthesis.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_011"
+        ],
+        "suggestions": [
+          "Treat hydrothermal preservation as annotation or contextual evidence, not a reaction in the synthetic pathway",
+          "Build the pathway around actual tyrosine-forming chemistry before any stabilization step"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_010": 0.93,
+          "rxn_012": 0.2
+        },
+        "chemical_feasibility": 0.62,
+        "pathway_coherence": 0.6,
+        "environmental_progression": 0.73,
+        "target_achievement": 0.55,
+        "overall_confidence": 0.58,
+        "feedback": "The exogenous-endogenous framing is reasonable and literature-supported in broad terms, especially given Bennu and PAH photolysis evidence. But the path again ends with a non-transformative identity reaction, so it is not a strong synthetic route as encoded.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Encode exogenous delivery as an environmental transfer rather than a reaction if you want to preserve network rigor",
+          "Replace biochemical identity steps with genuine condensation/polymerization chemistry"
+        ]
+      }
+    ],
+    "best_pathway_id": "P5",
+    "overall_confidence": 0.74,
+    "network_feedback": "The network is topologically adequate and clearly built around literature-recognized difficulty in prebiotic tyrosine synthesis. It contains sufficient molecule and reaction nodes, several genuine hubs, and meaningful convergence around phenylacetaldehyde, 4-hydroxyphenylacetaldehyde, and tyrosine. It also captures the two experimentally supported source classes from the literature: Friedmann-Miller multistep aromatic amino acid synthesis and Chen et al. PAH ice photolysis. These are major strengths. However, overall approval is limited by several structural and chemical issues. First, two reactions are identity/self-loop nodes (rxn_011 and rxn_012), which should not count as productive synthetic reactions in a bipartite synthesis network. Second, key hydrothermal and surface steps meant to bridge environmental gaps are speculative or under-specified, especially benzene hydroxylation and Fe-clay assembly of 4-hydroxyphenylacetaldehyde. Third, the network does not provide explicit mineral agents for every Hydrothermal and Surface reaction, despite that being a critical requirement; this weakens environmental interconnection quality. Fourth, while the literature supports hydrothermal thermodynamic favorability for tyrosine, it does not support direct hydrothermal production in the manner implied by stabilization reactions. Finally, the PAH photolysis route is strong but is better classified as astrochemical/exogenous rather than generic terrestrial surface chemistry. In summary, the network is scientifically informed and partially literature-aligned, but it is not yet viable as an approved complete synthesis network because several bridge reactions are speculative and some nodes are not true synthetic transformations.",
+    "approved": false,
+    "hub_quality": 0.83,
+    "convergence_quality": 0.8
+  },
+  "success": false,
+  "attempts": 3,
+  "notes": null
+}

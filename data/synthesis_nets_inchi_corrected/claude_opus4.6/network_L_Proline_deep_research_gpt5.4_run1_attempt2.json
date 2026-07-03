@@ -1,0 +1,1117 @@
+{
+  "target_molecule": "L-Proline",
+  "network": {
+    "target_molecule": "L-Proline",
+    "overall_strategy": "The network constructs L-proline via the prebiotically plausible biosynthetic analog: CO\u2082 fixation \u2192 pyruvate \u2192 proto-TCA cycle intermediates (with each step explicit: oxaloacetate \u2192 malate \u2192 fumarate \u2192 succinate) \u2192 \u03b1-ketoglutarate \u2192 glutamate \u2192 glutamate-\u03b3-semialdehyde \u2192 \u0394\u00b9-pyrroline-5-carboxylate (P5C) \u2192 proline. Two routes to pyruvate (via formate or direct Fe\u2070 reduction), two routes to \u03b1-ketoglutarate (full proto-TCA or a reductive carboxylation shortcut from pyruvate), and two routes to glutamate (direct Ni-catalyzed reductive amination or transamination via alanine) create combinatorial branching that yields 10 distinct pathways. The \u03b3-carboxyl reduction of glutamate to GS-Ald is explicitly flagged as the key unproven bottleneck. Product is racemic DL-proline; L-enrichment may arise from asymmetric adsorption on chiral mineral faces (Cueto-D\u00edaz et al. 2023) or downstream selection in peptide systems. Literature anchors: Kaur et al. 2024 for Ni-catalyzed reductive amination, Somorjai et al. 2023 / Phil. Trans. for non-enzymatic glutamate\u2192P5C\u2192proline cyclization, Ring et al. 1972 for experimental proline detection, Guo et al. 2024 for mineral-mediated prebiotic condensation.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen gas",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "ammonia",
+        "common_name": "ammonia / ammonium",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "CHOO-",
+        "iupac_name": "formate",
+        "common_name": "formate",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)/p-1",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_005",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvate",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_006",
+        "formula": "C4H4O5",
+        "iupac_name": "3-carboxy-2-oxopropanoic acid",
+        "common_name": "oxaloacetate",
+        "inchi": "InChI=1S/C4H4O5/c5-2(4(8)9)1-3(6)7/h1H2,(H,6,7)(H,8,9)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C4H6O5",
+        "iupac_name": "2-hydroxybutanedioic acid",
+        "common_name": "malate",
+        "inchi": "InChI=1S/C4H6O5/c5-2(4(8)9)1-3(6)7/h2,5H,1H2,(H,6,7)(H,8,9)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C4H4O4",
+        "iupac_name": "(E)-butenedioic acid",
+        "common_name": "fumarate",
+        "inchi": "InChI=1S/C4H4O4/c5-3(6)1-2-4(7)8/h1-2H,(H,5,6)(H,7,8)/b2-1+",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C4H6O4",
+        "iupac_name": "butanedioic acid",
+        "common_name": "succinate",
+        "inchi": "InChI=1S/C4H6O4/c5-3(6)1-2-4(7)8/h1-2H2,(H,5,6)(H,7,8)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C5H6O5",
+        "iupac_name": "2-oxopentanedioic acid",
+        "common_name": "\u03b1-ketoglutarate",
+        "inchi": "InChI=1S/C5H6O5/c6-3(5(9)10)1-2-4(7)8/h1-2H2,(H,7,8)(H,9,10)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C5H9NO4",
+        "iupac_name": "2-aminopentanedioic acid",
+        "common_name": "glutamate",
+        "inchi": "InChI=1S/C5H9NO4/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H,7,8)(H,9,10)/t3-/m0/s1",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C5H9NO3",
+        "iupac_name": "2-amino-5-oxopentanoic acid",
+        "common_name": "glutamate-\u03b3-semialdehyde",
+        "inchi": "InChI=1S/C5H9NO3/c6-4(5(8)9)2-1-3-7/h3-4H,1-2,6H2,(H,8,9)/t4-/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C5H7NO2",
+        "iupac_name": "3,4-dihydro-2H-pyrrole-2-carboxylic acid",
+        "common_name": "\u0394\u00b9-pyrroline-5-carboxylate (P5C)",
+        "inchi": "InChI=1S/C5H7NO2/c7-5(8)4-2-1-3-6-4/h3-4H,1-2H2,(H,7,8)",
+        "role": "hub_intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C5H9NO2",
+        "iupac_name": "pyrrolidine-2-carboxylic acid",
+        "common_name": "L-proline",
+        "inchi": "InChI=1S/C5H9NO2/c7-5(8)4-2-1-3-6-4/h4,6H,1-3H2,(H,7,8)",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C3H7NO2",
+        "iupac_name": "2-aminopropanoic acid",
+        "common_name": "alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "CO\u2082 hydrogenation to formate on greigite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe\u2083S\u2084)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-100 bar)",
+          "catalyst": "greigite (Fe\u2083S\u2084)",
+          "aqueous": true,
+          "other": "Alkaline vent conditions, pH 9-11, H\u2082-saturated fluid"
+        },
+        "mechanism": "CO\u2082 binds to the Fe\u2083S\u2084 surface via Fe-O interactions; H\u2082 dissociates on the mineral surface providing hydride equivalents. Formate is released as the two-electron reduction product of CO\u2082. Greigite's [Fe\u2084S\u2084]-like cubane clusters facilitate this electron transfer, analogous to modern carbon monoxide dehydrogenase/acetyl-CoA synthase active sites.",
+        "reasoning": "CO\u2082 reduction to formate on Fe-S minerals is among the most well-supported prebiotic reactions. Greigite (Fe\u2083S\u2084) is a structural analog of biological [Fe\u2084S\u2084] clusters and catalyzes this reduction under hydrothermal conditions. Demonstrated by multiple groups studying prebiotic carbon fixation at alkaline vents (reviewed in Somorjai et al. 2023, Phil. Trans. R. Soc.). Kaur et al. (2024) also note the importance of formate as a C1 building block in prebiotic networks."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Reductive carbonylation of formate to pyruvate",
+        "inputs": [
+          "mol_004",
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_005"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe\u2083O\u2084)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "370-420K",
+          "pressure": "high (50-200 bar)",
+          "catalyst": "magnetite (Fe\u2083O\u2084) / mackinawite (FeS)",
+          "aqueous": true,
+          "other": "Mixed mineral surface, alkaline vent fluid, CO\u2082 and H\u2082 in excess"
+        },
+        "mechanism": "Formate is further reduced to a formyl/carbonyl intermediate on the mineral surface. Sequential C-C bond formation via CO insertion (analogous to the Wood-Ljungdahl acetyl-CoA pathway) followed by a second CO\u2082 reduction step yields a C3 \u03b1-keto acid (pyruvate). The mineral surface stabilizes reactive intermediates and promotes reductive C-C coupling.",
+        "reasoning": "Pyruvate formation from CO\u2082/formate under hydrothermal conditions on Fe-Ni-S minerals has been demonstrated and represents a prebiotic analog of the acetyl-CoA pathway extended by one carbon. This is consistent with the proto-metabolic network model of Somorjai et al. (2023, Phil. Trans.) and the concept that core metabolic intermediates arose abiotically on mineral surfaces. Magnetite and mackinawite surfaces promote Fischer-Tropsch-type C-C bond formation."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Direct CO\u2082 reduction to pyruvate on native iron",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_005"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron (Fe\u2070)",
+          "magnetite (Fe\u2083O\u2084)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (100-200 bar)",
+          "catalyst": "Fe\u2070 with magnetite co-catalyst",
+          "aqueous": true,
+          "other": "Native iron from meteoritic input or serpentinization, strongly reducing conditions"
+        },
+        "mechanism": "Elemental iron acts as a strong two-electron reductant, reducing CO\u2082 in multiple sequential steps. Fe\u2070 surface provides both electrons and a catalytic template for C-C bond formation, generating pyruvate as a C3 product via sequential carboxylation and reduction steps without requiring a discrete formate intermediate in solution.",
+        "reasoning": "Direct CO\u2082 fixation to pyruvate on Fe\u2070 under hydrothermal conditions has been reported as a plausible prebiotic route. Native iron from meteoritic material or serpentinization provides a strong reductant. This parallels findings where Fe\u2070 promotes multi-carbon product formation from CO\u2082 at moderate hydrothermal temperatures (Somorjai et al. 2023; reviewed in context of proto-TCA cycle analogs). Provides an alternative to the stepwise formate route (rxn_001\u2192rxn_002)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Reductive carboxylation of pyruvate to oxaloacetate",
+        "inputs": [
+          "mol_005",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe\u2083O\u2084)",
+          "greigite (Fe\u2083S\u2084)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-100 bar)",
+          "catalyst": "magnetite (Fe\u2083O\u2084)",
+          "aqueous": true,
+          "other": "CO\u2082-rich alkaline vent fluid, mineral surface promotes carboxylation"
+        },
+        "mechanism": "Pyruvate undergoes carboxylation at the C3 position (analogous to pyruvate carboxylase) on the magnetite surface. The mineral provides Lewis acid sites that activate CO\u2082 and stabilize the oxaloacetate product via surface adsorption, preventing decarboxylation back to pyruvate.",
+        "reasoning": "Carboxylation of pyruvate to oxaloacetate is a key step in the reductive TCA cycle and its prebiotic analog. Somorjai et al. (2023, Phil. Trans.) discuss this as part of the non-enzymatic proto-metabolic network. Under high CO\u2082 pressure at hydrothermal conditions, the equilibrium favors carboxylation. Mineral surfaces (magnetite, greigite) stabilize the product and lower the activation barrier."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Reduction of oxaloacetate to malate on greigite",
+        "inputs": [
+          "mol_006",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe\u2083S\u2084)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-100 bar)",
+          "catalyst": "greigite (Fe\u2083S\u2084)",
+          "aqueous": true,
+          "other": "H\u2082-rich alkaline vent fluid, reductive conditions"
+        },
+        "mechanism": "The keto group of oxaloacetate is reduced to a hydroxyl group by H\u2082 dissociated on the greigite surface, yielding malate. This is a straightforward two-electron reduction analogous to the malate dehydrogenase step in the rTCA cycle. The Fe-S surface provides hydride equivalents.",
+        "reasoning": "Reduction of \u03b1-keto acids on Fe-S mineral surfaces is well-established. This step mirrors the rTCA cycle (oxaloacetate \u2192 malate) and has been discussed as prebiotically feasible by Somorjai et al. (2023). Greigite's [Fe\u2084S\u2084]-like clusters are effective for carbonyl reduction using H\u2082 as reductant."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Dehydration of malate to fumarate on pyrite",
+        "inputs": [
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS\u2082)"
+        ],
+        "conditions": {
+          "temperature": "370-420K",
+          "pressure": "high",
+          "catalyst": "pyrite (FeS\u2082) surface",
+          "aqueous": true,
+          "other": "Surface-adsorbed malate undergoes elimination; moderate heating at vent temperatures"
+        },
+        "mechanism": "Malate adsorbs to the pyrite surface via its carboxylate groups. The mineral surface facilitates anti-elimination of water from the C2-C3 bond, generating the trans-alkene fumarate. Elevated temperature and surface activation lower the kinetic barrier for this dehydration.",
+        "reasoning": "Dehydration of malate to fumarate is thermodynamically favorable at elevated temperatures and is a standard step in the rTCA cycle analog. Pyrite surfaces can promote dehydration reactions through surface binding and Lewis acid catalysis (Somorjai et al. 2023). This explicit step was previously lumped with adjacent reactions; it is shown separately here to accurately represent the proto-TCA sequence."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Reduction of fumarate to succinate on greigite",
+        "inputs": [
+          "mol_008",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe\u2083S\u2084)",
+          "pyrite (FeS\u2082)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-100 bar)",
+          "catalyst": "greigite (Fe\u2083S\u2084)",
+          "aqueous": true,
+          "other": "H\u2082-saturated alkaline vent fluid"
+        },
+        "mechanism": "The C=C double bond of fumarate is hydrogenated by H\u2082 on the greigite surface, yielding succinate. The mineral provides dissociative H\u2082 activation, and the two hydrogen atoms add across the double bond in a syn or anti fashion depending on surface geometry.",
+        "reasoning": "Hydrogenation of fumarate to succinate on Fe-S surfaces is one of the more straightforward prebiotic reactions in the proto-TCA sequence. It is the analog of succinate dehydrogenase (in reverse). Somorjai et al. (2023) include this as part of the non-enzymatic rTCA network. Greigite is an effective hydrogenation catalyst under hydrothermal conditions."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Reductive carboxylation of succinate to \u03b1-ketoglutarate",
+        "inputs": [
+          "mol_009",
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe\u2083O\u2084)",
+          "greigite (Fe\u2083S\u2084)"
+        ],
+        "conditions": {
+          "temperature": "370-420K",
+          "pressure": "high (100-200 bar)",
+          "catalyst": "magnetite (Fe\u2083O\u2084) with greigite co-catalyst",
+          "aqueous": true,
+          "other": "High CO\u2082 partial pressure drives carboxylation equilibrium; strongly reducing conditions required"
+        },
+        "mechanism": "Succinate undergoes oxidative activation at the \u03b1-carbon on the mineral surface, followed by CO\u2082 insertion to form \u03b1-ketoglutarate. Alternatively, succinate is first activated to succinyl-thioester analog on the FeS surface, then carboxylated. This is the most thermodynamically demanding step in the proto-TCA segment and requires both high CO\u2082 pressure and strong reducing conditions.",
+        "reasoning": "Reductive carboxylation of succinate to \u03b1-ketoglutarate is the critical C4\u2192C5 step in the rTCA cycle. This is one of the more challenging steps prebiotically, as noted by Somorjai et al. (2023, Phil. Trans.). High CO\u2082 pressure and mineral catalysis are required. The reaction has been proposed to occur on mixed Fe-Ni-S mineral surfaces under hydrothermal conditions. This step is explicitly separated from the preceding malate\u2192fumarate\u2192succinate sequence to avoid the lumping criticized in the prior attempt."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Reductive carboxylation shortcut: pyruvate to \u03b1-ketoglutarate",
+        "inputs": [
+          "mol_005",
+          "mol_004",
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron (Fe\u2070)",
+          "greigite (Fe\u2083S\u2084)"
+        ],
+        "conditions": {
+          "temperature": "370-450K",
+          "pressure": "high (100-200 bar)",
+          "catalyst": "Fe\u2070 / greigite",
+          "aqueous": true,
+          "other": "Strongly reducing, CO\u2082 and formate co-substrates, bypasses discrete OAA-malate-fumarate-succinate intermediates"
+        },
+        "mechanism": "Pyruvate undergoes sequential reductive carboxylation with CO\u2082 and/or carbonylation with formate-derived C1 units on the Fe\u2070 surface. The strong reducing power of native iron drives C-C bond formation through a putative succinyl intermediate that is further carboxylated to yield \u03b1-ketoglutarate without accumulating free malate/fumarate/succinate intermediates. This is a surface-confined multi-step process where intermediates remain adsorbed.",
+        "reasoning": "This shortcut route represents a surface-confined version of the proto-TCA where intermediates do not desorb into solution. While speculative, it is thermodynamically plausible given the strongly reducing conditions provided by Fe\u2070. The concept of surface-confined multi-step pathways on mineral catalysts is discussed by Somorjai et al. (2023) and is analogous to how modern enzymes confine intermediates. This alternative route addresses the need for pathway diversity and acknowledges that not all intermediates may accumulate as free species. EXPLICITLY LABELED AS SPECULATIVE\u2014no direct experimental demonstration of this specific shortcut exists."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Ni-catalyzed reductive amination of \u03b1-ketoglutarate to glutamate",
+        "inputs": [
+          "mol_010",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "Ni-doped pyrite (FeS\u2082/Ni)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "295K (22\u00b0C)",
+          "pressure": "1 atm (H\u2082 atmosphere)",
+          "catalyst": "Ni metal or Ni-bearing meteorite material on pyrite",
+          "aqueous": true,
+          "other": "pH 8, 6-150 mM NH\u2084Cl, Ni catalyst (from meteorite powder or awaruite), ambient temperature"
+        },
+        "mechanism": "\u03b1-Ketoglutarate reacts with NH\u2083/NH\u2084\u207a to form an imine (Schiff base) intermediate at the \u03b1-keto position. H\u2082 dissociates on the Ni surface and reduces the C=N bond, yielding glutamate. The Ni catalyst provides the hydrogenation activity essential for driving the equilibrium toward the amino acid product.",
+        "reasoning": "Directly supported by Kaur et al. (2024, Chem) who demonstrated that Ni catalyst (including meteorite powder) at 22\u00b0C, pH 8, with H\u2082 and NH\u2084Cl converts biological \u03b1-keto acids to corresponding amino acids. They showed six keto acids including glyoxylate were converted; \u03b1KG \u2192 glutamate is explicitly implied by their protometabolic network. This is the strongest experimentally supported step linking hydrothermal keto acids to amino acids. Product is racemic DL-glutamate; L-enrichment is not addressed by this reaction alone."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Ni-catalyzed reductive amination of pyruvate to alanine",
+        "inputs": [
+          "mol_005",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "Ni-doped pyrite (FeS\u2082/Ni)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "295K (22\u00b0C)",
+          "pressure": "1 atm (H\u2082 atmosphere)",
+          "catalyst": "Ni metal or Ni-bearing meteorite material",
+          "aqueous": true,
+          "other": "pH 8, 6-150 mM NH\u2084Cl, same conditions as rxn_010"
+        },
+        "mechanism": "Pyruvate reacts with NH\u2083 to form an imine intermediate at the C2 keto position. Ni-catalyzed H\u2082 reduction of the C=N bond yields alanine. Mechanism is identical to rxn_010 but with the C3 substrate pyruvate.",
+        "reasoning": "Kaur et al. (2024) explicitly demonstrated pyruvate \u2192 alanine under these conditions as part of their prebiotic amino acid synthesis network. Alanine is one of the amino acids formed in good yield. Here it serves as an amino group donor for subsequent transamination to glutamate, creating a second route to this key intermediate."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Transamination: alanine + \u03b1-ketoglutarate \u2192 glutamate + pyruvate",
+        "inputs": [
+          "mol_015",
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_011",
+          "mol_005"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "montmorillonite",
+          "pyrite (FeS\u2082)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite clay surface, possibly with trace metal ions (Cu\u00b2\u207a, Fe\u00b2\u207a)",
+          "aqueous": true,
+          "other": "Neutral to mildly alkaline pH, pyridoxal or \u03b1-keto acid mediated"
+        },
+        "mechanism": "Alanine donates its amino group to \u03b1-ketoglutarate via a pyridoxal-independent transamination. The \u03b1-amino group of alanine attacks the \u03b1-keto carbonyl of \u03b1KG, forming a geminal diamine intermediate that rearranges to transfer the amino group, yielding glutamate and regenerating pyruvate. Clay surfaces catalyze this by co-adsorbing and orienting both substrates.",
+        "reasoning": "Non-enzymatic transamination between amino acids and \u03b1-keto acids is well-documented in prebiotic chemistry and occurs readily at moderate temperatures with metal ion catalysis (Cu\u00b2\u207a, Fe\u00b2\u207a). This reaction creates a second route to glutamate (from alanine + \u03b1KG) independent of direct reductive amination. Importantly, it also regenerates pyruvate, creating a catalytic cycle. The biological relevance of transamination in early metabolism is discussed by Somorjai et al. (2023) and is central to the concept that amino acid synthesis predated enzymes. Montmorillonite catalysis of amino acid reactions is supported by Cueto-D\u00edaz et al. (2023)."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Reductive conversion of glutamate \u03b3-carboxyl to semialdehyde",
+        "inputs": [
+          "mol_011",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "mackinawite (FeS)",
+          "greigite (Fe\u2083S\u2084)"
+        ],
+        "conditions": {
+          "temperature": "340-380K",
+          "pressure": "moderate (1-10 bar)",
+          "catalyst": "FeS / greigite mineral surface",
+          "aqueous": true,
+          "other": "Mildly reducing conditions, pH 7-9; KEY BOTTLENECK: selective \u03b3-carboxyl reduction over \u03b1-carboxyl is the critical unresolved challenge"
+        },
+        "mechanism": "The \u03b3-carboxyl group of glutamate is selectively reduced to an aldehyde by H\u2082 on the FeS surface, yielding glutamate-\u03b3-semialdehyde (GS-Ald). Selectivity for the \u03b3-position may arise from differential adsorption geometry on the mineral surface: the \u03b1-amino and \u03b1-carboxyl groups chelate to Fe sites, leaving the \u03b3-carboxyl exposed for reduction. Alternatively, partial activation via a thioester intermediate (\u03b3-carboxyl + surface sulfide \u2192 thioester \u2192 aldehyde) could provide selectivity.",
+        "reasoning": "This is the KEY BOTTLENECK of the entire proline synthesis network, as explicitly acknowledged in the literature. Somorjai et al. (2023, Phil. Trans.) describe the glutamate \u2192 glutamate-\u03b3-semialdehyde \u2192 P5C \u2192 proline sequence as the non-enzymatic analog of the biological proline biosynthetic pathway, but note that selective \u03b3-carboxyl reduction is unproven under prebiotic conditions. Enzymatically, this requires ATP activation (to \u03b3-glutamyl phosphate) then NADPH reduction. Prebiotically, a thioester intermediate on FeS surfaces could provide the necessary activation. This remains the most speculative step in the network and represents the primary target for future experimental validation. No high-yield demonstration exists."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Spontaneous intramolecular cyclization of GS-Ald to P5C",
+        "inputs": [
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "280-370K",
+          "pressure": "1 atm",
+          "catalyst": "none required (spontaneous)",
+          "aqueous": true,
+          "other": "Spontaneous in aqueous solution at pH 5-9; equilibrium strongly favors cyclic product"
+        },
+        "mechanism": "The \u03b1-amino group of glutamate-\u03b3-semialdehyde undergoes intramolecular nucleophilic attack on the \u03b3-aldehyde carbon, forming a 5-membered ring with loss of water. The resulting cyclic imine is \u0394\u00b9-pyrroline-5-carboxylate (P5C). This reaction is spontaneous and fast in aqueous solution, requiring no catalyst.",
+        "reasoning": "Spontaneous cyclization of glutamate-\u03b3-semialdehyde to P5C is well-established in biochemistry and occurs non-enzymatically (Somorjai et al. 2023, Phil. Trans.). The intramolecular reaction is kinetically and thermodynamically favorable due to the formation of a stable 5-membered ring imine. This is one of the most reliable steps in the network. The equilibrium constant strongly favors the cyclic product under all plausible prebiotic conditions."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Reduction of P5C to proline",
+        "inputs": [
+          "mol_013",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "Ni-doped pyrite (FeS\u2082/Ni)",
+          "greigite (Fe\u2083S\u2084)"
+        ],
+        "conditions": {
+          "temperature": "295-370K",
+          "pressure": "1 atm (H\u2082 atmosphere)",
+          "catalyst": "Ni on FeS\u2082 or greigite",
+          "aqueous": true,
+          "other": "pH 7-9; H\u2082 as reductant; product is racemic DL-proline. L-enrichment may occur via asymmetric adsorption on chiral mineral surfaces (Cueto-D\u00edaz et al. 2023) or through subsequent selection in peptide systems (Guo et al. 2024)"
+        },
+        "mechanism": "The C=N imine bond of P5C is reduced by H\u2082 on the Ni-FeS\u2082 surface, yielding the saturated pyrrolidine ring of proline. The Ni catalyst dissociates H\u2082 and delivers hydride to the electrophilic imine carbon, completing the reduction. This is analogous to the NADPH-dependent P5C reductase reaction in biology but uses H\u2082/metal catalysis instead.",
+        "reasoning": "Imine reduction by H\u2082 on Ni or Fe-S catalysts is well-precedented in both synthetic chemistry and prebiotic modeling. Kaur et al. (2024) demonstrated that Ni catalysts effectively reduce imine intermediates during amino acid synthesis. Somorjai et al. (2023) explicitly describe P5C \u2192 proline as the final step in non-enzymatic proline synthesis. The product is racemic DL-proline. Cueto-D\u00edaz et al. (2023, Life) showed that proline adsorbs differentially on mineral surfaces, suggesting a route to enantiomeric enrichment through selective adsorption/desorption cycles. Ring et al. (1972) confirmed proline as a product of spark discharge experiments, validating that this final product can indeed form under abiotic conditions."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Full proto-TCA via formate with direct reductive amination",
+        "description": "CO\u2082 is reduced to formate on greigite, then to pyruvate on magnetite. Pyruvate enters the full proto-TCA cycle (OAA\u2192malate\u2192fumarate\u2192succinate\u2192\u03b1KG) with each step on explicit mineral catalysts. \u03b1KG undergoes Ni-catalyzed reductive amination to glutamate, which is reduced to GS-Ald, cyclizes to P5C, and is reduced to proline.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_010",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_005",
+          "mol_010",
+          "mol_011",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Full proto-TCA via direct pyruvate with direct reductive amination",
+        "description": "CO\u2082 is directly reduced to pyruvate on Fe\u2070/magnetite (bypassing formate). Pyruvate enters the full proto-TCA cycle to \u03b1KG. Glutamate is formed by direct Ni-catalyzed reductive amination, then proceeds through GS-Ald, P5C to proline.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_010",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_010",
+          "mol_011",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Full proto-TCA via formate with transamination route to glutamate",
+        "description": "CO\u2082\u2192formate\u2192pyruvate\u2192full proto-TCA\u2192\u03b1KG. In parallel, pyruvate is also converted to alanine (rxn_011). Alanine donates its amino group to \u03b1KG via transamination (rxn_012), producing glutamate (and regenerating pyruvate). Glutamate proceeds to proline via GS-Ald\u2192P5C.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_005",
+          "mol_015",
+          "mol_010",
+          "mol_011",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Full proto-TCA via direct pyruvate with transamination route to glutamate",
+        "description": "CO\u2082\u2192pyruvate (direct on Fe\u2070)\u2192full proto-TCA\u2192\u03b1KG. Pyruvate is also aminated to alanine, which transfers its amino group to \u03b1KG via transamination, yielding glutamate. Glutamate proceeds to proline.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_015",
+          "mol_010",
+          "mol_011",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Shortcut to \u03b1KG via formate with direct reductive amination",
+        "description": "CO\u2082\u2192formate\u2192pyruvate. Pyruvate and formate are then directly converted to \u03b1KG via the reductive carboxylation shortcut (rxn_009), bypassing the 4-step OAA\u2192malate\u2192fumarate\u2192succinate segment. \u03b1KG undergoes direct reductive amination to glutamate, then to proline.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_009",
+          "rxn_010",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_005",
+          "mol_010",
+          "mol_011",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Shortcut to \u03b1KG via direct pyruvate with direct reductive amination",
+        "description": "CO\u2082\u2192pyruvate (direct). Pyruvate undergoes reductive carboxylation shortcut to \u03b1KG (rxn_009, using CO\u2082 + formate from rxn_001). \u03b1KG\u2192glutamate by direct Ni-catalyzed reductive amination\u2192P5C\u2192proline.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_003",
+          "rxn_009",
+          "rxn_010",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_005",
+          "mol_010",
+          "mol_011",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Shortcut to \u03b1KG via formate with transamination route",
+        "description": "CO\u2082\u2192formate\u2192pyruvate\u2192\u03b1KG (shortcut). Pyruvate is also aminated to alanine, then alanine + \u03b1KG \u2192 glutamate + pyruvate via transamination. Glutamate proceeds through GS-Ald\u2192P5C\u2192proline.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_009",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_005",
+          "mol_015",
+          "mol_010",
+          "mol_011",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Shortcut to \u03b1KG via direct pyruvate with transamination route",
+        "description": "CO\u2082\u2192pyruvate (direct)\u2192\u03b1KG (shortcut). Alanine from pyruvate + \u03b1KG \u2192 glutamate + pyruvate via transamination. Glutamate\u2192GS-Ald\u2192P5C\u2192proline.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_003",
+          "rxn_009",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_005",
+          "mol_015",
+          "mol_010",
+          "mol_011",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Formate-to-pyruvate with mixed glutamate sources (convergent)",
+        "description": "Both glutamate routes (direct reductive amination AND transamination) converge: CO\u2082\u2192formate\u2192pyruvate\u2192full TCA\u2192\u03b1KG feeds both direct glutamate synthesis and the alanine/transamination cycle. Both glutamate streams converge into the same GS-Ald\u2192P5C\u2192proline endpoint. This pathway represents the fully connected network with maximum redundancy.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_005",
+          "mol_010",
+          "mol_011",
+          "mol_015",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Minimal hydrothermal-surface-biochemical relay (direct pyruvate \u2192 shortcut \u03b1KG \u2192 direct glutamate \u2192 proline)",
+        "description": "The shortest plausible route through the network: CO\u2082+H\u2082\u2192pyruvate (direct, rxn_003), pyruvate+formate+CO\u2082+H\u2082\u2192\u03b1KG (shortcut, rxn_009, formate from rxn_001), \u03b1KG+NH\u2083+H\u2082\u2192glutamate (Kaur, rxn_010), glutamate\u2192GS-Ald\u2192P5C\u2192proline. This 7-reaction pathway spans all three environments with minimal intermediate accumulation.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_003",
+          "rxn_009",
+          "rxn_010",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_010",
+          "mol_011",
+          "mol_013"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_005",
+      "mol_010",
+      "mol_011",
+      "mol_013"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_005",
+        "incoming_reactions": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_012"
+        ],
+        "outgoing_reactions": [
+          "rxn_004",
+          "rxn_009",
+          "rxn_011"
+        ]
+      },
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_008",
+          "rxn_009"
+        ],
+        "outgoing_reactions": [
+          "rxn_010",
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_011",
+        "incoming_reactions": [
+          "rxn_010",
+          "rxn_012"
+        ],
+        "outgoing_reactions": [
+          "rxn_013"
+        ]
+      },
+      {
+        "molecule_id": "mol_013",
+        "incoming_reactions": [
+          "rxn_014"
+        ],
+        "outgoing_reactions": [
+          "rxn_015"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "L-Proline",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_002": 0.62,
+          "rxn_004": 0.74,
+          "rxn_005": 0.85,
+          "rxn_006": 0.85,
+          "rxn_007": 0.9,
+          "rxn_008": 0.52,
+          "rxn_010": 0.9,
+          "rxn_013": 0.35,
+          "rxn_014": 0.92,
+          "rxn_015": 0.75
+        },
+        "chemical_feasibility": 0.58,
+        "pathway_coherence": 0.78,
+        "environmental_progression": 0.84,
+        "target_achievement": 0.55,
+        "overall_confidence": 0.64,
+        "feedback": "Longest pathway. rxn_002 (formate\u2192pyruvate) and rxn_008 (succinate\u2192\u03b1KG) are both speculative steps with limited experimental support. The chain length amplifies cumulative yield loss. The critical bottleneck at rxn_013 (selective \u03b3-carboxyl reduction) remains the fatal weakness shared with all pathways.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_008",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Provide evidence for non-enzymatic succinate carboxylation",
+          "Consider alternative reductants (e.g., FeS/H2S) for \u03b3-carboxyl reduction"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_003": 0.76,
+          "rxn_004": 0.74,
+          "rxn_005": 0.85,
+          "rxn_006": 0.85,
+          "rxn_007": 0.9,
+          "rxn_008": 0.52,
+          "rxn_010": 0.9,
+          "rxn_013": 0.35,
+          "rxn_014": 0.92,
+          "rxn_015": 0.75
+        },
+        "chemical_feasibility": 0.6,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.56,
+        "overall_confidence": 0.66,
+        "feedback": "Eliminates the speculative formate\u2192pyruvate step by using direct Fe\u2070 reduction (rxn_003, Varma et al.). The full proto-TCA segment (rxn_004\u2013008) is mostly well-supported except for the reductive carboxylation of succinate (rxn_008). Still bottlenecked at rxn_013.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_008",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Cite specific experimental evidence for succinate\u2192\u03b1KG on mineral surfaces",
+          "Explore whether FeS-mediated Birch-type reduction could achieve selective carboxyl reduction"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_002": 0.62,
+          "rxn_004": 0.74,
+          "rxn_005": 0.85,
+          "rxn_006": 0.85,
+          "rxn_007": 0.9,
+          "rxn_008": 0.52,
+          "rxn_011": 0.9,
+          "rxn_012": 0.55,
+          "rxn_013": 0.35,
+          "rxn_014": 0.92,
+          "rxn_015": 0.75
+        },
+        "chemical_feasibility": 0.55,
+        "pathway_coherence": 0.72,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.52,
+        "overall_confidence": 0.6,
+        "feedback": "Adds the transamination detour (alanine + \u03b1KG \u2192 glutamate + pyruvate). Non-enzymatic transamination (rxn_012) without pyridoxal phosphate or an analog is poorly supported. Combined with rxn_002, rxn_008, and rxn_013 bottlenecks, this is the weakest long pathway.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_008",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Specify a pyridoxal analog or mineral catalyst for transamination",
+          "Consider whether direct amination route is always preferable"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_003": 0.76,
+          "rxn_004": 0.74,
+          "rxn_005": 0.85,
+          "rxn_006": 0.85,
+          "rxn_007": 0.9,
+          "rxn_008": 0.52,
+          "rxn_011": 0.9,
+          "rxn_012": 0.55,
+          "rxn_013": 0.35,
+          "rxn_014": 0.92,
+          "rxn_015": 0.75
+        },
+        "chemical_feasibility": 0.57,
+        "pathway_coherence": 0.74,
+        "environmental_progression": 0.83,
+        "target_achievement": 0.53,
+        "overall_confidence": 0.62,
+        "feedback": "Same as P3 but with direct pyruvate formation. The transamination step (rxn_012) and \u03b3-carboxyl reduction (rxn_013) remain weak links.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_008",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Add mineral or metal-ion catalyst to transamination step"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_002": 0.62,
+          "rxn_009": 0.48,
+          "rxn_010": 0.9,
+          "rxn_013": 0.35,
+          "rxn_014": 0.92,
+          "rxn_015": 0.75
+        },
+        "chemical_feasibility": 0.55,
+        "pathway_coherence": 0.7,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.53,
+        "overall_confidence": 0.61,
+        "feedback": "The shortcut rxn_009 (pyruvate + formate + CO\u2082 + H\u2082 \u2192 \u03b1KG) compresses what should be multiple steps into one. The mechanism for this C3+C1+C1\u2192C5 transformation is unclear and insufficiently supported. The later steps are the same bottleneck.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_009",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Break rxn_009 into verifiable sub-steps",
+          "Provide a specific mineral catalyst and mechanism for the shortcut"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_003": 0.76,
+          "rxn_009": 0.48,
+          "rxn_010": 0.9,
+          "rxn_013": 0.35,
+          "rxn_014": 0.92,
+          "rxn_015": 0.75
+        },
+        "chemical_feasibility": 0.56,
+        "pathway_coherence": 0.72,
+        "environmental_progression": 0.83,
+        "target_achievement": 0.54,
+        "overall_confidence": 0.62,
+        "feedback": "Shortest route using both shortcuts. rxn_009 remains poorly justified mechanistically. The pathway is efficient in principle but sacrifices chemical rigor for brevity.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_009",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Justify the shortcut with specific catalytic mechanism"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_002": 0.62,
+          "rxn_009": 0.48,
+          "rxn_011": 0.9,
+          "rxn_012": 0.55,
+          "rxn_013": 0.35,
+          "rxn_014": 0.92,
+          "rxn_015": 0.75
+        },
+        "chemical_feasibility": 0.52,
+        "pathway_coherence": 0.68,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.5,
+        "overall_confidence": 0.58,
+        "feedback": "Combines the shortcut \u03b1KG route with the transamination route. Multiple weak links (rxn_009, rxn_012, rxn_013) compound to make this one of the least feasible pathways.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_009",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Avoid stacking speculative steps"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_003": 0.76,
+          "rxn_009": 0.48,
+          "rxn_011": 0.9,
+          "rxn_012": 0.55,
+          "rxn_013": 0.35,
+          "rxn_014": 0.92,
+          "rxn_015": 0.75
+        },
+        "chemical_feasibility": 0.53,
+        "pathway_coherence": 0.69,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.51,
+        "overall_confidence": 0.59,
+        "feedback": "Similar issues to P7 with direct pyruvate start. The combination of shortcut and transamination without strong experimental backing undermines credibility.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_009",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Simplify the glutamate formation step"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_002": 0.62,
+          "rxn_003": 0.76,
+          "rxn_004": 0.74,
+          "rxn_005": 0.85,
+          "rxn_006": 0.85,
+          "rxn_007": 0.9,
+          "rxn_008": 0.52,
+          "rxn_010": 0.9,
+          "rxn_011": 0.9,
+          "rxn_012": 0.55,
+          "rxn_013": 0.35,
+          "rxn_014": 0.92,
+          "rxn_015": 0.75
+        },
+        "chemical_feasibility": 0.58,
+        "pathway_coherence": 0.75,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.55,
+        "overall_confidence": 0.64,
+        "feedback": "Convergent pathway combining both pyruvate sources and both glutamate routes. Showcases the network's branching nicely but accumulates all the weaknesses. Still bottlenecked at rxn_013.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_008",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Useful as a network overview but not as a single actionable route"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_003": 0.76,
+          "rxn_009": 0.48,
+          "rxn_010": 0.9,
+          "rxn_013": 0.35,
+          "rxn_014": 0.92,
+          "rxn_015": 0.75
+        },
+        "chemical_feasibility": 0.56,
+        "pathway_coherence": 0.74,
+        "environmental_progression": 0.84,
+        "target_achievement": 0.54,
+        "overall_confidence": 0.63,
+        "feedback": "Minimal pathway highlighting the Hydrothermal\u2192Surface\u2192Biochemical relay. Clean environmental progression. rxn_009 and rxn_013 remain the Achilles' heels. Efficiently demonstrates the overall strategy despite unresolved bottlenecks.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_009",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Best pathway to develop further if rxn_013 can be resolved"
+        ]
+      }
+    ],
+    "best_pathway_id": "P2",
+    "overall_confidence": 0.72,
+    "network_feedback": "This is a well-architected synthesis network with excellent topology (15 molecules, 15 reactions, 4 hubs, 4 convergence points, 10 pathways) and strong literature grounding. The strategy of mimicking the biological glutamate\u2192GS-Ald\u2192P5C\u2192proline pathway is logical and well-cited (Kaur et al. 2024 for reductive amination; Ring et al. 1972 for proline detection; Somorjai/Phil. Trans. for non-enzymatic cyclization). The environmental flow (Hydrothermal\u2192Surface\u2192Biochemical) is coherent and mineral catalysts (greigite, pyrite, native iron, Ni) are properly specified for the first two stages. Hub molecules (pyruvate, \u03b1KG, glutamate, P5C) are appropriately chosen with adequate connectivity.\n\nHowever, the network has a critical and honestly acknowledged weakness: rxn_013 (selective reduction of glutamate \u03b3-carboxyl to semialdehyde) lacks experimental support under prebiotic conditions. In biology, this requires ATP activation plus NADPH reduction (enzymes \u03b3-glutamyl kinase + \u03b3-glutamyl phosphate reductase). No mineral catalyst or simple reductant has been shown to achieve this selectivity prebiotically. This bottleneck affects ALL 10 pathways and prevents any from reaching the 0.80 approval threshold. Additional concerns include: rxn_008 (succinate\u2192\u03b1KG carboxylation without CoA activation), rxn_009 (mechanistically unclear shortcut), and rxn_012 (transamination without PLP analog). The network correctly notes that the product would be racemic DL-proline.\n\nThe network's greatest strengths are its honest acknowledgment of limitations, its excellent use of combinatorial branching to explore alternatives, and its thorough literature alignment. The research correctly identifies that no dedicated high-yield prebiotic route to proline exists, and this network represents about the best that current knowledge can support. To improve: focus on resolving the \u03b3-carboxyl reduction step\u2014perhaps via thioester intermediates (analogous to CoA thioesters on FeS surfaces), phosphoryl activation by polyphosphates under dry-down conditions, or by exploring entirely alternative cyclization precursors (e.g., from HCN chemistry or succinaldehyde).",
+    "approved": false,
+    "hub_quality": 0.88,
+    "convergence_quality": 0.86
+  },
+  "success": false,
+  "attempts": 2,
+  "notes": null
+}

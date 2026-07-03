@@ -1,0 +1,884 @@
+{
+  "target_molecule": "Glutamate",
+  "network": {
+    "target_molecule": "Glutamate",
+    "overall_strategy": "This network targets glutamate as the convergence product of three literature-grounded prebiotic regimes: (i) hydrothermal iron-sulfur chemistry generating reduced C1/C2 feedstocks and, critically, pyrrhotite-like sulfide mediated succinyl-thioester carboxylation to alpha-ketoglutarate followed by non-enzymatic transamination; (ii) surface cyanosulfidic and Strecker chemistry centered on HCN, acrolein, and 2-aminopentanedinitrile under UV, sulfide, phosphate, borate/clay, and TiO2-assisted concentration/photochemical conditions; and (iii) biochemical/prebiotic finishing steps including hydrolysis, reductive amination of alpha-ketoglutarate with NH3/NADH, and glutamate-pyroglutamate reservoir interconversion. The network is intentionally convergent around hub molecules HCN, acrolein, alpha-ketoglutarate, 2-aminopentanedinitrile, and pyroglutamate, and it explicitly connects hydrothermal outputs to surface synthesis and then to biochemical assembly/stabilization.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "HCN",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_005",
+        "formula": "CH2O2",
+        "iupac_name": "methanoic acid",
+        "common_name": "formate/formic acid",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_006",
+        "formula": "C2H4O2",
+        "iupac_name": "acetic acid",
+        "common_name": "acetate/acetic acid",
+        "inchi": "InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C3H4O",
+        "iupac_name": "prop-2-enal",
+        "common_name": "acrolein",
+        "inchi": "InChI=1S/C3H4O/c1-2-3-4/h2-3H,1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C5H7N3",
+        "iupac_name": "2-aminopentanedinitrile",
+        "common_name": "2-aminopentanedinitrile",
+        "inchi": "InChI=1S/C5H7N3/c6-3-1-2-5(8)4-7/h5H,1-2,8H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C5H9NO4",
+        "iupac_name": "2-aminopentanedioic acid",
+        "common_name": "glutamic acid/glutamate",
+        "inchi": "InChI=1S/C5H9NO4/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H,7,8)(H,9,10)/t3-/m0/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C5H6O3",
+        "iupac_name": "5-oxopyrrolidine-2-carboxylic acid",
+        "common_name": "pyroglutamic acid",
+        "inchi": "InChI=1S/C5H7NO3/c7-4-2-1-3(6-4)5(8)9/h3H,1-2H2,(H,6,7)(H,8,9)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C5H6O5",
+        "iupac_name": "2-oxopentanedioic acid",
+        "common_name": "alpha-ketoglutarate",
+        "inchi": "InChI=1S/C5H6O5/c6-3(5(9)10)1-2-4(7)8/h1-2H2,(H,7,8)(H,9,10)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C2H5NO2",
+        "iupac_name": "aminoacetic acid",
+        "common_name": "glycine",
+        "inchi": "InChI=1S/C2H5NO2/c3-1-2(4)5/h1,3H2,(H,4,5)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C8H15N3O4S",
+        "iupac_name": "succinyl thioester",
+        "common_name": "succinyl-thioester",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C21H27N7O14P2",
+        "iupac_name": "reduced nicotinamide adenine dinucleotide",
+        "common_name": "NADH",
+        "inchi": "InChI=1S/C21H29N7O14P2/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(32)14(30)11(41-21)6-39-44(36,37)42-43(34,35)38-5-10-13(29)15(31)20(40-10)27-3-1-2-9(4-27)18(23)33/h1,3-4,7-8,10-11,13-16,20-21,29-32H,2,5-6H2,(H2,23,33)(H,34,35)(H,36,37)(H2,22,24,25)/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C10H15N5O10P2",
+        "iupac_name": "adenosine diphosphate ribose",
+        "common_name": "ADPR",
+        "inchi": "InChI=1S/C15H23N5O14P2/c16-13-9-14(18-4-17-13)20(5-19-9)15-12(26)11(25)8(33-15)3-32-36(29,30)34-35(27,28)31-2-7(23)10(24)6(22)1-21/h1,4-8,10-12,15,22-26H,2-3H2,(H,27,28)(H,29,30)(H2,16,17,18)/t6-,7+,8+,10-,11+,12+,15+/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Greigite-catalyzed CO2 reduction to formate",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_005"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite and mackinawite",
+          "aqueous": "true",
+          "other": "alkaline hydrothermal vent conditions, anoxic, H2-rich"
+        },
+        "mechanism": "Mineral-surface mediated reduction of CO2 by H2 through iron-sulfur redox centers to yield formate.",
+        "reasoning": "Formate production on Fe-S minerals in alkaline hydrothermal settings is a core iron-sulfur world step and provides reduced carbon for downstream synthesis; greigite/mackinawite are specifically highlighted as prebiotic CO2-reduction catalysts in hydrothermal models (Huber & Wachtershauser, 1997; Roldan et al., 2015)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Magnetite-mediated Fischer-Tropsch-type reduction to acetate",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high",
+          "catalyst": "magnetite with Fe0 as reductant",
+          "aqueous": "true",
+          "other": "subseafloor/hydrothermal, anoxic, CO/CO2 hydrogenation regime"
+        },
+        "mechanism": "Surface-assisted CO2/CO hydrogenation via Fischer-Tropsch-type chemistry yielding small reduced organics including acetate.",
+        "reasoning": "Magnetite and reduced iron are literature-supported hydrothermal catalysts for generation of small reduced carbon compounds that can seed later surface chemistry; this step is used here as a feedstock-generating connection rather than the direct glutamate-forming step (McCollom & Seewald, 2007; Cody et al., 2000)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Pyrrhotite-like sulfide carboxylation of succinyl-thioester to alpha-ketoglutarate",
+        "inputs": [
+          "mol_013",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "358K",
+          "pressure": "moderate to high",
+          "catalyst": "natural sulfide mineral surfaces approximating pyrrhotite-like Fe-S catalysis",
+          "aqueous": "true",
+          "other": "one-pot hydrothermal carbon fixation; literature basis is pyrrhotite at 85 C"
+        },
+        "mechanism": "Fe-S mineral templating promotes thioester activation and carboxylation, giving the 2-oxoacid alpha-ketoglutarate.",
+        "reasoning": "The report identifies pyrrhotite-catalyzed carboxylation of succinyl-thioesters to alpha-ketoglutarate as the key hydrothermal carbon-fixation step relevant to glutamate. Because the allowed hydrothermal mineral list excludes pyrrhotite, the network uses pyrite/greigite as Fe-S proxies while preserving the exact literature logic and temperature regime of 85 C (Menor-Salvan et al., 2013)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Non-enzymatic transamination of alpha-ketoglutarate with glycine to glutamate",
+        "inputs": [
+          "mol_011",
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "358K",
+          "pressure": "moderate to high",
+          "catalyst": "Fe-S mineral surface template",
+          "aqueous": "true",
+          "other": "one-pot hydrothermal system; glutamate may cyclize further under heating"
+        },
+        "mechanism": "Surface-templated non-enzymatic amine transfer from glycine-derived imine chemistry to alpha-ketoglutarate produces glutamate.",
+        "reasoning": "Menor-Salvan et al. reported one-pot pyrrhotite-mediated formation of alpha-ketoglutarate followed by non-enzymatic transamination with glycine, yielding glutamate with pyroglutamate often recovered as the dominant product. This reaction follows that hydrothermal metabolism-first route (Menor-Salvan et al., 2013)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Thermal cyclization of glutamate to pyroglutamate",
+        "inputs": [
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "423-523K",
+          "pressure": "high",
+          "catalyst": "mineral surfaces present but reaction is largely thermal",
+          "aqueous": "true",
+          "other": "anoxic hydrothermal fluid; equilibrium reached rapidly at higher temperature; H2 buffers decomposition"
+        },
+        "mechanism": "Intramolecular dehydration/cyclization of glutamate forms 5-oxoproline under hydrothermal heating.",
+        "reasoning": "Glutamate is known to cyclize spontaneously to pyroglutamic acid at hydrothermal temperatures, and this reservoir is important for glutamate persistence and peptide chemistry. H2-rich hydrothermal conditions suppress deeper decomposition and stabilize the glutamate/pyroglutamate pool (Amend & Shock, 1998; Ferreira et al., 2023)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Hydrolytic reopening of pyroglutamate to glutamate",
+        "inputs": [
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "water"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "pool or interface hydrolysis during cooling/dilution cycles"
+        },
+        "mechanism": "Ring-opening hydrolysis of 5-oxoproline regenerates open-chain glutamate.",
+        "reasoning": "The glutamate/pyroglutamate pair behaves as a reversible reservoir. Although pyroglutamate is often viewed as a degradation product, the literature emphasizes its constructive prebiotic role and reversibility in aqueous contexts (Ferreira et al., 2023; Amend & Shock, 1998)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Cyanosulfidic homologation from HCN to 2-aminopentanedinitrile",
+        "inputs": [
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "phosphate minerals (apatite/struvite)",
+          "sulfide minerals (stibnite/molybdenite)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "phosphate-buffered cyanosulfidic photoredox system with mineral-assisted concentration",
+          "aqueous": "true",
+          "other": "UV irradiation, H2S present, Cu(I/II) photoredox in solution, wet-dry cycling in streams/pools"
+        },
+        "mechanism": "Reductive homologation within a cyanosulfidic network converts HCN through sequential nitrile-building steps to 2-aminopentanedinitrile.",
+        "reasoning": "The literature identifies 2-aminopentanedinitrile as the key cyanosulfidic intermediate to glutamate and glutamine, formed from HCN under UV/H2S/Cu photoredox with phosphate buffering in surface streams and pools. Mineral agents here provide the required surface and concentration context while preserving the reported chemistry (Sutherland, 2016; Patel et al., 2015)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Hydrolysis of 2-aminopentanedinitrile to glutamate",
+        "inputs": [
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "water"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "progressive nitrile-to-amide-to-acid hydrolysis during aqueous cycling"
+        },
+        "mechanism": "Sequential hydrolysis of both nitriles gives the dicarboxylic amino acid glutamate.",
+        "reasoning": "Hydrolysis of the cyanosulfidic dinitrile intermediate is the direct literature route from 2-aminopentanedinitrile to glutamate/glutamine family products in systems chemistry scenarios (Sutherland, 2016; Patel et al., 2015)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Surface discharge-derived formation of acrolein from HCN-rich atmospheric chemistry",
+        "inputs": [
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "UV-active TiO2 and concentrating clay surfaces",
+          "aqueous": "true",
+          "other": "post-discharge atmospheric deposition, volcanic mist, anoxic, HCN-rich organics concentrated in drying pools"
+        },
+        "mechanism": "HCN-rich discharge products undergo secondary photochemical and condensative processing in surface pools, yielding reactive aldehydes including acrolein.",
+        "reasoning": "The research report identifies acrolein as a robust product of atmospheric discharge chemistry and a key prebiotic hub for glutamate synthesis. This node encodes the surface capture and concentration of that discharge inventory rather than an unrealistic one-step stoichiometric atmospheric reaction (Johnson et al., 2008; Parker et al., 2011)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Acrolein Strecker conversion to 2-aminopentanedinitrile",
+        "inputs": [
+          "mol_007",
+          "mol_003",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite-assisted concentration and mineral-surface catalysis",
+          "aqueous": "true",
+          "other": "alkaline microenvironments pH > 8, localized NH3 and HCN concentration, wet-dry cycling"
+        },
+        "mechanism": "Acrolein forms an imine/iminium with NH3, followed by cyanide addition and further nitrile-building chemistry to the glutamate-family dinitrile precursor.",
+        "reasoning": "The literature specifically emphasizes the Strecker framework and identifies acrolein as a glutamate precursor hub. High local NH3/HCN concentrations and mineral surfaces favor aminonitrile/dinitrile formation over competing cyanohydrins, especially in drying environments (Commeyras et al., 2002; Menor-Salvan & Marin-Yaseli, 2012)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Biomimetic reductive amination of alpha-ketoglutarate to glutamate",
+        "inputs": [
+          "mol_011",
+          "mol_003",
+          "mol_014"
+        ],
+        "outputs": [
+          "mol_009",
+          "mol_015"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "water"
+        ],
+        "conditions": {
+          "temperature": "298K",
+          "pressure": "1 atm",
+          "catalyst": "NADH",
+          "aqueous": "true",
+          "other": "ammonium/ammonia solution, pH 8, 72 h; mild prebiotic biomimetic conditions"
+        },
+        "mechanism": "Alpha-ketoglutarate condenses with NH3 to a hemiaminal/iminium, then hydride transfer from NADH yields glutamate while NADH hydrolyzes to ADPR.",
+        "reasoning": "This is the most direct biomimetic bridge to modern biochemistry reported in the literature: non-enzymatic reductive amination of alpha-ketoglutarate with NH3 and NADH at room temperature, pH above 7, giving glutamate in measurable yield and ADPR as a product of NADH breakdown (Rivas et al., 2024)."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Spark-discharge volcanic synthesis of glycine feeding hydrothermal transamination",
+        "inputs": [
+          "mol_004",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "mineral-assisted concentration of discharge products",
+          "aqueous": "true",
+          "other": "volcanic mist/spark-discharge product deposition followed by concentration in surface pools"
+        },
+        "mechanism": "HCN- and NH3-containing discharge products are concentrated and hydrolyzed through standard prebiotic aminonitrile chemistry to glycine.",
+        "reasoning": "Glycine is a dominant amino acid product in Miller-Urey discharge chemistry and is the amine donor used in the Menor-Salvan hydrothermal transamination route to glutamate. This reaction encodes that literature-supported environmental handoff from atmospheric/surface synthesis into hydrothermal metabolism-like chemistry (Miller, 1953; Johnson et al., 2008; Parker et al., 2014)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Direct cyanosulfidic glutamate pathway",
+        "description": "Surface HCN chemistry produces the key dinitrile intermediate, which hydrolyzes to glutamate.",
+        "reaction_sequence": [
+          "rxn_007",
+          "rxn_008"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Acrolein-Strecker glutamate pathway",
+        "description": "HCN-rich surface chemistry yields acrolein, which undergoes Strecker-type conversion to the glutamate-family dinitrile and then hydrolysis.",
+        "reaction_sequence": [
+          "rxn_009",
+          "rxn_010",
+          "rxn_008"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Hydrothermal thioester carboxylation plus transamination",
+        "description": "Fe-S mineral chemistry carboxylates succinyl-thioester to alpha-ketoglutarate, then glycine transamination yields glutamate.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_012",
+          "rxn_004"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Hydrothermal alpha-ketoglutarate then biomimetic reductive amination",
+        "description": "Hydrothermal carbon fixation forms alpha-ketoglutarate, which is converted to glutamate under mild biomimetic NH3/NADH conditions.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Hydrothermal glutamate reservoir via pyroglutamate",
+        "description": "Hydrothermal transamination generates glutamate, which cyclizes to pyroglutamate and can later regenerate glutamate.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_012",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Cyanosulfidic glutamate with pyroglutamate buffering",
+        "description": "Surface dinitrile hydrolysis forms glutamate, which is captured into a hydrothermal pyroglutamate reservoir and later released.",
+        "reaction_sequence": [
+          "rxn_007",
+          "rxn_008",
+          "rxn_005",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Acrolein-Strecker with pyroglutamate buffering",
+        "description": "The acrolein branch reaches glutamate through 2-aminopentanedinitrile and then enters the reversible pyroglutamate pool.",
+        "reaction_sequence": [
+          "rxn_009",
+          "rxn_010",
+          "rxn_008",
+          "rxn_005",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_008",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Hydrothermal reduced-carbon to surface HCN network to glutamate",
+        "description": "Hydrothermal reduced carbon supports connected surface HCN chemistry, which feeds the cyanosulfidic dinitrile route to glutamate.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_007",
+          "rxn_008"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Hydrothermal reduced-carbon to acrolein branch",
+        "description": "Hydrothermal feedstock generation is coupled to surface acrolein chemistry, then Strecker-type conversion gives the glutamate precursor and final glutamate.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_009",
+          "rxn_010",
+          "rxn_008"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Hydrothermal alpha-ketoglutarate to glutamate to pyroglutamate to glutamate",
+        "description": "Alpha-ketoglutarate is first aminated biomimetically to glutamate, which then cycles through pyroglutamate as a stability reservoir.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_011",
+          "rxn_005",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_010"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_007",
+      "mol_008",
+      "mol_011",
+      "mol_010"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_008",
+        "incoming_reactions": [
+          "rxn_007",
+          "rxn_010"
+        ],
+        "outgoing_reactions": [
+          "rxn_008"
+        ]
+      },
+      {
+        "molecule_id": "mol_011",
+        "incoming_reactions": [
+          "rxn_003"
+        ],
+        "outgoing_reactions": [
+          "rxn_004",
+          "rxn_011"
+        ]
+      },
+      {
+        "molecule_id": "mol_009",
+        "incoming_reactions": [
+          "rxn_004",
+          "rxn_006",
+          "rxn_008",
+          "rxn_011"
+        ],
+        "outgoing_reactions": [
+          "rxn_005"
+        ]
+      },
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_005"
+        ],
+        "outgoing_reactions": [
+          "rxn_006"
+        ]
+      },
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [],
+        "outgoing_reactions": [
+          "rxn_007",
+          "rxn_009",
+          "rxn_010",
+          "rxn_012"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Glutamate",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_007": 0.86,
+          "rxn_008": 0.88
+        },
+        "chemical_feasibility": 0.87,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.93,
+        "overall_confidence": 0.89,
+        "feedback": "This is one of the strongest pathways in the network and aligns well with the literature summary. The use of HCN as primary feedstock and 2-aminopentanedinitrile as a key intermediate matches the cyanosulfidic framework described by Sutherland and related work. The main weakness is that rxn_007 is underspecified: the literature emphasizes H2S, UV, phosphate buffering, and Cu photoredox cycling rather than HCN alone. Hydrolysis of the dinitrile to glutamate is plausible and literature-grounded, though typically slow and condition-sensitive.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_007"
+        ],
+        "suggestions": [
+          "Specify H2S, UV irradiation, phosphate buffer, and Cu(I/II) photoredox participation in rxn_007.",
+          "Clarify whether hydrolysis proceeds through amide intermediates and under acidic/basic or mineral-assisted conditions."
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_009": 0.72,
+          "rxn_010": 0.91,
+          "rxn_008": 0.88
+        },
+        "chemical_feasibility": 0.84,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.89,
+        "target_achievement": 0.92,
+        "overall_confidence": 0.86,
+        "feedback": "This pathway is chemically coherent and literature-aligned overall. The acrolein-Strecker conversion is well supported by the research summary, especially as a route to glutamate precursors in spark-discharge settings. The weakest step is rxn_009: deriving acrolein directly from HCN-rich atmospheric chemistry is plausible at the network level but is not a simple single-step transformation, and the literature more strongly supports acrolein as an atmospheric discharge product in broader gas mixtures rather than directly from isolated HCN. The downstream Strecker and hydrolysis logic is sound.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_009"
+        ],
+        "suggestions": [
+          "Reframe rxn_009 as atmospheric discharge chemistry from mixed volcanic/reducing feedstocks rather than direct one-step HCN-to-acrolein conversion.",
+          "Include concentration effects or wet-dry cycling to justify nitrile accumulation and subsequent hydrolysis."
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_003": 0.93,
+          "rxn_004": 0.9,
+          "rxn_005": 0.95
+        },
+        "chemical_feasibility": 0.92,
+        "pathway_coherence": 0.94,
+        "environmental_progression": 0.91,
+        "target_achievement": 0.84,
+        "overall_confidence": 0.9,
+        "feedback": "This is the best literature-aligned hydrothermal pathway. Pyrrhotite-mediated carboxylation of succinyl-thioester to alpha-ketoglutarate followed by non-enzymatic transamination with glycine is directly supported by the cited research summary. The conversion of glutamate to pyroglutamate under hydrothermal heat is especially well supported and realistic. The only limitation is that the isolated product under these conditions is often pyroglutamate rather than free glutamate, so target achievement is somewhat indirect unless reopening is included.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Make explicit that free glutamate may be transient and pyroglutamate may be the recoverable reservoir product under hydrothermal conditions.",
+          "Include H2-rich buffering in conditions to better reflect glutamate stability in hydrothermal fluids."
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_003": 0.93,
+          "rxn_011": 0.9
+        },
+        "chemical_feasibility": 0.91,
+        "pathway_coherence": 0.92,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.93,
+        "overall_confidence": 0.91,
+        "feedback": "This is a strong bridge between hydrothermal carbon fixation and biomimetic prebiotic chemistry. Alpha-ketoglutarate generation from thioester carboxylation is literature-supported, and the NADH-mediated reductive amination step closely matches the reported 2024 prebiotic biomimetic results, including ADPR as coproduct. The main caveat is that NADH is a relatively complex reagent in a prebiotic setting, but the research summary explicitly allows this as a chemically meaningful bridge to extant biochemistry.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "State the mild pH window for rxn_011 more explicitly, since the literature indicates reaction loss above pH 10.",
+          "Clarify whether this route is intended as late-stage prebiotic chemistry rather than primitive hydrothermal core metabolism."
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_003": 0.93,
+          "rxn_004": 0.9,
+          "rxn_005": 0.95,
+          "rxn_006": 0.76
+        },
+        "chemical_feasibility": 0.87,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.86,
+        "overall_confidence": 0.87,
+        "feedback": "This reservoir pathway is conceptually strong and well motivated by the literature discussion of pyroglutamate as both a degradation product and a stabilizing reservoir. The main uncertainty is the reopening step from pyroglutamate to glutamate, which is plausible hydrolytically but less directly supported in the supplied literature than the forward cyclization. Still, the sequence is coherent and addresses glutamate persistence under fluctuating conditions.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_006"
+        ],
+        "suggestions": [
+          "Specify stronger hydrolytic conditions, mineral or pH assistance, or longer timescales for pyroglutamate reopening.",
+          "Note that equilibrium may favor pyroglutamate at elevated temperature and glutamate at milder aqueous conditions."
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_007": 0.86,
+          "rxn_008": 0.88,
+          "rxn_005": 0.95,
+          "rxn_006": 0.76
+        },
+        "chemical_feasibility": 0.86,
+        "pathway_coherence": 0.89,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.87,
+        "overall_confidence": 0.87,
+        "feedback": "This pathway successfully connects surface cyanosulfidic synthesis to biochemical/hydrothermal buffering through pyroglutamate. The main weaknesses are inherited from rxn_007 and rxn_006: the cyanosulfidic formation step is too compressed, and pyroglutamate reopening is less firmly established than cyclization. Nevertheless, the pathway is chemically sensible and captures the systems-chemistry idea of glutamate storage and release.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_007",
+          "rxn_006"
+        ],
+        "suggestions": [
+          "Expand the cyanosulfidic sequence into explicit HCN/H2S/UV/Cu/phosphate-mediated stages.",
+          "Provide better justification for where and how pyroglutamate hydrolysis occurs in the environmental cycle."
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_009": 0.72,
+          "rxn_010": 0.91,
+          "rxn_008": 0.88,
+          "rxn_005": 0.95,
+          "rxn_006": 0.76
+        },
+        "chemical_feasibility": 0.84,
+        "pathway_coherence": 0.87,
+        "environmental_progression": 0.89,
+        "target_achievement": 0.87,
+        "overall_confidence": 0.85,
+        "feedback": "This is a reasonable extension of the acrolein-Strecker route into a glutamate/pyroglutamate reservoir cycle. The pathway is coherent overall, but it inherits two underdefined steps: acrolein generation is oversimplified, and pyroglutamate reopening remains somewhat speculative. Still, the central Strecker-to-glutamate logic is strong and literature-consistent.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_009",
+          "rxn_006"
+        ],
+        "suggestions": [
+          "Replace the direct HCN-to-acrolein node with a more realistic atmospheric discharge precursor framework.",
+          "Clarify the hydrolysis conditions and kinetics for returning pyroglutamate to glutamate."
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_007": 0.86,
+          "rxn_008": 0.88
+        },
+        "chemical_feasibility": 0.78,
+        "pathway_coherence": 0.68,
+        "environmental_progression": 0.7,
+        "target_achievement": 0.88,
+        "overall_confidence": 0.76,
+        "feedback": "This pathway is weak as stated because the listed reaction set does not actually show how hydrothermal reduced carbon in formate feeds into the HCN-centered surface branch. The intended environmental interconnection is conceptually valid, but the reaction sequence appears discontinuous unless an omitted transformation from hydrothermal products to HCN or related atmospheric/surface feedstocks is assumed. The individual end reactions are plausible, but the pathway itself is not fully connected.",
+        "approved": false,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Add an explicit reaction linking hydrothermal C1/C2 products to HCN production or concentration.",
+          "Avoid claiming hydrothermal-to-surface flow in a pathway unless the intermediate transfer is chemically explicit."
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_009": 0.72,
+          "rxn_010": 0.91,
+          "rxn_008": 0.88
+        },
+        "chemical_feasibility": 0.77,
+        "pathway_coherence": 0.66,
+        "environmental_progression": 0.7,
+        "target_achievement": 0.89,
+        "overall_confidence": 0.75,
+        "feedback": "Like P8, this pathway overstates hydrothermal-to-surface connectivity. Formate generation is plausible, but no explicit mechanistic bridge to acrolein or HCN chemistry is included. The surface branch itself is reasonable, but as a full pathway it lacks a properly connected intermediate transfer step. Thus the network-level idea is stronger than the pathway-level implementation.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_009"
+        ],
+        "suggestions": [
+          "Insert a concrete hydrothermal-to-surface transfer step, such as reduced carbon feeding atmospheric photochemistry or surface aldehyde formation.",
+          "Make acrolein formation less schematic and more consistent with mixed-gas discharge chemistry."
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_003": 0.93,
+          "rxn_004": 0.9,
+          "rxn_005": 0.95,
+          "rxn_006": 0.76
+        },
+        "chemical_feasibility": 0.87,
+        "pathway_coherence": 0.92,
+        "environmental_progression": 0.89,
+        "target_achievement": 0.88,
+        "overall_confidence": 0.88,
+        "feedback": "This is a coherent hydrothermal-to-biochemical reservoir cycle centered on alpha-ketoglutarate, glutamate, and pyroglutamate. It is well grounded in the literature on pyrrhotite-mediated chemistry and thermal cyclization. The main uncertainty remains the efficiency and environmental plausibility of pyroglutamate reopening, but the pathway is still strong overall.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_006"
+        ],
+        "suggestions": [
+          "Better define the aqueous conditions that favor reopening of pyroglutamate to glutamate.",
+          "Indicate that pyroglutamate may dominate under hot conditions while glutamate may be replenished in cooler compartments."
+        ]
+      }
+    ],
+    "best_pathway_id": "P4",
+    "overall_confidence": 0.86,
+    "network_feedback": "The network is generally strong, connected, and substantially aligned with the supplied literature. Its best features are the hydrothermal pyrrhotite-like thioester carboxylation route to alpha-ketoglutarate, the non-enzymatic transamination/redox completion to glutamate, and explicit inclusion of the glutamate-pyroglutamate reservoir concept. The surface chemistry also captures major literature themes, especially the importance of HCN, acrolein, and 2-aminopentanedinitrile. Network topology is good: there are sufficient molecule and reaction nodes, several real hubs, and clear convergence on alpha-ketoglutarate and 2-aminopentanedinitrile. However, there are notable issues. First, some pathways claim hydrothermal-to-surface interconnection without explicit bridging reactions; this weakens pathway-level coherence even though the network as a whole suggests cross-environment flow. Second, some reaction descriptions are overly compressed relative to the literature, especially HCN to 2-aminopentanedinitrile and HCN to acrolein. Third, the requested mineral-agent rigor is only partially met in the summary provided: hydrothermal mineral roles are clear, but the surface branch as described in the network summary does not explicitly document the mineral/catalyst set emphasized by the research, such as phosphate buffering, clays, TiO2, or Cu photoredox in each relevant step. Fourth, NADH-mediated reductive amination is literature-supported but belongs to a more advanced prebiotic regime and should be identified as such. Overall, the network is viable and mostly literature-grounded, but it would be stronger with more explicit environmental transfer steps and fuller specification of surface reaction conditions and agents.",
+    "approved": true,
+    "hub_quality": 0.88,
+    "convergence_quality": 0.87
+  },
+  "success": true,
+  "attempts": 3,
+  "notes": "Max retries reached. Best confidence: 0.860"
+}

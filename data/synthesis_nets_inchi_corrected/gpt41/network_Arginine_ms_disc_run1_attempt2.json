@@ -1,0 +1,682 @@
+{
+  "target_molecule": "Arginine",
+  "network": {
+    "target_molecule": "Arginine",
+    "overall_strategy": "This network assembles arginine via convergent multi-environmental routes grounded in the literature. It combines hydrothermal, surface, and biochemical (pool/template) environments. The pathways reflect: (1) backbone construction using hydrothermal carbon/nitrogen chemistry (formaldehyde, ammonia, HCN); (2) amino acid chain extension and functionalization routes (Strecker-like processes, general hydrothermal aminonitrile synthesis); (3) guanidino group formation by ammonium cyanide irradiation and separate guanidine assembly; (4) coupling of the C5/C6 backbone with guanidino functionality via surface or biochemical-phase guanidinylation (as required by the literature gap); and (5) possible indirect routes via ornithine, glutamate, and meteorite-derived precursors explicitly recognized as speculative where no direct evidence exists. All steps strictly follow documented mechanisms or are labeled speculative-only where literature closure to arginine is absent. Hub molecules provide topological convergence for alternative network entry and environmental interconnection.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CH2O",
+        "iupac_name": "Methanal",
+        "common_name": "Formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "starting",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_002",
+        "formula": "NH3",
+        "iupac_name": "Azane",
+        "common_name": "Ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_003",
+        "formula": "HCN",
+        "iupac_name": "Hydrogen cyanide",
+        "common_name": "HCN",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_004",
+        "formula": "NH4CN",
+        "iupac_name": "Ammonium cyanide",
+        "common_name": "Ammonium cyanide",
+        "inchi": "InChI=1S/CN.H3N/c1-2;/h;1H3/q-1;/p+1",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_005",
+        "formula": "CH2(NH)CN",
+        "iupac_name": "Aminomethylenecyanide",
+        "common_name": "Aminonitrile (simple)",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_006",
+        "formula": "NH2CN",
+        "iupac_name": "Carbodiimide",
+        "common_name": "Cyanamide",
+        "inchi": "InChI=1S/CH2N2/c2-1-3/h2-3H",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_007",
+        "formula": "CH2(NH)CN+(CH2)2COOH",
+        "iupac_name": "4-aminobutylaminonitrile-2-carboxylic acid",
+        "common_name": "Ornithine aminonitrile",
+        "inchi": null,
+        "role": "hub_intermediate",
+        "environment_formed": "Hub"
+      },
+      {
+        "id": "mol_008",
+        "formula": "NH2C(=NH)NH2",
+        "iupac_name": "Guanidine",
+        "common_name": "Guanidine",
+        "inchi": "InChI=1S/CH5N3/c2-1(3)4/h(H5,2,3,4)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "NH2CH2CH2CH2CH(NH2)COOH",
+        "iupac_name": "2,5-diaminopentanoic acid",
+        "common_name": "Ornithine",
+        "inchi": "InChI=1S/C5H12N2O2/c6-3-1-2-4(7)5(8)9/h4H,1-3,6-7H2,(H,8,9)",
+        "role": "hub_intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_010",
+        "formula": "NH2CH(CO2H)(CH2)3NH-C(=NH)NH2",
+        "iupac_name": "2-amino-5-guanidinopentanoic acid",
+        "common_name": "Arginine",
+        "inchi": "InChI=1S/C6H14N4O2/c7-4(5(11)12)2-1-3-10-6(8)9/h4H,1-3,7H2,(H,11,12)(H4,8,9,10)",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C5H9NO4",
+        "iupac_name": "2-aminopentanedioic acid",
+        "common_name": "Glutamate",
+        "inchi": "InChI=1S/C5H9NO4/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H,7,8)(H,9,10)/t3-/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C5H6N4O2",
+        "iupac_name": "2-amino-3-(1H-imidazol-4-yl)propanoic acid",
+        "common_name": "Histidine",
+        "inchi": "InChI=1S/C6H9N3O2/c7-5(6(10)11)1-4-2-8-3-9-4/h2-3,5H,1,7H2,(H,8,9)(H,10,11)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "HCN Generation from Formaldehyde and Ammonia",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite",
+          "greigite"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "magnetite, greigite",
+          "aqueous": true,
+          "other": "alkaline pH, serpentinization"
+        },
+        "mechanism": "Reductive coupling and dehydration, producing HCN from C,N feedstocks on Fe mineral catalysts.",
+        "reasoning": "Hydrothermal HCN formation supported by Yanagawa & Kobayashi (1992) and general hydrothermal amino acid synthesis studies."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Ammonium Cyanide Formation",
+        "inputs": [
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite",
+          "aqueous": true,
+          "other": "evaporitic conditions"
+        },
+        "mechanism": "Direct acid-base reaction of HCN with ammonia to yield ammonium cyanide, stabilized on clay.",
+        "reasoning": "General knowledge and cyanide mineral chemistry; Prebiotic plausibility as described in Levine et al. (2008)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Photochemical Guanidine Formation",
+        "inputs": [
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2",
+          "aqueous": true,
+          "other": "UV irradiation"
+        },
+        "mechanism": "Irradiation of ammonium cyanide yields guanidine via radical pathways (C=N bond and NH group assembly).",
+        "reasoning": "Supported by Journal of Molecular Evolution (guanidino group formation via ammonium cyanide irradiation; see literature)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Ornithine Aminonitrile (Chain Elongation) via Successive Strecker Reactions",
+        "inputs": [
+          "mol_003",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "borate minerals"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite, borate minerals",
+          "aqueous": true,
+          "other": "staged aldehyde addition/wet-dry"
+        },
+        "mechanism": "Stepwise assembly of the C5 aminonitrile chain by sequential reaction with aldehydes, ammonia, and HCN or its derivatives on clay/borate surfaces.",
+        "reasoning": "General Strecker-like chemistry, with chain-extended aminonitrile formation supported as in Levine et al. (2008); lack of explicit arginine-specific intermediates noted in research synthesis."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Hydrolysis of Ornithine Aminonitrile to Ornithine",
+        "inputs": [
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "310-340K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite",
+          "aqueous": true,
+          "other": "wet-dry cycling"
+        },
+        "mechanism": "Hydrolysis (hydration and NH3 elimination) of the aminonitrile, affording ornithine on clay mineral surfaces.",
+        "reasoning": "Hydrolysis of aminonitriles to amino acids confirmed for simpler analogs; mechanism reasonable by extension (Levine et al. 2008). No direct arginine evidence, so speculative for extended chain."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Guanidinylation of Ornithine to Arginine",
+        "inputs": [
+          "mol_009",
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null
+        ],
+        "conditions": {
+          "temperature": "variable; 300-340K possible",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": true,
+          "other": "pool chemistry; wet-dry cycle"
+        },
+        "mechanism": "Nucleophilic attack of the terminal amino group of ornithine on guanidine, generating arginine and ammonia.",
+        "reasoning": "This is a rational/likely step by analogy to biology, but there are NO prebiotic guanidinylation experiments for arginine in the literature. Step included as closure, clearly speculative, addressing the main research gap regarding prebiotic C-N coupling."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Ornithine Formation from Glutamate (Reductive Amination)",
+        "inputs": [
+          "mol_011",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite",
+          "greigite"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "pyrite, greigite",
+          "aqueous": true,
+          "other": "subseafloor or vent"
+        },
+        "mechanism": "Reductive amination at the C5 position of glutamate to generate ornithine.",
+        "reasoning": "General hydrothermal amino acid synthesis via reductive amination is supported (Yanagawa & Kobayashi, 1992); extension to ornithine is plausible but indirect."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Glutamate Synthesis from HCNO Precursors",
+        "inputs": [
+          "mol_001",
+          "mol_002",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "magnetite",
+          "aqueous": true,
+          "other": "vent system"
+        },
+        "mechanism": "Coupled condensation/amination, yielding C5 dicarboxylic amino acid.",
+        "reasoning": "General hydrothermal formation of amino acids, including glutamate, demonstrated by Yanagawa & Kobayashi (1992); document explicitly as general step."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Ornithine from Histidine (Speculative Hydrolysis/Imidazole Removal)",
+        "inputs": [
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null
+        ],
+        "conditions": {
+          "temperature": "variable (prob. >300K)",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": true,
+          "other": "acidic hydrolysis (speculative)"
+        },
+        "mechanism": "Hypothetical hydrolysis removing the imidazole ring to yield ornithine.",
+        "reasoning": "Proposed in prebiotic literature as a feasible (if low-yield) transformation (see knowledge base, \u2018precursors to arginine via histidine\u2019); step remains speculative."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Histidine Synthesis from Strecker Precursor (Imidazole-4-acetaldehyde)",
+        "inputs": [
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite",
+          "aqueous": true,
+          "other": "wet-dry cycles"
+        },
+        "mechanism": "Imidazole-4-acetaldehyde, ammonia and HCN form histidine via the Strecker pathway.",
+        "reasoning": "As described in the literature: see \u2018precursors to arginine via histidine\u2019 and Strecker chemistry overview. Extension to arginine remains hypothetical (no direct evidence)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Classic Cyanosulfidic Surface-Hydrothermal Hybrid to Arginine",
+        "description": "Formaldehyde and ammonia (hydrothermal) generate HCN. HCN + NH3 (surface) \u2192 ammonium cyanide, which by irradiation yields guanidine. In parallel, HCN chemistry on clay elongates to ornithine aminonitrile, hydrolyzed to ornithine, then guanidinylated (biochemically) with guanidine to arginine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_004",
+          "mol_007",
+          "mol_008",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Hydrothermal Reductive Amination Route",
+        "description": "Hydrothermal synthesis of glutamate from C,N sources. Glutamate undergoes reductive amination to ornithine, which is then guanidinylated with independently formed guanidine to yield arginine.",
+        "reaction_sequence": [
+          "rxn_008",
+          "rxn_007",
+          "rxn_003",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_009",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Surface Strecker-Histidine Channel (Speculative)",
+        "description": "HCN and ammonia form imidazole-4-acetaldehyde Strecker product (histidine). Acidic hydrolysis removes the imidazole ring, producing ornithine, which is then guanidinylated.",
+        "reaction_sequence": [
+          "rxn_010",
+          "rxn_009",
+          "rxn_003",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_009",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Meteorite-Inspired Indirect Route (Speculative)",
+        "description": "General amino acid precursors delivered via meteorite sources (feeding as backbone intermediates) contribute to the aminonitrile or glutamate pool, which then proceeds as in P1 or P2.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_005",
+          "rxn_003",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_009",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Direct Guanidino-Ammonia Assembly Route",
+        "description": "Ammonium cyanide (via HCN and ammonia) is photochemically converted to guanidine, which couples with ornithine produced via any backbone channel.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_007",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_008",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Reductive Ammonia Hydrothermal Backbone Assembly",
+        "description": "Parallel backbone construction by hydrothermal reductive amination, with guanidine formation independently on surface; late-stage biochemical coupling.",
+        "reaction_sequence": [
+          "rxn_008",
+          "rxn_007",
+          "rxn_003",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_009",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Cyanamide Intermediate Route to Guanidine",
+        "description": "Ammonia + HCN form cyanamide (implied via ammonium cyanide dehydration; not explicitly captured, but referenced), which can be hydrated or photolyzed to guanidine. The rest as in main route.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_006",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Alternative Strecker-Eldridge Process (Long-Chain Aminonitrile Pathway)",
+        "description": "HCN-based building blocks undergo repeated Strecker chemistry, yielding C6 backbone aminonitriles. These are hydrolyzed and guanidinylated.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_004",
+          "rxn_005",
+          "rxn_003",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_007",
+          "mol_009",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Meteorite Parent Body Amino Acid Delivery (Speculative Entry)",
+        "description": "Meteorite delivery provides ornithine or aminonitrile precursors, which are guanidinylated by guanidine from surface photochemistry.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_003",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Formaldehyde Backbone Elongation Route",
+        "description": "Hydrothermal condensation of formaldehyde units, aminated via ammonia, and partly via cyanide, produces C5/C6 aminonitrile skeleton, further processed as above.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_004",
+          "rxn_005",
+          "rxn_003",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_007",
+          "mol_009",
+          "mol_008"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_003",
+      "mol_004",
+      "mol_009",
+      "mol_008"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_003",
+        "incoming_reactions": [
+          "rxn_001"
+        ],
+        "outgoing_reactions": [
+          "rxn_002",
+          "rxn_004",
+          "rxn_010",
+          "rxn_008"
+        ]
+      },
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [
+          "rxn_002"
+        ],
+        "outgoing_reactions": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_007"
+        ]
+      },
+      {
+        "molecule_id": "mol_009",
+        "incoming_reactions": [
+          "rxn_005",
+          "rxn_007",
+          "rxn_009"
+        ],
+        "outgoing_reactions": [
+          "rxn_006"
+        ]
+      },
+      {
+        "molecule_id": "mol_008",
+        "incoming_reactions": [
+          "rxn_003"
+        ],
+        "outgoing_reactions": [
+          "rxn_006"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Arginine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_001": 0.95,
+          "rxn_002": 0.9,
+          "rxn_003": 0.95,
+          "rxn_004": 0.8,
+          "rxn_005": 0.9,
+          "rxn_006": 0.8
+        },
+        "chemical_feasibility": 0.85,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.95,
+        "target_achievement": 0.85,
+        "overall_confidence": 0.88,
+        "feedback": "Strong environmental flow and direct connection to literature-supported prebiotic environments (hydrothermal \u2192 surface \u2192 biochemical). All key intermediates are represented and major steps are plausible. Some mechanistic ambiguity exists at the guanidinylation/hydrolysis steps, but this is in line with literature's lack of closure. Direct guanidinylation of ornithine is speculative but conceivable, matching research gaps. Good convergence at hubs and sound topological construction.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_006"
+        ],
+        "suggestions": [
+          "Provide more detail or suggest plausible mineral/organocatalyst for final guanidinylation."
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_008": 0.85,
+          "rxn_007": 0.9,
+          "rxn_005": 0.9,
+          "rxn_006": 0.8
+        },
+        "chemical_feasibility": 0.8,
+        "pathway_coherence": 0.85,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.85,
+        "overall_confidence": 0.83,
+        "feedback": "Pathway leverages known hydrothermal amination chemistry for glutamate to ornithine, but makes a significant inferential leap to arginine. Literature supports all but the final guanidinylation step under true prebiotic conditions; this remains speculative. Good environment handoff.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_006"
+        ],
+        "suggestions": [
+          "Indicate if mineral catalysis (e.g., pyrite, montmorillonite) could plausibly activate guanidinylation."
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_010": 0.7,
+          "rxn_009": 0.6,
+          "rxn_005": 0.8,
+          "rxn_006": 0.8
+        },
+        "chemical_feasibility": 0.65,
+        "pathway_coherence": 0.7,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.8,
+        "overall_confidence": 0.75,
+        "feedback": "Highly speculative: histidine as an arginine precursor is hypothesized in research but lacks experimental evidence for direct transformation. The imidazole-removal reaction step is not evidenced. Pathway is unlikely but provides topological alternative. Should be clearly labeled 'speculative'.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_009",
+          "rxn_010"
+        ],
+        "suggestions": [
+          "Explicitly mark as hypothetical.",
+          "Remove or demote as major pathway unless new evidence is found."
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_007": 0.8,
+          "rxn_005": 0.8,
+          "rxn_006": 0.8,
+          "rxn_003": 0.85
+        },
+        "chemical_feasibility": 0.75,
+        "pathway_coherence": 0.75,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.8,
+        "overall_confidence": 0.78,
+        "feedback": "Meteorite/extra-terrestrial channel is plausible for precursor delivery but unproven for direct arginine construction. Literature supports meteoritic diamino acids, but no specific evidence for ornithine or arginine. Should be marked as uncertain.",
+        "approved": false,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Mark meteorite pathways as speculative."
+        ]
+      }
+    ],
+    "best_pathway_id": "P1",
+    "overall_confidence": 0.88,
+    "network_feedback": "The network topology is excellent: multiple hub molecules (e.g., HCN, ammonium cyanide, ornithine, guanidine) provide convergence and environmental interconnection. There is strong literature alignment for all but the final guanidinylation step; this reflects a genuine research gap rather than a synthetic oversight. Environmental transitions are realistic and justified, with appropriate settings for each reaction. The inclusion of speculative (but labeled) indirect routes reflects the uncertainty in the literature. Minor weaknesses concern final step plausibility and the need for greater specificity about mineral or environmental catalysts\u2014especially at guanidinylation\u2014but these do not undermine the validity of the main network. Pathways reasonably mirror what is known and highlight outstanding questions in prebiotic arginine synthesis.",
+    "approved": true,
+    "hub_quality": 0.95,
+    "convergence_quality": 0.9
+  },
+  "success": false,
+  "attempts": 2,
+  "notes": null
+}

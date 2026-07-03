@@ -1,0 +1,1374 @@
+{
+  "target_molecule": "Histidine",
+  "network": {
+    "target_molecule": "L-Histidine",
+    "overall_strategy": "This network constructs histidine through multiple convergent pathways originating in hydrothermal vent CO2 reduction and Fischer-Tropsch-type (FTT) chemistry, passing through surface UV photochemistry and Radziszewski imidazole ring synthesis, and culminating in biochemical Strecker synthesis or \u03b1-keto acid reductive amination/transamination. The critical challenge\u2014prebiotically forming imidazole-4-acetaldehyde\u2014is addressed via two mechanistically distinct routes: (1) a modified Radziszewski synthesis using glyoxal and 3-hydroxypropionaldehyde followed by selective alcohol-to-aldehyde oxidation, and (2) a direct Radziszewski synthesis using glyoxal and malondialdehyde. The final step to histidine proceeds via either classical Strecker synthesis (imidazole-4-acetaldehyde + NH3 + HCN \u2192 aminonitrile \u2192 hydrolysis) or via an \u03b1-keto acid intermediate (imidazolepyruvate) that undergoes reductive amination or transamination with alanine. Five hub molecules (formaldehyde, glyoxal, 3-hydroxypropionaldehyde, imidazole-4-acetaldehyde, imidazolepyruvate) create a densely interconnected network with high pathway redundancy.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "Carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "Hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "ammonia",
+        "common_name": "Ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_004",
+        "formula": "CO",
+        "iupac_name": "carbon monoxide",
+        "common_name": "Carbon monoxide",
+        "inchi": "InChI=1S/CO/c1-2",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_005",
+        "formula": "CHO2-",
+        "iupac_name": "formate",
+        "common_name": "Formate",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)/p-1",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_006",
+        "formula": "CH2O",
+        "iupac_name": "formaldehyde",
+        "common_name": "Formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C2H4O",
+        "iupac_name": "acetaldehyde",
+        "common_name": "Acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C2H4O2",
+        "iupac_name": "2-hydroxyacetaldehyde",
+        "common_name": "Glycolaldehyde",
+        "inchi": "InChI=1S/C2H4O2/c3-1-2-4/h1,4H,2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C2H2O2",
+        "iupac_name": "oxaldehyde",
+        "common_name": "Glyoxal",
+        "inchi": "InChI=1S/C2H2O2/c3-1-2-4/h1-2H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C3H6O2",
+        "iupac_name": "3-hydroxypropanal",
+        "common_name": "3-Hydroxypropionaldehyde",
+        "inchi": "InChI=1S/C3H6O2/c4-2-1-3-5/h2,5H,1,3H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C3H4O2",
+        "iupac_name": "propanedial",
+        "common_name": "Malondialdehyde",
+        "inchi": "InChI=1S/C3H4O2/c4-2-1-3-5/h2-3H,1H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "Hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_013",
+        "formula": "CH3NO",
+        "iupac_name": "formamide",
+        "common_name": "Formamide",
+        "inchi": "InChI=1S/CH3NO/c2-1-3/h1H,(H2,2,3)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C5H8N2O",
+        "iupac_name": "2-(1H-imidazol-4-yl)ethanol",
+        "common_name": "4-(2-Hydroxyethyl)imidazole",
+        "inchi": "InChI=1S/C5H8N2O/c8-2-1-5-3-6-4-7-5/h3-4,8H,1-2H2,(H,6,7)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C5H6N2O",
+        "iupac_name": "2-(1H-imidazol-4-yl)acetaldehyde",
+        "common_name": "Imidazole-4-acetaldehyde",
+        "inchi": "InChI=1S/C5H6N2O/c8-2-1-5-3-6-4-7-5/h2-4H,1H2,(H,6,7)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C6H7N3O",
+        "iupac_name": "2-amino-3-(1H-imidazol-4-yl)propanenitrile",
+        "common_name": "Histidine aminonitrile",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_017",
+        "formula": "C6H9N3O2",
+        "iupac_name": "(2S)-2-amino-3-(1H-imidazol-4-yl)propanoic acid",
+        "common_name": "L-Histidine",
+        "inchi": "InChI=1S/C6H9N3O2/c7-5(6(10)11)1-4-2-8-3-9-4/h2-3,5H,1,7H2,(H,8,9)(H,10,11)/t5-/m0/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_018",
+        "formula": "C6H6N2O3",
+        "iupac_name": "3-(1H-imidazol-4-yl)-2-oxopropanoic acid",
+        "common_name": "Imidazolepyruvate",
+        "inchi": "InChI=1S/C6H6N2O3/c9-5(6(10)11)1-4-2-7-3-8-4/h2-3H,1H2,(H,7,8)(H,10,11)",
+        "role": "hub_intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_019",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "Pyruvate",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_020",
+        "formula": "C3H7NO2",
+        "iupac_name": "2-aminopropanoic acid",
+        "common_name": "Alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "CO2 hydrogenation to formate on greigite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_005"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-200 bar)",
+          "catalyst": "greigite (Fe3S4)",
+          "aqueous": "true",
+          "other": "Alkaline hydrothermal vent, pH 9-11, H2-rich serpentinization fluid"
+        },
+        "mechanism": "CO2 is reduced to formate via surface-bound metal hydride intermediates on the greigite Fe3S4 surface, which is structurally analogous to biological [Fe4S4] clusters. H2 dissociates on the iron-sulfide surface and transfers hydride to CO2.",
+        "reasoning": "Greigite-catalyzed CO2 reduction to formate is one of the best-documented hydrothermal prebiotic reactions, demonstrated experimentally under alkaline hydrothermal vent conditions. The structural analogy between greigite and biological iron-sulfur clusters supports this as a plausible primordial carbon fixation step (Herschy et al., 2014; Roldan et al., 2015). The literature identifies formate as a key first product of hydrothermal CO2 reduction (Sources 2546, 2655)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Reverse water-gas shift on magnetite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "450-500K",
+          "pressure": "high (100-300 bar)",
+          "catalyst": "magnetite (Fe3O4)",
+          "aqueous": "true",
+          "other": "Black smoker or high-T hydrothermal system"
+        },
+        "mechanism": "CO2 + H2 \u2192 CO + H2O via reverse water-gas shift reaction catalyzed on magnetite surface. At these temperatures, the equilibrium favors CO production. Magnetite provides a redox-active iron oxide surface for this transformation.",
+        "reasoning": "The reverse water-gas shift reaction on magnetite is well-established in Fischer-Tropsch-type (FTT) chemistry and has been demonstrated in hydrothermal simulations. CO is a critical C1 building block for downstream FTT synthesis of larger organics (McCollom & Seewald, 2007). The literature documents magnetite as catalytically active for FTT reactions (Source 19315)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Fischer-Tropsch-type synthesis of formaldehyde",
+        "inputs": [
+          "mol_004",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high (100-300 bar)",
+          "catalyst": "magnetite (Fe3O4)",
+          "aqueous": "true",
+          "other": "Subseafloor hydrothermal, moderate pH"
+        },
+        "mechanism": "CO undergoes hydrogenation on the magnetite surface via surface-bound CO intermediates. Sequential H addition yields formaldehyde (HCHO) as the first stable oxygenated product of FTT synthesis. Some methanol is also produced but formaldehyde is the kinetically trapped intermediate.",
+        "reasoning": "FTT synthesis of formaldehyde from CO + H2 on magnetite is a classic hydrothermal prebiotic reaction. Magnetite's catalytic role in FTT synthesis has been confirmed experimentally, including in the Cold Bokkeveld meteorite matrix (Source 19315; McCollom et al., 1999). Formaldehyde is a critical prebiotic building block for subsequent surface chemistry."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Fischer-Tropsch-type synthesis of acetaldehyde",
+        "inputs": [
+          "mol_004",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high (100-300 bar)",
+          "catalyst": "magnetite with FeS co-catalyst",
+          "aqueous": "true",
+          "other": "Subseafloor hydrothermal, prolonged residence time favors C2 product"
+        },
+        "mechanism": "CO undergoes C-C coupling on the magnetite/FeS surface followed by hydrogenation. The C2 oxygenate acetaldehyde (CH3CHO) is produced through chain growth beyond formaldehyde. Longer residence times and mixed mineral surfaces favor C2+ products.",
+        "reasoning": "FTT synthesis produces a distribution of C1-C3 oxygenates including acetaldehyde. Mixed iron oxide/iron sulfide surfaces enhance C2 product selectivity (McCollom & Seewald, 2007; Cody et al., 2000). Acetaldehyde is essential for the aldol condensation step that builds the 3-carbon side chain of histidine."
+      },
+      {
+        "id": "rxn_005",
+        "name": "HCN formation from CO and NH3 on pyrite",
+        "inputs": [
+          "mol_004",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "500-600K",
+          "pressure": "high",
+          "catalyst": "pyrite (FeS2)",
+          "aqueous": "true",
+          "other": "Black smoker interface, high-temperature zone"
+        },
+        "mechanism": "CO and NH3 react on the pyrite surface via a nitrene/iminium-type mechanism. The FeS2 surface facilitates dehydration of the initial formamide-like intermediate to yield HCN. This is thermodynamically favored at high temperatures.",
+        "reasoning": "HCN synthesis from CO and NH3 on iron-sulfide mineral surfaces is proposed as a major prebiotic HCN source in hydrothermal systems (Huber & Wachtershauser, 1997). The literature identifies HCN as central to prebiotic amino acid synthesis including histidine, being a required input for Strecker synthesis (Sources 9365, 21200, 21196, 985)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Formate reduction to formaldehyde on magnetite",
+        "inputs": [
+          "mol_005",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "370-420K",
+          "pressure": "high (50-200 bar)",
+          "catalyst": "magnetite with Fe0 as co-reductant",
+          "aqueous": "true",
+          "other": "Alkaline vent environment, strong reducing conditions from serpentinization-derived H2"
+        },
+        "mechanism": "Formate is reduced to formaldehyde through a two-electron reduction on the magnetite/Fe0 surface. Fe0 acts as a strong reductant, generating surface-bound hydride species that reduce the formate C=O to yield formaldehyde. This is the reverse of the Cannizzaro reaction under reducing conditions.",
+        "reasoning": "The reduction of formate to formaldehyde, while thermodynamically uphill under standard conditions, becomes feasible with strong reductants like Fe0 in highly reducing serpentinization environments. This provides an alternative route to formaldehyde independent of FTT CO chemistry (Preiner et al., 2020). The literature notes that hydrothermal H2 from serpentinization drives such reductions (Sources 2546, 9371)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Pyruvate synthesis from CO2 reduction on greigite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_019"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (100-200 bar)",
+          "catalyst": "greigite with magnetite",
+          "aqueous": "true",
+          "other": "Alkaline vent, requires multi-step CO2 fixation via formate and acetyl intermediates"
+        },
+        "mechanism": "Multi-step CO2 reduction proceeds via formate \u2192 CO \u2192 acetyl-thioester intermediates on the greigite surface. A third CO2 reduction and carboxylation of the acetyl intermediate yields pyruvate. This parallels the reductive acetyl-CoA pathway in biology.",
+        "reasoning": "Pyruvate synthesis from CO2 on iron-sulfur mineral surfaces under hydrothermal conditions has been demonstrated by Cody et al. (2000) and proposed in the context of the iron-sulfur world hypothesis (Wachtershauser, 1990). The literature identifies pyruvate and \u03b1-keto acids as central metabolic hubs relevant to amino acid synthesis (Sources 9332, 9400, 6987)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Reductive amination of pyruvate to alanine",
+        "inputs": [
+          "mol_019",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_020"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite/FeS as reductant and catalyst",
+          "aqueous": "true",
+          "other": "Alkaline vent, NH3 from volcanic outgassing or N2 fixation"
+        },
+        "mechanism": "Pyruvate reacts with NH3 to form an imine (Schiff base) intermediate, which is then reduced by surface-bound hydrides on the FeS surface to yield alanine. The mineral surface provides both the Lewis acid activation and the reducing equivalents.",
+        "reasoning": "Reductive amination of \u03b1-keto acids on iron-sulfur mineral surfaces is a well-established prebiotic reaction for amino acid synthesis (Huber & Wachtershauser, 2006; Sources 6987, 13450). Alanine is needed as the amino group donor in the transamination route to histidine."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Formose reaction: formaldehyde self-aldol to glycolaldehyde",
+        "inputs": [
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "borate minerals with Ca(OH)2",
+          "aqueous": "true",
+          "other": "Evaporitic pool near hot spring, wet-dry cycling concentrates formaldehyde; borate stabilizes products and prevents tar formation"
+        },
+        "mechanism": "Two formaldehyde molecules undergo aldol condensation catalyzed by Ca(OH)2 (base catalyst) to form glycolaldehyde. Borate minerals complex with glycolaldehyde through 1,2-diol-like interactions, stabilizing the product and preventing over-reaction to complex sugars (tar).",
+        "reasoning": "The formose reaction is one of the most established prebiotic sugar synthesis routes. Borate stabilization of sugar intermediates was demonstrated by Ricardo et al. (2004) and prevents the formation of intractable tar. Glycolaldehyde is the simplest product and a key C2 building block. The literature identifies formaldehyde and glycolaldehyde as essential prebiotic feedstocks (Sources 9376, 21200, 10209)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "UV photooxidation of glycolaldehyde to glyoxal",
+        "inputs": [
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 photocatalyst",
+          "aqueous": "true",
+          "other": "Shallow pool exposed to strong UV radiation (no ozone layer), TiO2 mineral grains in sediment"
+        },
+        "mechanism": "UV photons are absorbed by TiO2, generating electron-hole pairs. The photogenerated holes (h+) oxidize glycolaldehyde (HOCH2CHO) at the alcohol terminus, converting the -CH2OH group to -CHO, yielding glyoxal (OHCCHO). This is a selective two-electron oxidation mediated by the semiconductor surface.",
+        "reasoning": "TiO2 (anatase) is a well-known UV photocatalyst present on early Earth mineral surfaces. Photocatalytic oxidation of alcohols to aldehydes on TiO2 is well-documented in the photochemistry literature. Early Earth's intense UV flux (no ozone layer) would have driven such transformations efficiently (Sources 2546, general prebiotic photochemistry literature)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Aldol condensation of formaldehyde and acetaldehyde to 3-hydroxypropionaldehyde",
+        "inputs": [
+          "mol_006",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals (apatite)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite clay (base catalyst), trace phosphate",
+          "aqueous": "true",
+          "other": "Evaporitic pool, mildly alkaline pH 8-9"
+        },
+        "mechanism": "Acetaldehyde undergoes base-catalyzed enolization on the montmorillonite surface. The enolate attacks the formaldehyde carbonyl in an aldol addition, forming 3-hydroxypropionaldehyde (3-HPA, HOCH2CH2CHO). The clay surface both catalyzes the enolization and concentrates the reactants via adsorption.",
+        "reasoning": "Aldol condensation of aldehydes is a fundamental prebiotic reaction. Montmorillonite clays catalyze aldol and related condensation reactions by providing basic surface sites and concentrating organic molecules (Ferris et al., 1996; Sources 9431). 3-Hydroxypropionaldehyde is a critical C3 synthon containing the two-carbon chain ultimately found in histidine's side chain."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Formate-ammonia condensation to formamide on clay",
+        "inputs": [
+          "mol_005",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "320-370K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite clay",
+          "aqueous": "false",
+          "other": "Dry phase of wet-dry cycling in evaporitic pool; dehydration drives amide bond formation"
+        },
+        "mechanism": "During the dry phase, concentrated formate and ammonium salts undergo thermal condensation to form formamide with loss of water. Montmorillonite surface catalyzes the reaction by providing acid-base sites and lowering the activation energy.",
+        "reasoning": "Formamide is a well-recognized prebiotic precursor molecule that can form from the thermal condensation of ammonium formate. The literature identifies formamide as a versatile precursor for nucleobases, amino acids, and HCN (Sources 9371, 2582). Saladino et al. (2012) demonstrated formamide's central role in prebiotic chemistry."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Thermal decomposition of formamide to HCN",
+        "inputs": [
+          "mol_013"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "TiO2 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "370-420K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite with TiO2",
+          "aqueous": "false",
+          "other": "Subaerial geothermal field or volcanic hot spring margin; dry conditions favor dehydration"
+        },
+        "mechanism": "Formamide undergoes thermal dehydration (HCONH2 \u2192 HCN + H2O) catalyzed by mineral surfaces. TiO2 under UV irradiation can also photocatalytically decompose formamide to HCN. This is the reverse of HCN hydration.",
+        "reasoning": "Formamide thermal decomposition to HCN is well-established and occurs at moderate temperatures on mineral surfaces. The literature notes that formamide and HCN are interconvertible under prebiotic conditions, with the equilibrium depending on water activity (Sources 2582, 9371). Barks et al. (2010) demonstrated this transformation on mineral surfaces."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Modified Radziszewski synthesis: glyoxal + 3-HPA + ammonia \u2192 4-(2-hydroxyethyl)imidazole",
+        "inputs": [
+          "mol_009",
+          "mol_010",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals (struvite)"
+        ],
+        "conditions": {
+          "temperature": "320-370K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite, slightly alkaline pH 8-9",
+          "aqueous": "true",
+          "other": "Evaporitic pool with concentrated reactants from wet-dry cycling"
+        },
+        "mechanism": "The Radziszewski imidazole synthesis proceeds by condensation of glyoxal (1,2-dicarbonyl) with 3-hydroxypropionaldehyde (monoaldehyde) and two equivalents of NH3. The mechanism involves: (1) formation of a diamino intermediate from glyoxal + 2NH3, (2) nucleophilic addition of the aldehyde to form the C-4 substituent, (3) cyclization and dehydration to yield the aromatic imidazole ring bearing a 2-hydroxyethyl substituent at C-4(5). The 3-HPA aldehyde functionality reacts at C-4, while the terminal -CH2OH group remains intact.",
+        "reasoning": "The Radziszewski synthesis (1882) is the most well-established route to substituted imidazoles from 1,2-dicarbonyls + aldehydes + NH3. It has been proposed as a plausible prebiotic imidazole synthesis route. Using 3-hydroxypropionaldehyde instead of formaldehyde installs the 2-hydroxyethyl side chain needed for histidine. The generality of the Radziszewski reaction with different aldehyde substrates is well-documented in synthetic organic chemistry (Debus, 1858; Radziszewski, 1882). The product 4-(2-hydroxyethyl)imidazole is the direct precursor to imidazole-4-acetaldehyde upon selective alcohol oxidation."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Selective UV photooxidation of 4-(2-hydroxyethyl)imidazole to imidazole-4-acetaldehyde",
+        "inputs": [
+          "mol_014"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 photocatalyst",
+          "aqueous": "true",
+          "other": "Shallow UV-exposed pool, strong early Earth UV flux"
+        },
+        "mechanism": "TiO2-mediated photocatalytic oxidation selectively converts the primary alcohol (-CH2OH) to the aldehyde (-CHO), yielding imidazole-4-acetaldehyde. The aromatic imidazole ring is resistant to photooxidation under mild conditions, providing selectivity for the aliphatic alcohol terminus. The reaction proceeds via a radical mechanism initiated by TiO2-generated hydroxyl radicals.",
+        "reasoning": "Selective photocatalytic oxidation of primary alcohols to aldehydes on TiO2 is well-documented in the photochemistry literature and is a mild, selective transformation. The aromatic heterocycle is resistant to oxidation under these conditions. The literature identifies imidazole-4-acetaldehyde as the key immediate precursor to histidine in prebiotic Strecker synthesis (Source 21332, Breslow & Levine, 2006)."
+      },
+      {
+        "id": "rxn_016",
+        "name": "UV photooxidation of 3-hydroxypropionaldehyde to malondialdehyde",
+        "inputs": [
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 photocatalyst",
+          "aqueous": "true",
+          "other": "Shallow UV-exposed pool"
+        },
+        "mechanism": "The primary alcohol of 3-hydroxypropionaldehyde (HOCH2CH2CHO) is photooxidized to an aldehyde via TiO2-mediated radical oxidation, yielding malondialdehyde (OHCCH2CHO). This proceeds through abstraction of H from C-OH by TiO2-generated radicals, followed by further oxidation to the aldehyde.",
+        "reasoning": "Photocatalytic oxidation of primary alcohols to aldehydes on TiO2 is a well-known process. Malondialdehyde is a reactive dialdehyde that has been detected in various oxidative environments and can also form from lipid peroxidation in prebiotic membranes. It provides a direct C3 aldehyde for Radziszewski synthesis with the correct connectivity for the histidine side chain."
+      },
+      {
+        "id": "rxn_017",
+        "name": "Direct Radziszewski synthesis: glyoxal + malondialdehyde + ammonia \u2192 imidazole-4-acetaldehyde",
+        "inputs": [
+          "mol_009",
+          "mol_011",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals (struvite)"
+        ],
+        "conditions": {
+          "temperature": "320-370K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite clay, mildly alkaline pH 8-9",
+          "aqueous": "true",
+          "other": "Evaporitic pool; concentrated reactants from evaporation cycles"
+        },
+        "mechanism": "Glyoxal reacts with two equivalents of NH3 to form a 1,2-diamino intermediate. Malondialdehyde (OHCCH2CHO) reacts through one of its aldehyde groups in the cyclization/condensation step, yielding the imidazole ring with the second aldehyde functionality preserved as the C-4 acetaldehyde substituent. The Radziszewski mechanism involves imine formation, nucleophilic addition, ring closure, and oxidative aromatization.",
+        "reasoning": "This represents a direct, one-pot Radziszewski synthesis of imidazole-4-acetaldehyde using malondialdehyde as the bifunctional aldehyde component. In the standard Radziszewski mechanism, only one aldehyde group of the monoaldehyde participates in ring formation; with malondialdehyde, the distal aldehyde group is preserved as the product side chain. This approach avoids the separate oxidation step needed in the 3-HPA route (Radziszewski, 1882; Debus, 1858). The selectivity for mono-incorporation into the ring versus both aldehydes reacting is governed by the intramolecular distance and reaction kinetics."
+      },
+      {
+        "id": "rxn_018",
+        "name": "Strecker synthesis: imidazole-4-acetaldehyde + NH3 + HCN \u2192 histidine aminonitrile",
+        "inputs": [
+          "mol_015",
+          "mol_003",
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_016"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "none required (spontaneous in solution)",
+          "aqueous": "true",
+          "other": "Prebiotic pool with concentrated reactants, pH 7-9"
+        },
+        "mechanism": "Classical Strecker synthesis: (1) NH3 attacks the aldehyde of imidazole-4-acetaldehyde to form a carbinolamine, (2) dehydration yields an imine (Schiff base), (3) nucleophilic addition of HCN (as CN-) to the imine C=N bond yields the \u03b1-aminonitrile (histidine aminonitrile). This is a well-established three-component condensation.",
+        "reasoning": "The Strecker synthesis of histidine aminonitrile from imidazole-4-acetaldehyde is the most literature-supported pathway to histidine under prebiotic conditions. This specific route was proposed by Shen et al. (1990) and Breslow & Levine (2006), and is referenced in the knowledge base as a key proposed pathway (Source 21332). The Strecker reaction is widely cited as a primary mechanism for prebiotic amino acid synthesis (Sources 21188, 985, 21192)."
+      },
+      {
+        "id": "rxn_019",
+        "name": "Hydrolysis of histidine aminonitrile to histidine",
+        "inputs": [
+          "mol_016"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "none (acid or base catalysis, pH-dependent)",
+          "aqueous": "true",
+          "other": "Mildly acidic to neutral pH aqueous environment, possibly with wet-dry cycling to drive equilibrium"
+        },
+        "mechanism": "The nitrile group (-CN) of histidine aminonitrile undergoes stepwise hydrolysis: (1) CN + H2O \u2192 amide (-CONH2) via nucleophilic addition of water, (2) amide + H2O \u2192 carboxylic acid (-COOH) + NH3 via further hydrolysis. This yields L/D-histidine (racemic mixture). Mildly acidic conditions (pH 4-6) accelerate nitrile hydrolysis.",
+        "reasoning": "Aminonitrile hydrolysis to amino acids is the well-established final step of the Strecker synthesis. The hydrolysis can occur spontaneously in aqueous solution over geological timescales, or be accelerated by mildly acidic or basic conditions. This step is thermodynamically favorable (Sources 21188, 985, 15225). The product is racemic; any subsequent chiral selection would be a separate process (Source 15225, Levine et al., 2008)."
+      },
+      {
+        "id": "rxn_020",
+        "name": "Cyanohydrin formation and hydrolysis: imidazole-4-acetaldehyde to imidazolepyruvate",
+        "inputs": [
+          "mol_015",
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_018"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "Fe2+ as mild oxidant for final step",
+          "aqueous": "true",
+          "other": "Sequential: cyanohydrin formation (pH 7-9), hydrolysis (pH 4-6), oxidation (Fe3+/Fe2+)"
+        },
+        "mechanism": "Multi-step sequence: (1) HCN adds to the aldehyde of imidazole-4-acetaldehyde to form a cyanohydrin (Im-CH2-CH(OH)CN), (2) the nitrile is hydrolyzed to a carboxylic acid yielding imidazole-4-lactic acid (Im-CH2-CH(OH)COOH), (3) mild oxidation of the \u03b1-hydroxy acid by Fe3+ (abundant in anoxic ocean) converts the -CH(OH)- to -C(=O)-, yielding imidazolepyruvate (Im-CH2-CO-COOH).",
+        "reasoning": "The cyanohydrin-hydrolysis-oxidation sequence is a well-known pathway from aldehydes to \u03b1-keto acids in prebiotic chemistry. The literature identifies the abiotic conversion of \u03b1-keto acids as a significant pathway for amino acid synthesis, with \u03b1-keto acids being central metabolic intermediates (Sources 6987, 9332, 9400). Fe3+/Fe2+ cycling provides the mild oxidant needed for the hydroxy-to-keto conversion (Source 9400)."
+      },
+      {
+        "id": "rxn_021",
+        "name": "Reductive amination of imidazolepyruvate to histidine",
+        "inputs": [
+          "mol_018",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite/FeS provides surface and reducing equivalents",
+          "aqueous": "true",
+          "other": "Alkaline hydrothermal vent; reducing conditions drive imine reduction"
+        },
+        "mechanism": "Imidazolepyruvate reacts with NH3 to form a Schiff base (imine) at the \u03b1-keto position. The imine is reduced by surface-bound hydrides on the FeS mineral surface, yielding histidine. This parallels the biological reductive amination catalyzed by glutamate dehydrogenase.",
+        "reasoning": "Reductive amination of \u03b1-keto acids to amino acids on iron-sulfur mineral surfaces is one of the best-documented prebiotic amino acid synthesis routes (Huber & Wachtershauser, 2006). The literature explicitly identifies \u03b1-keto acid conversion using cyanide and ammonia as a significant pathway to amino acids (Source 6987). Imidazolepyruvate is the direct \u03b1-keto acid analog of histidine in modern metabolism."
+      },
+      {
+        "id": "rxn_022",
+        "name": "Transamination of imidazolepyruvate with alanine to histidine",
+        "inputs": [
+          "mol_018",
+          "mol_020"
+        ],
+        "outputs": [
+          "mol_017",
+          "mol_019"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "none required; trace metal ions (Cu2+, Fe2+) can catalyze",
+          "aqueous": "true",
+          "other": "Prebiotic pool with both amino acids and keto acids present; pH 7-9"
+        },
+        "mechanism": "Non-enzymatic transamination between alanine (amino donor) and imidazolepyruvate (amino acceptor). The \u03b1-amino group of alanine is transferred to the \u03b1-keto group of imidazolepyruvate via a Schiff base intermediate with pyridoxal-free metal ion catalysis. Cu2+ or Fe2+ ions can catalyze this transformation at physiological-like temperatures. Products: histidine + pyruvate.",
+        "reasoning": "Non-enzymatic transamination between amino acids and \u03b1-keto acids has been demonstrated under prebiotic conditions and is considered a key step in the transition from prebiotic to biotic amino acid metabolism (Sources 6943, 1063, 6987). The literature notes that extant biochemistry uses \u03b1-keto acids via transamination, and reconciling this with prebiotic chemistry is an important consideration. Metal-catalyzed transamination without pyridoxal has been shown by Snell & Jenkins (1959)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "CO route \u2192 FTT formaldehyde \u2192 formose \u2192 Radziszewski (3-HPA) \u2192 photooxidation \u2192 Strecker \u2192 histidine",
+        "description": "Hydrothermal CO2 is converted to CO via RWGS on magnetite, then to formaldehyde and acetaldehyde via FTT. Surface formose reaction gives glycolaldehyde, UV oxidation gives glyoxal. Aldol gives 3-HPA. Modified Radziszewski with glyoxal+3-HPA+NH3 gives 4-(2-hydroxyethyl)imidazole. UV photooxidation gives imidazole-4-acetaldehyde. Strecker synthesis with NH3+HCN gives histidine aminonitrile, hydrolyzed to histidine.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_014",
+          "rxn_015",
+          "rxn_005",
+          "rxn_018",
+          "rxn_019"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_009",
+          "mol_010",
+          "mol_014",
+          "mol_015",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Formate route \u2192 formaldehyde \u2192 formose \u2192 Radziszewski (3-HPA) \u2192 photooxidation \u2192 Strecker \u2192 histidine",
+        "description": "Alternative carbon fixation via greigite-catalyzed CO2\u2192formate, then formate reduction to formaldehyde on magnetite/Fe0. Downstream identical to P1: formose, aldol, Radziszewski, photooxidation, Strecker.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_006",
+          "rxn_004",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_014",
+          "rxn_015",
+          "rxn_005",
+          "rxn_018",
+          "rxn_019"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_006",
+          "mol_009",
+          "mol_015",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "CO route \u2192 malondialdehyde \u2192 direct Radziszewski \u2192 Strecker \u2192 histidine",
+        "description": "FTT-derived formaldehyde and acetaldehyde undergo aldol to give 3-HPA, which is photooxidized to malondialdehyde. Direct Radziszewski with glyoxal+malondialdehyde+NH3 yields imidazole-4-acetaldehyde in one pot. Strecker gives histidine.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_016",
+          "rxn_017",
+          "rxn_005",
+          "rxn_018",
+          "rxn_019"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_011",
+          "mol_015",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Formate route \u2192 malondialdehyde \u2192 direct Radziszewski \u2192 Strecker \u2192 histidine",
+        "description": "Formate-derived formaldehyde feeds into the malondialdehyde branch. Direct one-pot Radziszewski yields imidazole-4-acetaldehyde. Strecker completes the synthesis.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_006",
+          "rxn_004",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_016",
+          "rxn_017",
+          "rxn_005",
+          "rxn_018",
+          "rxn_019"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_006",
+          "mol_011",
+          "mol_015",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "CO route \u2192 3-HPA Radziszewski \u2192 \u03b1-keto acid \u2192 reductive amination \u2192 histidine",
+        "description": "Same upstream as P1 to imidazole-4-acetaldehyde via 3-HPA Radziszewski and photooxidation. Then cyanohydrin-hydrolysis-oxidation converts Im-4-AA to imidazolepyruvate. Reductive amination on greigite/FeS in hydrothermal environment yields histidine.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_014",
+          "rxn_015",
+          "rxn_005",
+          "rxn_020",
+          "rxn_021"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_010",
+          "mol_015",
+          "mol_018"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Formate route \u2192 3-HPA Radziszewski \u2192 \u03b1-keto acid \u2192 reductive amination \u2192 histidine",
+        "description": "Formate-derived formaldehyde upstream. Modified Radziszewski and photooxidation give Im-4-AA. Conversion to imidazolepyruvate, then hydrothermal reductive amination.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_006",
+          "rxn_004",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_014",
+          "rxn_015",
+          "rxn_005",
+          "rxn_020",
+          "rxn_021"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_006",
+          "mol_010",
+          "mol_015",
+          "mol_018"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "CO route \u2192 malondialdehyde Radziszewski \u2192 \u03b1-keto acid \u2192 transamination \u2192 histidine",
+        "description": "FTT-derived C1+C2 feed the malondialdehyde branch for direct Radziszewski to Im-4-AA. Cyanohydrin route converts to imidazolepyruvate. Transamination with alanine (made via hydrothermal reductive amination of pyruvate) yields histidine + pyruvate.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_016",
+          "rxn_017",
+          "rxn_007",
+          "rxn_008",
+          "rxn_020",
+          "rxn_022"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_015",
+          "mol_018",
+          "mol_020"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Formate route \u2192 3-HPA Radziszewski \u2192 \u03b1-keto acid \u2192 transamination with alanine \u2192 histidine",
+        "description": "Formate-derived formaldehyde feeds the 3-HPA Radziszewski route. Im-4-AA is converted to imidazolepyruvate. Pyruvate (from hydrothermal CO2 fixation) is converted to alanine. Transamination of imidazolepyruvate with alanine yields histidine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_006",
+          "rxn_004",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_014",
+          "rxn_015",
+          "rxn_007",
+          "rxn_008",
+          "rxn_020",
+          "rxn_022"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_010",
+          "mol_015",
+          "mol_018",
+          "mol_020"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Formamide\u2192HCN route + CO FTT \u2192 malondialdehyde Radziszewski \u2192 Strecker \u2192 histidine",
+        "description": "HCN is obtained via the surface formamide route (formate+NH3\u2192formamide\u2192HCN) rather than hydrothermal. FTT provides formaldehyde/acetaldehyde. Malondialdehyde direct Radziszewski gives Im-4-AA. Strecker with formamide-derived HCN completes synthesis.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_012",
+          "rxn_013",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_016",
+          "rxn_017",
+          "rxn_018",
+          "rxn_019"
+        ],
+        "key_intermediates": [
+          "mol_013",
+          "mol_012",
+          "mol_011",
+          "mol_015",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Formamide\u2192HCN route + formate\u2192formaldehyde \u2192 3-HPA Radziszewski \u2192 \u03b1-keto acid \u2192 reductive amination \u2192 histidine",
+        "description": "All carbon fixed via greigite\u2192formate. One branch: formate+NH3\u2192formamide\u2192HCN (surface). Another: formate\u2192formaldehyde\u2192glycolaldehyde\u2192glyoxal + formaldehyde+acetaldehyde\u21923-HPA. Modified Radziszewski\u21924-HE-Im\u2192Im-4-AA. Cyanohydrin with formamide-derived HCN\u2192imidazolepyruvate. Reductive amination at hydrothermal vent.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_006",
+          "rxn_012",
+          "rxn_013",
+          "rxn_004",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_014",
+          "rxn_015",
+          "rxn_020",
+          "rxn_021"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_013",
+          "mol_012",
+          "mol_009",
+          "mol_015",
+          "mol_018"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_006",
+      "mol_009",
+      "mol_010",
+      "mol_015",
+      "mol_018"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_003",
+          "rxn_006"
+        ],
+        "outgoing_reactions": [
+          "rxn_009",
+          "rxn_011",
+          "rxn_014"
+        ]
+      },
+      {
+        "molecule_id": "mol_009",
+        "incoming_reactions": [
+          "rxn_010"
+        ],
+        "outgoing_reactions": [
+          "rxn_014",
+          "rxn_017"
+        ]
+      },
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_011"
+        ],
+        "outgoing_reactions": [
+          "rxn_014",
+          "rxn_016"
+        ]
+      },
+      {
+        "molecule_id": "mol_015",
+        "incoming_reactions": [
+          "rxn_015",
+          "rxn_017"
+        ],
+        "outgoing_reactions": [
+          "rxn_018",
+          "rxn_020"
+        ]
+      },
+      {
+        "molecule_id": "mol_018",
+        "incoming_reactions": [
+          "rxn_020"
+        ],
+        "outgoing_reactions": [
+          "rxn_021",
+          "rxn_022"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "L-Histidine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_002": 0.85,
+          "rxn_003": 0.7,
+          "rxn_004": 0.7,
+          "rxn_009": 0.85,
+          "rxn_010": 0.75,
+          "rxn_011": 0.85,
+          "rxn_005": 0.75,
+          "rxn_014": 0.6,
+          "rxn_015": 0.58,
+          "rxn_018": 0.85,
+          "rxn_019": 0.85
+        },
+        "chemical_feasibility": 0.72,
+        "pathway_coherence": 0.78,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.75,
+        "overall_confidence": 0.76,
+        "feedback": "This pathway is the most fully developed route through the 3-HPA Radziszewski variant. The early hydrothermal steps (RWGS, FTT) and final Strecker steps are well-supported by literature. The critical weaknesses are: (1) rxn_014 (Radziszewski with 3-HPA) \u2014 while classical Radziszewski uses glyoxal + aldehyde + NH3, the regiochemistry of using 3-HPA to selectively produce 4-substituted imidazole is not well-documented prebiotically; (2) rxn_015 (selective UV photooxidation of a primary alcohol to aldehyde without ring damage) is speculative. FTT synthesis of formaldehyde (rxn_003) is also debatable as formaldehyde is highly reactive and not a typical stable FTT product.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_014",
+          "rxn_015",
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Provide literature evidence for the regioselectivity of the modified Radziszewski synthesis with 3-HPA",
+          "Consider alternative oxidation methods for alcohol-to-aldehyde conversion (e.g., mineral-mediated oxidation with MnO2)",
+          "Address formaldehyde stability in hydrothermal settings; consider canalization through formose-active minerals"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_006": 0.65,
+          "rxn_004": 0.7,
+          "rxn_009": 0.85,
+          "rxn_010": 0.75,
+          "rxn_011": 0.85,
+          "rxn_005": 0.75,
+          "rxn_014": 0.6,
+          "rxn_015": 0.58,
+          "rxn_018": 0.85,
+          "rxn_019": 0.85
+        },
+        "chemical_feasibility": 0.7,
+        "pathway_coherence": 0.76,
+        "environmental_progression": 0.84,
+        "target_achievement": 0.74,
+        "overall_confidence": 0.74,
+        "feedback": "Similar to P1 but uses formate as the formaldehyde source. rxn_006 (formate reduction to formaldehyde on magnetite) adds an additional thermodynamic challenge as this reduction is energetically uphill. The same weaknesses in the Radziszewski and photooxidation steps apply.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_006",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Justify the thermodynamics of formate-to-formaldehyde reduction; consider electrochemical driving forces at vent interfaces",
+          "Same Radziszewski improvements as P1"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_002": 0.85,
+          "rxn_003": 0.7,
+          "rxn_004": 0.7,
+          "rxn_009": 0.85,
+          "rxn_010": 0.75,
+          "rxn_011": 0.85,
+          "rxn_016": 0.62,
+          "rxn_005": 0.75,
+          "rxn_017": 0.52,
+          "rxn_018": 0.85,
+          "rxn_019": 0.85
+        },
+        "chemical_feasibility": 0.68,
+        "pathway_coherence": 0.72,
+        "environmental_progression": 0.83,
+        "target_achievement": 0.72,
+        "overall_confidence": 0.72,
+        "feedback": "This pathway uses the direct Radziszewski synthesis with malondialdehyde. rxn_017 is the weakest link: malondialdehyde is unstable and highly reactive, and its controlled Radziszewski reaction with glyoxal to selectively produce imidazole-4-acetaldehyde lacks experimental support. rxn_016 (UV oxidation of 3-HPA to malondialdehyde) is also uncertain \u2014 over-oxidation or side-reactions are likely.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_017",
+          "rxn_016"
+        ],
+        "suggestions": [
+          "Provide mechanistic detail for how malondialdehyde in Radziszewski synthesis gives the correct 4-substituted imidazole product",
+          "Address malondialdehyde instability; consider mineral surface stabilization"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_006": 0.65,
+          "rxn_004": 0.7,
+          "rxn_009": 0.85,
+          "rxn_010": 0.75,
+          "rxn_011": 0.85,
+          "rxn_016": 0.62,
+          "rxn_005": 0.75,
+          "rxn_017": 0.52,
+          "rxn_018": 0.85,
+          "rxn_019": 0.85
+        },
+        "chemical_feasibility": 0.66,
+        "pathway_coherence": 0.7,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.7,
+        "overall_confidence": 0.7,
+        "feedback": "Combines the weaker formate reduction route with the speculative malondialdehyde Radziszewski. Accumulates uncertainties from both rxn_006 and rxn_017.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_006",
+          "rxn_017",
+          "rxn_016"
+        ],
+        "suggestions": [
+          "This pathway has too many uncertain steps; consider simplifying"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_002": 0.85,
+          "rxn_003": 0.7,
+          "rxn_004": 0.7,
+          "rxn_009": 0.85,
+          "rxn_010": 0.75,
+          "rxn_011": 0.85,
+          "rxn_005": 0.75,
+          "rxn_014": 0.6,
+          "rxn_015": 0.58,
+          "rxn_020": 0.52,
+          "rxn_021": 0.72
+        },
+        "chemical_feasibility": 0.65,
+        "pathway_coherence": 0.7,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.68,
+        "overall_confidence": 0.69,
+        "feedback": "This \u03b1-keto acid route via reductive amination has a significant chemical error in rxn_020. Cyanohydrin formation from imidazole-4-acetaldehyde + HCN gives an \u03b1-hydroxynitrile; hydrolysis gives \u03b1-hydroxy acid, NOT an \u03b1-keto acid (imidazolepyruvate). An additional oxidation step is required to convert the hydroxyl to a ketone, which is not shown. Additionally, rxn_021 is labeled as Hydrothermal, which breaks the environmental progression flow.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_020",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Insert an explicit oxidation step between cyanohydrin hydrolysis product (\u03b1-hydroxy acid) and imidazolepyruvate",
+          "Move rxn_021 to Biochemical environment or justify the return to Hydrothermal conditions",
+          "Specify the reducing agent for reductive amination in rxn_021"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_006": 0.65,
+          "rxn_004": 0.7,
+          "rxn_009": 0.85,
+          "rxn_010": 0.75,
+          "rxn_011": 0.85,
+          "rxn_005": 0.75,
+          "rxn_014": 0.6,
+          "rxn_015": 0.58,
+          "rxn_020": 0.52,
+          "rxn_021": 0.72
+        },
+        "chemical_feasibility": 0.63,
+        "pathway_coherence": 0.68,
+        "environmental_progression": 0.76,
+        "target_achievement": 0.66,
+        "overall_confidence": 0.67,
+        "feedback": "Same issues as P5 with the additional weakness of the formate reduction step. The rxn_020 chemical error is a critical flaw in this pathway.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_020",
+          "rxn_006",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Fix the cyanohydrin-to-ketoacid conversion chemistry",
+          "Consider alternative routes to imidazolepyruvate"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_002": 0.85,
+          "rxn_003": 0.7,
+          "rxn_004": 0.7,
+          "rxn_009": 0.85,
+          "rxn_010": 0.75,
+          "rxn_011": 0.85,
+          "rxn_016": 0.62,
+          "rxn_005": 0.75,
+          "rxn_017": 0.52,
+          "rxn_020": 0.52,
+          "rxn_007": 0.7,
+          "rxn_008": 0.8,
+          "rxn_022": 0.7
+        },
+        "chemical_feasibility": 0.62,
+        "pathway_coherence": 0.65,
+        "environmental_progression": 0.75,
+        "target_achievement": 0.65,
+        "overall_confidence": 0.65,
+        "feedback": "This is the longest and most speculative pathway, combining the malondialdehyde Radziszewski route with the problematic cyanohydrin-to-ketoacid step and transamination. While transamination (rxn_022) is biochemically sound, it requires pyridoxal or a similar cofactor prebiotically. The accumulated uncertainties make this pathway the least reliable.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_017",
+          "rxn_020",
+          "rxn_016"
+        ],
+        "suggestions": [
+          "This pathway has too many speculative steps; focus on strengthening the core imidazole formation chemistry first"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_006": 0.65,
+          "rxn_004": 0.7,
+          "rxn_009": 0.85,
+          "rxn_010": 0.75,
+          "rxn_011": 0.85,
+          "rxn_005": 0.75,
+          "rxn_014": 0.6,
+          "rxn_015": 0.58,
+          "rxn_020": 0.52,
+          "rxn_007": 0.7,
+          "rxn_008": 0.8,
+          "rxn_022": 0.7
+        },
+        "chemical_feasibility": 0.63,
+        "pathway_coherence": 0.66,
+        "environmental_progression": 0.76,
+        "target_achievement": 0.66,
+        "overall_confidence": 0.66,
+        "feedback": "Similar to P7 but uses the 3-HPA Radziszewski variant. Still suffers from the rxn_020 error and the speculative Radziszewski steps.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_020",
+          "rxn_014",
+          "rxn_015",
+          "rxn_006"
+        ],
+        "suggestions": [
+          "Fix rxn_020 chemistry; consider whether the transamination route adds value over direct Strecker"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_002": 0.85,
+          "rxn_003": 0.7,
+          "rxn_004": 0.7,
+          "rxn_012": 0.8,
+          "rxn_013": 0.9,
+          "rxn_009": 0.85,
+          "rxn_010": 0.75,
+          "rxn_011": 0.85,
+          "rxn_016": 0.62,
+          "rxn_017": 0.52,
+          "rxn_018": 0.85,
+          "rxn_019": 0.85
+        },
+        "chemical_feasibility": 0.72,
+        "pathway_coherence": 0.74,
+        "environmental_progression": 0.84,
+        "target_achievement": 0.74,
+        "overall_confidence": 0.74,
+        "feedback": "This pathway introduces an alternative HCN source via formamide decomposition (rxn_012, rxn_013), which is well-supported by literature. However, it still relies on the speculative malondialdehyde Radziszewski step (rxn_017). The formamide route to HCN adds robustness and is a good alternative to the direct CO + NH3 route.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_017",
+          "rxn_016"
+        ],
+        "suggestions": [
+          "The formamide-to-HCN route is strong; focus on fixing the imidazole formation step"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_006": 0.65,
+          "rxn_012": 0.8,
+          "rxn_013": 0.9,
+          "rxn_009": 0.85,
+          "rxn_010": 0.75,
+          "rxn_011": 0.85,
+          "rxn_014": 0.6,
+          "rxn_015": 0.58,
+          "rxn_020": 0.52,
+          "rxn_021": 0.72
+        },
+        "chemical_feasibility": 0.64,
+        "pathway_coherence": 0.68,
+        "environmental_progression": 0.76,
+        "target_achievement": 0.66,
+        "overall_confidence": 0.67,
+        "feedback": "Combines the formamide HCN route with the 3-HPA Radziszewski and the problematic \u03b1-keto acid route. The rxn_020 error and rxn_006 weakness significantly undermine this pathway.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_020",
+          "rxn_006",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "suggestions": [
+          "This pathway tries to combine too many alternative elements; streamline and fix core chemistry issues"
+        ]
+      }
+    ],
+    "best_pathway_id": "P1",
+    "overall_confidence": 0.74,
+    "network_feedback": "This is an ambitious and well-structured network for prebiotic histidine synthesis that demonstrates strong strategic thinking. The overall architecture\u2014hydrothermal CO2 reduction feeding surface UV photochemistry and Radziszewski imidazole synthesis, culminating in Strecker amino acid formation\u2014follows a logical environmental progression and aligns with the literature's emphasis on Strecker synthesis from imidazole-4-acetaldehyde (Source 21332). The network has several notable strengths: (1) Multiple convergent pathways providing redundancy; (2) Well-defined hub molecules creating dense interconnections; (3) Good use of established prebiotic reactions (FTT synthesis, formose, Strecker); (4) Appropriate environmental staging with mineral catalysts specified for hydrothermal reactions. However, several critical weaknesses prevent approval: (1) The Radziszewski synthesis variants (rxn_014, rxn_017) lack strong experimental support for producing the correct regioisomer\u2014the standard Radziszewski uses glyoxal + formaldehyde + NH3, and substituting 3-HPA or malondialdehyde to achieve 4-substituted imidazole requires justification; (2) rxn_020 contains a chemical error\u2014cyanohydrin hydrolysis gives an \u03b1-hydroxy acid, not an \u03b1-keto acid, requiring an additional oxidation step; (3) Several UV photooxidation steps (rxn_015, rxn_016) assume selectivity that is unlikely in a prebiotic context; (4) The chirality problem (producing L-histidine specifically) is not addressed; (5) FTT synthesis of formaldehyde (rxn_003) and formate reduction to formaldehyde (rxn_006) face stability/thermodynamic challenges. The network is close to approvable and would benefit from: fixing the cyanohydrin chemistry, providing experimental or mechanistic justification for the Radziszewski regiochemistry, and acknowledging that racemic histidine rather than L-histidine is the realistic product.",
+    "approved": false,
+    "hub_quality": 0.85,
+    "convergence_quality": 0.82
+  },
+  "success": false,
+  "attempts": 3,
+  "notes": null
+}

@@ -1,0 +1,256 @@
+{
+  "target_molecule": "Arginine",
+  "visualization": {
+    "type": "image",
+    "file": "sandbox:/mnt/data/prebiotic_arginine_pathway.png"
+  },
+  "network": {
+    "starting_pool": [
+      "mol_001",
+      "mol_002",
+      "mol_004",
+      "mol_005"
+    ],
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3"
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H"
+      },
+      {
+        "id": "mol_003",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2"
+      },
+      {
+        "id": "mol_004",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3"
+      },
+      {
+        "id": "mol_005",
+        "formula": "CH2N2",
+        "iupac_name": "cyanamide",
+        "common_name": "cyanamide",
+        "inchi": "InChI=1S/CH2N2/c2-1-3/h2H2"
+      },
+      {
+        "id": "mol_006",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvic acid",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C2H2O3",
+        "iupac_name": "2-oxoacetic acid",
+        "common_name": "glyoxylic acid",
+        "inchi": "InChI=1S/C2H2O3/c3-1-2(4)5/h1H,(H,4,5)"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C5H6O6",
+        "iupac_name": "4-hydroxy-2-oxopentanedioic acid",
+        "common_name": "hydroxyketoglutaric acid",
+        "inchi": null
+      },
+      {
+        "id": "mol_009",
+        "formula": "C5H4O5",
+        "iupac_name": "2-oxopent-3-enedioic acid",
+        "common_name": "oxopentenedioic acid",
+        "inchi": null
+      },
+      {
+        "id": "mol_010",
+        "formula": "C5H6O5",
+        "iupac_name": "2-oxopentanedioic acid",
+        "common_name": "alpha-ketoglutaric acid",
+        "inchi": "InChI=1S/C5H6O5/c6-3(5(9)10)1-2-4(7)8/h1-2H2,(H,7,8)(H,9,10)"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C5H9NO4",
+        "iupac_name": "2-aminopentanedioic acid",
+        "common_name": "glutamic acid",
+        "inchi": "InChI=1S/C5H9NO4/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H,7,8)(H,9,10)/t3-/m0/s1"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C5H9NO3",
+        "iupac_name": "5-amino-4-oxopentanoic acid",
+        "common_name": "glutamate-gamma-semialdehyde",
+        "inchi": "InChI=1S/C5H9NO3/c6-3-4(7)1-2-5(8)9/h1-3,6H2,(H,8,9)"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C5H12N2O2",
+        "iupac_name": "2,5-diaminopentanoic acid",
+        "common_name": "ornithine",
+        "inchi": "InChI=1S/C5H12N2O2/c6-3-1-2-4(7)5(8)9/h4H,1-3,6-7H2,(H,8,9)"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C6H14N4O2",
+        "iupac_name": "2-amino-5-(diaminomethylideneamino)pentanoic acid",
+        "common_name": "arginine",
+        "inchi": "InChI=1S/2C6H14N4O2/c2*7-4(5(11)12)2-1-3-10-6(8)9/h2*4H,1-3,7H2,(H,11,12)(H4,8,9,10)"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "inputs": [
+          "mol_001",
+          "mol_001",
+          "mol_001",
+          "mol_002",
+          "mol_002",
+          "mol_002",
+          "mol_002",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_006",
+          "mol_003",
+          "mol_003",
+          "mol_003"
+        ],
+        "name": "Hydrothermal CO2 reduction/carbon-fixation module to pyruvate",
+        "confidence": "plausible_prebiotic_module",
+        "conditions": "reducing environment; Fe/Ni mineral catalysis"
+      },
+      {
+        "id": "rxn_002",
+        "inputs": [
+          "mol_001",
+          "mol_001",
+          "mol_002",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_007",
+          "mol_003"
+        ],
+        "name": "Hydrothermal CO2 reduction/carbon-fixation module to glyoxylate",
+        "confidence": "plausible_prebiotic_module",
+        "conditions": "reducing environment; Fe/Ni mineral catalysis"
+      },
+      {
+        "id": "rxn_003",
+        "inputs": [
+          "mol_006",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "name": "Aldol-type C5 backbone formation",
+        "confidence": "experimentally_supported_module",
+        "conditions": "Fe2+-rich aqueous conditions"
+      },
+      {
+        "id": "rxn_004",
+        "inputs": [
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_009",
+          "mol_003"
+        ],
+        "name": "Dehydration of hydroxyketoglutarate",
+        "confidence": "experimentally_supported_module",
+        "conditions": "aqueous dehydration"
+      },
+      {
+        "id": "rxn_005",
+        "inputs": [
+          "mol_009",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "name": "Reduction to alpha-ketoglutarate",
+        "confidence": "experimentally_supported_module",
+        "conditions": "Fe-mediated reduction"
+      },
+      {
+        "id": "rxn_006",
+        "inputs": [
+          "mol_010",
+          "mol_004",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_011",
+          "mol_003"
+        ],
+        "name": "Reductive amination to glutamate",
+        "confidence": "experimentally_supported_module",
+        "conditions": "ammonia donor; reducing conditions"
+      },
+      {
+        "id": "rxn_007",
+        "inputs": [
+          "mol_011",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_012",
+          "mol_003"
+        ],
+        "name": "Terminal carboxyl reduction to glutamate-gamma-semialdehyde",
+        "confidence": "speculative_prebiotic_step",
+        "conditions": "reductive environment"
+      },
+      {
+        "id": "rxn_008",
+        "inputs": [
+          "mol_012",
+          "mol_004",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_013",
+          "mol_003"
+        ],
+        "name": "Side-chain amination/reduction to ornithine",
+        "confidence": "speculative_prebiotic_step",
+        "conditions": "amination under reducing conditions"
+      },
+      {
+        "id": "rxn_009",
+        "inputs": [
+          "mol_013",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "name": "Guanidination of ornithine to arginine",
+        "confidence": "chemically_plausible_direct_step",
+        "conditions": "cyanamide-mediated guanidination"
+      }
+    ]
+  },
+  "notes": [
+    "This network mixes experimentally supported modules with a reconstructed ornithine-forming segment.",
+    "The strongest support is for pyruvate + glyoxylate -> alpha-ketoglutarate, alpha-ketoglutarate -> glutamate, and ornithine + cyanamide -> arginine.",
+    "The weakest link is the prebiotic conversion of glutamate to ornithine via glutamate-gamma-semialdehyde."
+  ]
+}

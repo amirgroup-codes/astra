@@ -1,0 +1,157 @@
+{
+  "target_molecule": "L-alanine",
+  "network": {
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2"
+      },
+      {
+        "id": "mol_002",
+        "formula": "CH4",
+        "iupac_name": "methane",
+        "common_name": "methane",
+        "inchi": "InChI=1S/CH4/h1H4"
+      },
+      {
+        "id": "mol_003",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3"
+      },
+      {
+        "id": "mol_004",
+        "formula": "N2",
+        "iupac_name": "dinitrogen",
+        "common_name": "nitrogen",
+        "inchi": "InChI=1S/N2/c1-2"
+      },
+      {
+        "id": "mol_005",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3"
+      },
+      {
+        "id": "mol_006",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C2H4O",
+        "iupac_name": "ethanal",
+        "common_name": "acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C2H5N",
+        "iupac_name": "ethanimine",
+        "common_name": "acetaldehyde imine",
+        "inchi": "InChI=1S/C2H5N/c1-2-3/h2-3H,1H3"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C3H6N2",
+        "iupac_name": "2-aminopropanenitrile",
+        "common_name": "alanine aminonitrile",
+        "inchi": "InChI=1S/C3H6N2/c1-3(5)2-4/h3H,5H2,1H3"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C3H7NO2",
+        "iupac_name": "2-aminopropanoic acid",
+        "common_name": "DL-alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C3H7NO2",
+        "iupac_name": "(2S)-2-aminopropanoic acid",
+        "common_name": "L-alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "inputs": [
+          "mol_002",
+          "mol_004",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_006"
+        ]
+      },
+      {
+        "id": "rxn_002",
+        "inputs": [
+          "mol_002",
+          "mol_003",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_007"
+        ]
+      },
+      {
+        "id": "rxn_003",
+        "inputs": [
+          "mol_007",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_008",
+          "mol_001"
+        ]
+      },
+      {
+        "id": "rxn_004",
+        "inputs": [
+          "mol_008",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_009"
+        ]
+      },
+      {
+        "id": "rxn_005",
+        "inputs": [
+          "mol_009",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_010",
+          "mol_005"
+        ]
+      },
+      {
+        "id": "rxn_006",
+        "inputs": [
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_011"
+        ]
+      }
+    ],
+    "pathway_notes": [
+      "This network encodes a prebiotic Strecker-type route to alanine followed by an abstract L-enrichment step.",
+      "rxn_001 and rxn_002 represent plausible prebiotic feedstock-generation steps under UV, lightning, or impact energy.",
+      "rxn_003 is imine formation from acetaldehyde and ammonia.",
+      "rxn_004 is cyanide addition to form alanine aminonitrile.",
+      "rxn_005 is hydrolysis to racemic alanine.",
+      "rxn_006 represents symmetry breaking or enantioenrichment rather than a single universally established reaction."
+    ]
+  }
+}

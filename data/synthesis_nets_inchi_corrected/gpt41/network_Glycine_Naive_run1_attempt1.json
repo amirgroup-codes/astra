@@ -1,0 +1,102 @@
+{
+  "target_molecule": "Glycine",
+  "network": {
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CH4",
+        "iupac_name": "methane",
+        "common_name": "methane",
+        "inchi": "InChI=1S/CH4/h1H4"
+      },
+      {
+        "id": "mol_002",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3"
+      },
+      {
+        "id": "mol_003",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2"
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H"
+      },
+      {
+        "id": "mol_005",
+        "formula": "H2CO",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2"
+      },
+      {
+        "id": "mol_006",
+        "formula": "NH2CH2CN",
+        "iupac_name": "2-aminoacetonitrile",
+        "common_name": "aminoacetonitrile",
+        "inchi": "InChI=1S/C2H4N2/c3-1-2-4/h1,3H2"
+      },
+      {
+        "id": "mol_007",
+        "formula": "NH2CH2COOH",
+        "iupac_name": "2-aminoacetic acid",
+        "common_name": "glycine",
+        "inchi": "InChI=1S/C2H5NO2/c3-1-2(4)5/h1,3H2,(H,4,5)"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "inputs": [
+          "mol_001",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_005"
+        ]
+      },
+      {
+        "id": "rxn_002",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_004"
+        ]
+      },
+      {
+        "id": "rxn_003",
+        "inputs": [
+          "mol_005",
+          "mol_004",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_006",
+          "mol_003"
+        ]
+      },
+      {
+        "id": "rxn_004",
+        "inputs": [
+          "mol_006",
+          "mol_003",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_007",
+          "mol_002"
+        ]
+      }
+    ]
+  }
+}

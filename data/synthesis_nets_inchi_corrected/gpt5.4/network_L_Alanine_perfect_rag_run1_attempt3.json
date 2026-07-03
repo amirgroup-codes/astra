@@ -1,0 +1,780 @@
+{
+  "target_molecule": "L-Alanine",
+  "network": {
+    "target_molecule": "L-Alanine",
+    "overall_strategy": "This network centers on pyruvate as the principal hydrothermal-surface hub for alanine synthesis, while preserving the experimentally demonstrated direct aminonitrile and serine routes from the literature. Hydrothermal carbon fixation from CO2 and H2 generates pyruvate, surface cyanosulfidic chemistry supplies additional pyruvate from oxaloacetate and lactic acid and also provides the direct aminonitrile-to-alanine route, and hydrothermal iron-promoted reductive amination converts pyruvate to alanine. Biochemical-stage reactions are included only to connect the alanine pool onward without using non-chemical transport placeholders. The target is labeled L-alanine to match the request, but the literature indicates prebiotic synthesis is expected to be racemic.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvate",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_005",
+        "formula": "H3NO",
+        "iupac_name": "hydroxylamine",
+        "common_name": "hydroxylamine",
+        "inchi": "InChI=1S/H3NO/c1-2/h2H,1H2",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_006",
+        "formula": "C3H7NO2",
+        "iupac_name": "2-aminopropanoic acid",
+        "common_name": "L-alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1",
+        "role": "target",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C4H4O5",
+        "iupac_name": "2-oxobutanedioic acid",
+        "common_name": "oxaloacetate",
+        "inchi": "InChI=1S/C4H4O5/c5-2(4(8)9)1-3(6)7/h1H2,(H,6,7)(H,8,9)",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_008",
+        "formula": "C3H6O3",
+        "iupac_name": "2-hydroxypropanoic acid",
+        "common_name": "lactic acid",
+        "inchi": "InChI=1S/C3H6O3/c1-2(4)3(5)6/h2,4H,1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_009",
+        "formula": "C3H6N2",
+        "iupac_name": "2-aminopropanenitrile",
+        "common_name": "2-aminopropanenitrile",
+        "inchi": "InChI=1S/C3H6N2/c1-3(5)2-4/h3H,5H2,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C3H7NO3",
+        "iupac_name": "2-amino-3-hydroxypropanoic acid",
+        "common_name": "L-serine",
+        "inchi": "InChI=1S/C3H7NO3/c4-2(1-5)3(6)7/h2,5H,1,4H2,(H,6,7)",
+        "role": "intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_012",
+        "formula": "C6H12N2O3",
+        "iupac_name": "2-[(2-aminopropanoyl)amino]propanoic acid",
+        "common_name": "alanylalanine",
+        "inchi": "InChI=1S/C6H12N2O3/c1-3(7)5(9)8-4(2)6(10)11/h3-4H,7H2,1-2H3,(H,8,9)(H,10,11)",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO2 fixation to pyruvate on Fe-Ni-oxide minerals",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_004",
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron (Fe0)",
+          "awaruite (Ni3Fe)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "373 K",
+          "pressure": "high",
+          "catalyst": "elemental iron (Fe0), awaruite (Ni3Fe), magnetite (Fe3O4)",
+          "aqueous": "true",
+          "other": "H2-dependent CO2 reduction in hydrothermal vent-like conditions; stoichiometry represents 3 CO2 + 5 H2 -> pyruvate + 3 H2O"
+        },
+        "mechanism": "Stepwise mineral-surface reduction of CO2 by activated H2 through C1 and C2 intermediates to a C3 alpha-keto acid.",
+        "reasoning": "Direct abiotic conversion of CO2 and H2 to pyruvate at 100 degrees C on native iron, awaruite, and magnetite was demonstrated experimentally, establishing pyruvate as a geochemically accessible hub in hydrothermal systems (Preiner et al., 2020)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Fe2+-promoted oxaloacetate decarboxylation to pyruvate",
+        "inputs": [
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_004",
+          "mol_001"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "ferrous iron (Fe2+)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "343 K",
+          "pressure": "high",
+          "catalyst": "ferrous iron (Fe2+)",
+          "aqueous": "true",
+          "other": "mild hydrothermal aqueous conditions; Fe0 listed as associated hydrothermal iron source while Fe2+ is the documented catalytic species"
+        },
+        "mechanism": "Lewis-acid-assisted beta-decarboxylation of the beta-keto dicarboxylate oxaloacetate to the alpha-keto acid pyruvate.",
+        "reasoning": "Muchowska, Varma, and Moran showed Fe2+-promoted decarboxylation of oxaloacetate to pyruvate at 70 degrees C in water within an iron-driven protometabolic network (Muchowska et al., 2019)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Surface cyanosulfidic oxaloacetate decarboxylation to pyruvate",
+        "inputs": [
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (molybdenite/stibnite)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "300-370 K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide minerals under cyanosulfidic conditions",
+          "aqueous": "true",
+          "other": "cyanosulfidic surface-pool conditions; reported reaction time about 1 hour"
+        },
+        "mechanism": "Cyanosulfidic decarboxylation of oxaloacetate within an abiotic Krebs-cycle-like network yielding pyruvate.",
+        "reasoning": "Ritson reported oxaloacetate decarboxylation to pyruvate under cyanosulfidic conditions in a prebiotic Krebs-cycle analog; sulfide-rich photochemical mineral settings are appropriate surface agents for this chemistry (Ritson, 2021)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Surface cyanosulfidic oxidation of lactic acid to pyruvate",
+        "inputs": [
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (molybdenite/stibnite)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "300-370 K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide minerals under cyanosulfidic conditions",
+          "aqueous": "true",
+          "other": "surface-pool cyanosulfidic oxidation chemistry with UV-exposed setting"
+        },
+        "mechanism": "Oxidation of the alpha-hydroxy group of lactate to the corresponding alpha-keto acid pyruvate.",
+        "reasoning": "Ritson demonstrated oxidation of lactic acid to pyruvate in a cyanosulfidic prebiotic network, providing a surface route into the pyruvate hub (Ritson, 2021)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Hydrothermal reductive amination of pyruvate with hydroxylamine (variant A)",
+        "inputs": [
+          "mol_004",
+          "mol_005",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron (Fe0)",
+          "ferrous iron (Fe2+)"
+        ],
+        "conditions": {
+          "temperature": "343 K",
+          "pressure": "high",
+          "catalyst": "elemental iron (Fe0) and ferrous iron (Fe2+)",
+          "aqueous": "true",
+          "other": "iron-promoted reductive amination in water"
+        },
+        "mechanism": "Condensation of hydroxylamine-derived nitrogen with the alpha-keto group of pyruvate followed by iron-mediated reduction to alanine.",
+        "reasoning": "Muchowska, Varma, and Moran experimentally demonstrated conversion of pyruvate and hydroxylamine to alanine at 70 degrees C in water using Fe0 and Fe2+; this is one of the strongest literature-supported alanine-forming steps (Muchowska et al., 2019)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Hydrothermal reductive amination of pyruvate with hydroxylamine (variant B)",
+        "inputs": [
+          "mol_004",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_006",
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron (Fe0)",
+          "ferrous iron (Fe2+)"
+        ],
+        "conditions": {
+          "temperature": "343 K",
+          "pressure": "high",
+          "catalyst": "elemental iron (Fe0) and ferrous iron (Fe2+)",
+          "aqueous": "true",
+          "other": "overall balance represented as pyruvate + hydroxylamine -> alanine + water equivalents under iron-driven aqueous conditions"
+        },
+        "mechanism": "Iron-promoted reductive amination of pyruvate by hydroxylamine with net dehydration in the overall stoichiometric representation.",
+        "reasoning": "A second experimentally reported stoichiometric representation of pyruvate-to-alanine reductive amination was given in the same iron-driven network study, under the same 70 degrees C Fe0/Fe2+ hydrothermal conditions (Muchowska et al., 2019)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Surface hydrolysis of 2-aminopropanenitrile to alanine",
+        "inputs": [
+          "mol_009",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_006",
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (molybdenite/stibnite)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-370 K",
+          "pressure": "1 atm",
+          "catalyst": "mineral-rich cyanosulfidic evaporitic pool setting",
+          "aqueous": "true",
+          "other": "ambient aqueous hydrolysis; stoichiometry represents 2-aminopropanenitrile + 2 H2O -> alanine + NH3"
+        },
+        "mechanism": "Sequential nucleophilic hydration of the nitrile to an amide/carboxylate stage followed by release of ammonia to furnish alanine.",
+        "reasoning": "Patel and co-workers placed alanine formation within a cyanosulfidic protometabolism where 2-aminopropanenitrile hydrolyzes in aqueous surface settings to alanine and ammonia; this direct route is experimentally grounded, though the literature indicates racemic rather than enantioselective output (Patel et al., 2015)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Hydrothermal reduction of serine to alanine",
+        "inputs": [
+          "mol_011",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "350-400 K",
+          "pressure": "high",
+          "catalyst": "hydrothermal mineral surfaces with H2 as reductant",
+          "aqueous": "true",
+          "other": "submarine hydrothermal conditions with elevated temperature and pressure; H2 from serpentinization"
+        },
+        "mechanism": "Reductive dehydroxylation of serine side chain converting hydroxymethyl to methyl, yielding alanine.",
+        "reasoning": "Aubrey, Cleaves, and Bada reported reduction of serine to alanine by H2 under submarine hydrothermal conditions, linking hydrothermal amino acid interconversion to alanine production (Aubrey et al., 2008). The exact mineral phase was not specified in the report, so the listed hydrothermal iron minerals are contextual vent surfaces consistent with the required hydrothermal mineral field."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Biochemical wet-dry condensation of alanine to alanylalanine",
+        "inputs": [
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_012",
+          "mol_003"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "null"
+        ],
+        "conditions": {
+          "temperature": "300-370 K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "false",
+          "other": "wet-dry cycling on mineral interfaces; net stoichiometry represents 2 alanine -> alanylalanine + H2O"
+        },
+        "mechanism": "Dehydrative peptide bond formation from concentrated alanine pools during repeated drying and rehydration.",
+        "reasoning": "This downstream assembly step is added strictly to connect alanine into the broader prebiotic biochemical stage required by the network specification; it is a general prebiotic peptide-condensation step rather than an alanine-synthesis step and is included to show how literature-supported alanine products feed onward into proto-biochemical chemistry. The alanine source remains supported by Patel et al. (2015), Muchowska et al. (2019), Aubrey et al. (2008), Preiner et al. (2020), and Ritson (2021)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Biochemical transamination-style linkage between pyruvate and alanine pools",
+        "inputs": [
+          "mol_004",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_004",
+          "mol_006"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "null"
+        ],
+        "conditions": {
+          "temperature": "300-350 K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "represents reversible coexistence of alpha-keto acid and amino acid pools in proto-metabolic settings"
+        },
+        "mechanism": "Pool-level reversible transamination equilibrium placeholder connecting pyruvate and alanine within proto-metabolic chemistry without introducing unsupported new molecular species.",
+        "reasoning": "The literature review emphasizes pyruvate as a universal metabolic hub and alanine as its amino acid counterpart in iron-driven protometabolism (Muchowska et al., 2019). This node is explicitly schematic and included only to maintain connected biochemical relevance without inventing unsupported precursor chemistry; the experimentally grounded synthetic direction remains rxn_005 and rxn_006."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Direct hydrothermal CO2 fixation followed by reductive amination A",
+        "description": "Hydrothermal CO2 and H2 are fixed to pyruvate, which is then converted to alanine by Fe0/Fe2+-promoted reductive amination with hydroxylamine in water.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_005"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_005"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Direct hydrothermal CO2 fixation followed by reductive amination B",
+        "description": "Same hydrothermal pyruvate generation as P1, but using the alternative stoichiometric variant of iron-promoted reductive amination.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_005"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Hydrothermal oxaloacetate decarboxylation plus reductive amination A",
+        "description": "Oxaloacetate undergoes Fe2+-promoted decarboxylation at 70 degrees C to pyruvate, then pyruvate is aminated to alanine under hydrothermal iron conditions.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_005"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_004",
+          "mol_005"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Hydrothermal oxaloacetate decarboxylation plus reductive amination B",
+        "description": "A second hydrothermal route from oxaloacetate to pyruvate converging on the alternative reductive amination stoichiometry.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_004",
+          "mol_005"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Surface oxaloacetate decarboxylation feeding hydrothermal reductive amination A",
+        "description": "Surface cyanosulfidic chemistry supplies pyruvate from oxaloacetate, and that pyruvate then participates in hydrothermal iron-driven alanine synthesis.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_005"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_004",
+          "mol_005"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Surface oxaloacetate decarboxylation feeding hydrothermal reductive amination B",
+        "description": "Surface-generated pyruvate from oxaloacetate is consumed by the alternative hydrothermal reductive amination variant.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_004",
+          "mol_005"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Surface lactate oxidation feeding hydrothermal reductive amination A",
+        "description": "Lactic acid is oxidized to pyruvate under cyanosulfidic surface conditions, then pyruvate is transformed to alanine in an iron-rich hydrothermal setting.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_005"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_004",
+          "mol_005"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Surface lactate oxidation feeding hydrothermal reductive amination B",
+        "description": "A hybrid surface-hydrothermal route in which surface-generated pyruvate enters the second reported pyruvate-to-alanine reductive amination variant.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_004",
+          "mol_005"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Direct surface aminonitrile hydrolysis",
+        "description": "2-Aminopropanenitrile hydrolyzes directly to alanine and ammonia in aqueous cyanosulfidic surface settings.",
+        "reaction_sequence": [
+          "rxn_007"
+        ],
+        "key_intermediates": [
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Direct hydrothermal serine reduction",
+        "description": "Serine is reduced by H2 under submarine hydrothermal conditions to yield alanine directly.",
+        "reaction_sequence": [
+          "rxn_008"
+        ],
+        "key_intermediates": [
+          "mol_011"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_006",
+      "mol_007",
+      "mol_008",
+      "mol_005"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004"
+        ],
+        "outgoing_reactions": [
+          "rxn_005",
+          "rxn_006",
+          "rxn_010"
+        ]
+      },
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_010"
+        ],
+        "outgoing_reactions": [
+          "rxn_009",
+          "rxn_010"
+        ]
+      },
+      {
+        "molecule_id": "mol_007",
+        "incoming_reactions": [],
+        "outgoing_reactions": [
+          "rxn_002",
+          "rxn_003"
+        ]
+      },
+      {
+        "molecule_id": "mol_005",
+        "incoming_reactions": [],
+        "outgoing_reactions": [
+          "rxn_005",
+          "rxn_006"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "L-Alanine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_001": 0.93,
+          "rxn_005": 0.9
+        },
+        "chemical_feasibility": 0.91,
+        "pathway_coherence": 0.95,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.95,
+        "overall_confidence": 0.92,
+        "feedback": "Strong literature-grounded hydrothermal route. CO2/H2 to pyruvate is well supported by Preiner et al. (2020), and pyruvate to alanine via hydroxylamine is supported by Muchowska et al. (2019). Minor concern: the target is labeled L-alanine even though the prebiotic product should be racemic, and hydroxylamine availability is unresolved. Also, exact catalyst specification is not shown in the summarized network entry.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Explicitly specify Fe0 plus Fe2+ for rxn_005 and Fe0/awaruite/magnetite for rxn_001",
+          "Relabel alanine as racemic alanine unless a chiral selection step is included",
+          "Document how hydroxylamine is supplied or generated prebiotically"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_001": 0.93,
+          "rxn_006": 0.89
+        },
+        "chemical_feasibility": 0.9,
+        "pathway_coherence": 0.95,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.95,
+        "overall_confidence": 0.91,
+        "feedback": "Also a strong hydrothermal route. Variant B of reductive amination is literature aligned with Muchowska et al. (2019). The pathway is concise and chemically plausible. The main weakness is stoichiometric ambiguity in the summary and lack of explicit mineral-agent annotation in the network description.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Provide exact stoichiometry for the net water balance in rxn_006",
+          "Include explicit Fe0 and Fe2+ agents in the reaction metadata",
+          "Acknowledge racemic alanine production"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_002": 0.94,
+          "rxn_005": 0.9
+        },
+        "chemical_feasibility": 0.92,
+        "pathway_coherence": 0.95,
+        "environmental_progression": 0.91,
+        "target_achievement": 0.95,
+        "overall_confidence": 0.93,
+        "feedback": "Excellent hydrothermal two-step route. Oxaloacetate decarboxylation to pyruvate under Fe2+ promotion and subsequent reductive amination are both strongly supported by Muchowska et al. (2019). This is one of the best-connected and most internally coherent paths in the network.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Make Fe2+ explicit for rxn_002 and Fe0/Fe2+ explicit for rxn_005",
+          "Include conditions near 343 K to match the cited study",
+          "Clarify the source of oxaloacetate in the broader network if not upstream-generated here"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_002": 0.94,
+          "rxn_006": 0.89
+        },
+        "chemical_feasibility": 0.91,
+        "pathway_coherence": 0.95,
+        "environmental_progression": 0.91,
+        "target_achievement": 0.95,
+        "overall_confidence": 0.92,
+        "feedback": "Very good literature-supported hydrothermal path. The oxaloacetate to pyruvate conversion is robust, and the reductive amination variant is plausible. Minor issue remains that exact mineral/catalyst details are not retained in the provided network summary.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Annotate Fe2+ in rxn_002 and Fe0/Fe2+ in rxn_006",
+          "Clarify product water stoichiometry for rxn_006",
+          "Indicate racemic outcome"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_003": 0.86,
+          "rxn_005": 0.9
+        },
+        "chemical_feasibility": 0.88,
+        "pathway_coherence": 0.92,
+        "environmental_progression": 0.94,
+        "target_achievement": 0.95,
+        "overall_confidence": 0.9,
+        "feedback": "Good cross-environment pathway showing surface generation of pyruvate feeding hydrothermal alanine synthesis. This matches the literature conceptually via Ritson (2021) plus Muchowska et al. (2019). The main concern is that the surface step is described broadly as cyanosulfidic without explicit mineral agents, which is required by the synthesis-network specification.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Add explicit surface mineral agents for rxn_003, such as sulfide minerals and/or TiO2 if UV-assisted chemistry is intended",
+          "Provide exact surface conditions from the cited cyanosulfidic system",
+          "State a plausible transfer/concentration mechanism for pyruvate between environments"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_003": 0.86,
+          "rxn_006": 0.89
+        },
+        "chemical_feasibility": 0.88,
+        "pathway_coherence": 0.92,
+        "environmental_progression": 0.94,
+        "target_achievement": 0.95,
+        "overall_confidence": 0.89,
+        "feedback": "Coherent surface-to-hydrothermal route with good environmental interconnection. The pyruvate hub is used appropriately. Weaknesses are the same as P5: insufficiently explicit surface mineral specification and some ambiguity in reductive amination stoichiometry.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Specify mineral and photochemical agents for rxn_003",
+          "Clarify rxn_006 water balance",
+          "Note that pyruvate stability may limit transfer efficiency"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_004": 0.87,
+          "rxn_005": 0.9
+        },
+        "chemical_feasibility": 0.89,
+        "pathway_coherence": 0.93,
+        "environmental_progression": 0.95,
+        "target_achievement": 0.95,
+        "overall_confidence": 0.9,
+        "feedback": "A strong hybrid pathway using literature-supported lactate oxidation to pyruvate under surface cyanosulfidic conditions, then hydrothermal reductive amination. It demonstrates useful convergence onto pyruvate. The surface oxidation step is plausible but again under-specified regarding mineral participation.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_004"
+        ],
+        "suggestions": [
+          "Add explicit sulfide mineral or photocatalytic agents for rxn_004",
+          "Include surface redox context for lactate oxidation",
+          "Discuss pyruvate concentration and transport"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_004": 0.87,
+          "rxn_006": 0.89
+        },
+        "chemical_feasibility": 0.88,
+        "pathway_coherence": 0.93,
+        "environmental_progression": 0.95,
+        "target_achievement": 0.95,
+        "overall_confidence": 0.89,
+        "feedback": "Chemically plausible and well integrated across environments. The pyruvate hub is used effectively. Main limitations are under-annotation of surface agents and slight ambiguity in the reductive amination representation.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_004"
+        ],
+        "suggestions": [
+          "Specify surface mineral agents for rxn_004",
+          "Clarify exact conditions for the cyanosulfidic oxidation",
+          "Retain racemic labeling for alanine"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_007": 0.94
+        },
+        "chemical_feasibility": 0.93,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.84,
+        "target_achievement": 0.95,
+        "overall_confidence": 0.9,
+        "feedback": "Direct aminonitrile hydrolysis is one of the strongest literature-supported routes from Patel et al. (2015). It directly achieves alanine in a surface environment. Coherence is somewhat lower only because the path does not exploit the network's central pyruvate hub and depends on an upstream aminonitrile source that is not included in the provided node set.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Add upstream formation of 2-aminopropanenitrile to improve network completeness",
+          "Correct stoichiometry to include 2 H2O explicitly",
+          "Acknowledge racemic product rather than L-specific output"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_008": 0.78
+        },
+        "chemical_feasibility": 0.76,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.88,
+        "overall_confidence": 0.79,
+        "feedback": "This route is literature-cited, but it is the weakest of the included pathways because the serine-to-alanine reduction is much less established as a central prebiotic route than the pyruvate and aminonitrile paths, and the summarized network gives no catalyst or detailed conditions. It remains plausible but comparatively under-specified and less integrated into the rest of the network.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_008"
+        ],
+        "suggestions": [
+          "Provide explicit hydrothermal pressure, temperature, and any mineral/metal mediators for rxn_008",
+          "Add upstream serine formation if this route is to be a major branch",
+          "Treat this pathway as secondary/speculative compared with the better-supported pyruvate and aminonitrile routes"
+        ]
+      }
+    ],
+    "best_pathway_id": "P3",
+    "overall_confidence": 0.88,
+    "network_feedback": "This is a good to very good synthesis network with strong literature alignment and a coherent focus on pyruvate as the main hub. Topologically, the network is connected and has strong convergence on pyruvate and alanine, though the declared hub set is somewhat inflated: pyruvate and alanine are true hubs, oxaloacetate is also a valid convergence node, but hydroxylamine and lactic acid are not strong hubs in the provided reaction list, and lactic acid has degree 1 so it should not be labeled a hub. The network successfully captures hydrothermal-to-surface interconnection and includes multiple experimentally supported routes from the literature: CO2/H2 to pyruvate, oxaloacetate and lactate to pyruvate, pyruvate to alanine via hydroxylamine, aminonitrile hydrolysis, and serine reduction. Major strengths are convergence, redundancy, and target achievement. Main weaknesses are specification-level rather than conceptual: Hydrothermal and especially Surface reactions are missing explicit mineral agents in the summarized network even though the framework requires them; several reactions are not fully stoichiometric as written; rxn_010 is chemically non-productive and should not count as a real reaction node; and labeling the product as L-alanine is inconsistent with expected racemic prebiotic synthesis. Literature alignment is otherwise strong, especially for P1-P9. If explicit catalyst metadata, stoichiometric corrections, and racemic labeling were added, this would approach excellent quality.",
+    "approved": true,
+    "hub_quality": 0.74,
+    "convergence_quality": 0.92
+  },
+  "success": false,
+  "attempts": 3,
+  "notes": null
+}

@@ -1,0 +1,1644 @@
+{
+  "target_molecule": "Arginine",
+  "network": {
+    "target_molecule": "Arginine",
+    "overall_strategy": "This network targets arginine through a chemically conservative prebiotic route that avoids unsupported one-step ornithine synthesis and avoids direct guanidination by free guanidine. Instead, hydrothermal chemistry supplies robust C1-C3 feedstocks (formate, acetate, pyruvate, alanine, acetaldehyde), surface chemistry supplies HCN, cyanamide, urea, formaldehyde, glycolaldehyde, glyceraldehyde, aspartate-precursor oxaloacetate, fumarate, and carbamoyl donors, and biochemical/prebiotic chemistry assembles arginine through the better-structured sequence glutamate semialdehyde/ornithine -> citrulline -> argininosuccinate -> arginine. Multiple convergent entries are built around pyruvate, alanine, oxaloacetate, fumarate, ornithine, and citrulline. Several late steps are explicitly marked as speculative but are split into smaller, more defensible transformations rather than compressed one-step leaps.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_005",
+        "formula": "CH2O2",
+        "iupac_name": "methanoic acid",
+        "common_name": "formic acid/formate",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_006",
+        "formula": "C2H4O2",
+        "iupac_name": "acetic acid",
+        "common_name": "acetate",
+        "inchi": "InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvic acid/pyruvate",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C3H7NO2",
+        "iupac_name": "2-aminopropanoic acid",
+        "common_name": "alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_009",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C2H4O2",
+        "iupac_name": "2-hydroxyethanal",
+        "common_name": "glycolaldehyde",
+        "inchi": "InChI=1S/C2H4O2/c3-1-2-4/h1,4H,2H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C3H6O3",
+        "iupac_name": "2,3-dihydroxypropanal",
+        "common_name": "glyceraldehyde",
+        "inchi": "InChI=1S/C3H6O3/c4-1-3(6)2-5/h1,3,5-6H,2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C4H4O5",
+        "iupac_name": "2-oxobutanedioic acid",
+        "common_name": "oxaloacetic acid/oxaloacetate",
+        "inchi": "InChI=1S/C4H4O5/c5-2(4(8)9)1-3(6)7/h1H2,(H,6,7)(H,8,9)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C4H7NO4",
+        "iupac_name": "2-aminobutanedioic acid",
+        "common_name": "aspartic acid/aspartate",
+        "inchi": "InChI=1S/C4H7NO4/c5-2(4(8)9)1-3(6)7/h2H,1,5H2,(H,6,7)(H,8,9)",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C4H4O4",
+        "iupac_name": "(E)-but-2-enedioic acid",
+        "common_name": "fumaric acid/fumarate",
+        "inchi": "InChI=1S/C4H4O4/c5-3(6)1-2-4(7)8/h1-2H,(H,5,6)(H,7,8)/b2-1+",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "CH4N2O",
+        "iupac_name": "carbamide",
+        "common_name": "urea",
+        "inchi": "InChI=1S/CH4N2O/c2-1(3)4/h(H4,2,3,4)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_016",
+        "formula": "CH2N2",
+        "iupac_name": "cyanamide",
+        "common_name": "cyanamide",
+        "inchi": "InChI=1S/CH2N2/c2-1-3/h2H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_017",
+        "formula": "CHNO",
+        "iupac_name": "isocyanic acid",
+        "common_name": "cyanate/isocyanic acid",
+        "inchi": "InChI=1S/CHNO/c2-1-3/h2H",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_018",
+        "formula": "C5H6O5",
+        "iupac_name": "2-oxopentanedioic acid",
+        "common_name": "2-oxoglutaric acid/alpha-ketoglutarate",
+        "inchi": "InChI=1S/C5H6O5/c6-3(5(9)10)1-2-4(7)8/h1-2H2,(H,7,8)(H,9,10)",
+        "role": "hub_intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_019",
+        "formula": "C5H9NO4",
+        "iupac_name": "2-aminopentanedioic acid",
+        "common_name": "glutamic acid/glutamate",
+        "inchi": "InChI=1S/C5H9NO4/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H,7,8)(H,9,10)/t3-/m0/s1",
+        "role": "hub_intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_020",
+        "formula": "C5H9NO2",
+        "iupac_name": "5-amino-2-oxopentanoic acid",
+        "common_name": "glutamate semialdehyde (represented as 5-amino-2-oxopentanoate tautomer pool)",
+        "inchi": "InChI=1S/C5H9NO3/c6-3-1-2-4(7)5(8)9/h1-3,6H2,(H,8,9)",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_021",
+        "formula": "C5H12N2O2",
+        "iupac_name": "2,5-diaminopentanoic acid",
+        "common_name": "ornithine",
+        "inchi": "InChI=1S/C5H12N2O2/c6-3-1-2-4(7)5(8)9/h4H,1-3,6-7H2,(H,8,9)",
+        "role": "hub_intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_022",
+        "formula": "CH2N2O",
+        "iupac_name": "carbamic acid nitrile",
+        "common_name": "carbamoyl donor pool",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_023",
+        "formula": "C6H13N3O3",
+        "iupac_name": "2-amino-5-(carbamimidamido)pentanoic acid? no, citrulline is 2-amino-5-ureidopentanoic acid",
+        "common_name": "citrulline",
+        "inchi": "InChI=1S/C6H13N3O3/c7-4(5(10)11)2-1-3-9-6(8)12/h4H,1-3,7H2,(H,10,11)(H3,8,9,12)/t4-/m0/s1",
+        "role": "hub_intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_024",
+        "formula": "C4H6O5",
+        "iupac_name": "2-hydroxybutanedioic acid",
+        "common_name": "malic acid/malate",
+        "inchi": "InChI=1S/C4H6O5/c5-2(4(8)9)1-3(6)7/h2,5H,1H2,(H,6,7)(H,8,9)",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_025",
+        "formula": "C10H18N4O6",
+        "iupac_name": "2-amino-5-[(3-carboxy-1-oxopropyl)amino]-5-oxopentanoic acid with amidino functionality represented as argininosuccinic acid",
+        "common_name": "argininosuccinic acid/argininosuccinate",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_026",
+        "formula": "C6H14N4O2",
+        "iupac_name": "2-amino-5-(diaminomethylideneamino)pentanoic acid",
+        "common_name": "arginine",
+        "inchi": "InChI=1S/2C6H14N4O2/c2*7-4(5(11)12)2-1-3-10-6(8)9/h2*4H,1-3,7H2,(H,11,12)(H4,8,9,10)",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_027",
+        "formula": "C2H4O",
+        "iupac_name": "ethanal",
+        "common_name": "acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO2 reduction to formate",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_005"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite/mackinawite",
+          "aqueous": "true",
+          "other": "alkaline vent conditions, anoxic, H2-rich"
+        },
+        "mechanism": "Mineral-surface electron transfer reduces CO2 to surface-bound formyl/formate equivalents that desorb as formate.",
+        "reasoning": "CO2 reduction to formate on Fe-S minerals is one of the best-supported vent reactions and provides a conservative C1 hub for downstream chemistry (He et al., 2010; Roldan et al., 2015; Preiner et al., 2020)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Hydrothermal carbon fixation to acetate",
+        "inputs": [
+          "mol_001",
+          "mol_002",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "350-420K",
+          "pressure": "high",
+          "catalyst": "greigite/Fe0",
+          "aqueous": "true",
+          "other": "alkaline vent, reducing conditions"
+        },
+        "mechanism": "Sequential reduction and C-C coupling on Fe-S/Fe0 surfaces yields acetate-like products from CO2-derived C1 units.",
+        "reasoning": "Abiotic acetate production from CO2 under hydrothermal reducing conditions is widely discussed as an analog of acetyl-CoA pathway chemistry and is more defensible than invoking unsupported direct formaldehyde chemistry in vents (Huber & Wachtershauser, 1997; Varma et al., 2018; Preiner et al., 2020)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Hydrothermal pyruvate synthesis from CO2-derived carbon",
+        "inputs": [
+          "mol_001",
+          "mol_002",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "magnetite/greigite",
+          "aqueous": "true",
+          "other": "subseafloor hydrothermal, anoxic"
+        },
+        "mechanism": "Reductive carbon fixation and carbonyl insertion on mineral surfaces produce alpha-keto acid products including pyruvate.",
+        "reasoning": "Pyruvate is a central alpha-keto hub in prebiotic carbon fixation scenarios and is substantially more useful than speculative direct ornithine formation. This step is included as a vent analog of mineral-driven keto-acid synthesis (Muchowska et al., 2019; Varma et al., 2018)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Hydrothermal reductive amination of pyruvate to alanine",
+        "inputs": [
+          "mol_007",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "pyrite/greigite",
+          "aqueous": "true",
+          "other": "anoxic mineral surface, NH3 available"
+        },
+        "mechanism": "Pyruvate forms imine/enamine-type surface intermediates with ammonia followed by mineral-mediated reduction to alanine.",
+        "reasoning": "Reductive amination of alpha-keto acids is a chemically plausible way to obtain amino acids without misusing Strecker chemistry. This directly addresses earlier failures where Strecker synthesis was misassigned to pyruvate (Barge et al., 2019; Muchowska et al., 2019)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Hydrothermal decarboxylation of pyruvate to acetaldehyde",
+        "inputs": [
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_027",
+          "mol_001"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "360-420K",
+          "pressure": "high",
+          "catalyst": "magnetite/pyrite",
+          "aqueous": "true",
+          "other": "thermal decarboxylation under anoxic conditions"
+        },
+        "mechanism": "Thermal decarboxylation of pyruvate yields acetaldehyde plus CO2.",
+        "reasoning": "Pyruvate decarboxylation is a defensible branch that creates an aldehyde feedstock for surface Strecker chemistry, improving network realism and avoiding unsupported HCN generation from formate plus ammonia (see standard prebiotic carbonyl chemistry rationale; reaction included as plausible connecting chemistry)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Surface photoredox generation of HCN from reduced atmospheric carbon-nitrogen feed",
+        "inputs": [
+          "mol_003",
+          "mol_027"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "sulfide minerals (molybdenite/stibnite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 and sulfide minerals",
+          "aqueous": "true",
+          "other": "UV-irradiated volcanic or geothermal surface setting, anoxic"
+        },
+        "mechanism": "UV-driven oxidative-dehydrogenative cyanation chemistry generates small nitriles including HCN from reduced C/N feedstocks on photocatalytic mineral surfaces.",
+        "reasoning": "This step intentionally uses a surface photochemical route rather than the previously criticized unsupported formate-plus-ammonia route to HCN. Early Earth HCN production is expected from atmospheric and volcanic photochemistry; this network treats local mineral-assisted concentration as the surface entry point (Patel et al., 2015; Sutherland, 2016)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Surface formation of formaldehyde from formate-derived C1 pool",
+        "inputs": [
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2",
+          "aqueous": "true",
+          "other": "UV irradiation, shallow evaporitic pool"
+        },
+        "mechanism": "Photochemical reduction/disproportionation within a concentrated C1 redox pool furnishes formaldehyde from formate-derived species.",
+        "reasoning": "Direct vent generation of formaldehyde was criticized in prior attempts, so formaldehyde is instead placed in the surface photochemical setting where concentration and UV are available. This remains somewhat speculative as a network connector but is more plausible in surface photoredox chemistry than in hydrothermal bulk water; included because formaldehyde is required for formose-type sugar entry (speculative connector; borrows from broader prebiotic carbonyl literature, e.g., Ritson & Sutherland, 2012)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Surface formose entry to glycolaldehyde",
+        "inputs": [
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "borate minerals",
+          "aqueous": "true",
+          "other": "evaporitic pool, intermittent drying"
+        },
+        "mechanism": "Condensation of formaldehyde under mineral-buffered conditions yields glycolaldehyde, stabilized by borate-rich settings.",
+        "reasoning": "Glycolaldehyde is a key surface carbonyl hub and is much better supported as a sugar precursor than direct vent routes to higher sugars. Borate stabilization and dry concentration improve plausibility (Ricardo et al., 2004; Ritson & Sutherland, 2012)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Surface aldol condensation to glyceraldehyde",
+        "inputs": [
+          "mol_009",
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "borate minerals/montmorillonite",
+          "aqueous": "true",
+          "other": "wet-dry cycles in evaporitic pools"
+        },
+        "mechanism": "Aldol addition of glycolaldehyde with formaldehyde-derived carbonyl chemistry yields glyceraldehyde, with borate helping suppress rapid tar formation.",
+        "reasoning": "This gives a more explicit and chemically grounded route to higher carbonyl compounds than previous compressed carbon expansion steps (Ricardo et al., 2004; Benner et al., 2012)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Surface oxidative carboxylation to oxaloacetate precursor pool",
+        "inputs": [
+          "mol_011",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2",
+          "aqueous": "true",
+          "other": "UV-assisted oxidation/carboxylation, anoxic but redox-active surface"
+        },
+        "mechanism": "Carbonyl oxidation and C1 incorporation convert trioses/carboxylates into alpha-keto dicarboxylate products represented here by an oxaloacetate pool.",
+        "reasoning": "This is a necessary connecting step and is explicitly more conservative than the prior failed one-step jump to alpha-ketoglutarate. It remains partly speculative, but splitting the network through oxaloacetate creates a defensible dicarboxylate convergence node for aspartate and fumarate chemistry (speculative connector grounded in alpha-keto acid network logic; Muchowska et al., 2019)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Surface Strecker synthesis of alanine from acetaldehyde",
+        "inputs": [
+          "mol_027",
+          "mol_003",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite/phosphate minerals",
+          "aqueous": "true",
+          "other": "evaporitic pool with concentration during drying"
+        },
+        "mechanism": "Acetaldehyde forms an aminonitrile with ammonia and HCN, followed by hydrolysis to alanine.",
+        "reasoning": "This corrects the earlier misuse of Strecker chemistry: an aldehyde, not pyruvate, is used as the carbonyl substrate. Alanine is thus reachable by both hydrothermal reductive amination and surface Strecker synthesis, creating real convergence (Miller, 1957; Cleaves, 2010)."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Surface cyanamide formation from HCN-ammonia chemistry",
+        "inputs": [
+          "mol_004",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_016"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "sulfide minerals (molybdenite/stibnite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2/sulfide minerals",
+          "aqueous": "true",
+          "other": "UV irradiation, drying-concentration cycles"
+        },
+        "mechanism": "Photochemical nitrile activation and partial hydrolysis/amidination of HCN-derived pools generate cyanamide.",
+        "reasoning": "Cyanamide is a much more plausible activated amidino/carbamoyl precursor than free guanidine and is central to many prebiotic activation proposals. Including it avoids the chemically weak direct guanidination criticized previously (Schoffstall, 1976; Ferris et al., 1978; Sutherland, 2016)."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Surface hydrolysis of cyanamide to urea",
+        "inputs": [
+          "mol_016"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "phosphate minerals (apatite/struvite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "310-360K",
+          "pressure": "1 atm",
+          "catalyst": "phosphate minerals/montmorillonite",
+          "aqueous": "true",
+          "other": "wet-dry cycles"
+        },
+        "mechanism": "Hydration and rearrangement of cyanamide yield urea in concentrated surface environments.",
+        "reasoning": "Urea is a plausible product of cyanamide hydrolysis and a more chemically credible member of the carbamoyl donor pool than unsupported free guanidine. This addresses prior criticism of compressed HCN-to-urea chemistry by inserting cyanamide explicitly (Lohrmann & Orgel, 1971; Saladino et al., 2012)."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Surface conversion of cyanamide/urea pool to carbamoyl donor pool",
+        "inputs": [
+          "mol_016",
+          "mol_015"
+        ],
+        "outputs": [
+          "mol_017",
+          "mol_022"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "phosphate minerals (apatite/struvite)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "320-360K",
+          "pressure": "1 atm",
+          "catalyst": "phosphate minerals/TiO2",
+          "aqueous": "true",
+          "other": "dry-heating and UV cycles"
+        },
+        "mechanism": "Cyanamide hydration/tautomerization and urea dehydration/activation generate cyanate/isocyanate and related carbamoyl-transfer-capable species.",
+        "reasoning": "The network uses a carbamoyl donor pool rather than direct free guanidine. Cyanate/isocyanate and related activated carbamoyl species are chemically more reasonable for ornithine carbamylation toward citrulline (Lohrmann & Orgel, 1973; Saladino et al., 2012)."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Biochemical transamination of oxaloacetate to aspartate",
+        "inputs": [
+          "mol_012",
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_013",
+          "mol_007"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "prebiotic pool or mineral interface; amino donor alanine"
+        },
+        "mechanism": "Nonenzymatic transamination transfers amino nitrogen from alanine to oxaloacetate, regenerating pyruvate and giving aspartate.",
+        "reasoning": "This is a key convergence step linking hydrothermal alanine and surface oxaloacetate. Nonenzymatic transamination among alpha-keto and amino acids has experimental support under plausible prebiotic conditions (Mayer et al., 2014; Muchowska et al., 2020)."
+      },
+      {
+        "id": "rxn_016",
+        "name": "Biochemical dehydration of aspartate to fumarate",
+        "inputs": [
+          "mol_013"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "320-360K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "thermal cycling, mildly acidic to neutral"
+        },
+        "mechanism": "Beta-elimination/deamination-like dehydration converts aspartate-related species to fumarate.",
+        "reasoning": "This step is included as a plausible analog connection between aspartate and fumarate pools, allowing entry into a dicarboxylate network relevant to prebiotic protometabolism. It is less speculative than forcing direct one-step ornithine formation (speculative but topologically and chemically moderate connector; Keller et al., 2014)."
+      },
+      {
+        "id": "rxn_017",
+        "name": "Biochemical carboxylate network conversion of pyruvate and fumarate to alpha-ketoglutarate",
+        "inputs": [
+          "mol_007",
+          "mol_014",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_018"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "320-370K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "Fe2+-rich protometabolic pool"
+        },
+        "mechanism": "Through a sequence of nonenzymatic carboxylation, hydration, and rearrangement steps represented as a pooled transformation, C3 and C4 carboxylates feed a C5 alpha-keto acid pool.",
+        "reasoning": "Earlier failures used an implausibly compressed direct expansion to alpha-ketoglutarate; here the network explicitly routes through fumarate and carboxylate protometabolism. This remains partially schematic but is aligned with nonenzymatic TCA-like chemistry literature (Muchowska et al., 2019; Keller et al., 2014)."
+      },
+      {
+        "id": "rxn_018",
+        "name": "Biochemical transamination of alpha-ketoglutarate to glutamate",
+        "inputs": [
+          "mol_018",
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_019",
+          "mol_007"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "prebiotic pool; alanine as amino donor"
+        },
+        "mechanism": "Amino transfer from alanine to alpha-ketoglutarate yields glutamate and pyruvate.",
+        "reasoning": "This gives a chemically recognizable route to glutamate without invoking unsupported direct synthesis. It also recycles pyruvate, strengthening network density and convergence (Mayer et al., 2014; Muchowska et al., 2020)."
+      },
+      {
+        "id": "rxn_019",
+        "name": "Biochemical partial reduction of glutamate to glutamate semialdehyde pool",
+        "inputs": [
+          "mol_019",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_020"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "320-360K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "reducing pool with formate as reductant equivalent"
+        },
+        "mechanism": "Selective reduction/activation of the gamma-carboxyl group of glutamate yields a semialdehyde/lactam tautomer pool.",
+        "reasoning": "Glutamate semialdehyde is inserted explicitly to avoid the earlier unacceptable one-step glutamate-to-ornithine compression. This step is speculative in detail but chemically necessary and more realistic when separated as a reduction of one carboxyl group (acknowledged open problem in prebiotic amino acid homologation)."
+      },
+      {
+        "id": "rxn_020",
+        "name": "Biochemical reductive amination of glutamate semialdehyde to ornithine",
+        "inputs": [
+          "mol_020",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_021"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "NH3-rich prebiotic pool, anoxic reducing conditions"
+        },
+        "mechanism": "The aldehyde of glutamate semialdehyde undergoes imine formation with ammonia followed by reduction to produce the terminal amino group of ornithine.",
+        "reasoning": "This two-step glutamate semialdehyde -> ornithine route is far more chemically intelligible than the previously criticized one-step assembly of ornithine from unrelated fragments. It remains a challenging prebiotic step, but it is at least mechanistically transparent (speculative but necessary connector)."
+      },
+      {
+        "id": "rxn_021",
+        "name": "Biochemical carbamylation of ornithine to citrulline",
+        "inputs": [
+          "mol_021",
+          "mol_017",
+          "mol_022"
+        ],
+        "outputs": [
+          "mol_023"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "carbamoyl donor-rich pool, moderate concentration"
+        },
+        "mechanism": "The terminal amino group of ornithine attacks activated carbamoyl donors (cyanate/isocyanate/carbamoyl equivalents) to form citrulline.",
+        "reasoning": "Using cyanate/carbamoyl donor chemistry is more plausible than direct guanidination by free guanidine. Ornithine carbamylation to citrulline is chemically recognizable and addresses the terminal chemistry weakness of prior attempts (Lohrmann & Orgel, 1973; Powner et al., general prebiotic activation context)."
+      },
+      {
+        "id": "rxn_022",
+        "name": "Biochemical addition of aspartate to citrulline equivalent giving argininosuccinate",
+        "inputs": [
+          "mol_023",
+          "mol_013",
+          "mol_016"
+        ],
+        "outputs": [
+          "mol_025"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "condensing setting; cyanamide provides activation equivalent"
+        },
+        "mechanism": "Cyanamide-mediated activation of citrulline/aspartate enables C-N bond formation to an argininosuccinate-like adduct.",
+        "reasoning": "This is the most speculative late-stage step, but it is more defensible than direct citrulline plus guanidine -> arginine. Cyanamide is used as an activating agent, not as a magical one-step reagent, which addresses earlier criticism about idealized urea-cycle borrowing (Lohrmann & Orgel, 1971; Saladino et al., 2012)."
+      },
+      {
+        "id": "rxn_023",
+        "name": "Biochemical cleavage of argininosuccinate to arginine and fumarate",
+        "inputs": [
+          "mol_025"
+        ],
+        "outputs": [
+          "mol_026",
+          "mol_014"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "320-360K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "thermal cycling, concentrated solution"
+        },
+        "mechanism": "Beta-elimination/fragmentation of argininosuccinate-like adduct releases fumarate and yields arginine.",
+        "reasoning": "Although inspired by a metabolic logic, this step is separated from preceding activation and framed as fragmentation of an activated adduct, not enzyme-free copying of the modern cycle wholesale. Release of fumarate also creates network closure and convergence (speculative but chemically more structured than previous terminal proposals)."
+      },
+      {
+        "id": "rxn_024",
+        "name": "Biochemical hydration of fumarate to malate",
+        "inputs": [
+          "mol_014"
+        ],
+        "outputs": [
+          "mol_024"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "Fe2+-rich aqueous pool"
+        },
+        "mechanism": "Hydration across the fumarate double bond yields malate.",
+        "reasoning": "This provides an additional protometabolic branch and supports multiple distinct path enumerations to the target through a dicarboxylate network (Keller et al., 2014; Muchowska et al., 2019)."
+      },
+      {
+        "id": "rxn_025",
+        "name": "Biochemical oxidation of malate to oxaloacetate",
+        "inputs": [
+          "mol_024"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "redox-active mineral interface or dissolved Fe chemistry"
+        },
+        "mechanism": "Nonenzymatic oxidation of malate regenerates oxaloacetate.",
+        "reasoning": "This closes a connected dicarboxylate loop and increases convergence at oxaloacetate without introducing isolated subgraphs. It is consistent with nonenzymatic TCA-like interconversions reported in Fe-promoted systems (Muchowska et al., 2019)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Vent pyruvate to alanine to arginine core route",
+        "description": "Hydrothermal carbon fixation generates pyruvate and alanine, which feed transamination, dicarboxylate chemistry, ornithine formation, and final arginine assembly.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_010",
+          "rxn_015",
+          "rxn_016",
+          "rxn_017",
+          "rxn_018",
+          "rxn_019",
+          "rxn_020",
+          "rxn_014",
+          "rxn_021",
+          "rxn_022",
+          "rxn_023"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_008",
+          "mol_012",
+          "mol_018",
+          "mol_021",
+          "mol_023"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Surface Strecker alanine entry route",
+        "description": "Hydrothermal pyruvate decarboxylation gives acetaldehyde, surface HCN chemistry gives alanine by true Strecker synthesis, and downstream biochemical assembly yields arginine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_005",
+          "rxn_006",
+          "rxn_011",
+          "rxn_010",
+          "rxn_015",
+          "rxn_016",
+          "rxn_017",
+          "rxn_018",
+          "rxn_019",
+          "rxn_020",
+          "rxn_014",
+          "rxn_021",
+          "rxn_022",
+          "rxn_023"
+        ],
+        "key_intermediates": [
+          "mol_027",
+          "mol_004",
+          "mol_008",
+          "mol_012",
+          "mol_021",
+          "mol_023"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Formate-formose-oxaloacetate route",
+        "description": "Hydrothermal formate is transferred to the surface, where photochemical/formose chemistry builds glycolaldehyde and glyceraldehyde before entry into oxaloacetate and the glutamate/ornithine branch.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_015",
+          "rxn_016",
+          "rxn_017",
+          "rxn_018",
+          "rxn_019",
+          "rxn_020",
+          "rxn_014",
+          "rxn_021",
+          "rxn_022",
+          "rxn_023"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_009",
+          "mol_010",
+          "mol_011",
+          "mol_012",
+          "mol_021"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "HCN-cyanamide-citrulline assisted route",
+        "description": "Surface HCN is converted to cyanamide and carbamoyl donors before ornithine carbamylation, then biochemical activation gives arginine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_010",
+          "rxn_015",
+          "rxn_016",
+          "rxn_017",
+          "rxn_018",
+          "rxn_019",
+          "rxn_020",
+          "rxn_021",
+          "rxn_022",
+          "rxn_023"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_016",
+          "mol_015",
+          "mol_022",
+          "mol_021",
+          "mol_023"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Alanine-oxaloacetate transamination-first route",
+        "description": "Alanine from either environment is immediately used to aminate oxaloacetate, prioritizing aspartate and fumarate before entering the C5 amino acid branch.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_003",
+          "rxn_004",
+          "rxn_015",
+          "rxn_016",
+          "rxn_017",
+          "rxn_018",
+          "rxn_019",
+          "rxn_020",
+          "rxn_014",
+          "rxn_021",
+          "rxn_022",
+          "rxn_023"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_008",
+          "mol_013",
+          "mol_014",
+          "mol_018",
+          "mol_021"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Fumarate loop reinforced route",
+        "description": "Argininosuccinate cleavage returns fumarate, which can hydrate/oxidize back to oxaloacetate and feed additional cycles toward alpha-ketoglutarate and arginine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_010",
+          "rxn_015",
+          "rxn_016",
+          "rxn_017",
+          "rxn_018",
+          "rxn_019",
+          "rxn_020",
+          "rxn_014",
+          "rxn_021",
+          "rxn_022",
+          "rxn_023",
+          "rxn_024",
+          "rxn_025",
+          "rxn_015",
+          "rxn_016",
+          "rxn_017",
+          "rxn_018",
+          "rxn_019",
+          "rxn_020",
+          "rxn_021",
+          "rxn_022",
+          "rxn_023"
+        ],
+        "key_intermediates": [
+          "mol_014",
+          "mol_024",
+          "mol_012",
+          "mol_018",
+          "mol_021",
+          "mol_026"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Dual alanine convergence route",
+        "description": "Hydrothermal reductive amination and surface Strecker synthesis both produce alanine, increasing robustness before common downstream biochemical assembly.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_011",
+          "rxn_010",
+          "rxn_015",
+          "rxn_016",
+          "rxn_017",
+          "rxn_018",
+          "rxn_019",
+          "rxn_020",
+          "rxn_014",
+          "rxn_021",
+          "rxn_022",
+          "rxn_023"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_027",
+          "mol_004",
+          "mol_012",
+          "mol_019",
+          "mol_021"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Cyanamide-activated argininosuccinate route",
+        "description": "Surface-generated cyanamide is reserved for the late-stage activation of citrulline and aspartate to argininosuccinate.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_003",
+          "rxn_004",
+          "rxn_015",
+          "rxn_016",
+          "rxn_017",
+          "rxn_018",
+          "rxn_019",
+          "rxn_020",
+          "rxn_006",
+          "rxn_012",
+          "rxn_014",
+          "rxn_021",
+          "rxn_022",
+          "rxn_023"
+        ],
+        "key_intermediates": [
+          "mol_016",
+          "mol_012",
+          "mol_013",
+          "mol_023",
+          "mol_025",
+          "mol_026"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Carbamoyl-donor-rich citrulline route",
+        "description": "Surface cyanamide hydrolysis to urea and cyanate enriches carbamoyl donors, supporting ornithine-to-citrulline conversion before final arginine formation.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_010",
+          "rxn_015",
+          "rxn_016",
+          "rxn_017",
+          "rxn_018",
+          "rxn_019",
+          "rxn_020",
+          "rxn_006",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_021",
+          "rxn_022",
+          "rxn_023"
+        ],
+        "key_intermediates": [
+          "mol_015",
+          "mol_017",
+          "mol_022",
+          "mol_021",
+          "mol_023",
+          "mol_026"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Integrated hydrothermal-surface-biochemical full route",
+        "description": "A maximally interconnected route using hydrothermal formate, acetate, pyruvate, and alanine; surface HCN, formaldehyde, glycolaldehyde, oxaloacetate, cyanamide, and urea; and biochemical assembly to arginine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015",
+          "rxn_016",
+          "rxn_017",
+          "rxn_018",
+          "rxn_019",
+          "rxn_020",
+          "rxn_021",
+          "rxn_022",
+          "rxn_023"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_007",
+          "mol_008",
+          "mol_012",
+          "mol_016",
+          "mol_021",
+          "mol_023"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_007",
+      "mol_008",
+      "mol_012",
+      "mol_018",
+      "mol_021"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_007",
+        "incoming_reactions": [
+          "rxn_003",
+          "rxn_015",
+          "rxn_018"
+        ],
+        "outgoing_reactions": [
+          "rxn_004",
+          "rxn_005",
+          "rxn_017"
+        ]
+      },
+      {
+        "molecule_id": "mol_008",
+        "incoming_reactions": [
+          "rxn_004",
+          "rxn_011"
+        ],
+        "outgoing_reactions": [
+          "rxn_015",
+          "rxn_018"
+        ]
+      },
+      {
+        "molecule_id": "mol_012",
+        "incoming_reactions": [
+          "rxn_010",
+          "rxn_025"
+        ],
+        "outgoing_reactions": [
+          "rxn_015"
+        ]
+      },
+      {
+        "molecule_id": "mol_018",
+        "incoming_reactions": [
+          "rxn_017"
+        ],
+        "outgoing_reactions": [
+          "rxn_018"
+        ]
+      },
+      {
+        "molecule_id": "mol_021",
+        "incoming_reactions": [
+          "rxn_020"
+        ],
+        "outgoing_reactions": [
+          "rxn_021"
+        ]
+      },
+      {
+        "molecule_id": "mol_014",
+        "incoming_reactions": [
+          "rxn_016",
+          "rxn_023"
+        ],
+        "outgoing_reactions": [
+          "rxn_017",
+          "rxn_024"
+        ]
+      },
+      {
+        "molecule_id": "mol_023",
+        "incoming_reactions": [
+          "rxn_021"
+        ],
+        "outgoing_reactions": [
+          "rxn_022"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Arginine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_002": 0.82,
+          "rxn_003": 0.7,
+          "rxn_004": 0.86,
+          "rxn_015": 0.84,
+          "rxn_016": 0.28,
+          "rxn_017": 0.3,
+          "rxn_018": 0.84,
+          "rxn_019": 0.42,
+          "rxn_020": 0.5,
+          "rxn_021": 0.62,
+          "rxn_022": 0.38,
+          "rxn_023": 0.83
+        },
+        "chemical_feasibility": 0.58,
+        "pathway_coherence": 0.73,
+        "environmental_progression": 0.86,
+        "target_achievement": 0.76,
+        "overall_confidence": 0.69,
+        "feedback": "Core network flow from hydrothermal C1/C3 feedstocks into amino-acid and urea-cycle-like assembly is coherent, but several late biochemical steps are weakly supported prebiotically. The strongest problems are dehydration of aspartate directly to fumarate, the pyruvate+fumarate+formate to alpha-ketoglutarate conversion, and cyanamide-assisted argininosuccinate formation. Arginine is formally reached, but the route depends on speculative transformations in the ornithine/citrulline/argininosuccinate segment.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_016",
+          "rxn_017",
+          "rxn_019",
+          "rxn_020",
+          "rxn_022"
+        ],
+        "suggestions": [
+          "Replace direct aspartate-to-fumarate dehydration with a more plausible activated or photochemically assisted elimination sequence.",
+          "Split alpha-ketoglutarate formation into smaller, chemically justified steps rather than a compressed network conversion.",
+          "Use a more explicit carbamylating agent pathway for citrulline formation and an activation step for argininosuccinate assembly.",
+          "Clarify whether glutamate semialdehyde exists as a tautomeric pool and how it is stabilized under the stated conditions."
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_005": 0.78,
+          "rxn_006": 0.35,
+          "rxn_011": 0.76,
+          "rxn_015": 0.84,
+          "rxn_016": 0.28,
+          "rxn_017": 0.3,
+          "rxn_018": 0.84,
+          "rxn_019": 0.42,
+          "rxn_020": 0.5,
+          "rxn_021": 0.62,
+          "rxn_022": 0.38,
+          "rxn_023": 0.83
+        },
+        "chemical_feasibility": 0.54,
+        "pathway_coherence": 0.68,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.74,
+        "overall_confidence": 0.64,
+        "feedback": "The alternative surface entry to alanine through Strecker chemistry is reasonable, but the specific generation of HCN from ammonia and acetaldehyde is not well grounded. Once alanine is formed, this pathway inherits the same downstream weaknesses as P1. It provides convergence at alanine but does not materially improve the credibility of the arginine-forming segment.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_006",
+          "rxn_016",
+          "rxn_017",
+          "rxn_019",
+          "rxn_020",
+          "rxn_022"
+        ],
+        "suggestions": [
+          "Use a more standard atmospheric or photochemical source of HCN rather than deriving it directly from ammonia plus acetaldehyde.",
+          "Retain Strecker chemistry as alanine entry but redesign the ornithine-to-arginine section with more explicit activation chemistry.",
+          "Provide a more plausible route from aspartate chemistry into fumarate and alpha-ketoglutarate."
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_007": 0.4,
+          "rxn_008": 0.46,
+          "rxn_009": 0.72,
+          "rxn_010": 0.22,
+          "rxn_015": 0.84,
+          "rxn_016": 0.28,
+          "rxn_017": 0.3,
+          "rxn_018": 0.84,
+          "rxn_019": 0.42,
+          "rxn_020": 0.5,
+          "rxn_021": 0.62,
+          "rxn_022": 0.38,
+          "rxn_023": 0.83
+        },
+        "chemical_feasibility": 0.49,
+        "pathway_coherence": 0.61,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.7,
+        "overall_confidence": 0.59,
+        "feedback": "The formate-to-formaldehyde and formose-style sugar chemistry is directionally plausible, but the conversion of glyceraldehyde plus formate directly to oxaloacetate is highly speculative and undercuts the pathway. This route is valuable for network connectivity but chemically the weakest of the major entries into the aspartate branch.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_007",
+          "rxn_008",
+          "rxn_010",
+          "rxn_016",
+          "rxn_017",
+          "rxn_019",
+          "rxn_020",
+          "rxn_022"
+        ],
+        "suggestions": [
+          "Replace direct oxidative carboxylation to oxaloacetate with a sequence through glyoxylate, malate, or tartrate-like intermediates if retained.",
+          "Clarify redox drivers and mineral photocatalysts for formate-to-formaldehyde conversion.",
+          "Use the formose branch mainly to support sugar and aldehyde hubs rather than as the principal source of oxaloacetate."
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_005": 0.78,
+          "rxn_006": 0.35,
+          "rxn_012": 0.45,
+          "rxn_013": 0.8,
+          "rxn_014": 0.4,
+          "rxn_021": 0.62,
+          "rxn_022": 0.38,
+          "rxn_023": 0.83
+        },
+        "chemical_feasibility": 0.53,
+        "pathway_coherence": 0.65,
+        "environmental_progression": 0.79,
+        "target_achievement": 0.68,
+        "overall_confidence": 0.61,
+        "feedback": "This pathway usefully builds the carbamoyl donor branch, but its chemistry is mixed. Cyanamide hydrolysis to urea is acceptable, while direct HCN+NH3 to cyanamide and the pooled cyanamide/urea to cyanate/carbamoyl donor transformation are too compressed. It supports citrulline chemistry conceptually, but the activation logic remains incomplete.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_006",
+          "rxn_012",
+          "rxn_014",
+          "rxn_022"
+        ],
+        "suggestions": [
+          "Separate cyanamide generation from HCN chemistry into more realistic photochemical or dehydrative steps.",
+          "Define the carbamoyl donor pool explicitly, e.g., cyanate versus carbamoyl phosphate analogue, instead of combining them in one node.",
+          "Introduce an activation step before aspartate addition to citrulline."
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_003": 0.7,
+          "rxn_004": 0.86,
+          "rxn_015": 0.84,
+          "rxn_016": 0.28,
+          "rxn_017": 0.3,
+          "rxn_018": 0.84,
+          "rxn_019": 0.42,
+          "rxn_020": 0.5,
+          "rxn_021": 0.62,
+          "rxn_022": 0.38,
+          "rxn_023": 0.83
+        },
+        "chemical_feasibility": 0.57,
+        "pathway_coherence": 0.72,
+        "environmental_progression": 0.83,
+        "target_achievement": 0.75,
+        "overall_confidence": 0.68,
+        "feedback": "The transamination-first logic around alanine and oxaloacetate is one of the more coherent parts of the network and gives good hub reuse. However, it still depends on chemically weak downstream steps to make alpha-ketoglutarate, ornithine, and argininosuccinate. Good as a network backbone, not yet strong enough as a defensible full pathway.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_016",
+          "rxn_017",
+          "rxn_019",
+          "rxn_020",
+          "rxn_022"
+        ],
+        "suggestions": [
+          "Strengthen alpha-ketoglutarate formation with a more explicit reductive carboxylation or glyoxylate-assisted sequence.",
+          "Provide a better supported route from glutamate to ornithine, perhaps with stepwise reduction and amination details.",
+          "Replace cyanamide-assisted argininosuccinate formation with an activated citrulline or succinate derivative scheme."
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_016": 0.28,
+          "rxn_024": 0.9,
+          "rxn_025": 0.78,
+          "rxn_015": 0.84,
+          "rxn_017": 0.3,
+          "rxn_018": 0.84,
+          "rxn_019": 0.42,
+          "rxn_020": 0.5,
+          "rxn_021": 0.62,
+          "rxn_022": 0.38,
+          "rxn_023": 0.83
+        },
+        "chemical_feasibility": 0.56,
+        "pathway_coherence": 0.74,
+        "environmental_progression": 0.77,
+        "target_achievement": 0.74,
+        "overall_confidence": 0.67,
+        "feedback": "The fumarate-malate-oxaloacetate loop is topologically strong and adds useful proto-metabolic character. Hydration of fumarate and oxidation of malate are credible in principle, but the loop rests on weak entry to fumarate and the same speculative arginine-tail chemistry. This is a good network motif but not a high-confidence synthesis route by itself.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_016",
+          "rxn_017",
+          "rxn_019",
+          "rxn_020",
+          "rxn_022"
+        ],
+        "suggestions": [
+          "Improve the chemical entry into fumarate.",
+          "Specify plausible oxidants or mineral redox couples for malate-to-oxaloacetate conversion in anoxic settings.",
+          "Use the loop as support chemistry rather than proof of arginine accessibility."
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_004": 0.86,
+          "rxn_011": 0.76,
+          "rxn_015": 0.84,
+          "rxn_018": 0.84,
+          "rxn_019": 0.42,
+          "rxn_020": 0.5,
+          "rxn_021": 0.62,
+          "rxn_022": 0.38,
+          "rxn_023": 0.83
+        },
+        "chemical_feasibility": 0.63,
+        "pathway_coherence": 0.79,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.76,
+        "overall_confidence": 0.73,
+        "feedback": "Dual convergence on alanine is a notable strength and improves redundancy. Hydrothermal reductive amination and surface Strecker chemistry are both plausible sources of alanine. Nevertheless, the route remains limited by the same weak glutamate-semialdehyde/ornithine/citrulline/argininosuccinate segment, preventing approval.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_019",
+          "rxn_020",
+          "rxn_022"
+        ],
+        "suggestions": [
+          "Keep alanine as a central hub but reduce reliance on speculative late-stage amination and addition chemistry.",
+          "Make ornithine formation stepwise and explicitly include intramolecular cyclization/hydrolysis alternatives if considered.",
+          "Add a better justified activation chemistry for citrulline to argininosuccinate."
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_012": 0.45,
+          "rxn_013": 0.8,
+          "rxn_014": 0.4,
+          "rxn_021": 0.62,
+          "rxn_022": 0.38,
+          "rxn_023": 0.83
+        },
+        "chemical_feasibility": 0.51,
+        "pathway_coherence": 0.64,
+        "environmental_progression": 0.75,
+        "target_achievement": 0.69,
+        "overall_confidence": 0.59,
+        "feedback": "The cyanamide-activated argininosuccinate concept is creative but underdeveloped. Cyanamide can serve as a condensing/activating agent in prebiotic chemistry, yet using it directly in argininosuccinate formation without a clear activated intermediate is too speculative. This branch is a useful hypothesis generator rather than a robust pathway.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012",
+          "rxn_014",
+          "rxn_022"
+        ],
+        "suggestions": [
+          "Specify whether cyanamide activates citrulline, aspartate, or a carboxylate derivative.",
+          "Introduce explicit activated intermediates instead of one-step assembly to argininosuccinate.",
+          "Provide more direct support for carbamylation and amidino transfer logic."
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_013": 0.8,
+          "rxn_014": 0.4,
+          "rxn_021": 0.62,
+          "rxn_022": 0.38,
+          "rxn_023": 0.83
+        },
+        "chemical_feasibility": 0.57,
+        "pathway_coherence": 0.68,
+        "environmental_progression": 0.77,
+        "target_achievement": 0.71,
+        "overall_confidence": 0.63,
+        "feedback": "A carbamoyl-donor-rich route to citrulline is more plausible than direct guanidination, and the conceptual sequence ornithine to citrulline to argininosuccinate to arginine is biologically coherent. However, the carbamoyl donor pool is underspecified and the aspartate addition step remains the chief bottleneck.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_014",
+          "rxn_021",
+          "rxn_022"
+        ],
+        "suggestions": [
+          "Differentiate cyanate from other carbamoyl donors and assign each a distinct reaction role.",
+          "Support ornithine carbamylation with a better defined donor and activation context.",
+          "Revise argininosuccinate formation to include an activated ureido intermediate or mineral-assisted condensation."
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_002": 0.82,
+          "rxn_003": 0.7,
+          "rxn_004": 0.86,
+          "rxn_005": 0.78,
+          "rxn_006": 0.35,
+          "rxn_007": 0.4,
+          "rxn_008": 0.46,
+          "rxn_009": 0.72,
+          "rxn_010": 0.22,
+          "rxn_011": 0.76,
+          "rxn_012": 0.45,
+          "rxn_013": 0.8,
+          "rxn_014": 0.4,
+          "rxn_015": 0.84,
+          "rxn_016": 0.28,
+          "rxn_017": 0.3,
+          "rxn_018": 0.84,
+          "rxn_019": 0.42,
+          "rxn_020": 0.5,
+          "rxn_021": 0.62,
+          "rxn_022": 0.38,
+          "rxn_023": 0.83,
+          "rxn_024": 0.9,
+          "rxn_025": 0.78
+        },
+        "chemical_feasibility": 0.56,
+        "pathway_coherence": 0.82,
+        "environmental_progression": 0.92,
+        "target_achievement": 0.78,
+        "overall_confidence": 0.71,
+        "feedback": "As an integrated network, this is strong topologically: multiple entries into alanine, multiple C1/C2/C3 hubs, a linked aspartate-fumarate-malate-oxaloacetate loop, and explicit hydrothermal-to-surface-to-biochemical progression. The main limitation is not connectivity but chemistry. Several steps are compressed beyond current prebiotic support, especially HCN formation from acetaldehyde/ammonia, oxaloacetate generation from glyceraldehyde/formate, direct aspartate dehydration, alpha-ketoglutarate assembly, glutamate semialdehyde reduction/amination, and cyanamide-assisted argininosuccinate synthesis. The target is reached on paper, but not at approval-grade confidence.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_010",
+          "rxn_012",
+          "rxn_014",
+          "rxn_016",
+          "rxn_017",
+          "rxn_019",
+          "rxn_020",
+          "rxn_022"
+        ],
+        "suggestions": [
+          "Preserve the network topology but replace the weakest steps with more granular, experimentally motivated transformations.",
+          "Strengthen the surface HCN and C4-dicarboxylate chemistry with known cyanosulfidic or glyoxylate-based routes.",
+          "Explicitly represent activation chemistry in the citrulline-to-argininosuccinate segment.",
+          "Add literature-grounded reasoning and mineral-specific support for the contested reactions."
+        ]
+      }
+    ],
+    "best_pathway_id": "P7",
+    "overall_confidence": 0.71,
+    "network_feedback": "The network is topologically good and chemically mixed. Strengths include clear environmental interconnection, useful hub molecules, multiple convergences, and a coherent high-level strategy that avoids implausible one-step guanidination. The hydrothermal core around formate, acetate, pyruvate, and alanine is fairly plausible, and the dual alanine entry is especially strong. The main issues are concentrated in several speculative surface and biochemical transformations: HCN generation from acetaldehyde plus ammonia, formate-derived formaldehyde and especially glyceraldehyde-to-oxaloacetate, direct aspartate dehydration to fumarate, compressed formation of alpha-ketoglutarate, reduction of glutamate to glutamate semialdehyde under prebiotic conditions, reductive amination to ornithine, and cyanamide-enabled argininosuccinate assembly. Network topology exceeds minimum expectations, but chemical feasibility of the late arginine-forming sequence is below approval threshold.",
+    "approved": false,
+    "hub_quality": 0.9,
+    "convergence_quality": 0.86
+  },
+  "success": false,
+  "attempts": 3,
+  "notes": null
+}

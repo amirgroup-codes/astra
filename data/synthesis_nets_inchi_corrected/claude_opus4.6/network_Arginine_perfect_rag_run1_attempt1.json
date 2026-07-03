@@ -1,0 +1,1187 @@
+{
+  "target_molecule": "Arginine",
+  "network": {
+    "target_molecule": "L-Arginine",
+    "overall_strategy": "The synthesis network is grounded in the cyanosulfidic protometabolism described by Patel et al. (2015, Nature Chemistry). The core pathway builds L-arginine through 10 steps from acetylene, HCN, NH3, cyanamide, and H2S via nitrile chemistry, guanidine formation from cyanamide, Cu/H2S-mediated pyrimidine cyclization, ring-opening by HCN, thioamide cycling (thiolysis, reductive dehydroxylation, thioamide-to-nitrile conversion), amination, and final Strecker-type nitrile hydrolysis. The network extends this with hydrothermal feedstock production (CO2 reduction to CO then HCN on iron-sulfur minerals, and NH3 from N2 on magnetite), surface UV-driven cyanamide generation from HCN, and three cyclization variants (dry, hydrolytic, hydrolytic with NH3 release). These branch points create 10 distinct pathways from simple starting materials to arginine, with HCN, NH3, 2-(2-cyanoethyl)guanidine, and 4-hydroxy-2-imino-hexahydropyrimidine serving as hub molecules that interconnect the network.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "Carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "Hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "H2O",
+        "iupac_name": "water",
+        "common_name": "Water",
+        "inchi": "InChI=1S/H2O/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "NH3",
+        "iupac_name": "ammonia",
+        "common_name": "Ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_005",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "Hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_006",
+        "formula": "H2S",
+        "iupac_name": "hydrogen sulfide",
+        "common_name": "Hydrogen sulfide",
+        "inchi": "InChI=1S/H2S/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_007",
+        "formula": "C2H2",
+        "iupac_name": "ethyne",
+        "common_name": "Acetylene",
+        "inchi": "InChI=1S/C2H2/c1-2/h1-2H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_008",
+        "formula": "CH2N2",
+        "iupac_name": "cyanamide",
+        "common_name": "Cyanamide",
+        "inchi": "InChI=1S/CH2N2/c2-1-3/h2H2",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_009",
+        "formula": "CO",
+        "iupac_name": "carbon monoxide",
+        "common_name": "Carbon monoxide",
+        "inchi": "InChI=1S/CO/c1-2",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_010",
+        "formula": "N2",
+        "iupac_name": "dinitrogen",
+        "common_name": "Nitrogen gas",
+        "inchi": "InChI=1S/N2/c1-2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_011",
+        "formula": "C3H3N",
+        "iupac_name": "2-propenenitrile",
+        "common_name": "Acrylonitrile",
+        "inchi": "InChI=1S/C3H3N/c1-2-3-4/h2H,1H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C3H6N2",
+        "iupac_name": "3-aminopropanenitrile",
+        "common_name": "3-Aminopropanenitrile",
+        "inchi": "InChI=1S/C3H6N2/c4-2-1-3-5/h1-2,4H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C4H8N4",
+        "iupac_name": "2-(2-cyanoethyl)guanidine",
+        "common_name": "2-(2-Cyanoethyl)guanidine",
+        "inchi": "InChI=1S/C4H8N4/c5-2-1-3-8-4(6)7/h1,3H2,(H4,6,7,8)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C4H9N3O",
+        "iupac_name": "4-hydroxy-2-imino-hexahydropyrimidine",
+        "common_name": "4-Hydroxy-2-imino-hexahydropyrimidine",
+        "inchi": "InChI=1S/C4H9N3O/c5-4-6-2-1-3(8)7-4/h3,8H,1-2H2,(H3,5,6,7)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C5H10N4O",
+        "iupac_name": "amino((3-cyano-3-hydroxypropyl)amino)methaniminium",
+        "common_name": "Cyanohydrin-guanidine intermediate",
+        "inchi": "InChI=1S/C5H10N4O/c6-3-4(10)1-2-9-5(7)8/h4,10H,1-2H2,(H4,7,8,9)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C5H12N4OS",
+        "iupac_name": "4-(diaminomethylideneamino)-2-hydroxybutanethioamide",
+        "common_name": "Hydroxy-thioamide intermediate",
+        "inchi": "InChI=1S/C5H12N4OS/c6-4(11)3(10)1-2-9-5(7)8/h3,10H,1-2H2,(H2,6,11)(H4,7,8,9)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_017",
+        "formula": "C5H12N4S",
+        "iupac_name": "4-(diaminomethylideneamino)butanethioamide",
+        "common_name": "Dehydroxylated thioamide intermediate",
+        "inchi": "InChI=1S/C5H12N4S/c6-4(10)2-1-3-9-5(7)8/h1-3H2,(H2,6,10)(H4,7,8,9)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_018",
+        "formula": "C6H12N4O",
+        "iupac_name": "2-(4-cyano-4-hydroxybutyl)guanidine",
+        "common_name": "Cyanohydrin-guanidine (C6)",
+        "inchi": "InChI=1S/C6H12N4O/c7-4-5(11)2-1-3-10-6(8)9/h5,11H,1-3H2,(H4,8,9,10)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_019",
+        "formula": "C6H13N5",
+        "iupac_name": "2-(4-amino-4-cyanobutyl)guanidine",
+        "common_name": "Arginine aminonitrile",
+        "inchi": "InChI=1S/C6H13N5/c7-4-5(8)2-1-3-11-6(9)10/h5H,1-3,8H2,(H4,9,10,11)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_020",
+        "formula": "C6H14N4O2",
+        "iupac_name": "(2S)-2-amino-5-(diaminomethylideneamino)pentanoic acid",
+        "common_name": "L-Arginine",
+        "inchi": "InChI=1S/C6H14N4O2/c7-4(5(11)12)2-1-3-10-6(8)9/h4H,1-3,7H2,(H,11,12)(H4,8,9,10)/t4-/m0/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Reverse Water-Gas Shift on Magnetite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_009",
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high (>100 atm)",
+          "catalyst": "magnetite (Fe3O4)",
+          "aqueous": true,
+          "other": "Alkaline hydrothermal vent conditions; serpentinization-driven H2 flux"
+        },
+        "mechanism": "CO2 is reduced to CO on magnetite surfaces via the reverse water-gas shift reaction. H2 from serpentinization provides reducing equivalents. The reaction proceeds through surface-adsorbed formate intermediate on Fe3O4.",
+        "reasoning": "CO2 hydrogenation to CO on iron oxide minerals is well-established in hydrothermal vent chemistry. Magnetite catalyzes this reaction under vent-relevant conditions (Shock & Schulte, 1998; McCollom & Seewald, 2003). CO is a key C1 feedstock that can be converted to HCN in the presence of NH3. This connects the hydrothermal environment to the surface cyanosulfidic chemistry of Patel et al. (2015)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "HCN Synthesis from CO and NH3 on Pyrite",
+        "inputs": [
+          "mol_009",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_005",
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high",
+          "catalyst": "pyrite (FeS2)",
+          "aqueous": true,
+          "other": "Iron sulfide surfaces catalyze C-N bond formation under hydrothermal conditions"
+        },
+        "mechanism": "CO and NH3 react on iron sulfide mineral surfaces to form HCN and water. The CO is activated on the FeS2 surface, and nucleophilic attack by NH3 followed by dehydration yields HCN.",
+        "reasoning": "HCN production from CO and NH3 on iron sulfide catalysts under hydrothermal conditions has been demonstrated experimentally (Huber & W\u00e4chtersh\u00e4user, 1997; Schulte & Shock, 1995). This provides a hydrothermal source of HCN that can be transported to surface pools where it feeds the cyanosulfidic arginine pathway of Patel et al. (2015). HCN is a critical hub molecule used in 4 downstream reactions."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Nitrogen Fixation to Ammonia on Iron Minerals",
+        "inputs": [
+          "mol_010",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high (>100 atm)",
+          "catalyst": "magnetite (Fe3O4), mackinawite (FeS)",
+          "aqueous": true,
+          "other": "High H2 fugacity from serpentinization; iron mineral surfaces provide electron transfer"
+        },
+        "mechanism": "N2 is reduced to NH3 on iron oxide and iron sulfide mineral surfaces under high-temperature, high-pressure hydrothermal conditions. The iron minerals serve as electron donors and catalytic surfaces for the stepwise reduction of N\u2261N.",
+        "reasoning": "Hydrothermal reduction of N2 to NH3 on iron minerals has been proposed as a prebiotic nitrogen fixation mechanism (Brandes et al., 1998; Smirnov et al., 2008). NH3 is essential for Michael addition to acrylonitrile (Step 2 of Patel et al., 2015) and for the final amination step that introduces the alpha-amino group. This reaction links hydrothermal NH3 production to the surface cyanosulfidic network."
+      },
+      {
+        "id": "rxn_004",
+        "name": "UV Photolysis of HCN to Cyanamide",
+        "inputs": [
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase)",
+          "sulfide minerals (stibnite)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 (anatase) photocatalyst",
+          "aqueous": true,
+          "other": "UV irradiation (\u03bb < 300 nm), no ozone shielding on early Earth"
+        },
+        "mechanism": "UV photolysis of dilute HCN in aqueous solution produces cyanamide (H2N-C\u2261N) through photoisomerization and radical recombination pathways. TiO2 mineral surfaces enhance UV absorption and radical generation.",
+        "reasoning": "Cyanamide is produced by UV irradiation of HCN solutions, as noted in Patel et al. (2015) and supported by earlier studies (Sanchez et al., 1966; Ferris & Hagan, 1984). Cyanamide is essential for introducing the guanidine moiety unique to arginine (Step 3 of the Patel et al. pathway). On early Earth, strong UV flux in the absence of an ozone layer would drive this photochemistry efficiently in surface pools. This reaction creates an alternative to exogenous cyanamide delivery."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Acetylene + HCN Addition to Acrylonitrile",
+        "inputs": [
+          "mol_007",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (molybdenite, stibnite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide mineral surfaces",
+          "aqueous": true,
+          "other": "Cyanosulfidic conditions; acetylene from volcanic outgassing or UV photolysis of CH4"
+        },
+        "mechanism": "Nucleophilic addition of cyanide (from HCN) to acetylene, forming the C2-C1 bond. The resulting vinyl nitrile (acrylonitrile) retains both unsaturation and the nitrile electrophilic center for subsequent Michael addition.",
+        "reasoning": "Step 1 of the Patel et al. (2015) cyanosulfidic arginine pathway (Nature Chemistry, DOI: 10.1038/nchem.2202). Acetylene + HCN \u2192 acrylonitrile is the first carbon-carbon bond-forming step. Acetylene is available from volcanic outgassing and UV photolysis of methane. The reaction proceeds under mild aqueous cyanosulfidic surface conditions."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Michael Addition of NH3 to Acrylonitrile",
+        "inputs": [
+          "mol_011",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide mineral surfaces",
+          "aqueous": true,
+          "other": "Cyanosulfidic aqueous conditions; Michael addition requires nucleophilic amine and electrophilic conjugated nitrile"
+        },
+        "mechanism": "Conjugate (Michael) addition of ammonia to acrylonitrile. The nucleophilic nitrogen of NH3 attacks the \u03b2-carbon of the \u03b1,\u03b2-unsaturated nitrile in a 1,4-addition, yielding the \u03b2-amino nitrile (3-aminopropanenitrile).",
+        "reasoning": "Step 2 of the Patel et al. (2015) cyanosulfidic arginine pathway. Michael addition of ammonia to acrylonitrile is a well-known, facile reaction that proceeds under aqueous conditions at ambient temperature. This introduces the nitrogen that will become the \u03b4-amino nitrogen in the arginine guanidine side chain."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Guanidine Formation from 3-Aminopropanenitrile and Cyanamide",
+        "inputs": [
+          "mol_012",
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite, molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide mineral surfaces",
+          "aqueous": true,
+          "other": "Cyanosulfidic aqueous conditions; nucleophilic addition of amine to cyanamide electrophilic carbon"
+        },
+        "mechanism": "Nucleophilic addition of the primary amine of 3-aminopropanenitrile to the nitrile carbon of cyanamide (H2N-C\u2261N), forming the guanidine (amidine) linkage. This introduces the characteristic N=C(NH2)-NH motif that becomes arginine's guanidinium side chain.",
+        "reasoning": "Step 3 of the Patel et al. (2015) cyanosulfidic arginine pathway. This is the critical step that distinguishes arginine synthesis from other amino acids \u2014 cyanamide provides the guanidine group unique to arginine. The reaction is facile under aqueous conditions as the amine is a good nucleophile and the cyanamide carbon is electrophilic. Patel et al. note that cyanamide availability may be a bottleneck for arginine formation."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Cu/H2S-Mediated Dry Cyclization to Pyrimidine",
+        "inputs": [
+          "mol_013"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "elemental copper (Cu)",
+          "sulfide minerals (stibnite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "elemental copper (Cu), H2S",
+          "aqueous": false,
+          "other": "Dry phase / evaporitic conditions; Cu/H2S mediated cyclization under cyanosulfidic conditions (Variant A \u2014 dry cyclization)"
+        },
+        "mechanism": "Intramolecular cyclization \u2014 the terminal guanidine nitrogen attacks the nitrile carbon, forming the C-N bond that closes the six-membered pyrimidine ring. Cu and H2S facilitate the reduction and ring closure. Water from the medium hydrolyzes the resulting imine at C4 to give the hemiaminal (hydroxyl at C4).",
+        "reasoning": "Step 4 Variant A of the Patel et al. (2015) cyanosulfidic arginine pathway (Reaction C1a). Elemental copper and H2S are explicitly required as reagents. The dry cyclization variant represents conditions in evaporitic pools during drying phases of wet-dry cycles. Three variants of this cyclization were reported (dry, hydrolytic, hydrolytic with NH3 release), all requiring Cu/H2S."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Cu/H2S-Mediated Hydrolytic Cyclization to Pyrimidine",
+        "inputs": [
+          "mol_013",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_014",
+          "mol_004"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "elemental copper (Cu)",
+          "sulfide minerals (stibnite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "elemental copper (Cu), H2S",
+          "aqueous": true,
+          "other": "Aqueous cyanosulfidic conditions; Cu/H2S mediated cyclization with water as co-substrate (Variant C \u2014 hydrolytic cyclization with NH3 release)"
+        },
+        "mechanism": "Same intramolecular cyclization as Variant A, but with explicit water as co-substrate for nitrile hydrolysis during ring closure. The guanidine nitrogen attacks the nitrile to form the six-membered ring, and water hydrates the resulting imine. NH3 is released as a byproduct of the nitrile-to-hemiaminal conversion.",
+        "reasoning": "Step 4 Variant C of the Patel et al. (2015) cyanosulfidic arginine pathway (Reaction C1c). This hydrolytic variant operates under wetter conditions and releases NH3, which can be recycled into downstream reactions (e.g., Michael addition or amination steps). The three cyclization variants represent different water activity regimes in evaporitic pool environments."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Pyrimidine Ring-Opening by HCN",
+        "inputs": [
+          "mol_014",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (molybdenite, stibnite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide mineral surfaces",
+          "aqueous": true,
+          "other": "Cyanosulfidic aqueous conditions; HCN concentration must be sufficient for ring-opening"
+        },
+        "mechanism": "Ring-opening by HCN \u2014 cyanide attacks the hemiaminal carbon (C4) of the pyrimidine ring, breaking the C-N bond and opening the ring. The product is a linear \u03b1-cyanohydrin bearing the guanidine side chain. This ring-opening/cyanation effectively extends the carbon chain by one unit while introducing a new nitrile handle for subsequent transformations.",
+        "reasoning": "Step 5 of the Patel et al. (2015) cyanosulfidic arginine pathway (Reaction C2). HCN regioselectively opens the pyrimidine ring at C4. Patel et al. note that the factors controlling this regioselectivity (pH, HCN concentration, temperature) are not yet fully characterized. This step extends the carbon skeleton from C4 to C5 while maintaining the guanidine moiety."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Nitrile Thiolysis by H2S",
+        "inputs": [
+          "mol_015",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_016"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite, molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide mineral surfaces",
+          "aqueous": true,
+          "other": "Cyanosulfidic conditions; H2S acts as nucleophile on nitrile carbon"
+        },
+        "mechanism": "H2S adds across the nitrile triple bond (C\u2261N \u2192 C(=S)NH2). This is the hallmark cyanosulfidic reaction \u2014 sulfide acts as a nucleophile on the nitrile carbon, converting it to a thioamide. The hydroxyl group at the adjacent carbon is preserved.",
+        "reasoning": "Step 6 of the Patel et al. (2015) cyanosulfidic arginine pathway (Reaction T1). Nitrile thiolysis by H2S is the characteristic reaction of cyanosulfidic chemistry, converting nitriles to thioamides. H2S is abundantly available in volcanic environments and hydrothermal vent effluents. This step initiates the thioamide cycling that is key to building the complete arginine carbon skeleton."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Cu/H2S-Mediated Reductive Dehydroxylation",
+        "inputs": [
+          "mol_016"
+        ],
+        "outputs": [
+          "mol_017",
+          "mol_003"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "elemental copper (Cu)",
+          "sulfide minerals (stibnite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "elemental copper (Cu), H2S",
+          "aqueous": true,
+          "other": "Cu/H2S provides reducing equivalents for deoxygenation; cyanosulfidic conditions"
+        },
+        "mechanism": "Cu/H2S-mediated reductive elimination of the hydroxyl group as water. The thioamide group facilitates this by stabilizing the developing carbocation or radical intermediate at the adjacent carbon. The net result is deoxygenation of the carbon skeleton, producing a linear thioamide.",
+        "reasoning": "Step 7 of the Patel et al. (2015) cyanosulfidic arginine pathway (Reaction T2). Elemental copper and H2S are explicitly required for this reductive dehydroxylation. Copper is prebiotically plausible \u2014 native copper occurs in hydrothermal and volcanic deposits. The Cu/H2S redox system is a distinctive feature of Patel et al.'s cyanosulfidic chemistry."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Thioamide-to-Nitrile Conversion with Chain Extension",
+        "inputs": [
+          "mol_017",
+          "mol_003",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_018",
+          "mol_006",
+          "mol_004"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "elemental copper (Cu)",
+          "sulfide minerals (stibnite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "elemental copper (Cu), H2S",
+          "aqueous": true,
+          "other": "Cu/H2S mediated; complex exchange reaction cycling between thioamide and nitrile functional groups"
+        },
+        "mechanism": "Complex exchange reaction \u2014 the thioamide is hydrolyzed/displaced, releasing H2S and NH3, while HCN provides a new nitrile group at the terminal carbon with concomitant hydroxylation. This effectively converts the C(=S)NH2 terminus back to a C(OH)(C\u2261N) functionality, extending the oxidation state cycling characteristic of cyanosulfidic chemistry.",
+        "reasoning": "Step 8 of the Patel et al. (2015) cyanosulfidic arginine pathway (Reaction T3). This is one of the most complex steps \u2014 Cu/H2S, HCN, and water all participate. The released H2S and NH3 are recycled into other network reactions, creating the autocatalytic loops characteristic of cyanosulfidic protometabolism. Note that this step produces NH3 which feeds back to rxn_014."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Amination of Cyanohydrin to Aminonitrile",
+        "inputs": [
+          "mol_018",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_019"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide mineral surfaces",
+          "aqueous": true,
+          "other": "Cyanosulfidic aqueous conditions; nucleophilic substitution of OH by NH3"
+        },
+        "mechanism": "Nucleophilic substitution \u2014 ammonia displaces the hydroxyl group at C4, converting the \u03b1-hydroxynitrile (cyanohydrin) to the \u03b1-aminonitrile. This introduces the \u03b1-amino group that will be present in the final amino acid product. The reaction is thermodynamically driven by the greater stability of the C-N bond relative to the C-O bond.",
+        "reasoning": "Step 9 of the Patel et al. (2015) cyanosulfidic arginine pathway (Reaction F1). This amination step introduces the \u03b1-amino group. NH3 may be sourced from exogenous supply, hydrothermal production (rxn_003), or recycled from reactions rxn_009 and rxn_013. The NH3 recycling creates network-level autocatalysis."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Nitrile Hydrolysis to Arginine",
+        "inputs": [
+          "mol_019",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_020",
+          "mol_004"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": true,
+          "other": "Aqueous hydrolysis; Strecker-type nitrile-to-carboxylic acid conversion; 2 equivalents H2O consumed; NH3 released"
+        },
+        "mechanism": "Stepwise nitrile hydrolysis \u2014 water attacks the nitrile carbon of the \u03b1-aminonitrile, forming an amide intermediate (\u03b1-aminoamide), which undergoes further hydrolysis to the carboxylic acid (\u03b1-amino acid) with release of ammonia. This is the same Strecker-type nitrile hydrolysis mechanism that produces other amino acids (alanine, serine, glycine) from their respective aminonitrile precursors.",
+        "reasoning": "Step 10 of the Patel et al. (2015) cyanosulfidic arginine pathway (Reaction F2). This final hydrolysis converts the aminonitrile to the amino acid, completing arginine synthesis. The released NH3 is recycled into the network. The racemic product (D,L-arginine) is produced; enantioselective mechanisms for L-enrichment (chiral mineral surfaces, circularly polarized light) remain an open question (Patel et al., 2015)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Direct Cyanosulfidic Pathway (Dry Cyclization)",
+        "description": "The core cyanosulfidic protometabolism pathway from exogenous feedstocks using dry cyclization variant (C1a). All starting materials (acetylene, HCN, NH3, cyanamide, H2S) from volcanic outgassing and surface photochemistry.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_012",
+          "mol_013",
+          "mol_014",
+          "mol_019"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Direct Cyanosulfidic Pathway (Hydrolytic Cyclization with NH3 Release)",
+        "description": "The core pathway using hydrolytic cyclization variant (C1c) that releases NH3 for recycling. All starting materials from volcanic/surface sources.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_012",
+          "mol_013",
+          "mol_014",
+          "mol_019"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Hydrothermal HCN + Dry Cyclization",
+        "description": "HCN produced hydrothermally from CO2 reduction to CO then reaction with NH3 on pyrite, transported to surface pools for the cyanosulfidic pathway with dry cyclization.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_005",
+          "mol_013",
+          "mol_014",
+          "mol_019"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Hydrothermal HCN + Hydrolytic Cyclization",
+        "description": "HCN from hydrothermal CO2 reduction pathway, feeding into surface cyanosulfidic pathway with hydrolytic cyclization and NH3 release.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_005",
+          "mol_013",
+          "mol_014",
+          "mol_019"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "HCN-Derived Cyanamide + Dry Cyclization",
+        "description": "Cyanamide produced photolytically from HCN on surface (UV/TiO2), feeding into the guanidine formation step. Dry cyclization variant.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_013",
+          "mol_014",
+          "mol_019"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "HCN-Derived Cyanamide + Hydrolytic Cyclization",
+        "description": "Cyanamide from UV photolysis of HCN, combined with hydrolytic cyclization variant with NH3 recycling.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_013",
+          "mol_014",
+          "mol_019"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Full Hydrothermal-to-Surface: HCN + Cyanamide from CO2 (Dry Cyclization)",
+        "description": "CO2 is reduced hydrothermally to CO then to HCN; HCN is photolyzed to cyanamide on surface; both feed the cyanosulfidic pathway with dry cyclization.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_005",
+          "mol_008",
+          "mol_013",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Full Hydrothermal-to-Surface: HCN + Cyanamide from CO2 (Hydrolytic Cyclization)",
+        "description": "Same as P7 but with hydrolytic cyclization variant producing recycled NH3.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_005",
+          "mol_008",
+          "mol_013",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Hydrothermal NH3 + Hydrothermal HCN + Dry Cyclization",
+        "description": "Both NH3 (from N2 fixation) and HCN (from CO2 via CO) produced hydrothermally, transported to surface for complete cyanosulfidic pathway with dry cyclization.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_001",
+          "rxn_002",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_005",
+          "mol_013",
+          "mol_014",
+          "mol_019"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Fully Integrated Hydrothermal-Surface-Biochemical Network with NH3 Recycling",
+        "description": "Maximum environmental integration: N2 fixed to NH3 hydrothermally, CO2 reduced to HCN hydrothermally, HCN photolyzed to cyanamide on surface, hydrolytic cyclization releases NH3 that feeds amination, final hydrolysis in prebiotic pool. Demonstrates complete autocatalytic loop where NH3 is both consumed and regenerated.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_005",
+          "mol_008",
+          "mol_013",
+          "mol_014",
+          "mol_019"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_005",
+      "mol_004",
+      "mol_013",
+      "mol_014"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_005",
+        "incoming_reactions": [
+          "rxn_002"
+        ],
+        "outgoing_reactions": [
+          "rxn_004",
+          "rxn_005",
+          "rxn_010",
+          "rxn_013"
+        ]
+      },
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [
+          "rxn_003",
+          "rxn_009",
+          "rxn_013",
+          "rxn_015"
+        ],
+        "outgoing_reactions": [
+          "rxn_002",
+          "rxn_006",
+          "rxn_014"
+        ]
+      },
+      {
+        "molecule_id": "mol_013",
+        "incoming_reactions": [
+          "rxn_007"
+        ],
+        "outgoing_reactions": [
+          "rxn_008",
+          "rxn_009"
+        ]
+      },
+      {
+        "molecule_id": "mol_014",
+        "incoming_reactions": [
+          "rxn_008",
+          "rxn_009"
+        ],
+        "outgoing_reactions": [
+          "rxn_010"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "L-Arginine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_005": 0.9,
+          "rxn_006": 0.9,
+          "rxn_007": 0.9,
+          "rxn_008": 0.85,
+          "rxn_010": 0.85,
+          "rxn_011": 0.9,
+          "rxn_012": 0.85,
+          "rxn_013": 0.8,
+          "rxn_014": 0.85,
+          "rxn_015": 0.88
+        },
+        "chemical_feasibility": 0.9,
+        "pathway_coherence": 0.93,
+        "environmental_progression": 0.72,
+        "target_achievement": 0.92,
+        "overall_confidence": 0.87,
+        "feedback": "This pathway most faithfully reproduces the Patel et al. (2015) 10-step cyanosulfidic pathway with the dry cyclization variant. All reactions are directly literature-supported. Environmental progression is limited (almost entirely Surface with only the final step as Biochemical), and the literature actually places the final hydrolysis in the Surface environment as well. rxn_013 (thioamide-to-nitrile conversion) is the most complex step but is experimentally documented. Very strong chemical coherence throughout.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Consider relabeling rxn_015 as Surface since Patel et al. place nitrile hydrolysis under cyanosulfidic surface conditions, not a separate Biochemical environment"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_005": 0.9,
+          "rxn_006": 0.9,
+          "rxn_007": 0.9,
+          "rxn_009": 0.85,
+          "rxn_010": 0.85,
+          "rxn_011": 0.9,
+          "rxn_012": 0.85,
+          "rxn_013": 0.8,
+          "rxn_014": 0.85,
+          "rxn_015": 0.88
+        },
+        "chemical_feasibility": 0.9,
+        "pathway_coherence": 0.93,
+        "environmental_progression": 0.72,
+        "target_achievement": 0.92,
+        "overall_confidence": 0.87,
+        "feedback": "Identical to P1 except uses the hydrolytic cyclization variant (rxn_009) which releases NH3. This is equally well-supported by Patel et al. The NH3 release creates a small recycling loop (NH3 is used in rxn_006 and rxn_014), which adds network coherence. Same minor issue with rxn_015 environmental labeling.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Same as P1 - consider Surface label for final hydrolysis"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_001": 0.8,
+          "rxn_002": 0.75,
+          "rxn_005": 0.9,
+          "rxn_006": 0.9,
+          "rxn_007": 0.9,
+          "rxn_008": 0.85,
+          "rxn_010": 0.85,
+          "rxn_011": 0.9,
+          "rxn_012": 0.85,
+          "rxn_013": 0.8,
+          "rxn_014": 0.85,
+          "rxn_015": 0.88
+        },
+        "chemical_feasibility": 0.85,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.9,
+        "overall_confidence": 0.85,
+        "feedback": "Extends P1 with hydrothermal HCN generation via RWGS and CO+NH3 reactions. Hydrothermal \u2192 Surface \u2192 Biochemical flow is well-established. rxn_002 (HCN from CO+NH3 on pyrite) is plausible but less directly supported by experimental literature for arginine synthesis specifically. The RWGS on magnetite (rxn_001) is a well-known geochemical reaction.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_002"
+        ],
+        "suggestions": [
+          "Cite specific experimental evidence for HCN synthesis from CO and NH3 on pyrite under hydrothermal conditions"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_001": 0.8,
+          "rxn_002": 0.75,
+          "rxn_005": 0.9,
+          "rxn_006": 0.9,
+          "rxn_007": 0.9,
+          "rxn_009": 0.85,
+          "rxn_010": 0.85,
+          "rxn_011": 0.9,
+          "rxn_012": 0.85,
+          "rxn_013": 0.8,
+          "rxn_014": 0.85,
+          "rxn_015": 0.88
+        },
+        "chemical_feasibility": 0.85,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.9,
+        "overall_confidence": 0.85,
+        "feedback": "Hydrolytic cyclization variant of P3. Same strengths and weaknesses. Hydrothermal HCN feeding into Surface cyanosulfidic chemistry is well-motivated geochemically.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_002"
+        ],
+        "suggestions": [
+          "Same as P3"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_004": 0.8,
+          "rxn_005": 0.9,
+          "rxn_006": 0.9,
+          "rxn_007": 0.9,
+          "rxn_008": 0.85,
+          "rxn_010": 0.85,
+          "rxn_011": 0.9,
+          "rxn_012": 0.85,
+          "rxn_013": 0.8,
+          "rxn_014": 0.85,
+          "rxn_015": 0.88
+        },
+        "chemical_feasibility": 0.87,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.73,
+        "target_achievement": 0.9,
+        "overall_confidence": 0.85,
+        "feedback": "Adds UV photolysis of HCN to generate cyanamide (rxn_004). This is mentioned in the literature as a plausible cyanamide source. The pathway is entirely Surface + one Biochemical step, so environmental progression is limited, but the UV step provides a reasonable production mechanism for cyanamide.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Consider adding mineral surface context for UV photolysis step"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_004": 0.8,
+          "rxn_005": 0.9,
+          "rxn_006": 0.9,
+          "rxn_007": 0.9,
+          "rxn_009": 0.85,
+          "rxn_010": 0.85,
+          "rxn_011": 0.9,
+          "rxn_012": 0.85,
+          "rxn_013": 0.8,
+          "rxn_014": 0.85,
+          "rxn_015": 0.88
+        },
+        "chemical_feasibility": 0.87,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.73,
+        "target_achievement": 0.9,
+        "overall_confidence": 0.85,
+        "feedback": "Hydrolytic cyclization variant of P5. Equally well-supported.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Same as P5"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_001": 0.8,
+          "rxn_002": 0.75,
+          "rxn_004": 0.8,
+          "rxn_005": 0.9,
+          "rxn_006": 0.9,
+          "rxn_007": 0.9,
+          "rxn_008": 0.85,
+          "rxn_010": 0.85,
+          "rxn_011": 0.9,
+          "rxn_012": 0.85,
+          "rxn_013": 0.8,
+          "rxn_014": 0.85,
+          "rxn_015": 0.88
+        },
+        "chemical_feasibility": 0.84,
+        "pathway_coherence": 0.87,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.89,
+        "overall_confidence": 0.85,
+        "feedback": "Full Hydrothermal-to-Surface pathway with both HCN and cyanamide sourced from CO2. Shows complete environmental progression from CO2 through hydrothermal CO/HCN generation to surface cyanosulfidic chemistry. Good integration but the longest non-fully-integrated pathway.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_002"
+        ],
+        "suggestions": [
+          "Strengthen evidence for rxn_002; consider whether cyanamide from UV photolysis of hydrothermally-derived HCN is kinetically viable"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_001": 0.8,
+          "rxn_002": 0.75,
+          "rxn_004": 0.8,
+          "rxn_005": 0.9,
+          "rxn_006": 0.9,
+          "rxn_007": 0.9,
+          "rxn_009": 0.85,
+          "rxn_010": 0.85,
+          "rxn_011": 0.9,
+          "rxn_012": 0.85,
+          "rxn_013": 0.8,
+          "rxn_014": 0.85,
+          "rxn_015": 0.88
+        },
+        "chemical_feasibility": 0.84,
+        "pathway_coherence": 0.87,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.89,
+        "overall_confidence": 0.85,
+        "feedback": "Hydrolytic cyclization variant of P7. Same assessment.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_002"
+        ],
+        "suggestions": [
+          "Same as P7"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_001": 0.8,
+          "rxn_002": 0.75,
+          "rxn_003": 0.65,
+          "rxn_005": 0.9,
+          "rxn_006": 0.9,
+          "rxn_007": 0.9,
+          "rxn_008": 0.85,
+          "rxn_010": 0.85,
+          "rxn_011": 0.9,
+          "rxn_012": 0.85,
+          "rxn_013": 0.8,
+          "rxn_014": 0.85,
+          "rxn_015": 0.88
+        },
+        "chemical_feasibility": 0.8,
+        "pathway_coherence": 0.84,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.87,
+        "overall_confidence": 0.82,
+        "feedback": "Includes hydrothermal N2 fixation (rxn_003), which is the most speculative reaction in the network. While N2 reduction on iron minerals has been proposed, experimental yields are very low and conditions are extreme. This weakens the overall confidence of this pathway. However, the downstream chemistry remains strong.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_003",
+          "rxn_002"
+        ],
+        "suggestions": [
+          "Provide specific experimental references for N2 fixation on magnetite/iron minerals under plausible early Earth conditions; consider alternative NH3 sources"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_001": 0.8,
+          "rxn_002": 0.75,
+          "rxn_003": 0.65,
+          "rxn_004": 0.8,
+          "rxn_005": 0.9,
+          "rxn_006": 0.9,
+          "rxn_007": 0.9,
+          "rxn_008": 0.85,
+          "rxn_009": 0.85,
+          "rxn_010": 0.85,
+          "rxn_011": 0.9,
+          "rxn_012": 0.85,
+          "rxn_013": 0.8,
+          "rxn_014": 0.85,
+          "rxn_015": 0.88
+        },
+        "chemical_feasibility": 0.8,
+        "pathway_coherence": 0.86,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.87,
+        "overall_confidence": 0.84,
+        "feedback": "The most comprehensive pathway integrating all three environments (Hydrothermal \u2192 Surface \u2192 Biochemical) with NH3 recycling from rxn_009 and rxn_015. Best environmental progression but inherits the weakness of rxn_003 (N2 fixation). The NH3 recycling concept is elegant and adds network coherence. The 14-step length raises yield concerns but demonstrates the full systems chemistry approach.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_003",
+          "rxn_002"
+        ],
+        "suggestions": [
+          "Address cumulative yield issue over 14 steps; provide concentration/accumulation mechanisms; strengthen N2 fixation evidence"
+        ]
+      }
+    ],
+    "best_pathway_id": "P1",
+    "overall_confidence": 0.87,
+    "network_feedback": "This is an excellent synthesis network that faithfully reproduces the experimentally demonstrated cyanosulfidic protometabolism pathway of Patel et al. (2015, Nature Chemistry) as its core, and extends it with plausible hydrothermal feedstock generation and environmental interconnections. Strengths: (1) The core 10-step pathway (P1/P2) is directly supported by published experimental evidence with detailed mechanistic understanding. (2) The network topology is well-constructed with 4 meaningful hub molecules (HCN, NH3, 2-(2-cyanoethyl)guanidine, 4-hydroxy-2-imino-hexahydropyrimidine) providing proper convergence. (3) The three cyclization variants (rxn_008, rxn_009, and the implicit dry variant) create genuine branching that generates 10 distinct pathways. (4) Environmental flow from Hydrothermal (CO2/N2 reduction) \u2192 Surface (UV and cyanosulfidic chemistry) \u2192 Biochemical (hydrolysis) is well-motivated. (5) Literature alignment is outstanding \u2014 all surface reactions are directly cited from Patel et al. Weaknesses: (1) rxn_015 is labeled Biochemical, but the literature places this nitrile hydrolysis step under Surface cyanosulfidic conditions \u2014 this is a minor labeling issue. (2) rxn_003 (N2 fixation on iron minerals) is the most speculative reaction, with limited experimental support at the required scale. (3) rxn_002 (HCN from CO+NH3 on pyrite) needs stronger citation support. (4) Surface reactions generally lack explicit mineral agent specifications beyond the Cu/H2S system \u2014 the evaluation criteria ask for mineral agents in Surface reactions. (5) The network does not address the chirality problem (L vs D arginine). Overall, this is a high-quality, literature-grounded network that merits approval.",
+    "approved": true,
+    "hub_quality": 0.9,
+    "convergence_quality": 0.88
+  },
+  "success": false,
+  "attempts": 1,
+  "notes": null
+}

@@ -1,0 +1,971 @@
+{
+  "target_molecule": "Arginine",
+  "network": {
+    "target_molecule": "L-Arginine",
+    "overall_strategy": "The network implements two major literature-supported routes to arginine: (1) the Sutherland cyanosulfidic pathway via acrylonitrile, \u03b2-aminopropionitrile, guanidination with cyanamide, hemiaminal trapping, Kiliani-Fischer homologation, and final hydrolysis; and (2) the ornithine guanidination route, where ornithine\u2014sourced either from HCN oligomerization or Strecker synthesis from hydrothermal formaldehyde\u2014is converted to arginine by reaction with cyanamide. Hydrothermal CO\u2082 reduction provides formaldehyde and HCN via Fischer-Tropsch-type and formamide dehydration chemistry, feeding into Surface UV-driven cyanosulfidic processing. Cyanamide, a universal prebiotic reagent, serves as the guanidinylation agent across both major branches. The network features four hub molecules (HCN, cyanamide, \u03b2-aminopropionitrile, ornithine) that create pathway redundancy and environmental interconnection across Hydrothermal, Surface, and Biochemical stages.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen gas",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "formonitrile",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_005",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_006",
+        "formula": "H2S",
+        "iupac_name": "hydrogen sulfide",
+        "common_name": "hydrogen sulfide",
+        "inchi": "InChI=1S/H2S/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_007",
+        "formula": "C2H2",
+        "iupac_name": "ethyne",
+        "common_name": "acetylene",
+        "inchi": "InChI=1S/C2H2/c1-2/h1-2H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_008",
+        "formula": "CH2N2",
+        "iupac_name": "cyanamide",
+        "common_name": "cyanamide",
+        "inchi": "InChI=1S/CH2N2/c2-1-3/h2H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C3H3N",
+        "iupac_name": "2-propenenitrile",
+        "common_name": "acrylonitrile",
+        "inchi": "InChI=1S/C3H3N/c1-2-3-4/h2H,1H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C3H6N2",
+        "iupac_name": "3-aminopropanenitrile",
+        "common_name": "beta-aminopropionitrile",
+        "inchi": "InChI=1S/C3H6N2/c4-2-1-3-5/h1-2,4H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C4H8N4",
+        "iupac_name": "N-(2-cyanoethyl)guanidine",
+        "common_name": "guanidinated beta-aminopropionitrile",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C4H9N3O",
+        "iupac_name": "3-(2-aminoethylamino)-3-hydroxypropanenitrile derivative",
+        "common_name": "hemiaminal 37",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C6H12N4",
+        "iupac_name": "2-amino-5-guanidinopentanenitrile",
+        "common_name": "arginine alpha-aminonitrile",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C5H12N2O2",
+        "iupac_name": "2,5-diaminopentanoic acid",
+        "common_name": "ornithine",
+        "inchi": "InChI=1S/C5H12N2O2/c6-3-1-2-4(7)5(8)9/h4H,1-3,6-7H2,(H,8,9)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C6H14N4O2",
+        "iupac_name": "(2S)-2-amino-5-(diaminomethylideneamino)pentanoic acid",
+        "common_name": "L-arginine",
+        "inchi": "InChI=1S/C6H14N4O2/c7-4(5(11)12)2-1-3-10-6(8)9/h4H,1-3,7H2,(H,11,12)(H4,8,9,10)/t4-/m0/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Fischer-Tropsch-type CO2 reduction to formaldehyde",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high (>50 bar)",
+          "catalyst": "magnetite (Fe3O4)",
+          "aqueous": "true",
+          "other": "Serpentinization-driven H2, alkaline vent conditions"
+        },
+        "mechanism": "Fischer-Tropsch-type surface-catalyzed hydrogenation of CO2 on magnetite/iron surfaces. CO2 is first reduced to CO, then sequential hydrogenation yields formaldehyde as a C1 intermediate. The reaction proceeds via chemisorbed CO on iron oxide surfaces.",
+        "reasoning": "Fischer-Tropsch-type synthesis on magnetite and elemental iron at hydrothermal vent conditions is well-documented for producing C1-C3 oxygenates including formaldehyde (McCollom & Seewald, 2007; Preiner et al., 2020). Serpentinization provides continuous H2 flux driving CO2 reduction."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Formamide pathway: formaldehyde to HCN via thermal dehydration",
+        "inputs": [
+          "mol_003",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "370-470K",
+          "pressure": "high",
+          "catalyst": "pyrite surface",
+          "aqueous": "true",
+          "other": "Subseafloor hydrothermal, mineral surface catalysis"
+        },
+        "mechanism": "Formaldehyde reacts with ammonia to form aminomethanol, which dehydrates to formamide (H2NCHO) on mineral surfaces. Formamide then undergoes thermal dehydration on pyrite/FeS surfaces to yield HCN. This two-step process is facilitated by mineral surface adsorption and high temperature.",
+        "reasoning": "The formamide route to HCN is supported by Saladino et al. (2012) who showed formamide thermal decomposition yields HCN on mineral surfaces including pyrite and iron sulfides. Formamide itself forms readily from HCHO + NH3 under mild conditions (Bada, 2013). This provides a hydrothermal source of HCN complementary to atmospheric photolysis."
+      },
+      {
+        "id": "rxn_003",
+        "name": "UV-driven HCN dimerization to cyanamide",
+        "inputs": [
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase)",
+          "sulfide minerals (stibnite)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 photocatalyst",
+          "aqueous": "true",
+          "other": "UV irradiation (200-300 nm), anoxic atmosphere, shallow evaporitic pools"
+        },
+        "mechanism": "HCN undergoes UV-driven isomerization and dimerization on TiO2 photocatalytic surfaces. Photolysis of HCN in aqueous solution produces HNC (hydrogen isocyanide), which reacts with another HCN molecule to yield cyanamide (H2NCN). The cyanogen (NCCN) intermediate can also hydrolyze to cyanamide under aqueous conditions.",
+        "reasoning": "Cyanamide production from HCN under UV irradiation is supported by Ferris & Orgel (1966) and more recently within the cyanosulfidic framework by Sutherland and coworkers. Patel et al. (2015) identify cyanamide as a critical universal prebiotic reagent for both phosphate activation and guanidination reactions. TiO2 photocatalysis of HCN derivatives is documented by Ritson & Sutherland (2012)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Cu(I)-catalyzed cross-coupling of acetylene and HCN to acrylonitrile",
+        "inputs": [
+          "mol_007",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite, Cu-bearing sulfides)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "Cu(I) on sulfide mineral surfaces",
+          "aqueous": "true",
+          "other": "Anoxic, Cu(I) from mineral weathering, shallow pools near volcanic exhalations"
+        },
+        "mechanism": "Cu(I) ions coordinate with acetylene, activating the C-H bond for nucleophilic attack by cyanide. The reaction proceeds via a copper(I)-acetylide intermediate which undergoes reductive elimination with HCN to form acrylonitrile (CH2=CHCN), establishing the three-carbon tether of the arginine skeleton.",
+        "reasoning": "The Cu(I)-catalyzed coupling of acetylene and HCN to produce acrylonitrile is a key step in the Sutherland cyanosulfidic pathway (Patel et al., 2015; Islam & Powner, 2017). Acetylene is produced via atmospheric photolysis of methane. Cu(I) availability on the early Earth is linked to sulfide mineral weathering in volcanic/hydrothermal settings."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Conjugate addition of ammonia to acrylonitrile",
+        "inputs": [
+          "mol_009",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "none (spontaneous in aqueous NH3)",
+          "aqueous": "true",
+          "other": "Aqueous alkaline conditions (pH 9-10), evaporitic pool"
+        },
+        "mechanism": "Michael-type 1,4-conjugate addition of ammonia across the activated C=C double bond of acrylonitrile. The electron-withdrawing nitrile group activates the alkene toward nucleophilic addition. The reaction proceeds spontaneously in aqueous ammonia at ambient temperature to yield \u03b2-aminopropionitrile (H2NCH2CH2CN).",
+        "reasoning": "The conjugate addition of NH3 to acrylonitrile is a spontaneous, well-known reaction that proceeds in aqueous solution at room temperature (Patel et al., 2015). This reaction is central to the cyanosulfidic synthesis of arginine precursors. Montmorillonite surfaces can concentrate and orient reactants, enhancing yields in dilute prebiotic solutions."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Guanidination of beta-aminopropionitrile with cyanamide",
+        "inputs": [
+          "mol_010",
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "none (aqueous, clay surface concentration)",
+          "aqueous": "true",
+          "other": "Neutral to slightly alkaline pH, evaporitic concentration"
+        },
+        "mechanism": "The primary amine of \u03b2-aminopropionitrile attacks the electrophilic carbon of cyanamide (H2NCN), forming a guanidino group via nucleophilic addition. The reaction yields N-(2-cyanoethyl)guanidine, installing the characteristic guanidinium functionality of arginine. Reaction is relatively inefficient in isolation but proceeds adequately in concentrated prebiotic mixtures.",
+        "reasoning": "Guanidination of amines by cyanamide is a well-established reaction in prebiotic chemistry (Patel et al., 2015). The Sutherland group demonstrated that cyanamide readily converts primary amines to guanidino groups under mild aqueous conditions. The incomplete conversion is noted as part of the systems chemistry approach where the mixture is carried forward through subsequent photoredox processing."
+      },
+      {
+        "id": "rxn_007",
+        "name": "UV photoredox reduction and hemiaminal trapping",
+        "inputs": [
+          "mol_011",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite, Cu-bearing sulfides)",
+          "TiO2 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "Cu(I)/Cu(II) photoredox cycling",
+          "aqueous": "true",
+          "other": "UV irradiation (254 nm), anoxic atmosphere, H2S as reductant"
+        },
+        "mechanism": "Under UV irradiation, Cu(I)/Cu(II) photoredox cycling drives the partial reduction of the guanidinated nitrile. The nitrile group is reduced to an aldehyde via thioamide intermediate using H2S. The resulting \u03b2-aminopropionaldehyde-guanidine derivative is then trapped by residual cyanamide to form a stable hemiaminal (intermediate 37 in Patel et al., 2015). This trapping is described as extraordinarily efficient, preventing the reactive aldehyde from undergoing destructive side reactions.",
+        "reasoning": "The formation of hemiaminal 37 is a critical discovery by Patel et al. (2015), who showed that \u03b2-aminopropionaldehyde is trapped by cyanamide with remarkable selectivity. The Cu(I)/Cu(II) photoredox cycling in the presence of H2S drives the reduction, analogous to processes described in the broader cyanosulfidic framework (Ritson & Sutherland, 2013). This step prevents aldehyde degradation in the complex prebiotic mixture."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Kiliani-Fischer homologation to arginine alpha-aminonitrile",
+        "inputs": [
+          "mol_012",
+          "mol_004",
+          "mol_006",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite, Cu-bearing sulfides)",
+          "TiO2 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "Cu(I)/Cu(II) photoredox cycling",
+          "aqueous": "true",
+          "other": "UV irradiation, sequential dark/light cycles, H2S and HCN additions"
+        },
+        "mechanism": "A multi-step Kiliani-Fischer-type homologation extending the carbon chain. Step 1 (dark): HCN adds to the hemiaminal forming a cyanohydrin. Step 2: H2S addition produces an \u03b1-hydroxythioamide. Step 3 (UV): photoreductive deoxygenation of the \u03b1-hydroxythioamide yields a thioamide. Step 4 (UV): further photoreduction of the thioamide followed by treatment with HCN and NH3 installs the \u03b1-aminonitrile functionality. The product is 2-amino-5-guanidinopentanenitrile, the direct precursor to arginine.",
+        "reasoning": "This Kiliani-Fischer homologation sequence is the core of the Sutherland cyanosulfidic synthesis (Patel et al., 2015). The sequential dark (cyanohydrin formation) and light (photoreduction) cycles provide selectivity and progressive carbon-chain extension. The approach avoids the 'clutter' of non-specific reactions by leveraging the reactivity hierarchy of HCN and H2S derivatives. The pathway produces the arginine \u03b1-aminonitrile alongside precursors for proline and valine as part of a coherent chemical suite."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Hydrolytic conversion of arginine alpha-aminonitrile to arginine",
+        "inputs": [
+          "mol_013"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "none (aqueous hydrolysis)",
+          "aqueous": "true",
+          "other": "Mildly alkaline aqueous solution, pH 7-9, prolonged reaction time or mild heating"
+        },
+        "mechanism": "The nitrile group of the arginine \u03b1-aminonitrile undergoes stepwise hydrolysis: first to the amide (via nucleophilic addition of water) and then to the carboxylic acid. Under mild alkaline conditions, this hydrolysis proceeds slowly but quantitatively to yield L-arginine. The guanidino group remains intact due to its resonance-stabilized positive charge.",
+        "reasoning": "Nitrile hydrolysis to carboxylic acids is a well-established final step in Strecker-type amino acid synthesis (Miller, 1957; Patel et al., 2015). The hydrolysis can proceed under mild geothermal conditions (warm pools, pH 7-9) over geologically plausible timescales. The stability of the guanidinium group under hydrolysis conditions ensures selective conversion of only the \u03b1-nitrile."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Aqueous guanidination of ornithine by cyanamide",
+        "inputs": [
+          "mol_014",
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "290-310K",
+          "pressure": "1 atm",
+          "catalyst": "none",
+          "aqueous": "true",
+          "other": "Neutral to slightly alkaline pH (7-9), aqueous solution, statistical conversion"
+        },
+        "mechanism": "The \u03b4-amino group of the ornithine side chain (pKa ~10.76) attacks the electrophilic carbon of cyanamide, forming a guanidino group via nucleophilic addition-elimination. The reaction is highly selective for the side-chain amine over the \u03b1-amine due to steric and electronic factors. Conversion is statistical, producing mixtures of ornithine and arginine.",
+        "reasoning": "The guanidination of ornithine by cyanamide under aqueous conditions has been experimentally demonstrated as highly selective for the side-chain amine, even when ornithine is incorporated in polypeptides (recent studies on post-synthetic modification of ancestral proteins). This reaction converts ornithine-containing statistical proteins into arginine-containing proteins with improved folding and DNA-binding properties. The selectivity for \u03b4-NH2 over \u03b1-NH2 and the room-temperature aqueous conditions make this highly prebiotically plausible."
+      },
+      {
+        "id": "rxn_011",
+        "name": "HCN oligomerization and hydrolysis to ornithine",
+        "inputs": [
+          "mol_004",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals (apatite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite (concentration and template), apatite (pH buffering)",
+          "aqueous": "true",
+          "other": "Concentrated HCN solutions (>0.1 M), prolonged reaction (weeks-months), wet-dry cycling for concentration, NH3 as nitrogen source"
+        },
+        "mechanism": "Concentrated HCN undergoes oligomerization via diaminomaleonitrile (DAMN) and higher oligomers. These oligomers undergo partial hydrolysis and rearrangement in the presence of NH3 and water. The complex mixture of aminonitriles and amino acids that results includes ornithine (2,5-diaminopentanoic acid) among many products. Montmorillonite clay surfaces concentrate HCN from dilute solutions and catalyze selective hydrolysis pathways. Yields of ornithine are low but detectable.",
+        "reasoning": "Ornithine has been identified in HCN oligomerization products (Ferris & Hagan, 1984; Ferris et al., 1978) and in carbonaceous meteorites (Kvenvolden et al., 1970; Pizzarello et al., 2006). While yields are low in one-pot HCN polymerization, the detection of ornithine in both laboratory HCN solutions and extraterrestrial samples provides independent confirmation of its prebiotic availability. Clay mineral surfaces enhance selectivity and prevent degradation of the diaminoacid product."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Strecker synthesis of ornithine from glutaraldehyde and ammonia",
+        "inputs": [
+          "mol_003",
+          "mol_004",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals (apatite)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite (surface catalysis)",
+          "aqueous": "true",
+          "other": "Multi-step: formaldehyde aldol condensation to C4 aldehyde, then reductive amination of one end, then Strecker at alpha-carbon. Wet-dry cycling concentrates intermediates."
+        },
+        "mechanism": "A multi-step Strecker-type route to ornithine beginning with formaldehyde. Step 1: Formaldehyde undergoes base-catalyzed aldol condensation on mineral surfaces to produce glycolaldehyde and longer-chain aldehydes including succinaldehyde (C4 dialdehyde). Step 2: One aldehyde group of succinaldehyde reacts with NH3 to form a 4-aminobutanal (imine formation + reduction or direct aminol). Step 3: Classic Strecker synthesis at the remaining aldehyde\u2014reaction with NH3 and HCN forms the \u03b1-aminonitrile of ornithine, which hydrolyzes to ornithine. Each step has documented prebiotic precedent, and montmorillonite surfaces promote the aldol and Strecker steps.",
+        "reasoning": "The Strecker synthesis is the most established route to amino acids from aldehydes, NH3, and HCN (Strecker, 1850; Miller, 1957). Formaldehyde undergoes aldol condensation (formose-type) to longer-chain aldehydes, as demonstrated by Breslow (1959) and stabilized by mineral surfaces. The production of diamino acids via Strecker synthesis from dialdehydes is thermodynamically favorable. Montmorillonite catalyzes both the aldol condensation (Hashizume et al., 2013) and the Strecker reaction. This multi-step route provides an independent path to ornithine from hydrothermal formaldehyde."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Standard cyanosulfidic pathway (atmospheric feedstocks)",
+        "description": "The core Sutherland cyanosulfidic route using atmospheric acetylene and HCN. Cu(I)-catalyzed cross-coupling produces acrylonitrile, which is aminated, guanidinated with cyanamide, trapped as hemiaminal 37, and homologated via Kiliani-Fischer chemistry to the arginine \u03b1-aminonitrile, followed by hydrolysis to arginine.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_010",
+          "mol_011",
+          "mol_012",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Hydrothermal HCN-sourced cyanosulfidic pathway",
+        "description": "Extends P1 by sourcing HCN from hydrothermal CO\u2082 fixation. CO\u2082 is reduced to formaldehyde on magnetite, then formaldehyde reacts with ammonia to produce HCN via the formamide pathway on pyrite surfaces. This HCN then enters the cyanosulfidic pathway via acrylonitrile formation.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_004",
+          "mol_009",
+          "mol_010",
+          "mol_012",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Hydrothermal HCN \u2192 cyanamide \u2192 cyanosulfidic pathway",
+        "description": "Hydrothermal HCN production (via CO\u2082 \u2192 formaldehyde \u2192 formamide \u2192 HCN) feeds into both cyanamide production (UV dimerization on TiO\u2082) and acrylonitrile formation. Cyanamide and \u03b2-aminopropionitrile converge in the guanidination step, then proceed through hemiaminal trapping and Kiliani-Fischer homologation.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_004",
+          "mol_008",
+          "mol_010",
+          "mol_012",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Direct ornithine guanidination (atmospheric HCN sourcing)",
+        "description": "Ornithine, produced from HCN oligomerization in concentrated surface pools, is directly guanidinated by cyanamide (from UV-driven HCN dimerization) to yield arginine. This two-branch convergent pathway represents the post-synthetic modification route.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_011",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Ornithine guanidination with hydrothermal cyanamide sourcing",
+        "description": "HCN is produced hydrothermally (CO\u2082 \u2192 HCHO \u2192 HCN), then used both for ornithine production via oligomerization and for cyanamide production via UV processing. Ornithine and cyanamide converge in the guanidination reaction to produce arginine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_011",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_004",
+          "mol_008",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Strecker ornithine from hydrothermal formaldehyde + guanidination",
+        "description": "Formaldehyde from hydrothermal Fischer-Tropsch chemistry feeds into a multi-step Strecker synthesis of ornithine on clay surfaces. The ornithine is then guanidinated by cyanamide (from atmospheric HCN) to yield arginine. This pathway links hydrothermal C1 fixation to surface amino acid synthesis.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_003",
+          "rxn_012",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_008",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Full hydrothermal-to-surface Strecker ornithine pathway",
+        "description": "All carbon and nitrogen originate from hydrothermal processing: CO\u2082 \u2192 HCHO \u2192 HCN (hydrothermal), then HCN \u2192 cyanamide (surface UV), and HCHO + HCN + NH\u2083 \u2192 ornithine (surface Strecker). Ornithine + cyanamide \u2192 arginine (biochemical). Maximum environmental interconnection.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_012",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_004",
+          "mol_008",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Dual ornithine sourcing convergent pathway",
+        "description": "Ornithine is produced simultaneously by two independent routes\u2014HCN oligomerization (rxn_011) and Strecker synthesis from hydrothermal formaldehyde (rxn_012)\u2014creating redundancy. Both ornithine pools converge at the guanidination step with cyanamide to produce arginine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_003",
+          "rxn_011",
+          "rxn_012",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_004",
+          "mol_008",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Cyanosulfidic with hydrothermal cyanamide convergence",
+        "description": "The cyanosulfidic acrylonitrile pathway uses atmospheric acetylene and HCN, while cyanamide is independently produced from hydrothermally-sourced HCN via UV processing. The two branches converge at the guanidination step (rxn_006), then proceed through hemiaminal trapping and homologation to arginine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_008",
+          "mol_009",
+          "mol_010",
+          "mol_012",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Atmospheric-hydrothermal hybrid: \u03b2-aminopropionitrile dual sourcing",
+        "description": "HCN from both atmospheric photochemistry and hydrothermal formamide dehydration feeds into acrylonitrile formation. Cyanamide is produced from the hydrothermal HCN via UV dimerization. The atmospheric and hydrothermal HCN sources create redundant production of \u03b2-aminopropionitrile, which converges with cyanamide at the guanidination step, continuing through the full cyanosulfidic homologation.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_004",
+          "mol_008",
+          "mol_010",
+          "mol_011",
+          "mol_012",
+          "mol_013"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_008",
+      "mol_010",
+      "mol_014"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [
+          "rxn_002"
+        ],
+        "outgoing_reactions": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_008",
+          "rxn_011",
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_008",
+        "incoming_reactions": [
+          "rxn_003"
+        ],
+        "outgoing_reactions": [
+          "rxn_006",
+          "rxn_010"
+        ]
+      },
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_005"
+        ],
+        "outgoing_reactions": [
+          "rxn_006"
+        ]
+      },
+      {
+        "molecule_id": "mol_014",
+        "incoming_reactions": [
+          "rxn_011",
+          "rxn_012"
+        ],
+        "outgoing_reactions": [
+          "rxn_010"
+        ]
+      },
+      {
+        "molecule_id": "mol_015",
+        "incoming_reactions": [
+          "rxn_009",
+          "rxn_010"
+        ],
+        "outgoing_reactions": []
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "L-Arginine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_004": 0.9,
+          "rxn_005": 0.92,
+          "rxn_006": 0.8,
+          "rxn_007": 0.82,
+          "rxn_008": 0.75,
+          "rxn_009": 0.85
+        },
+        "chemical_feasibility": 0.84,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.88,
+        "overall_confidence": 0.85,
+        "feedback": "This is the core Sutherland cyanosulfidic pathway and represents the strongest route in the network. Cu(I)-catalyzed acrylonitrile formation (rxn_004), Michael addition (rxn_005), guanidination (rxn_006), and hemiaminal trapping (rxn_007) all directly mirror Patel et al. 2015. The Kiliani-Fischer homologation (rxn_008) is compressed into a single node which obscures the multi-step nature (cyanohydrin formation, sulfidolysis, deoxygenation, amination) but is mechanistically sound. Entirely Surface \u2192 Biochemical flow; lacks the Hydrothermal origin stage, which reduces environmental interconnection score. Final nitrile hydrolysis to arginine is well-established.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_008"
+        ],
+        "suggestions": [
+          "Consider decomposing rxn_008 into explicit cyanohydrin, sulfidolysis, and deoxygenation sub-steps for greater mechanistic transparency",
+          "Specify mineral catalysts for Surface reactions beyond Cu(I) in rxn_004"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_001": 0.73,
+          "rxn_002": 0.68,
+          "rxn_004": 0.9,
+          "rxn_005": 0.92,
+          "rxn_006": 0.8,
+          "rxn_007": 0.82,
+          "rxn_008": 0.75,
+          "rxn_009": 0.85
+        },
+        "chemical_feasibility": 0.8,
+        "pathway_coherence": 0.85,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.85,
+        "overall_confidence": 0.84,
+        "feedback": "Adds hydrothermal sourcing of HCN via Fischer-Tropsch CO2 reduction to formaldehyde (rxn_001) and formamide-mediated dehydration to HCN (rxn_002). This provides complete Hydrothermal \u2192 Surface \u2192 Biochemical progression, which is excellent. The formaldehyde-to-HCN step via formamide is thermodynamically plausible at hydrothermal temperatures but requires specification of mineral catalysts (e.g., FeS, NiS). The remainder of the pathway is identical to P1 and inherits its strengths.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_008"
+        ],
+        "suggestions": [
+          "Specify mineral catalysts in rxn_001 (e.g., awaruite, magnetite) and rxn_002 (e.g., pyrite)",
+          "Consider whether formaldehyde + NH3 more likely yields aminomethanol/formamide before dehydration to HCN"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_001": 0.73,
+          "rxn_002": 0.68,
+          "rxn_003": 0.55,
+          "rxn_004": 0.9,
+          "rxn_005": 0.92,
+          "rxn_006": 0.8,
+          "rxn_007": 0.82,
+          "rxn_008": 0.75,
+          "rxn_009": 0.85
+        },
+        "chemical_feasibility": 0.74,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.82,
+        "overall_confidence": 0.79,
+        "feedback": "This pathway adds rxn_003 (HCN dimerization to cyanamide) to provide the guanidination reagent internally. The major issue is that HCN dimerization under UV typically gives iminoacetonitrile (HN=CHCN), not cyanamide (H2NCN). While cyanamide can form from HCN-derived precursors, the mechanism described as 'UV-driven dimerization' is not well-supported for direct cyanamide production. This weakens the pathway relative to P1 and P2 where cyanamide is an exogenous starting material.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_003",
+          "rxn_002"
+        ],
+        "suggestions": [
+          "Replace rxn_003 with a more plausible cyanamide source, e.g., photolysis of urea, tautomerization of carbodiimide, or calcium cyanamide mineral dissolution",
+          "Consider cyanamide production via HCNO intermediates"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_011": 0.55,
+          "rxn_003": 0.55,
+          "rxn_010": 0.87
+        },
+        "chemical_feasibility": 0.62,
+        "pathway_coherence": 0.72,
+        "environmental_progression": 0.65,
+        "target_achievement": 0.7,
+        "overall_confidence": 0.66,
+        "feedback": "The shortest pathway (3 steps) via HCN oligomerization to ornithine and guanidination. While ornithine has been detected in HCN polymer hydrolysates, the yield is very low and the mechanism (rxn_011) is poorly specified\u2014it compresses enormous chemical complexity into one step. Additionally, rxn_003 for cyanamide production is problematic. The final guanidination step (rxn_010) is the strongest link, well-supported by literature on statistical post-translational modification of ornithine residues with cyanamide.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_011",
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Decompose rxn_011 into HCN tetramerization, oligomerization, and selective hydrolysis steps",
+          "Add mineral catalysts for HCN oligomerization (e.g., montmorillonite)"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_011": 0.55,
+          "rxn_001": 0.73,
+          "rxn_002": 0.68,
+          "rxn_003": 0.55,
+          "rxn_010": 0.87
+        },
+        "chemical_feasibility": 0.65,
+        "pathway_coherence": 0.73,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.72,
+        "overall_confidence": 0.71,
+        "feedback": "Extends P4 with hydrothermal sourcing of cyanamide via HCN. Better environmental progression but inherits all problems of rxn_003 and rxn_011. The hydrothermal-to-biochemical flow is well-motivated.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_011",
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Strengthen the ornithine synthesis step with more detailed mechanism",
+          "Consider alternative cyanamide sourcing"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_001": 0.73,
+          "rxn_012": 0.5,
+          "rxn_003": 0.55,
+          "rxn_010": 0.87
+        },
+        "chemical_feasibility": 0.6,
+        "pathway_coherence": 0.65,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.68,
+        "overall_confidence": 0.66,
+        "feedback": "The Strecker synthesis of ornithine (rxn_012) has a significant stoichiometric issue: the inputs are formaldehyde, HCN, and NH3, but ornithine's 5-carbon backbone requires glutaraldehyde or an equivalent C5 aldehyde. Formaldehyde is C1; multiple aldol condensation steps would be needed to reach glutaraldehyde, which are not represented. This gap undermines the pathway's feasibility despite good environmental flow.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012",
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Add explicit aldol condensation steps from formaldehyde to glutaraldehyde",
+          "Consider formose-type chemistry as intermediate carbon chain builder",
+          "Specify mineral catalysts for Strecker synthesis"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_001": 0.73,
+          "rxn_002": 0.68,
+          "rxn_012": 0.5,
+          "rxn_003": 0.55,
+          "rxn_010": 0.87
+        },
+        "chemical_feasibility": 0.62,
+        "pathway_coherence": 0.68,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.68,
+        "overall_confidence": 0.69,
+        "feedback": "Full hydrothermal-to-biochemical pathway combining hydrothermal formaldehyde and HCN production with Strecker ornithine synthesis and guanidination. Excellent environmental progression but inherits the C1\u2192C5 gap of rxn_012 and the cyanamide mechanism issue of rxn_003.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012",
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Address the carbon chain extension problem in ornithine Strecker synthesis"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_011": 0.55,
+          "rxn_012": 0.5,
+          "rxn_003": 0.55,
+          "rxn_010": 0.87
+        },
+        "chemical_feasibility": 0.58,
+        "pathway_coherence": 0.7,
+        "environmental_progression": 0.72,
+        "target_achievement": 0.7,
+        "overall_confidence": 0.66,
+        "feedback": "Dual ornithine sourcing convergent pathway combines the weaknesses of both rxn_011 and rxn_012. While the convergent design is topologically elegant, both ornithine synthesis routes have significant mechanistic gaps. The final guanidination step remains strong.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_011",
+          "rxn_012",
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Strengthen individual ornithine synthesis routes before combining"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_001": 0.73,
+          "rxn_002": 0.68,
+          "rxn_003": 0.55,
+          "rxn_004": 0.9,
+          "rxn_005": 0.92,
+          "rxn_006": 0.8,
+          "rxn_007": 0.82,
+          "rxn_008": 0.75,
+          "rxn_009": 0.85
+        },
+        "chemical_feasibility": 0.77,
+        "pathway_coherence": 0.82,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.83,
+        "overall_confidence": 0.81,
+        "feedback": "Cyanosulfidic pathway with hydrothermal cyanamide convergence. Strong overall, combining the proven cyanosulfidic route with hydrothermal feedstock generation. The cyanamide sourcing via rxn_003 is the weak link, but the core cyanosulfidic transformations are robust. Full environmental progression from Hydrothermal through Surface to Biochemical.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Improve cyanamide formation mechanism"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_001": 0.73,
+          "rxn_002": 0.68,
+          "rxn_004": 0.9,
+          "rxn_005": 0.92,
+          "rxn_006": 0.8,
+          "rxn_007": 0.82,
+          "rxn_008": 0.75,
+          "rxn_009": 0.85,
+          "rxn_003": 0.55
+        },
+        "chemical_feasibility": 0.78,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.87,
+        "target_achievement": 0.83,
+        "overall_confidence": 0.81,
+        "feedback": "Atmospheric-hydrothermal hybrid with dual \u03b2-aminopropionitrile sourcing. The dual-source redundancy for key intermediates strengthens robustness. The cyanosulfidic core chemistry remains the primary strength. Good environmental diversity.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_003",
+          "rxn_002"
+        ],
+        "suggestions": [
+          "Clarify the dual sourcing mechanism for \u03b2-aminopropionitrile"
+        ]
+      }
+    ],
+    "best_pathway_id": "P1",
+    "overall_confidence": 0.82,
+    "network_feedback": "This is a well-constructed synthesis network that faithfully implements the major literature-supported routes to L-arginine. The core strength is the accurate representation of the Sutherland cyanosulfidic pathway (P1/P2), including the Cu(I)-catalyzed acrylonitrile formation, guanidination with cyanamide, hemiaminal 37 trapping, and Kiliani-Fischer homologation\u2014all directly supported by Patel et al. 2015. The ornithine guanidination route (P4-P8) captures the important post-synthetic modification concept from the literature but suffers from mechanistic gaps in ornithine synthesis. The network topology is strong: 15 molecules, 12 reactions, 4 well-chosen hub molecules (HCN, cyanamide, \u03b2-aminopropionitrile, ornithine), and 5 convergence points create meaningful pathway redundancy. Two independent routes reach the target (nitrile hydrolysis and ornithine guanidination). Key weaknesses: (1) rxn_003 (HCN \u2192 cyanamide via dimerization) is mechanistically unsupported\u2014HCN dimerization gives iminoacetonitrile, not cyanamide; (2) rxn_011 (HCN oligomerization to ornithine) compresses enormous complexity into one step with low expected yield; (3) rxn_012 (Strecker ornithine from formaldehyde) has a C1\u2192C5 stoichiometric gap. Environmental flow (Hydrothermal \u2192 Surface \u2192 Biochemical) is well-represented in the longer pathways. The network would benefit from: specifying mineral catalysts more explicitly in surface reactions, decomposing compressed multi-step reactions, and fixing the cyanamide formation mechanism. Overall, the network demonstrates strong literature alignment and achieves the target through chemically credible routes.",
+    "approved": true,
+    "hub_quality": 0.85,
+    "convergence_quality": 0.83
+  },
+  "success": false,
+  "attempts": 2,
+  "notes": null
+}

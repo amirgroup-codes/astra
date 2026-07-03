@@ -1,0 +1,946 @@
+{
+  "target_molecule": "L-Alanine",
+  "network": {
+    "target_molecule": "L-Alanine",
+    "overall_strategy": "The network follows the literature-backed conclusion that prebiotic alanine synthesis is robust mainly as DL-alanine through two major hubs: (1) pyruvate-based reductive amination/transamination in hydrothermal or serpentinization-like systems, and (2) acetaldehyde-based Strecker/aminonitrile chemistry in surface or hydrothermal-adjacent settings. Because the provided research shows that direct asymmetric synthesis of alanine is not established, the target L-alanine is obtained through a separate, explicitly post-synthetic enantioenrichment module acting on racemic alanine, using literature-supported circularly polarized UV and mineral-surface selection as weak-bias/amplification mechanisms rather than claiming direct one-step asymmetric synthesis. The network therefore integrates hydrothermal generation and transformation of pyruvate, surface generation and stabilization of alanine aminonitrile pools, hydrolysis to DL-alanine, and final biochemical/prebiotic physical selection toward L-enriched alanine.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_005",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvic acid",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_006",
+        "formula": "C2H4O",
+        "iupac_name": "ethanal",
+        "common_name": "acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_007",
+        "formula": "CHNO",
+        "iupac_name": "methanamide",
+        "common_name": "formamide",
+        "inchi": "InChI=1S/CH3NO/c2-1-3/h1H,(H2,2,3)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C3H6N2",
+        "iupac_name": "2-aminopropanenitrile",
+        "common_name": "alanine aminonitrile",
+        "inchi": "InChI=1S/C3H6N2/c1-3(5)2-4/h3H,5H2,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C4H6N2O",
+        "iupac_name": "N-formyl-2-aminopropanenitrile",
+        "common_name": "N-formyl-Ala-CN",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C3H6O3",
+        "iupac_name": "2-hydroxypropanoic acid",
+        "common_name": "lactic acid",
+        "inchi": "InChI=1S/C3H6O3/c1-2(4)3(5)6/h2,4H,1H3,(H,5,6)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C8H9NO2",
+        "iupac_name": "3-hydroxy-2-methylpyridine-4-carbaldehyde",
+        "common_name": "pyridoxal",
+        "inchi": "InChI=1S/C7H7NO2/c1-5-7(10)6(4-9)2-3-8-5/h2-4,10H,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C8H12N2O",
+        "iupac_name": "4-(aminomethyl)-5-hydroxy-6-methylpyridin-3-ol",
+        "common_name": "pyridoxamine",
+        "inchi": "InChI=1S/C8H12N2O2/c1-5-8(12)7(2-9)6(4-11)3-10-5/h3,11-12H,2,4,9H2,1H3",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C3H7NO2",
+        "iupac_name": "2-aminopropanoic acid",
+        "common_name": "DL-alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C3H7NO2",
+        "iupac_name": "(2S)-2-aminopropanoic acid",
+        "common_name": "L-alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_015",
+        "formula": "H2S",
+        "iupac_name": "sulfane",
+        "common_name": "hydrogen sulfide",
+        "inchi": "InChI=1S/H2S/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Volcanic-plume spark discharge generation of HCN feedstock",
+        "inputs": [
+          "mol_001",
+          "mol_003",
+          "mol_015"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "sulfide minerals (stibnite, molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "boiling water reservoir with discharge; localized high-energy plasma",
+          "pressure": "sub-atmospheric to near-ambient volcanic-plume apparatus",
+          "catalyst": "TiO2-assisted photochemical/mineral concentration context",
+          "aqueous": true,
+          "other": "continuous electric discharge with rainout/trap water; H2S-rich volcanic chemistry"
+        },
+        "mechanism": "Energetic discharge through reduced volcanic gases forms cyanide-bearing products that partition into the aqueous trap, supplying HCN/CN- for downstream Strecker chemistry.",
+        "reasoning": "The report emphasizes that Miller-type and sulfur-rich volcanic discharge systems generate the HCN/aldehyde/NH3 feedstocks underlying alanine Strecker chemistry, and Parker et al. 2011 showed amino-acid synthesis in H2S-containing spark systems; using HCN as an explicit network node follows the feedstock logic rather than overclaiming direct alanine formation in the same step (Miller, 1953; Johnson et al., 2008; Parker et al., 2011)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "HCN hydration to formamide under UV-active surface conditions",
+        "inputs": [
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2",
+          "aqueous": true,
+          "other": "UV irradiation; evaporitic concentration; anoxic conditions"
+        },
+        "mechanism": "HCN in aqueous UV-exposed surface settings is converted into formamide-containing pools that can support aminonitrile stabilization and downstream nitrile chemistry.",
+        "reasoning": "The supplied literature explicitly frames UV photochemistry as linking HCN, water, and formamide, and Green et al. 2023 use formamide-rich systems as a productive medium for alanine-skeleton aminonitrile chemistry; this step is therefore included as the literature-supported entry into the formamide module (Green et al., 2023; review summary in the provided report)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Hydrothermal-adjacent NiS/alkaline production of acetaldehyde from simple C2/CO feedstocks",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "alkaline hydrothermal-adjacent; 7 days experimental timescale",
+          "pressure": "moderate to high",
+          "catalyst": "NiS-related sulfide setting represented with FeS/FeS2 mineral environment",
+          "aqueous": true,
+          "other": "alkaline conditions; hydrothermal vent/sulfide interface chemistry; exact carbon feedstocks in the cited study include acetylene/CO-derived chemistry"
+        },
+        "mechanism": "Sulfide-rich hydrothermal chemistry generates acetaldehyde as a key C3-entry aldehyde for subsequent Strecker conversion to alanine precursors.",
+        "reasoning": "This reaction is restricted to the literature-supported claim that acetaldehyde can be generated in NiS-related hydrothermal-adjacent chemistry and then converted to alanine after cyanide/ammonium addition. The exact upstream chemistry in Diederich et al. 2023 is more specific than generic CO2 reduction, so this node should be interpreted as a condensed representation of the documented hydrothermal-adjacent acetaldehyde source rather than an unconstrained CO2-to-acetaldehyde invention (Diederich et al., 2023)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Strecker synthesis of alanine aminonitrile from acetaldehyde",
+        "inputs": [
+          "mol_006",
+          "mol_003",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite, molybdenite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "surface sulfide minerals and concentration on clay",
+          "aqueous": true,
+          "other": "alkaline to near-neutral aqueous pools; wet-dry concentration; CN-/HCN and NH4+/NH3 present"
+        },
+        "mechanism": "Acetaldehyde condenses with ammonia to an imine/Schiff base, followed by cyanide addition to form 2-aminopropanenitrile.",
+        "reasoning": "The canonical alanine Strecker route from acetaldehyde + NH3 + CN- to alanine aminonitrile is explicitly identified in the report as the direct small-molecule entry route for alanine. Diederich et al. 2023 provide an experimentally grounded alkaline cyanide/ammonium implementation linked to hydrothermal-adjacent acetaldehyde availability, while the broader review emphasizes aminonitrile-first robustness (Diederich et al., 2023; Ruiz-Bermejo et al., 2013)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Formamide-mediated trapping of alanine aminonitrile as N-formyl-Ala-CN",
+        "inputs": [
+          "mol_006",
+          "mol_007",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "staged heating in formamide-rich medium",
+          "pressure": "1 atm",
+          "catalyst": "mineral concentration and UV-active surface context",
+          "aqueous": false,
+          "other": "extended thermal history in formamide-rich microenvironment; acetaldehyde-derived inputs"
+        },
+        "mechanism": "In formamide-rich settings, alanine-skeleton nitrile chemistry is diverted into N-formyl-protected aminonitriles that stabilize nitrogen incorporation and preserve the alanine precursor pool.",
+        "reasoning": "Green et al. 2023 specifically report efficient formation of Ala-CN and N-formyl-Ala-CN from acetaldehyde-derived inputs under staged heating in formamide systems, with N-formyl-Ala-CN often becoming dominant after extended heating. This is a key literature-backed precursor-pool branch and addresses the report's emphasis that free alanine may arise only after later hydrolysis (Green et al., 2023)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Hydrolysis/release of alanine aminonitrile to racemic alanine",
+        "inputs": [
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "variable, 300-370K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": true,
+          "other": "hydrating pool conditions; hydrolysis bottleneck acknowledged"
+        },
+        "mechanism": "Aminonitrile hydrolysis through amide-like intermediates releases free alanine into solution.",
+        "reasoning": "The report repeatedly emphasizes that alanine synthesis in Strecker-type systems is often best viewed as aminonitrile formation followed by context-dependent hydrolysis, with hydrolysis being a major environmental bottleneck. This step is included explicitly to avoid overstating direct free alanine synthesis from cyanide chemistry (Green et al., 2023; Ruiz-Bermejo et al., 2013; review synthesis in the provided report)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Hydrolysis of N-formyl-Ala-CN to racemic alanine",
+        "inputs": [
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "variable, 300-370K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": true,
+          "other": "post-heating aqueous hydrolysis in prebiotic pools"
+        },
+        "mechanism": "Protected aminonitrile pools are deprotected and hydrolyzed, yielding free alanine under later aqueous processing.",
+        "reasoning": "Green et al. 2023 show that N-formyl-Ala-CN is a major product in formamide systems; the report interprets such chemistry as a plausible stabilized precursor pool whose downstream hydrolysis can release alanine. Because the study centers on precursor formation rather than direct free alanine release, this hydrolysis step is marked as necessary network completion grounded in the report's stated bottleneck logic (Green et al., 2023; explicitly noted as a necessary connecting hydrolysis step)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Mixed-valence iron oxyhydroxide reductive amination of pyruvate to racemic alanine",
+        "inputs": [
+          "mol_005",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "70C",
+          "pressure": "hydrothermal/warm vent interface",
+          "catalyst": "mixed Fe(II)/Fe(III) iron oxyhydroxide precipitates represented in iron-rich vent mineral assemblage",
+          "aqueous": true,
+          "other": "pH 10; Fe(II):Fe(III)=1:1; completion over 48-72 h; warm alkaline vent conditions"
+        },
+        "mechanism": "Pyruvate undergoes imine-like condensation with ammonia followed by mixed-valence iron-mediated reductive amination, competing with reduction to lactate.",
+        "reasoning": "This is the strongest hydrothermal alanine-forming module in the report: Barge et al. 2019 measured up to about 70% alanine with about 30% lactate at pH 10, 70C, and Fe(II):Fe(III)=1:1 over 48-72 h. The step is explicitly retained with those conditions because the report identifies it as a high-yield core module for prebiotic alanine synthesis (Barge et al., 2019; Amend & Shock, 1998 for thermodynamic compatibility)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Competing reduction of pyruvate to lactate in iron mineral systems",
+        "inputs": [
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "25-80C",
+          "pressure": "hydrothermal/warm vent interface",
+          "catalyst": "iron oxyhydroxide and reduced iron mineral phases",
+          "aqueous": true,
+          "other": "favored in more reduced systems; competitor to alanine branch"
+        },
+        "mechanism": "Direct carbonyl reduction of pyruvate yields lactate, diverting material away from amino acid synthesis.",
+        "reasoning": "The report stresses that pyruvate chemistry branches strongly between alanine and lactate, and that lactate is the dominant competing sink in many mineral systems. Including this branch is necessary to represent the literature-derived reactivity landscape rather than implying unrealistically exclusive alanine production (Barge et al., 2019; Novikov & Copley, 2013)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Ni0/H2 reductive amination of pyruvate to racemic alanine under mild aqueous conditions",
+        "inputs": [
+          "mol_005",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron (Fe0)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "22C",
+          "pressure": "5 bar H2",
+          "catalyst": "Ni nanoparticles/native metal regime represented within reduced metal-mineral hydrothermal context",
+          "aqueous": true,
+          "other": "pH 7-8; 24 h; pyruvate about 30 mM; representative alanine yield about 17% on Ni catalysts"
+        },
+        "mechanism": "Pyruvate and ammonia form imine-like intermediates that are hydrogenated under native-metal catalysis to alanine.",
+        "reasoning": "Kaur et al. 2024 report pyruvate reductive amination with NH3 and H2 at 5 bar under mild aqueous conditions, giving about 17% alanine over Ni and higher over Pd. Because the instructions constrain hydrothermal agents to the specified mineral set, the reaction is framed as the literature Ni0/native-metal regime occurring in reduced hydrothermal mineral assemblages rather than inventing a different catalyst chemistry (Kaur et al., 2024)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Ni0-assisted conversion of pyridoxal to pyridoxamine under serpentinization-like conditions",
+        "inputs": [
+          "mol_011",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "80C",
+          "pressure": "5 bar H2",
+          "catalyst": null,
+          "aqueous": true,
+          "other": "pH 11; NH3 as low as about 5 mM; hours timescale; serpentinization-like conditions"
+        },
+        "mechanism": "Reductive amination of pyridoxal generates pyridoxamine, creating a soluble amino-group shuttle for proto-biochemical transamination.",
+        "reasoning": "Schlikker et al. 2024/2025 specifically demonstrate pyridoxal to pyridoxamine conversion on Ni0 with H2 and low NH3 under serpentinization-like conditions. This step is included as the literature-supported bridge from mineral-catalyzed synthesis to soluble proto-cofactor-mediated nitrogen transfer (Schlikker et al., 2024/2025)."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Pyridoxamine-mediated transamination/reductive amination of pyruvate to racemic alanine",
+        "inputs": [
+          "mol_005",
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_013",
+          "mol_011"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "80C",
+          "pressure": "5 bar H2",
+          "catalyst": null,
+          "aqueous": true,
+          "other": "pH 11 in serpentinization-like conditions; 18 h; pyridoxal addition raises pyruvate-to-alanine conversion from 7.6% to 34%"
+        },
+        "mechanism": "Pyridoxamine transfers amino equivalents through Schiff-base chemistry to pyruvate, regenerating pyridoxal and increasing alanine selectivity relative to lactate formation.",
+        "reasoning": "Schlikker et al. 2024/2025 show that pyridoxal/pyridoxamine chemistry substantially boosts pyruvate-to-alanine conversion under Ni0, H2, pH 11, 80C conditions. The broader transamination logic is also supported by Dherbassy et al. 2023, who demonstrated strong metal-pyridoxal cooperativity in nonenzymatic transamination. This reaction captures the proto-biochemical nitrogen-shuttle module highlighted in the report (Schlikker et al., 2024/2025; Dherbassy et al., 2023)."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Surface-selective enrichment of L-alanine from racemic alanine",
+        "inputs": [
+          "mol_013"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "variable",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": true,
+          "other": "circularly polarized UV exposure and/or repeated adsorption-desorption cycles on chiral mineral surfaces; small initial ee expected"
+        },
+        "mechanism": "Post-synthetic physical selection acts on racemic alanine through asymmetric photolysis and/or weakly enantioselective adsorption-crystallization, yielding L-enriched alanine rather than direct asymmetric synthesis.",
+        "reasoning": "The report is explicit that essentially all direct alanine syntheses produce racemate, and that L-alanine specifically requires a separate enantioenrichment module. Circularly polarized UV can generate small alanine optical purities up to about 4%, while calcite/quartz adsorption can provide weak selection that may require amplification over cycles. This step therefore intentionally represents enrichment, not a claim of quantitative one-step homochiral synthesis (Bonner-type CPL study cited in the report; Hazen et al., 2001; Asthagiri & Hazen, 2007; quartz adsorption literature cited in the report)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Mixed-valence iron vent route to L-enriched alanine",
+        "description": "Pyruvate formed/available in hydrothermal protometabolic settings is converted to DL-alanine in warm alkaline mixed-valence iron precipitates, then subjected to post-synthetic L-selection.",
+        "reaction_sequence": [
+          "rxn_008",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Ni-H2 hydrothermal reductive amination route",
+        "description": "Pyruvate undergoes native-metal/Ni-like reductive amination under mild aqueous H2 conditions to DL-alanine, followed by L-enrichment.",
+        "reaction_sequence": [
+          "rxn_010",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Pyridoxal shuttle serpentinization route",
+        "description": "Serpentinization-like conditions generate pyridoxamine from pyridoxal, which then transfers nitrogen to pyruvate and boosts alanine formation before L-selection.",
+        "reaction_sequence": [
+          "rxn_011",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_005",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Hydrothermal-adjacent acetaldehyde Strecker route",
+        "description": "Acetaldehyde from sulfide-rich hydrothermal-adjacent chemistry enters surface Strecker synthesis to alanine aminonitrile, hydrolyzes to DL-alanine, then undergoes L-enrichment.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_006",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_008",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Volcanic HCN plus hydrothermal acetaldehyde Strecker route",
+        "description": "Atmospheric/volcanic discharge supplies HCN, which converges with hydrothermal-adjacent acetaldehyde and ammonia in a surface Strecker reaction, followed by hydrolysis and L-selection.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_003",
+          "rxn_004",
+          "rxn_006",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_006",
+          "mol_008",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "HCN-formamide-protected nitrile route",
+        "description": "Surface HCN is converted to formamide, which stabilizes acetaldehyde-derived alanine precursor chemistry as N-formyl-Ala-CN; later hydrolysis releases DL-alanine for L-enrichment.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_005",
+          "rxn_007",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_007",
+          "mol_006",
+          "mol_009",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Direct aminonitrile-first surface route",
+        "description": "Aminonitrile formation is treated as the primary robust product in surface pools; hydrolysis later releases DL-alanine, which is then L-enriched.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_006",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_008",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Protected aminonitrile-first route via staged heating",
+        "description": "Acetaldehyde enters a formamide-rich staged-heating environment to produce N-formyl-Ala-CN, delaying hydrolysis until later aqueous processing and then allowing L-selection.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_005",
+          "rxn_007",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_009",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Volcanic discharge integrated surface-to-biochemical route",
+        "description": "Volcanic discharge provides HCN, UV-active surfaces generate formamide, and acetaldehyde-derived precursor pools are stabilized then hydrolyzed to DL-alanine for later L-enrichment.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_005",
+          "rxn_007",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_007",
+          "mol_009",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Convergent dual-module alanine pool then L-selection",
+        "description": "Hydrothermal pyruvate amination and surface aminonitrile hydrolysis independently populate a shared DL-alanine pool, after which a common physical selection module biases toward L-alanine.",
+        "reaction_sequence": [
+          "rxn_008",
+          "rxn_004",
+          "rxn_006",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_008",
+          "mol_013"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_005",
+      "mol_006",
+      "mol_008",
+      "mol_013",
+      "mol_004"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_005",
+        "incoming_reactions": [],
+        "outgoing_reactions": [
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_003"
+        ],
+        "outgoing_reactions": [
+          "rxn_004",
+          "rxn_005"
+        ]
+      },
+      {
+        "molecule_id": "mol_008",
+        "incoming_reactions": [
+          "rxn_004"
+        ],
+        "outgoing_reactions": [
+          "rxn_006"
+        ]
+      },
+      {
+        "molecule_id": "mol_013",
+        "incoming_reactions": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_010",
+          "rxn_012"
+        ],
+        "outgoing_reactions": [
+          "rxn_013"
+        ]
+      },
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [
+          "rxn_001"
+        ],
+        "outgoing_reactions": [
+          "rxn_002",
+          "rxn_004"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "L-Alanine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_008": 0.95,
+          "rxn_013": 0.55
+        },
+        "chemical_feasibility": 0.78,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.84,
+        "target_achievement": 0.72,
+        "overall_confidence": 0.8,
+        "feedback": "Strong literature alignment for pyruvate-to-DL-alanine via mixed-valence iron oxyhydroxides under warm alkaline vent conditions. The weakness is the final DL-to-L enrichment step, which is plausible only as modest post-synthetic bias rather than robust production of L-alanine. As a route to alanine pool formation this is excellent; as a route to substantially L-enriched alanine it remains only moderately supported.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Specify the enantioenrichment mechanism more concretely, e.g. CPL photolysis or calcite/quartz adsorption with repeated cycling.",
+          "Report expected ee range rather than implying full conversion from DL-alanine to L-alanine.",
+          "Include explicit pyruvate source reaction if evaluating full end-to-end closure."
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_010": 0.93,
+          "rxn_013": 0.55
+        },
+        "chemical_feasibility": 0.76,
+        "pathway_coherence": 0.87,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.71,
+        "overall_confidence": 0.79,
+        "feedback": "The Ni/H2 reductive amination of pyruvate is well supported by recent literature under mild aqueous or serpentinization-like conditions, though exact vent framing depends on catalyst form and pressure. Again, the route is convincing for DL-alanine generation but the final L-selection remains weakly supported quantitatively.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Distinguish Ni nanoparticle mild aqueous conditions from hydrothermal vent conditions more carefully.",
+          "Add explicit pressure and pH parameters matching the cited Ni/H2 studies.",
+          "Treat L-enrichment as a partial-selection module, not a deterministic synthesis step."
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_011": 0.91,
+          "rxn_012": 0.89,
+          "rxn_013": 0.55
+        },
+        "chemical_feasibility": 0.79,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.73,
+        "overall_confidence": 0.81,
+        "feedback": "This is one of the best-integrated pathways in the network. The pyridoxal/pyridoxamine shuttle is closely aligned with the cited serpentinization-like literature and provides a realistic bridge from mineral-assisted chemistry to soluble proto-biochemical transamination. The only serious weakness is that the final enantioenrichment step remains low-confidence.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Clarify whether pyridoxal itself is prebiotically supplied or generated elsewhere in the network.",
+          "Use the literature's reported pH 11, 80 C, H2 5 bar conditions explicitly.",
+          "Frame the endpoint as L-enriched alanine rather than pure L-alanine unless amplification is added."
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_001": 0.79,
+          "rxn_003": 0.62,
+          "rxn_004": 0.9,
+          "rxn_006": 0.82,
+          "rxn_013": 0.55
+        },
+        "chemical_feasibility": 0.73,
+        "pathway_coherence": 0.85,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.72,
+        "overall_confidence": 0.77,
+        "feedback": "The overall Strecker logic is literature-consistent: HCN feedstock, acetaldehyde hub, aminonitrile formation, then hydrolysis. The key weakness is the hydrothermal production of acetaldehyde from CO2 + H2 as written; the literature supports acetaldehyde formation more specifically from C2H2/CO/NiS-related systems rather than this simplified stoichiometry. Final L-selection remains speculative.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_003",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Replace or refine acetaldehyde formation to match the Diederich et al. chemistry more closely.",
+          "Indicate that aminonitrile hydrolysis may be a bottleneck and likely needs specific hydrolytic conditions.",
+          "Avoid overstating the efficiency of the hydrothermal acetaldehyde entry step."
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_001": 0.79,
+          "rxn_003": 0.62,
+          "rxn_004": 0.9,
+          "rxn_006": 0.82,
+          "rxn_013": 0.55
+        },
+        "chemical_feasibility": 0.73,
+        "pathway_coherence": 0.86,
+        "environmental_progression": 0.92,
+        "target_achievement": 0.72,
+        "overall_confidence": 0.78,
+        "feedback": "This pathway captures the intended cross-environment integration well: volcanic/plume HCN feeds a surface Strecker sequence while hydrothermal chemistry supplies acetaldehyde. Literature support is decent for the overall architecture, but the acetaldehyde synthesis node is still underconstrained and the L-enrichment endpoint is only weakly evidenced.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_003",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Tie HCN generation more explicitly to spark-discharge atmospheric chemistry rather than a mineral-mediated surface-only framing.",
+          "Constrain acetaldehyde source chemistry using the specific C2H2/CO/NiS literature.",
+          "Quantify likely enantiomeric excess after the enrichment module."
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_001": 0.79,
+          "rxn_002": 0.84,
+          "rxn_003": 0.62,
+          "rxn_005": 0.83,
+          "rxn_007": 0.74,
+          "rxn_013": 0.55
+        },
+        "chemical_feasibility": 0.72,
+        "pathway_coherence": 0.84,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.7,
+        "overall_confidence": 0.75,
+        "feedback": "The protected aminonitrile concept aligns well with Green et al., especially the idea that N-formyl-Ala-CN can dominate under staged heating. However, the sequence as summarized may under-specify how Ala-CN is actually trapped and later hydrolyzed, and again inherits the weak acetaldehyde source and weak enantioenrichment step. Good conceptually, but less secure chemically than the pyruvate routes.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_003",
+          "rxn_007",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Specify staged heating and formamide-rich conditions explicitly for N-formylaminonitrile formation.",
+          "Clarify whether N-formyl-Ala-CN forms directly from Ala-CN or through a separate aldehyde/formamide route.",
+          "Add stronger support for hydrolysis of the protected nitrile under plausible prebiotic conditions."
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_001": 0.79,
+          "rxn_004": 0.9,
+          "rxn_006": 0.82,
+          "rxn_013": 0.55
+        },
+        "chemical_feasibility": 0.77,
+        "pathway_coherence": 0.87,
+        "environmental_progression": 0.86,
+        "target_achievement": 0.72,
+        "overall_confidence": 0.79,
+        "feedback": "As an aminonitrile-first surface route this is coherent and reasonably literature-grounded. It avoids some uncertainty associated with N-formyl protection, but still depends on acetaldehyde availability being assumed rather than fully grounded inside the pathway as presented. The L-enrichment endpoint remains the limiting issue.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Include a more explicit precursor source for acetaldehyde within the pathway definition.",
+          "State that the main validated product is DL-alanine after hydrolysis.",
+          "Use repeated wet-dry or adsorption cycles if claiming meaningful L-bias."
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_001": 0.79,
+          "rxn_002": 0.84,
+          "rxn_005": 0.83,
+          "rxn_007": 0.74,
+          "rxn_013": 0.55
+        },
+        "chemical_feasibility": 0.74,
+        "pathway_coherence": 0.85,
+        "environmental_progression": 0.89,
+        "target_achievement": 0.7,
+        "overall_confidence": 0.76,
+        "feedback": "This staged-heating protected aminonitrile route is conceptually aligned with the formamide literature, but it is less direct and more condition-sensitive than the pyruvate-based routes. The hydrolysis release step and final L-selection remain under-supported quantitatively.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_007",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Make the staged thermal sequence explicit and literature-matched.",
+          "Acknowledge the possibility that much material remains trapped in nitrile/formyl pools.",
+          "Add an amplification process if substantial L-excess is intended."
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_001": 0.79,
+          "rxn_002": 0.84,
+          "rxn_003": 0.62,
+          "rxn_004": 0.9,
+          "rxn_006": 0.82,
+          "rxn_013": 0.55
+        },
+        "chemical_feasibility": 0.73,
+        "pathway_coherence": 0.87,
+        "environmental_progression": 0.93,
+        "target_achievement": 0.72,
+        "overall_confidence": 0.78,
+        "feedback": "This pathway scores well on environmental integration, showing an effective surface-to-biochemical story. The main technical issue is still the acetaldehyde production step, which is less faithful to the cited chemistry than the rest of the pathway, plus the weak evidence for converting a racemate into strongly L-enriched alanine.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_003",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Revise acetaldehyde production to a more literature-faithful precursor route.",
+          "Distinguish target achievement as DL-alanine synthesis plus L-bias module.",
+          "Include likely losses or competing reactions during aminonitrile hydrolysis."
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_008": 0.95,
+          "rxn_010": 0.93,
+          "rxn_012": 0.89,
+          "rxn_004": 0.9,
+          "rxn_006": 0.82,
+          "rxn_007": 0.74,
+          "rxn_013": 0.55
+        },
+        "chemical_feasibility": 0.81,
+        "pathway_coherence": 0.93,
+        "environmental_progression": 0.91,
+        "target_achievement": 0.74,
+        "overall_confidence": 0.84,
+        "feedback": "This is the strongest network-level pathway because it captures exactly what the literature supports: multiple independent modules converge on a racemic alanine pool, followed by a separate weakly supported enantioenrichment step. The network is highly coherent, convergent, and faithful to the central conclusion of the literature that alanine synthesis is robust but direct L-alanine synthesis is not. The only significant caveat is that rxn_013 should be interpreted as modest enrichment rather than definitive production of pure L-alanine.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Rename the target outcome as L-enriched alanine unless an explicit amplification cycle is added.",
+          "Provide reaction-level conditions and citations for the enrichment module comparable to the synthesis modules.",
+          "Consider adding an explicit note that the network's strongest support is for convergent DL-alanine synthesis."
+        ]
+      }
+    ],
+    "best_pathway_id": "P10",
+    "overall_confidence": 0.82,
+    "network_feedback": "This is a strong synthesis network overall. Topologically it is well connected, has multiple genuine hubs (HCN, pyruvate, acetaldehyde, alanine aminonitrile, DL-alanine), and shows clear convergence from independent hydrothermal and surface modules into a common alanine pool. Its greatest strength is literature alignment: the network correctly centers on the two dominant experimentally supported entry points for alanine synthesis, acetaldehyde-based Strecker chemistry and pyruvate-based reductive amination/transamination, and it explicitly respects the literature's conclusion that direct asymmetric prebiotic synthesis of L-alanine is not established. Environmental interconnection is also good, with hydrothermal pyruvate chemistry and surface nitrile chemistry both feeding biochemical/prebiotic assembly and selection. The main weaknesses are reaction-level specificity in a few places: the acetaldehyde-generation step is oversimplified relative to the cited hydrothermal-adjacent literature, some hydrolysis/formylation steps need more explicit conditions, and the final DL-to-L step is much weaker than the synthesis core and should be framed as partial enantioenrichment rather than definitive target synthesis. Despite those issues, the network is viable and well reasoned as a complete prebiotic alanine network, especially if the endpoint is interpreted as L-enriched alanine rather than pure L-alanine.",
+    "approved": true,
+    "hub_quality": 0.91,
+    "convergence_quality": 0.89
+  },
+  "success": false,
+  "attempts": 2,
+  "notes": null
+}

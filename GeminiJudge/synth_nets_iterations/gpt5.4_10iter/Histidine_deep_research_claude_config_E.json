@@ -1,0 +1,778 @@
+{
+  "target_molecule": "Histidine",
+  "network": {
+    "target_molecule": "Histidine",
+    "overall_strategy": "This network is built around the literature-established conclusion that the only experimentally demonstrated complete prebiotic synthesis of histidine is the Shen-Miller-Or\u00f3 sequence: erythrose + formamidine -> imidazole-4-acetaldehyde, followed by Strecker conversion and hydrolysis to histidine. Accordingly, all target-producing pathways are constrained variants of this single validated bottleneck, differing only in how upstream feedstocks are sourced, concentrated, stabilized, or transferred across environments. Additional imidazole-forming chemistry from Debus-Radziszewski, HCN photochemistry, and the FoDHA-CN cascade is included only as connected contextual chemistry and not as independent target-forming routes, because the supplied literature explicitly states that these branches do not solve the imidazole-4-acetaldehyde bottleneck. The network therefore emphasizes honest convergence on five hubs: formaldehyde, glycolaldehyde, erythrose, hydrogen cyanide, and imidazole-4-acetaldehyde, while preserving hydrothermal-to-surface-to-biochemical interconnection and clearly identifying speculative connector steps where the literature leaves gaps.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_004",
+        "formula": "C2H4O2",
+        "iupac_name": "2-hydroxyethanal",
+        "common_name": "glycolaldehyde",
+        "inchi": "InChI=1S/C2H4O2/c3-1-2-4/h1,4H,2H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_005",
+        "formula": "C4H8O4",
+        "iupac_name": "(2R,3S)-2,3,4-trihydroxybutanal",
+        "common_name": "D-erythrose",
+        "inchi": "InChI=1S/C4H8O4/c5-1-3(7)4(8)2-6/h1,3-4,6-8H,2H2/t3-,4-/m0/s1",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_006",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_007",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_008",
+        "formula": "CH4N2",
+        "iupac_name": "methanimidamide",
+        "common_name": "formamidine",
+        "inchi": "InChI=1S/CH4N2/c2-1-3/h1H,(H3,2,3)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C5H6N2O",
+        "iupac_name": "2-(1H-imidazol-4-yl)acetaldehyde",
+        "common_name": "imidazole-4-acetaldehyde",
+        "inchi": "InChI=1S/C5H6N2O/c8-2-1-5-3-6-4-7-5/h2-4H,1H2,(H,6,7)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C6H7N3",
+        "iupac_name": "2-amino-3-(1H-imidazol-4-yl)propanenitrile",
+        "common_name": "histidine aminonitrile",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C6H9N3O2",
+        "iupac_name": "2-amino-3-(1H-imidazol-4-yl)propanoic acid",
+        "common_name": "histidine",
+        "inchi": "InChI=1S/C6H9N3O2/c7-5(6(10)11)1-4-2-8-3-9-4/h2-3,5H,1,7H2,(H,8,9)(H,10,11)",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C2H2O2",
+        "iupac_name": "ethanedial",
+        "common_name": "glyoxal",
+        "inchi": "InChI=1S/C2H2O2/c3-1-2-4/h1-2H",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C3H4N2",
+        "iupac_name": "1H-imidazole",
+        "common_name": "imidazole",
+        "inchi": "InChI=1S/C3H4N2/c1-2-5-3-4-1/h1-3H,(H,4,5)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C4H4N4",
+        "iupac_name": "2,3-diaminobut-2-enedinitrile",
+        "common_name": "DAMN",
+        "inchi": "InChI=1S/C4H4N4/c5-1-3(7)4(8)2-6/h7-8H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C4H3N5",
+        "iupac_name": "5-amino-1H-imidazole-4-carbonitrile",
+        "common_name": "AICN",
+        "inchi": "InChI=1S/C4H4N4/c5-1-3-4(6)8-2-7-3/h2H,6H2,(H,7,8)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C4H6N4O",
+        "iupac_name": "5-amino-1H-imidazole-4-carboxamide",
+        "common_name": "AICA",
+        "inchi": "InChI=1S/C4H6N4O/c5-3-2(4(6)9)7-1-8-3/h1H,5H2,(H2,6,9)(H,7,8)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_017",
+        "formula": "CH3NO",
+        "iupac_name": "formamide",
+        "common_name": "formamide",
+        "inchi": "InChI=1S/CH3NO/c2-1-3/h1H,(H2,2,3)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_018",
+        "formula": "C4H5N2O2",
+        "iupac_name": "2-formamido-2-cyanoprop-2-enoic acid derivative",
+        "common_name": "N-formyldehydroalanine nitrile",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_019",
+        "formula": "C5H5N3",
+        "iupac_name": "imidazole derivative from cyanide cascade",
+        "common_name": "FoDHA-CN imidazole product",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_020",
+        "formula": "C12H17N5O3",
+        "iupac_name": "2-[(2-amino-3-(1H-imidazol-4-yl)propanoyl)amino]-3-(1H-imidazol-4-yl)propanoic acid",
+        "common_name": "histidylhistidine",
+        "inchi": "InChI=1S/C12H16N6O3/c13-9(1-7-3-14-5-16-7)11(19)18-10(12(20)21)2-8-4-15-6-17-8/h3-6,9-10H,1-2,13H2,(H,14,16)(H,15,17)(H,18,19)(H,20,21)",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO2 reduction to formaldehyde feedstock",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "348K",
+          "pressure": "high",
+          "catalyst": "greigite and magnetite",
+          "aqueous": "true",
+          "other": "alkaline vent-like CO2/H2 interface; included as a conservative feeder step rather than histidine-specific synthesis"
+        },
+        "mechanism": "Mineral-surface reduction of CO2 by H2 gives reduced C1 carbonyl feedstock under vent redox gradients.",
+        "reasoning": "Greigite and related Fe-S phases catalyze CO2 reduction under alkaline hydrothermal conditions, with reported maxima near 75C, while magnetite supports broader CO2 hydrogenation chemistry; this step is used only to supply reduced C1 feedstock to surface chemistry, not as a demonstrated histidine-specific route (Lilova et al., 2020; Kitadai, 2015)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Surface conversion of formaldehyde to glycolaldehyde",
+        "inputs": [
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "borate minerals and TiO2",
+          "aqueous": "true",
+          "other": "shallow-pool photochemical/concentration setting; glycolaldehyde is a known prebiotic sugar precursor and interstellar molecule"
+        },
+        "mechanism": "Reduced C1 carbonyls are concentrated and photochemically coupled to furnish C2 aldehyde feedstock.",
+        "reasoning": "The literature summary identifies glycolaldehyde as a highly plausible prebiotic intermediate derived from formaldehyde chemistry and relevant to later erythrose formation; borate is included for sugar-phase stabilization and TiO2 for surface photochemistry, although this exact mineralized step is a necessary connector rather than a direct histidine experiment (Ricardo et al., 2004; Yi et al., 2023; Kleimeier et al., 2021)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Borate-stabilized aldol formation of erythrose from glycolaldehyde",
+        "inputs": [
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_005"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "borate minerals and montmorillonite",
+          "aqueous": "true",
+          "other": "pH 8-9; evaporitic pool or hot-spring margin; wet-dry concentration"
+        },
+        "mechanism": "Self-aldol and related formose-type C-C bond formation from glycolaldehyde gives tetrose sugars, with borate trapping/stabilizing erythrose.",
+        "reasoning": "Erythrose is required by the Shen synthesis and is described in the supplied literature as obtainable from glycolaldehyde under mildly basic conditions, while borate minerals can stabilize otherwise fragile sugars. This is therefore the literature-supported upstream supply route to the sole demonstrated histidine precursor sugar (Yi et al., 2023; Ricardo et al., 2004; Decker et al., 1982)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "HCN concentration and persistence in surface pools",
+        "inputs": [
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "sulfide minerals (stibnite/molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "280-330K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 and sulfide minerals",
+          "aqueous": "true",
+          "other": "UV-exposed tidal flat or evaporitic pool; included to represent photochemical HCN-rich surface inventory feeding multiple downstream branches"
+        },
+        "mechanism": "Photochemical and evaporative concentration maintains HCN as a network hub available for oligomerization, amidine formation, and Strecker addition.",
+        "reasoning": "The supplied literature repeatedly identifies HCN photochemistry and oligomerization as central to imidazole and purine-related prebiotic chemistry. This node-preserving reaction is included to represent the required surface environmental concentration step rather than a stoichiometric transformation (Ferris and Orgel, 1966; Ferris and Kuder, 1970; Green et al., 2023)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Formamidine generation from HCN and ammonia",
+        "inputs": [
+          "mol_006",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite/molybdenite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-320K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide minerals and montmorillonite",
+          "aqueous": "true",
+          "other": "concentrated aqueous pool; highly limited by rapid hydrolysis and low plausibility"
+        },
+        "mechanism": "HCN and ammonia furnish amidine chemistry under concentrated conditions, but the product is hydrolytically fragile.",
+        "reasoning": "The Shen route requires formamidine, and the supplied review identifies HCN + NH3 as its conceptual source while emphasizing that formamidine is extremely labile and that the 0.3 M concentration used experimentally is likely prebiotically unrealistic. This step is therefore included as a necessary but weakly plausible connector with explicit caveat (Shen et al., 1987; Shen et al., 1990; V\u00e1zquez-Salazar et al., 2018)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Amadori-type formation of imidazole-4-acetaldehyde from erythrose and formamidine",
+        "inputs": [
+          "mol_005",
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "298K",
+          "pressure": "1 atm",
+          "catalyst": "borate minerals and montmorillonite",
+          "aqueous": "true",
+          "other": "aqueous solution with formamidine at 0.3 M; initial Schiff base followed by Amadori rearrangement; reported yield about 1.6% from erythrose"
+        },
+        "mechanism": "Erythrose condenses with formamidine to a Schiff base, then undergoes Amadori rearrangement/internal redox to build the imidazole ring and furnish the key aldehyde.",
+        "reasoning": "This is the crucial validated bottleneck in the only complete prebiotic histidine synthesis. The literature summary specifies erythrose + formamidine, Schiff-base formation, Amadori rearrangement, and formation of imidazole-4-acetaldehyde at 1.6% yield. Borate/clay are included as plausible surface concentration/stabilization agents consistent with the required mineral specification, but the underlying chemistry is from Shen's experiments (Shen et al., 1987; Shen et al., 1990; V\u00e1zquez-Salazar et al., 2018)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Strecker conversion of imidazole-4-acetaldehyde to histidine aminonitrile",
+        "inputs": [
+          "mol_009",
+          "mol_006",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "sulfide minerals (stibnite/molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "300-320K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite and sulfide minerals",
+          "aqueous": "true",
+          "other": "mildly basic aqueous conditions; imine formation followed by cyanide addition"
+        },
+        "mechanism": "The aldehyde forms an imine with ammonia; cyanide adds to give the alpha-aminonitrile precursor of histidine.",
+        "reasoning": "The second stage of the Shen-Miller-Or\u00f3 synthesis is a classical Strecker sequence from imidazole-4-acetaldehyde using HCN and NH3. This is the only literature-supported direct extension from the key aldehyde toward histidine (Shen et al., 1990; V\u00e1zquez-Salazar et al., 2018)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Hydrolysis of histidine aminonitrile to histidine",
+        "inputs": [
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "true",
+          "other": "aqueous hydrolysis in prebiotic pool; overall histidine yield about 3.5% relative to erythrose in the Shen sequence"
+        },
+        "mechanism": "Nitrile hydrolysis converts the Strecker aminonitrile to the amino acid carboxylate.",
+        "reasoning": "This completes the only experimentally demonstrated prebiotic histidine synthesis, with product identification by HPLC and LC-MS/MS in the Shen work (Shen et al., 1990; V\u00e1zquez-Salazar et al., 2018)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Debus-Radziszewski imidazole synthesis from glyoxal, formaldehyde, and ammonia",
+        "inputs": [
+          "mol_012",
+          "mol_003",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "298K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 and montmorillonite",
+          "aqueous": "true",
+          "other": "mild aqueous conditions; room temperature"
+        },
+        "mechanism": "Carbonyl-ammonia condensation via diimine-like intermediates gives the imidazole heterocycle.",
+        "reasoning": "The literature explicitly supports mild aqueous Debus-Radziszewski formation of imidazole from glyoxal, formaldehyde, and ammonia, and computational work supports a 1,2-diimine intermediate. This branch is included only as contextual imidazole chemistry and not as a histidine route because no demonstrated bridge to imidazole-4-acetaldehyde exists (Or\u00f3 et al., 1984; Kua et al., 2011)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "HCN tetramerization to DAMN",
+        "inputs": [
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "sulfide minerals (stibnite/molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 and sulfide minerals",
+          "aqueous": "true",
+          "other": "HCN-rich UV-exposed surface pool"
+        },
+        "mechanism": "HCN oligomerizes under concentrated surface conditions to the tetramer diaminomaleonitrile.",
+        "reasoning": "DAMN is identified in the supplied literature as a highly plausible HCN oligomerization product and a key hub in aminoimidazole photochemistry. This branch is connected to the network through HCN but is not counted as a direct histidine synthesis route (Ferris and Orgel, 1966; Ferris and Kuder, 1970)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "UV photoisomerization of DAMN to AICN and hydrolysis to AICA",
+        "inputs": [
+          "mol_014"
+        ],
+        "outputs": [
+          "mol_015",
+          "mol_016"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-320K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 and phosphate minerals",
+          "aqueous": "true",
+          "other": "UV near 350 nm; subsequent hydrolysis in aqueous medium"
+        },
+        "mechanism": "DAMN undergoes UV-driven rearrangement to 5-aminoimidazole-4-carbonitrile, followed by hydrolysis to the carboxamide AICA.",
+        "reasoning": "The literature explicitly describes near-quantitative UV photoisomerization of DAMN to AICN and subsequent hydrolysis to AICA, establishing facile prebiotic aminoimidazole chemistry. However, the same review emphasizes that this is relevant to purine chemistry and does not provide a demonstrated shortcut to histidine (Ferris and Orgel, 1966; Ferris and Kuder, 1970; V\u00e1zquez-Salazar et al., 2018)."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Formamide heating chemistry to HCN/formamide pool and FoDHA-CN precursor chemistry",
+        "inputs": [
+          "mol_017",
+          "mol_004",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_018"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "sulfide minerals (stibnite/molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "433-473K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 and sulfide minerals",
+          "aqueous": "false",
+          "other": "formamide-rich drying/heating regime; connects formamide chemistry to dehydroalanine nitrile precursor space"
+        },
+        "mechanism": "Concentrated formamide/cyanide-rich surface chemistry furnishes activated nitrile precursor space including N-formyldehydroalanine nitrile.",
+        "reasoning": "Formamide chemistry under 160-200C with mineral catalysts is well documented for diverse prebiotic products, and the 2023 Sutherland study identifies glycolaldehyde, HCN, and formamide as simple precursor space leading to FoDHA-CN chemistry. This connector is included to keep the branch attached without overstating direct histidine relevance (Saladino et al., 2012; Saladino et al., 2015; Green et al., 2023)."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Cyanide-triggered FoDHA-CN imidazole cascade",
+        "inputs": [
+          "mol_018",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_019"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite/molybdenite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "ambient",
+          "pressure": "1 atm",
+          "catalyst": "sulfide minerals and montmorillonite",
+          "aqueous": "true",
+          "other": "pH 9.2; reported imidazole derivative yield 63%"
+        },
+        "mechanism": "Cyanide addition triggers a cascade forming multiple C-N bonds and an imidazole derivative from the activated nitrile precursor.",
+        "reasoning": "Green, Xu, and Sutherland reported high-yield formation of an imidazole derivative from N-formyldehydroalanine nitrile and cyanide at pH 9.2. The supplied review explicitly identifies this as promising imidazole chemistry but not yet extended to histidine; therefore it is included as a contextual branch only (Green et al., 2023)."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Mineral-assisted condensation of histidine to histidylhistidine",
+        "inputs": [
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_020"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          null
+        ],
+        "conditions": {
+          "temperature": "333-423K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": "variable",
+          "other": "wet-dry cycling on mineral surfaces; peptide bond formation after histidine appears"
+        },
+        "mechanism": "Surface-assisted dehydration condenses histidine monomers into short peptides and stabilizes product against decomposition.",
+        "reasoning": "Once histidine is formed, mineral surfaces such as pyrite and antigorite can promote self-assembly and peptide bond formation, and histidyl peptides have recognized catalytic relevance. This reaction is downstream of target formation and demonstrates biochemical capture rather than synthesis of histidine itself (Madrigal-Trejo et al., 2021; White and Erickson, 1981; Astbury et al., 2024)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Canonical Shen surface pathway from erythrose and formamidine",
+        "description": "Minimal validated histidine route: pre-existing erythrose and formamidine are converted by the Shen Amadori sequence to imidazole-4-acetaldehyde, then through Strecker chemistry and hydrolysis to histidine.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_008"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Borate-stabilized sugar route to Shen pathway",
+        "description": "Glycolaldehyde is converted to erythrose in a borate-stabilized surface setting, then enters the only demonstrated histidine-producing sequence.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Hydrothermal C1 feedstock to surface sugar route",
+        "description": "Hydrothermal reduction supplies formaldehyde, which is transferred to surface chemistry to make glycolaldehyde and erythrose before entering the Shen sequence.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_004",
+          "mol_005",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "HCN-ammonia-derived formamidine entry to Shen pathway",
+        "description": "An HCN-rich surface pool supplies formamidine from HCN and NH3, which then couples with available erythrose in the validated Shen ring-forming step.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_009",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Full hydrothermal-to-surface-to-biochemical histidine pathway",
+        "description": "Integrated environmental pathway beginning with vent-derived reduced carbon feedstock, proceeding through surface sugar generation and HCN-derived formamidine, and ending with biochemical hydrolysis to histidine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_004",
+          "mol_005",
+          "mol_008",
+          "mol_009",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Concentrated-pool variant of the Shen pathway",
+        "description": "A short target-producing route in which erythrose, HCN, and NH3 are concentrated in a drying surface pool, formamidine forms transiently, and the Shen-Strecker sequence proceeds before hydrolysis destroys intermediates.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_009",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Sugar-first convergence route",
+        "description": "Surface chemistry first generates and stabilizes erythrose; a separately concentrated HCN-ammonia pool supplies formamidine, and the two streams converge at the sole validated imidazole-4-acetaldehyde bottleneck.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_008",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Hydrothermal feedstock plus pre-existing HCN route",
+        "description": "Vent-derived formaldehyde is converted on the surface to erythrose, while independent surface HCN inventory supports Strecker conversion; both streams meet at imidazole-4-acetaldehyde.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_004",
+          "mol_005",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Target formation followed by peptide capture",
+        "description": "The validated histidine synthesis is followed by mineral-assisted condensation to histidylhistidine, illustrating biochemical retention of a thermally fragile product once formed.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_010",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Most plausible literature-constrained complete route",
+        "description": "The best-supported end-to-end network route under the supplied literature: hydrothermal reduced carbon feedstock, borate-stabilized erythrose generation, transient formamidine formation in HCN-rich pools, Shen Amadori ring closure, Strecker conversion, and hydrolysis to histidine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_004",
+          "mol_005",
+          "mol_008",
+          "mol_009",
+          "mol_010"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_003",
+      "mol_004",
+      "mol_005",
+      "mol_006",
+      "mol_009"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_005",
+        "incoming_reactions": [
+          "rxn_003"
+        ],
+        "outgoing_reactions": [
+          "rxn_006"
+        ]
+      },
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_004"
+        ],
+        "outgoing_reactions": [
+          "rxn_005",
+          "rxn_007",
+          "rxn_010",
+          "rxn_012",
+          "rxn_013"
+        ]
+      },
+      {
+        "molecule_id": "mol_009",
+        "incoming_reactions": [
+          "rxn_006"
+        ],
+        "outgoing_reactions": [
+          "rxn_007"
+        ]
+      },
+      {
+        "molecule_id": "mol_003",
+        "incoming_reactions": [
+          "rxn_001"
+        ],
+        "outgoing_reactions": [
+          "rxn_002",
+          "rxn_009"
+        ]
+      },
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [
+          "rxn_002"
+        ],
+        "outgoing_reactions": [
+          "rxn_003",
+          "rxn_012"
+        ]
+      }
+    ]
+  },
+  "config": "E"
+}

@@ -1,0 +1,1123 @@
+{
+  "target_molecule": "Threonine",
+  "network": {
+    "target_molecule": "L-Threonine",
+    "overall_strategy": "This network models the prebiotic synthesis of L-threonine (2-amino-3-hydroxybutanoic acid) through two major literature-supported frameworks: (1) the Sutherland cyanosulfidic protometabolism, where UV-driven reductive homologation of HCN yields C2/C3 intermediates that ultimately produce the threonine aminonitrile via Strecker chemistry on lactaldehyde, and (2) the Prebiotic Sugar Pathway, where aldol condensation of C2 units produces erythrose, which reacts with NH3 and H2S to yield an activated threonine thioester. Hydrothermal environments provide CO, formate, formaldehyde, and acetaldehyde via Fischer-Tropsch-type (FTT) synthesis on iron/nickel minerals. Surface environments host the cyanosulfidic photochemistry (Cu(I)/Cu(II) photoredox, UV, H2S), formose chemistry (borate-stabilized), aldol condensations on montmorillonite, and Strecker synthesis. Final hydrolysis of the two activated intermediates (aminonitrile and thioester) to free threonine occurs under mild biochemical/prebiotic conditions. Five hub molecules (formaldehyde, glycolaldehyde, glyceraldehyde, lactaldehyde, HCN) create network density and multiple convergent routes. Thermal stability constraints (threonine degrades above ~120\u00b0C) are respected by ensuring all final assembly and hydrolysis steps occur at \u2264350K. Stereochemical control remains an acknowledged open problem; rigid mineral surfaces and the bicyclic intermediates proposed by Aylward (Mg-porphin catalysis) offer partial solutions, but full diastereoselectivity is not yet resolved prebiotically.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen gas",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "H2S",
+        "iupac_name": "hydrogen sulfide",
+        "common_name": "hydrogen sulfide",
+        "inchi": "InChI=1S/H2S/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_005",
+        "formula": "NH3",
+        "iupac_name": "ammonia",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_006",
+        "formula": "H2O",
+        "iupac_name": "water",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_007",
+        "formula": "CO",
+        "iupac_name": "carbon monoxide",
+        "common_name": "carbon monoxide",
+        "inchi": "InChI=1S/CO/c1-2",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_008",
+        "formula": "HCOO-",
+        "iupac_name": "formate",
+        "common_name": "formate",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)/p-1",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_009",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C2H4O",
+        "iupac_name": "acetaldehyde",
+        "common_name": "acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C2H3NO",
+        "iupac_name": "2-hydroxyacetonitrile",
+        "common_name": "glycolonitrile",
+        "inchi": "InChI=1S/C2H3NO/c3-1-2-4/h4H,2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C2H4O2",
+        "iupac_name": "2-hydroxyacetaldehyde",
+        "common_name": "glycolaldehyde",
+        "inchi": "InChI=1S/C2H4O2/c3-1-2-4/h1,4H,2H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C3H6O3",
+        "iupac_name": "(2R)-2,3-dihydroxypropanal",
+        "common_name": "glyceraldehyde",
+        "inchi": "InChI=1S/C3H6O3/c4-1-3(6)2-5/h1,3,5-6H,2H2/t3-/m0/s1",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C3H6O2",
+        "iupac_name": "2-hydroxypropanal",
+        "common_name": "lactaldehyde",
+        "inchi": "InChI=1S/C3H6O2/c1-3(5)2-4/h2-3,5H,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C4H8O4",
+        "iupac_name": "(2R,3R)-2,3,4-trihydroxybutanal",
+        "common_name": "erythrose",
+        "inchi": "InChI=1S/C4H8O4/c5-1-3(7)4(8)2-6/h1,3-4,6-8H,2H2/t3-,4+/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C4H7N2O",
+        "iupac_name": "2-amino-3-hydroxybutanenitrile",
+        "common_name": "threonine aminonitrile",
+        "inchi": "InChI=1S/C4H8N2O/c1-3(7)4(6)2-5/h3-4,7H,6H2,1H3",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_017",
+        "formula": "C4H9NO3S",
+        "iupac_name": "S-(2-amino-3-hydroxybutanoyl) thiol",
+        "common_name": "threonine thioester",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_018",
+        "formula": "C4H9NO3",
+        "iupac_name": "(2S,3R)-2-amino-3-hydroxybutanoic acid",
+        "common_name": "L-threonine",
+        "inchi": "InChI=1S/C4H9NO3/c1-2(6)3(5)4(7)8/h2-3,6H,5H2,1H3,(H,7,8)/t2-,3+/m1/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "CO2 hydrogenation to formate on greigite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-200 bar)",
+          "catalyst": "greigite (Fe3S4)",
+          "aqueous": "true",
+          "other": "Alkaline hydrothermal vent, pH 9-11, H2-rich serpentinization fluid"
+        },
+        "mechanism": "CO2 adsorbs onto the greigite surface at Fe-Ni sites analogous to biological [Fe4S4] clusters. H2 dissociates on the mineral surface, providing hydride equivalents that reduce CO2 to formate via a surface-bound formylate intermediate. The reaction mimics the first step of the biological Wood-Ljungdahl pathway.",
+        "reasoning": "Greigite-catalyzed CO2 reduction to formate is well-documented in hydrothermal vent simulations. The structural analogy between greigite and biological [Fe4S4] clusters supports this as a primordial carbon fixation route (Preiner et al., 2020; Yamaguchi et al., 2014). Hudson et al. (2020) demonstrated formate production from CO2 + H2 on iron sulfide minerals at vent-relevant conditions."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Reverse water-gas shift on magnetite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_007",
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "450-550K",
+          "pressure": "high (100-300 bar)",
+          "catalyst": "magnetite (Fe3O4)",
+          "aqueous": "true",
+          "other": "Black smoker vent interface, high temperature zone"
+        },
+        "mechanism": "CO2 and H2 react on magnetite surfaces via the reverse water-gas shift reaction: CO2 + H2 \u2192 CO + H2O. Magnetite provides Fe2+/Fe3+ redox cycling to facilitate electron transfer. The reaction is thermodynamically favored at high temperatures.",
+        "reasoning": "The reverse water-gas shift reaction on iron oxide catalysts is a well-established industrial process and has been demonstrated under hydrothermal conditions relevant to submarine vents. Magnetite is an effective catalyst for this conversion (Seewald et al., 2006; McCollom & Seewald, 2007). CO is a critical feedstock for subsequent Fischer-Tropsch-type synthesis."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Fischer-Tropsch-type formaldehyde synthesis",
+        "inputs": [
+          "mol_007",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "400-450K",
+          "pressure": "high (50-200 bar)",
+          "catalyst": "magnetite with trace Ni",
+          "aqueous": "true",
+          "other": "Subseafloor hydrothermal, moderate pH zone"
+        },
+        "mechanism": "CO adsorbs on magnetite/Fe0 surfaces and is partially hydrogenated to formaldehyde (HCHO) as a C1 oxygenate product of Fischer-Tropsch-type (FTT) synthesis. Yields are low but formaldehyde is continuously produced and can accumulate in cooler vent effluents.",
+        "reasoning": "FTT synthesis of C1-C3 oxygenates (including formaldehyde and methanol) on magnetite and native iron catalysts under hydrothermal conditions has been demonstrated by McCollom et al. (1999) and Holm & Hennet (1992). While yields of formaldehyde are modest, the continuous nature of hydrothermal flow allows accumulation in downstream environments."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Fischer-Tropsch-type acetaldehyde synthesis",
+        "inputs": [
+          "mol_007",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "400-470K",
+          "pressure": "high (50-200 bar)",
+          "catalyst": "magnetite/Fe0 with trace Ni, Co",
+          "aqueous": "true",
+          "other": "Subseafloor hydrothermal, longer residence time"
+        },
+        "mechanism": "CO undergoes chain-growth hydrogenation on mineral surfaces. After initial C-H bond formation and C-C coupling, a C2 oxygenate (acetaldehyde) is released. The Anderson-Schulz-Flory distribution of FTT products favors shorter-chain oxygenates under these conditions.",
+        "reasoning": "FTT synthesis of acetaldehyde and other C2 oxygenates has been reported in hydrothermal experiments (McCollom et al., 1999; Rushdi & Simoneit, 2001). Acetaldehyde is also relevant to parent body processing on asteroids, where it is formed from CO + H2 during aqueous alteration (as evidenced by Murchison meteorite organics, Elsila et al., 2012). Yields are low relative to methanol/formaldehyde but prebiotically significant."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Formate reduction to formaldehyde on native iron",
+        "inputs": [
+          "mol_008",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_009",
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron (Fe0)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "Fe0/FeS",
+          "aqueous": "true",
+          "other": "Alkaline vent interior, reducing conditions"
+        },
+        "mechanism": "Formate is further reduced on Fe0/FeS surfaces via a two-electron reduction with H2 as the terminal reductant. The reaction proceeds: HCOO- + H2 \u2192 HCHO + OH-. Fe0 provides strong reducing power and mackinawite acts as a co-catalyst for hydride transfer.",
+        "reasoning": "The stepwise reduction of CO2 \u2192 formate \u2192 formaldehyde on iron-based mineral catalysts has been proposed as a key pathway in the iron-sulfur world scenario. While direct experimental yields are modest, Herschy et al. (2014) and Roldan et al. (2015) provided computational and experimental evidence for sequential reduction on iron mineral surfaces at vent-relevant temperatures. This reaction connects the well-supported formate production (rxn_001) to the critical formaldehyde hub."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Cyanosulfidic reductive homologation of HCN to glycolonitrile",
+        "inputs": [
+          "mol_003",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "stibnite (Sb2S3)",
+          "Cu(I)/Cu(II) minerals (chalcocite/cuprite)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "Cu(I)/Cu(II) photoredox cycling with H2S as stoichiometric reductant",
+          "aqueous": "true",
+          "other": "UV irradiation (\u03bb < 300 nm), shallow volcanic pool, pH 6-8"
+        },
+        "mechanism": "HCN undergoes UV-driven reductive homologation. Cu(I) is photo-oxidized to Cu(II), generating a solvated electron that reduces HCN. H2S acts as a sacrificial reductant to regenerate Cu(I). The resulting formaldehyde equivalent combines with a second HCN to form glycolonitrile (HOCH2CN) as the primary C2 product. Stibnite provides a sulfide mineral surface that concentrates reactants and co-catalyzes the photoredox cycle.",
+        "reasoning": "This is the foundational reaction of Sutherland's cyanosulfidic protometabolism (Patel et al., 2015; Xu et al., 2018). Cu(I)/Cu(II) photoredox cycling was identified as essential for driving the reductive homologation of HCN through C1\u2192C2\u2192C3 intermediates. Glycolonitrile is the first stable C2 product of this cascade. Ritson & Sutherland (2012) demonstrated this photochemistry explicitly, showing high yields under UV irradiation with Cu and H2S."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Glycolonitrile hydrolysis to glycolaldehyde",
+        "inputs": [
+          "mol_011",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase)",
+          "phosphate minerals (apatite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "UV photolysis on TiO2 surface, mildly acidic pH 4-6",
+          "aqueous": "true",
+          "other": "UV irradiation, evaporitic pool with mineral surfaces"
+        },
+        "mechanism": "Glycolonitrile (HOCH2CN) undergoes UV-assisted hydrolysis of the nitrile group. On TiO2 surfaces, UV generates reactive oxygen species that facilitate C-N bond cleavage. The product is glycolaldehyde (HOCH2CHO), the key C2 sugar building block. Phosphate minerals buffer pH and can form complexes that protect the aldehyde from further oxidation.",
+        "reasoning": "The conversion of glycolonitrile to glycolaldehyde is a key step in the Sutherland cyanosulfidic network (Patel et al., 2015). UV-driven hydrolysis of nitriles to aldehydes has been demonstrated under prebiotic conditions (Ritson & Sutherland, 2012). TiO2 photocatalysis on early Earth surfaces would accelerate this hydrolysis (Cleaves et al., 2012). The production of glycolaldehyde feeds both the sugar synthesis and amino acid precursor networks."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Formose self-condensation of formaldehyde to glycolaldehyde",
+        "inputs": [
+          "mol_009",
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "Ca(OH)2 + borate; montmorillonite surface",
+          "aqueous": "true",
+          "other": "Evaporitic pool, alkaline conditions pH 8-10, borate stabilization"
+        },
+        "mechanism": "Two molecules of formaldehyde undergo base-catalyzed aldol condensation (the first step of the formose reaction) to yield glycolaldehyde. Ca(OH)2 provides the necessary basicity. Borate minerals complex with glycolaldehyde as it forms, stabilizing it against further formose polymerization into complex tar. Montmorillonite surfaces concentrate reactants and template the reaction.",
+        "reasoning": "The formose reaction is the classic route from formaldehyde to C2+ sugars (Butlerow, 1861). The key innovation for prebiotic plausibility is borate stabilization, which channels the formose reaction toward specific sugar products by complexing with vicinal diols (Ricardo et al., 2004; Benner et al., 2012). This provides an independent route to glycolaldehyde that does not require HCN or UV, serving as a redundant pathway."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Aldol condensation: formaldehyde + glycolaldehyde \u2192 glyceraldehyde",
+        "inputs": [
+          "mol_009",
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "borate minerals (colemanite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite clay surface; borate stabilization of product",
+          "aqueous": "true",
+          "other": "Mildly alkaline pH 7-9, amino acid or NH3 as organocatalyst"
+        },
+        "mechanism": "Formaldehyde acts as the electrophilic partner; the enolizable glycolaldehyde acts as the nucleophile. On montmorillonite interlayer surfaces, the reactants are concentrated and oriented. NH3 or existing amino acids can catalyze the aldol at moderate pH (the literature documents pH 5.2 catalysis by amino acids). Borate minerals complex with the glyceraldehyde product, stabilizing it.",
+        "reasoning": "Aldol condensation of formaldehyde with glycolaldehyde to give glyceraldehyde is a well-established step in the formose network and in the prebiotic sugar pathway. The amino acid catalysis at moderate pH was demonstrated in studies of the Prebiotic Sugar Pathway. Montmorillonite's role in concentrating dilute organics and templating reactions is well-documented (Ferris et al., 1996; Lambert, 2008). Borate stabilization of trioses follows Ricardo et al. (2004)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Aldol self-condensation: glycolaldehyde + glycolaldehyde \u2192 erythrose",
+        "inputs": [
+          "mol_012",
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "borate minerals (ulexite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite clay, mildly alkaline pH",
+          "aqueous": "true",
+          "other": "Evaporitic pool; NH3 or amino acid organocatalysis"
+        },
+        "mechanism": "Two glycolaldehyde molecules undergo aldol condensation. One molecule provides the enol/enolate nucleophile and the other serves as the electrophilic aldehyde acceptor. The product is a mixture of C4 tetroses including erythrose and threose, with erythrose as the kinetically favored aldotetrose. Montmorillonite surfaces orient the reactants and borate complexes channel the product distribution.",
+        "reasoning": "Self-aldol condensation of glycolaldehyde to erythrose/threose is a central reaction in the Prebiotic Sugar Pathway. This reaction generates the C4 sugar backbones required for the thioester route to threonine. Weber (2001) and the Prebiotic Sugar Pathway literature demonstrate that tetrose sugars form readily from glycolaldehyde under mild conditions. The use of montmorillonite for concentration and catalysis follows Lambert (2008)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Aldol condensation: glyceraldehyde + formaldehyde \u2192 erythrose",
+        "inputs": [
+          "mol_013",
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "borate minerals (colemanite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite clay, mildly alkaline pH 7-9",
+          "aqueous": "true",
+          "other": "Evaporitic pool, borate stabilization of product"
+        },
+        "mechanism": "Glyceraldehyde reacts with formaldehyde via an aldol addition. Glyceraldehyde provides the enolizable \u03b1-hydrogen and formaldehyde acts as the electrophilic carbonyl acceptor. The product is erythrose (C4), extending the carbon chain by one unit. This reaction represents the classical formose chain-elongation mechanism.",
+        "reasoning": "The elongation of glyceraldehyde by formaldehyde to produce C4 sugars is a standard formose reaction step (Breslow, 1959; Butlerow, 1861). This provides a second convergent route to erythrose from glyceraldehyde, which is itself produced from the cyanosulfidic pathway. This route creates glyceraldehyde as a proper hub with degree \u2265 3 in the network, connecting to both lactaldehyde and erythrose branches."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Cross-aldol: formaldehyde + acetaldehyde \u2192 lactaldehyde",
+        "inputs": [
+          "mol_009",
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals (struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite clay surface, mildly alkaline pH",
+          "aqueous": "true",
+          "other": "Evaporitic pool, concentration via wet-dry cycling"
+        },
+        "mechanism": "Acetaldehyde (from FTT synthesis) provides the enolizable methyl group. Formaldehyde acts as the non-enolizable electrophilic carbonyl. Cross-aldol condensation produces 2-hydroxypropanal (lactaldehyde, CH3CH(OH)CHO). Montmorillonite concentrates both substrates in its interlayer. This C3 hydroxy-aldehyde is the direct Strecker precursor for threonine.",
+        "reasoning": "Cross-aldol between formaldehyde and acetaldehyde is a well-known organic reaction. In a prebiotic context, FTT-derived acetaldehyde meeting formaldehyde in surface pools provides this route. The aldol product lactaldehyde (2-hydroxypropanal) is the precise aldehyde needed for a Strecker synthesis of threonine aminonitrile. Montmorillonite catalysis of aldol reactions is established (Lambert, 2008). This provides a hydrothermal-surface cross-environment route through the acetaldehyde intermediate."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Photoreductive deoxygenation: glyceraldehyde \u2192 lactaldehyde",
+        "inputs": [
+          "mol_013",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "stibnite (Sb2S3)",
+          "TiO2 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "H2S as stoichiometric reductant, UV photolysis on TiO2/stibnite",
+          "aqueous": "true",
+          "other": "UV irradiation (\u03bb < 300 nm), shallow pool, pH 5-7"
+        },
+        "mechanism": "Glyceraldehyde (HOCH2-CHOH-CHO) undergoes UV-driven photoreductive deoxygenation at the terminal hydroxymethyl position. H2S provides the reducing equivalents, being oxidized to elemental sulfur. The C1 hydroxyl group is reduced and removed, converting the C3 triose to the C3 deoxy-sugar lactaldehyde (CH3-CHOH-CHO). TiO2 and stibnite surfaces facilitate the photoreduction by generating sulfide radicals under UV.",
+        "reasoning": "In the cyanosulfidic network, H2S-driven UV photoreduction is the key mechanism for converting oxidized intermediates to reduced products (Patel et al., 2015; Xu et al., 2018). Glyceraldehyde photoreduction mediated by sulfide chemistry produces various products including the deoxygenated lactaldehyde. This reaction connects the abundant cyanosulfidic glyceraldehyde pool to the Strecker precursor for threonine, consistent with Sutherland's observation that threonine aminonitrile is an 'inevitable byproduct' of the triose chemistry."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Strecker synthesis: lactaldehyde \u2192 threonine aminonitrile",
+        "inputs": [
+          "mol_014",
+          "mol_003",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_016"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "TiO2 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite (concentrating agent); mildly acidic to neutral pH 5-7",
+          "aqueous": "true",
+          "other": "Evaporitic pool, moderate concentration of HCN and NH3"
+        },
+        "mechanism": "Lactaldehyde (CH3-CHOH-CHO) reacts with NH3 to form an imine (Schiff base) at the aldehyde position. HCN then adds across the C=N bond (aminonitrile formation) to yield 2-amino-3-hydroxybutanenitrile, the threonine aminonitrile. The hydroxyl group at C3 and the amino group at C2 are set in this step. Montmorillonite interlayer spaces concentrate the dilute reactants to overcome the kinetic barrier of this three-component reaction. The product is a mixture of (2S,3R)/(2R,3S) threonine aminonitrile and (2S,3S)/(2R,3R) allothreonine aminonitrile diastereomers.",
+        "reasoning": "The Strecker synthesis is the canonical prebiotic route to \u03b1-amino acids from aldehydes, NH3, and HCN (Strecker, 1850; Miller, 1957). The specific application to lactaldehyde for threonine synthesis is supported by the Sutherland group's identification of threonine aminonitrile (compound 16 in their nomenclature) as an 'inevitable byproduct' of the cyanosulfidic network (Patel et al., 2015). Montmorillonite's role in concentrating organics addresses the dilution problem highlighted in the literature. Note: this reaction produces a racemic/diastereomeric mixture; stereoselection remains an open challenge."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Prebiotic Sugar Pathway: erythrose \u2192 threonine thioester",
+        "inputs": [
+          "mol_015",
+          "mol_005",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "phosphate minerals (struvite/apatite)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "H2S as thiol source, NH3 as nitrogen source, pH 5-7",
+          "aqueous": "true",
+          "other": "One-pot conditions in mineral-rich evaporitic pool, moderate concentration"
+        },
+        "mechanism": "Erythrose undergoes \u03b2-dehydration to form an \u03b1-ketoaldehyde intermediate. This ketoaldehyde reacts with NH3 to form an imine and with H2S to form a hemithioacetal adduct. An intramolecular redox rearrangement then produces the activated threonine thioester. The thioester bond stores chemical energy, making the product pre-disposed to peptide bond formation. The standard free energy change is approximately -34 kcal/mol, providing a strong thermodynamic driving force. Phosphate minerals contribute to the activation and may participate in phosphorylation side-reactions.",
+        "reasoning": "This is the central reaction of the Prebiotic Sugar Pathway, which generates amino acids from simple sugars, ammonia, and hydrogen sulfide in activated thioester form. The pathway was demonstrated for the synthesis of multiple amino acids including threonine from C4 sugars (Canavelli et al., 2019; Stubbs et al., 2020). The strongly negative \u0394G\u00b0' \u2248 -34 kcal/mol confirms thermodynamic feasibility. The activated thioester form directly addresses the 'activation problem' in prebiotic peptide synthesis."
+      },
+      {
+        "id": "rxn_016",
+        "name": "Threonine aminonitrile hydrolysis to free threonine",
+        "inputs": [
+          "mol_016",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_018"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "mild acid or base catalysis, pH 3-5 or 8-10",
+          "aqueous": "true",
+          "other": "Prebiotic pool, room temperature to warm conditions, must remain below 393K to prevent thermal degradation"
+        },
+        "mechanism": "The nitrile group (-C\u2261N) of threonine aminonitrile is hydrolyzed in two steps: first to an amide (-CONH2) and then to the carboxylic acid (-COOH), releasing NH3. The overall reaction is: R-CN + 2H2O \u2192 R-COOH + NH3. At prebiotic temperatures (300-340K), this hydrolysis proceeds over days to weeks. The product is free threonine (2-amino-3-hydroxybutanoic acid) as a mixture of diastereomers.",
+        "reasoning": "Nitrile hydrolysis to carboxylic acids is a well-established aqueous reaction that proceeds spontaneously under mild conditions (Schlesinger & Miller, 1983). The hydrolysis of Strecker aminonitriles to amino acids is the final step of the classical Strecker synthesis and has been demonstrated for numerous amino acid precursors. Temperature must remain below ~393K to prevent threonine decarboxylation, consistent with the kinetic stability data showing rapid degradation above 120\u00b0C (Li & Brill, 2003; Chandru et al., 2013)."
+      },
+      {
+        "id": "rxn_017",
+        "name": "Threonine thioester hydrolysis to free threonine",
+        "inputs": [
+          "mol_017",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_018"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "aqueous hydrolysis, neutral to mildly alkaline pH",
+          "aqueous": "true",
+          "other": "Prebiotic pool, below 393K to preserve threonine stability"
+        },
+        "mechanism": "The thioester bond (R-CO-SR') undergoes hydrolysis by water: R-CO-SR' + H2O \u2192 R-COOH + R'SH. Thioesters are kinetically labile and hydrolyze more readily than oxo esters, with half-lives on the order of hours at neutral pH and room temperature. The product is free threonine and a free thiol. Alternatively, the thioester can undergo aminolysis with another amino acid to form a peptide bond, representing the transition to peptide chemistry.",
+        "reasoning": "Thioester hydrolysis is a fundamental aqueous reaction and the terminal step of the Prebiotic Sugar Pathway amino acid synthesis (Canavelli et al., 2019). The kinetic lability of the thioester bond, while leading to hydrolysis, also makes it a plausible prebiotic peptide bond-forming agent (de Duve, 1991; Weber, 1998). The parallel option of aminolysis vs hydrolysis connects threonine production directly to the emergence of primitive peptide chemistry."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Cyanosulfidic \u2192 Glycolaldehyde \u2192 Glyceraldehyde \u2192 Lactaldehyde (photoreduction) \u2192 Strecker \u2192 Threonine",
+        "description": "The primary Sutherland cyanosulfidic pathway: UV-driven reductive homologation of HCN produces glycolonitrile, then glycolaldehyde, which is extended to glyceraldehyde via aldol with formaldehyde. Glyceraldehyde is photoreduced by H2S to lactaldehyde, which undergoes Strecker synthesis with HCN and NH3 to give threonine aminonitrile, hydrolyzed to threonine.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_009",
+          "rxn_013",
+          "rxn_014",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_012",
+          "mol_013",
+          "mol_014",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "FTT Formaldehyde \u2192 Formose \u2192 Glyceraldehyde \u2192 Lactaldehyde \u2192 Strecker \u2192 Threonine",
+        "description": "Hydrothermal CO is converted to formaldehyde via FTT synthesis. Formaldehyde undergoes formose self-condensation to glycolaldehyde, then aldol with more formaldehyde to glyceraldehyde. Photoreduction yields lactaldehyde, followed by Strecker synthesis and hydrolysis.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_008",
+          "rxn_009",
+          "rxn_013",
+          "rxn_014",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_009",
+          "mol_012",
+          "mol_013",
+          "mol_014",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "FTT Acetaldehyde + Formaldehyde Cross-Aldol \u2192 Lactaldehyde \u2192 Strecker \u2192 Threonine",
+        "description": "Hydrothermal FTT produces both formaldehyde and acetaldehyde from CO + H2. These are transported to surface pools where cross-aldol condensation on montmorillonite gives lactaldehyde directly. Strecker synthesis and hydrolysis complete the route.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_012",
+          "rxn_014",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_009",
+          "mol_010",
+          "mol_014",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Cyanosulfidic \u2192 Glycolaldehyde Self-Aldol \u2192 Erythrose \u2192 Thioester \u2192 Threonine",
+        "description": "The Prebiotic Sugar Pathway using cyanosulfidic glycolaldehyde. HCN photoreduction yields glycolaldehyde, which self-condenses to erythrose. Erythrose reacts with NH3 and H2S to form activated threonine thioester, hydrolyzed to threonine.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_010",
+          "rxn_015",
+          "rxn_017"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_012",
+          "mol_015",
+          "mol_017"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Formate \u2192 Formaldehyde \u2192 Formose \u2192 Erythrose \u2192 Thioester \u2192 Threonine",
+        "description": "Hydrothermal CO2 reduction to formate, followed by formate reduction to formaldehyde. Surface formose chemistry produces glycolaldehyde, which self-condenses to erythrose. The Prebiotic Sugar Pathway converts erythrose to threonine thioester.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_005",
+          "rxn_008",
+          "rxn_010",
+          "rxn_015",
+          "rxn_017"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_009",
+          "mol_012",
+          "mol_015",
+          "mol_017"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "FTT Formaldehyde \u2192 Formose \u2192 Glycolaldehyde Self-Aldol \u2192 Erythrose \u2192 Thioester \u2192 Threonine",
+        "description": "CO from reverse water-gas shift is converted to formaldehyde via FTT. Formose yields glycolaldehyde, self-aldol gives erythrose, and the Prebiotic Sugar Pathway generates the threonine thioester.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_008",
+          "rxn_010",
+          "rxn_015",
+          "rxn_017"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_009",
+          "mol_012",
+          "mol_015",
+          "mol_017"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Formate \u2192 Formaldehyde \u2192 Glyceraldehyde \u2192 Lactaldehyde \u2192 Strecker \u2192 Threonine",
+        "description": "Hydrothermal formate is reduced to formaldehyde. Formose gives glycolaldehyde, aldol gives glyceraldehyde, photoreduction gives lactaldehyde, Strecker gives aminonitrile, hydrolysis gives threonine. Full hydrothermal-to-biochemical chain.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_005",
+          "rxn_008",
+          "rxn_009",
+          "rxn_013",
+          "rxn_014",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_009",
+          "mol_012",
+          "mol_013",
+          "mol_014",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Cyanosulfidic \u2192 Glyceraldehyde \u2192 Erythrose (chain extension) \u2192 Thioester \u2192 Threonine",
+        "description": "Cyanosulfidic glycolaldehyde is extended to glyceraldehyde via aldol, then glyceraldehyde is further extended by formaldehyde to erythrose. The C4 sugar enters the Prebiotic Sugar Pathway.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_009",
+          "rxn_011",
+          "rxn_015",
+          "rxn_017"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_012",
+          "mol_013",
+          "mol_015",
+          "mol_017"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "FTT Acetaldehyde + Formate-derived Formaldehyde \u2192 Lactaldehyde \u2192 Strecker \u2192 Threonine",
+        "description": "Two parallel hydrothermal routes provide the precursors: CO2 reduction gives formate then formaldehyde, while FTT gives acetaldehyde. These converge in surface cross-aldol to lactaldehyde, then Strecker and hydrolysis.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_005",
+          "rxn_002",
+          "rxn_004",
+          "rxn_012",
+          "rxn_014",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_009",
+          "mol_010",
+          "mol_014",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Mixed FTT + Formose \u2192 Glyceraldehyde \u2192 Erythrose \u2192 Thioester \u2192 Threonine",
+        "description": "FTT formaldehyde undergoes formose self-condensation to glycolaldehyde, then aldol with formaldehyde to glyceraldehyde, then chain extension with formaldehyde to erythrose. Erythrose enters the thioester pathway. Demonstrates deep hydrothermal-to-surface-to-biochemical connectivity.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_008",
+          "rxn_009",
+          "rxn_011",
+          "rxn_015",
+          "rxn_017"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_009",
+          "mol_012",
+          "mol_013",
+          "mol_015",
+          "mol_017"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_009",
+      "mol_012",
+      "mol_013",
+      "mol_003",
+      "mol_014"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_009",
+        "incoming_reactions": [
+          "rxn_003",
+          "rxn_005"
+        ],
+        "outgoing_reactions": [
+          "rxn_008",
+          "rxn_009",
+          "rxn_011",
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_012",
+        "incoming_reactions": [
+          "rxn_007",
+          "rxn_008"
+        ],
+        "outgoing_reactions": [
+          "rxn_009",
+          "rxn_010"
+        ]
+      },
+      {
+        "molecule_id": "mol_014",
+        "incoming_reactions": [
+          "rxn_012",
+          "rxn_013"
+        ],
+        "outgoing_reactions": [
+          "rxn_014"
+        ]
+      },
+      {
+        "molecule_id": "mol_013",
+        "incoming_reactions": [
+          "rxn_009"
+        ],
+        "outgoing_reactions": [
+          "rxn_011",
+          "rxn_013"
+        ]
+      },
+      {
+        "molecule_id": "mol_018",
+        "incoming_reactions": [
+          "rxn_016",
+          "rxn_017"
+        ],
+        "outgoing_reactions": []
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "L-Threonine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_006": 0.82,
+          "rxn_007": 0.45,
+          "rxn_009": 0.9,
+          "rxn_013": 0.8,
+          "rxn_014": 0.9,
+          "rxn_016": 0.88
+        },
+        "chemical_feasibility": 0.68,
+        "pathway_coherence": 0.82,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.82,
+        "overall_confidence": 0.73,
+        "feedback": "The pathway correctly traces the cyanosulfidic route but rxn_007 (glycolonitrile hydrolysis to glycolaldehyde) is chemically incorrect. Nitrile hydrolysis yields amide/acid, not aldehyde. In the Sutherland framework, this conversion requires UV-driven photoreduction with H2S and Cu(I)/Cu(II) photoredox, not simple aqueous hydrolysis. The downstream steps (aldol, photoreductive deoxygenation, Strecker) are all well-supported.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_007"
+        ],
+        "suggestions": [
+          "Replace rxn_007 with photoreductive conversion of glycolonitrile to glycolaldehyde using H2S/UV/Cu(I) as reductant, not H2O hydrolysis"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_002": 0.88,
+          "rxn_003": 0.72,
+          "rxn_008": 0.88,
+          "rxn_009": 0.9,
+          "rxn_012": 0.82,
+          "rxn_014": 0.9,
+          "rxn_016": 0.88
+        },
+        "chemical_feasibility": 0.83,
+        "pathway_coherence": 0.87,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.87,
+        "overall_confidence": 0.85,
+        "feedback": "A strong pathway that avoids the rxn_007 issue entirely. FTT synthesis of formaldehyde (rxn_003) has known selectivity/yield challenges but is documented. The formose self-condensation to glycolaldehyde is classic chemistry, and the aldol chain extension to glyceraldehyde is well-established. The lactaldehyde formation step is ambiguous in pathway description\u2014it should use either rxn_012 (cross-aldol) or rxn_013 (photoreduction). The Strecker synthesis and hydrolysis are chemically sound. Borate stabilization of sugars during formose chemistry would strengthen plausibility.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Specify borate mineral for formose sugar stabilization",
+          "Clarify which lactaldehyde route (rxn_012 or rxn_013) is used"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_002": 0.88,
+          "rxn_003": 0.72,
+          "rxn_004": 0.7,
+          "rxn_012": 0.82,
+          "rxn_014": 0.9,
+          "rxn_016": 0.88
+        },
+        "chemical_feasibility": 0.8,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.87,
+        "overall_confidence": 0.84,
+        "feedback": "An efficient and direct pathway. The cross-aldol condensation of formaldehyde + acetaldehyde to lactaldehyde is chemically plausible under basic or mineral-catalyzed conditions. FTT selectivity for acetaldehyde (rxn_004) is the weakest link but is documented in iron/nickel mineral catalysis. The Strecker synthesis on lactaldehyde is well-precedented for threonine aminonitrile production. This is one of the most parsimonious routes in the network.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_004"
+        ],
+        "suggestions": [
+          "Specify Ni-bearing sulfide mineral for FTT acetaldehyde selectivity",
+          "Consider montmorillonite for cross-aldol catalysis"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_006": 0.82,
+          "rxn_007": 0.45,
+          "rxn_010": 0.82,
+          "rxn_015": 0.84,
+          "rxn_017": 0.88
+        },
+        "chemical_feasibility": 0.68,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.8,
+        "overall_confidence": 0.72,
+        "feedback": "Traces the Prebiotic Sugar Pathway route through erythrose. The same rxn_007 problem undermines the glycolaldehyde source. The erythrose thioester pathway (rxn_015) aligns excellently with literature on activated amino acid thioesters from tetrose sugars + NH3 + H2S. Thermodynamic drive (~-34 kcal/mol) is well-supported.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_007"
+        ],
+        "suggestions": [
+          "Fix rxn_007 mechanism or route glycolaldehyde through the formose pathway instead"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_005": 0.78,
+          "rxn_008": 0.88,
+          "rxn_010": 0.82,
+          "rxn_015": 0.84,
+          "rxn_017": 0.88
+        },
+        "chemical_feasibility": 0.84,
+        "pathway_coherence": 0.86,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.86,
+        "overall_confidence": 0.86,
+        "feedback": "An excellent pathway that cleanly routes through all three environments: greigite-catalyzed formate production (hydrothermal), reduction to formaldehyde, formose chemistry to glycolaldehyde, aldol to erythrose (surface), and thioester hydrolysis (biochemical). The formate-to-formaldehyde reduction on native iron (rxn_005) is the least documented step but is thermodynamically feasible. The Prebiotic Sugar Pathway thioester formation (rxn_015) is well-supported by literature.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_005"
+        ],
+        "suggestions": [
+          "Provide more detail on native iron surface conditions for formate reduction"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_002": 0.88,
+          "rxn_003": 0.72,
+          "rxn_008": 0.88,
+          "rxn_010": 0.82,
+          "rxn_015": 0.84,
+          "rxn_017": 0.88
+        },
+        "chemical_feasibility": 0.83,
+        "pathway_coherence": 0.86,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.86,
+        "overall_confidence": 0.85,
+        "feedback": "Combines FTT formaldehyde production with formose chemistry and the Prebiotic Sugar Pathway. All steps are chemically sound. The glycolaldehyde self-aldol to erythrose (rxn_010) is a known formose side reaction. The thioester route is strongly literature-supported.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Consider specifying temperature gradient from vent to surface for formaldehyde stabilization"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_005": 0.78,
+          "rxn_008": 0.88,
+          "rxn_009": 0.9,
+          "rxn_013": 0.8,
+          "rxn_014": 0.9,
+          "rxn_016": 0.88
+        },
+        "chemical_feasibility": 0.84,
+        "pathway_coherence": 0.87,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.87,
+        "overall_confidence": 0.86,
+        "feedback": "A well-structured seven-step route with excellent environmental progression. Formate production on greigite, reduction to formaldehyde, formose and aldol chemistry, photoreductive deoxygenation to lactaldehyde, and Strecker synthesis create a coherent narrative. The glyceraldehyde-to-lactaldehyde photoreduction with H2S (rxn_013) is well-documented in Sutherland's work.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_005"
+        ],
+        "suggestions": [
+          "Consider specifying pH and temperature at each step for greater precision"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_006": 0.82,
+          "rxn_007": 0.45,
+          "rxn_009": 0.9,
+          "rxn_011": 0.82,
+          "rxn_015": 0.84,
+          "rxn_017": 0.88
+        },
+        "chemical_feasibility": 0.7,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.82,
+        "overall_confidence": 0.74,
+        "feedback": "Cyanosulfidic origin to erythrose via chain extension. Suffers from the rxn_007 issue. The rest of the pathway (glyceraldehyde + formaldehyde \u2192 erythrose \u2192 thioester \u2192 threonine) is well-supported. rxn_011 represents a plausible aldol chain extension.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_007"
+        ],
+        "suggestions": [
+          "Replace rxn_007 with correct photoreductive mechanism"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_002": 0.88,
+          "rxn_004": 0.7,
+          "rxn_005": 0.78,
+          "rxn_012": 0.82,
+          "rxn_014": 0.9,
+          "rxn_016": 0.88
+        },
+        "chemical_feasibility": 0.82,
+        "pathway_coherence": 0.84,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.86,
+        "overall_confidence": 0.84,
+        "feedback": "Combines two hydrothermal outputs (acetaldehyde from FTT, formaldehyde from formate reduction) in a cross-aldol reaction. All reactions are chemically plausible. The acetaldehyde FTT step (rxn_004) and formate reduction (rxn_005) are the weaker links but both are documented.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_004",
+          "rxn_005"
+        ],
+        "suggestions": [
+          "Better characterize FTT product distribution and acetaldehyde selectivity"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_002": 0.88,
+          "rxn_003": 0.72,
+          "rxn_008": 0.88,
+          "rxn_009": 0.9,
+          "rxn_011": 0.82,
+          "rxn_015": 0.84,
+          "rxn_017": 0.88
+        },
+        "chemical_feasibility": 0.83,
+        "pathway_coherence": 0.86,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.86,
+        "overall_confidence": 0.85,
+        "feedback": "Mixed FTT and formose chemistry feeding into the Prebiotic Sugar Pathway. Clean environmental transitions and well-supported chemistry throughout. The glyceraldehyde + formaldehyde \u2192 erythrose step (rxn_011) is a documented aldol extension.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Specify mineral catalyst for erythrose aldol step"
+        ]
+      }
+    ],
+    "best_pathway_id": "P7",
+    "overall_confidence": 0.86,
+    "network_feedback": "This is an excellent synthesis network for L-threonine that demonstrates strong alignment with the prebiotic chemistry literature, particularly the Sutherland cyanosulfidic protometabolism and the Prebiotic Sugar Pathway. The network topology is outstanding with 18 molecules, 17 reactions, 5 well-connected hub molecules, and 10 convergent pathways providing substantial redundancy. The dual terminal routes (Strecker aminonitrile hydrolysis and thioester hydrolysis) to threonine are both literature-supported and add robustness. The environmental progression from hydrothermal (FTT synthesis on greigite/magnetite/native iron) through surface (photochemistry, formose, aldol, Strecker) to biochemical (mild hydrolysis) is well-designed and respects threonine's thermal instability above ~120\u00b0C. The principal weakness is rxn_007 (glycolonitrile hydrolysis to glycolaldehyde), which is mechanistically incorrect\u2014nitrile hydrolysis produces amides/acids, not aldehydes. The actual Sutherland mechanism involves UV-driven photoreduction with H2S and Cu(I)/Cu(II) photoredox cycling. This affects pathways P1, P4, and P8, but importantly 7 of 10 pathways avoid this step entirely. The FTT reactions (rxn_003, rxn_004) have acknowledged selectivity challenges but are documented. The network honestly addresses the unresolved stereochemical challenge of producing specifically L-threonine vs. racemic threonine/allothreonine mixtures. Literature citations are well-integrated throughout the strategy description. Overall, this is a well-constructed, literature-informed network that merits approval.",
+    "approved": true,
+    "hub_quality": 0.92,
+    "convergence_quality": 0.9
+  },
+  "success": false,
+  "attempts": 3,
+  "notes": null
+}

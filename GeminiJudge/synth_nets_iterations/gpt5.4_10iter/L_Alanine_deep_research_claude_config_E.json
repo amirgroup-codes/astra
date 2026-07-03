@@ -1,0 +1,902 @@
+{
+  "target_molecule": "L-Alanine",
+  "network": {
+    "target_molecule": "L-Alanine",
+    "overall_strategy": "The network follows the literature consensus that prebiotic chemistry robustly produces racemic alanine through multiple convergent routes centered on HCN, acetaldehyde, pyruvate, and alpha-aminopropionitrile, while L-alanine is not obtained by any single validated abiotic synthesis step. Accordingly, the network builds ten literature-grounded pathways to DL-alanine from hydrothermal, surface, and connected prebiotic settings, then includes a final explicitly speculative but literature-motivated biochemical symmetry-breaking module in which terrestrial chiral amplification and selection act on racemic alanine within a broader network context. Hydrothermal chemistry supplies pyruvate, formaldehyde, and reduced carbon; surface chemistry supplies HCN-derived aminonitriles and direct Strecker products; biochemical/prebiotic settings provide peptide ligation and selection contexts compatible with indirect emergence of L-alanine.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_005",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_006",
+        "formula": "C2H4O",
+        "iupac_name": "ethanal",
+        "common_name": "acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C3H3NO",
+        "iupac_name": "ethanimine",
+        "common_name": "acetaldehyde imine",
+        "inchi": "InChI=1S/C2H5N/c1-2-3/h2-3H,1H3",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C3H6N2",
+        "iupac_name": "2-aminopropanenitrile",
+        "common_name": "alpha-aminopropionitrile",
+        "inchi": "InChI=1S/C3H6N2/c1-3(5)2-4/h3H,5H2,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C3H8N2O",
+        "iupac_name": "2-aminopropanamide",
+        "common_name": "alaninamide",
+        "inchi": "InChI=1S/C3H8N2O/c1-2(4)3(5)6/h2H,4H2,1H3,(H2,5,6)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C3H7NO2",
+        "iupac_name": "2-aminopropanoic acid",
+        "common_name": "DL-alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C3H3O3-",
+        "iupac_name": "2-oxopropanoate",
+        "common_name": "pyruvate",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)/p-1",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C4H6N2O2",
+        "iupac_name": "5-methylimidazolidine-2,4-dione",
+        "common_name": "5-methylhydantoin",
+        "inchi": "InChI=1S/C4H6N2O2/c1-2-3(7)6-4(8)5-2/h2H,1H3,(H2,5,6,7,8)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C4H8N2O3",
+        "iupac_name": "2-(carbamoylamino)propanoic acid",
+        "common_name": "N-carbamoyl alanine",
+        "inchi": "InChI=1S/C4H8N2O3/c1-2(3(7)8)6-4(5)9/h2H,1H3,(H,7,8)(H3,5,6,9)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C4H4N4",
+        "iupac_name": "2,3-diaminobut-2-enedinitrile",
+        "common_name": "DAMN",
+        "inchi": "InChI=1S/C4H4N4/c5-1-3(7)4(8)2-6/h7-8H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C3H7NO2",
+        "iupac_name": "(2S)-2-aminopropanoic acid",
+        "common_name": "L-alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO2 reduction to formaldehyde",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_005"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "313-363K",
+          "pressure": "high",
+          "catalyst": "Fe(Ni)S-like hydrothermal sulfide surfaces",
+          "aqueous": "true",
+          "other": "alkaline vent conditions, pH 9-11, H2-rich; used as hydrothermal carbonyl source feeding surface chemistry"
+        },
+        "mechanism": "Mineral-surface reduction of CO2 by H2 on iron-sulfur phases generates reduced C1 carbonyl species including formaldehyde under vent-like disequilibria.",
+        "reasoning": "Hydrothermal vent models and Fe(Ni)S-catalyzed CO2 reduction support formaldehyde generation from H2 and CO2 in alkaline vent settings, providing a realistic reduced-carbon bridge into surface networks (Herschy et al., 2014; Lane and Martin, 2012)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Surface photochemical carbonyl homologation to acetaldehyde",
+        "inputs": [
+          "mol_005",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "sulfide minerals (stibnite/molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "300-308K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2-assisted UV photochemistry with sulfide-enabled cyanosulfidic redox context",
+          "aqueous": "true",
+          "other": "UV-irradiated surface pond; aldehyde generation framed by reductive homologation chemistry"
+        },
+        "mechanism": "UV-driven cyanosulfidic homologation converts simple C1 feedstocks into higher aldehydes, furnishing acetaldehyde as a Strecker substrate.",
+        "reasoning": "Ritson and Sutherland showed photoredox chemistry can generate aldehyde precursors needed for broader cyanosulfidic networks, and Patel et al. integrated HCN/H2S/UV chemistry into systems prebiotic synthesis at 35C; this step is used as a literature-grounded connection from simple reduced carbon to acetaldehyde, though exact stoichiometric detail is network-level compressed (Ritson and Sutherland, 2013; Patel et al., 2015)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Surface HCN oligomerization to DAMN",
+        "inputs": [
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "250-350K",
+          "pressure": "1 atm",
+          "catalyst": "concentration on mineral surfaces during eutectic freezing or evaporitic cycling",
+          "aqueous": "true",
+          "other": "requires concentrated HCN above about 0.01 M; eutectic freezing or evaporation concentrates feedstock"
+        },
+        "mechanism": "HCN undergoes stepwise oligomerization to higher nitrile species, including tetramerization to DAMN.",
+        "reasoning": "HCN oligomerization to DAMN is a classic and well-supported branch point in prebiotic chemistry under concentrated conditions, especially in eutectic or evaporitic environments (Or\u00f3, 1961; Ferris et al., 1978; Miyakawa et al., 2002)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Classical Strecker imine formation from acetaldehyde and ammonia",
+        "inputs": [
+          "mol_006",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "mineral concentration and buffering surfaces",
+          "aqueous": "true",
+          "other": "mild aqueous conditions; acidic or basic pH both plausible"
+        },
+        "mechanism": "Carbonyl condensation of acetaldehyde with ammonia forms an imine/imine-equivalent that is the immediate precursor to aminonitrile formation.",
+        "reasoning": "The Strecker route to alanine proceeds through imine formation from acetaldehyde and ammonia before cyanide addition; Miller identified this mechanism as operating in spark discharge products (Miller, 1955; Miller and Van Trump, 1981)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Classical Strecker cyanide addition to alpha-aminopropionitrile",
+        "inputs": [
+          "mol_007",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "mineral concentration and aqueous pH buffering",
+          "aqueous": "true",
+          "other": "requires available cyanide and ammonia; mild aqueous Strecker conditions"
+        },
+        "mechanism": "Nucleophilic cyanide addition to the imine generates the alpha-aminonitrile alpha-aminopropionitrile.",
+        "reasoning": "Alpha-aminopropionitrile is the canonical Strecker intermediate en route to alanine under mild aqueous prebiotic conditions (Strecker, 1850; Miller, 1955; Chimiak et al., 2022)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Cyanosulfidic phosphoro-Strecker formation of alpha-aminopropionitrile",
+        "inputs": [
+          "mol_006",
+          "mol_003",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite/molybdenite)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "308K",
+          "pressure": "1 atm",
+          "catalyst": "UV-driven Cu(I)/Cu(II) photoredox system in cyanide-sulfide-phosphate setting",
+          "aqueous": "true",
+          "other": "neutral pH, H2S and UV present; approximately 70 percent aminonitrile yield from acetaldehyde reported"
+        },
+        "mechanism": "Photoredox-enabled phosphoro-Strecker chemistry promotes efficient conversion of acetaldehyde into alpha-aminopropionitrile in a cyanosulfidic network.",
+        "reasoning": "Patel et al. showed cyanosulfidic systems chemistry yields amino acid precursors alongside nucleotide and lipid precursors, with alpha-aminopropionitrile forming at about 70% yield from acetaldehyde under phosphoro-Strecker conditions (Patel et al., 2015)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Partial hydrolysis of alpha-aminopropionitrile to alaninamide",
+        "inputs": [
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "aqueous mineral-assisted hydrolysis",
+          "aqueous": "true",
+          "other": "sequential nitrile hydrolysis under mild aqueous conditions"
+        },
+        "mechanism": "The nitrile group of alpha-aminopropionitrile undergoes hydration and partial hydrolysis to the corresponding amide alaninamide.",
+        "reasoning": "Sequential hydrolysis of alpha-aminopropionitrile through alaninamide to alanine is the established downstream chemistry of the Strecker route (Miller, 1955; Miller and Van Trump, 1981)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Hydrolysis of alaninamide to DL-alanine",
+        "inputs": [
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "aqueous mineral-assisted amide hydrolysis",
+          "aqueous": "true",
+          "other": "continued aqueous hydrolysis; product is racemic alanine"
+        },
+        "mechanism": "Further hydrolysis of the amide yields the free amino acid as racemic alanine.",
+        "reasoning": "The Strecker sequence terminates in hydrolysis of alaninamide to alanine; all known prebiotic alanine syntheses of this type are racemic (Miller, 1955; Chimiak et al., 2022)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Hydrothermal pyruvate synthesis from CO2",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "Fe/Ni-bearing mineral or nanoparticle surfaces",
+          "aqueous": "true",
+          "other": "alkaline hydrothermal to vent-adjacent reducing conditions"
+        },
+        "mechanism": "Mineral-mediated CO2 reduction and C-C bond forming chemistry furnish pyruvate as a central alpha-keto acid intermediate.",
+        "reasoning": "Pyruvate formation under prebiotic reducing geochemical conditions is supported by Fe/Ni nanoparticle CO2 reduction studies and iron-promoted reverse-TCA-like chemistry; pyruvate is a documented branch-point metabolite in prebiotic networks (Muchowska et al., 2019; Beyazay et al., 2023)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Pyrite-coupled reductive amination of pyruvate to DL-alanine",
+        "inputs": [
+          "mol_011",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "343-373K",
+          "pressure": "high",
+          "catalyst": "FeS/H2S to FeS2 redox couple on sulfide surfaces",
+          "aqueous": "true",
+          "other": "pyrite-forming reducing conditions; coupled to oxidative pyrite formation"
+        },
+        "mechanism": "Pyruvate undergoes reductive amination with ammonia, with reducing equivalents supplied by sulfide mineral redox chemistry during pyrite formation.",
+        "reasoning": "Hafenbradl, Keller, Wachtershauser, and Stetter demonstrated pyruvate-to-alanine conversion coupled to oxidative pyrite formation, making this one of the best-supported hydrothermal alanine routes (Hafenbradl et al., 1995; W\u00e4chtersh\u00e4user, 1988)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Mixed-valence iron oxyhydroxide reductive amination of pyruvate",
+        "inputs": [
+          "mol_011",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "298-343K",
+          "pressure": "high",
+          "catalyst": "mixed-valence Fe(II)/Fe(III) mineral system with optimum near 1:1 ratio",
+          "aqueous": "true",
+          "other": "alkaline conditions, vent-adjacent sediments"
+        },
+        "mechanism": "Surface-bound pyruvate is aminated and reduced on mixed-valence iron mineral phases, yielding alanine.",
+        "reasoning": "Barge et al. showed mixed-valence iron oxyhydroxides drive pyruvate-to-alanine conversion under alkaline conditions with maximal yield near a 1:1 Fe(II):Fe(III) ratio, consistent with alkaline hydrothermal sediments (Barge et al., 2019)."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Ni-H2 reductive amination of pyruvate to DL-alanine",
+        "inputs": [
+          "mol_011",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "295K",
+          "pressure": "5 bar",
+          "catalyst": "nickel catalyst",
+          "aqueous": "true",
+          "other": "pH 7-8; 30 mM pyruvate; mild prebiotic catalytic setting rather than deep vent core"
+        },
+        "mechanism": "Nickel catalyzes hydrogen-driven reductive amination of pyruvate with ammonium/ammonia under near-neutral mild conditions.",
+        "reasoning": "Kaur, Rauscher, and Werner demonstrated Ni-catalyzed reductive amination of pyruvate to alanine using H2 at 5 bar, pH 7-8, and 22C, closely paralleling biosynthetic logic; this is included as a mild prebiotic catalytic node rather than forced into a hydrothermal label (Kaur et al., 2024)."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Bucherer-Bergs cyclization of pyruvate to 5-methylhydantoin",
+        "inputs": [
+          "mol_011",
+          "mol_003",
+          "mol_004",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "phosphate minerals (apatite/struvite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "353K",
+          "pressure": "1 atm",
+          "catalyst": "concentration during warm aqueous surface cycling",
+          "aqueous": "true",
+          "other": "Bucherer-Bergs-type chemistry captures released CO2 into hydantoin intermediate"
+        },
+        "mechanism": "Pyruvate reacts with cyanide and ammonia; decarboxylative/carbamylative capture yields the hydantoin intermediate 5-methylhydantoin.",
+        "reasoning": "Recent prebiotic Bucherer-Bergs analysis highlights pyruvate conversion through 5-methylhydantoin as a chemically relevant route bridging amino acid and nucleobase precursor chemistry (Pulletikurti et al., 2022)."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Hydrolysis of 5-methylhydantoin to N-carbamoyl alanine",
+        "inputs": [
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "353K",
+          "pressure": "1 atm",
+          "catalyst": "warm aqueous hydrolysis",
+          "aqueous": "true",
+          "other": "80C surface pool or hot spring conditions"
+        },
+        "mechanism": "Ring opening hydrolysis of the hydantoin intermediate yields N-carbamoyl alanine.",
+        "reasoning": "Hydantoin hydrolysis to N-carbamoyl amino acids is a defining feature of the Bucherer-Bergs route as developed in recent prebiotic studies (Pulletikurti et al., 2022)."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Hydrolysis of N-carbamoyl alanine to DL-alanine",
+        "inputs": [
+          "mol_013"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "353K",
+          "pressure": "1 atm",
+          "catalyst": "continued warm hydrolysis",
+          "aqueous": "true",
+          "other": "80C surface conditions; racemic alanine product"
+        },
+        "mechanism": "Hydrolytic decarbamoylation releases free alanine from N-carbamoyl alanine.",
+        "reasoning": "The Bucherer-Bergs route proceeds from hydantoin to N-carbamoyl amino acid and then to the free amino acid under warm hydrolytic conditions (Pulletikurti et al., 2022)."
+      },
+      {
+        "id": "rxn_016",
+        "name": "Hydrolysis of HCN oligomer material to DL-alanine",
+        "inputs": [
+          "mol_014"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "concentrating mineral surfaces followed by alkaline and acid hydrolysis sequence",
+          "aqueous": "true",
+          "other": "low-specificity route; alanine appears among mixed hydrolysis products from HCN polymeric material"
+        },
+        "mechanism": "HCN oligomer-derived polymeric nitrile material undergoes hydrolysis to a product mixture containing alanine.",
+        "reasoning": "Alanine is produced upon hydrolysis of black HCN oligomer/polymer material, but not as a clean selective product; this node is intentionally represented as low-specificity and not as direct DAMN-to-alanine chemistry (Or\u00f3, 1961; Ferris et al., 1978)."
+      },
+      {
+        "id": "rxn_017",
+        "name": "Miller-Urey spark generation of HCN and acetaldehyde",
+        "inputs": [
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_004",
+          "mol_006"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "ambient to warm",
+          "pressure": "1 atm",
+          "catalyst": "electrical discharge in reducing atmosphere with aqueous collection phase",
+          "aqueous": "true",
+          "other": "classical CH4/NH3/H2/H2O spark atmosphere; represented here by key recovered intermediates rather than full gas inventory"
+        },
+        "mechanism": "Electrical discharge through reducing atmospheric gases generates HCN and aldehydes that are trapped in water and feed Strecker chemistry.",
+        "reasoning": "Miller's classic discharge experiments generated amino acid precursors including HCN and acetaldehyde in situ, leading to alanine formation through the Strecker mechanism; alanine was the second most abundant amino acid (Miller, 1953; Miller, 1955; Johnson et al., 2008)."
+      },
+      {
+        "id": "rxn_018",
+        "name": "Volcanic H2S spark generation of HCN and acetaldehyde",
+        "inputs": [
+          "mol_001",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_004",
+          "mol_006"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite/molybdenite)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "ambient to warm",
+          "pressure": "1 atm",
+          "catalyst": "electrical discharge in volcanic gas mixture with H2S and aqueous collection phase",
+          "aqueous": "true",
+          "other": "volcanic apparatus variant; H2S-rich atmosphere enhances alanine precursor inventory"
+        },
+        "mechanism": "Spark discharge in sulfur-bearing volcanic atmospheres generates enhanced yields of cyanide and carbonyl precursors feeding alanine synthesis.",
+        "reasoning": "Parker et al. found that H2S-containing Miller-type discharges produced amino acid distributions with markedly enhanced alanine yields relative to the classic experiment, consistent with volcanic atmospheric scenarios (Parker et al., 2011; Johnson et al., 2008)."
+      },
+      {
+        "id": "rxn_019",
+        "name": "Hydrothermal Fischer-Tropsch-type amino acid synthesis to DL-alanine",
+        "inputs": [
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "353-393K",
+          "pressure": "high",
+          "catalyst": "Fe/Ni sulfide hydrothermal surfaces",
+          "aqueous": "true",
+          "other": "80-120C, multi-day hydrothermal reaction; alanine detected among mixed amino acid products"
+        },
+        "mechanism": "Complex hydrothermal Fe/Ni sulfide chemistry involving reduced carbon, sulfur species, and cyanide-derived inputs yields a mixture containing alanine.",
+        "reasoning": "Huber and Wachtershauser reported hydrothermal Fe/Ni sulfide systems that produced alpha-amino acids including alanine at 80-120C; this node is deliberately represented as mixture-level direct detection rather than as a single detailed stoichiometric shortcut (Huber and W\u00e4chtersh\u00e4user, 2006)."
+      },
+      {
+        "id": "rxn_020",
+        "name": "UV ice analog processing to HCN and acetaldehyde precursors feeding alanine chemistry",
+        "inputs": [
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_004",
+          "mol_006"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "borate minerals (colemanite/ulexite)"
+        ],
+        "conditions": {
+          "temperature": "12K irradiation then warming to 300K",
+          "pressure": "low to 1 atm during delivery/warming",
+          "catalyst": "UV photolysis of interstellar ice analogs followed by incorporation into surface pools",
+          "aqueous": "false",
+          "other": "represents extraterrestrial precursor generation and terrestrial delivery into surface environments"
+        },
+        "mechanism": "UV irradiation of mixed ice analogs produces organic precursor inventories that, upon warming and hydrolysis after delivery, feed Strecker-type alanine synthesis on Earth.",
+        "reasoning": "UV photolysis of interstellar ice analogs yields alanine and its precursors, and all necessary Strecker feedstocks are cosmochemically plausible; this reaction is used as a precursor-entry node into terrestrial surface chemistry rather than as a direct terrestrial synthesis step (Bernstein et al., 2002; Mu\u00f1oz Caro et al., 2002)."
+      },
+      {
+        "id": "rxn_021",
+        "name": "Network-level terrestrial symmetry breaking from DL-alanine to L-alanine",
+        "inputs": [
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "variable",
+          "pressure": "1 atm",
+          "catalyst": "none established for direct alanine enantioselective synthesis",
+          "aqueous": "true",
+          "other": "geothermal cycling, crystallization-selection, peptide ligation feedback, and possible RNA-mediated stereoselection; explicitly speculative and not a validated single-reaction route"
+        },
+        "mechanism": "Racemic alanine enters a broader chiral amplification and selection network where indirect symmetry breaking, phase behavior, and evolving stereoselective biopolymer contexts enrich the L-enantiomer.",
+        "reasoning": "The literature strongly indicates that all direct prebiotic alanine syntheses are racemic and that alanine lacks robust direct mineral enantioselection; therefore L-alanine is modeled only as an emergent systems-level outcome. Potential contributors include CPL-generated small ees, crystallization amplification, CISS-linked terrestrial asymmetry, and autocatalytic peptide-ligation networks, but no experimentally validated direct DL-to-L alanine conversion exists. This step is therefore necessary for the requested target but explicitly speculative (Meinert et al., 2014; Ozturk and Sasselov, 2022; Ozturk et al., 2023; Blackmond et al., 2025; Glavin et al., 2025)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Classic Miller-Strecker route",
+        "description": "Electrical discharge generates HCN and acetaldehyde, which proceed through classical Strecker chemistry and hydrolysis to racemic alanine, followed by speculative terrestrial selection to L-alanine.",
+        "reaction_sequence": [
+          "rxn_017",
+          "rxn_004",
+          "rxn_005",
+          "rxn_007",
+          "rxn_008",
+          "rxn_021"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_006",
+          "mol_008",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Volcanic H2S Miller-Strecker route",
+        "description": "A sulfur-rich volcanic discharge atmosphere enhances precursor generation and feeds the same Strecker-hydrolysis sequence to alanine.",
+        "reaction_sequence": [
+          "rxn_018",
+          "rxn_004",
+          "rxn_005",
+          "rxn_007",
+          "rxn_008",
+          "rxn_021"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_006",
+          "mol_008",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Hydrothermal formaldehyde to surface Strecker route",
+        "description": "Hydrothermal CO2 reduction generates formaldehyde, surface photochemical homologation gives acetaldehyde, and the classical Strecker sequence yields alanine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_007",
+          "rxn_008",
+          "rxn_021"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_006",
+          "mol_008",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Cyanosulfidic phosphoro-Strecker route",
+        "description": "Acetaldehyde produced in surface photochemical networks is converted efficiently to alpha-aminopropionitrile under cyanide-sulfide-phosphate UV chemistry, then hydrolyzed to alanine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_021"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_008",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Pyrite-coupled hydrothermal reductive amination route",
+        "description": "Hydrothermal mineral chemistry generates pyruvate, which is reductively aminated on FeS/FeS2 surfaces to racemic alanine.",
+        "reaction_sequence": [
+          "rxn_009",
+          "rxn_010",
+          "rxn_021"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Mixed-valence iron reductive amination route",
+        "description": "Hydrothermally produced pyruvate is aminated and reduced by mixed-valence iron mineral systems in alkaline vent-adjacent settings.",
+        "reaction_sequence": [
+          "rxn_009",
+          "rxn_011",
+          "rxn_021"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Ni-H2 mild catalytic pyruvate amination route",
+        "description": "Hydrothermal pyruvate feeds a mild prebiotic nickel-catalyzed hydrogenation system that directly converts pyruvate to alanine under near-neutral conditions.",
+        "reaction_sequence": [
+          "rxn_009",
+          "rxn_012",
+          "rxn_021"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Bucherer-Bergs hydantoin route",
+        "description": "Pyruvate reacts with ammonia and cyanide to give 5-methylhydantoin, which hydrolyzes through N-carbamoyl alanine to racemic alanine.",
+        "reaction_sequence": [
+          "rxn_009",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015",
+          "rxn_021"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_012",
+          "mol_013",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "HCN oligomer hydrolysis route",
+        "description": "Concentrated HCN oligomerizes to DAMN and related polymeric material, whose hydrolysis yields alanine among mixed amino acid products.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_016",
+          "rxn_021"
+        ],
+        "key_intermediates": [
+          "mol_014",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Hydrothermal Fe-Ni sulfide direct amino acid route",
+        "description": "Hydrothermal Fischer-Tropsch-type and sulfide-mediated amino acid synthesis yields alanine directly in a mixed product suite, followed by later terrestrial selection.",
+        "reaction_sequence": [
+          "rxn_019",
+          "rxn_021"
+        ],
+        "key_intermediates": [
+          "mol_010"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_006",
+      "mol_008",
+      "mol_011",
+      "mol_010"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [
+          "rxn_017",
+          "rxn_018",
+          "rxn_020"
+        ],
+        "outgoing_reactions": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_005",
+          "rxn_006",
+          "rxn_013",
+          "rxn_019"
+        ]
+      },
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_002",
+          "rxn_017",
+          "rxn_018",
+          "rxn_020"
+        ],
+        "outgoing_reactions": [
+          "rxn_004",
+          "rxn_006"
+        ]
+      },
+      {
+        "molecule_id": "mol_008",
+        "incoming_reactions": [
+          "rxn_005",
+          "rxn_006"
+        ],
+        "outgoing_reactions": [
+          "rxn_007"
+        ]
+      },
+      {
+        "molecule_id": "mol_011",
+        "incoming_reactions": [
+          "rxn_009"
+        ],
+        "outgoing_reactions": [
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013"
+        ]
+      },
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_008",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_015",
+          "rxn_016",
+          "rxn_019"
+        ],
+        "outgoing_reactions": [
+          "rxn_021"
+        ]
+      }
+    ]
+  },
+  "config": "E"
+}

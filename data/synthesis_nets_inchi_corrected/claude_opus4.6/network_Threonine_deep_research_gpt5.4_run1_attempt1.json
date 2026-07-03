@@ -1,0 +1,941 @@
+{
+  "target_molecule": "Threonine",
+  "network": {
+    "target_molecule": "Threonine",
+    "overall_strategy": "The network converges on lactaldehyde (2-hydroxypropanal) as the central carbonyl precursor for threonine, following literature consensus (Ritson & Sutherland, 2013; meteoritic Strecker analyses). Three major branches feed lactaldehyde synthesis: (1) a hydrothermal CO\u2082 fixation chain producing formaldehyde and formate, which flow to the surface; (2) a UV cyanosulfidic photoredox cascade (glycolonitrile \u2192 glycolaldehyde \u2192 acetaldehyde \u2192 lactonitrile \u2192 lactaldehyde); and (3) an HCN oligomerization branch producing aminomalononitrile (AMN) that reacts directly with acetaldehyde. Downstream, Strecker chemistry (lactaldehyde + HCN + NH\u2083 \u2192 threonine aminonitrile) operates in both surface and hydrothermal settings, and hydrolysis completes the route to threonine. Hub molecules HCN, acetaldehyde, lactaldehyde, formaldehyde, and threonine aminonitrile interconnect 10 distinct pathways across hydrothermal, surface, and biochemical environments.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_003",
+        "formula": "CHO2-",
+        "iupac_name": "formate",
+        "common_name": "formate",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)/p-1",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_004",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_005",
+        "formula": "HCN",
+        "iupac_name": "formonitrile",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_006",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_007",
+        "formula": "H2S",
+        "iupac_name": "hydrogen sulfide",
+        "common_name": "hydrogen sulfide",
+        "inchi": "InChI=1S/H2S/h1H2",
+        "role": "starting",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C2H3NO",
+        "iupac_name": "2-hydroxyacetonitrile",
+        "common_name": "glycolonitrile",
+        "inchi": "InChI=1S/C2H3NO/c3-1-2-4/h4H,2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C2H4O2",
+        "iupac_name": "2-hydroxyacetaldehyde",
+        "common_name": "glycolaldehyde",
+        "inchi": "InChI=1S/C2H4O2/c3-1-2-4/h1,4H,2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C2H4O",
+        "iupac_name": "acetaldehyde",
+        "common_name": "acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C3H5NO",
+        "iupac_name": "2-hydroxypropanenitrile",
+        "common_name": "lactonitrile (acetaldehyde cyanohydrin)",
+        "inchi": "InChI=1S/C3H5NO/c1-3(5)2-4/h3,5H,1H3",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C3H6O2",
+        "iupac_name": "2-hydroxypropanal",
+        "common_name": "lactaldehyde",
+        "inchi": "InChI=1S/C3H6O2/c1-3(5)2-4/h2-3,5H,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C4H7N3O",
+        "iupac_name": "2-amino-3-hydroxybutanenitrile",
+        "common_name": "threonine aminonitrile",
+        "inchi": "InChI=1S/C4H8N2O/c1-3(7)4(6)2-5/h3-4,7H,6H2,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C4H9NO3",
+        "iupac_name": "(2S,3R)-2-amino-3-hydroxybutanoic acid",
+        "common_name": "threonine",
+        "inchi": "InChI=1S/C4H9NO3/c1-2(6)3(5)4(7)8/h2-3,6H,5H2,1H3,(H,7,8)/t2-,3+/m1/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C3H3N3",
+        "iupac_name": "2-aminoprop-1-ene-1,1,3-tricarbonitrile",
+        "common_name": "aminomalononitrile (AMN)",
+        "inchi": "InChI=1S/C6H4N4/c7-2-1-6(10)5(3-8)4-9/h1,10H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO\u2082 reduction to formate on greigite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe\u2083S\u2084)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high (50-200 bar)",
+          "catalyst": "greigite (Fe\u2083S\u2084)",
+          "aqueous": true,
+          "other": "Alkaline hydrothermal vent, pH 9-11, H\u2082 from serpentinization"
+        },
+        "mechanism": "CO\u2082 is adsorbed on the greigite (Fe\u2083S\u2084) surface which acts as a structural analog of biological [Fe\u2084S\u2084] clusters. H\u2082 provides reducing equivalents, and CO\u2082 is reduced stepwise via a surface-bound formate intermediate. Greigite facilitates two-electron transfer to convert CO\u2082 to HCOO\u207b.",
+        "reasoning": "Greigite-catalyzed CO\u2082 reduction to formate is well-established in the iron-sulfur world hypothesis. Andersson & Holm (2000) discuss hydrothermal reduction of CO\u2082 under mineral-buffered redox conditions with pyrite-pyrrhotite-magnetite assemblages. This step supplies the C1 feedstock for downstream formaldehyde synthesis."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Hydrothermal reduction of formate to formaldehyde on magnetite",
+        "inputs": [
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe\u2083O\u2084)",
+          "elemental iron (Fe\u2070)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high (50-200 bar)",
+          "catalyst": "magnetite (Fe\u2083O\u2084)",
+          "aqueous": true,
+          "other": "Fischer-Tropsch type reduction on magnetite surface, subseafloor hydrothermal"
+        },
+        "mechanism": "Formate is further reduced on magnetite surfaces via Fischer-Tropsch-type chemistry. Fe\u2070 or Fe\u00b2\u207a in magnetite provides additional reducing power. Formate is reduced to formaldehyde through loss of one oxygen as H\u2082O, catalyzed by mineral surface adsorption and electron transfer.",
+        "reasoning": "Fischer-Tropsch-type (FTT) synthesis on magnetite producing aldehydes including formaldehyde is documented in the hydrothermal prebiotic chemistry literature. Andersson & Holm (2000) describe mineral-buffered redox conditions supporting aldehyde formation. Formaldehyde is the essential C1 building block for downstream cyanohydrin (glycolonitrile) synthesis. Ritson & Sutherland (2013) note that formaldehyde feeds into the cyanosulfidic network."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Cyanohydrin formation: formaldehyde + HCN \u2192 glycolonitrile",
+        "inputs": [
+          "mol_004",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite clay surface",
+          "aqueous": true,
+          "other": "Mildly alkaline evaporitic pool, pH 7-9, cyanide concentrated via ferrocyanide thermal processing"
+        },
+        "mechanism": "Nucleophilic addition of CN\u207b to the carbonyl of formaldehyde yields glycolonitrile (2-hydroxyacetonitrile) through standard cyanohydrin formation. Clay surfaces concentrate both reactants via adsorption.",
+        "reasoning": "Ritson & Sutherland (2013, Angew. Chem. Int. Ed.) use glycolonitrile as the explicit starting substrate for their UV photoredox cascade. They note that cyanide can be concentrated by complexation with Fe\u00b2\u207a to form ferrocyanide, and thermal processing of ferrocyanide salts yields cyanide, ammonia, and cyanamide upon rehydration\u2014reagents directly relevant to Strecker chemistry. Glycolonitrile is the standard cyanohydrin of formaldehyde and a well-known prebiotic molecule."
+      },
+      {
+        "id": "rxn_004",
+        "name": "UV cyanosulfidic photoredox reduction of glycolonitrile to glycolaldehyde",
+        "inputs": [
+          "mol_008",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "CuCN (copper(I) cyanide solid)",
+          "sulfide minerals (chalcocite, covellite)"
+        ],
+        "conditions": {
+          "temperature": "300-320K",
+          "pressure": "1 atm",
+          "catalyst": "CuCN heterogeneous photoredox catalyst",
+          "aqueous": true,
+          "other": "UV irradiation at 254 nm, quartz cuvette conditions, 10 mM glycolonitrile, 30 mM H\u2082S, 33 mM Na\u2083PO\u2084, 10 mol% CuCN, 2 h irradiation"
+        },
+        "mechanism": "CuCN solid generates a fine dark precipitate upon mixing. UV irradiation produces hydrated electrons (e\u207b\u2090q) via Cu(I)/Cu(II) cyanocuprate photoredox cycling. These hydrated electrons reduce the nitrile group of glycolonitrile to an imine which hydrolyzes to yield glycolaldehyde. H\u2082S serves as the terminal reductant, regenerating Cu(I).",
+        "reasoning": "Ritson & Sutherland (2013, Angew. Chem. Int. Ed.) report 42% yield of glycolaldehyde from glycolonitrile under these exact conditions (10 mM glycolonitrile, 30 mM H\u2082S, 33 mM sodium phosphate, solid CuCN at 10 mol%, 254 nm UV, 2 h). CuCN as heterogeneous photoredox catalyst is explicitly described. Green, Xu & Sutherland (2021, JACS) further discuss Cu(I)/Cu(II) cyanocuprate photoredox cycling as the mechanistic basis. Ritson & Sutherland note dissolution of copper sulfide minerals in cyanide solution as a plausible geochemical source of CuCN."
+      },
+      {
+        "id": "rxn_005",
+        "name": "UV photochemical conversion of glycolaldehyde to acetaldehyde",
+        "inputs": [
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "CuCN (copper(I) cyanide solid)",
+          "TiO\u2082 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "300-320K",
+          "pressure": "1 atm",
+          "catalyst": "CuCN / UV photocatalysis",
+          "aqueous": true,
+          "other": "UV irradiation at 254 nm, photochemical deoxygenation/rearrangement; detected alongside glycolaldehyde in Ritson\u2013Sutherland product mixture"
+        },
+        "mechanism": "UV-driven photochemical reduction or rearrangement of glycolaldehyde produces acetaldehyde via loss of the hydroxyl group through radical or hydrated-electron-mediated deoxygenation. Acetaldehyde is identified as a co-product in the glycolonitrile photoredox reaction mixture.",
+        "reasoning": "Ritson & Sutherland (2013, Angew. Chem. Int. Ed.) explicitly report acetaldehyde as a product detected alongside glycolaldehyde in the UV photoredox product mixture. Green, Xu & Sutherland (2021, JACS) describe the broader network in which glycolaldehyde-level products undergo further photoreduction. Acetaldehyde is the critical branch point: its cyanohydrin (lactonitrile) is the direct precursor to lactaldehyde."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Cyanohydrin formation: acetaldehyde + HCN \u2192 lactonitrile",
+        "inputs": [
+          "mol_010",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "clay surface for concentration",
+          "aqueous": true,
+          "other": "Mildly alkaline pool, pH 7-9, CN\u207b nucleophilic addition to acetaldehyde"
+        },
+        "mechanism": "Nucleophilic addition of CN\u207b to the carbonyl carbon of acetaldehyde produces lactonitrile (acetaldehyde cyanohydrin, 2-hydroxypropanenitrile). The reaction is spontaneous in alkaline aqueous solution. Clay mineral surfaces serve to concentrate both HCN and acetaldehyde.",
+        "reasoning": "Ritson & Sutherland (2013, Angew. Chem. Int. Ed.) explicitly describe acetaldehyde cyanohydrin (lactonitrile) as the substrate for the second-stage photoredox reduction that yields lactaldehyde. This cyanohydrin formation is a standard, well-precedented aqueous reaction. The meteoritic Strecker-cyanohydrin analysis (Kyushu University report) also identifies cyanohydrin intermediates as central to amino acid formation."
+      },
+      {
+        "id": "rxn_007",
+        "name": "UV cyanosulfidic photoredox reduction of lactonitrile to lactaldehyde",
+        "inputs": [
+          "mol_011",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "CuCN (copper(I) cyanide solid)",
+          "sulfide minerals (chalcocite)"
+        ],
+        "conditions": {
+          "temperature": "300-320K",
+          "pressure": "1 atm",
+          "catalyst": "CuCN heterogeneous photoredox catalyst",
+          "aqueous": true,
+          "other": "UV irradiation at 254 nm, 2 h; acetaldehyde cyanohydrin as substrate, H\u2082S as terminal reductant; 19% yield of lactaldehyde reported"
+        },
+        "mechanism": "UV irradiation of the CuCN/H\u2082S system generates hydrated electrons via Cu(I)/Cu(II) photoredox cycling. These electrons reduce the nitrile group of lactonitrile (acetaldehyde cyanohydrin) to an imine, which undergoes hydrolysis to yield lactaldehyde (2-hydroxypropanal). H\u2082S serves as terminal electron donor.",
+        "reasoning": "Ritson & Sutherland (2013, Angew. Chem. Int. Ed.) explicitly report: 'irradiation of acetaldehyde cyanohydrin furnished lactaldehyde in 19% yield (after 2 h irradiation). Lactaldehyde is explicitly identified as the Strecker precursor of (allo-)threonine.' This is the critical bottleneck step producing the dedicated threonine carbonyl precursor. Green, Xu & Sutherland (2021, JACS) reiterate this step in their broader systems-chemistry framework."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Surface Strecker synthesis: lactaldehyde + HCN + NH\u2083 \u2192 threonine aminonitrile",
+        "inputs": [
+          "mol_012",
+          "mol_005",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "clay surface concentration",
+          "aqueous": true,
+          "other": "Evaporitic pool with concentrated NH\u2083 and HCN; days to weeks for aminonitrile formation; produces both threonine and allothreonine diastereomeric aminonitriles"
+        },
+        "mechanism": "Lactaldehyde reacts with NH\u2083 to form an imine (Schiff base) via condensation with loss of water. Nucleophilic addition of CN\u207b (from HCN) to the imine carbon yields threonine aminonitrile (2-amino-3-hydroxybutanenitrile). Both (2R,3S) and (2S,3R) diastereomers form, corresponding to threonine and allothreonine aminonitriles.",
+        "reasoning": "Ritson & Sutherland (2013, Angew. Chem. Int. Ed.) report that 'when HCN and NH\u2083 were added to photoreduction products, lactaldehyde was smoothly converted via its cyanohydrin to the (allo-)threonine Strecker intermediate aminonitrile (aminonitrile 22 in the paper numbering).' Timescales of days to weeks are noted. The meteoritic Strecker-cyanohydrin discussion (Kyushu University report) explicitly identifies lactaldehyde as the carbonyl precursor for threonine/allothreonine and emphasizes that ammonia-rich conditions favor aminonitrile over cyanohydrin pathways."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Hydrolysis of threonine aminonitrile to threonine",
+        "inputs": [
+          "mol_013"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": true,
+          "other": "Aqueous hydrolysis, mildly acidic to neutral pH; nitrile \u2192 amide \u2192 carboxylic acid; produces racemic threonine + allothreonine"
+        },
+        "mechanism": "Stepwise hydrolysis of the nitrile group: (1) water addition to the C\u2261N bond yields an amide intermediate (threonine amide), (2) further hydrolysis of the amide yields the free \u03b1-amino acid (threonine). Both diastereomers (threonine and allothreonine) are produced in approximately equal amounts.",
+        "reasoning": "Hydrolysis of Strecker aminonitriles to amino acids is the expected final step in all Strecker frameworks. The meteoritic Strecker-cyanohydrin discussion (Kyushu University report) explicitly frames hydrolysis of aminonitriles as producing \u03b1-amino acids. Parker et al. (2011, PNAS) and Ring et al. (1972, PNAS) confirm threonine and allothreonine among final products, both racemic within measurement uncertainty\u2014supporting abiotic Strecker-type origin."
+      },
+      {
+        "id": "rxn_010",
+        "name": "HCN oligomerization to aminomalononitrile (AMN)",
+        "inputs": [
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "TiO\u2082 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite (concentrating agent)",
+          "aqueous": true,
+          "other": "Concentrated HCN solution, pH 8-9, evaporitic or ice-eutectic concentration; HCN dimer \u2192 trimer (AMN); UV may accelerate initial oligomerization"
+        },
+        "mechanism": "Sequential oligomerization of HCN: (1) 2 HCN \u2192 iminoacetonitrile (HCN dimer), (2) addition of third HCN \u2192 aminomalononitrile (AMN, HCN trimer). AMN is a key branch point in HCN chemistry, also leading toward adenine (5 HCN) and other heterocycles. Clay surfaces help concentrate HCN above the critical threshold for oligomerization.",
+        "reasoning": "HCN oligomerization to AMN is well-established in prebiotic chemistry. Thanassi (1975, J. Mol. Evol.) uses AMN as an explicit starting material for amino acid synthesis including threonine/allothreonine. Green, Xu & Sutherland (2021, JACS) discuss the broader HCN chemistry challenge space including AMN accumulation vs. competing polymerization. AMN prebiotic plausibility hinges on whether it can accumulate at useful concentrations."
+      },
+      {
+        "id": "rxn_011",
+        "name": "AMN + acetaldehyde electrophilic coupling \u2192 threonine aminonitrile precursor \u2192 threonine aminonitrile",
+        "inputs": [
+          "mol_015",
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite clay surface",
+          "aqueous": true,
+          "other": "Mild aqueous conditions; AMN acts as multifunctional C-N synthon; aldol-type addition of AMN to acetaldehyde followed by partial hydrolysis"
+        },
+        "mechanism": "AMN acts as a nucleophilic carbon-nitrogen synthon, reacting with acetaldehyde as the electrophilic partner. The \u03b1-carbon of AMN attacks the carbonyl of acetaldehyde, generating a C4 adduct bearing amino, cyano, and hydroxyl functionalities. Partial hydrolysis and rearrangement yields the threonine aminonitrile equivalent. Full hydrolysis then yields threonine/allothreonine.",
+        "reasoning": "Thanassi (1975, J. Mol. Evol.) provides direct experimental evidence that aminomalononitrile-derived chemistry yields threonine and allothreonine after hydrolysis when AMN is reacted with electrophiles (including aldehydes) under mild conditions. This route bypasses the need to pre-form lactaldehyde in bulk, offering an alternative C-N assembly pathway. The tradeoff is that selectivity, geochemical plausibility of AMN accumulation, and competing polymerization remain active questions (Green et al., 2021, JACS)."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Hydrothermal Strecker synthesis: lactaldehyde + HCN + NH\u2083 \u2192 threonine aminonitrile (mineral-buffered)",
+        "inputs": [
+          "mol_012",
+          "mol_005",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS\u2082)",
+          "pyrrhotite (FeS)",
+          "magnetite (Fe\u2083O\u2084)"
+        ],
+        "conditions": {
+          "temperature": "370-425K",
+          "pressure": "high (10-50 bar)",
+          "catalyst": "pyrite-pyrrhotite-magnetite mineral buffer",
+          "aqueous": true,
+          "other": "Redox-buffered by pyrite-pyrrhotite-magnetite assemblage; pH controlled by K-feldspar-muscovite-quartz; requires prior delivery of lactaldehyde from surface photochemistry or hydrothermal aldol pathways"
+        },
+        "mechanism": "Strecker synthesis under hydrothermal conditions: lactaldehyde condenses with NH\u2083 to form an imine, followed by CN\u207b addition to yield threonine aminonitrile. The mineral buffer assemblage constrains redox potential (oxygen fugacity) to prevent oxidative degradation. Elevated temperature accelerates both imine formation and CN\u207b addition but also risks hydroxy amino acid degradation.",
+        "reasoning": "Andersson & Holm (2000, Origins of Life and Evolution of the Biosphere) describe hydrothermal Strecker experiments (Hennet et al., 1992) at 150\u00b0C and 10 bar using pyrite-pyrrhotite-magnetite mineral buffers that yielded glycine, alanine, aspartate, and glutamate. Threonine was not explicitly tabulated, highlighting a practical bottleneck: lactaldehyde availability and hydroxy amino acid thermal degradation. This reaction is included as a plausible extrapolation of demonstrated hydrothermal Strecker chemistry, with the caveat that threonine-specific demonstration remains incomplete. Keefe et al. (1995, PNAS) caution that direct FeS/H\u2082S-driven CO\u2082-to-amino-acid routes failed, reinforcing that carbonyls + CN\u207b (Strecker) rather than direct CO\u2082 fixation is the operative pathway."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Full hydrothermal-to-surface cyanosulfidic photoredox pathway",
+        "description": "CO\u2082 is fixed to formate then formaldehyde in hydrothermal vents. Formaldehyde enters the surface cyanosulfidic photoredox cascade via glycolonitrile \u2192 glycolaldehyde \u2192 acetaldehyde \u2192 lactonitrile \u2192 lactaldehyde, followed by surface Strecker synthesis and hydrolysis to threonine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_004",
+          "mol_008",
+          "mol_009",
+          "mol_010",
+          "mol_011",
+          "mol_012",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Hydrothermal-to-surface with hydrothermal Strecker finish",
+        "description": "Same upstream chain as P1 (CO\u2082 \u2192 formate \u2192 formaldehyde \u2192 glycolonitrile \u2192 glycolaldehyde \u2192 acetaldehyde \u2192 lactonitrile \u2192 lactaldehyde), but the final Strecker step occurs under hydrothermal mineral-buffered conditions instead of surface conditions.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_012",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_010",
+          "mol_012",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Direct surface cyanosulfidic photoredox pathway (exogenous formaldehyde)",
+        "description": "Formaldehyde delivered by meteoritic/cometary infall or atmospheric photochemistry enters the surface cyanosulfidic cascade directly, bypassing hydrothermal CO\u2082 fixation.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_009",
+          "mol_010",
+          "mol_012",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Acetaldehyde-entry photoredox pathway",
+        "description": "Acetaldehyde from volcanic/atmospheric sources or glycolaldehyde photoreduction enters the pathway at the cyanohydrin step, yielding lactonitrile \u2192 lactaldehyde \u2192 threonine aminonitrile \u2192 threonine.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_012",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Lactaldehyde-entry surface Strecker pathway",
+        "description": "Pre-formed lactaldehyde (e.g., from meteoritic delivery or other photochemical sources) undergoes direct Strecker synthesis on the surface to yield threonine aminonitrile, followed by hydrolysis.",
+        "reaction_sequence": [
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Lactaldehyde-entry hydrothermal Strecker pathway",
+        "description": "Pre-formed lactaldehyde undergoes Strecker synthesis under hydrothermal mineral-buffered conditions, followed by hydrolysis to threonine.",
+        "reaction_sequence": [
+          "rxn_012",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "AMN + acetaldehyde route via HCN oligomerization",
+        "description": "HCN oligomerizes to aminomalononitrile (AMN) on clay surfaces; AMN reacts with acetaldehyde (from glycolaldehyde photoreduction) as an electrophilic partner to yield threonine aminonitrile, followed by hydrolysis.",
+        "reaction_sequence": [
+          "rxn_010",
+          "rxn_004",
+          "rxn_005",
+          "rxn_011",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_015",
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Full hydrothermal-to-AMN route",
+        "description": "CO\u2082 is fixed hydrothermally to formaldehyde, which enters the photoredox cascade to produce acetaldehyde; independently, HCN oligomerizes to AMN; AMN and acetaldehyde combine to yield threonine aminonitrile.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_005",
+          "rxn_010",
+          "rxn_011",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_010",
+          "mol_015",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "AMN + direct acetaldehyde route",
+        "description": "Acetaldehyde from exogenous or atmospheric sources combined with AMN from HCN oligomerization, bypassing the full photoredox cascade. A shorter alternative for environments with pre-existing acetaldehyde.",
+        "reaction_sequence": [
+          "rxn_010",
+          "rxn_011",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_015",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Surface photoredox to hydrothermal Strecker via acetaldehyde cyanohydrin",
+        "description": "Acetaldehyde formed photochemically is converted to lactonitrile then lactaldehyde on the surface; lactaldehyde is then transported to hydrothermal flanks where mineral-buffered Strecker synthesis occurs under higher temperature/pressure, followed by hydrolysis.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_012",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_012",
+          "mol_013"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_005",
+      "mol_010",
+      "mol_012",
+      "mol_013",
+      "mol_004"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_005",
+        "incoming_reactions": [],
+        "outgoing_reactions": [
+          "rxn_003",
+          "rxn_006",
+          "rxn_008",
+          "rxn_010",
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_005"
+        ],
+        "outgoing_reactions": [
+          "rxn_006",
+          "rxn_011"
+        ]
+      },
+      {
+        "molecule_id": "mol_012",
+        "incoming_reactions": [
+          "rxn_007"
+        ],
+        "outgoing_reactions": [
+          "rxn_008",
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_013",
+        "incoming_reactions": [
+          "rxn_008",
+          "rxn_011",
+          "rxn_012"
+        ],
+        "outgoing_reactions": [
+          "rxn_009"
+        ]
+      },
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [
+          "rxn_002"
+        ],
+        "outgoing_reactions": [
+          "rxn_003"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Threonine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_002": 0.7,
+          "rxn_003": 0.95,
+          "rxn_004": 0.92,
+          "rxn_005": 0.68,
+          "rxn_006": 0.95,
+          "rxn_007": 0.88,
+          "rxn_008": 0.93,
+          "rxn_009": 0.9
+        },
+        "chemical_feasibility": 0.78,
+        "pathway_coherence": 0.85,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.88,
+        "overall_confidence": 0.83,
+        "feedback": "This is the most complete pathway, spanning all three environments. Hydrothermal CO\u2082 fixation to formate (rxn_001) is well-supported. The formate-to-formaldehyde step (rxn_002) is thermodynamically challenging even on magnetite, and the glycolaldehyde-to-acetaldehyde photochemical step (rxn_005) lacks a clean mechanistic account\u2014literature describes acetaldehyde as a minor side product, not a high-yield direct conversion. The downstream cyanosulfidic photoredox and Strecker steps are strongly literature-supported (Ritson & Sutherland 2013; 42% yield for glycolaldehyde, 19% for lactaldehyde).",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_005"
+        ],
+        "suggestions": [
+          "Clarify mechanism for glycolaldehyde \u2192 acetaldehyde photochemical step; consider an aldol/retro-aldol or decarbonylation pathway with explicit intermediates",
+          "Consider an alternative formaldehyde source (e.g., photoreduction of CO or meteoritic delivery) to bypass the thermodynamically difficult formate \u2192 formaldehyde reduction"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_002": 0.7,
+          "rxn_003": 0.95,
+          "rxn_004": 0.92,
+          "rxn_005": 0.68,
+          "rxn_006": 0.95,
+          "rxn_007": 0.88,
+          "rxn_012": 0.75,
+          "rxn_009": 0.9
+        },
+        "chemical_feasibility": 0.76,
+        "pathway_coherence": 0.82,
+        "environmental_progression": 0.83,
+        "target_achievement": 0.85,
+        "overall_confidence": 0.8,
+        "feedback": "Similar to P1 but finishes with hydrothermal Strecker (rxn_012). Literature explicitly notes threonine was NOT among tabulated hydrothermal Strecker products (Andersson & Holm 2000), and hydroxy amino-acid degradation at high temperatures is a known concern. The mineral-buffered claim is reasonable but underspecified. The surface\u2192hydrothermal transition for lactaldehyde is directionally unusual though not impossible.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_005",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Specify mineral buffer for rxn_012 (e.g., pyrite-pyrrhotite-magnetite as per Andersson & Holm)",
+          "Address hydroxy amino-acid thermal degradation risk at hydrothermal temperatures"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_003": 0.95,
+          "rxn_004": 0.92,
+          "rxn_005": 0.68,
+          "rxn_006": 0.95,
+          "rxn_007": 0.88,
+          "rxn_008": 0.93,
+          "rxn_009": 0.9
+        },
+        "chemical_feasibility": 0.82,
+        "pathway_coherence": 0.86,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.9,
+        "overall_confidence": 0.84,
+        "feedback": "This pathway is essentially the Ritson & Sutherland cyanosulfidic photoredox route and is the most directly literature-supported. By assuming exogenous formaldehyde it avoids the weakest hydrothermal steps but loses the cross-environmental flow. The rxn_005 step remains the weakest link. All Surface\u2192Biochemical transitions are clean.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_005"
+        ],
+        "suggestions": [
+          "Explicitly note CuCN as photoredox catalyst for surface steps (per Ritson & Sutherland)",
+          "Address formaldehyde source (meteoritic, photochemical CO reduction, or Cannizzaro from formose)"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_006": 0.95,
+          "rxn_007": 0.88,
+          "rxn_008": 0.93,
+          "rxn_009": 0.9
+        },
+        "chemical_feasibility": 0.9,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.75,
+        "target_achievement": 0.92,
+        "overall_confidence": 0.86,
+        "feedback": "A compact and chemically strong pathway. Acetaldehyde cyanohydrin photoreduction to lactaldehyde (19% yield, Ritson & Sutherland) followed by Strecker is well-demonstrated. Environmental progression is limited (surface\u2192biochemical only), reducing network contribution. All steps have strong experimental support.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Specify acetaldehyde source to strengthen the entry point"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_008": 0.93,
+          "rxn_009": 0.9
+        },
+        "chemical_feasibility": 0.92,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.7,
+        "target_achievement": 0.92,
+        "overall_confidence": 0.83,
+        "feedback": "The minimal Strecker module: lactaldehyde + HCN + NH\u2083 \u2192 threonine aminonitrile \u2192 threonine. Extremely well-supported by Strecker literature and meteoritic analogy. Too short to be a standalone network contribution but serves as the convergence module for the whole network.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "This is really a convergence module, not a standalone pathway; its value is in receiving products from multiple upstream routes"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_012": 0.75,
+          "rxn_009": 0.9
+        },
+        "chemical_feasibility": 0.78,
+        "pathway_coherence": 0.75,
+        "environmental_progression": 0.72,
+        "target_achievement": 0.82,
+        "overall_confidence": 0.77,
+        "feedback": "Hydrothermal Strecker from lactaldehyde. The literature caution is significant: threonine is not explicitly demonstrated in hydrothermal Strecker experiments, and hydroxy amino-acid degradation is a documented concern. The mineral buffering claim needs specification. Hydrothermal\u2192Biochemical transition is acceptable.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Specify temperature, pressure, and mineral buffer (e.g., 150\u00b0C, pyrite-pyrrhotite-magnetite)",
+          "Address hydroxy amino-acid thermal stability explicitly",
+          "Consider lower-temperature flank settings rather than high-T vent core"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_003": 0.95,
+          "rxn_004": 0.92,
+          "rxn_005": 0.68,
+          "rxn_010": 0.82,
+          "rxn_011": 0.65
+        },
+        "chemical_feasibility": 0.72,
+        "pathway_coherence": 0.75,
+        "environmental_progression": 0.73,
+        "target_achievement": 0.72,
+        "overall_confidence": 0.73,
+        "feedback": "The AMN route is supported by Thanassi (1975) but the mechanism for AMN + acetaldehyde \u2192 threonine aminonitrile (rxn_011) is underspecified. Thanassi reports threonine/allothreonine in hydrolysates, but the intermediate steps are murky. AMN accumulation at useful concentrations is flagged as an open question in the literature. The rxn_005 weakness compounds uncertainty.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_005",
+          "rxn_011"
+        ],
+        "suggestions": [
+          "Elaborate the mechanism for rxn_011: is this a Knoevenagel-type condensation followed by reduction/hydrolysis?",
+          "Address AMN stability and concentration issues",
+          "Add a hydrolysis step explicitly if needed between rxn_011 product and threonine aminonitrile"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_002": 0.7,
+          "rxn_003": 0.95,
+          "rxn_004": 0.92,
+          "rxn_005": 0.68,
+          "rxn_010": 0.82,
+          "rxn_011": 0.65,
+          "rxn_009": 0.9
+        },
+        "chemical_feasibility": 0.7,
+        "pathway_coherence": 0.78,
+        "environmental_progression": 0.85,
+        "target_achievement": 0.75,
+        "overall_confidence": 0.75,
+        "feedback": "The longest AMN route inherits all weaknesses of P7 plus the hydrothermal uncertainties. Good environmental flow (hydrothermal\u2192surface\u2192biochemical) but accumulated uncertainty across 8 steps reduces confidence. Multiple weak links (rxn_002, rxn_005, rxn_011) compound.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_005",
+          "rxn_011"
+        ],
+        "suggestions": [
+          "Strengthen weakest links or provide alternative bypasses",
+          "Consider whether this long route adds value beyond P1 and P7 individually"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_010": 0.82,
+          "rxn_011": 0.65,
+          "rxn_009": 0.9
+        },
+        "chemical_feasibility": 0.74,
+        "pathway_coherence": 0.72,
+        "environmental_progression": 0.68,
+        "target_achievement": 0.73,
+        "overall_confidence": 0.72,
+        "feedback": "Minimal AMN route. Compact but hinges entirely on rxn_011 (AMN + acetaldehyde), which is the least mechanistically specified reaction in the network. Thanassi support is real but indirect. Environmental progression is limited (surface only + biochemical).",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_011"
+        ],
+        "suggestions": [
+          "Provide detailed mechanism for AMN + acetaldehyde coupling",
+          "Specify conditions (pH, temperature, catalysts)"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_006": 0.95,
+          "rxn_007": 0.88,
+          "rxn_012": 0.75,
+          "rxn_009": 0.9
+        },
+        "chemical_feasibility": 0.84,
+        "pathway_coherence": 0.83,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.87,
+        "overall_confidence": 0.83,
+        "feedback": "Nicely demonstrates the surface-to-hydrothermal transition through lactonitrile photoreduction and hydrothermal Strecker. The surface photoredox steps are well-supported. The hydrothermal Strecker for threonine specifically remains a caveat but at lower temperature flanks this could work. Good environmental bridging.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Specify lower-temperature hydrothermal conditions to minimize degradation",
+          "Cite Hennet et al. 1992 for hydrothermal Strecker precedent"
+        ]
+      }
+    ],
+    "best_pathway_id": "P4",
+    "overall_confidence": 0.85,
+    "network_feedback": "This is a well-designed synthesis network for threonine that closely follows the literature consensus. The central strategy of converging on lactaldehyde as the key carbonyl precursor, followed by Strecker chemistry, is strongly supported by Ritson & Sutherland (2013), Green et al. (2021), and meteoritic Strecker analyses. The network exhibits genuine convergence with 5 convergence points and multiple alternative routes to threonine aminonitrile (surface Strecker, hydrothermal Strecker, and AMN coupling). Three main strengths: (1) excellent literature alignment with the cyanosulfidic photoredox route providing quantitative yield data, (2) proper cross-environmental flow from hydrothermal CO\u2082 fixation through surface photoredox to biochemical hydrolysis, and (3) inclusion of the alternative AMN route (Thanassi 1975) for robustness. Three weaknesses: (1) HCN and NH\u2083 appear as hub intermediates without production reactions\u2014the network should show their genesis (e.g., volcanic HCN, thermal decomposition of ferrocyanide); (2) rxn_005 (glycolaldehyde \u2192 acetaldehyde) lacks a clean mechanistic pathway and is a bottleneck in 6 of 10 pathways; (3) the AMN + acetaldehyde coupling mechanism (rxn_011) needs elaboration. Formaldehyde's designation as a hub is marginal (degree 2). Overall, the network is chemically credible, well-connected, and achieves the target through multiple validated routes.",
+    "approved": true,
+    "hub_quality": 0.82,
+    "convergence_quality": 0.88
+  },
+  "success": false,
+  "attempts": 1,
+  "notes": null
+}

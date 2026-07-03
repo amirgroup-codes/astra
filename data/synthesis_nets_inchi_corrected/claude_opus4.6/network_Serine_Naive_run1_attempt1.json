@@ -1,0 +1,123 @@
+{
+  "target_molecule": "L-Serine",
+  "network": {
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3"
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2"
+      },
+      {
+        "id": "mol_003",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2"
+      },
+      {
+        "id": "mol_004",
+        "formula": "O2",
+        "iupac_name": "molecular oxygen",
+        "common_name": "oxygen",
+        "inchi": "InChI=1S/O2/c1-2"
+      },
+      {
+        "id": "mol_005",
+        "formula": "C2H4O2",
+        "iupac_name": "2-hydroxyacetaldehyde",
+        "common_name": "glycolaldehyde",
+        "inchi": "InChI=1S/C2H4O2/c3-1-2-4/h1,4H,2H2"
+      },
+      {
+        "id": "mol_006",
+        "formula": "HCN",
+        "iupac_name": "formonitrile",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H"
+      },
+      {
+        "id": "mol_007",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C3H6N2O",
+        "iupac_name": "2-amino-3-hydroxypropanenitrile",
+        "common_name": "serinonitrile",
+        "inchi": "InChI=1S/C3H6N2O/c4-1-3(5)2-6/h3,6H,2,5H2"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C3H7NO3",
+        "iupac_name": "2-amino-3-hydroxypropanoic acid",
+        "common_name": "serine",
+        "inchi": "InChI=1S/C3H7NO3/c4-2(1-5)3(6)7/h2,5H,1,4H2,(H,6,7)"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "UV photoreduction of CO2",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_003",
+          "mol_004"
+        ],
+        "conditions": "UV photolysis or electrical discharge (Miller-Urey type)"
+      },
+      {
+        "id": "rxn_002",
+        "name": "Formose reaction (aldol condensation)",
+        "inputs": [
+          "mol_003",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_005"
+        ],
+        "conditions": "Aldol condensation catalyzed by Ca(OH)2 or clay minerals at mild alkaline pH"
+      },
+      {
+        "id": "rxn_003",
+        "name": "Strecker synthesis",
+        "inputs": [
+          "mol_005",
+          "mol_006",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "conditions": "Aqueous solution, ambient to warm temperature; imine formation then HCN addition"
+      },
+      {
+        "id": "rxn_004",
+        "name": "Nitrile hydrolysis",
+        "inputs": [
+          "mol_008",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_009",
+          "mol_007"
+        ],
+        "conditions": "Aqueous hydrolysis; nitrile \u2192 amide \u2192 carboxylic acid; mildly acidic or basic warm water"
+      }
+    ]
+  }
+}

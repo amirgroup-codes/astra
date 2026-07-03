@@ -1,0 +1,943 @@
+{
+  "target_molecule": "L-Alanine",
+  "network": {
+    "target_molecule": "L-Alanine",
+    "overall_strategy": "This network follows the literature-supported prebiotic route families retained in the validated report for alanine: (i) the mechanistically explicit Strecker sequence from acetaldehyde, ammonia, and HCN via imine/carbinolamine, alanine aminonitrile, and alanine amide; (ii) direct atmospheric spark-discharge formation of alanine from reduced gas mixtures, including sulfur-rich variants; (iii) hydrothermal pyruvate amination under alkaline redox gradients on mixed-valence iron oxyhydroxide; (iv) hydrothermal amino-acid formation from simple carbon precursors plus ammonia; (v) astrochemical UV/VUV ice photochemistry yielding racemic alanine; (vi) CPL-associated UV ice processing giving only weak enantiomeric excess; and (vii) cyanosulfidic and iron-sulfur branches that are retained as precursor-generating or inferred alanine-forming routes. Because the evidence base supports mostly racemic or unspecified alanine rather than enantiopure L-alanine, the final L-alanine node is treated as arising from weakly biased selection/resolution from prebiotically formed alanine in biochemical settings, explicitly acknowledging this as the major unresolved gap in the literature. Ten distinct pathways are enumerated by combining the direct route families and literature-consistent sub-branches to the common alanine hub, followed by a final biochemical enantioenrichment/selection step.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CH3CHO",
+        "iupac_name": "ethanal",
+        "common_name": "acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_005",
+        "formula": "C2H5NO",
+        "iupac_name": "ethan-1-imine-1-ol / ethanimine manifold",
+        "common_name": "acetaldehyde-ammonia imine/carbinolamine manifold",
+        "inchi": null,
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_006",
+        "formula": "C3H6N2",
+        "iupac_name": "2-aminopropanenitrile",
+        "common_name": "alanine aminonitrile",
+        "inchi": "InChI=1S/C3H6N2/c1-3(4)2-5/h3H,4H2,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C3H7NO",
+        "iupac_name": "2-aminopropanamide",
+        "common_name": "alanine amide",
+        "inchi": "InChI=1S/C3H8N2O/c1-2(4)3(5)6/h2H,4H2,1H3,(H2,5,6)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvic acid",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_009",
+        "formula": "H2S",
+        "iupac_name": "sulfane",
+        "common_name": "hydrogen sulfide",
+        "inchi": "InChI=1S/H2S/h1H2",
+        "role": "intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_010",
+        "formula": "CH4",
+        "iupac_name": "methane",
+        "common_name": "methane",
+        "inchi": "InChI=1S/CH4/h1H4",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_011",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_012",
+        "formula": "Fe(II)-Fe(III)OOH",
+        "iupac_name": "mixed-valence iron oxyhydroxide",
+        "common_name": "mixed-valence iron oxyhydroxide",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_013",
+        "formula": "Cu-CN photoredox system",
+        "iupac_name": "copper cyanometal photoredox species",
+        "common_name": "Cu/cyanometal photoredox system",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "ice mixture",
+        "iupac_name": "interstellar ice mixture",
+        "common_name": "interstellar ice mixture",
+        "inchi": null,
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_015",
+        "formula": "C3H7NO2",
+        "iupac_name": "2-aminopropanoic acid",
+        "common_name": "alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_016",
+        "formula": "L-C3H7NO2",
+        "iupac_name": "(2S)-2-aminopropanoic acid",
+        "common_name": "L-alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_017",
+        "formula": "oligo(C3H5NO)n",
+        "iupac_name": "alanine oligopeptides",
+        "common_name": "alanine oligopeptides",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Strecker imine/carbinolamine manifold formation from acetaldehyde and ammonia",
+        "inputs": [
+          "mol_001",
+          "mol_002",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_005"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "not experimentally specified in mounted artifact; aqueous modeling context",
+          "pressure": "not reported",
+          "catalyst": "none reported in source study; mineral surfaces included here only as surface-environment concentrators",
+          "aqueous": "true",
+          "other": "HCN-bearing aqueous surface water or primitive-ocean analogue; proton-transfer dependent"
+        },
+        "mechanism": "Ammonia adds to acetaldehyde to form a carbinolamine, followed by dehydration/proton transfer to an imine manifold.",
+        "reasoning": "This is the first mechanistic Strecker step retained in the validated report, explicitly supported by DFT treatment with a rate-determining deprotonation barrier of 9.6 kcal/mol. The mounted literature does not report a mineral catalyst for the source reaction, but the network places it in a surface aqueous setting with mineral concentration surfaces to satisfy graph connectivity and environmental context without changing the literature mechanism (Yamabe et al., 2014)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Cyanide addition to the imine manifold forming alanine aminonitrile",
+        "inputs": [
+          "mol_005",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "aqueous modeling study; not reported numerically",
+          "pressure": "not reported",
+          "catalyst": "none reported in source study; mineral surfaces included as concentrators",
+          "aqueous": "true",
+          "other": "aqueous Strecker setting; proton-transfer dependent; racemic aminonitrile expected absent chiral bias"
+        },
+        "mechanism": "Nucleophilic cyanide addition to the imine/carbinolamine manifold yields 2-aminopropanenitrile.",
+        "reasoning": "The validated report identifies this as the second mechanistically explicit Strecker step leading directly to alanine aminonitrile, with stereochemistry expected to be racemic without a chiral bias. Mineral catalysis was not reported in the preserved source, so the added surface agents are explicitly contextual rather than literature-asserted catalysts (Yamabe et al., 2014)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Hydrolysis of alanine aminonitrile to alanine amide",
+        "inputs": [
+          "mol_006",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "phosphate minerals (apatite, struvite)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "hydrolytic aqueous regime; numeric value not recovered",
+          "pressure": "not reported",
+          "catalyst": "none specifically reported",
+          "aqueous": "true",
+          "other": "acidic or otherwise hydrolytic conditions favored; nitrile-hydrolysis sequence is rate-limiting overall"
+        },
+        "mechanism": "Partial nitrile hydrolysis converts alanine aminonitrile to alanine amide.",
+        "reasoning": "The mounted report preserves alanine amide as the hydrolysis intermediate between alanine aminonitrile and alanine, and reports a high DFT barrier for nitrile hydrolysis in the overall sequence. The mineral agents are added only as plausible surface-environment participants because direct mineral catalysis was not retained in the source artifact (Yamabe et al., 2014; Miller et al., 1975)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Hydrolysis of alanine amide to alanine",
+        "inputs": [
+          "mol_007",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "phosphate minerals (apatite, struvite)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "hydrolytic aqueous regime; numeric value not recovered",
+          "pressure": "not reported",
+          "catalyst": "none specifically reported",
+          "aqueous": "true",
+          "other": "post-Strecker aqueous hydrolysis in ponds, oceans, or parent-body waters; racemic alanine expected"
+        },
+        "mechanism": "Further amide hydrolysis yields alanine.",
+        "reasoning": "This closes the classical Strecker route preserved in the validated report. The evidence base supports alanine formation through alanine amide under hydrolytic conditions, with racemic stereochemical expectation in the absence of chiral bias. Mineral agents are contextual rather than source-demonstrated catalysts (Yamabe et al., 2014; Miller et al., 1975)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Classic Miller-Urey spark discharge production of alanine from reduced gases",
+        "inputs": [
+          "mol_010",
+          "mol_002",
+          "mol_011",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "phosphate minerals (apatite, struvite)"
+        ],
+        "conditions": {
+          "temperature": "gas discharge with boiling-water circulation",
+          "pressure": "laboratory near-atmospheric setup",
+          "catalyst": "electric discharge",
+          "aqueous": "true",
+          "other": "lightning or electrical-discharge atmospheric microenvironment; numeric alanine yield not recovered"
+        },
+        "mechanism": "Electrical discharge through a reduced atmosphere generates reactive carbon-nitrogen species that produce alanine among a broader amino-acid mixture after aqueous recovery.",
+        "reasoning": "The validated report identifies Miller's spark-discharge chemistry as one of the strongest direct alanine-producing route families. Product alanine is direct, though mechanistic intermediates and numeric yields were not preserved. Mineral agents are added as environmental collection/concentration surfaces rather than literature-required catalysts (Miller, 1953)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Sulfur-rich spark discharge production of alanine",
+        "inputs": [
+          "mol_010",
+          "mol_002",
+          "mol_011",
+          "mol_004",
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "sulfide minerals (stibnite, molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "H2S-rich volcanic-plume analogue discharge experiment",
+          "pressure": "laboratory near-atmospheric setup",
+          "catalyst": "electric discharge",
+          "aqueous": "true",
+          "other": "volcanic lightning or sulfur-rich atmospheric microenvironment; alanine reported among products; numeric alanine yield not recovered"
+        },
+        "mechanism": "Electrical discharge in sulfur-bearing reduced gases expands product diversity and yields alanine among amino-acid products.",
+        "reasoning": "The validated report retains the Parker sulfur-rich discharge branch as a direct alanine-producing route family distinct from the classic Miller setup. Mineral agents again serve only as surface-environment contextualizers because no mineral catalyst was preserved for the source experiment (Parker et al., 2011)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Hydrothermal alanine formation from pyruvate and ammonia on mixed-valence iron oxyhydroxide",
+        "inputs": [
+          "mol_008",
+          "mol_002",
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "mixed-valence iron oxyhydroxide",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "moderately warm temperatures",
+          "pressure": "hydrothermal relevant; not emphasized",
+          "catalyst": "1:1 Fe(II):Fe(III) iron oxyhydroxide",
+          "aqueous": "true",
+          "other": "alkaline hydrothermal vent mixing-zone analogue with redox and pH gradients; maximum alanine yield under these conditions but exact value not recovered"
+        },
+        "mechanism": "Pyruvate undergoes reductive amination-like conversion to alanine under alkaline redox gradients on mixed-valence iron oxyhydroxide surfaces.",
+        "reasoning": "This is the clearest mineral-supported hydrothermal alanine-forming route in the validated corpus. The exact study emphasizes 1:1 Fe(II):Fe(III) iron oxyhydroxide and alkaline redox gradients; magnetite is included as a hydrothermal contextual mineral from the allowed mineral set, not as a substitute for the literature catalyst. This route directly links hydrothermal pyruvate chemistry to alanine production (Barge et al., 2019)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Hydrothermal amino-acid formation from simple carbon precursors and ammonia",
+        "inputs": [
+          "mol_001",
+          "mol_002",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "hydrothermal",
+          "pressure": "elevated hydrothermal pressure implied",
+          "catalyst": "none specifically recovered in mounted artifact",
+          "aqueous": "true",
+          "other": "submarine hydrothermal simulation; alanine among amino-acid products; quantitative alanine values not recovered"
+        },
+        "mechanism": "Simple carbon precursors and ammonia react under hydrothermal conditions to generate alanine among mixed amino-acid products.",
+        "reasoning": "The validated report retains Hennet, Holm and Engel as direct hydrothermal evidence for alanine among products from simple carbon precursors plus ammonia, though mechanistic detail and numerical yields were not preserved. Pyrite and greigite are included to satisfy the hydrothermal mineral-agent requirement while remaining within the iron-sulfur hydrothermal context discussed in the broader validated corpus (Hennet, Holm & Engel, 1992)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Cyanosulfidic precursor branch to pyruvate-relevant alpha-ketoacid access",
+        "inputs": [
+          "mol_003",
+          "mol_009",
+          "mol_013",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite, molybdenite)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "surface-compatible; non-hydrothermal",
+          "pressure": "surface",
+          "catalyst": "Cu/cyanometal photoredox system with UV",
+          "aqueous": "true",
+          "other": "subaerial UV-irradiated ponds/streams; near-neutral to alkaline framing; retained as inferred precursor edge rather than direct alanine closure"
+        },
+        "mechanism": "HCN-derived feedstocks under sulfide-rich UV photoredox conditions generate amino-acid precursor chemistry relevant to alpha-ketoacid and pyruvate access.",
+        "reasoning": "The validated report explicitly marks the cyanosulfidic branch as inferred for alanine, but strong as a precursor-generating framework relevant to alpha-ketoacid access. Here it is used conservatively to feed the hydrothermal pyruvate-amination route rather than claiming direct alanine formation (Patel et al., 2015; Ritson et al., 2018; Sasselov et al., 2020)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Iron-sulfur inferred alanine formation from pyruvate, ammonia, and sulfide minerals",
+        "inputs": [
+          "mol_008",
+          "mol_002",
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "mackinawite (FeS)",
+          "pyrite (FeS2)"
+        ],
+        "conditions": {
+          "temperature": "warm to hydrothermal",
+          "pressure": "not recovered",
+          "catalyst": "FeS/FeS2 sulfide mineral suite",
+          "aqueous": "true",
+          "other": "likely neutral to alkaline sulfide-bearing waters; contested and inferred hypothesis-level route; no recovered numeric alanine yield"
+        },
+        "mechanism": "Pyruvate or related alpha-keto acids undergo mineral-assisted amination/reduction in sulfide-rich iron-sulfur settings to produce alanine.",
+        "reasoning": "The validated network retains this route as inferred and contested rather than strongly established, but it is explicitly present in the mounted report and therefore included without upgrading its evidential status. The mineral suite follows the iron-sulfur literature retained in the report (W\u00e4chtersh\u00e4user, 1992; Keefe et al., 1995; Amend & Shock, 1999)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "UV/VUV irradiation of interstellar ice mixtures yielding alanine in organic residue",
+        "inputs": [
+          "mol_014",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "borate minerals (colemanite, ulexite)"
+        ],
+        "conditions": {
+          "temperature": "~12 K in classic work; hydrolysis/workup after warming",
+          "pressure": "high vacuum / low-pressure astrochemical simulation",
+          "catalyst": "UV/VUV photons",
+          "aqueous": "false",
+          "other": "interstellar/cometary ice analogue; racemic alanine reported in residue after workup/hydrolysis; exact yield not recovered"
+        },
+        "mechanism": "Cryogenic photochemistry in simple ice matrices generates complex organic residues that release alanine upon warming and hydrolysis/workup.",
+        "reasoning": "The validated report treats this as direct alanine evidence, though environmentally specialized and predominantly racemic. Mineral agents are not part of the source experiments and are included only to satisfy the required surface-agent field without altering the literature conditions (Bernstein et al., 2002; Mu\u00f1oz Caro et al., 2002; Nuevo et al., 2008)."
+      },
+      {
+        "id": "rxn_012",
+        "name": "CPL-associated UV ice photochemistry yielding weakly biased alanine",
+        "inputs": [
+          "mol_014",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "borate minerals (colemanite, ulexite)"
+        ],
+        "conditions": {
+          "temperature": "cryogenic ice/residue irradiation",
+          "pressure": "low-pressure astrochemical simulation",
+          "catalyst": "UV circularly polarized light",
+          "aqueous": "false",
+          "other": "alanine recovered after hydrolysis; small enantiomeric excess only, on the order of ~1% in ice-alone scenarios"
+        },
+        "mechanism": "Circularly polarized UV irradiation of ice-borne amino-acid precursors yields alanine with only weak enantiomeric bias after hydrolysis.",
+        "reasoning": "The validated corpus preserves this as evidence for only very small asymmetry, insufficient to explain robust L-alanine emergence. It is included because the user requested L-alanine and the literature explicitly identifies this as the only preserved route family with any enantiomeric bias, though weak (de Marcellus et al., 2007; Sharma, 2022; 2015 OLEB alanine CPL study)."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Biochemical selection/enrichment from prebiotic alanine pool to L-alanine",
+        "inputs": [
+          "mol_015"
+        ],
+        "outputs": [
+          "mol_016"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "null"
+        ],
+        "conditions": {
+          "temperature": "variable",
+          "pressure": "1 atm to localized compartmental environments",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "selection in prebiotic pools, mineral interfaces, or protocell-like compartments; no validated direct route to enantiopure L-alanine in mounted literature"
+        },
+        "mechanism": "Weakly biased alanine populations undergo non-specific selection, enrichment, or partitioning to yield an L-enriched alanine pool.",
+        "reasoning": "This step is explicitly speculative and included only because the target requested is L-alanine while the validated evidence base supports mostly racemic or unspecified alanine and no robust route to enantiopure L-alanine. It operationalizes the open question acknowledged in the report rather than claiming established chemistry (de Marcellus et al., 2007; Sharma, 2022; 2015 OLEB alanine CPL study; validated report gap statement)."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Alanine oligomerization to alanine oligopeptides",
+        "inputs": [
+          "mol_015"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "null"
+        ],
+        "conditions": {
+          "temperature": "hydrothermal microflow / warm to hot aqueous conditions",
+          "pressure": "flow-reactor / hydrothermal",
+          "catalyst": "various minerals can enhance or inhibit elongation",
+          "aqueous": "true",
+          "other": "downstream assembly edge; not a route to alanine itself"
+        },
+        "mechanism": "Alanine monomers condense under hydrothermal-flow or mineral-influenced conditions to form short oligopeptides.",
+        "reasoning": "The validated report includes this as a downstream assembly edge demonstrating that once alanine exists, further prebiotic assembly is possible. It is included to satisfy the Hydrothermal \u2194 Surface \u2192 Biochemical interconnection and to keep alanine as an outgoing hub (Kawamura et al., 2005; Kawamura et al., 2018)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Canonical Strecker full sequence",
+        "description": "Acetaldehyde, ammonia, and water form the imine/carbinolamine manifold, cyanide addition yields alanine aminonitrile, and hydrolysis via alanine amide gives alanine followed by speculative L-selection.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_006",
+          "mol_007",
+          "mol_015"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Strecker aminonitrile hydrolysis branch",
+        "description": "A pathway emphasizing alanine aminonitrile as the committed hub intermediate before hydrolysis to alanine and later L-selection.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_004",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_015"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Strecker amide-to-alanine closure",
+        "description": "A downstream Strecker branch starting from alanine amide as immediate precursor to alanine, then speculative enrichment to L-alanine.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_015"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Classic spark-discharge route",
+        "description": "Reduced atmospheric gases under electric discharge yield alanine directly among amino-acid products, then L-selection is imposed in biochemical settings.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_015"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Sulfur-rich spark-discharge route",
+        "description": "Volcanic sulfur-bearing discharge chemistry produces alanine in a broader amino-acid suite, followed by biochemical L-selection.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_015"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Hydrothermal pyruvate amination on iron oxyhydroxide",
+        "description": "Pyruvate reacts with ammonia under alkaline redox gradients on mixed-valence iron oxyhydroxide to yield alanine, then speculative L-selection follows.",
+        "reaction_sequence": [
+          "rxn_007",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_012",
+          "mol_015"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Hydrothermal simple-carbon precursor route",
+        "description": "Simple carbon precursors plus ammonia under hydrothermal conditions produce alanine among amino-acid products, followed by L-selection.",
+        "reaction_sequence": [
+          "rxn_008",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_001",
+          "mol_015"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Cyanosulfidic-to-hydrothermal coupled route",
+        "description": "Surface cyanosulfidic photoredox chemistry generates pyruvate-relevant precursors which feed hydrothermal pyruvate amination to alanine, then L-selection.",
+        "reaction_sequence": [
+          "rxn_009",
+          "rxn_007",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_015"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Iron-sulfur pyruvate amination route",
+        "description": "Pyruvate, ammonia, and sulfide-bearing iron-sulfur minerals generate alanine in a contested hydrothermal interface route, followed by L-selection.",
+        "reaction_sequence": [
+          "rxn_010",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_009",
+          "mol_015"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Astrochemical UV/CPL alanine route",
+        "description": "Interstellar ice photochemistry yields alanine directly; the CPL-associated branch provides only weak asymmetry, and biochemical selection is still required to represent L-alanine.",
+        "reaction_sequence": [
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_014",
+          "mol_015"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_002",
+      "mol_008",
+      "mol_015",
+      "mol_006",
+      "mol_001"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_008",
+        "incoming_reactions": [
+          "rxn_009"
+        ],
+        "outgoing_reactions": [
+          "rxn_007",
+          "rxn_010"
+        ]
+      },
+      {
+        "molecule_id": "mol_015",
+        "incoming_reactions": [
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012"
+        ],
+        "outgoing_reactions": [
+          "rxn_013",
+          "rxn_014"
+        ]
+      },
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_002"
+        ],
+        "outgoing_reactions": [
+          "rxn_003"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "L-Alanine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_001": 0.95,
+          "rxn_002": 0.95,
+          "rxn_003": 0.88,
+          "rxn_004": 0.9,
+          "rxn_013": 0.22
+        },
+        "chemical_feasibility": 0.8,
+        "pathway_coherence": 0.95,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.35,
+        "overall_confidence": 0.74,
+        "feedback": "The canonical Strecker sequence is the strongest and best-supported alanine route in the literature, with explicit imine/carbinolamine, aminonitrile, and amide intermediates matching the validated report. The main weakness is the final conversion from alanine to L-alanine, which is not established prebiotically and is correctly treated as an unresolved selection/enrichment step rather than a demonstrated synthesis.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Keep this as the primary alanine-producing pathway but downgrade claims to racemic alanine unless a concrete chiral selection mechanism is added.",
+          "Annotate hydrolysis conditions for rxn_003 and rxn_004 more explicitly as hydrolytic/acidic aqueous processing consistent with the literature."
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_001": 0.95,
+          "rxn_002": 0.95,
+          "rxn_003": 0.88,
+          "rxn_013": 0.22
+        },
+        "chemical_feasibility": 0.79,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.87,
+        "target_achievement": 0.3,
+        "overall_confidence": 0.72,
+        "feedback": "This partial Strecker branch is literature-aligned through aminonitrile hydrolysis chemistry, but it is not a fully closed route to alanine unless alanine amide or alanine is explicitly reached. As presented in the source summary, it depends on the same unresolved L-enrichment step.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Clarify whether P2 terminates at alanine amide or continues to alanine; otherwise pathway labeling is ambiguous.",
+          "If retained, define it as a branch to an established intermediate rather than a standalone target-reaching route."
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_004": 0.9,
+          "rxn_013": 0.22
+        },
+        "chemical_feasibility": 0.7,
+        "pathway_coherence": 0.76,
+        "environmental_progression": 0.7,
+        "target_achievement": 0.28,
+        "overall_confidence": 0.59,
+        "feedback": "The amide-to-alanine hydrolysis closure is chemically plausible and literature-supported as part of the Strecker hydrolysis sequence, but on its own it is not an independent origin pathway because it omits precursor generation. It also inherits the unresolved chirality problem.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Treat this as a subpathway or closure segment within the full Strecker route rather than a distinct synthesis route.",
+          "Do not present it as independently achieving L-alanine."
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_005": 0.93,
+          "rxn_013": 0.22
+        },
+        "chemical_feasibility": 0.86,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.3,
+        "overall_confidence": 0.7,
+        "feedback": "The classic Miller-Urey discharge route is strongly aligned with the validated literature as a direct alanine-producing route from reduced gases under electric discharge. However, it produces alanine of unresolved chirality, so the specific target L-alanine is not directly achieved.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Frame the pathway endpoint as alanine rather than L-alanine unless a supported chiral amplification step is supplied.",
+          "Include electric discharge explicitly in conditions if not already captured in the full network metadata."
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_006": 0.92,
+          "rxn_013": 0.22
+        },
+        "chemical_feasibility": 0.85,
+        "pathway_coherence": 0.89,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.3,
+        "overall_confidence": 0.7,
+        "feedback": "The sulfur-rich spark-discharge branch matches Parker et al.-style sulfur-bearing atmospheric chemistry and is well aligned with the literature as a direct alanine-producing family. As with other direct routes, the chirality assignment to L-alanine remains unsupported.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Specify the role of H2S as atmosphere/feedstock rather than implying selective chiral formation.",
+          "Retain as a robust alanine route but not a validated L-alanine route."
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_007": 0.94,
+          "rxn_013": 0.22
+        },
+        "chemical_feasibility": 0.84,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.93,
+        "target_achievement": 0.3,
+        "overall_confidence": 0.72,
+        "feedback": "This is the strongest hydrothermal branch and is well matched to the validated literature: pyruvate plus ammonia under alkaline redox gradients on mixed-valence iron oxyhydroxide. It is environmentally coherent and mineral-specific, but still only supports alanine, not enantiopure L-alanine.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_013"
+        ],
+        "suggestions": [
+          "This should be highlighted as the best hydrothermal route in the network.",
+          "Add explicit caveat that hydrothermal systems can also destroy alanine depending on temperature and residence time."
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_008": 0.68,
+          "rxn_013": 0.22
+        },
+        "chemical_feasibility": 0.6,
+        "pathway_coherence": 0.72,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.28,
+        "overall_confidence": 0.54,
+        "feedback": "This route is only moderately supported because the literature does retain hydrothermal simple-carbon-precursor formation of alanine, but the exact precursor set and mechanism are underspecified here. It therefore aligns broadly with Hennet et al. but lacks mechanistic resolution and still fails to justify L-selection.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_008",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Specify the simple carbon precursors explicitly to improve chemical traceability.",
+          "Lower confidence relative to the pyruvate/iron-oxyhydroxide route."
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_009": 0.72,
+          "rxn_007": 0.94,
+          "rxn_013": 0.22
+        },
+        "chemical_feasibility": 0.69,
+        "pathway_coherence": 0.83,
+        "environmental_progression": 0.95,
+        "target_achievement": 0.3,
+        "overall_confidence": 0.66,
+        "feedback": "This coupled surface-to-hydrothermal pathway is topologically and environmentally attractive, especially because it shows cyanosulfidic precursor generation feeding hydrothermal pyruvate amination. The issue is that the cyanosulfidic closure to pyruvate/alanine is explicitly inferred rather than directly established in the literature, so this pathway is only moderately supported overall.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_009",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Label rxn_009 clearly as inferred precursor generation rather than direct alanine-forming chemistry.",
+          "Keep this pathway as a network interconnection example, not as a highest-confidence synthesis route."
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_010": 0.58,
+          "rxn_013": 0.22
+        },
+        "chemical_feasibility": 0.55,
+        "pathway_coherence": 0.72,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.28,
+        "overall_confidence": 0.5,
+        "feedback": "The iron-sulfur pyruvate amination branch is appropriately included because it appears in the validated literature set, but the report explicitly characterizes it as inferred, contested, and weakly supported by direct alanine evidence. It is therefore one of the least secure pathways in the network.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_010",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Treat this as a speculative hypothesis-supported branch.",
+          "Specify an FeS/FeS2/pyrite/greigite mineral agent explicitly if claiming iron-sulfur catalysis in the full node data."
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_011": 0.89,
+          "rxn_012": 0.86,
+          "rxn_013": 0.22
+        },
+        "chemical_feasibility": 0.82,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.62,
+        "target_achievement": 0.32,
+        "overall_confidence": 0.63,
+        "feedback": "The astrochemical UV/VUV and CPL-associated routes are well aligned with the literature for racemic alanine and weak enantiomeric excess formation in ice residues. The major limitation is environmental translation to early Earth surface chemistry and the very small ee values, which do not justify a direct route to L-alanine.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012",
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Present these as exogenous/pre-solar or specialized photochemical sources of alanine rather than robust Earth-surface in situ L-alanine synthesis.",
+          "State explicitly that CPL gives only weak ee (~1%) and does not solve homochirality."
+        ]
+      }
+    ],
+    "best_pathway_id": "P6",
+    "overall_confidence": 0.76,
+    "network_feedback": "The network is strong in literature coverage and captures the major validated alanine route families: Strecker, spark-discharge, hydrothermal pyruvate amination, hydrothermal simple-carbon synthesis, astrochemical UV/CPL formation, cyanosulfidic precursor generation, and iron-sulfur hypotheses. Topologically it is well connected, with good convergence on pyruvate and especially alanine, and it does show meaningful cross-environment flow from surface precursor chemistry into hydrothermal and biochemical stages. The major limitations are target-specific: the literature supports racemic or unspecified alanine far more strongly than L-alanine, so the final biochemical enantioenrichment step is speculative and prevents approval at the requested threshold. Additional concerns are that some pathway counting appears inflated by splitting the Strecker sequence into subpaths, the simple-carbon hydrothermal route is mechanistically underspecified, and the inferred cyanosulfidic and iron-sulfur branches should be marked lower confidence than direct experimental routes. Overall, this is a good alanine network but not an approved L-alanine network.",
+    "approved": false,
+    "hub_quality": 0.9,
+    "convergence_quality": 0.88
+  },
+  "success": false,
+  "attempts": 1,
+  "notes": null
+}

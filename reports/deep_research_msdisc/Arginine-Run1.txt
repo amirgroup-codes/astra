@@ -1,0 +1,154 @@
+# Prebiotic synthesis report for arginine
+
+## 1. Executive summary
+Using only the existing s6 consolidated bundle as the best-available validated basis, the evidence base for prebiotic arginine is dominated not by productive synthesis with quantified yield, but by **absence/non-detection**, **underconstrained plausibility**, and **destruction under hydrothermal conditions**. The s6 summary reports **10 total retained routes**, of which **0 are yield-backed**, **5 are non-yield routes**, and **5 are explicit arginine-not-detected routes** (`arginine_s6_summary.json`). No route in the retained bundle carries a numeric arginine yield with citation and exact locator; this is an explicit gap in the upstream analysis (`arginine_s6_summary.json`; `arginine_s6_final_submission.md`).
+
+The strongest positive-but-underconstrained route retained is **ornithine + cyanamide -> arginine** (`ARG_R1`), cited to Longo et al. 2020 (*PNAS*) as contextual support, but the route is explicitly marked as inferred and as having **"yield not reported"** because no exact primary table/figure/page could be inspected in the recovered source context (`arginine_master_route_table.csv`). A second strong network edge is not synthetic but degradative: **arginine + hot water -> ornithine (+ additional products)** under hydrothermal conditions (`ARG_R2`), indicating that hydrothermal settings may act more as arginine sinks than sources in the retained bundle (`arginine_master_route_table.csv`).
+
+The bundle also preserves repeated negative evidence: arginine is **not detected** in canonical Miller-Urey spark discharge (`ARG_R3`), H2S-rich Miller archive discharge (`ARG_R4`), interstellar/cometary ice UV photolysis (`ARG_R5`), meteoritic inventories (`ARG_R6`), and mixed-valence iron oxyhydroxide hydrothermal/mineral-gradient systems (`ARG_R10`) (`arginine_master_route_table.csv`). This repeated absence is therefore a central result, not a side note.
+
+Overall conclusion from the retained s6 evidence: arginine is chemically conceivable in prebiotic networks involving ornithine/cyanamide or biochemical analogs through citrulline/argininosuccinate, but **the best-supported observations in this bundle are non-detection and degradation rather than demonstrated abiotic accumulation of free arginine**.
+
+## 2. Ranked route table
+Yield-backed routes are required to appear first. In the retained s6 bundle, **none exist**: `yield_backed_route_count = 0` (`arginine_s6_summary.json`). Therefore the ranked table begins with all retained non-yield routes, followed by all explicit not-detected routes. No routes are dropped.
+
+| Rank group | Route ID | Flag | Route | Precursors | Route type | T | P | pH | Catalyst / agents | Phase / medium | Environment | Yield | Citation | Exact locator |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Non-yield | ARG_R1 | NON_YIELD_ROUTE | ornithine + cyanamide -> arginine | ornithine; cyanamide | cyanamide / guanidinylation | low-to-moderate (not numerically constrained in recovered source context) | near-surface / ambient inferred; no direct pressure constraint recovered | not established | cyanamide | aqueous / concentrating aqueous | evaporative pond, wet-dry shoreline, or other mild aqueous setting | yield not reported (source: PMID:32561643; locations checked: full text via analyze_paper attempt only; SI not accessible in this run) | Longo et al., 2020, *PNAS* | access failure: analyze_paper PMID:32561643 on 2026-06-14 returned 401 PermissionDenied; no full-text table/figure/SI page could be inspected |
+| Non-yield | ARG_R2 | NON_YIELD_ROUTE | arginine hydrothermal destruction to ornithine | arginine; water | hydrothermal destruction / hydrolysis | ~150–300 C discussed across source base; arginine-specific pyrolysis report notes primary products at 300 C | hydrothermal / autoclave or pyrolytic conditions | alkaline hydrothermolysis specifically noted in technical source; broader review covers hydrothermal media generally | none reported | hot aqueous (hydrothermal); pyrolytic comparison at high T also reported | subsurface hydrothermal circulation / vent analogs | yield not reported (source: hydrothermal arginine-destruction primary literature set; locations checked: full text + SI not accessible in this run) | Körner et al., 2021, *ChemSusChem*; Pietrucci et al., 2018, *ACS Earth Space Chem*; Fuel 2024 arginine pyrolysis study | access failure: no exact table/figure/page recovered from Körner 2021 / Pietrucci 2018 hydrothermal arginine-destruction sources in this run |
+| Non-yield | ARG_R7 | NON_YIELD_ROUTE | ornithine + carbamoyl phosphate -> citrulline (biochemical analog) | ornithine; carbamoyl phosphate | biochemical assembly analog | not established prebiotically | not established prebiotically | not established prebiotically | ornithine transcarbamylase | aqueous biochemical pathway | modern metabolism / pathway analogy only | yield not reported (source: Husson et al. 2003 pathway-context source; locations checked: full text + SI unavailable in this run) | Husson et al., 2003, *European Journal of Biochemistry* | access failure: no exact page/table recovered from Husson et al. 2003 in this run |
+| Non-yield | ARG_R8 | NON_YIELD_ROUTE | citrulline + aspartate -> argininosuccinate (biochemical analog) | citrulline; aspartate | biochemical assembly analog | not established prebiotically | not established prebiotically | not established prebiotically | argininosuccinate synthetase | aqueous biochemical pathway | modern metabolism / pathway analogy only | yield not reported (source: Husson et al. 2003 pathway-context source; locations checked: full text + SI unavailable in this run) | Husson et al., 2003, *European Journal of Biochemistry* | access failure: no exact page/table recovered from Husson et al. 2003 in this run |
+| Non-yield | ARG_R9 | NON_YIELD_ROUTE | argininosuccinate -> arginine + fumarate (biochemical analog) | argininosuccinate | biochemical assembly analog | not established prebiotically | not established prebiotically | not established prebiotically | argininosuccinate lyase | aqueous biochemical pathway | modern metabolism / pathway analogy only | yield not reported (source: Husson et al. 2003 pathway-context source; locations checked: full text + SI unavailable in this run) | Husson et al., 2003, *European Journal of Biochemistry* | access failure: no exact page/table recovered from Husson et al. 2003 in this run |
+| Not detected | ARG_R10 | ARGININE_NOT_DETECTED | mixed-valence iron oxyhydroxide hydrothermal network | simple ketoacids; ammonia; mixed-valence iron oxyhydroxide system | iron-sulfur / mineral-assisted hydrothermal network | gradient-dependent | not emphasized in recovered arginine-focused source notes | redox and pH gradients are explicit controlling variables | iron oxyhydroxide minerals / mixed-valence iron systems | aqueous mineral-gradient system | hydrothermal vent analog mineral pores | not detected (source: Barge et al. 2019 PNAS mixed-valence iron oxyhydroxide system; locations checked: full text + SI unavailable in this run) | Barge et al., 2019, *PNAS* | access failure: no exact table/figure/page recovered from Barge et al. 2019 in this run |
+| Not detected | ARG_R3 | ARGININE_NOT_DETECTED | canonical Miller-Urey spark discharge | CH4; NH3; H2; H2O | spark discharge / Miller-Urey | apparatus warm/circulating with condensation trap; exact T not decisive in recovered source list | closed laboratory spark-discharge apparatus, near-ambient/low pressure | not consistently reported in recovered arginine-focused source context | electric discharge | gas discharge with aqueous trap | reducing atmosphere lightning analog | not detected (source: Miller 1953 Science; Schlesinger & Miller 2001; Parker et al. 2011 context; exact primary locator not recoverable in this run) | Miller, 1953, *Science*; Schlesinger & Miller, 2001, *Origins of Life and Evolution of the Biosphere*; Parker et al., 2011, *PNAS* | access failure: Parker 2011 analyze_paper 401; PNAS PDF 403; PMC PDF 401; no exact Miller product-table page recovered |
+| Not detected | ARG_R4 | ARGININE_NOT_DETECTED | H2S-rich Miller archive spark discharge | CH4; NH3; CO2; H2S | spark discharge / H2S-rich Miller variant | not extracted numerically here | closed spark-discharge experiment | not extracted numerically here | electric discharge | gas discharge with condensed aqueous products | volcanic / sulfur-rich reducing atmosphere analog | not detected (source: PMID:21422282; locations checked: analyze_paper PMID, PNAS PDF URL, PMC PDF URL) | Parker et al., 2011, *PNAS* | access failure: analyze_paper PMID:21422282 -> 401 PermissionDenied; analyze_pdf PNAS URL -> 403 download; analyze_pdf PMC PDF URL -> 401 vision/auth |
+| Not detected | ARG_R5 | ARGININE_NOT_DETECTED | interstellar ice analog VUV/UV photolysis | interstellar ice analog mixture | ice photolysis / surface-UV | low-temperature ice irradiation | vacuum / low-pressure astrochemical conditions | typically not applicable during irradiation; may enter at hydrolysis/workup | UV/VUV photons | frozen ice / refractory residue then hydrolysis/workup | interstellar/cometary ice analog | not detected (source: PMID:18175206; locations checked: full text via analyze_paper attempt only; SI not accessible in this run) | Nuevo et al., 2008, *Origins of Life and Evolution of the Biosphere*; Bernstein et al., 2002, *Nature* | access failure: analyze_paper PMID:18175206 -> 401 PermissionDenied; no exact amino-acid product table/page recovered |
+| Not detected | ARG_R6 | ARGININE_NOT_DETECTED | meteoritic inventory / parent-body chemistry | carbonaceous chondrite organic inventory | meteoritic delivery / parent-body chemistry | low-to-moderate parent-body aqueous alteration; extraction/hydrolysis conditions vary | not a decisive recovered variable | analytical acid hydrolysis/extraction can affect recovery | none reported | parent-body aqueous alteration; laboratory extracts/basic fractions | carbonaceous chondrite parent body / meteoritic delivery | not detected (source: meteoritic inventory primary literature set; locations checked: full text + SI unavailable in this run) | Oró et al., 1971, *Nature*; Cronin et al., 1981, *Origins of Life*; Pizzarello & Cronin, 2000, *Chemie der Erde*; Pizzarello, 2017, *Life* | access failure: no exact table/figure/page recovered from Oró/Cronin/Pizzarello meteoritic primary papers in this run |
+
+## 3. Per-route narrative
+### ARG_R1. Ornithine + cyanamide -> arginine
+This is the only retained route in the bundle that directly targets free arginine formation from a plausible precursor pair. In the master route table it is classified as a **positive but underconstrained** cyanamide/guanidinylation route, with ornithine and cyanamide as precursors, cyanamide as the key agent, and an **aqueous / concentrating aqueous** medium in a mild surface setting such as an evaporative pond or wet-dry shoreline (`arginine_master_route_table.csv`). However, the same row explicitly states that the route is **"Only source-supported as a chemically plausible route; not a dedicated free-arginine prebiotic yield paper. Explicitly marked inferred."** The yield field is **"yield not reported"**, and no exact locator was recovered because the analyze_paper attempt for PMID:32561643 failed with 401 PermissionDenied (`arginine_master_route_table.csv`).
+
+Accordingly, this route should be treated as the bundle's best positive hypothesis, not as a demonstrated prebiotic synthesis with quantified support.
+
+### ARG_R2. Arginine hydrothermal destruction to ornithine
+The second strongest route in the retained network is actually degradative. The route table describes **arginine + hot water** under hydrothermal or pyrolytic conditions yielding **ornithine (+ additional products)**, with temperatures discussed across roughly **150–300 C**, and a note that an arginine-specific pyrolysis report identifies primary products at **300 C** (`arginine_master_route_table.csv`). The row further notes that this is **"one of the best-supported arginine-specific network edges in the source base: hydrothermal settings act more as sinks than sources."**
+
+This matters for prebiotic plausibility because any environment proposed to synthesize arginine must also overcome its apparent hydrothermal instability in the retained evidence base.
+
+### ARG_R7-R9. Ornithine/citrulline/argininosuccinate pathway analogs
+Three rows are retained to preserve the canonical biosynthetic sequence:
+- **ARG_R7:** ornithine + carbamoyl phosphate -> citrulline
+- **ARG_R8:** citrulline + aspartate -> argininosuccinate
+- **ARG_R9:** argininosuccinate -> arginine + fumarate
+
+All three are explicitly labeled **biochemical analog** or **context only**, with aqueous biochemical media, modern metabolic environments, and enzyme catalysts (ornithine transcarbamylase, argininosuccinate synthetase, argininosuccinate lyase) rather than prebiotic catalysts (`arginine_master_route_table.csv`). For all three, temperature, pressure, and pH are **not established prebiotically**, and yield is **yield not reported**. These rows are therefore useful as mechanistic scaffolds for precursor logic, but not as evidence of demonstrated abiotic arginine synthesis.
+
+### ARG_R10. Mixed-valence iron oxyhydroxide hydrothermal network
+This route was retained because mineral-gradient hydrothermal systems are often invoked in origin-of-life chemistry. In the retained bundle, however, the Barge et al. 2019 *PNAS* system is a **negative scope result** for arginine: products focus on simpler amino acids, while arginine is **not detected** (`arginine_master_route_table.csv`). The environment is an aqueous mineral-gradient system with explicit redox and pH gradients and iron oxyhydroxide minerals as the active surfaces. This is therefore direct negative evidence against easy arginine emergence in at least one vent-analog mineral network.
+
+### ARG_R3-R4. Spark-discharge systems
+The canonical Miller-Urey route (`ARG_R3`) and the H2S-rich Miller archive variant (`ARG_R4`) are both retained as explicit negative rows. In the canonical case, the route table states that arginine is absent/non-detected in the classic product inventories, despite formation of simpler amino acids (`arginine_master_route_table.csv`). In the sulfur-rich Parker et al. 2011 archive reanalysis, **23 amino acids and 4 amines** were reported overall, yet arginine was **not reported among products** (`arginine_master_route_table.csv`). These rows are important because they show that even product-rich discharge systems did not recover arginine in the retained evidence base.
+
+### ARG_R5. Ice photolysis
+The retained ice-photochemistry row describes low-temperature UV/VUV irradiation of interstellar/cometary ice analogs, followed by hydrolysis/workup. The route is explicitly negative for arginine: multiple simpler amino acids are reported in the source context, but no recovered evidence supports arginine detection (`arginine_master_route_table.csv`). This suggests that ice photochemistry, as represented in the retained bundle, is better supported as a source of simpler precursors than of arginine itself.
+
+### ARG_R6. Meteoritic inventory
+The meteoritic row is not a reaction step but an occurrence test. It is retained because the task requires explicit treatment of arginine's absence. The route table states that **free arginine is not robustly established in gathered inventories**, and notes that extraction/hydrolysis conditions may affect recovery (`arginine_master_route_table.csv`). Thus, the retained meteoritic evidence supports either true absence or unresolved analytical bias, but not a secure positive detection.
+
+## 4. Intermediates and precursors
+### Ornithine and citrulline
+The retained network places **ornithine** at the center of arginine plausibility. Ornithine appears both as the immediate precursor in the only direct positive-but-underconstrained route (`ARG_R1`) and as the principal daughter product of arginine destruction under hydrothermal conditions (`ARG_R2`) (`arginine_master_route_table.csv`). This dual role makes ornithine both a potential precursor and a degradation sink.
+
+**Citrulline** appears only in the biochemical-analogy sequence (`ARG_R7-R9`). The retained bundle therefore supports citrulline as a conceptually relevant intermediate, but not as an experimentally demonstrated prebiotic intermediate under abiotic conditions. The same applies to **argininosuccinate** and **carbamoyl phosphate**: they are retained because they complete the biosynthetic logic, not because the bundle demonstrates their nonenzymatic prebiotic participation (`arginine_master_route_table.csv`; `arginine_s6_summary.json`).
+
+### Guanidine and cyanamide
+The retained positive route depends on **cyanamide** as the guanidinylating agent for converting ornithine toward arginine (`ARG_R1`) (`arginine_master_route_table.csv`). The s6 issues section also notes that cyanosulfidic/Powell-Sutherland chemistry appears only as contextual support, not as an explicit experimentally demonstrated arginine-producing route row (`arginine_s6_summary.json`). Thus, cyanamide/guanidino chemistry is present as a mechanistic hypothesis, but the bundle does not recover a direct, quantified free-arginine synthesis paper with exact locator.
+
+## 5. Mineral catalysts and surfaces
+Only one retained route directly centers mineral surfaces as active participants in an arginine-relevant network: **ARG_R10**, the mixed-valence iron oxyhydroxide hydrothermal system of Barge et al. 2019 (*PNAS*). In that row, the catalyst/surface field is **"iron oxyhydroxide minerals / mixed-valence iron systems"**, the phase is **aqueous mineral-gradient system**, and the environment is **hydrothermal vent analog mineral pores** (`arginine_master_route_table.csv`). The outcome, however, is negative for arginine.
+
+Hydrothermal destruction (`ARG_R2`) allows for possible mineral/redox buffering depending on study, but no specific mineral catalyst is reported in the retained route row (`arginine_master_route_table.csv`). No other retained route provides direct mineral-catalyst evidence for productive arginine synthesis.
+
+Therefore, within the retained bundle, mineral surfaces are better supported as part of environments where arginine is absent or unstable than as catalysts that demonstrably produce arginine.
+
+## 6. Experimental evidence and environmental context
+The retained experimental contexts span most major prebiotic settings:
+- **Mild surface aqueous / wet-dry settings** for the ornithine + cyanamide plausibility route (`ARG_R1`)
+- **Hydrothermal aqueous systems** for arginine destruction (`ARG_R2`) and mineral-gradient non-detection (`ARG_R10`)
+- **Reducing atmospheric spark discharge** for canonical and sulfur-rich Miller systems (`ARG_R3`, `ARG_R4`)
+- **Low-temperature astrochemical ice irradiation** for UV/VUV photolysis (`ARG_R5`)
+- **Carbonaceous chondrite parent-body chemistry and delivery** for meteoritic occurrence (`ARG_R6`)
+
+Across these settings, the retained evidence pattern is strikingly asymmetric. Surface aqueous chemistry offers only a plausible, underconstrained positive route with no recovered numeric yield. Hydrothermal settings are represented mainly by destruction or non-detection. Spark-discharge, ice-photolysis, and meteoritic contexts all contribute explicit negative evidence (`arginine_master_route_table.csv`).
+
+### Explicit treatment of arginine's frequently reported absence
+The task specifically requires treatment of arginine's frequent absence from abiotic syntheses. In the retained bundle, this absence is supported by five explicit route rows:
+1. **Canonical Miller-Urey spark discharge:** arginine absent/non-detected in classic product inventories (`ARG_R3`).
+2. **H2S-rich Miller archive discharge:** many amino acids and amines reported overall, but arginine not reported (`ARG_R4`).
+3. **Interstellar/cometary ice photolysis:** simpler amino acids reported, arginine not detected (`ARG_R5`).
+4. **Meteoritic inventories:** free arginine not robustly established (`ARG_R6`).
+5. **Mixed-valence iron oxyhydroxide hydrothermal system:** simpler amino acids emphasized; arginine not reported (`ARG_R10`).
+
+This repeated negative pattern is one of the most robust conclusions available from the retained s6 evidence.
+
+## 7. Open questions and debates
+The s6 summary identifies the following unresolved issues, which remain the key debates for arginine:
+
+- **No numeric yield recovered:** No route in the retained bundle has a numeric arginine yield with citation and exact locator (`arginine_s6_summary.json`).
+- **Plausibility versus demonstration:** Arginine is chemically plausible via ornithine + cyanamide, but the same bundle lacks a dedicated free-arginine primary yield report for that route (`arginine_s6_summary.json`; `arginine_master_route_table.csv`).
+- **Hydrothermal paradox:** Hydrothermal systems are often invoked as generative prebiotic environments, yet in the retained arginine network they appear mainly as destruction or non-detection settings (`arginine_s6_summary.json`; `arginine_master_route_table.csv`).
+- **Biochemical analogy gap:** Whether any nonenzymatic ornithine/citrulline/argininosuccinate sequence can operate prebiotically without enzymes remains unresolved (`arginine_s6_summary.json`).
+- **Analytical bias versus true absence:** In meteoritic, spark, ice, and mineral-gradient systems, the retained bundle cannot distinguish whether arginine is absent because it never forms, forms but degrades rapidly, or forms below analytical recovery (`arginine_s6_summary.json`).
+
+## 8. Coverage and source accounting
+### Search/source accounting
+- Number of search angles: **9** (`arginine_s6_summary.json` angle_accounting: general, guanidine_cyanamide, miller_urey, meteoritic, mineral_metal_catalysis, ornithine_citrulline, hydrothermal, ice_uv_photochem, quantitative_yields)
+- Total sources touched: **547** (`arginine_s6_summary.json`)
+- Total rows retained: **208** (`arginine_s6_summary.json`)
+- Deduplicated retained source count: **367** (`arginine_s6_summary.json`)
+- Total source count gathered/reported in the final retained bundle: **367 deduplicated sources**
+
+### Unresolved coverage gaps
+The final s6 submission explicitly marks three unresolved gaps as **not recovered**:
+1. A true **s5-passed dependency bundle** was not recovered.
+2. **Complete per-row source metadata** for every deduplicated source row was not recovered.
+3. **Any numeric arginine yield with citation and exact locator** was not recovered (`arginine_s6_final_submission.md`).
+
+### Complete deduplicated retained source list artifact
+The complete deduplicated retained source list is provided as the attached/shared artifact:
+- `arginine_sources_deduplicated.csv`
+
+Because the list contains **367 deduplicated rows**, it is attached as an artifact rather than embedded inline in this markdown report. This preserves the complete list without truncation, consistent with the retained s6 bundle.
+
+## References cited in the report
+Barge, L. M., et al. (2019). *PNAS*.
+
+Bernstein, M. P., et al. (2002). *Nature*.
+
+Cronin, J. R., et al. (1981). *Origins of Life*.
+
+Husson, A., et al. (2003). *European Journal of Biochemistry*.
+
+Körner, A., et al. (2021). *ChemSusChem*.
+
+Longo, L. M., et al. (2020). *PNAS*.
+
+Miller, S. L. (1953). *Science*.
+
+Nuevo, M., et al. (2008). *Origins of Life and Evolution of the Biosphere*.
+
+Oró, J., et al. (1971). *Nature*.
+
+Parker, E. T., et al. (2011). *PNAS*.
+
+Pietrucci, F., et al. (2018). *ACS Earth and Space Chemistry*.
+
+Pizzarello, S. (2017). *Life*.
+
+Pizzarello, S., & Cronin, J. R. (2000). *Chemie der Erde*.
+
+Schlesinger, G., & Miller, S. L. (2001). *Origins of Life and Evolution of the Biosphere*.
+
+## Artifact note
+This report was assembled only from the existing s6/finalized best-available arginine bundle and does not introduce uncited claims. Where the upstream bundle lacked exact locators, numeric yields, or complete metadata, those gaps are preserved rather than repaired.

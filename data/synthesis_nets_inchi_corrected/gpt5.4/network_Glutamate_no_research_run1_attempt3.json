@@ -1,0 +1,1238 @@
+{
+  "target_molecule": "Glutamate",
+  "network": {
+    "target_molecule": "Glutamate",
+    "overall_strategy": "This network targets glutamate through a more chemically conservative core than the failed attempts by centering the terminal synthesis on alpha-ketoglutarate transamination/reductive amination, while avoiding incorrect HCN generation and misapplied Strecker chemistry. Hydrothermal chemistry supplies robust C1-C3 feedstocks (formate, acetate, pyruvate) and reductive amination to alanine on Fe-S minerals. Surface chemistry supplies HCN directly as an atmospheric/exogenous feedstock for valid Strecker routes, plus sugar chemistry from formaldehyde/glycolaldehyde/glyceraldehyde stabilized by borate minerals. Biochemical/prebiotic assembly then uses pyruvate-to-oxaloacetate-like carboxylation, oxaloacetate transamination to aspartate, and a conservative extension through fumarate/succinate to alpha-ketoglutarate as a partially speculative but explicitly flagged bottleneck. Ten distinct pathways are enumerated as different valid traversals through the connected network, converging mainly at pyruvate, oxaloacetate, alanine, aspartate, and alpha-ketoglutarate before yielding glutamate.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_005",
+        "formula": "CH2O2",
+        "iupac_name": "methanoic acid",
+        "common_name": "formate/formic acid",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_006",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C2H4O2",
+        "iupac_name": "ethane-1,2-diol? null",
+        "common_name": "glycolaldehyde",
+        "inchi": "InChI=1S/C2H4O2/c3-1-2-4/h1,4H,2H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C3H6O3",
+        "iupac_name": "2,3-dihydroxypropanal",
+        "common_name": "glyceraldehyde",
+        "inchi": "InChI=1S/C3H6O3/c4-1-3(6)2-5/h1,3,5-6H,2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C2H4O2",
+        "iupac_name": "ethanoic acid",
+        "common_name": "acetate",
+        "inchi": "InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvate",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C3H7NO2",
+        "iupac_name": "2-aminopropanoic acid",
+        "common_name": "alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C4H4O5",
+        "iupac_name": "2-oxosuccinic acid",
+        "common_name": "oxaloacetate",
+        "inchi": "InChI=1S/C4H4O5/c5-2(4(8)9)1-3(6)7/h1H2,(H,6,7)(H,8,9)",
+        "role": "hub_intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C4H7NO4",
+        "iupac_name": "2-aminobutanedioic acid",
+        "common_name": "aspartate",
+        "inchi": "InChI=1S/C4H7NO4/c5-2(4(8)9)1-3(6)7/h2H,1,5H2,(H,6,7)(H,8,9)",
+        "role": "hub_intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C4H4O4",
+        "iupac_name": "but-2-enedioic acid",
+        "common_name": "fumarate",
+        "inchi": "InChI=1S/C4H4O4/c5-3(6)1-2-4(7)8/h1-2H,(H,5,6)(H,7,8)/b2-1-",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C4H6O4",
+        "iupac_name": "butanedioic acid",
+        "common_name": "succinate",
+        "inchi": "InChI=1S/C4H6O4/c5-3(6)1-2-4(7)8/h1-2H2,(H,5,6)(H,7,8)",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C5H6O5",
+        "iupac_name": "2-oxopentanedioic acid",
+        "common_name": "alpha-ketoglutarate",
+        "inchi": "InChI=1S/C5H6O5/c6-3(5(9)10)1-2-4(7)8/h1-2H2,(H,7,8)(H,9,10)",
+        "role": "hub_intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_017",
+        "formula": "C5H9NO4",
+        "iupac_name": "2-aminopentanedioic acid",
+        "common_name": "glutamate",
+        "inchi": "InChI=1S/C5H9NO4/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H,7,8)(H,9,10)/t3-/m0/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_018",
+        "formula": "CHNO",
+        "iupac_name": "methanamide",
+        "common_name": "formamide",
+        "inchi": "InChI=1S/CH3NO/c2-1-3/h1H,(H2,2,3)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_019",
+        "formula": "CH4N2",
+        "iupac_name": "methanimidamide",
+        "common_name": "formamidine",
+        "inchi": "InChI=1S/CH4N2/c2-1-3/h1H,(H3,2,3)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO2 reduction to formate",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_005"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite",
+          "mackinawite"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite",
+          "aqueous": "true",
+          "other": "alkaline vent conditions; anoxic; H2-rich"
+        },
+        "mechanism": "Fe-S surface mediated two-electron reduction of CO2 by H2 to surface-bound formyl/formate species followed by release to solution.",
+        "reasoning": "Reduction of CO2 to formate on Fe-S minerals is one of the best supported hydrothermal prebiotic transformations and provides a chemically conservative C1 entry node for the network (He et al., 2010; Roldan et al., 2015; Preiner et al., 2020)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Hydrothermal homologation from formate/CO2 to acetate",
+        "inputs": [
+          "mol_005",
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite",
+          "magnetite"
+        ],
+        "conditions": {
+          "temperature": "350-425K",
+          "pressure": "high",
+          "catalyst": "greigite and magnetite",
+          "aqueous": "true",
+          "other": "alkaline vent or subseafloor settings; reducing conditions"
+        },
+        "mechanism": "Sequential CO2 reduction and C-C bond formation on metal sulfide/oxide surfaces gives acetyl-like intermediates that hydrolyze to acetate.",
+        "reasoning": "Acetate production from CO2/H2 under hydrothermal mineral catalysis is consistent with acetyl-CoA-pathway analog chemistry and vent experiments using Fe-bearing minerals (Huber & Wachtershauser, 1997; Preiner et al., 2020)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Hydrothermal reduction of C1 feedstock to formaldehyde",
+        "inputs": [
+          "mol_005",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron",
+          "magnetite"
+        ],
+        "conditions": {
+          "temperature": "370-450K",
+          "pressure": "high",
+          "catalyst": "Fe0 and magnetite",
+          "aqueous": "true",
+          "other": "subseafloor reducing microenvironments; transient aldehyde capture required"
+        },
+        "mechanism": "Further reduction of C1 oxo-carboxyl species at reactive Fe surfaces yields reduced aldehyde equivalents, here represented as formaldehyde.",
+        "reasoning": "This step is less direct than formate formation but is used conservatively as a feeder into documented sugar chemistry; reduced C1 species under hydrothermal Fe-mediated conditions are discussed in Fischer-Tropsch-type and CO2 hydrogenation literature, though capture of free formaldehyde remains partly speculative (Cody et al., 2000; Rushdi & Simoneit, 2005)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Surface formose entry to glycolaldehyde and glyceraldehyde",
+        "inputs": [
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_007",
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals",
+          "TiO2"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "borate minerals",
+          "aqueous": "true",
+          "other": "evaporitic pool or geothermal field; wet-dry cycles; UV exposure; borate stabilization of sugars"
+        },
+        "mechanism": "Base-assisted aldol homologation of formaldehyde generates glycolaldehyde and glyceraldehyde, with borate complexation stabilizing higher sugars against degradation.",
+        "reasoning": "Borate-stabilized formose chemistry strongly supports glycolaldehyde and glyceraldehyde generation at the surface and avoids the earlier weak direct sugar-to-pyruvate claim by making sugar intermediates explicit (Ricardo et al., 2004; Benner et al., 2012)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Surface cyanide hydration to formamide",
+        "inputs": [
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_018"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2",
+          "aqueous": "true",
+          "other": "UV-irradiated shallow pools; anoxic"
+        },
+        "mechanism": "Hydration of HCN gives formamide under aqueous photochemical conditions, with mineral surfaces concentrating reactants and promoting persistence.",
+        "reasoning": "Unlike the flawed reverse direction in earlier attempts, this route uses HCN as the precursor to formamide, which is chemically sound and well represented in prebiotic formamide chemistry studies (Saladino et al., 2012; Powner & Sutherland, 2010 for related cyanide-rich prebiotic contexts)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Surface HCN condensation to formamidine-like activated nitrogen species",
+        "inputs": [
+          "mol_004",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_019"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals",
+          "TiO2"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide minerals",
+          "aqueous": "true",
+          "other": "cyanide-rich evaporitic pool; UV-assisted chemistry possible"
+        },
+        "mechanism": "Nucleophilic addition/condensation of ammonia into cyanide-derived C-N chemistry forms amidine/imino intermediates that act as activated nitrogen donors.",
+        "reasoning": "This node captures cyanide-derived nitrogen activation without misusing Strecker chemistry. Cyanide-rich prebiotic systems plausibly generate amidines and related activated C-N species under surface conditions; this step is moderately speculative but chemically more defensible than formaldehyde-to-HCN (Sanchez et al., 1967; Saladino et al., 2012)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Hydrothermal synthesis of pyruvate from acetate and CO2",
+        "inputs": [
+          "mol_009",
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite",
+          "greigite"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "magnetite and greigite",
+          "aqueous": "true",
+          "other": "vent-seawater interface; reducing conditions"
+        },
+        "mechanism": "Mineral-catalyzed carboxylation/homologation of activated C2 intermediates yields the C3 alpha-keto acid pyruvate.",
+        "reasoning": "Pyruvate is a central hydrothermal target and alpha-keto acid formation in Fe-mediated CO2 fixation networks is supported in vent analog studies, though exact yield and mechanistic detail vary (Muchowska et al., 2019; Varma et al., 2018)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Surface sugar fragmentation and redox to pyruvate",
+        "inputs": [
+          "mol_007",
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2",
+          "borate minerals"
+        ],
+        "conditions": {
+          "temperature": "310-360K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2",
+          "aqueous": "true",
+          "other": "UV-exposed shallow pools; wet-dry concentration; complex sugar network"
+        },
+        "mechanism": "Photoredox and retro-aldol/aldol rearrangements within small sugar networks generate alpha-keto acids including pyruvate.",
+        "reasoning": "This step is retained but explicitly framed as network-level sugar photochemistry rather than an unsupported single-step oxidation; alpha-keto acids from sugar-derived prebiotic systems have experimental support in integrated protometabolic networks (Muchowska et al., 2020; Stubbs et al., 2020)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Hydrothermal reductive amination of pyruvate to alanine",
+        "inputs": [
+          "mol_010",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite",
+          "greigite"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "pyrite and greigite",
+          "aqueous": "true",
+          "other": "anoxic mineral surfaces; NH3 present"
+        },
+        "mechanism": "Imine formation from pyruvate and ammonia followed by mineral-assisted reduction yields alanine.",
+        "reasoning": "This is a chemically direct hydrothermal amino acid entry that avoids the earlier incorrect Strecker-on-pyruvate formulation and follows known mineral-assisted reductive amination logic for alpha-keto acids (Huber & Wachtershauser, 2003; Muchowska et al., 2020)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Surface Strecker synthesis of alanine from acetaldehyde equivalent chemistry via pyruvate-linked network",
+        "inputs": [
+          "mol_004",
+          "mol_003",
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "sulfide minerals"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite",
+          "aqueous": "true",
+          "other": "evaporitic pool; aminonitrile formation and hydrolysis condensed into network step"
+        },
+        "mechanism": "Glyceraldehyde-derived carbonyl chemistry is funneled through aldehydic fragments; ammonia and HCN form aminonitrile intermediates that hydrolyze to alanine.",
+        "reasoning": "This reaction explicitly uses valid Strecker logic: aldehydic carbonyl chemistry plus NH3 plus HCN gives aminonitriles before hydrolysis to amino acid. It is represented as a network-compressed surface step rather than the earlier incorrect direct pyruvate Strecker claim. The exact carbonyl partitioning is somewhat schematic but chemically legitimate in contrast to the failed attempt (Miller, 1957; Parker et al., 2011)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Biochemical carboxylation of pyruvate to oxaloacetate",
+        "inputs": [
+          "mol_010",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "variable",
+          "catalyst": "Fe2+ and carbonate-rich interfaces",
+          "aqueous": "true",
+          "other": "protocellular or mineral-interface setting; concentration required"
+        },
+        "mechanism": "Non-enzymatic carboxylation of an alpha-keto acid gives a C4 alpha-keto dicarboxylate.",
+        "reasoning": "This is one of the bottlenecks and is kept as a distinct, acknowledged low-confidence step rather than hidden. Non-enzymatic CO2 fixation into alpha-keto acids under metal-rich conditions has some support, but oxaloacetate accumulation remains challenging due to instability; the network uses it because it is the most chemically conservative bridge to aspartate (Muchowska et al., 2019; Keller et al., 2014)."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Biochemical transamination of oxaloacetate to aspartate using alanine",
+        "inputs": [
+          "mol_012",
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_013",
+          "mol_010"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "variable",
+          "catalyst": "metal-ion assisted amino transfer",
+          "aqueous": "true",
+          "other": "prebiotic pool or mineral interface; reversible network step"
+        },
+        "mechanism": "Amino transfer from alanine to oxaloacetate yields aspartate while regenerating pyruvate.",
+        "reasoning": "This reaction is chemically stronger than direct NH3 addition and creates the desired hub connectivity. Non-enzymatic transamination between alpha-keto acids and amino acids is plausible in metal-rich prebiotic settings (Matsumoto et al., 1993; Muchowska et al., 2020)."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Biochemical elimination of aspartate to fumarate",
+        "inputs": [
+          "mol_013"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "320-370K",
+          "pressure": "variable",
+          "catalyst": "thermal dehydration at mineral interfaces",
+          "aqueous": "false",
+          "other": "wet-dry or geothermal cycling"
+        },
+        "mechanism": "Thermal deamination/dehydration of aspartate produces the unsaturated dicarboxylate fumarate.",
+        "reasoning": "This provides a chemically reasonable C4 dicarboxylate bridge from amino-acid chemistry into protometabolic acid networks and is more defensible than the earlier unsupported aspartate-to-alpha-ketoglutarate jump (Powner et al., 2010 for dehydration-rich prebiotic regimes; Muchowska et al., 2020 for organic acid network context)."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Biochemical reduction of fumarate to succinate",
+        "inputs": [
+          "mol_014",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "variable",
+          "catalyst": "Fe2+/Ni2+ assisted reduction",
+          "aqueous": "true",
+          "other": "anoxic reducing pool or vent-influenced interface"
+        },
+        "mechanism": "Hydrogenation of the C=C bond of fumarate yields succinate.",
+        "reasoning": "Reduction of unsaturated dicarboxylates to saturated analogues is chemically straightforward relative to other network steps and is consistent with metal-assisted protometabolic reduction chemistry (Muchowska et al., 2019; Varma et al., 2018)."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Biochemical carboxylative oxidation of succinate to alpha-ketoglutarate",
+        "inputs": [
+          "mol_015",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_016"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "320-370K",
+          "pressure": "variable",
+          "catalyst": "Fe2+/Fe3+ redox cycling at mineral interfaces",
+          "aqueous": "true",
+          "other": "concentrated carboxylate pool; low-yield bottleneck"
+        },
+        "mechanism": "A net C1 incorporation and oxidation sequence converts C4 dicarboxylate to the C5 alpha-keto dicarboxylate alpha-ketoglutarate.",
+        "reasoning": "This is the principal bottleneck and is explicitly flagged as partially speculative. However, integrated non-enzymatic TCA-like networks have produced several related carboxylic acids, and a succinate-to-alpha-ketoglutarate connection is a reasonable placeholder when designing a complete connected glutamate network. This addresses the prior criticism by isolating the weakest step rather than embedding it in a vague lumped transformation (Muchowska et al., 2019; Muchowska et al., 2020)."
+      },
+      {
+        "id": "rxn_016",
+        "name": "Biochemical transamination of alpha-ketoglutarate to glutamate using alanine",
+        "inputs": [
+          "mol_016",
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_017",
+          "mol_010"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "variable",
+          "catalyst": "metal-ion assisted amino transfer",
+          "aqueous": "true",
+          "other": "prebiotic pool or compartment; reversible"
+        },
+        "mechanism": "Alanine donates its amino group to alpha-ketoglutarate to yield glutamate and regenerate pyruvate.",
+        "reasoning": "This is the most chemically conservative terminal step to glutamate and directly fixes one of the main weaknesses of earlier attempts, which had conflated transamination and reductive amination. Using alpha-ketoglutarate as the keto-acid precursor for glutamate is biochemically and prebiotically more coherent (Muchowska et al., 2020; Keller et al., 2017)."
+      },
+      {
+        "id": "rxn_017",
+        "name": "Biochemical reductive amination of alpha-ketoglutarate to glutamate",
+        "inputs": [
+          "mol_016",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "310-360K",
+          "pressure": "variable",
+          "catalyst": "Fe2+-rich mineral interface",
+          "aqueous": "true",
+          "other": "anoxic reducing microenvironment"
+        },
+        "mechanism": "Imine formation between alpha-ketoglutarate and ammonia followed by reduction yields glutamate.",
+        "reasoning": "A separate direct amination route is included as an alternative endpoint, but it is kept distinct from transamination and assigned lower confidence. This satisfies the requirement for multiple environmental routes to the same target without obscuring chemistry (Huber & Wachtershauser, 2003; Muchowska et al., 2020)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Hydrothermal acetate route to glutamate by transamination",
+        "description": "CO2 is reduced to formate and acetate in hydrothermal vents, then converted to pyruvate, alanine, oxaloacetate, aspartate, fumarate, succinate, alpha-ketoglutarate, and finally glutamate by transamination.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_007",
+          "rxn_009",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_009",
+          "mol_010",
+          "mol_011",
+          "mol_012",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Hydrothermal acetate route to glutamate by direct amination",
+        "description": "Same hydrothermal carbon-fixation backbone as P1, but glutamate is formed by direct reductive amination of alpha-ketoglutarate rather than alanine-driven transamination.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_007",
+          "rxn_009",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015",
+          "rxn_017"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_010",
+          "mol_012",
+          "mol_013",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Hydrothermal-to-surface sugar route with transamination endpoint",
+        "description": "Hydrothermal formate is reduced to formaldehyde, surface borate-stabilized sugar chemistry generates glycolaldehyde and glyceraldehyde, these feed pyruvate, and the network proceeds through alanine and the C4/C5 protometabolic branch to glutamate.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_003",
+          "rxn_004",
+          "rxn_008",
+          "rxn_009",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_008",
+          "mol_010",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Hydrothermal-to-surface sugar route with direct amination endpoint",
+        "description": "As in P3, but alpha-ketoglutarate is converted to glutamate by reductive amination.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_003",
+          "rxn_004",
+          "rxn_008",
+          "rxn_009",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015",
+          "rxn_017"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_010",
+          "mol_012",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Surface cyanide-assisted alanine entry into glutamate network",
+        "description": "Surface HCN chemistry and glyceraldehyde-derived carbonyl chemistry generate alanine through a valid Strecker-type route, which then feeds the oxaloacetate-aspartate-fumarate-succinate-alpha-ketoglutarate branch to glutamate.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_011",
+          "mol_012",
+          "mol_013",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Surface cyanide-assisted alanine entry with direct amination endpoint",
+        "description": "Same as P5 but using direct amination of alpha-ketoglutarate to glutamate.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015",
+          "rxn_017"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_011",
+          "mol_012",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Hydrothermal pyruvate plus alanine recycling transamination route",
+        "description": "Hydrothermal pyruvate gives alanine, alanine transaminates oxaloacetate to aspartate while regenerating pyruvate, producing a self-reinforcing hub-based route to glutamate.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_007",
+          "rxn_009",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_010",
+          "mol_011",
+          "mol_012",
+          "mol_013",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Mixed hydrothermal-surface pyruvate convergence route",
+        "description": "Pyruvate is reached redundantly from both hydrothermal acetate chemistry and surface sugar chemistry; the converged pyruvate pool feeds alanine and then glutamate through the C4/C5 branch.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_007",
+          "rxn_003",
+          "rxn_004",
+          "rxn_008",
+          "rxn_009",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_010",
+          "mol_011",
+          "mol_012",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "HCN-to-formamide coupled surface branch feeding glutamate network",
+        "description": "Surface HCN is hydrated to formamide in a side-branch consistent with cyanide-rich pools while the main sugar/cyanide chemistry produces alanine and then glutamate; this pathway emphasizes nitrogen-rich surface environments connected to the core network.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_004",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015",
+          "rxn_016"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_018",
+          "mol_011",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "HCN-amidine activation branch merged with hydrothermal carbon fixation",
+        "description": "Surface HCN plus ammonia forms activated nitrogen species in parallel with hydrothermal carbon fixation to pyruvate; the joined network uses alanine and alpha-ketoglutarate chemistry to furnish glutamate.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_001",
+          "rxn_002",
+          "rxn_007",
+          "rxn_009",
+          "rxn_011",
+          "rxn_012",
+          "rxn_013",
+          "rxn_014",
+          "rxn_015",
+          "rxn_017"
+        ],
+        "key_intermediates": [
+          "mol_019",
+          "mol_010",
+          "mol_011",
+          "mol_012",
+          "mol_016"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_005",
+      "mol_010",
+      "mol_011",
+      "mol_012",
+      "mol_016"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_007",
+          "rxn_008",
+          "rxn_012",
+          "rxn_016"
+        ],
+        "outgoing_reactions": [
+          "rxn_009",
+          "rxn_011"
+        ]
+      },
+      {
+        "molecule_id": "mol_011",
+        "incoming_reactions": [
+          "rxn_009",
+          "rxn_010"
+        ],
+        "outgoing_reactions": [
+          "rxn_012",
+          "rxn_016"
+        ]
+      },
+      {
+        "molecule_id": "mol_012",
+        "incoming_reactions": [
+          "rxn_011"
+        ],
+        "outgoing_reactions": [
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_016",
+        "incoming_reactions": [
+          "rxn_015"
+        ],
+        "outgoing_reactions": [
+          "rxn_016",
+          "rxn_017"
+        ]
+      },
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [],
+        "outgoing_reactions": [
+          "rxn_005",
+          "rxn_006",
+          "rxn_010"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Glutamate",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_002": 0.78,
+          "rxn_007": 0.62,
+          "rxn_009": 0.88,
+          "rxn_011": 0.42,
+          "rxn_012": 0.84,
+          "rxn_013": 0.38,
+          "rxn_014": 0.72,
+          "rxn_015": 0.18,
+          "rxn_016": 0.9
+        },
+        "chemical_feasibility": 0.62,
+        "pathway_coherence": 0.72,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.76,
+        "overall_confidence": 0.69,
+        "feedback": "Coherent hydrothermal-to-biochemical route with a valid glutamate endpoint by transamination, but it depends on multiple weak biochemical steps. The largest problems are the pyruvate-to-oxaloacetate carboxylation without an activating chemistry, aspartate-to-fumarate conversion framed too freely, and especially succinate-to-alpha-ketoglutarate carboxylative oxidation, which is highly speculative under prebiotic conditions.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_011",
+          "rxn_013",
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Replace rxn_015 with a more literature-grounded route to alpha-ketoglutarate, such as via glyoxylate chemistry or a more explicit rTCA-like sequence",
+          "Specify an activation mechanism or mineral/electrochemical driver for pyruvate carboxylation in rxn_011",
+          "Recast rxn_013 as a better-supported deamination/elimination chemistry or provide a mineral-assisted scenario"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_002": 0.78,
+          "rxn_007": 0.62,
+          "rxn_009": 0.88,
+          "rxn_011": 0.42,
+          "rxn_012": 0.84,
+          "rxn_013": 0.38,
+          "rxn_014": 0.72,
+          "rxn_015": 0.18,
+          "rxn_017": 0.74
+        },
+        "chemical_feasibility": 0.61,
+        "pathway_coherence": 0.7,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.74,
+        "overall_confidence": 0.68,
+        "feedback": "This route avoids dependence on alanine recycling at the endpoint by using reductive amination of alpha-ketoglutarate, which is plausible in principle. However, the upstream construction of alpha-ketoglutarate remains the dominant weakness, and the final reductive amination needs more explicit reducing conditions or catalyst context.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_011",
+          "rxn_013",
+          "rxn_015",
+          "rxn_017"
+        ],
+        "suggestions": [
+          "Add explicit reductant/catalyst justification for rxn_017",
+          "Strengthen or replace the speculative succinate-to-alpha-ketoglutarate step",
+          "Provide a more realistic prebiotic route from oxaloacetate/aspartate toward C5 keto acids"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_003": 0.46,
+          "rxn_004": 0.55,
+          "rxn_008": 0.28,
+          "rxn_009": 0.88,
+          "rxn_011": 0.42,
+          "rxn_012": 0.84,
+          "rxn_013": 0.38,
+          "rxn_014": 0.72,
+          "rxn_015": 0.18,
+          "rxn_016": 0.9
+        },
+        "chemical_feasibility": 0.53,
+        "pathway_coherence": 0.63,
+        "environmental_progression": 0.86,
+        "target_achievement": 0.74,
+        "overall_confidence": 0.63,
+        "feedback": "The hydrothermal-to-surface transfer is conceptually strong, but the surface branch from formaldehyde to sugars and then to pyruvate is underdefined and chemically weak as written. Pyruvate formation from glycolaldehyde and glyceraldehyde lacks a clear, established prebiotic mechanism, making this pathway less convincing despite an acceptable terminal transamination.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_008",
+          "rxn_011",
+          "rxn_013",
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Replace rxn_008 with a literature-supported route from sugars to pyruvate or another entry metabolite",
+          "Clarify rxn_004 as a network of formose steps rather than a one-step conversion",
+          "Support rxn_003 with stronger mineral and condition specificity if formaldehyde is retained as a hydrothermal product"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_003": 0.46,
+          "rxn_004": 0.55,
+          "rxn_008": 0.28,
+          "rxn_009": 0.88,
+          "rxn_011": 0.42,
+          "rxn_012": 0.84,
+          "rxn_013": 0.38,
+          "rxn_014": 0.72,
+          "rxn_015": 0.18,
+          "rxn_017": 0.74
+        },
+        "chemical_feasibility": 0.52,
+        "pathway_coherence": 0.62,
+        "environmental_progression": 0.86,
+        "target_achievement": 0.72,
+        "overall_confidence": 0.62,
+        "feedback": "This route inherits the same weak sugar-to-pyruvate chemistry as P3 and also relies on a somewhat underspecified direct reductive amination endpoint. It is connected and environmentally diverse, but several key transformations are too speculative for high confidence.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_008",
+          "rxn_011",
+          "rxn_013",
+          "rxn_015",
+          "rxn_017"
+        ],
+        "suggestions": [
+          "Provide a more explicit and plausible pyruvate-generating surface chemistry",
+          "Define the catalyst or reducing environment for alpha-ketoglutarate amination",
+          "Reduce dependence on weak middle-network transformations by introducing a better-supported C5 precursor route"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_010": 0.22,
+          "rxn_011": 0.42,
+          "rxn_012": 0.84,
+          "rxn_013": 0.38,
+          "rxn_014": 0.72,
+          "rxn_015": 0.18,
+          "rxn_016": 0.9
+        },
+        "chemical_feasibility": 0.49,
+        "pathway_coherence": 0.5,
+        "environmental_progression": 0.74,
+        "target_achievement": 0.71,
+        "overall_confidence": 0.56,
+        "feedback": "The main flaw is the alanine Strecker step. Alanine Strecker synthesis should proceed from acetaldehyde, NH3, and HCN via an aminonitrile then hydrolysis; using glyceraldehyde as an 'acetaldehyde equivalent' is not chemically conservative. Downstream transamination chemistry is reasonable, but the route starts from a weakly defined surface entry.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_010",
+          "rxn_011",
+          "rxn_013",
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Introduce acetaldehyde and alanine aminonitrile explicitly for a valid Strecker route",
+          "Separate Strecker formation and nitrile hydrolysis into distinct steps",
+          "Strengthen the alpha-ketoglutarate-forming segment before using this as a major pathway"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_010": 0.22,
+          "rxn_011": 0.42,
+          "rxn_012": 0.84,
+          "rxn_013": 0.38,
+          "rxn_014": 0.72,
+          "rxn_015": 0.18,
+          "rxn_017": 0.74
+        },
+        "chemical_feasibility": 0.48,
+        "pathway_coherence": 0.49,
+        "environmental_progression": 0.74,
+        "target_achievement": 0.69,
+        "overall_confidence": 0.55,
+        "feedback": "This is one of the weaker pathways because it combines an invalidly specified Strecker entry with the speculative alpha-ketoglutarate synthesis module. The final direct amination is plausible in broad terms, but the route as a whole is not strong enough.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_010",
+          "rxn_011",
+          "rxn_013",
+          "rxn_015",
+          "rxn_017"
+        ],
+        "suggestions": [
+          "Correct the alanine Strecker chemistry using acetaldehyde or pyruvate-derived acetaldehyde after explicit decarboxylation",
+          "Add mechanistic support for direct alpha-ketoglutarate amination",
+          "Replace or heavily qualify rxn_015"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_007": 0.62,
+          "rxn_009": 0.88,
+          "rxn_011": 0.42,
+          "rxn_012": 0.84,
+          "rxn_013": 0.38,
+          "rxn_014": 0.72,
+          "rxn_015": 0.18,
+          "rxn_016": 0.9
+        },
+        "chemical_feasibility": 0.61,
+        "pathway_coherence": 0.71,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.76,
+        "overall_confidence": 0.67,
+        "feedback": "A compact route centered on pyruvate and alanine hubs, with good internal network logic. The weakness again lies in the speculative C4-to-C5 expansion chemistry, not in the terminal glutamate transamination. This pathway is among the cleaner ones topologically but still chemically limited by the bottleneck to alpha-ketoglutarate.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_011",
+          "rxn_013",
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Emphasize this as a core scaffold pathway but revise the C5-building segment",
+          "Consider adding glyoxylate or citrate-like intermediates if aiming for a more rTCA-like extension",
+          "Provide activation chemistry for carboxylation steps"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_001": 0.9,
+          "rxn_002": 0.78,
+          "rxn_003": 0.46,
+          "rxn_004": 0.55,
+          "rxn_007": 0.62,
+          "rxn_008": 0.28,
+          "rxn_009": 0.88,
+          "rxn_011": 0.42,
+          "rxn_012": 0.84,
+          "rxn_013": 0.38,
+          "rxn_014": 0.72,
+          "rxn_015": 0.18,
+          "rxn_016": 0.9
+        },
+        "chemical_feasibility": 0.56,
+        "pathway_coherence": 0.7,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.75,
+        "overall_confidence": 0.66,
+        "feedback": "This mixed route best demonstrates network convergence because pyruvate can be reached from both hydrothermal and surface chemistry. However, the surface pyruvate branch is chemically weak, so the formal topological strength does not fully translate into mechanistic confidence.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_008",
+          "rxn_011",
+          "rxn_013",
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Retain this as the best topology showcase but strengthen the surface branch with better-supported chemistry",
+          "Clarify whether pyruvate convergence is meant as redundancy or simultaneous network feeding",
+          "Improve the alpha-ketoglutarate synthesis logic"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_005": 0.82,
+          "rxn_010": 0.22,
+          "rxn_011": 0.42,
+          "rxn_012": 0.84,
+          "rxn_013": 0.38,
+          "rxn_014": 0.72,
+          "rxn_015": 0.18,
+          "rxn_016": 0.9
+        },
+        "chemical_feasibility": 0.5,
+        "pathway_coherence": 0.54,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.71,
+        "overall_confidence": 0.58,
+        "feedback": "The HCN-to-formamide branch is plausible as an auxiliary surface chemistry, but it does not materially strengthen glutamate synthesis unless better integrated. The pathway still hinges on the weak alanine Strecker step and the speculative alpha-ketoglutarate formation sequence.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_010",
+          "rxn_011",
+          "rxn_013",
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Use formamide branch products for more direct nucleotide or activation chemistry rather than as a nominal side branch",
+          "Correct the alanine entry chemistry",
+          "Tighten pathway definition so each branch has a necessary mechanistic role"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_006": 0.45,
+          "rxn_002": 0.78,
+          "rxn_007": 0.62,
+          "rxn_009": 0.88,
+          "rxn_011": 0.42,
+          "rxn_012": 0.84,
+          "rxn_013": 0.38,
+          "rxn_014": 0.72,
+          "rxn_015": 0.18,
+          "rxn_016": 0.9
+        },
+        "chemical_feasibility": 0.58,
+        "pathway_coherence": 0.62,
+        "environmental_progression": 0.83,
+        "target_achievement": 0.76,
+        "overall_confidence": 0.64,
+        "feedback": "The amidine activation branch is chemically possible in a broad sense, but its direct relevance to glutamate synthesis is not well established here. The core hydrothermal and transamination logic is better than the surface activation logic, but the same late-stage bottlenecks remain unresolved.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_006",
+          "rxn_011",
+          "rxn_013",
+          "rxn_015"
+        ],
+        "suggestions": [
+          "Clarify the functional role of formamidine in the network or remove it from key pathways",
+          "Focus on fewer but stronger branches if aiming for higher pathway confidence",
+          "Replace speculative late-stage carbon extension chemistry"
+        ]
+      }
+    ],
+    "best_pathway_id": "P1",
+    "overall_confidence": 0.65,
+    "network_feedback": "The network is topologically solid and substantially improved over many ad hoc prebiotic schemes: it is connected, has multiple hubs, and clearly shows hydrothermal-to-surface-to-biochemical interconnection. The strongest aspects are the hydrothermal C1/C2/C3 feedstock generation, pyruvate as a central convergence hub, alanine formation by reductive amination, and two plausible terminal glutamate-forming reactions from alpha-ketoglutarate. The major weaknesses are chemical, not topological. Several reactions are too compressed or insufficiently grounded: hydrothermal formaldehyde production is uncertain; the one-step formose entry is oversimplified; sugar-to-pyruvate conversion is weakly justified; the alanine Strecker step is improperly specified; pyruvate carboxylation to oxaloacetate lacks activation chemistry; aspartate-to-fumarate is not straightforward prebiotically; and succinate-to-alpha-ketoglutarate is the dominant speculative bottleneck. Mineral-agent requirements are not assessable in the submitted summary because specific catalysts were not included per reaction, which lowers environmental rigor. Literature alignment is also limited because no reaction-level citations were provided. Overall, this is a connected and strategically coherent network with credible hubs and convergence, but it is not yet chemically strong enough for approval.",
+    "approved": false,
+    "hub_quality": 0.9,
+    "convergence_quality": 0.84
+  },
+  "success": false,
+  "attempts": 3,
+  "notes": null
+}

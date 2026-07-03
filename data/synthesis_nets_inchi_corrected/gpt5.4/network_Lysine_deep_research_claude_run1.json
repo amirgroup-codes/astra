@@ -1,0 +1,929 @@
+{
+  "target_molecule": "Lysine",
+  "network": {
+    "target_molecule": "Lysine",
+    "overall_strategy": "This network is literature-constrained and explicitly represents lysine as an unresolved prebiotic target rather than a robustly established product. The graph is built around experimentally supported feedstock generation in hydrothermal settings, surface cyanide/formamide/spark/UV chemistry, and prebiotic concentration or surrogate-function branches. Ten pathways are provided, but only one gives a tentative direct lysine detection (borosilicate-catalyzed spark discharge), while several others are convergent dead-end or near-miss routes that map the known chemical bottlenecks identified in the literature. Hub molecules were chosen to reflect recurrent prebiotic intermediates and bottlenecks: hydrogen cyanide, formaldehyde, ammonia, aminoacetonitrile, and acrylonitrile. Environmental interconnection is shown by hydrothermal reduced-carbon production feeding surface inventory chemistry, followed by biochemical concentration/selection processes that can retain lysine if present or substitute shorter diamino acids when lysine is absent.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "CH2O2",
+        "iupac_name": "methanoic acid",
+        "common_name": "formic acid/formate",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_004",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_005",
+        "formula": "H3N",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "hub_intermediate",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_006",
+        "formula": "CHN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "HCN",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_007",
+        "formula": "CH3NO",
+        "iupac_name": "methanamide",
+        "common_name": "formamide",
+        "inchi": "InChI=1S/CH3NO/c2-1-3/h1H,(H2,2,3)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C2H4N2",
+        "iupac_name": "2-aminoacetonitrile",
+        "common_name": "aminoacetonitrile",
+        "inchi": "InChI=1S/C2H4N2/c3-1-2-4/h1,3H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C3H3N",
+        "iupac_name": "prop-2-enenitrile",
+        "common_name": "acrylonitrile",
+        "inchi": "InChI=1S/C3H3N/c1-2-3-4/h2H,1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C3H7NO",
+        "iupac_name": "3-aminopropanal",
+        "common_name": "beta-aminopropionaldehyde",
+        "inchi": "InChI=1S/C3H7NO/c4-2-1-3-5/h3H,1-2,4H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C5H11NO",
+        "iupac_name": "5-aminopentanal",
+        "common_name": "5-aminopentanal",
+        "inchi": "InChI=1S/C5H11NO/c6-4-2-1-3-5-7/h5H,1-4,6H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C6H12N2O2",
+        "iupac_name": "2,6-diaminohexanoic acid",
+        "common_name": "lysine",
+        "inchi": "InChI=1S/C6H14N2O2/c7-4-2-1-3-5(8)6(9)10/h5H,1-4,7-8H2,(H,9,10)",
+        "role": "target",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C6H12N2O2",
+        "iupac_name": "diaminohexanoic acid isomer mixture",
+        "common_name": "diaminohexanoic acid isomers",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C3H6N2O2",
+        "iupac_name": "2,3-diaminopropanoic acid",
+        "common_name": "diaminopropionic acid",
+        "inchi": "InChI=1S/C3H8N2O2/c4-1-2(5)3(6)7/h2H,1,4-5H2,(H,6,7)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C4H10N2O2",
+        "iupac_name": "2,4-diaminobutanoic acid",
+        "common_name": "diaminobutyric acid",
+        "inchi": "InChI=1S/C4H10N2O2/c5-2-1-3(6)4(7)8/h3H,1-2,5-6H2,(H,7,8)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C6H14N2O2",
+        "iupac_name": "lysine adsorbed on montmorillonite",
+        "common_name": "clay-bound lysine",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO2 reduction to formate",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite and mackinawite",
+          "aqueous": "true",
+          "other": "alkaline vent conditions, anoxic, H2-rich"
+        },
+        "mechanism": "Mineral-surface mediated reduction of CO2 by H2 to formate on iron-sulfur phases.",
+        "reasoning": "Used to connect hydrothermal reduced-carbon production to later surface inventory chemistry; FeS/Fe3S4-promoted CO2 reduction is consistent with iron-sulfur vent models and hydrothermal amino-acid precursor generation, though not lysine-specific (Huber & Wachtershauser, 1997; Barge et al., 2019; Kitadai et al., 2018)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Hydrothermal reduced-carbon generation to formaldehyde inventory",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "370-470K",
+          "pressure": "high",
+          "catalyst": "magnetite and elemental iron",
+          "aqueous": "true",
+          "other": "subseafloor serpentinization-linked reducing conditions; formaldehyde treated as low-yield reduced-carbon inventory feeding surface chemistry"
+        },
+        "mechanism": "Fischer-Tropsch-type and serpentinization-associated CO2 hydrogenation generate reduced one-carbon species including formaldehyde-equivalent carbon.",
+        "reasoning": "Included conservatively as a systems-chemistry bridge from hydrothermal carbon fixation to surface carbonyl chemistry; exact formaldehyde yields under these conditions are less secure than formate, so this step is partly connective and lower confidence, but consistent with hydrothermal reduced-carbon generation frameworks (Amend & Shock, 1998; Barge et al., 2019)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Surface spark-discharge generation of HCN-rich organic inventory",
+        "inputs": [
+          "mol_004",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "borate minerals (colemanite/ulexite)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "mineral surfaces present during atmospheric discharge deposition",
+          "aqueous": "true",
+          "other": "CH4/NH3/N2 atmospheric discharge analogue, strong UV and electrical energy, product collected in aqueous phase"
+        },
+        "mechanism": "Electrical discharge in reduced atmospheres generates HCN and related nitriles that dissolve into surface waters.",
+        "reasoning": "HCN generation is foundational to Miller-Urey-type chemistry and necessary for the literature-supported lysine problem space. Lysine is generally absent from such experiments, but HCN production is well established and underpins later routes (Miller, 1953; Ring et al., 1972; Johnson et al., 2008; Parker et al., 2011; Criado-Reyes et al., 2021)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "HCN hydration to formamide under surface photochemical conditions",
+        "inputs": [
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 and phosphate mineral surfaces",
+          "aqueous": "true",
+          "other": "UV-exposed evaporitic or geothermal pools"
+        },
+        "mechanism": "Hydration and photochemical conversion of cyanide-derived species gives formamide in concentrated surface settings.",
+        "reasoning": "Formamide is a documented prebiotic nitrogen-rich intermediate linked to UV chemistry, but not a demonstrated direct lysine precursor; here it is included only as a literature-grounded branch in the lysine problem network (Mu\u00f1oz Caro et al., 2002; Nuevo et al., 2008)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Aminoacetonitrile formation from HCN-ammonia chemistry",
+        "inputs": [
+          "mol_006",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite and phosphate minerals",
+          "aqueous": "true",
+          "other": "concentrating evaporitic pools or HCN polymerization media"
+        },
+        "mechanism": "Cyanide-ammonia condensation gives aminonitrile building blocks, especially aminoacetonitrile, within cyanide-rich networks.",
+        "reasoning": "Aminoacetonitrile is central to historical HCN polymerization claims and is a plausible cyanide-derived aminonitrile node, though modern reanalysis does not support lysine production from its polymers (Moser & Matthews, 1968; Cleaves, 2010; Ruiz-Bermejo et al., 2013)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "HCN polymerization and hydrolysis inventory branch",
+        "inputs": [
+          "mol_008",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite and TiO2",
+          "aqueous": "true",
+          "other": "polymerization followed by hydrolysis; anoxic cyanide-rich conditions"
+        },
+        "mechanism": "Aminoacetonitrile participates in HCN oligomerization/polymerization networks that, upon hydrolysis, yield small amino acids and diamino acid products.",
+        "reasoning": "Historical lysine claims from HCN polymer hydrolysis are unconfirmed; modern high-resolution analysis instead supports simpler amino acids and related diamino products. This branch is explicitly a literature-supported dead-end/near-miss rather than a validated lysine route (Moser & Matthews, 1968; Cleaves, 2010; Ruiz-Bermejo et al., 2013)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Surface discharge chemistry to acrylonitrile",
+        "inputs": [
+          "mol_006",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "sulfide minerals (stibnite/molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 and sulfide mineral surfaces",
+          "aqueous": "true",
+          "other": "UV/discharge-driven nitrile chemistry in evaporitic pools or atmospheric fallout solutions"
+        },
+        "mechanism": "Energetic cyanide chemistry produces unsaturated nitriles including acrylonitrile as C3 homologation building blocks.",
+        "reasoning": "Acrylonitrile is identified in the literature as a potential C3 building block relevant to the lysine problem, but not as a demonstrated route to lysine itself. It is included because the deep report explicitly identifies it as a plausible precursor class (Thoma & Powner, 2023; Ruiz-Bermejo et al., 2013)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Ammonia addition to acrylonitrile giving beta-aminopropionaldehyde equivalent inventory",
+        "inputs": [
+          "mol_009",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite/molybdenite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide minerals and montmorillonite",
+          "aqueous": "true",
+          "other": "cyanide/ammonia-rich pools; step treated as idealized inventory access rather than a robust isolated reaction"
+        },
+        "mechanism": "Nucleophilic nitrogen addition to an activated nitrile/unsaturated nitrile network yields beta-aminated C3 intermediates represented here by beta-aminopropionaldehyde-equivalent chemistry.",
+        "reasoning": "The deep report identifies beta-aminopropionaldehyde as a relevant intermediate in the cyanosulfidic/HCN homologation problem, but further elongation is specifically blocked by cyclization. This step is therefore included only to map the documented bottleneck, not as a high-confidence isolated synthesis (Patel et al., 2015; Thoma & Powner, 2023)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Attempted homologation toward 5-aminopentanal bottleneck",
+        "inputs": [
+          "mol_010",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "sulfide minerals (stibnite/molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "borate and sulfide minerals",
+          "aqueous": "true",
+          "other": "UV-assisted cyanosulfidic homologation regime; cyclization strongly competes"
+        },
+        "mechanism": "Further chain extension of beta-aminated intermediates is attempted through nitrile homologation chemistry but is diverted by cyclization and fails to robustly give the linear C5 aminoaldehyde.",
+        "reasoning": "This reaction is intentionally marked as the literature-defined bottleneck: Patel et al. noted that homologation beyond beta-aminopropionaldehyde toward the acyclic Strecker precursor of lysine appears unlikely because cyclization dominates. Included to show why the Strecker route is a dead-end for lysine (Patel et al., 2015; Miller & Van Trump, 1981; Thoma & Powner, 2023)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Tentative lysine formation in borosilicate spark-discharge chemistry",
+        "inputs": [
+          "mol_004",
+          "mol_005",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "borosilicate/silicate surface effect represented by borate-rich silicate mineral environment",
+          "aqueous": "true",
+          "other": "spark discharge using CH4/NH3/N2 mixtures; lysine tentatively assigned only in borosilicate reactor, not Teflon"
+        },
+        "mechanism": "Complex discharge chemistry in the presence of silicate/borosilicate surfaces produces a broad organic mixture in which lysine was tentatively identified after derivatization and GC-MS analysis.",
+        "reasoning": "This is the only literature-supported direct branch to lysine and remains tentative. Criado-Reyes et al. reported lysine among 56 products with much higher amino-acid yields in borosilicate than in Teflon reactors, implying a mineral surface effect, but the assignment has not yet been independently confirmed. The network therefore treats this as the sole direct but low-confidence lysine-forming step (Criado-Reyes et al., 2021; Thoma & Powner, 2023)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "UV ice photochemistry yielding diaminohexanoic acid isomers",
+        "inputs": [
+          "mol_007",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "borate minerals (colemanite/ulexite)"
+        ],
+        "conditions": {
+          "temperature": "12 K irradiation then warming to 300K residue analysis",
+          "pressure": "low to 1 atm upon deposition",
+          "catalyst": "mineral collection surfaces after photolysis",
+          "aqueous": "false",
+          "other": "UV irradiation of H2O:CH3OH:NH3:CO:CO2 ice analogues; residue later analyzed"
+        },
+        "mechanism": "UV irradiation of astrophysical/prebiotic ice mixtures generates complex amino acid inventories including C6 diaminohexanoic acid isomers.",
+        "reasoning": "Mu\u00f1oz Caro et al. detected two diaminohexanoic acids with the same formula as lysine but not lysine itself. This branch is therefore a near-miss, demonstrating that abiotic chemistry can cross the C6 diamino threshold without achieving lysine regiochemistry (Mu\u00f1oz Caro et al., 2002; Nuevo et al., 2008)."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Surface synthesis of diaminopropionic acid surrogate",
+        "inputs": [
+          "mol_006",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite/molybdenite)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide and phosphate minerals",
+          "aqueous": "true",
+          "other": "dehydroalanine nitrile/ammonia addition chemistry represented as a cyanide-network surrogate branch"
+        },
+        "mechanism": "Ammonia addition to activated nitrile precursors yields diaminopropionic acid after hydrolytic workup within prebiotic nitrile chemistry.",
+        "reasoning": "Thoma & Powner showed high-yield prebiotic access to diaminopropionic acid from dehydroalanine nitrile, establishing a realistic cationic amino-acid surrogate branch when lysine itself is unavailable. Included because the literature emphasizes lysine surrogacy rather than direct lysine synthesis (Thoma & Powner, 2023)."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Abiotic shorter-chain diamino acid inventory branch",
+        "inputs": [
+          "mol_009",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 and montmorillonite",
+          "aqueous": "true",
+          "other": "spark/discharge or hydrolytic product inventory branch"
+        },
+        "mechanism": "Shorter homologous diamino acids arise more readily than lysine in abiotic nitrile chemistry and survive hydrolysis/analysis.",
+        "reasoning": "Diaminobutyric acid and related shorter diamino acids are reported from abiotic contexts and meteorites, reinforcing the chain-length barrier before C6 lysine. This reaction is included as a literature-supported boundary marker, not a lysine step (Ring et al., 1972; Wolman et al., 1972; Meierhenrich et al., 2004; Thoma & Powner, 2023)."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Montmorillonite adsorption and concentration of lysine",
+        "inputs": [
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_016"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "montmorillonite (clay)",
+          null
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite",
+          "aqueous": "true",
+          "other": "pH 5-7, NaCl-bearing pools; adsorption reduced by Mg2+ competition"
+        },
+        "mechanism": "If lysine is present, cationic side-chain protonation drives selective adsorption/intercalation into montmorillonite interlayers, concentrating it for later polymerization.",
+        "reasoning": "Clay does not create lysine, but selectively concentrates it and can generate nano-environments favorable for downstream chemistry. This step connects any rare lysine produced in surface chemistry to biochemical retention and selection (Cuadros et al., 2009; Cuadros et al., 2024; Bezaly et al., 2026; Frenkel-Pinter et al., 2019)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Direct borosilicate spark route to tentative lysine",
+        "description": "Surface discharge chemistry in a borosilicate-influenced setting gives the only published tentative lysine detection.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_006"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Hydrothermal formate to surface spark lysine branch",
+        "description": "Hydrothermal carbon reduction feeds surface reduced-carbon inventory and then the tentative borosilicate spark-discharge lysine route.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_004",
+          "mol_006"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Aminoacetonitrile-HCN polymer dead-end branch",
+        "description": "Historically claimed HCN polymer hydrolysis route associated with lysine reports, now treated as a dead-end because modern reanalysis does not confirm lysine.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_005",
+          "rxn_006"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Acrylonitrile homologation bottleneck route",
+        "description": "Potential lysine-oriented chain extension route through acrylonitrile and beta-aminopropionaldehyde, blocked at the 5-aminopentanal stage by cyclization.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_010",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Theoretical Strecker endpoint from 5-aminopentanal",
+        "description": "Maps the literature-recognized but unsupported Strecker logic for lysine: even if 5-aminopentanal were available, lysine could in principle result; the precursor itself is the unsolved bottleneck.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_006"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Formamide-mediated UV inventory branch",
+        "description": "HCN hydration to formamide feeds UV-rich nitrogen chemistry that samples C6 diamino space but does not robustly yield lysine.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "UV diaminohexanoic near-miss route",
+        "description": "Photochemistry crosses the C6 diamino threshold but gives diaminohexanoic acid isomers rather than confirmed lysine.",
+        "reaction_sequence": [
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Diaminopropionic acid surrogate pathway",
+        "description": "A realistic prebiotic surrogate branch producing Dpr, reflecting the literature suggestion that early systems may have used lysine substitutes.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Diaminobutyric acid shorter-homologue pathway",
+        "description": "Shorter diamino acids are accessible abiotically and mark the observed chain-length limit below lysine.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_007",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_015"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Biochemical concentration of rare lysine",
+        "description": "If trace lysine is produced by the tentative borosilicate route, montmorillonite can selectively adsorb and retain it for downstream prebiotic chemistry.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_010",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_016"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_005",
+      "mol_006",
+      "mol_008",
+      "mol_009"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_003"
+        ],
+        "outgoing_reactions": [
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_009",
+          "rxn_010",
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_012",
+        "incoming_reactions": [
+          "rxn_010"
+        ],
+        "outgoing_reactions": [
+          "rxn_014"
+        ]
+      },
+      {
+        "molecule_id": "mol_009",
+        "incoming_reactions": [
+          "rxn_007"
+        ],
+        "outgoing_reactions": [
+          "rxn_008",
+          "rxn_013"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Lysine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_003": 0.45,
+          "rxn_010": 0.72
+        },
+        "chemical_feasibility": 0.58,
+        "pathway_coherence": 0.68,
+        "environmental_progression": 0.7,
+        "target_achievement": 0.74,
+        "overall_confidence": 0.67,
+        "feedback": "This is the strongest direct-to-target pathway because it mirrors the only literature-supported tentative lysine detection: spark discharge in borosilicate systems. However, the specific stoichiometric abstraction formaldehyde + ammonia -> HCN is not chemically faithful to classic discharge chemistry, and the lysine-forming step is a lumped inventory reaction rather than a mechanistically resolved route. Still, representing lysine here as tentative rather than established aligns well with the literature.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Explicitly specify borosilicate/glass or silicate mineral participation in rxn_003 and rxn_010 if this is intended as the Criado-Reyes-type route.",
+          "Clarify that rxn_010 represents a detected product mixture from discharge chemistry rather than a single-step mechanistic conversion.",
+          "Avoid implying a resolved formaldehyde-to-HCN pathway unless supported by a stated discharge gas composition."
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_001": 0.88,
+          "rxn_002": 0.55,
+          "rxn_003": 0.45,
+          "rxn_010": 0.72
+        },
+        "chemical_feasibility": 0.61,
+        "pathway_coherence": 0.62,
+        "environmental_progression": 0.86,
+        "target_achievement": 0.72,
+        "overall_confidence": 0.68,
+        "feedback": "This pathway does a good job showing hydrothermal-to-surface interconnection, with reduced carbon feeding surface inventory chemistry. The weak point is that formaldehyde generation directly from CO2 + H2 in hydrothermal settings is plausible only as a generalized reduced-carbon inventory and is less established than formate or methanol-like products; then the formaldehyde/ammonia-to-HCN step is again oversimplified. The endpoint remains only tentatively supported by borosilicate spark experiments.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Use formate or methanol as a better-supported hydrothermal feedstock and make formaldehyde a secondary surface oxidation/reduction pool component.",
+          "State transport/concentration assumptions for hydrothermal products reaching surface discharge settings.",
+          "Tie rxn_010 explicitly to Criado-Reyes et al. 2021 and mark yield/identification uncertainty."
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_003": 0.45,
+          "rxn_005": 0.78,
+          "rxn_006": 0.42
+        },
+        "chemical_feasibility": 0.55,
+        "pathway_coherence": 0.71,
+        "environmental_progression": 0.64,
+        "target_achievement": 0.18,
+        "overall_confidence": 0.52,
+        "feedback": "As a dead-end branch, this is conceptually well aligned with literature: HCN/aminoacetonitrile polymer chemistry has historically been invoked, but modern reanalysis does not confirm lysine production. Aminoacetonitrile formation is reasonable; the conversion to diaminopropionic-acid-like products via polymerization/hydrolysis is plausible as an inventory branch but chemically underspecified. The branch is useful for mapping a known failure mode, not for reaching lysine.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_003",
+          "rxn_006"
+        ],
+        "suggestions": [
+          "Indicate that rxn_006 is a polymer hydrolysis product distribution rather than a clean transformation.",
+          "Reference the negative reanalysis literature explicitly in reasoning for this branch.",
+          "Do not imply this branch is lysine-productive; keep it explicitly as a bottleneck/failure branch."
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_007": 0.5,
+          "rxn_008": 0.32,
+          "rxn_009": 0.18,
+          "rxn_010": 0.72
+        },
+        "chemical_feasibility": 0.37,
+        "pathway_coherence": 0.39,
+        "environmental_progression": 0.57,
+        "target_achievement": 0.24,
+        "overall_confidence": 0.35,
+        "feedback": "This pathway correctly centers the homologation bottleneck highlighted in the literature, but the chemistry is too speculative to support a viable route. Acrylonitrile is a plausible C3 nitrile intermediate, but its direct conversion with ammonia to beta-aminopropionaldehyde is not well represented, and chain extension from that intermediate to 5-aminopentanal is especially unsupported. The pathway usefully encodes the problem, not a credible solution.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_008",
+          "rxn_009"
+        ],
+        "suggestions": [
+          "Represent nitrile-first intermediates more faithfully, e.g., beta-aminopropionitrile rather than the aldehyde equivalent.",
+          "Mark rxn_009 as highly speculative and unsupported by current experiments.",
+          "If retained, separate the bottleneck branch from the direct lysine-producing branch to avoid overstating continuity."
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_007": 0.5,
+          "rxn_008": 0.32,
+          "rxn_009": 0.18
+        },
+        "chemical_feasibility": 0.28,
+        "pathway_coherence": 0.52,
+        "environmental_progression": 0.49,
+        "target_achievement": 0.08,
+        "overall_confidence": 0.29,
+        "feedback": "As a theoretical Strecker endpoint branch, this pathway is actually well aligned with the literature's conclusion that the Strecker route to lysine is a dead-end because 5-aminopentanal lacks a known prebiotic source. The network succeeds conceptually by surfacing that obstacle, but it does not provide a chemically credible sequence to generate the required aldehyde. This should be treated as a negative-control or impossibility branch rather than a productive pathway.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_008",
+          "rxn_009"
+        ],
+        "suggestions": [
+          "Explicitly state this pathway is non-productive and included to illustrate the classical Strecker barrier.",
+          "Do not score it as target-directed unless an actual Strecker completion step is present.",
+          "Add a note that cyclization and lack of 5-aminopentanal source are the principal failures."
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_004": 0.82,
+          "rxn_011": 0.63
+        },
+        "chemical_feasibility": 0.72,
+        "pathway_coherence": 0.66,
+        "environmental_progression": 0.74,
+        "target_achievement": 0.22,
+        "overall_confidence": 0.59,
+        "feedback": "This branch is reasonably aligned with formamide/UV literature and with ice photolysis work yielding diaminohexanoic-acid isomers rather than lysine itself. The main issue is that rxn_011 compresses a complex photochemical residue into a single clean product node. As a near-miss route documenting formation of C6 diamino acid isomers, it is useful and literature-consistent, but it does not achieve lysine.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_011"
+        ],
+        "suggestions": [
+          "Rename rxn_011 to emphasize 'diaminohexanoic acid isomer mixture' rather than a discrete compound.",
+          "Clarify that lysine was not confirmed in this branch.",
+          "If possible, distinguish between interstellar ice photochemistry and warm surface chemistry as separate environmental contexts."
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_011": 0.63
+        },
+        "chemical_feasibility": 0.69,
+        "pathway_coherence": 0.78,
+        "environmental_progression": 0.51,
+        "target_achievement": 0.12,
+        "overall_confidence": 0.53,
+        "feedback": "This is a coherent near-miss pathway, accurately reflecting literature that UV photolysis can generate diaminohexanoic acid isomers with lysine's formula but not confirmed lysine. It is not target-achieving, but it is a good representation of one of the closest known abiotic approaches to lysine-like composition.",
+        "approved": false,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Keep this branch explicitly labeled as a compositional analog route, not lysine synthesis.",
+          "Consider assigning a distinct environmental label if modeling cold UV ice chemistry rather than general surface conditions.",
+          "Note analytical ambiguity and coelution issues discussed in the literature."
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_005": 0.78,
+          "rxn_012": 0.71
+        },
+        "chemical_feasibility": 0.75,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.67,
+        "target_achievement": 0.16,
+        "overall_confidence": 0.62,
+        "feedback": "This surrogate pathway is one of the better parts of the network. Diaminopropionic acid is a well-supported prebiotic lysine surrogate in the literature, and the network appropriately uses it to reflect how early systems might compensate for lysine's absence. The weakness is that the chemistry from generic HCN + NH3 to Dpr is oversimplified relative to the more specific dehydroalanine nitrile/ammonia chemistry reported by Thoma and Powner.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Replace the generic rxn_012 with a literature-faithful Dpr precursor route if detailed network granularity allows.",
+          "Frame this as functional substitution rather than a route toward lysine itself.",
+          "Add explicit citation support for Dpr as a plausible prebiotic cationic surrogate."
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_007": 0.5,
+          "rxn_013": 0.58
+        },
+        "chemical_feasibility": 0.56,
+        "pathway_coherence": 0.73,
+        "environmental_progression": 0.62,
+        "target_achievement": 0.14,
+        "overall_confidence": 0.51,
+        "feedback": "This shorter-homologue branch fits the literature pattern that diaminobutyric acid and related shorter diamino acids are accessible while lysine is not. It is useful as a comparative branch showing the chain-length cutoff. The chemistry is still somewhat compressed, especially in deriving the diaminobutyric acid product directly from acrylonitrile and ammonia inventory.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_013"
+        ],
+        "suggestions": [
+          "Treat the product as part of a discharge/hydrolysis product mixture rather than a single-step direct synthesis.",
+          "Use this branch to emphasize the experimentally observed abundance drop with increasing chain length.",
+          "If possible, include meteorite evidence as support for the branch's plausibility."
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_010": 0.72,
+          "rxn_014": 0.9
+        },
+        "chemical_feasibility": 0.8,
+        "pathway_coherence": 0.76,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.73,
+        "overall_confidence": 0.77,
+        "feedback": "This is the best systems-chemistry pathway in the network: if lysine is generated at all in a rare spark-discharge event, montmorillonite adsorption/concentration is chemically plausible and well aligned with recent adsorption literature. The main limitation is inherited from the uncertain production step; the concentration step itself is strong. This pathway does not solve lysine origin, but it credibly models retention and selection of trace lysine once present.",
+        "approved": false,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Clarify that rxn_014 is adsorption/intercalation, not synthesis.",
+          "Add pH and cation competition details if evaluating realistic retention efficiency.",
+          "State explicitly that this pathway depends on prior rare or tentative lysine formation."
+        ]
+      }
+    ],
+    "best_pathway_id": "P10",
+    "overall_confidence": 0.72,
+    "network_feedback": "The network is stronger as a literature-grounded map of why lysine is chemically problematic than as a viable synthesis network to lysine. Topologically, it is adequate to good: 16 molecules and 14 reactions form a connected graph; hydrothermal, surface, and biochemical layers are present; and several hubs such as HCN, NH3, and formaldehyde are appropriately reused. Convergence is moderate, with multiple branches feeding shared inventory molecules and several near-miss products. Environmental interconnection is one of the network's better features, especially the hydrothermal reduced-carbon feed into surface chemistry and the final biochemical concentration step.\n\nThe main weakness is chemical feasibility of several key steps. The direct hydrothermal generation of formaldehyde from CO2 + H2 is only weakly justified relative to formate, and the conversion of formaldehyde + ammonia into HCN-rich inventory as a discrete reaction is not mechanistically faithful. The homologation branch through acrylonitrile, beta-aminopropionaldehyde, and 5-aminopentanal is highly speculative and correctly reflects a bottleneck, but should be marked more explicitly as unresolved rather than quasi-productive. The sole actual lysine-producing step is appropriately tentative and aligns with Criado-Reyes et al. 2021, which is a major strength. Likewise, the inclusion of diaminohexanoic acid isomers and shorter diamino acids matches literature showing near-misses and homologues rather than robust lysine synthesis.\n\nLiterature alignment is generally good at the conceptual level: the network captures lysine as an unresolved target, the Strecker dead-end, the HCN polymerization ambiguity, the unique borosilicate spark exception, the UV isomer near-miss, and the use of shorter diamino acids as surrogates. However, because the supplied network summary does not show reaction-level citations or detailed mineral agent assignments, it falls short of the strictest literature-constrained standard. Several surface reactions also do not explicitly list required mineral agents in the provided summary, which violates the original synthesis-network specification even if the intended chemistry is literature-aware.\n\nOverall, this is an acceptable evaluative network for mapping the chemical boundary around lysine, but it is not an approved high-confidence synthesis network to lysine. It is best viewed as a well-structured negative-result network with one tentative production branch and several literature-faithful bottleneck branches.",
+    "approved": false,
+    "hub_quality": 0.83,
+    "convergence_quality": 0.74
+  },
+  "success": false,
+  "attempts": 3,
+  "notes": "Max retries reached. Best confidence: 0.720"
+}

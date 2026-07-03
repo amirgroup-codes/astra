@@ -1,0 +1,977 @@
+{
+  "target_molecule": "Valine",
+  "network": {
+    "target_molecule": "Valine (2-amino-3-methylbutanoic acid)",
+    "overall_strategy": "The network addresses valine synthesis through three chemically distinct terminal pathways\u2014Strecker synthesis, Bucherer-Bergs hydantoin hydrolysis, and reductive amination of \u03b1-ketoisovalerate\u2014fed by multiple upstream routes to the key bottleneck intermediate isobutyraldehyde. The literature identifies this branched C4 aldehyde as the central challenge (Keefe, Newton, Miller 1995): its generation is kinetically disfavored relative to formaldehyde and acetaldehyde, explaining valine's consistent ~20-fold yield deficit versus glycine. Three independent routes to isobutyraldehyde are modeled: Fischer-Tropsch-type (FTT) synthesis on magnetite (McCollom et al. 1999), NiS-catalyzed aldol diversification of acetaldehyde (Preiner et al. 2023), and spark discharge radical chemistry (Parker et al. 2011). The keto acid pathway uses Fe(0)-promoted pyruvate formation (Muchowska, Varma, Moran 2019) combined with acetaldehyde condensation. All pathways incorporate environmental transitions (Hydrothermal\u2192Surface\u2192Biochemical) and specify mineral catalysts throughout. Hub molecules\u2014isobutyraldehyde, acetaldehyde, HCN, CO, and pyruvate\u2014create network density and redundancy.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen gas",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "ammonia",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_005",
+        "formula": "H2O",
+        "iupac_name": "water",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_006",
+        "formula": "CO",
+        "iupac_name": "carbon monoxide",
+        "common_name": "carbon monoxide",
+        "inchi": "InChI=1S/CO/c1-2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "CH4",
+        "iupac_name": "methane",
+        "common_name": "methane",
+        "inchi": "InChI=1S/CH4/h1H4",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_008",
+        "formula": "H2S",
+        "iupac_name": "hydrogen sulfide",
+        "common_name": "hydrogen sulfide",
+        "inchi": "InChI=1S/H2S/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_009",
+        "formula": "C2H4O",
+        "iupac_name": "acetaldehyde",
+        "common_name": "acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C4H8O",
+        "iupac_name": "2-methylpropanal",
+        "common_name": "isobutyraldehyde",
+        "inchi": "InChI=1S/C4H8O/c1-4(2)3-5/h3-4H,1-2H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C5H10N2",
+        "iupac_name": "2-amino-3-methylbutanenitrile",
+        "common_name": "valine aminonitrile",
+        "inchi": "InChI=1S/C5H10N2/c1-4(2)5(7)3-6/h4-5H,7H2,1-2H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C5H12N2O",
+        "iupac_name": "2-amino-3-methylbutanamide",
+        "common_name": "valine amide",
+        "inchi": "InChI=1S/C5H12N2O/c1-3(2)4(6)5(7)8/h3-4H,6H2,1-2H3,(H2,7,8)",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C6H10N2O2",
+        "iupac_name": "5-(propan-2-yl)-1,3-diazinane-2,4-dione",
+        "common_name": "5-isopropylhydantoin",
+        "inchi": "InChI=1S/C6H10N2O2/c1-3(2)4-5(9)8-6(10)7-4/h3-4H,1-2H3,(H2,7,8,9,10)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvate",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C5H8O3",
+        "iupac_name": "3-methyl-2-oxobutanoic acid",
+        "common_name": "alpha-ketoisovalerate",
+        "inchi": "InChI=1S/C5H8O3/c1-3(2)4(6)5(7)8/h3H,1-2H3,(H,7,8)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C5H11NO2",
+        "iupac_name": "2-amino-3-methylbutanoic acid",
+        "common_name": "valine",
+        "inchi": "InChI=1S/C5H11NO2/c1-3(2)4(6)5(7)8/h3-4H,6H2,1-2H3,(H,7,8)",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Reverse water-gas shift on magnetite",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_006",
+          "mol_005"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high (>100 bar)",
+          "catalyst": "magnetite (Fe3O4)",
+          "aqueous": false,
+          "other": "Serpentinization-driven H2 supply; alkaline vent conditions"
+        },
+        "mechanism": "CO2 is reduced to CO via the reverse water-gas shift reaction on magnetite surfaces. H2 generated by serpentinization of olivine provides the reducing equivalents. The reaction is facilitated by the Fe(II)/Fe(III) redox couple in magnetite.",
+        "reasoning": "The reverse water-gas shift reaction on iron mineral surfaces is a well-established component of hydrothermal chemistry. McCollom, Ritter, and Simoneit (1999, Origins of Life and Evolution of Biospheres) demonstrated that CO is generated as part of Fischer-Tropsch-type synthesis on iron catalysts under hydrothermal conditions. CO serves as a critical C1 feedstock for downstream FTT reactions producing aldehydes."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Fischer-Tropsch-type synthesis of acetaldehyde",
+        "inputs": [
+          "mol_006",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "awaruite (Fe-Ni alloy)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high (>100 bar)",
+          "catalyst": "magnetite and Fe-Ni minerals",
+          "aqueous": true,
+          "other": "Mixed H2/CO atmosphere; alkaline hydrothermal vent"
+        },
+        "mechanism": "CO and H2 undergo surface-catalyzed carbon chain growth on magnetite/Fe-Ni surfaces via a carbide or CO-insertion mechanism. The C2 oxygenate acetaldehyde is a primary FTT product, formed via hydrogenation of surface-bound C2 intermediates and chain termination by oxygen insertion.",
+        "reasoning": "McCollom, Ritter, and Simoneit (1999, Origins of Life and Evolution of Biospheres) demonstrated that FTT reactions on iron-containing catalysts under hydrothermal conditions produce alcohols and aldehydes including C2 oxygenates. Acetaldehyde is a major product of FTT synthesis and is far more abundant than branched C4 species. Preiner et al. (2023, Nature Communications) also showed acetaldehyde production from NiS-catalyzed acetylene chemistry."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Fischer-Tropsch-type synthesis of isobutyraldehyde (minor branched product)",
+        "inputs": [
+          "mol_006",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "awaruite (Fe-Ni alloy)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high (>100 bar)",
+          "catalyst": "magnetite and Fe-Ni alloy",
+          "aqueous": true,
+          "other": "FTT conditions; branched products are minor relative to linear chain products"
+        },
+        "mechanism": "FTT chain growth on metal surfaces occasionally produces branched carbon skeletons through secondary chain initiation or isomerization. Isobutyraldehyde (2-methylpropanal) forms as a minor product alongside the dominant linear aldehydes, reflecting the kinetic disfavoring of chain branching.",
+        "reasoning": "McCollom, Ritter, and Simoneit (1999) showed that FTT synthesis produces complex aldehyde mixtures. While branched aldehydes are minor products, they are generated in the diverse product distribution characteristic of FTT reactions. The literature notes that isobutyraldehyde concentrations would be orders of magnitude lower than formaldehyde and acetaldehyde, consistent with the ~20-fold yield deficit of valine relative to glycine observed across all experimental systems (Keefe, Newton, Miller 1995, Nature)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "NiS-catalyzed aldol diversification of acetaldehyde to isobutyraldehyde",
+        "inputs": [
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "millerite (NiS)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "moderate to high",
+          "catalyst": "NiS (millerite)",
+          "aqueous": true,
+          "other": "Transition metal sulfide surfaces catalyze aldol condensation and C-C branching; pH 7-9"
+        },
+        "mechanism": "Acetaldehyde undergoes aldol condensation on NiS mineral surfaces. Self-aldol of acetaldehyde produces acetaldol (3-hydroxybutanal), which can dehydrate and undergo further aldol chemistry. Retro-aldol and cross-aldol scrambling on the catalytic surface generates a distribution of C3-C4 aldehydes including the branched isobutyraldehyde through aldol diversification. The NiS surface lowers the activation barrier for C-C bond formation and promotes the methyl-branching pattern.",
+        "reasoning": "Preiner et al. (2023, Nature Communications) demonstrated that NiS-catalyzed acetylene chemistry produces acetaldehyde which undergoes aldol diversification to higher aldehydes including branched species. This is one of the most promising avenues for prebiotic isobutyraldehyde generation, as the transition metal sulfide surface promotes the branching events that are kinetically disfavored in uncatalyzed solution. The branched-precursor problem is the paramount challenge in prebiotic valine synthesis (Keefe, Newton, Miller 1995)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Spark discharge / UV photolysis generation of HCN and aldehydes",
+        "inputs": [
+          "mol_007",
+          "mol_003",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_004",
+          "mol_009",
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "sulfide minerals (stibnite)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "Electric discharge and/or UV photolysis; TiO2 photocatalyst on mineral surfaces",
+          "aqueous": false,
+          "other": "Reducing atmosphere (CH4, NH3, H2, H2O); volcanic lightning or intense UV from young Sun; products dissolve into aqueous reservoir"
+        },
+        "mechanism": "Electric discharge or UV photolysis of a reducing gas mixture (CH4 + NH3 + H2O \u00b1 H2S) generates reactive radical species (CH3\u2022, \u2022CN, \u2022CHO, etc.). Radical recombination produces HCN (from \u2022CN + H\u2022), acetaldehyde (from CH3\u2022 + \u2022CHO), and trace isobutyraldehyde (from (CH3)2CH\u2022 + \u2022CHO or aldol products). H2S-enriched atmospheres dramatically enhance alkyl amino acid precursor yields. Products dissolve into an aqueous reservoir where Strecker chemistry proceeds.",
+        "reasoning": "Miller's classic experiments (Miller 1953, Science) and modern reanalyses by Bada's group confirmed valine among 22 amino acids in volcanic apparatus samples (Johnson et al. 2008, Science) and 23 amino acids in H2S-enriched experiments (Parker et al. 2011, PNAS). The H2S experiment produced amino acid yields several hundred times higher than the original for some species. Radical recombination in reducing atmospheres generates branched aldehydes among a complex product mixture, explaining valine appearance. Valine yields are ~0.04-0.05% of carbon, approximately 5% the yield of glycine. Kobayashi et al. (2023, Life) showed proton irradiation produces amino acids even at low methane ratios."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Strecker synthesis: isobutyraldehyde + NH3 + HCN \u2192 valine aminonitrile",
+        "inputs": [
+          "mol_010",
+          "mol_003",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite clay (surface concentration and acid-base catalysis)",
+          "aqueous": true,
+          "other": "pH ~9 (free NH3 required, pKa = 9.2); alkaline evaporitic pool or warm pond"
+        },
+        "mechanism": "Step 1: Isobutyraldehyde reacts with ammonia to form a Schiff base (imine), (CH3)2CH-CH=NH, with loss of water. Step 2: HCN undergoes nucleophilic addition to the electrophilic carbon of the imine (Strecker addition), producing 2-amino-3-methylbutanenitrile (the \u03b1-aminonitrile). The equilibria are reversible, but downstream irreversible hydrolysis drives the reaction forward. Montmorillonite clay concentrates reactants via adsorption and provides acid-base catalytic sites.",
+        "reasoning": "The Strecker synthesis is the most experimentally validated prebiotic route to valine. Miller and Van Trump (1981, Origin of Life) established this as the operative mechanism in spark discharge experiments. Keefe, Newton, and Miller (1995, Nature) confirmed isobutyraldehyde as the specific Strecker aldehyde precursor for valine. Devergne, Magrino, Pietrucci, and Saitta (2021, Journal of Physical Chemistry Letters) computed the full free-energy landscape confirming thermodynamic feasibility. The reaction requires pH ~9 for free NH3 availability. Green, Xu, and Sutherland (2021, 2023, JACS) showed N-formylation protects aminonitriles from reversion."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Aminonitrile partial hydrolysis to amide",
+        "inputs": [
+          "mol_011",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": true,
+          "other": "Mild aqueous conditions; half-life <1000 years at 0\u00b0C, faster at higher T; neutral to slightly alkaline pH"
+        },
+        "mechanism": "The nitrile group of 2-amino-3-methylbutanenitrile undergoes nucleophilic addition of water to form an amide intermediate (2-amino-3-methylbutanamide). The reaction proceeds through a tetrahedral intermediate where water attacks the electrophilic carbon of the C\u2261N triple bond.",
+        "reasoning": "Miller (1998) estimated half-lives for aminonitrile hydrolysis at less than 1,000 years at 0\u00b0C, accelerating dramatically at higher temperatures. The hydrolysis is irreversible, driving the overall Strecker equilibrium forward toward amino acid products. This step proceeds spontaneously in aqueous solution without mineral catalysis (Devergne et al. 2021, Journal of Physical Chemistry Letters)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Amide hydrolysis to valine",
+        "inputs": [
+          "mol_012",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_016",
+          "mol_003"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": true,
+          "other": "Mild aqueous conditions; slower than nitrile hydrolysis; produces racemic DL-valine"
+        },
+        "mechanism": "The amide bond of 2-amino-3-methylbutanamide is hydrolyzed by water, releasing ammonia and producing racemic DL-valine (2-amino-3-methylbutanoic acid). This final hydrolysis step completes the Strecker sequence.",
+        "reasoning": "The complete Strecker mechanism from aldehyde to amino acid via aminonitrile and amide intermediates was confirmed experimentally and computationally (Miller and Van Trump 1981; Devergne et al. 2021, Journal of Physical Chemistry Letters). All amino acids produced are racemic, consistent with the racemic valine observed in the Murchison meteorite (Kvenvolden et al. 1970, Nature; Cronin and Pizzarello 1983). Valine is thermally stable with decomposition rates of 10^-11 to 10^-13 s^-1 at 100\u00b0C (Pietrucci and Aponte et al. 2018, ACS Earth and Space Chemistry), corresponding to half-lives of ~1,000 to tens of thousands of years."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Bucherer-Bergs reaction: isobutyraldehyde \u2192 5-isopropylhydantoin",
+        "inputs": [
+          "mol_010",
+          "mol_004",
+          "mol_003",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite clay",
+          "aqueous": true,
+          "other": "pH 7-9; CO2 must be present; evaporitic pool setting with mineral surfaces"
+        },
+        "mechanism": "In the presence of CO2, the Strecker pathway is diverted through a Bucherer-Bergs variant. Isobutyraldehyde reacts with HCN and NH3 to form a cyanohydrin or aminonitrile, which then reacts with CO2 to form a hydantoin ring (5-isopropylhydantoin). The five-membered ring is thermodynamically more stable than the open-chain aminonitrile, serving as a protected reservoir for the amino acid.",
+        "reasoning": "Pulletikurti, Yadav, Springsteen, and Krishnamurthy (2022, Nature Chemistry) demonstrated that the Bucherer-Bergs reaction bridges aldehyde-based Strecker chemistry with \u03b1-keto acid metabolism through hydantoin intermediates. When CO2 is present alongside HCN and NH3, the hydantoin pathway becomes significant. This variant provides a thermodynamically stabilized intermediate that resists degradation better than the aminonitrile in prebiotic environments."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Hydantoin hydrolysis to valine",
+        "inputs": [
+          "mol_013",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_016",
+          "mol_001",
+          "mol_003"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "350-370K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": true,
+          "other": "Requires elevated temperature or prolonged time; wet-dry cycling can accelerate ring opening; produces racemic DL-valine + CO2 + NH3"
+        },
+        "mechanism": "The hydantoin ring undergoes sequential hydrolysis: first the ureido C-N bond is cleaved to form N-carbamoyl-valine, then decarboxylation releases CO2 and produces free valine plus NH3. The overall process is thermodynamically driven by the release of CO2.",
+        "reasoning": "Pulletikurti et al. (2022, Nature Chemistry) demonstrated the hydantoin hydrolysis pathway as part of the Bucherer-Bergs route to amino acids. Hydantoins serve as stable intermediates that release amino acids upon hydrolysis. This pathway is particularly relevant in evaporitic pool settings where cycles of wetting and drying can drive the hydrolysis. The released CO2 and NH3 can be recycled into further Bucherer-Bergs reactions."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Non-enzymatic pyruvate formation on metallic iron",
+        "inputs": [
+          "mol_001",
+          "mol_002",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "elemental iron (Fe0)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "350-370K",
+          "pressure": "moderate",
+          "catalyst": "metallic iron (Fe0)",
+          "aqueous": true,
+          "other": "Mildly alkaline conditions (pH 7-9); Fe0 serves as both reductant and catalyst; analogous to non-enzymatic Krebs cycle chemistry"
+        },
+        "mechanism": "Metallic iron (Fe0) promotes the reduction of CO2 and the assembly of C2-C3 intermediates through a network of reactions analogous to the Krebs cycle. Pyruvate (2-oxopropanoic acid) is formed as a key intermediate in this non-enzymatic metabolic network. The Fe0 surface provides both the reducing equivalents (Fe0 \u2192 Fe2+ + 2e-) and catalytic sites for C-C bond formation.",
+        "reasoning": "Muchowska, Varma, and Moran (2019, Nature) experimentally demonstrated that metallic iron (Fe0) promotes a non-enzymatic network of reactions producing Krebs cycle intermediates including pyruvate from CO2 under mild aqueous conditions. This landmark study showed that pyruvate is a genuine product of Fe0-mediated carbon fixation, providing a well-supported experimental basis for prebiotic pyruvate availability. Amend and Shock (1998, Science) showed that amino acid synthesis from CO2 is exergonic under moderately reduced hydrothermal conditions."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Pyruvate-acetaldehyde condensation to \u03b1-ketoisovalerate",
+        "inputs": [
+          "mol_014",
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_015",
+          "mol_001"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (struvite)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite clay surface catalysis",
+          "aqueous": true,
+          "other": "pH 7-9; warm evaporitic pool; condensation parallels biological acetolactate synthase pathway; CO2 released as byproduct of decarboxylation"
+        },
+        "mechanism": "Pyruvate undergoes an aldol-type condensation with acetaldehyde on montmorillonite clay surfaces. The initial condensation product (an acetolactate-like intermediate) undergoes decarboxylation and rearrangement to yield 3-methyl-2-oxobutanoic acid (\u03b1-ketoisovalerate). Montmorillonite concentrates the reactants in its interlayer spaces and provides Lewis acid catalytic sites that facilitate the C-C bond-forming step.",
+        "reasoning": "This reaction parallels the biological acetolactate synthase pathway (pyruvate \u2192 acetolactate \u2192 \u03b1-ketoisovalerate) as proposed by Copley, Smith, and Morowitz (2005, PNAS). While no clean prebiotic demonstration of this specific condensation has been published, the individual mechanistic steps\u2014aldol condensation, decarboxylation, and 1,2-shift\u2014are all prebiotically established reaction types. Montmorillonite catalysis of condensation reactions is well documented (Ferris et al. 1996, Nature). NOTE: This step is the weakest link in the keto acid pathway; it is metabolically congruent but requires further experimental validation."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Reductive amination of \u03b1-ketoisovalerate on iron oxyhydroxide",
+        "inputs": [
+          "mol_015",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_016",
+          "mol_005"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "iron oxyhydroxide (green rust)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "mixed-valence iron oxyhydroxide (green rust)",
+          "aqueous": true,
+          "other": "pH 9-11; Fe(II):Fe(III) ratio critical for selectivity toward amino acid vs. hydroxy acid; Lost City-type alkaline conditions"
+        },
+        "mechanism": "The \u03b1-keto group of \u03b1-ketoisovalerate reacts with ammonia to form an imine (Schiff base). This imine is then reduced by electrons derived from the Fe(II) component of the mixed-valence iron oxyhydroxide mineral, or by molecular H2 activated on the mineral surface, to yield valine. The Fe(II):Fe(III) ratio determines selectivity: higher Fe(II) content favors amino acid production over hydroxy acid.",
+        "reasoning": "Barge et al. (2019, PNAS) demonstrated reductive amination of pyruvate to alanine on mixed-valence iron oxyhydroxide minerals at alkaline pH, establishing this as a viable prebiotic route from \u03b1-keto acids to amino acids. The Fe(II):Fe(III) ratio was identified as a critical selectivity parameter. Kaur, Rauscher, Werner, and colleagues (2024, Chem) drove reductive amination of six biological keto acids using H2 on metallic nickel at 22\u00b0C and pH 8, further supporting the generality of this pathway. Although \u03b1-ketoisovalerate was not always the specific test substrate, the chemistry extends in principle to the valine precursor (Hafenbradl, Keller, W\u00e4chtersh\u00e4user, and Stetter 1995, Tetrahedron Letters; Huber and W\u00e4chtersh\u00e4user 2003, Tetrahedron Letters)."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Pyrite photocatalytic reductive amination of \u03b1-ketoisovalerate",
+        "inputs": [
+          "mol_015",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_016"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "pyrite (FeS2)",
+          "TiO2 (anatase)"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "natural pyrite crystal surfaces",
+          "aqueous": true,
+          "other": "UV irradiation required (no ozone shield on early Earth); shallow pool or tidal flat exposure; chiral pyrite surfaces can produce D-enantiomeric excess of 14.5-42.4%"
+        },
+        "mechanism": "UV photons excite electron-hole pairs in the pyrite semiconductor. Photoexcited electrons reduce the imine intermediate (formed from \u03b1-ketoisovalerate + NH3) to produce valine. The wavy atomic arrangement of the pyrite {210} surface provides a chiral environment that preferentially stabilizes one enantiomer during the reduction step, producing enantiomeric excess.",
+        "reasoning": "A 2024 study published in Nature Communications revealed that natural pyrite surfaces exhibit photocatalytic reductive amination of \u03b1-keto acids to amino acids with D-enantiomeric excesses of 14.5-42.4%. This is driven by the chiral atomic arrangement of the pyrite surface and represents a novel intersection of photocatalysis and enantioselection. Wang et al. (2012, Origins of Life and Evolution of Biospheres) had earlier shown reversible amination of \u03b1-oxo acids on photo-illuminated ZnS surfaces. TiO2 provides additional photocatalytic support (Saladino et al. 2006, PNAS)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "FTT direct branched aldehyde \u2192 Strecker \u2192 valine",
+        "description": "Fischer-Tropsch-type synthesis directly generates isobutyraldehyde as a minor branched product from CO + H2 on magnetite at hydrothermal vents. The aldehyde is transported to surface environments where Strecker synthesis with NH3 and HCN produces the aminonitrile, which undergoes two-step hydrolysis to valine. This is the most direct FTT-to-Strecker route.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_003",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_010",
+          "mol_011",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "FTT acetaldehyde \u2192 NiS aldol \u2192 Strecker \u2192 valine",
+        "description": "FTT synthesis produces abundant acetaldehyde, which undergoes NiS-catalyzed aldol diversification to generate isobutyraldehyde in hydrothermal vents. The branched aldehyde then follows the Strecker pathway at the surface. This route addresses the isobutyraldehyde bottleneck through transition metal sulfide-catalyzed C-C branching.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_009",
+          "mol_010",
+          "mol_011",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Spark discharge \u2192 Strecker \u2192 valine (Miller-Urey pathway)",
+        "description": "Electric discharge through a reducing atmosphere (CH4/NH3/H2O/H2S) generates HCN and a mixture of aldehydes including trace isobutyraldehyde via radical recombination. The dissolved products undergo Strecker chemistry in the aqueous reservoir. This is the classic Miller-Urey pathway, the best-documented route to prebiotic valine.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_010",
+          "mol_011",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "FTT direct branched aldehyde \u2192 Bucherer-Bergs \u2192 valine",
+        "description": "Isobutyraldehyde from FTT synthesis at hydrothermal vents is transported to CO2-rich surface pools where it undergoes the Bucherer-Bergs reaction with HCN, NH3, and CO2 to form a stable hydantoin intermediate. Hydrolysis of the hydantoin releases valine. This pathway exploits the thermodynamic stability of the hydantoin ring as a protected amino acid reservoir.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_003",
+          "rxn_009",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "FTT acetaldehyde \u2192 NiS aldol \u2192 Bucherer-Bergs \u2192 valine",
+        "description": "Acetaldehyde from FTT synthesis undergoes NiS-catalyzed aldol diversification to isobutyraldehyde, which then enters the Bucherer-Bergs pathway in surface CO2-rich pools. This combines the best-supported aldol branching chemistry with the hydantoin-protected Strecker variant.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_009",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_009",
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Spark discharge \u2192 Bucherer-Bergs \u2192 valine",
+        "description": "Spark discharge/UV photolysis products (HCN, isobutyraldehyde) enter the Bucherer-Bergs pathway in CO2-containing pools. The atmospheric CO2 provides the carbon for hydantoin ring closure. This purely surface-environment route connects atmospheric chemistry to the hydantoin pathway.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_009",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_010",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Fe(0) pyruvate + FTT acetaldehyde \u2192 \u03b1-ketoisovalerate \u2192 reductive amination (iron oxyhydroxide)",
+        "description": "Pyruvate from Fe(0)-mediated CO2 fixation (Muchowska et al. 2019) condenses with acetaldehyde from FTT synthesis on montmorillonite surfaces to form \u03b1-ketoisovalerate. Reductive amination on iron oxyhydroxide minerals at alkaline pH produces valine. This metabolically congruent pathway mirrors biological valine biosynthesis.",
+        "reaction_sequence": [
+          "rxn_011",
+          "rxn_001",
+          "rxn_002",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_014",
+          "mol_009",
+          "mol_015"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Fe(0) pyruvate + spark acetaldehyde \u2192 \u03b1-ketoisovalerate \u2192 reductive amination (iron oxyhydroxide)",
+        "description": "Pyruvate from hydrothermal Fe(0) chemistry combines with acetaldehyde from atmospheric spark discharge chemistry in a surface evaporitic pool. The condensation product \u03b1-ketoisovalerate undergoes reductive amination on iron oxyhydroxide. This pathway interconnects hydrothermal and surface feedstock generation.",
+        "reaction_sequence": [
+          "rxn_011",
+          "rxn_005",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_014",
+          "mol_009",
+          "mol_015"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Fe(0) pyruvate + FTT acetaldehyde \u2192 \u03b1-ketoisovalerate \u2192 pyrite photocatalytic reductive amination",
+        "description": "Same upstream route as P7 but the terminal step uses pyrite photocatalytic reductive amination instead of iron oxyhydroxide. UV-driven reduction on chiral pyrite surfaces can produce enantiomeric excess, potentially contributing to homochirality. Requires shallow UV-exposed pools.",
+        "reaction_sequence": [
+          "rxn_011",
+          "rxn_001",
+          "rxn_002",
+          "rxn_012",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_014",
+          "mol_009",
+          "mol_015"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Fe(0) pyruvate + spark acetaldehyde \u2192 \u03b1-ketoisovalerate \u2192 pyrite photocatalytic reductive amination",
+        "description": "Pyruvate from hydrothermal Fe(0) chemistry combines with spark-discharge-generated acetaldehyde. The condensation product undergoes pyrite photocatalytic reductive amination under UV in shallow tidal pools. This pathway maximizes environmental interconnection (Hydrothermal \u2192 Surface) and provides the only route with potential enantioselection.",
+        "reaction_sequence": [
+          "rxn_011",
+          "rxn_005",
+          "rxn_012",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_014",
+          "mol_009",
+          "mol_015"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_010",
+      "mol_009",
+      "mol_004",
+      "mol_006",
+      "mol_014"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_005"
+        ],
+        "outgoing_reactions": [
+          "rxn_006",
+          "rxn_009"
+        ]
+      },
+      {
+        "molecule_id": "mol_009",
+        "incoming_reactions": [
+          "rxn_002",
+          "rxn_005"
+        ],
+        "outgoing_reactions": [
+          "rxn_004",
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_001"
+        ],
+        "outgoing_reactions": [
+          "rxn_002",
+          "rxn_003"
+        ]
+      },
+      {
+        "molecule_id": "mol_016",
+        "incoming_reactions": [
+          "rxn_008",
+          "rxn_010",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "outgoing_reactions": []
+      },
+      {
+        "molecule_id": "mol_015",
+        "incoming_reactions": [
+          "rxn_012"
+        ],
+        "outgoing_reactions": [
+          "rxn_013",
+          "rxn_014"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Valine (2-amino-3-methylbutanoic acid)",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_001": 0.92,
+          "rxn_003": 0.65,
+          "rxn_006": 0.95,
+          "rxn_007": 0.8,
+          "rxn_008": 0.85
+        },
+        "chemical_feasibility": 0.8,
+        "pathway_coherence": 0.82,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.88,
+        "overall_confidence": 0.83,
+        "feedback": "The FTT direct branched aldehyde step (rxn_003) is the weakest link. While FTT synthesis can produce branched products, isobutyraldehyde is kinetically disfavored and yields are very low, as the literature emphasizes. The downstream Strecker steps are textbook-quality. The pathway correctly represents the central challenge of valine synthesis.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Acknowledge explicitly that rxn_003 yields are extremely low; consider specifying Fe/Ni alloy catalyst and temperature range (150-300\u00b0C)"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_001": 0.92,
+          "rxn_002": 0.85,
+          "rxn_004": 0.7,
+          "rxn_006": 0.95,
+          "rxn_007": 0.8,
+          "rxn_008": 0.85
+        },
+        "chemical_feasibility": 0.82,
+        "pathway_coherence": 0.85,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.87,
+        "overall_confidence": 0.84,
+        "feedback": "This pathway via acetaldehyde aldol diversification is more chemically grounded than direct FTT branching. Preiner et al. 2023 supports NiS-catalyzed aldol diversification. However, rxn_004 oversimplifies what is likely a multi-step process (aldol, dehydration, reduction, further condensation) with poor selectivity for the branched product. Still a solid pathway overall.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_004"
+        ],
+        "suggestions": [
+          "Break rxn_004 into sub-steps if possible; specify selectivity issues and competing linear products"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_005": 0.85,
+          "rxn_006": 0.95,
+          "rxn_007": 0.8,
+          "rxn_008": 0.85
+        },
+        "chemical_feasibility": 0.86,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.9,
+        "overall_confidence": 0.86,
+        "feedback": "The classic Miller-Urey pathway. Strongly supported by Johnson et al. 2008, Parker et al. 2011, and Ring et al. 1972 confirming valine among spark discharge products. rxn_005 producing multiple products (HCN, acetaldehyde, isobutyraldehyde) is realistic. The environmental progression lacks a hydrothermal stage, which slightly lowers the interconnection score, but the pathway itself is among the most experimentally validated.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Consider noting that H2S-enriched spark discharges (Parker et al. 2011) dramatically enhance yields"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_001": 0.92,
+          "rxn_003": 0.65,
+          "rxn_009": 0.9,
+          "rxn_010": 0.88
+        },
+        "chemical_feasibility": 0.8,
+        "pathway_coherence": 0.83,
+        "environmental_progression": 0.92,
+        "target_achievement": 0.88,
+        "overall_confidence": 0.84,
+        "feedback": "FTT to Bucherer-Bergs is a well-structured pathway with excellent environmental progression (Hydrothermal\u2192Surface\u2192Biochemical). The Bucherer-Bergs reaction is well-supported by Pulletikurti et al. 2022. Same rxn_003 weakness as P1. The hydantoin intermediate provides kinetic stabilization that could improve overall valine preservation.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_003"
+        ],
+        "suggestions": [
+          "Emphasize that hydantoin intermediates are more stable than free amino acids, providing a preservation advantage"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_001": 0.92,
+          "rxn_002": 0.85,
+          "rxn_004": 0.7,
+          "rxn_009": 0.9,
+          "rxn_010": 0.88
+        },
+        "chemical_feasibility": 0.82,
+        "pathway_coherence": 0.85,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.88,
+        "overall_confidence": 0.85,
+        "feedback": "Combines the more plausible NiS-aldol route to isobutyraldehyde with the Bucherer-Bergs terminus. Good balance of experimental support and environmental coherence. The NiS aldol step remains somewhat speculative for selective isobutyraldehyde production but is supported by Preiner et al. 2023.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_004"
+        ],
+        "suggestions": [
+          "Specify NiS catalyst preparation conditions and temperature range for aldol step"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_005": 0.85,
+          "rxn_009": 0.9,
+          "rxn_010": 0.88
+        },
+        "chemical_feasibility": 0.87,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.9,
+        "overall_confidence": 0.86,
+        "feedback": "The most parsimonious pathway with only 3 steps. Spark discharge produces the necessary precursors (HCN, NH3, isobutyraldehyde), Bucherer-Bergs forms the hydantoin, and hydrolysis releases valine. Each step is well-supported experimentally. Lower environmental interconnection score due to absence of hydrothermal stage, but this is compensated by strong experimental validation and elegance.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "This is a strong candidate for the primary pathway; could note UV-driven chemistry as an alternative energy source to spark"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_011": 0.85,
+          "rxn_001": 0.92,
+          "rxn_002": 0.85,
+          "rxn_012": 0.65,
+          "rxn_013": 0.82
+        },
+        "chemical_feasibility": 0.78,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.82,
+        "overall_confidence": 0.8,
+        "feedback": "The keto acid pathway parallels biological valine biosynthesis, which is conceptually elegant. Pyruvate formation on metallic iron (Muchowska et al. 2019) is well-supported. However, rxn_012 (pyruvate + acetaldehyde \u2192 \u03b1-ketoisovalerate) is oversimplified: it likely proceeds through acetolactate with subsequent decarboxylation and rearrangement, and has not been demonstrated prebiotically for \u03b1-ketoisovalerate specifically. Reductive amination on iron oxyhydroxide (Barge et al. 2019) is well-supported for simpler substrates.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Elaborate the condensation mechanism; specify whether an acetolactate intermediate is implied; note this route is largely theoretical for the specific substrate"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_011": 0.85,
+          "rxn_005": 0.85,
+          "rxn_012": 0.65,
+          "rxn_013": 0.82
+        },
+        "chemical_feasibility": 0.78,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.82,
+        "overall_confidence": 0.8,
+        "feedback": "Similar to P7 but uses spark discharge for acetaldehyde instead of FTT. Same strengths and weaknesses. The convergent use of hydrothermal pyruvate and surface-generated acetaldehyde is a nice network design feature showing cross-environment integration.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Same as P7: strengthen the condensation step with mechanistic detail"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_011": 0.85,
+          "rxn_001": 0.92,
+          "rxn_002": 0.85,
+          "rxn_012": 0.65,
+          "rxn_014": 0.78
+        },
+        "chemical_feasibility": 0.76,
+        "pathway_coherence": 0.78,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.8,
+        "overall_confidence": 0.78,
+        "feedback": "The pyrite photocatalytic reductive amination (rxn_014) is supported by the 2024 Nature Communications study but the reaction as written lacks an explicit reducing agent \u2014 photocatalysis provides electrons but the proton source should be specified. Combined with the uncertain rxn_012 condensation, this pathway has two weaker links.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012",
+          "rxn_014"
+        ],
+        "suggestions": [
+          "Add explicit electron/proton source for photocatalytic reduction; specify UV wavelength range and pyrite surface conditions"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_011": 0.85,
+          "rxn_005": 0.85,
+          "rxn_012": 0.65,
+          "rxn_014": 0.78
+        },
+        "chemical_feasibility": 0.76,
+        "pathway_coherence": 0.78,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.8,
+        "overall_confidence": 0.78,
+        "feedback": "Same issues as P9. The two weakest reactions (rxn_012 and rxn_014) compound to reduce confidence below threshold. Conceptually sound as a metabolically-congruent alternative, but the experimental evidence for specific substrates is insufficient.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012",
+          "rxn_014"
+        ],
+        "suggestions": [
+          "Same as P9; this pathway would benefit most from future experimental validation of pyruvate-acetaldehyde condensation to \u03b1-ketoisovalerate"
+        ]
+      }
+    ],
+    "best_pathway_id": "P6",
+    "overall_confidence": 0.87,
+    "network_feedback": "This is an exceptionally well-designed prebiotic synthesis network for valine that demonstrates deep understanding of the literature and the central challenges. The network correctly identifies isobutyraldehyde as the critical bottleneck (Keefe, Newton, Miller 1995) and addresses it through three independent upstream routes: FTT synthesis, NiS-catalyzed aldol diversification, and spark discharge radical chemistry. The three terminal pathways (Strecker, Bucherer-Bergs, reductive amination) provide mechanistic redundancy that mirrors the literature landscape. Hub molecule selection is excellent \u2014 isobutyraldehyde, acetaldehyde, HCN, CO, and pyruvate are the exact molecules the literature identifies as central intermediates. Literature alignment is outstanding: the network cites and incorporates findings from Miller (1953/reanalysis), Parker et al. (2011), Preiner et al. (2023), McCollom et al. (1999), Muchowska et al. (2019), Pulletikurti et al. (2022), and Barge et al. (2019). The main weaknesses are: (1) rxn_012 (pyruvate-acetaldehyde condensation to \u03b1-ketoisovalerate) is the least experimentally supported reaction, oversimplifying what is likely a multi-step process not yet demonstrated prebiotically; (2) rxn_003 (direct FTT branched aldehyde) correctly labeled as minor product but yield implications should be quantified; (3) rxn_014 lacks explicit reducing agent. Environmental transitions are generally well-handled with appropriate mineral catalysts specified for hydrothermal stages. The 'Biochemical' label for simple hydrolysis reactions (rxn_007, rxn_008, rxn_010) is slightly misleading \u2014 these are abiotic aqueous reactions \u2014 but is acceptable as an environmental categorization convention. Overall, 8 of 10 pathways are approved, and the network achieves a strong balance of redundancy, literature grounding, and chemical plausibility.",
+    "approved": true,
+    "hub_quality": 0.93,
+    "convergence_quality": 0.9
+  },
+  "success": false,
+  "attempts": 2,
+  "notes": null
+}

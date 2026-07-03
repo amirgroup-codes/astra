@@ -1,0 +1,965 @@
+{
+  "target_molecule": "Leucine",
+  "network": {
+    "target_molecule": "Leucine",
+    "overall_strategy": "This network centers leucine synthesis on the two best-supported prebiotic endpoints identified in the literature: (i) reductive amination of alpha-ketoisocaproate under mild H2/Ni or meteoritic metal catalysis, and (ii) Strecker synthesis from isovaleraldehyde via leucine aminonitrile followed by hydrolysis. To avoid overclaiming the unresolved branched-skeleton problem, the network uses literature-grounded feeder processes that generate pools of branched aldehydes and alpha-keto acids through spark-discharge radical chemistry, Fischer-Tropsch-type hydrocarbon formation, aldol-derived branch-building abstractions explicitly marked as speculative where necessary, and proto-metabolic keto-acid chemistry continuous with modern leucine biosynthetic logic. Cross-environment flow is represented by hydrothermal generation of reduced carbon feedstocks and pyruvate, surface generation of HCN, branched aldehydes, and aminonitriles, and biochemical/prebiotic completion through transamination, reductive amination, hydrolysis, and peptide incorporation.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_005",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_006",
+        "formula": "C2H4O",
+        "iupac_name": "ethanal",
+        "common_name": "acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvic acid",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C3H7NO2",
+        "iupac_name": "2-aminopropanoic acid",
+        "common_name": "alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C4H8O",
+        "iupac_name": "2-methylpropanal",
+        "common_name": "isobutyraldehyde",
+        "inchi": "InChI=1S/C4H8O/c1-4(2)3-5/h3-4H,1-2H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C5H10O",
+        "iupac_name": "3-methylbutanal",
+        "common_name": "isovaleraldehyde",
+        "inchi": "InChI=1S/C5H10O/c1-5(2)3-4-6/h4-5H,3H2,1-2H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C6H10O3",
+        "iupac_name": "4-methyl-2-oxopentanoic acid",
+        "common_name": "alpha-ketoisocaproic acid",
+        "inchi": "InChI=1S/C6H10O3/c1-4(2)3-5(7)6(8)9/h4H,3H2,1-2H3,(H,8,9)",
+        "role": "hub_intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C6H12N2",
+        "iupac_name": "2-amino-4-methylpentanenitrile",
+        "common_name": "leucine aminonitrile",
+        "inchi": "InChI=1S/C6H12N2/c1-5(2)3-6(8)4-7/h5-6H,3,8H2,1-2H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C6H13NO2",
+        "iupac_name": "2-amino-4-methylpentanoic acid",
+        "common_name": "leucine",
+        "inchi": "InChI=1S/C6H13NO2/c1-4(2)3-5(7)6(8)9/h4-5H,3,7H2,1-2H3,(H,8,9)",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C7H10N2O2",
+        "iupac_name": "5-isobutylethane-2,4-dione hydantoin",
+        "common_name": "leucine hydantoin",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C12H24N2O3",
+        "iupac_name": "2-[(2-amino-4-methylpentanoyl)amino]-4-methylpentanoic acid",
+        "common_name": "leucylleucine",
+        "inchi": "InChI=1S/C12H24N2O3/c1-7(2)5-9(13)11(15)14-10(12(16)17)6-8(3)4/h7-10H,5-6,13H2,1-4H3,(H,14,15)(H,16,17)",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO2 reduction to formaldehyde/aldehyde feedstocks",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_005",
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "400-500K",
+          "pressure": "high",
+          "catalyst": "magnetite and greigite",
+          "aqueous": true,
+          "other": "H2-rich serpentinization-influenced vent fluids; Fischer-Tropsch-type and CO2 hydrogenation chemistry"
+        },
+        "mechanism": "Mineral-catalyzed reduction of CO2 and CO-derived carbon on Fe-bearing surfaces yields reduced C1-C2 oxygenates including formaldehyde and acetaldehyde as feedstocks.",
+        "reasoning": "Hydrothermal Fe-mineral catalysis is well supported for reduced carbon generation and Fischer-Tropsch-type synthesis, including aldehydic feedstocks, under vent conditions (McCollom et al., 1999; Russell & Martin, 2003; Amend & Shock, 1998). This reaction is a network feeder step rather than a leucine-specific one."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Hydrothermal pyruvate formation from reduced carbon",
+        "inputs": [
+          "mol_001",
+          "mol_002",
+          "mol_005",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite and magnetite",
+          "aqueous": true,
+          "other": "alkaline vent-like pH gradients; proto-metabolic alpha-keto acid generation"
+        },
+        "mechanism": "Successive carbon fixation and condensation on iron-sulfur/mineral surfaces produce the alpha-keto acid pyruvate from reduced carbon pools.",
+        "reasoning": "Pyruvate is a central proto-metabolic alpha-keto acid in vent chemistry and is the literature-supported analog substrate for prebiotic reductive amination studies; use here follows hydrothermal alpha-keto acid network logic continuous with reductive amination chemistry (Barge et al., 2019; Kaur et al., 2024; Amend & Shock, 1998). The exact one-pot route remains incompletely resolved and is included as a necessary network connector grounded in reported proto-metabolic frameworks."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Reductive amination of pyruvate to alanine",
+        "inputs": [
+          "mol_007",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "343K",
+          "pressure": "ambient to moderate",
+          "catalyst": "mixed-valence iron oxyhydroxide analog represented here with iron-sulfur vent minerals",
+          "aqueous": true,
+          "other": "pH 10 alkaline conditions; vent mixing zone analogue"
+        },
+        "mechanism": "Alpha-keto acid undergoes nonenzymatic reductive amination with ammonia under reducing mineral-catalyzed conditions to give alanine.",
+        "reasoning": "Barge et al. (2019) demonstrated pyruvate to alanine at about 70% yield under alkaline hydrothermal conditions (70C, pH 10) on mixed-valence iron oxyhydroxides. Huber & Wachtershauser (1997; 2003) further support reductive amination of alpha-keto acids in FeS/H2S systems. This reaction anchors the alpha-keto acid to amino acid conversion logic used later for leucine."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Surface H2S spark-discharge generation of HCN and branched aldehyde pool",
+        "inputs": [
+          "mol_001",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_004",
+          "mol_009",
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "sulfide minerals (stibnite, molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "photochemical/mineral surfaces in volcanic plume condensates",
+          "aqueous": true,
+          "other": "H2S-rich volcanic plume with lightning/electrical discharge; reducing gas chemistry"
+        },
+        "mechanism": "Electrical discharge in sulfur-rich volcanic gases generates HCN and radical-derived branched carbonyl compounds, including isobutyraldehyde and isovaleraldehyde precursors, which dissolve into surface waters.",
+        "reasoning": "Leucine was observed specifically in H2S-containing spark discharge residues, implying sulfur-enhanced radical chemistry that generates the necessary branched skeleton and HCN feedstock (Ring et al., 1972; Parker et al., 2011; Parker et al., 2011b). This node intentionally represents a product pool from an experimentally observed complex cascade rather than a clean single-step transformation."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Surface aldol-based branch extension from isobutyraldehyde to isovaleraldehyde",
+        "inputs": [
+          "mol_009",
+          "mol_005",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite, ulexite)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "borate-stabilized carbonyl chemistry on illuminated mineral surfaces",
+          "aqueous": true,
+          "other": "wet-dry cycles; branched aldol/rearrangement cascade; speculative connector"
+        },
+        "mechanism": "Cross-aldol and branch-preserving carbonyl chemistry extends a branched C4 aldehyde pool to the C5 branched aldehyde isovaleraldehyde.",
+        "reasoning": "The literature identifies aldol condensation cascades as one plausible route to branched frameworks and specifically notes extension from isobutyraldehyde toward isovaleraldehyde, but no fully demonstrated prebiotic clean conversion is yet available (Sutton, Pulletikurti, & Krishnamurthy, 2025; Butlerov, 1861). This reaction is therefore explicitly speculative but necessary to connect known feeder chemistry to the established Strecker route."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Classical Strecker synthesis of leucine aminonitrile",
+        "inputs": [
+          "mol_010",
+          "mol_003",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "sulfide minerals (stibnite, molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "mineral-concentrating surfaces for aldehyde/imine/cyanide chemistry",
+          "aqueous": true,
+          "other": "aqueous evaporitic pool or volcanic condensate; imine formation followed by cyanide addition"
+        },
+        "mechanism": "Isovaleraldehyde condenses with ammonia to an imine, followed by cyanide addition to form the alpha-aminonitrile precursor of leucine.",
+        "reasoning": "The leucine Strecker route from isovaleraldehyde is explicitly described in the literature and is the canonical prebiotic path to leucine from branched aldehydes (Miller & Van Trump, 1981; Chimiak et al., 2022). Mineral surfaces are included as concentrating agents consistent with surface settings, while the core chemistry follows the established Strecker mechanism."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Hydrolysis of leucine aminonitrile to leucine",
+        "inputs": [
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": true,
+          "other": "aqueous hydrolysis during prolonged wet phases"
+        },
+        "mechanism": "Nitrile hydrolysis proceeds through amide-like intermediates to the amino acid leucine.",
+        "reasoning": "Hydrolysis of Strecker aminonitriles to amino acids is the accepted completion step of Strecker synthesis and is the route invoked for prebiotic amino acid formation in spark discharge residues and meteoritic chemistry (Miller & Van Trump, 1981; Chimiak et al., 2022)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Proto-metabolic chain extension from pyruvate to alpha-ketoisocaproate",
+        "inputs": [
+          "mol_007",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "295-323K",
+          "pressure": "1 atm",
+          "catalyst": "Ni-bearing metal surfaces or dissolved transition metals",
+          "aqueous": true,
+          "other": "network-level abstraction of H2-dependent keto-acid chain-extension chemistry continuous with modern leucine biosynthesis"
+        },
+        "mechanism": "Successive carbon-carbon bond-forming and oxidation-state-adjusting steps within a keto-acid network yield the branched C6 alpha-keto acid alpha-ketoisocaproate.",
+        "reasoning": "Kaur et al. (2024) argue for a continuous prebiotic keto-acid network resembling modern biosynthetic logic, with alpha-ketoisocaproate as the pivotal direct precursor to leucine. However, the complete experimentally resolved assembly of alpha-ketoisocaproate from simple feedstocks remains an open frontier explicitly acknowledged in the literature. This connector is therefore partially speculative but constrained to the proto-metabolic keto-acid framework identified by Kaur et al. (2024)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Nickel-catalyzed reductive amination of alpha-ketoisocaproate to leucine",
+        "inputs": [
+          "mol_011",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "295K",
+          "pressure": "1 atm",
+          "catalyst": "Ni/SiO2-Al2O3 (10 mol%)",
+          "aqueous": true,
+          "other": "pH 8; 18 h; room temperature"
+        },
+        "mechanism": "Alpha-ketoisocaproate undergoes imine formation with ammonia followed by H2-driven reduction on nickel catalyst to produce leucine.",
+        "reasoning": "This is the strongest experimental leucine-forming reaction in the literature: Kaur et al. (2024) reported 6-84% yields of leucine from alpha-ketoisocaproate at 22C, pH 8, under 1 atm H2 with Ni/SiO2-Al2O3, Pd/C, or meteoritic metal catalysts."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Meteorite-metal reductive amination of alpha-ketoisocaproate to leucine",
+        "inputs": [
+          "mol_011",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "295K",
+          "pressure": "1 atm",
+          "catalyst": "ground iron meteorite surface (Ni-Fe alloy; Aletai meteorite analog)",
+          "aqueous": true,
+          "other": "pH 8; 18 h; room temperature"
+        },
+        "mechanism": "Meteoritic Ni-Fe alloy surface catalyzes the same nonenzymatic reductive amination of alpha-ketoisocaproate to leucine under hydrogen.",
+        "reasoning": "Kaur et al. (2024) specifically demonstrated leucine formation from alpha-ketoisocaproate on ground iron meteorite surfaces, showing that naturally occurring meteoritic metal phases can mediate this key reaction."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Transamination between alpha-ketoisocaproate and alanine to leucine and pyruvate",
+        "inputs": [
+          "mol_011",
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_013",
+          "mol_007"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "295K",
+          "pressure": "1 atm",
+          "catalyst": "Ni2+/Cu2+/Co2+ transition-metal catalysis",
+          "aqueous": true,
+          "other": "room-temperature nonenzymatic transamination"
+        },
+        "mechanism": "Amino-group transfer from alanine to alpha-ketoisocaproate yields leucine while regenerating pyruvate.",
+        "reasoning": "Room-temperature metal-catalyzed transamination of alpha-keto acids to amino acids is supported for prebiotic systems by Varma, Muchowska, and Moran (2021). This reaction links the alanine-forming hydrothermal chemistry of Barge et al. (2019) to leucine production through the keto-acid network highlighted by Kaur et al. (2024)."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Bucherer-Bergs conversion of alpha-ketoisocaproate to leucine hydantoin",
+        "inputs": [
+          "mol_011",
+          "mol_004",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "phosphate minerals (apatite, struvite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "mineral-concentrating surfaces in evaporitic pools",
+          "aqueous": true,
+          "other": "Bucherer-Bergs-type hydantoin formation from alpha-keto acid precursor; network-level adaptation"
+        },
+        "mechanism": "Alpha-keto acid enters cyanide/ammonia-mediated cyclization chemistry to form a hydantoin intermediate.",
+        "reasoning": "Hydantoin-based access to amino acids from alpha-keto acids is supported by prebiotic Bucherer-Bergs chemistry (Pulletikurti et al., 2022). Application to alpha-ketoisocaproate is chemically reasonable though less directly demonstrated than the Ni/H2 route, so this is an extrapolative but literature-based branch."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Hydrolytic opening of leucine hydantoin to leucine",
+        "inputs": [
+          "mol_014"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": null,
+          "aqueous": true,
+          "other": "prolonged aqueous hydrolysis in prebiotic pools"
+        },
+        "mechanism": "Hydantoin ring hydrolysis releases the alpha-amino acid leucine.",
+        "reasoning": "Hydantoin hydrolysis is the expected completion step of Bucherer-Bergs-type amino acid synthesis (Pulletikurti et al., 2022). This provides an alternative alpha-keto acid-to-leucine route downstream of alpha-ketoisocaproate."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Montmorillonite-assisted leucine condensation to leucylleucine",
+        "inputs": [
+          "mol_013"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "clay-assisted wet-dry cycling",
+          "aqueous": false,
+          "other": "dehydrating surface conditions in evaporitic pools"
+        },
+        "mechanism": "Concentrated leucine undergoes dehydration-condensation to a short peptide on mineral interfaces during wet-dry cycling.",
+        "reasoning": "Montmorillonite and related mineral interfaces promote oligomerization under prebiotic conditions, and wet-dry concentration is a key route for peptide bond formation (Ferris et al., 1996; Campbell & Bracher, 2019). This downstream step shows biochemical incorporation of leucine after synthesis."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Direct Strecker route from spark-generated isovaleraldehyde",
+        "description": "Volcanic H2S spark chemistry generates HCN and isovaleraldehyde, which enter the canonical Strecker path to leucine.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_006",
+          "rxn_007"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_010",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Aldol-assisted Strecker route via isobutyraldehyde extension",
+        "description": "Spark chemistry generates isobutyraldehyde; surface aldol/branch-extension chemistry yields isovaleraldehyde, then Strecker synthesis gives leucine.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007"
+        ],
+        "key_intermediates": [
+          "mol_009",
+          "mol_010",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Hydrothermal reduced-carbon to Strecker leucine route",
+        "description": "Hydrothermal Fe-mineral chemistry generates formaldehyde and acetaldehyde feedstocks that help build the branched aldehyde precursor in surface pools before Strecker completion.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_006",
+          "mol_010",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Hydrothermal pyruvate to alpha-ketoisocaproate to nickel-reductive amination",
+        "description": "Proto-metabolic hydrothermal chemistry makes pyruvate, which feeds a keto-acid network culminating in alpha-ketoisocaproate and then leucine by Ni/H2 reductive amination.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Hydrothermal pyruvate to alpha-ketoisocaproate to meteoritic-metal amination",
+        "description": "The same keto-acid network reaches alpha-ketoisocaproate, but leucine is formed on natural Ni-Fe meteoritic metal surfaces.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_008",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Alanine-coupled transamination route",
+        "description": "Hydrothermal pyruvate is first converted to alanine; alanine then donates the amino group to alpha-ketoisocaproate in a metal-catalyzed transamination yielding leucine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_008",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_008",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Bucherer-Bergs branch from alpha-ketoisocaproate",
+        "description": "Alpha-ketoisocaproate enters hydantoin chemistry to form leucine hydantoin, which hydrolyzes to leucine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_008",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_011",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "HCN-coupled Bucherer-Bergs route with volcanic cyanide source",
+        "description": "Surface spark chemistry supplies HCN while proto-metabolic keto-acid chemistry supplies alpha-ketoisocaproate, converging in the hydantoin route to leucine.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_001",
+          "rxn_002",
+          "rxn_008",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_011",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Hybrid surface-hydrothermal route to nickel-catalyzed leucine",
+        "description": "Volcanic spark chemistry and hydrothermal reduced-carbon chemistry jointly populate the branched-carbon and keto-acid pools that converge at alpha-ketoisocaproate, followed by Ni-catalyzed reductive amination.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_001",
+          "rxn_002",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_009",
+          "mol_010",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Leucine accumulation and peptide incorporation pathway",
+        "description": "Once leucine is formed by either Strecker or keto-acid routes, wet-dry cycling and mineral interfaces incorporate it into short peptides.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_006",
+          "rxn_007",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_012",
+          "mol_013",
+          "mol_015"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_007",
+      "mol_010",
+      "mol_011",
+      "mol_013"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_010",
+        "incoming_reactions": [
+          "rxn_004",
+          "rxn_005"
+        ],
+        "outgoing_reactions": [
+          "rxn_006"
+        ]
+      },
+      {
+        "molecule_id": "mol_011",
+        "incoming_reactions": [
+          "rxn_008"
+        ],
+        "outgoing_reactions": [
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_013",
+        "incoming_reactions": [
+          "rxn_007",
+          "rxn_009",
+          "rxn_010",
+          "rxn_011",
+          "rxn_013"
+        ],
+        "outgoing_reactions": [
+          "rxn_014"
+        ]
+      },
+      {
+        "molecule_id": "mol_007",
+        "incoming_reactions": [
+          "rxn_002",
+          "rxn_011"
+        ],
+        "outgoing_reactions": [
+          "rxn_003",
+          "rxn_008"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Leucine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_004": 0.72,
+          "rxn_006": 0.95,
+          "rxn_007": 0.93
+        },
+        "chemical_feasibility": 0.86,
+        "pathway_coherence": 0.92,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.96,
+        "overall_confidence": 0.89,
+        "feedback": "Strong literature alignment for the core Strecker route from isovaleraldehyde to leucine aminonitrile to leucine. The main weakness is upstream rxn_004, which overcompresses spark-discharge chemistry by deriving both HCN and branched aldehydes directly from CO2 and NH3 without the CH4/H2S-rich gas mixtures emphasized in Ring et al. and Parker et al. The downstream Strecker and hydrolysis steps are well supported.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_004"
+        ],
+        "suggestions": [
+          "Revise rxn_004 to reflect H2S-containing spark-discharge gas chemistry more explicitly and include a reduced carbon feed such as CH4/CO-bearing gases.",
+          "Separate HCN generation from branched aldehyde formation into distinct reactions to improve mechanistic realism."
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_004": 0.72,
+          "rxn_005": 0.45,
+          "rxn_006": 0.95,
+          "rxn_007": 0.93
+        },
+        "chemical_feasibility": 0.73,
+        "pathway_coherence": 0.82,
+        "environmental_progression": 0.87,
+        "target_achievement": 0.95,
+        "overall_confidence": 0.79,
+        "feedback": "This route reaches leucine, but the aldol-based branch extension in rxn_005 is the weak point. Literature supports aldol chemistry as a conceptual source of branched frameworks, but direct selective conversion of isobutyraldehyde + formaldehyde/acetaldehyde to isovaleraldehyde under prebiotic surface conditions remains speculative. The later Strecker chemistry is robust.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_004",
+          "rxn_005"
+        ],
+        "suggestions": [
+          "Label rxn_005 explicitly as speculative and provide conditions/minerals if retained.",
+          "Consider replacing rxn_005 with spark-discharge generation of isovaleraldehyde directly, which is better aligned with the cited literature."
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_001": 0.52,
+          "rxn_004": 0.72,
+          "rxn_006": 0.95,
+          "rxn_007": 0.93
+        },
+        "chemical_feasibility": 0.73,
+        "pathway_coherence": 0.78,
+        "environmental_progression": 0.84,
+        "target_achievement": 0.95,
+        "overall_confidence": 0.76,
+        "feedback": "The idea of hydrothermal reduced-carbon feedstocks supporting surface Strecker chemistry is topologically sound, but rxn_001 is weakly supported as written. Direct hydrothermal generation of both formaldehyde and acetaldehyde from CO2 + H2 is not the best-supported vent chemistry relative to formate/acetate/pyruvate. The pathway still reaches leucine through plausible downstream steps.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_001",
+          "rxn_004"
+        ],
+        "suggestions": [
+          "Use hydrothermal formate/acetate or pyruvate production as the primary vent output rather than formaldehyde/acetaldehyde.",
+          "Add an explicit environmental transfer/concentration step from vent products to surface pools."
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_001": 0.52,
+          "rxn_002": 0.65,
+          "rxn_008": 0.38,
+          "rxn_009": 0.97
+        },
+        "chemical_feasibility": 0.66,
+        "pathway_coherence": 0.74,
+        "environmental_progression": 0.76,
+        "target_achievement": 0.94,
+        "overall_confidence": 0.72,
+        "feedback": "The terminal step rxn_009 is the strongest reaction in the whole network and aligns very well with Kaur et al. (2024). However, the route to alpha-ketoisocaproate is underdeveloped. rxn_008 compresses a difficult multi-step branched keto-acid assembly into a single transformation from pyruvate + acetaldehyde, which is not directly supported by the literature. Upstream hydrothermal carbon fixation is plausible in general but oversimplified here.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_008"
+        ],
+        "suggestions": [
+          "Break rxn_008 into multiple proto-metabolic chain-extension steps with explicit intermediates such as alpha-ketoisovalerate.",
+          "Keep rxn_009 as the capstone route, but make the feeder chemistry more literature-grounded."
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_001": 0.52,
+          "rxn_002": 0.65,
+          "rxn_008": 0.38,
+          "rxn_010": 0.95
+        },
+        "chemical_feasibility": 0.65,
+        "pathway_coherence": 0.74,
+        "environmental_progression": 0.78,
+        "target_achievement": 0.94,
+        "overall_confidence": 0.72,
+        "feedback": "Like P4, this pathway benefits from a well-supported final reductive amination step using meteoritic metal catalysts, consistent with Kaur et al. The bottleneck is still alpha-ketoisocaproate formation, which is too compressed and insufficiently evidenced. The overall route is plausible conceptually but not yet strongly demonstrated end-to-end.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_008"
+        ],
+        "suggestions": [
+          "Specify meteoritic Ni-Fe alloy conditions more explicitly in rxn_010.",
+          "Introduce experimentally supported branched keto-acid intermediates before alpha-ketoisocaproate."
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_001": 0.52,
+          "rxn_002": 0.65,
+          "rxn_003": 0.93,
+          "rxn_008": 0.38,
+          "rxn_011": 0.88
+        },
+        "chemical_feasibility": 0.69,
+        "pathway_coherence": 0.79,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.92,
+        "overall_confidence": 0.76,
+        "feedback": "Alanine formation from pyruvate is well supported by Barge et al., and transamination of alpha-keto acids has literature precedent. But the route still inherits the unresolved branched-keto-acid problem through rxn_008. Once alpha-ketoisocaproate exists, rxn_011 is reasonable; getting there remains the weak link.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_008"
+        ],
+        "suggestions": [
+          "Provide a better-supported route to alpha-ketoisocaproate, potentially via alpha-ketoisovalerate and acetyl-type extension.",
+          "Clarify metal ion or mineral catalyst for transamination in rxn_011 to align with Varma et al. (2021)."
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_001": 0.52,
+          "rxn_002": 0.65,
+          "rxn_008": 0.38,
+          "rxn_012": 0.84,
+          "rxn_013": 0.9
+        },
+        "chemical_feasibility": 0.71,
+        "pathway_coherence": 0.77,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.93,
+        "overall_confidence": 0.77,
+        "feedback": "The Bucherer-Bergs/hydantoin branch is a legitimate literature-supported route once a suitable alpha-keto acid is available. The hydantoin chemistry is more defensible than the speculative chain-extension step that feeds it. Thus the pathway is limited mostly by alpha-ketoisocaproate accessibility, not by the terminal conversion.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_008"
+        ],
+        "suggestions": [
+          "Retain the Bucherer-Bergs branch but use a more explicit precursor network to alpha-ketoisocaproate.",
+          "Clarify whether cyanide/carbonate equivalents required for Bucherer-Bergs are environmentally available in the same surface setting."
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_001": 0.52,
+          "rxn_002": 0.65,
+          "rxn_004": 0.72,
+          "rxn_008": 0.38,
+          "rxn_012": 0.84,
+          "rxn_013": 0.9
+        },
+        "chemical_feasibility": 0.67,
+        "pathway_coherence": 0.73,
+        "environmental_progression": 0.83,
+        "target_achievement": 0.92,
+        "overall_confidence": 0.73,
+        "feedback": "This hybrid HCN-coupled Bucherer-Bergs route has decent environmental logic but stacks multiple uncertain feeder reactions ahead of a supported terminal branch. It is overdependent on compressed upstream chemistry for both branched skeleton generation and hydrothermal reduced-carbon feedstocks.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_008"
+        ],
+        "suggestions": [
+          "Reduce pathway compression by splitting HCN generation, branched skeleton formation, and keto-acid production into discrete, evidence-based steps.",
+          "Avoid implying cyanosulfidic support for branched-chain amino acid formation, since the literature does not demonstrate leucine via that route."
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_002": 0.65,
+          "rxn_004": 0.72,
+          "rxn_008": 0.38,
+          "rxn_009": 0.97
+        },
+        "chemical_feasibility": 0.68,
+        "pathway_coherence": 0.75,
+        "environmental_progression": 0.86,
+        "target_achievement": 0.94,
+        "overall_confidence": 0.76,
+        "feedback": "This is a good cross-environment concept: surface chemistry supplies cyanide/branched carbon context while hydrothermal or proto-metabolic chemistry supplies keto-acid pools, ending in a strongly supported nickel-catalyzed leucine-forming step. However, alpha-ketoisocaproate production remains insufficiently grounded experimentally.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_002",
+          "rxn_004",
+          "rxn_008"
+        ],
+        "suggestions": [
+          "Make the alpha-ketoisocaproate branch more explicit and literature-based.",
+          "Specify the pH 8, 1 atm H2, room-temperature Ni-catalyzed conditions for rxn_009 in the network data."
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_006": 0.95,
+          "rxn_007": 0.93,
+          "rxn_014": 0.74
+        },
+        "chemical_feasibility": 0.84,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.86,
+        "target_achievement": 0.9,
+        "overall_confidence": 0.85,
+        "feedback": "This pathway is coherent as an accumulation-and-incorporation route once leucine is already available. Strecker leucine formation is well supported, and montmorillonite-assisted peptide condensation is broadly plausible though typically favored under wet-dry cycling and often benefits from activation or salts. The route is better as a post-synthesis utilization pathway than as a primary synthesis pathway.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_014"
+        ],
+        "suggestions": [
+          "Specify wet-dry cycling and concentration conditions for rxn_014.",
+          "Represent peptide formation as 2 leucine molecules to leucylleucine explicitly for stoichiometric clarity."
+        ]
+      }
+    ],
+    "best_pathway_id": "P1",
+    "overall_confidence": 0.81,
+    "network_feedback": "The network is topologically strong and chemically mixed. It satisfies the graph-level requirements well: 15 molecule nodes and 14 reaction nodes, multiple hubs, several convergence points, and a connected Hydrothermal -> Surface -> Biochemical structure. The target leucine is reached by multiple independent endpoints, especially the well-supported Strecker route and the highly literature-aligned reductive amination of alpha-ketoisocaproate. The strongest literature fit is the final leucine-forming chemistry in rxn_006/rxn_007 and especially rxn_009/rxn_010, which matches the current state of prebiotic evidence. The major weakness is feeder chemistry for the branched skeleton. rxn_004 plausibly reflects Parker-style H2S spark chemistry in spirit, but its reactants are underspecified relative to the literature. rxn_005 and especially rxn_008 are the least secure parts of the network because they compress unresolved branch-building problems into single steps without sufficient experimental backing. The network also omits required mineral-agent specification in the presented summary, which is a formal environmental compliance issue for Hydrothermal and Surface reactions. Literature alignment is good at the endpoint level and weaker in the upstream assembly logic. Overall, this is a credible but not approval-level network: ambitious, well connected, and honest about the branched-skeleton problem, yet still too speculative in key upstream transformations to merit >=0.9 confidence.",
+    "approved": false,
+    "hub_quality": 0.91,
+    "convergence_quality": 0.88
+  },
+  "success": false,
+  "attempts": 3,
+  "notes": null
+}

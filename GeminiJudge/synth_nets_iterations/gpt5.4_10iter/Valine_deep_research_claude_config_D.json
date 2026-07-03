@@ -1,0 +1,747 @@
+{
+  "target_molecule": "Valine",
+  "network": {
+    "target_molecule": "Valine",
+    "overall_strategy": "This network centers valine synthesis on the literature-supported Strecker route from isobutyraldehyde, ammonia, and hydrogen cyanide, while explicitly modeling the major bottleneck: low-selectivity prebiotic access to the branched C4 precursor isobutyraldehyde. Hydrothermal chemistry supplies reduced carbon hubs such as formate, acetaldehyde, pyruvate, and alpha-ketoisovalerate under moderate alkaline vent conditions rather than destructive black-smoker conditions. Surface environments generate and concentrate HCN, enable low-selectivity aldol diversification to branched aldehydes, support Strecker and Bucherer-Bergs chemistry, and stabilize aminonitriles through formylation in formamide-rich settings. Biochemical/prebiotic settings complete hydrolysis, reductive amination, transamination coupling, and peptide incorporation. The network therefore follows the deep literature: Strecker chemistry is the best-supported route, alpha-ketoisovalerate reductive amination is a metabolically congruent alternative, Bucherer-Bergs/hydantoin chemistry is included as an auxiliary branch, and all pathways acknowledge that branched precursor generation is the unresolved limiting step.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_005",
+        "formula": "CH2O2",
+        "iupac_name": "methanoic acid",
+        "common_name": "formic acid/formate",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_006",
+        "formula": "C2H4O",
+        "iupac_name": "ethanal",
+        "common_name": "acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C4H8O",
+        "iupac_name": "2-methylpropanal",
+        "common_name": "isobutyraldehyde",
+        "inchi": "InChI=1S/C4H8O/c1-4(2)3-5/h3-4H,1-2H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C5H10N2",
+        "iupac_name": "2-amino-3-methylbutanenitrile",
+        "common_name": "valine aminonitrile",
+        "inchi": "InChI=1S/C5H10N2/c1-4(2)5(7)3-6/h4-5H,7H2,1-2H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "CH3NO",
+        "iupac_name": "formamide",
+        "common_name": "formamide",
+        "inchi": "InChI=1S/CH3NO/c2-1-3/h1H,(H2,2,3)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C6H10N2O",
+        "iupac_name": "N-formyl-2-amino-3-methylbutanenitrile",
+        "common_name": "N-formyl valine aminonitrile",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C5H11NO2",
+        "iupac_name": "2-amino-3-methylbutanoic acid",
+        "common_name": "valine",
+        "inchi": "InChI=1S/C5H11NO2/c1-3(2)4(6)5(7)8/h3-4H,6H2,1-2H3,(H,7,8)",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C5H8O3",
+        "iupac_name": "3-methyl-2-oxobutanoic acid",
+        "common_name": "alpha-ketoisovalerate",
+        "inchi": "InChI=1S/C5H8O3/c1-3(2)4(6)5(7)8/h3H,1-2H3,(H,7,8)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvic acid",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C5H8N2O2",
+        "iupac_name": "5-(propan-2-yl)imidazolidine-2,4-dione",
+        "common_name": "valine hydantoin",
+        "inchi": "InChI=1S/C6H10N2O2/c1-3(2)4-5(9)8-6(10)7-4/h3-4H,1-2H3,(H2,7,8,9,10)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C10H20N2O3",
+        "iupac_name": "2-[(2-amino-3-methylbutanoyl)amino]-3-methylbutanoic acid",
+        "common_name": "valylvaline",
+        "inchi": "InChI=1S/C10H20N2O3/c1-5(2)7(11)9(13)12-8(6(3)4)10(14)15/h5-8H,11H2,1-4H3,(H,12,13)(H,14,15)",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Greigite-catalyzed CO2 reduction to formate",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_005"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite/mackinawite",
+          "aqueous": "true",
+          "other": "alkaline vent conditions, pH 9-11, H2-rich, anoxic"
+        },
+        "mechanism": "Mineral-surface reduction of CO2 by H2 on iron-sulfur phases yields surface-bound formyl equivalents released as formate.",
+        "reasoning": "Alkaline hydrothermal vents are thermodynamically favorable for amino-acid precursor synthesis, and greigite/mackinawite are canonical Fe-S vent catalysts for CO2 reduction in iron-sulfur world models (Amend & Shock, 1998; Martin & Russell, 2007; Russell et al., 1994). This step provides reduced C1 feedstock that connects hydrothermal carbon fixation to downstream aldehyde chemistry."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Magnetite-mediated Fischer-Tropsch-type generation of acetaldehyde from reduced carbon",
+        "inputs": [
+          "mol_001",
+          "mol_002",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "423-573K",
+          "pressure": "high",
+          "catalyst": "magnetite/Fe0",
+          "aqueous": "true",
+          "other": "moderate hydrothermal vent regime; reduced, anoxic system; used as aldehyde-generating FTT proxy rather than direct amino-acid synthesis"
+        },
+        "mechanism": "Sequential hydrogenation and C-C coupling of reduced carbon species on iron oxide/metal surfaces yields low-molecular-weight oxygenates including acetaldehyde.",
+        "reasoning": "Hydrothermal FTT chemistry on Fe/Ni catalysts primarily yields hydrocarbons, alcohols, and aldehydes rather than amino acids; this literature supports using vent chemistry as a source of aldehyde precursors feeding later Strecker steps (McCollom, Ritter, & Simoneit, 1999). The moderate regime avoids the amino-acid destruction characteristic of black-smoker temperatures (Miller & Bada, 1988)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Hydrothermal pyruvate synthesis from CO2 and H2 on Fe minerals",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite/magnetite",
+          "aqueous": "true",
+          "other": "alkaline vent setting, pH gradient across microporous mineral interfaces"
+        },
+        "mechanism": "Stepwise mineral-catalyzed CO2 reduction and C-C assembly generate alpha-keto acid products including pyruvate in protometabolic vent chemistry.",
+        "reasoning": "Pyruvate is a plausible hydrothermal alpha-keto acid hub in protometabolic networks and is consistent with vent-driven carbon fixation logic proposed for early metabolism (Martin & Russell, 2007; Muchowska, Varma, & Moran, 2019). This node is included because the literature on valine specifically highlights alpha-keto acid routes as metabolically congruent alternatives, even if flux to branched products remains uncertain."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Surface spark/photochemical generation and concentration of HCN",
+        "inputs": [
+          "mol_001",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_004"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "sulfide minerals (stibnite, molybdenite)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 and sulfide mineral surfaces",
+          "aqueous": "true",
+          "other": "UV-exposed subaerial pools receiving atmospheric discharge products; HCN concentration enhanced by evaporation/freezing cycles"
+        },
+        "mechanism": "Atmospheric/discharge-derived nitrile species are photochemically processed and concentrated at mineral-rich surfaces, furnishing dissolved HCN for Strecker and Bucherer-Bergs chemistry.",
+        "reasoning": "The deep literature warns against oversimplified direct CO2-to-HCN schemes; accordingly this node represents mineral-assisted capture and surface processing of HCN generated by reducing atmospheric discharge/photochemistry rather than a clean single-step synthesis. HCN is central in Miller-Urey chemistry and cyanosulfidic surface networks (Miller, 1953; Ring et al., 1972; Johnson et al., 2008; Parker et al., 2011; Patel et al., 2015; Miyakawa et al., 2002)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "TiO2-mediated hydrolysis of HCN to formamide",
+        "inputs": [
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "borate minerals (colemanite, ulexite)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2",
+          "aqueous": "true",
+          "other": "UV-exposed evaporitic pools; formamide accumulates during drying"
+        },
+        "mechanism": "Hydration/hydrolysis of HCN under surface photochemical conditions generates formamide, which accumulates under evaporative concentration.",
+        "reasoning": "Formamide is a well-established prebiotic solvent/intermediate linked to HCN chemistry and TiO2-enabled photochemistry in surface settings (Saladino et al., 2006). Its inclusion is specifically justified by Green, Xu, and Sutherland's aminonitrile protection chemistry (Green, Xu, & Sutherland, 2021; Green, Xu, & Sutherland, 2023)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Low-selectivity aldol diversification to branched aldehydes including isobutyraldehyde",
+        "inputs": [
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (stibnite, molybdenite)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "320-370K",
+          "pressure": "1 atm",
+          "catalyst": "transition-metal sulfide surfaces with clay concentration",
+          "aqueous": "true",
+          "other": "evaporitic or geothermal pool; low selectivity; branched products formed only as minor components of a diversified aldehyde mixture"
+        },
+        "mechanism": "Acetaldehyde undergoes metal-sulfide-assisted aldol diversification and rearrangement in complex product mixtures, generating minor branched C4 aldehydes including isobutyraldehyde.",
+        "reasoning": "This step is intentionally formulated as low-selectivity diversification rather than a direct or selective acetaldehyde-to-isobutyraldehyde conversion, because the literature identifies branched C4 precursor generation as the principal unresolved bottleneck. NiS-catalyzed acetylene/aldehyde diversification and spark-discharge radical chemistry support access to branched aldehydes only within complex mixtures, not as clean products (Preiner et al., 2023; Parker et al., 2011; Keefe, Newton, & Miller, 1995)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Canonical Strecker formation of valine aminonitrile from isobutyraldehyde",
+        "inputs": [
+          "mol_007",
+          "mol_003",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "phosphate minerals (apatite, struvite)"
+        ],
+        "conditions": {
+          "temperature": "298-330K",
+          "pressure": "1 atm",
+          "catalyst": "mineral concentration on clay/phosphate surfaces",
+          "aqueous": "true",
+          "other": "pH approximately 9, mild aqueous conditions, anoxic"
+        },
+        "mechanism": "Isobutyraldehyde reacts reversibly with NH3 to form an imine; HCN adds nucleophilically to yield the alpha-aminonitrile 2-amino-3-methylbutanenitrile.",
+        "reasoning": "This is the most experimentally validated route to valine and directly follows the literature. Valine in Miller-Urey-type systems is specifically assigned to Strecker synthesis from isobutyraldehyde, HCN, and NH3, with optimal chemistry near pH 9 where free NH3 is available (Miller & Van Trump, 1981; Keefe, Newton, & Miller, 1995; Devergne, Magrino, Pietrucci, & Saitta, 2021)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Formamide-mediated N-formylation of valine aminonitrile",
+        "inputs": [
+          "mol_008",
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-360K",
+          "pressure": "1 atm",
+          "catalyst": "mineral-assisted concentration in formamide-rich pools",
+          "aqueous": "false",
+          "other": "formamide-rich drying environment; protective derivatization against Strecker reversal"
+        },
+        "mechanism": "Aminonitrile nitrogen is formylated in formamide-rich media, suppressing back-reaction of the Strecker equilibrium and stabilizing the nitrile intermediate.",
+        "reasoning": "N-formylation of aminonitriles is specifically supported as a route to protect Strecker intermediates from reversal and improve amino-acid-yield potential (Green, Xu, & Sutherland, 2021; Green, Xu, & Sutherland, 2023). This is included as a literature-grounded auxiliary branch rather than a replacement for canonical hydrolysis."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Hydrolysis/deformylation of valine aminonitrile derivatives to valine",
+        "inputs": [
+          "mol_008",
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "null"
+        ],
+        "conditions": {
+          "temperature": "323-423K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "geothermal cycling or long-timescale aqueous hydrolysis; irreversible nitrile hydrolysis drives product accumulation"
+        },
+        "mechanism": "Aminonitrile hydrolyzes through amide-like intermediates to the amino acid; N-formylated species are concurrently deformylated/hydrolyzed to valine.",
+        "reasoning": "Hydrolysis of the valine aminonitrile is the irreversible product-forming step in Strecker synthesis and is central to valine formation in Miller-type systems. Aminonitrile persistence and hydrolysis timescales under prebiotic conditions are discussed by Miller and later kinetic analyses (Miller & Van Trump, 1981; Devergne et al., 2021; Miller, 1998; Green, Xu, & Sutherland, 2021)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Bucherer-Bergs formation of valine hydantoin from isobutyraldehyde",
+        "inputs": [
+          "mol_007",
+          "mol_003",
+          "mol_004",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "phosphate minerals (apatite, struvite)",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-340K",
+          "pressure": "1 atm",
+          "catalyst": "mineral-buffered evaporitic pool",
+          "aqueous": "true",
+          "other": "carbonate/CO2-bearing aqueous setting; hydantoin branch linked to carbonyl, NH3, HCN, and CO2 chemistry"
+        },
+        "mechanism": "Carbonyl compound, cyanide, ammonia, and CO2/carbonate chemistry generate a hydantoin intermediate that stores the valine carbon skeleton prior to hydrolysis.",
+        "reasoning": "The Bucherer-Bergs route is explicitly cited in the deep literature as a variant connecting aldehyde-based Strecker chemistry with hydantoin intermediates in the presence of CO2, HCN, and NH3 (Pulletikurti, Yadav, Springsteen, & Krishnamurthy, 2022). It is included as an alternative to direct aminonitrile hydrolysis."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Hydrolysis of valine hydantoin to valine",
+        "inputs": [
+          "mol_014"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "null"
+        ],
+        "conditions": {
+          "temperature": "323-423K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "prolonged aqueous hydrolysis in geothermal pools"
+        },
+        "mechanism": "Ring opening and hydrolysis of the hydantoin intermediate release racemic valine.",
+        "reasoning": "Hydantoin intermediates are well-established Bucherer-Bergs amino-acid precursors and provide a literature-supported bridge between aldehyde chemistry and final amino acid formation (Pulletikurti et al., 2022). This step is slower and more condition-sensitive than direct Strecker hydrolysis but remains a valid auxiliary route."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Protometabolic formation of alpha-ketoisovalerate from pyruvate-rich chemistry",
+        "inputs": [
+          "mol_013",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "pyrite/greigite",
+          "aqueous": "true",
+          "other": "alkaline vent microcompartments; metabolically congruent but experimentally unresolved for selective alpha-ketoisovalerate formation"
+        },
+        "mechanism": "Pyruvate-centered carbon-carbon coupling in nonenzymatic protometabolic networks yields higher alpha-keto acids, here represented by alpha-ketoisovalerate as the immediate valine keto precursor.",
+        "reasoning": "The deep literature specifically identifies alpha-ketoisovalerate as an alternative entry point to valine and notes that its prebiotic generation may proceed through pyruvate condensation chemistry paralleling biological logic, but remains experimentally undemonstrated. This reaction is therefore included as a necessary but explicitly speculative connector consistent with nonenzymatic Krebs-cycle analog reasoning (Muchowska, Varma, & Moran, 2019; Copley, Smith, & Morowitz, 2005; 2025 PMC report cited in the deep research)."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Reductive amination of alpha-ketoisovalerate to valine on iron/nickel minerals",
+        "inputs": [
+          "mol_012",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "elemental iron (Fe0)"
+        ],
+        "conditions": {
+          "temperature": "295-363K",
+          "pressure": "high",
+          "catalyst": "FeS/pyrite-forming system or metallic nickel/iron analog",
+          "aqueous": "true",
+          "other": "alkaline pH 8-10; moderate vent conditions preferred; pathway included by analogy to demonstrated keto-acid reductive amination"
+        },
+        "mechanism": "The alpha-keto acid condenses with ammonia and is reduced on metal/sulfide surfaces to the alpha-amino acid valine.",
+        "reasoning": "Reductive amination of alpha-keto acids is a documented prebiotic route under FeS/H2S, iron oxyhydroxide, and metallic Ni conditions. Although substrate-specific evidence for alpha-ketoisovalerate is indirect, the literature identifies this route as the principal metabolically congruent alternative to Strecker synthesis (Hafenbradl et al., 1995; Huber & Wachtersh\u00e4user, 2003; Barge et al., 2019; Kaur et al., 2024)."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Transamination coupling between pyruvate and valine to regenerate alpha-ketoisovalerate",
+        "inputs": [
+          "mol_013",
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "null"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "prebiotic pool or mineral interface; network-level amine transfer analogue"
+        },
+        "mechanism": "Amine transfer from valine to pyruvate conceptually interconverts amino-acid and keto-acid pools, enriching alpha-ketoisovalerate as part of a protometabolic network.",
+        "reasoning": "Transamination is listed as a required biochemical reaction type, and the deep literature emphasizes coupling between amino-acid and alpha-keto-acid inventories in metabolically congruent networks. This step is more network-level and speculative than the Strecker chemistry but helps connect valine and alpha-ketoisovalerate pools without contradicting the literature (Copley, Smith, & Morowitz, 2005; 2025 PMC report cited in the deep research)."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Wet-dry peptide formation from valine to valylvaline",
+        "inputs": [
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "null"
+        ],
+        "conditions": {
+          "temperature": "373-393K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "false",
+          "other": "wet-dry cycling on mineral interfaces; ester-mediated condensation implied"
+        },
+        "mechanism": "Repeated dehydration-rehydration cycles promote ester-mediated amide bond formation between concentrated valine molecules, yielding short peptides.",
+        "reasoning": "Surface concentration and wet-dry cycling are the experimentally supported context for prebiotic peptide formation. Forsythe et al. demonstrated ester-mediated amide bond formation, and Campbell et al. showed enhanced oligomerization in mineral-mediated cycling environments. Inclusion of valylvaline shows downstream biochemical relevance of valine once formed (Forsythe et al., 2015; Campbell et al., 2019)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Canonical hydrothermal-to-surface Strecker route",
+        "description": "Reduced carbon from hydrothermal CO2 reduction feeds acetaldehyde production, low-selectivity surface aldol diversification yields minor isobutyraldehyde, and canonical Strecker synthesis followed by hydrolysis gives valine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_006",
+          "rxn_007",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_006",
+          "mol_007",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Direct aldehyde-to-Strecker route from hydrothermal acetaldehyde",
+        "description": "Hydrothermal acetaldehyde enters surface aldol diversification and directly feeds the validated Strecker branch to valine.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_006",
+          "rxn_007",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Protected aminonitrile route",
+        "description": "After canonical Strecker formation, valine aminonitrile is stabilized by formylation in formamide-rich drying pools before hydrolysis to valine.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_009",
+          "mol_007",
+          "mol_008",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Bucherer-Bergs hydantoin route",
+        "description": "Isobutyraldehyde enters a CO2-assisted Bucherer-Bergs branch to valine hydantoin, which hydrolyzes in prebiotic pools to valine.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_006",
+          "rxn_010",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "HCN-first surface Strecker route",
+        "description": "Surface-generated HCN converges with branched aldehyde and ammonia in the canonical Strecker mechanism, emphasizing HCN as a major competitive hub.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_006",
+          "rxn_007",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_007",
+          "mol_008"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Pyruvate-to-alpha-ketoisovalerate reductive amination route",
+        "description": "Hydrothermal pyruvate and acetaldehyde feed a speculative but literature-discussed alpha-ketoisovalerate branch, followed by mineral-catalyzed reductive amination to valine.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_002",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_013",
+          "mol_006",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Formate-supported protometabolic keto-acid route",
+        "description": "Hydrothermal formate generation supplies reduced carbon context for pyruvate formation and subsequent conversion to alpha-ketoisovalerate, then valine by reductive amination.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_003",
+          "rxn_012",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_013",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Valine-to-keto-acid recycling route",
+        "description": "Once some valine is present by Strecker chemistry, transamination-like coupling regenerates alpha-ketoisovalerate, which can be reaminated to reinforce the valine pool.",
+        "reaction_sequence": [
+          "rxn_007",
+          "rxn_009",
+          "rxn_014",
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_011",
+          "mol_012",
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Hydantoin route seeded by HCN-rich surface pools",
+        "description": "Surface HCN production and low-yield branched aldehyde formation converge into the Bucherer-Bergs branch as an alternative to direct aminonitrile hydrolysis.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_006",
+          "rxn_010",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_007",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Valine incorporation into peptides after synthesis",
+        "description": "Valine produced by either Strecker or keto-acid chemistry is concentrated in prebiotic pools and enters peptide formation during wet-dry cycling.",
+        "reaction_sequence": [
+          "rxn_007",
+          "rxn_009",
+          "rxn_015"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_011"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_006",
+      "mol_007",
+      "mol_008",
+      "mol_012"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_007",
+        "incoming_reactions": [
+          "rxn_006"
+        ],
+        "outgoing_reactions": [
+          "rxn_007",
+          "rxn_010"
+        ]
+      },
+      {
+        "molecule_id": "mol_008",
+        "incoming_reactions": [
+          "rxn_007"
+        ],
+        "outgoing_reactions": [
+          "rxn_008",
+          "rxn_009"
+        ]
+      },
+      {
+        "molecule_id": "mol_011",
+        "incoming_reactions": [
+          "rxn_009",
+          "rxn_011",
+          "rxn_013"
+        ],
+        "outgoing_reactions": [
+          "rxn_014",
+          "rxn_015"
+        ]
+      },
+      {
+        "molecule_id": "mol_012",
+        "incoming_reactions": [
+          "rxn_012",
+          "rxn_014"
+        ],
+        "outgoing_reactions": [
+          "rxn_013"
+        ]
+      },
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_002"
+        ],
+        "outgoing_reactions": [
+          "rxn_006",
+          "rxn_012"
+        ]
+      }
+    ]
+  },
+  "config": "D"
+}

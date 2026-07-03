@@ -1,0 +1,921 @@
+{
+  "target_molecule": "Serine",
+  "network": {
+    "target_molecule": "Serine",
+    "overall_strategy": "This network centers serine synthesis on the literature-supported glycolaldehyde -> serinonitrile -> serinamide -> serine axis, while embedding that core route within a broader prebiotic network in which hydrothermal carbon fixation supplies formaldehyde and pyruvate precursors, surface cyanosulfidic and formose chemistry generates glycolaldehyde, spark-discharge and impact systems provide convergent direct access to glycolaldehyde/serine pools, and biochemical stages channel serine into peptide ligation and cysteine-related branching. The design avoids overstating unsupported hydrothermal serine synthesis from hydroxypyruvate, explicitly treats serinonitrile as the key branch-point, and uses literature-grounded conditions for each reaction.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_005",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_006",
+        "formula": "C2H4O2",
+        "iupac_name": "2-hydroxyethanal",
+        "common_name": "glycolaldehyde",
+        "inchi": "InChI=1S/C2H4O2/c3-1-2-4/h1,4H,2H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C3H6O3",
+        "iupac_name": "2,3-dihydroxypropanal",
+        "common_name": "glyceraldehyde",
+        "inchi": "InChI=1S/C3H6O3/c4-1-3(6)2-5/h1,3,5-6H,2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_008",
+        "formula": "CH3NO",
+        "iupac_name": "methanamide",
+        "common_name": "formamide",
+        "inchi": "InChI=1S/CH3NO/c2-1-3/h1H,(H2,2,3)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C3H4N2O",
+        "iupac_name": "2-amino-3-hydroxypropanenitrile",
+        "common_name": "serinonitrile",
+        "inchi": "InChI=1S/C3H6N2O/c4-1-3(5)2-6/h3,6H,2,5H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C3H7NO2",
+        "iupac_name": "2-amino-3-hydroxypropanamide",
+        "common_name": "serinamide",
+        "inchi": "InChI=1S/C3H8N2O2/c4-2(1-6)3(5)7/h2,6H,1,4H2,(H2,5,7)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C3H7NO3",
+        "iupac_name": "2-amino-3-hydroxypropanoic acid",
+        "common_name": "serine",
+        "inchi": "InChI=1S/C3H7NO3/c4-2(1-5)3(6)7/h2,5H,1,4H2,(H,6,7)",
+        "role": "target",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C3H3NO",
+        "iupac_name": "2-aminoacrylonitrile",
+        "common_name": "dehydroalanine nitrile",
+        "inchi": "InChI=1S/C3H4N2/c1-3(5)2-4/h1,5H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "H2S",
+        "iupac_name": "sulfane",
+        "common_name": "hydrogen sulfide",
+        "inchi": "InChI=1S/H2S/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_014",
+        "formula": "C3H5NO2S",
+        "iupac_name": "2-amino-3-sulfanylprop-2-enenitrile/related cysteine precursor pool",
+        "common_name": "cysteine precursor pool",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_015",
+        "formula": "PO4H3",
+        "iupac_name": "phosphoric acid",
+        "common_name": "phosphate",
+        "inchi": "InChI=1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_016",
+        "formula": "C3H8NO6P",
+        "iupac_name": "2-amino-3-hydroxy-1-phosphonopropanoic acid",
+        "common_name": "phosphoserine",
+        "inchi": "InChI=1S/C3H8NO6P/c4-2(3(5)6)1-10-11(7,8)9/h2H,1,4H2,(H,5,6)(H2,7,8,9)/t2-/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_017",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvic acid",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_018",
+        "formula": "C3H7NO2",
+        "iupac_name": "2-aminopropanoic acid",
+        "common_name": "alanine",
+        "inchi": "InChI=1S/C3H7NO2/c1-2(4)3(5)6/h2H,4H2,1H3,(H,5,6)/t2-/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_019",
+        "formula": "C6H5N5",
+        "iupac_name": "9H-purin-6-amine",
+        "common_name": "adenine",
+        "inchi": "InChI=1S/C5H5N5/c6-4-3-5(9-1-7-3)10-2-8-4/h1-2H,(H3,6,7,8,9,10)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_020",
+        "formula": "C3H3NO2",
+        "iupac_name": "2-aminooxazole-4-ol/related aminooxazole pool",
+        "common_name": "2-aminooxazole pool",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_021",
+        "formula": "C6H12N2O3",
+        "iupac_name": "2-[(2-amino-3-hydroxypropanoyl)amino]acetic acid",
+        "common_name": "serylglycine",
+        "inchi": "InChI=1S/C5H10N2O4/c6-3(2-8)5(11)7-1-4(9)10/h3,8H,1-2,6H2,(H,7,11)(H,9,10)/t3-/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO2 reduction to formaldehyde-equivalent carbon pool",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_005"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite and mackinawite",
+          "aqueous": "true",
+          "other": "anoxic alkaline vent conditions; reductive carbon fixation represented as a formaldehyde-equivalent feed into surface chemistry"
+        },
+        "mechanism": "Iron-sulfur-mediated multielectron reduction of CO2 by H2 on sulfide surfaces generates reduced C1 species that can feed formaldehyde/formose chemistry after transport into cooler settings.",
+        "reasoning": "Greigite and related Fe-S phases activate CO2 and support hydrothermal carbon reduction chemistry under alkaline vent conditions; this node is a conservative network connector representing reduced C1 output rather than claiming direct high-yield formaldehyde isolation in vents (Santos-Carballal et al., 2018; Kitadai, 2015)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Hydrothermal pyruvate synthesis from reduced carbon and CO2",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite (Fe3O4)",
+          "greigite (Fe3S4)"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "magnetite and greigite",
+          "aqueous": "true",
+          "other": "anoxic hydrothermal setting; pyruvate represented as a vent-generated alpha-keto acid hub"
+        },
+        "mechanism": "Mineral-mediated reductive carbon fixation and C-C bond formation generate alpha-keto acid products, here encoded as pyruvate as a metabolic hub connecting hydrothermal and later biochemical chemistry.",
+        "reasoning": "The use of pyruvate as a hydrothermal alpha-keto acid hub is consistent with vent carbon-fixation analog chemistry and the centrality of pyruvate in prebiotic protometabolism; this avoids unsupported direct hydrothermal serine synthesis from hydroxypyruvate (Kitadai, 2015; Barge et al., 2019)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Hydrothermal reductive amination of pyruvate to alanine",
+        "inputs": [
+          "mol_017",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_018"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "green rust analog iron oxyhydroxide",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "~343K",
+          "pressure": "moderate to high",
+          "catalyst": "mixed-valence iron oxyhydroxide with approximately 50% Fe(II)",
+          "aqueous": "true",
+          "other": "alkaline hydrothermal conditions near pH 9-11; included as literature-supported comparator for keto-acid amination"
+        },
+        "mechanism": "Mixed-valence iron minerals mediate electron transfer and ammonia addition to pyruvate, yielding alanine.",
+        "reasoning": "Barge et al. showed reductive amination of pyruvate to alanine by mixed-valence iron oxyhydroxides at about 70C, supporting alpha-keto acid amination under vent-like conditions. This is included specifically as a validated hydrothermal amino-acid branch while not extrapolating unsupportedly to serine from hydroxypyruvate (Barge et al., 2019; Kitadai, 2015)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Surface photochemical generation of HCN and formamide pool",
+        "inputs": [
+          "mol_005",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_004",
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "sulfide minerals (molybdenite/stibnite)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2 photocatalyst with sulfide-rich surface context",
+          "aqueous": "true",
+          "other": "strong UV irradiation, anoxic shallow pool or volcanic field"
+        },
+        "mechanism": "UV-driven atmospheric/surface photochemistry generates cyanide chemistry and hydrates/carbamoyl products represented here by an HCN-formamide pool available to surface synthesis.",
+        "reasoning": "Formamide and cyanide are established surface photochemical intermediates in prebiotic chemistry, and formamide-based serine precursor chemistry is specifically reported for N-formylserinonitrile formation. This reaction encodes the literature-supported surface generation of cyanide/formamide feedstocks without claiming a single exclusive mechanism (Miller, 1957; Pulletikurti et al., 2023)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Formose generation of glycolaldehyde from formaldehyde",
+        "inputs": [
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "borate minerals with mineral-surface concentration",
+          "aqueous": "true",
+          "other": "basic aqueous solution; evaporitic or subaerial geothermal setting"
+        },
+        "mechanism": "Formaldehyde undergoes base-promoted autocondensation, giving glycolaldehyde as the first stable C2 sugar-related product; borate helps stabilize reactive sugar intermediates.",
+        "reasoning": "The Butlerov formose reaction is the canonical route to glycolaldehyde, the key precursor distinguishing serine from glycine. Borate stabilization is widely used in prebiotic sugar chemistry, while recent early-Earth mineral catalysis supports glycolaldehyde emergence from formaldehyde under aqueous conditions (Breslow, 1959; Earth and Planetary Science Letters, 2023)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Cyanosulfidic photoredox homologation to glycolaldehyde and glyceraldehyde",
+        "inputs": [
+          "mol_004",
+          "mol_013"
+        ],
+        "outputs": [
+          "mol_006",
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (molybdenite/stibnite)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "35C",
+          "pressure": "1 atm",
+          "catalyst": "Cu photoredox chemistry in phosphate buffer, mineral-supported concentration represented by sulfide and phosphate surfaces",
+          "aqueous": "true",
+          "other": "anaerobic, neutral pH, UV irradiation"
+        },
+        "mechanism": "HCN undergoes reductive homologation under H2S-fed photoredox conditions to furnish glycolaldehyde and glyceraldehyde as central carbohydrate and Strecker precursors.",
+        "reasoning": "Patel et al. demonstrated cyanosulfidic protometabolism under mild UV-irradiated conditions at 35C, where glycolaldehyde and glyceraldehyde arise from HCN/H2S chemistry and directly feed serine precursor formation; this is one of the strongest literature-supported surface routes in the network (Patel et al., 2015)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "HCN oligomerization to adenine",
+        "inputs": [
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_019"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "mineral surface concentration and UV exposure",
+          "aqueous": "true",
+          "other": "evaporative concentration and anoxic UV-exposed pool"
+        },
+        "mechanism": "Concentrated HCN oligomerizes through diaminomaleonitrile-like intermediates to purine products, here represented by adenine.",
+        "reasoning": "HCN oligomerization to adenine is a standard prebiotic branch that shows the same cyanide hub feeding nucleotide chemistry alongside serine chemistry, consistent with the report's emphasis on network connectivity between amino acid and nucleotide worlds (Oro tradition as background; Patel et al., 2015; Powner et al., 2012)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Glycolaldehyde branch to aminooxazole pool",
+        "inputs": [
+          "mol_006",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_020"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "phosphate minerals (apatite/struvite)",
+          "borate minerals (colemanite/ulexite)"
+        ],
+        "conditions": {
+          "temperature": "300-320K",
+          "pressure": "1 atm",
+          "catalyst": "phosphate-buffered, mineral-stabilized evaporitic pool",
+          "aqueous": "true",
+          "other": "anoxic, concentrated surface setting"
+        },
+        "mechanism": "Glycolaldehyde serves as a branch-point carbonyl substrate in nucleotide precursor chemistry, here represented by aminooxazole-related intermediates.",
+        "reasoning": "Powner's work places glycolaldehyde at the nexus of nucleotide and amino-acid chemistry, particularly through aminooxazole formation. This node is included to capture the experimentally established branch-point role of glycolaldehyde rather than treating serine synthesis in isolation (Powner et al., 2012)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Canonical Strecker formation of serinonitrile from glycolaldehyde",
+        "inputs": [
+          "mol_006",
+          "mol_003",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "borate minerals (colemanite/ulexite)"
+        ],
+        "conditions": {
+          "temperature": "300-310K",
+          "pressure": "1 atm",
+          "catalyst": "mineral concentration on clay and sugar stabilization by borate",
+          "aqueous": "true",
+          "other": "mildly basic aqueous conditions; anoxic"
+        },
+        "mechanism": "Glycolaldehyde condenses with ammonia to an imine, followed by cyanide addition to give 2-amino-3-hydroxypropanenitrile.",
+        "reasoning": "This is the dominant prebiotic serine route in the literature. Miller and Van Trump established the aminonitrile hydrolysis context; Magrino et al. computed the aqueous free-energy landscape supporting aminonitrile formation as the first stable Strecker intermediate. For serine, the aldehyde precursor is glycolaldehyde (Miller and Van Trump, 1981; Magrino et al., 2021)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Formamide-assisted protected Strecker route to serinonitrile",
+        "inputs": [
+          "mol_006",
+          "mol_004",
+          "mol_008"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (molybdenite/stibnite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "353K",
+          "pressure": "1 atm",
+          "catalyst": "MgCl2 reported in formamide chemistry; mineral concentration represented by sulfide/clay surfaces",
+          "aqueous": "false",
+          "other": "formamide-rich medium, approximately 80C, anoxic"
+        },
+        "mechanism": "In formamide solvent, cyanide addition to glycolaldehyde-derived imine/formylated intermediates produces protected serine aminonitrile chemistry that resists equilibrium reversion before hydrolysis.",
+        "reasoning": "Pulletikurti et al. showed that N-formylserinonitrile forms readily in formamide and that MgCl2 at 80C promotes downstream dehydroalanine nitrile chemistry. This reaction encodes the literature-required formamide branch rather than leaving formamide as an unused side node (Pulletikurti et al., 2023)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Spark-discharge synthesis of serine from reduced atmospheric mixtures",
+        "inputs": [
+          "mol_004",
+          "mol_006",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "sulfide minerals (molybdenite/stibnite)"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "electric discharge with mineral-supported collection surfaces",
+          "aqueous": "true",
+          "other": "volcanic spark discharge, steam-rich reduced gas mixture, aqueous trapping phase"
+        },
+        "mechanism": "Electric discharge generates HCN and aldehydes including glycolaldehyde, which then undergo Strecker chemistry in the aqueous phase to furnish serine among other amino acids.",
+        "reasoning": "Ring et al. identified serine in Miller-type spark discharge products, Johnson et al. and Parker et al. confirmed serine in archived volcanic/H2S apparatus samples, and Miller showed HCN and aldehydes behave as Strecker intermediates. This reaction is encoded using those known intermediates rather than as an unjustified one-step CO2-to-serine shortcut (Ring et al., 1972; Johnson et al., 2008; Parker et al., 2011; Miller, 1957)."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Impact-shock synthesis of serine",
+        "inputs": [
+          "mol_001",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "elemental iron (Fe0)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "transient shock heating",
+          "pressure": "impact shock",
+          "catalyst": "Fe/Ni-bearing mineral assemblage with silicate context",
+          "aqueous": "true",
+          "other": "impact into ocean water or Hadean aqueous setting"
+        },
+        "mechanism": "Shock compression and rapid quench generate reduced carbon/nitrogen intermediates that yield amino acids including serine in the post-impact aqueous phase.",
+        "reasoning": "Furukawa et al. reported simultaneous formation of nucleobases and proteinogenic amino acids including serine in impact simulations, and Takeuchi et al. produced amino acids from Fe, Ni, Mg2SiO4, H2O, CO2, and N2. This remains a direct but literature-supported alternative source of serine (Furukawa et al., 2015; Takeuchi et al., 2020)."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Hydrolysis of serinonitrile to serinamide",
+        "inputs": [
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "273-310K",
+          "pressure": "1 atm",
+          "catalyst": "mineral-assisted aqueous hydrolysis",
+          "aqueous": "true",
+          "other": "cold to temperate aqueous setting; geologically rapid relative to planetary timescales"
+        },
+        "mechanism": "Sequential hydration and rearrangement of the nitrile group gives the corresponding amide as the first irreversible hydrolysis product.",
+        "reasoning": "Miller and Van Trump measured aminonitrile hydrolysis kinetics showing geological rapidity even at low temperature; serinamide is the expected intermediate in Strecker amino-acid release. This step follows the canonical serine Strecker sequence (Miller and Van Trump, 1981; Magrino et al., 2021)."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Hydrolysis of serinamide to serine",
+        "inputs": [
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "273-310K",
+          "pressure": "1 atm",
+          "catalyst": "aqueous hydrolysis on mineral surfaces",
+          "aqueous": "true",
+          "other": "cool surface environment favored because serine is thermally fragile"
+        },
+        "mechanism": "Further amide hydrolysis yields the free amino acid serine and ammonia.",
+        "reasoning": "This is the terminal step of the Strecker route and is directly supported by the hydrolysis kinetics literature. A cool surface setting is chosen because serine is known to decompose rapidly at elevated hydrothermal temperatures (Miller and Van Trump, 1981; Bada et al., 1995; Sato et al., 2004)."
+      },
+      {
+        "id": "rxn_015",
+        "name": "Beta-elimination of serinonitrile to dehydroalanine nitrile",
+        "inputs": [
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (molybdenite/stibnite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "300-353K",
+          "pressure": "1 atm",
+          "catalyst": "mineral-supported dehydration/elimination",
+          "aqueous": "false",
+          "other": "can proceed in formamide-rich or dehydrating surface settings"
+        },
+        "mechanism": "Serine aminonitrile undergoes beta-elimination of water to furnish the activated unsaturated nitrile dehydroalanine nitrile.",
+        "reasoning": "Foden et al. demonstrated the serine-to-cysteine connection through nitrile-activated dehydroalanine synthesis, and Pulletikurti et al. showed N-formyldehydroalanine nitrile formation in formamide with MgCl2 at 80C. This establishes serinonitrile as a true branch-point, not merely a transient intermediate (Foden et al., 2020; Pulletikurti et al., 2023)."
+      },
+      {
+        "id": "rxn_016",
+        "name": "Sulfur addition to dehydroalanine nitrile toward cysteine precursor pool",
+        "inputs": [
+          "mol_012",
+          "mol_013"
+        ],
+        "outputs": [
+          "mol_014"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "null"
+        ],
+        "conditions": {
+          "temperature": "298-310K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "neutral pH, sulfide-rich prebiotic pool"
+        },
+        "mechanism": "Nucleophilic sulfide addition across the activated double bond of dehydroalanine nitrile yields sulfur-containing cysteine precursor species.",
+        "reasoning": "The serine-to-cysteine prebiotic conversion via dehydroalanine nitrile is a major result of Foden et al., showing serine chemistry feeding sulfur amino-acid evolution in close analogy to modern metabolism (Foden et al., 2020)."
+      },
+      {
+        "id": "rxn_017",
+        "name": "Alpha-phosphorylation network access to phosphoserine",
+        "inputs": [
+          "mol_006",
+          "mol_007",
+          "mol_015"
+        ],
+        "outputs": [
+          "mol_016",
+          "mol_017"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "phosphate minerals (apatite/struvite)",
+          "borate minerals (colemanite/ulexite)"
+        ],
+        "conditions": {
+          "temperature": "300-320K",
+          "pressure": "1 atm",
+          "catalyst": "phosphate-rich evaporitic conditions with borate stabilization",
+          "aqueous": "true",
+          "other": "alpha-phosphorylation-controlled network; mixed sugar-phosphate pool"
+        },
+        "mechanism": "Glycolaldehyde and glyceraldehyde participate in a phosphorylation-controlled network that generates phosphoserine-related products alongside pyruvate and glycerate phosphates.",
+        "reasoning": "This reaction is intentionally formulated as a network branch rather than an overcompressed direct single-step serine synthesis. The literature explicitly reports that glycolaldehyde and glyceraldehyde yield phosphoserine, glyceric acid phosphates, and pyruvate in a unified alpha-phosphorylation network (Powner group, Nature Chemistry, 2017)."
+      },
+      {
+        "id": "rxn_018",
+        "name": "Dephosphorylation/hydrolysis of phosphoserine to serine",
+        "inputs": [
+          "mol_016"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "null"
+        ],
+        "conditions": {
+          "temperature": "298-310K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "prebiotic pool or mineral interface"
+        },
+        "mechanism": "Hydrolytic loss of phosphate from phosphoserine furnishes free serine.",
+        "reasoning": "This is a necessary connecting step from the experimentally described phosphoserine-containing alpha-phosphorylation network to free serine. While less directly isolated than the Strecker route, it is a chemically conservative extension of the 2017 network and is marked as a connection rather than a standalone discovery (Powner group, Nature Chemistry, 2017)."
+      },
+      {
+        "id": "rxn_019",
+        "name": "H2S-mediated peptide ligation incorporating serine residue",
+        "inputs": [
+          "mol_009",
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_021"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "null"
+        ],
+        "conditions": {
+          "temperature": "room temperature",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "neutral pH, H2S-mediated thioacetate-activated ligation chemistry"
+        },
+        "mechanism": "Aminonitrile activation enables alpha-peptide bond formation under sulfide-mediated conditions, allowing serine-containing peptide products.",
+        "reasoning": "Canavelli et al. showed that aminonitriles, including serine-derived ones, are viable peptide precursors in H2S-mediated ligation at neutral pH and room temperature, making serine an active participant in prebiotic peptide chemistry rather than merely an endpoint (Canavelli et al., 2019)."
+      },
+      {
+        "id": "rxn_020",
+        "name": "Thermal decomposition of serine to pyruvate-equivalent carbon pool",
+        "inputs": [
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_017",
+          "mol_005"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "null"
+        ],
+        "conditions": {
+          "temperature": "373-473K",
+          "pressure": "variable",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "heating in subcritical water or geothermal cycling; reflects fragility not productive synthesis"
+        },
+        "mechanism": "Serine undergoes dehydration and/or retro-aldol chemistry, furnishing pyruvate along the dominant route and formaldehyde/glycine-related fragments in competing channels; pyruvate plus formaldehyde is used here as a compact decomposition representation.",
+        "reasoning": "Serine is thermally fragile. Dehydration to pyruvate is the dominant decomposition pathway and retro-aldol cleavage generates formaldehyde-related fragments. Including this reaction captures the literature's central synthesis-versus-survival tension and closes the network back into prebiotic carbon hubs (Korner et al., 2021; Al-Kwradi et al., 2024; Andersson and Holm, 2000)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Canonical glycolaldehyde Strecker route",
+        "description": "The dominant literature-supported serine pathway: formaldehyde first condenses to glycolaldehyde, which reacts with ammonia and HCN to give serinonitrile, then hydrolyzes through serinamide to serine in cool surface water.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_009",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_009",
+          "mol_010"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Cyanosulfidic-to-Strecker serine pathway",
+        "description": "HCN and H2S under UV generate glycolaldehyde and glyceraldehyde in the Sutherland network; glycolaldehyde then enters the canonical Strecker path to serine.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_009",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Hydrothermal carbon fixation feeding surface Strecker synthesis",
+        "description": "Reduced C1 carbon formed in hydrothermal iron-sulfur settings is exported as a formaldehyde-equivalent pool, then converted at the surface into glycolaldehyde and on to serine by Strecker hydrolysis.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_005",
+          "rxn_009",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_006",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Formamide-protected aminonitrile route",
+        "description": "Surface photochemistry generates HCN and formamide; glycolaldehyde reacts in formamide-rich settings to produce protected serine aminonitrile chemistry that hydrolyzes onward to serine.",
+        "reaction_sequence": [
+          "rxn_004",
+          "rxn_005",
+          "rxn_010",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_006",
+          "mol_009"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Spark discharge Strecker production",
+        "description": "Electric-discharge chemistry generates HCN and aldehydes and directly yields serine through aqueous Strecker chemistry in volcanic/spark systems.",
+        "reaction_sequence": [
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_006"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Impact-shock direct serine synthesis",
+        "description": "Impact processing in aqueous environments directly generates serine from simple carbon and nitrogen sources in the presence of metallic/mineral phases.",
+        "reaction_sequence": [
+          "rxn_012"
+        ],
+        "key_intermediates": []
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Alpha-phosphorylation phosphoserine route",
+        "description": "Glycolaldehyde and glyceraldehyde enter a phosphorylation-controlled network yielding phosphoserine; hydrolytic dephosphorylation then releases serine.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_017",
+          "rxn_018"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Formose plus alpha-phosphorylation route",
+        "description": "Formaldehyde gives glycolaldehyde by formose chemistry; glycolaldehyde together with glyceraldehyde enters the phosphoserine network and ultimately yields serine.",
+        "reaction_sequence": [
+          "rxn_005",
+          "rxn_017",
+          "rxn_018"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Hydrothermal-to-cyanosulfidic-to-phosphoserine route",
+        "description": "Hydrothermal reduced carbon supports surface HCN chemistry, which through cyanosulfidic homologation and phosphorylation chemistry furnishes phosphoserine and then serine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_004",
+          "rxn_006",
+          "rxn_017",
+          "rxn_018"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_004",
+          "mol_006",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Cyanosulfidic plus formamide convergent serinonitrile route",
+        "description": "HCN/H2S photochemistry furnishes glycolaldehyde while the same broader surface chemistry furnishes formamide; these converge in formamide-rich aminonitrile formation and hydrolysis to serine.",
+        "reaction_sequence": [
+          "rxn_006",
+          "rxn_004",
+          "rxn_010",
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_008",
+          "mol_009"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_005",
+      "mol_006",
+      "mol_009",
+      "mol_011"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_005",
+          "rxn_006"
+        ],
+        "outgoing_reactions": [
+          "rxn_008",
+          "rxn_009",
+          "rxn_010",
+          "rxn_017",
+          "rxn_011"
+        ]
+      },
+      {
+        "molecule_id": "mol_009",
+        "incoming_reactions": [
+          "rxn_009",
+          "rxn_010"
+        ],
+        "outgoing_reactions": [
+          "rxn_013",
+          "rxn_015",
+          "rxn_019"
+        ]
+      },
+      {
+        "molecule_id": "mol_011",
+        "incoming_reactions": [
+          "rxn_011",
+          "rxn_012",
+          "rxn_014",
+          "rxn_018"
+        ],
+        "outgoing_reactions": [
+          "rxn_019",
+          "rxn_020"
+        ]
+      },
+      {
+        "molecule_id": "mol_005",
+        "incoming_reactions": [
+          "rxn_001",
+          "rxn_020"
+        ],
+        "outgoing_reactions": [
+          "rxn_004",
+          "rxn_005"
+        ]
+      },
+      {
+        "molecule_id": "mol_017",
+        "incoming_reactions": [
+          "rxn_002",
+          "rxn_017",
+          "rxn_020"
+        ],
+        "outgoing_reactions": [
+          "rxn_003"
+        ]
+      }
+    ]
+  },
+  "config": "B"
+}

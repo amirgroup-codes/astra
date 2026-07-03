@@ -1,0 +1,981 @@
+{
+  "target_molecule": "Glucose",
+  "network": {
+    "target_molecule": "Glucose",
+    "overall_strategy": "A literature-grounded multi-environment network is used because no single prebiotic pathway selectively yields glucose. The network treats formaldehyde and glycolaldehyde as critical entry points, uses hydrothermal CO2 reduction and vent concentration to supply C1 feedstocks, surface cyanosulfidic photochemistry to bypass the formaldehyde dimerization bottleneck and generate glycolaldehyde/glyceraldehyde, and mineral-guided aldol chemistry to reach C6 sugars. The dominant glucose-forming logic follows two experimentally motivated branches: (i) glyceraldehyde condensation on iron hydroxide/goethite to ketohexoses followed by Lobry de Bruyn-Alberda van Ekenstein isomerization to glucose, and (ii) classical but low-selectivity formose-type growth from formaldehyde through glycolaldehyde and glyceraldehyde under alkaline mineral settings, explicitly acknowledging poor selectivity and the 2025 evidence that mild formose conditions favor branched sugars. Extraterrestrial delivery of glycolaldehyde and glucose is included because Bennu and meteorite studies show these compounds were available prebiotically. Final biochemical-stage stabilization/phosphorylation in borate-rich evaporitic settings links glucose to more persistent proto-metabolic forms.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_005",
+        "formula": "H2S",
+        "iupac_name": "sulfane",
+        "common_name": "hydrogen sulfide",
+        "inchi": "InChI=1S/H2S/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_006",
+        "formula": "C2H4O2",
+        "iupac_name": "2-hydroxyethanal",
+        "common_name": "glycolaldehyde",
+        "inchi": "InChI=1S/C2H4O2/c3-1-2-4/h1,4H,2H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C3H6O3",
+        "iupac_name": "2,3-dihydroxypropanal",
+        "common_name": "glyceraldehyde",
+        "inchi": "InChI=1S/C3H6O3/c4-1-3(6)2-5/h1,3,5-6H,2H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C3H6O3",
+        "iupac_name": "1,3-dihydroxypropan-2-one",
+        "common_name": "dihydroxyacetone",
+        "inchi": "InChI=1S/C3H6O3/c4-1-3(6)2-5/h4-5H,1-2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C4H8O4",
+        "iupac_name": "2,3,4-trihydroxybutanal",
+        "common_name": "aldotetrose",
+        "inchi": "InChI=1S/C4H8O4/c5-1-3(7)4(8)2-6/h1,3-4,6-8H,2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C4H8O4",
+        "iupac_name": "1,3,4-trihydroxybutan-2-one",
+        "common_name": "tetrulose",
+        "inchi": "InChI=1S/C4H8O4/c5-1-3(7)4(8)2-6/h3,5-7H,1-2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C6H12O6",
+        "iupac_name": "D-fructose",
+        "common_name": "fructose",
+        "inchi": "InChI=1S/C6H12O6/c7-2-6(11)5(10)4(9)3(8)1-12-6/h3-5,7-11H,1-2H2/t3-,4-,5+,6?/m1/s1",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C6H12O6",
+        "iupac_name": "D-sorbose",
+        "common_name": "sorbose",
+        "inchi": "InChI=1S/C6H12O6/c7-1-3(9)5(11)6(12)4(10)2-8/h3,5-9,11-12H,1-2H2/t3-,5+,6+/m1/s1",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_013",
+        "formula": "C6H12O6",
+        "iupac_name": "D-glucose",
+        "common_name": "glucose",
+        "inchi": "InChI=1S/C6H12O6/c7-1-2-3(8)4(9)5(10)6(11)12-2/h2-11H,1H2/t2-,3-,4+,5-,6?/m1/s1",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C2H2O3",
+        "iupac_name": "2-oxoacetic acid",
+        "common_name": "glyoxylic acid",
+        "inchi": "InChI=1S/C2H2O3/c3-1-2(4)5/h1H,(H,4,5)",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C4H2O6",
+        "iupac_name": "2,3-dihydroxybut-2-enedioic acid",
+        "common_name": "dihydroxyfumarate",
+        "inchi": "InChI=1S/C4H4O6/c5-1(3(7)8)2(6)4(9)10/h5-6H,(H,7,8)(H,9,10)/b2-1+",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C5H10O5",
+        "iupac_name": "xylulose",
+        "common_name": "xylulose",
+        "inchi": "InChI=1S/C5H10O5/c6-1-3(8)5(10)4(9)2-7/h3,5-8,10H,1-2H2/t3-,5+/m1/s1",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_017",
+        "formula": "C5H10O5",
+        "iupac_name": "ribulose",
+        "common_name": "ribulose",
+        "inchi": "InChI=1S/C5H10O5/c6-1-3(8)5(10)4(9)2-7/h3,5-8,10H,1-2H2",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_018",
+        "formula": "C6H13O9P",
+        "iupac_name": "D-glucose 6-phosphate",
+        "common_name": "glucose 6-phosphate",
+        "inchi": "InChI=1S/C6H13O9P/c7-1-3(8)5(10)6(11)4(9)2-15-16(12,13)14/h1,3-6,8-11H,2H2,(H2,12,13,14)/t3-,4+,5+,6+/m0/s1",
+        "role": "intermediate",
+        "environment_formed": "Biochemical"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO2 reduction to formaldehyde",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite (Fe3S4)",
+          "mackinawite (FeS)"
+        ],
+        "conditions": {
+          "temperature": "313-363K",
+          "pressure": "high",
+          "catalyst": "greigite (Fe3S4), mackinawite (FeS)",
+          "aqueous": "true",
+          "other": "alkaline hydrothermal vent analog, pH 9-11, H2-rich, Fe(Ni)S membrane-like setting"
+        },
+        "mechanism": "Mineral-catalyzed reduction of CO2 by H2 across iron-sulfur surfaces gives reduced one-carbon products including formaldehyde in vent-like gradients.",
+        "reasoning": "Included because Lane-group vent reactor work reported proof-of-principle CO2 reduction to formaldehyde under simulated alkaline hydrothermal conditions, consistent with iron-sulfur world catalysis and greigite formation in vent chimneys (Roldan et al., 2015; as summarized in the deep research report)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Hydrothermal thermophoretic concentration of formaldehyde",
+        "inputs": [
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_003"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "pyrite (FeS2)",
+          "magnetite (Fe3O4)"
+        ],
+        "conditions": {
+          "temperature": "313-363K",
+          "pressure": "high",
+          "catalyst": "pyrite (FeS2), magnetite (Fe3O4)",
+          "aqueous": "true",
+          "other": "microporous vent structures, thermophoretic enrichment up to ~5000-fold"
+        },
+        "mechanism": "Physical concentration in mineral micropores increases local formaldehyde activity, helping overcome the low oceanic steady-state concentration and kinetic bottleneck for downstream sugar chemistry.",
+        "reasoning": "Vent micropores were reported to amplify organics up to ~5000-fold, making hydrothermal concentration a necessary connection module between CO2 reduction and surface/alkaline sugar chemistry (deep research summary; Lane-related vent work). This is a transport/concentration step rather than a net chemical conversion, but it is necessary to connect known literature modules."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Cyanosulfidic photoreduction of HCN to glycolaldehyde and glyceraldehyde",
+        "inputs": [
+          "mol_004",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_006",
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals (molybdenite/stibnite)",
+          "TiO2 (anatase/rutile)"
+        ],
+        "conditions": {
+          "temperature": "ambient",
+          "pressure": "1 atm",
+          "catalyst": "UV-driven Cu(I)/Cu(II) photoredox with mineral semiconductors present",
+          "aqueous": "true",
+          "other": "254 nm UV; cyanosulfidic conditions; H2S or thiophosphate as reductant; phosphate-buffered pH 6.5 in the 2023 improvement"
+        },
+        "mechanism": "Reductive homologation of HCN under UV photoredox chemistry generates glycolaldehyde and then glyceraldehyde, bypassing formaldehyde dimerization.",
+        "reasoning": "This reaction follows the Sutherland cyanosulfidic network in which glycolaldehyde and glyceraldehyde arise directly from HCN under UV-driven reductive homologation; later work improved yields with thiophosphate (Ritson & Sutherland, 2012; Patel et al., 2015; Ritson & Sutherland, 2023)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Surface formose initiation from concentrated formaldehyde to glycolaldehyde",
+        "inputs": [
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "323-353K",
+          "pressure": "1 atm",
+          "catalyst": "alkaline mineral setting with wet-dry cycling",
+          "aqueous": "true",
+          "other": "high pH, formaldehyde typically 0.1-1.8 M; glycolaldehyde threshold >=3 ppm; Cannizzaro competition is strong"
+        },
+        "mechanism": "Under alkaline formose-active conditions, a small fraction of formaldehyde enters productive dimerization chemistry to form glycolaldehyde, although this is kinetically disfavored relative to Cannizzaro disproportionation.",
+        "reasoning": "The literature identifies formaldehyde-to-glycolaldehyde formation as the primary bottleneck of the formose network, with Breslow's autocatalytic cycle requiring glycolaldehyde as the linchpin and modern kinetic work showing Cannizzaro is favored (Butlerov, 1861; Breslow, 1959; Socha et al., 1980; Tran et al., 2023; Kua et al., 2013; 2025 J. Chem. Phys. study). This step is retained because it is canonical, but poor selectivity is acknowledged."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Formose homologation from glycolaldehyde and formaldehyde to glyceraldehyde",
+        "inputs": [
+          "mol_006",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "323-353K",
+          "pressure": "1 atm",
+          "catalyst": "alkaline mineral setting",
+          "aqueous": "true",
+          "other": "wet alkaline pools; borate can stabilize products but may inhibit some reactive intermediates"
+        },
+        "mechanism": "Aldol addition of glycolaldehyde with formaldehyde yields the C3 aldotriose glyceraldehyde within the Breslow formose cycle.",
+        "reasoning": "This is the central C2 to C3 growth step of the classical formose reaction and is part of the accepted autocatalytic mechanism updated by hydride-shift isomerization chemistry (Breslow, 1959; Appayee & Breslow, 2014; Tran et al., 2023)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Lobry de Bruyn-Alberda van Ekenstein isomerization of glyceraldehyde to dihydroxyacetone",
+        "inputs": [
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "323-353K",
+          "pressure": "1 atm",
+          "catalyst": "alkaline mineral setting",
+          "aqueous": "true",
+          "other": "basic conditions; ketose favored under alkaline equilibration"
+        },
+        "mechanism": "Aldose-ketose rearrangement interconverts the aldotriose and ketotriose through the Lobry de Bruyn-Alberda van Ekenstein manifold.",
+        "reasoning": "The research report identifies glyceraldehyde as a central branch point and notes strong equilibrium toward ketose DHA under basic conditions; updated mechanistic work indicates hydride-shift character for sugar isomerizations in formose chemistry (Appayee & Breslow, 2014; deep research summary)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Formose C3 to C4 growth via tetrose/tetrulose branch",
+        "inputs": [
+          "mol_006",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_009",
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "323-353K",
+          "pressure": "1 atm",
+          "catalyst": "alkaline borate-containing evaporitic pool",
+          "aqueous": "true",
+          "other": "wet-dry cycling can separate synthesis from stabilization"
+        },
+        "mechanism": "Aldol growth from C2/C3 sugars gives C4 aldose and ketose pools, which can feed higher homologation pathways.",
+        "reasoning": "The classical Breslow cycle includes C4 tetrulose and aldotetrose intermediates as key expansion and fragmentation nodes; borate-based mineral environments can stabilize emerging sugars and shape distributions (Breslow, 1959; Ricardo et al., 2004; Kim et al., 2011)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Goethite-catalyzed C3 plus C3 condensation to ketohexoses",
+        "inputs": [
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_011",
+          "mol_012"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2 (anatase/rutile)",
+          "borate minerals (colemanite/ulexite)"
+        ],
+        "conditions": {
+          "temperature": "298K",
+          "pressure": "1 atm",
+          "catalyst": "goethite-like iron(III) hydroxide oxide mineral surface",
+          "aqueous": "true",
+          "other": "pH 5-6; mild conditions; fructose ~12.9% and sorbose ~15.2% reported, with no decomposition over 96 days"
+        },
+        "mechanism": "Surface-catalyzed condensation of glyceraldehyde gives predominantly ketohexoses, especially fructose and sorbose, under mild iron mineral conditions.",
+        "reasoning": "Weber showed that iron(III) hydroxide oxide catalyzes condensation of glyceraldehyde to ketohexoses at 25\u00b0C and pH 5-6 with substantial fructose and sorbose yields and high product persistence; this is one of the strongest experimental routes toward C6 sugars (Weber, 1992). The agents field uses allowed surface minerals while the catalyst is specified explicitly in conditions per the literature."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Aldose-ketose isomerization of fructose to glucose",
+        "inputs": [
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "298-333K",
+          "pressure": "1 atm",
+          "catalyst": "none or mineral interface-assisted",
+          "aqueous": "true",
+          "other": "Lobry de Bruyn-Alberda van Ekenstein rearrangement; glucose selected by thermodynamic stability of beta-pyranose"
+        },
+        "mechanism": "Ketohexose-to-aldohexose isomerization converts fructose into glucose through enediol/hydride-shift-like rearrangement and equilibration.",
+        "reasoning": "The deep research report states that C3 + C3 condensation primarily yields fructose and related ketohexoses, which must subsequently rearrange to glucose and mannose; glucose is then favored by exceptional thermodynamic stability in the beta-pyranose form (deep research summary; Appayee & Breslow, 2014 for hydride-shift relevance to sugar isomerization)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Aldose-ketose equilibration of sorbose to glucose",
+        "inputs": [
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "298-333K",
+          "pressure": "1 atm",
+          "catalyst": "none or mineral interface-assisted",
+          "aqueous": "true",
+          "other": "slow ketohexose/aldohexose equilibration under neutral to mildly basic conditions"
+        },
+        "mechanism": "Ketohexose interconversion and aldose-ketose rearrangement provide an alternative route from sorbose-containing C6 pools to glucose.",
+        "reasoning": "Weber's goethite chemistry produces sorbose alongside fructose, and the report emphasizes interconversion among hexose isomers as part of the prebiotic sugar manifold. This step is more speculative than fructose-to-glucose but is necessary to connect experimentally observed sorbose to the glucose target while remaining within the documented hexose isomerization framework (Weber, 1992; deep research summary)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Glyoxylate dimerization to dihydroxyfumarate",
+        "inputs": [
+          "mol_014"
+        ],
+        "outputs": [
+          "mol_015"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "phosphate minerals (apatite/struvite)"
+        ],
+        "conditions": {
+          "temperature": "ambient",
+          "pressure": "1 atm",
+          "catalyst": "glyoxylate-rich evaporitic chemistry",
+          "aqueous": "true",
+          "other": "used as the formal glyoxylate dimer in the Eschenmoser/Krishnamurthy scenario"
+        },
+        "mechanism": "Condensation of glyoxylate equivalents furnishes dihydroxyfumarate, the key C4 entry point of the glyoxylate scenario.",
+        "reasoning": "Eschenmoser proposed glyoxylate as a cleaner alternative C1 synthon and later work treated DHF as the formal glyoxylate dimer; the report notes the unresolved challenge that no robust prebiotic source of DHF is established. This reaction is included to represent the literature pathway explicitly while acknowledging the gap (Eschenmoser, 2007; Sagi et al., 2012; Chem, 2023 glyoxylose framework)."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Dihydroxyfumarate plus glyceraldehyde to pentose ketoses",
+        "inputs": [
+          "mol_015",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_016",
+          "mol_017"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "borate minerals (colemanite/ulexite)",
+          "montmorillonite (clay)"
+        ],
+        "conditions": {
+          "temperature": "ambient",
+          "pressure": "1 atm",
+          "catalyst": "glyoxylate scenario mineral interface",
+          "aqueous": "true",
+          "other": "~60% yield; near-quantitative conversion; selective ketose formation with no detectable aldoses"
+        },
+        "mechanism": "A clean aldol-type glyoxylate pathway combines DHF with glyceraldehyde to give xylulose and ribulose as selective ketose products.",
+        "reasoning": "Sagi, Krishnamurthy and colleagues demonstrated that DHF reacts with glyceraldehyde to furnish xylulose and ribulose in about 60% yield with high selectivity, establishing the glyoxylate scenario as a cleaner alternative to formose chemistry, though not yet extended to selective glucose (Sagi et al., 2012; Chem, 2023)."
+      },
+      {
+        "id": "rxn_013",
+        "name": "Meteorite and asteroid delivery of glycolaldehyde and glucose",
+        "inputs": [],
+        "outputs": [
+          "mol_006",
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite (clay)",
+          "borate minerals (colemanite/ulexite)"
+        ],
+        "conditions": {
+          "temperature": "ambient upon deposition",
+          "pressure": "1 atm",
+          "catalyst": "none; exogenous delivery followed by adsorption/concentration on minerals",
+          "aqueous": "false",
+          "other": "extraterrestrial infall from meteorites/asteroidal parent bodies"
+        },
+        "mechanism": "Exogenous delivery seeds the surface environment with preformed sugar precursors and some glucose, which can then enter local concentration, stabilization, and downstream chemistry.",
+        "reasoning": "Glycolaldehyde has been detected in interstellar and protostellar environments, and Furukawa et al. detected sugars in meteorites and glucose in Bennu samples, establishing extraterrestrial delivery as a documented source rather than an invented pathway (Hollis et al., 2000; Jorgensen et al., 2012; Furukawa et al., 2019; Furukawa et al., 2025)."
+      },
+      {
+        "id": "rxn_014",
+        "name": "Borate-assisted phosphorylation of glucose to glucose 6-phosphate",
+        "inputs": [
+          "mol_013"
+        ],
+        "outputs": [
+          "mol_018"
+        ],
+        "environment": "Biochemical",
+        "agents": [],
+        "conditions": {
+          "temperature": "thermal evaporation",
+          "pressure": "1 atm",
+          "catalyst": "borate-rich evaporitic milieu with phosphate source",
+          "aqueous": "false",
+          "other": "drying-rehydration cycles in volcanic/hydrothermal evaporative pools"
+        },
+        "mechanism": "Regioselective phosphorylation under evaporative borate-rich conditions converts glucose into the more metabolically relevant and potentially stabilized glucose 6-phosphate.",
+        "reasoning": "Furukawa et al. showed that borate-rich evaporative settings enable regioselective phosphorylation of glucose to glucose 6-phosphate, linking abiotic glucose production to proto-glycolytic chemistry (Furukawa et al., 2023)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Vent CO2 to formaldehyde to canonical formose to glucose",
+        "description": "Hydrothermal CO2 reduction supplies formaldehyde, which enters the canonical surface formose sequence to glycolaldehyde and glyceraldehyde, then mild C3 condensation to fructose and isomerization to glucose.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_006",
+          "mol_007",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Vent formaldehyde plus cyanosulfidic glycolaldehyde convergence",
+        "description": "Hydrothermal formaldehyde converges with surface-cyanosulfidic glycolaldehyde, then proceeds through glyceraldehyde and fructose to glucose.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_003",
+          "rxn_005",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_006",
+          "mol_007",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Pure cyanosulfidic route via fructose",
+        "description": "HCN and H2S under UV generate glycolaldehyde and glyceraldehyde directly, bypassing the formaldehyde bottleneck, followed by goethite-type ketohexose formation and fructose-to-glucose isomerization.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Pure cyanosulfidic route via sorbose",
+        "description": "The same cyanosulfidic entry chemistry feeds goethite-catalyzed ketohexose formation, but glucose is reached through sorbose-containing hexose pools.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_008",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Canonical formose route seeded by external glycolaldehyde",
+        "description": "A small glycolaldehyde inventory from delivery or other settings seeds the Breslow cycle; glyceraldehyde then condenses to fructose and isomerizes to glucose.",
+        "reaction_sequence": [
+          "rxn_013",
+          "rxn_005",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Extraterrestrial direct glucose delivery",
+        "description": "Glucose arrives directly on meteorites or asteroid-derived material and is incorporated into the connected surface network without requiring local synthesis.",
+        "reaction_sequence": [
+          "rxn_013"
+        ],
+        "key_intermediates": [
+          "mol_013"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Vent formaldehyde to glycolaldehyde to sorbose branch",
+        "description": "Hydrothermal formaldehyde enters the low-efficiency formose route to glycolaldehyde and glyceraldehyde, then reaches glucose through the sorbose branch of Weber-type ketohexose synthesis.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_008",
+          "rxn_010"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_006",
+          "mol_007",
+          "mol_012"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Vent formaldehyde through tetrose branch to glucose pool",
+        "description": "Hydrothermal formaldehyde feeds surface formose chemistry through glycolaldehyde, glyceraldehyde, and tetrose/tetrulose intermediates before re-entering the C3/C6 manifold and reaching fructose then glucose.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_003",
+          "mol_006",
+          "mol_007",
+          "mol_009",
+          "mol_010",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Cyanosulfidic to tetrose-assisted C6 route",
+        "description": "Surface cyanosulfidic chemistry generates glycolaldehyde and glyceraldehyde, which enter the tetrose/tetrulose branch before returning to the C6 ketohexose manifold and then glucose.",
+        "reaction_sequence": [
+          "rxn_003",
+          "rxn_007",
+          "rxn_008",
+          "rxn_009"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_009",
+          "mol_010",
+          "mol_011"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Direct glucose capture followed by proto-metabolic activation",
+        "description": "Glucose delivered or synthesized by any route is stabilized and made metabolically relevant by phosphorylation to glucose 6-phosphate in borate-rich evaporitic settings.",
+        "reaction_sequence": [
+          "rxn_013",
+          "rxn_014"
+        ],
+        "key_intermediates": [
+          "mol_013",
+          "mol_018"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_003",
+      "mol_006",
+      "mol_007",
+      "mol_011",
+      "mol_013"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_006",
+        "incoming_reactions": [
+          "rxn_003",
+          "rxn_004",
+          "rxn_013"
+        ],
+        "outgoing_reactions": [
+          "rxn_005",
+          "rxn_007"
+        ]
+      },
+      {
+        "molecule_id": "mol_007",
+        "incoming_reactions": [
+          "rxn_003",
+          "rxn_005"
+        ],
+        "outgoing_reactions": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_008",
+          "rxn_012"
+        ]
+      },
+      {
+        "molecule_id": "mol_011",
+        "incoming_reactions": [
+          "rxn_008"
+        ],
+        "outgoing_reactions": [
+          "rxn_009"
+        ]
+      },
+      {
+        "molecule_id": "mol_013",
+        "incoming_reactions": [
+          "rxn_009",
+          "rxn_010",
+          "rxn_013"
+        ],
+        "outgoing_reactions": [
+          "rxn_014"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Glucose",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_001": 0.35,
+          "rxn_002": 0.7,
+          "rxn_004": 0.25,
+          "rxn_005": 0.55,
+          "rxn_008": 0.9,
+          "rxn_009": 0.75
+        },
+        "chemical_feasibility": 0.57,
+        "pathway_coherence": 0.78,
+        "environmental_progression": 0.86,
+        "target_achievement": 0.82,
+        "overall_confidence": 0.68,
+        "feedback": "This pathway is topologically coherent and captures the literature logic of vent-derived C1 feedstocks feeding surface sugar chemistry, then mild downstream isomerization to glucose. Its main weakness is the formaldehyde-to-glycolaldehyde initiation step, which the literature identifies as the central bottleneck and likely kinetically disfavored relative to Cannizzaro chemistry. Hydrothermal CO2-to-formaldehyde is plausible only as a low-yield feedstock module, not a robust direct production route. The strongest element is the use of goethite-catalyzed C3+C3 condensation to fructose, which is well aligned with Weber-type mineral-guided ketohexose formation. The final fructose-to-glucose conversion is chemically reasonable, though assignment to a generic biochemical stage rather than a mineral-guided or alkaline equilibration environment is less well grounded.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_001",
+          "rxn_004"
+        ],
+        "suggestions": [
+          "Downgrade rxn_004 to explicitly low-selectivity/speculative because 2025 evidence argues mild formose conditions favor branched sugars over linear glucose precursors.",
+          "Specify a concrete mineral/catalyst for rxn_001 and frame formaldehyde as low-yield vent output rather than a strong production step.",
+          "Consider moving rxn_009 to a surface or mineral-mediated aldose-ketose equilibration context to better match known chemistry."
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_001": 0.35,
+          "rxn_002": 0.7,
+          "rxn_003": 0.92,
+          "rxn_005": 0.55,
+          "rxn_008": 0.9,
+          "rxn_009": 0.75
+        },
+        "chemical_feasibility": 0.7,
+        "pathway_coherence": 0.86,
+        "environmental_progression": 0.9,
+        "target_achievement": 0.84,
+        "overall_confidence": 0.79,
+        "feedback": "This is one of the better pathways because it uses cyanosulfidic chemistry to bypass the worst formaldehyde dimerization bottleneck while still allowing hydrothermal C1 input and environmental convergence. The cyanosulfidic generation of glycolaldehyde and glyceraldehyde is strongly literature supported, and the goethite-mediated condensation to fructose is also well supported. The weaker point is that formaldehyde remains in the pathway via homologation, so some dependence on the problematic vent/formose module persists. Overall, this is a credible convergent route but still falls short of approval because the hydrothermal formaldehyde production step is underdefined and the later glucose isomerization context is not tightly specified.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_001",
+          "rxn_005"
+        ],
+        "suggestions": [
+          "Make the pathway less dependent on formaldehyde by emphasizing direct cyanosulfidic supply of both glycolaldehyde and glyceraldehyde.",
+          "Include explicit photoredox details such as UV and sulfur/phosphate reductants for rxn_003.",
+          "Anchor the fructose-to-glucose conversion to experimentally supported alkaline equilibration or mineral-mediated isomerization conditions."
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_003": 0.92,
+          "rxn_008": 0.9,
+          "rxn_009": 0.75
+        },
+        "chemical_feasibility": 0.86,
+        "pathway_coherence": 0.9,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.86,
+        "overall_confidence": 0.87,
+        "feedback": "This is the strongest terrestrial synthesis pathway in the network. It aligns well with the literature by using cyanosulfidic photochemistry to generate glycolaldehyde and glyceraldehyde directly, avoiding the worst formaldehyde-initiation problem, and then employing Weber-style goethite-catalyzed C3+C3 condensation to ketohexoses under mild conditions. Fructose-to-glucose isomerization is chemically sound as an equilibrium process, although the network would be stronger if this final step were explicitly tied to alkaline mineral settings or environmental cycling rather than a generic biochemical stage. The pathway remains limited by the fact that selective glucose production from cyanosulfidic chemistry itself has not been demonstrated; instead, glucose arises only after coupling to a separate mineral condensation and isomerization module.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_009"
+        ],
+        "suggestions": [
+          "Specify the final isomerization conditions more explicitly, ideally as mild alkaline mineral-mediated Lobry de Bruyn-Alberda van Ekenstein equilibration.",
+          "Note that cyanosulfidic chemistry is experimentally strongest for C2-C5 products, with the C6 extension dependent on the separate goethite step."
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_003": 0.92,
+          "rxn_008": 0.85,
+          "rxn_010": 0.55
+        },
+        "chemical_feasibility": 0.76,
+        "pathway_coherence": 0.83,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.68,
+        "overall_confidence": 0.73,
+        "feedback": "This pathway is structurally similar to P3 but weaker because the sorbose-to-glucose conversion is less direct and less commonly emphasized than fructose-to-glucose equilibration in the literature. Sorbose is indeed a reported product of goethite-catalyzed glyceraldehyde condensation, so the branch is justified up to ketohexose formation. However, the final conversion to glucose is under-supported without a clearer mechanistic and environmental context. This route is plausible as a minor equilibration branch, not a primary glucose-producing pathway.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_010"
+        ],
+        "suggestions": [
+          "Treat sorbose as a side-product pool rather than a main route to glucose.",
+          "Provide literature support for sorbose-to-glucose interconversion or replace with better-supported fructose-mediated equilibration."
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_013": 0.88,
+          "rxn_005": 0.55,
+          "rxn_008": 0.9,
+          "rxn_009": 0.75
+        },
+        "chemical_feasibility": 0.77,
+        "pathway_coherence": 0.84,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.84,
+        "overall_confidence": 0.8,
+        "feedback": "This is a fairly strong pathway because extraterrestrial glycolaldehyde delivery is well supported and removes the weakest formaldehyde dimerization bottleneck. The remaining chemistry from glycolaldehyde/formaldehyde to glyceraldehyde and then to fructose/glucose is broadly plausible, with the goethite step again being the strongest part. Its weakness is continued reliance on a formose-style homologation module that remains low-selectivity and sensitive to side reactions. Still, as a seeding pathway this is literature-consistent and chemically more defensible than purely endogenous formaldehyde initiation.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_005"
+        ],
+        "suggestions": [
+          "Emphasize extraterrestrial glycolaldehyde as a seed that initiates downstream chemistry rather than relying on endogenous formaldehyde dimerization.",
+          "State explicitly that the homologation step is vulnerable to competing Cannizzaro and branching chemistry."
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_013": 0.95
+        },
+        "chemical_feasibility": 0.95,
+        "pathway_coherence": 0.72,
+        "environmental_progression": 0.62,
+        "target_achievement": 1.0,
+        "overall_confidence": 0.84,
+        "feedback": "Direct extraterrestrial delivery of glucose is strongly aligned with the Bennu findings and therefore highly plausible as a source term. However, it is not a synthesis pathway in the usual network sense and contributes little to understanding endogenous prebiotic glucose production. Environmental progression is weak because it bypasses most of the terrestrial network. As an availability module it is excellent; as a synthetic route it is incomplete.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Present this primarily as an exogenous supply route that augments, rather than replaces, terrestrial synthesis.",
+          "Include stabilization or accumulation context after delivery, since free glucose would still face degradation."
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_001": 0.35,
+          "rxn_002": 0.7,
+          "rxn_004": 0.25,
+          "rxn_005": 0.55,
+          "rxn_008": 0.85,
+          "rxn_010": 0.55
+        },
+        "chemical_feasibility": 0.54,
+        "pathway_coherence": 0.74,
+        "environmental_progression": 0.86,
+        "target_achievement": 0.66,
+        "overall_confidence": 0.63,
+        "feedback": "This route compounds two major weaknesses: the problematic formaldehyde-to-glycolaldehyde initiation and the relatively under-supported sorbose-to-glucose endpoint. While the environmental structure is reasonable, the chemistry is not competitive with the better-supported fructose branch. The literature suggests sorbose is a legitimate product of goethite-catalyzed C3 condensation, but not the best route onward to glucose.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_001",
+          "rxn_004",
+          "rxn_010"
+        ],
+        "suggestions": [
+          "Replace sorbose branch with fructose branch as the dominant route.",
+          "Avoid portraying canonical formose initiation as a robust route to linear sugar precursors."
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_001": 0.35,
+          "rxn_002": 0.7,
+          "rxn_004": 0.25,
+          "rxn_005": 0.55,
+          "rxn_007": 0.6,
+          "rxn_008": 0.6,
+          "rxn_009": 0.75
+        },
+        "chemical_feasibility": 0.54,
+        "pathway_coherence": 0.69,
+        "environmental_progression": 0.84,
+        "target_achievement": 0.7,
+        "overall_confidence": 0.62,
+        "feedback": "The tetrose-assisted branch is chemically conceivable within broader formose chemistry, but literature support for this specific route to glucose is much weaker than for direct C3+C3 ketohexose formation. The network summary says this pathway reaches the glucose pool through the tetrose branch, yet the explicit listed reactions do not clearly connect tetroses onward to a unique C6 product other than by relying on generic formose complexity. Given the 2025 evidence favoring branched sugars in mild formose systems, this pathway is especially uncertain.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_001",
+          "rxn_004",
+          "rxn_007"
+        ],
+        "suggestions": [
+          "Clarify the exact tetrose-to-hexose reaction sequence if retained.",
+          "Treat tetrose branching as a side-network rather than a principal glucose route unless supported by explicit literature."
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_003": 0.92,
+          "rxn_007": 0.6,
+          "rxn_008": 0.6,
+          "rxn_009": 0.75
+        },
+        "chemical_feasibility": 0.69,
+        "pathway_coherence": 0.71,
+        "environmental_progression": 0.88,
+        "target_achievement": 0.74,
+        "overall_confidence": 0.71,
+        "feedback": "The initial cyanosulfidic module is strong, but the tetrose-assisted extension to C6 is less well supported than the simpler direct glyceraldehyde condensation route. This pathway appears to mix a strong literature-backed C2/C3 generation scheme with a weaker generalized formose branch. It is possible, but not a compelling best path to glucose.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_007",
+          "rxn_008"
+        ],
+        "suggestions": [
+          "Prioritize direct goethite-catalyzed C3+C3 condensation rather than a tetrose-assisted detour.",
+          "If keeping the tetrose branch, provide explicit evidence for linear C6 formation rather than generic formose expansion."
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_013": 0.95,
+          "rxn_014": 0.9
+        },
+        "chemical_feasibility": 0.92,
+        "pathway_coherence": 0.88,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.96,
+        "overall_confidence": 0.9,
+        "feedback": "This is the strongest route in terms of target handling because it couples well-supported extraterrestrial glucose availability with equally well-supported borate-assisted phosphorylation to glucose 6-phosphate in evaporative prebiotic settings. It is not an endogenous synthesis pathway to glucose, but it is a highly credible pathway for glucose capture, stabilization, and entry into proto-metabolism. This matches the literature conclusion that multi-source supply plus environmental stabilization may be more realistic than selective de novo glucose synthesis.",
+        "approved": true,
+        "problematic_reactions": [],
+        "suggestions": [
+          "Frame this explicitly as a capture-and-activation pathway rather than synthesis de novo.",
+          "Specify the evaporative borate-rich mineral context for phosphorylation to maximize literature alignment."
+        ]
+      }
+    ],
+    "best_pathway_id": "P10",
+    "overall_confidence": 0.79,
+    "network_feedback": "The network is strong conceptually and clearly literature-aware, with good multi-environment integration and a sensible recognition that glucose likely emerged from convergent sources rather than a single clean pathway. Topology is adequate: it has sufficient node counts, clear hubs, and multiple convergence points. The best-supported modules are cyanosulfidic production of glycolaldehyde/glyceraldehyde, goethite-catalyzed condensation of glyceraldehyde to ketohexoses, extraterrestrial delivery of glycolaldehyde/glucose, and borate-assisted phosphorylation/stabilization. The weakest modules are the hydrothermal CO2-to-formaldehyde step and especially the canonical formose initiation from formaldehyde to glycolaldehyde, which the supplied literature identifies as the principal bottleneck and, under mild conditions, likely nonproductive for linear sugars. The network also overstates formose relevance to glucose because the 2025 literature suggests mild formose systems preferentially yield branched sugars. Another issue is schema-level incompleteness relative to the original network requirements: mineral agents and reaction conditions are not specified here, so environmental plausibility cannot be fully verified, and some reaction environments are too generic (notably biochemical-stage sugar isomerizations). Literature alignment is good overall because the network explicitly acknowledges the unsolved selectivity problem, uses Weber's goethite chemistry appropriately, includes Bennu delivery, and avoids claiming a single selective glucose synthesis. However, because several central reactions remain weakly grounded or under-specified, the network does not reach approval threshold.",
+    "approved": false,
+    "hub_quality": 0.85,
+    "convergence_quality": 0.88
+  },
+  "success": false,
+  "attempts": 1,
+  "notes": null
+}

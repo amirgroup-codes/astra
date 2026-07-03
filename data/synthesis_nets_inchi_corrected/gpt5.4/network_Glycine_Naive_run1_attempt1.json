@@ -1,0 +1,149 @@
+{
+  "target_molecule": "Glycine",
+  "network": {
+    "pathway_name": "Plausible prebiotic Strecker-type synthesis network to glycine",
+    "pathway_summary": "A simple prebiotic network in which formaldehyde, ammonia, hydrogen cyanide, and water form methanimine, then aminoacetonitrile, followed by hydrolysis through aminoacetamide to glycine. An alternative branch proceeds through glycolonitrile and converges on aminoacetonitrile.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2"
+      },
+      {
+        "id": "mol_002",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3"
+      },
+      {
+        "id": "mol_003",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": null,
+        "inchi": "InChI=1S/CHN/c1-2/h1H"
+      },
+      {
+        "id": "mol_004",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2"
+      },
+      {
+        "id": "mol_005",
+        "formula": "CH3N",
+        "iupac_name": "methanimine",
+        "common_name": null,
+        "inchi": "InChI=1S/CH3N/c1-2/h2H,1H2"
+      },
+      {
+        "id": "mol_006",
+        "formula": "C2H4N2",
+        "iupac_name": "2-aminoacetonitrile",
+        "common_name": "aminoacetonitrile",
+        "inchi": "InChI=1S/C2H4N2/c3-1-2-4/h1,3H2"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C2H6N2O",
+        "iupac_name": "2-aminoacetamide",
+        "common_name": "aminoacetamide",
+        "inchi": "InChI=1S/C2H6N2O/c3-1-2(4)5/h1,3H2,(H2,4,5)"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C2H5NO2",
+        "iupac_name": "2-aminoacetic acid",
+        "common_name": "glycine",
+        "inchi": "InChI=1S/C2H5NO2/c3-1-2(4)5/h1,3H2,(H,4,5)"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C2H3NO",
+        "iupac_name": "2-hydroxyacetonitrile",
+        "common_name": "glycolonitrile",
+        "inchi": "InChI=1S/C2H3NO/c3-1-2-4/h4H,2H2"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_005",
+          "mol_004"
+        ],
+        "reaction_name": "Imine formation",
+        "description": "Formaldehyde condenses with ammonia to form methanimine and water."
+      },
+      {
+        "id": "rxn_002",
+        "inputs": [
+          "mol_005",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "reaction_name": "Cyanide addition to imine",
+        "description": "Methanimine reacts with hydrogen cyanide to form aminoacetonitrile."
+      },
+      {
+        "id": "rxn_003",
+        "inputs": [
+          "mol_006",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_007"
+        ],
+        "reaction_name": "Partial nitrile hydrolysis",
+        "description": "Aminoacetonitrile hydrolyzes to aminoacetamide."
+      },
+      {
+        "id": "rxn_004",
+        "inputs": [
+          "mol_007",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_008",
+          "mol_002"
+        ],
+        "reaction_name": "Amide hydrolysis",
+        "description": "Aminoacetamide hydrolyzes to glycine with release of ammonia."
+      },
+      {
+        "id": "rxn_005",
+        "inputs": [
+          "mol_001",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_009"
+        ],
+        "reaction_name": "Cyanohydrin formation",
+        "description": "Formaldehyde reacts with hydrogen cyanide to form glycolonitrile."
+      },
+      {
+        "id": "rxn_006",
+        "inputs": [
+          "mol_009",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_006",
+          "mol_004"
+        ],
+        "reaction_name": "Amination of glycolonitrile",
+        "description": "Glycolonitrile reacts with ammonia to form aminoacetonitrile and water."
+      }
+    ]
+  }
+}

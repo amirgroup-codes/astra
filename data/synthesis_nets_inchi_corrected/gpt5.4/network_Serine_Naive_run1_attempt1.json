@@ -1,0 +1,194 @@
+{
+  "target_molecule": "Serine",
+  "network": {
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2"
+      },
+      {
+        "id": "mol_002",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H"
+      },
+      {
+        "id": "mol_003",
+        "formula": "C2H3NO",
+        "iupac_name": "2-hydroxyethanenitrile",
+        "common_name": "glycolonitrile",
+        "inchi": "InChI=1S/C2H3NO/c3-1-2-4/h4H,2H2"
+      },
+      {
+        "id": "mol_004",
+        "formula": "C2H4O2",
+        "iupac_name": "2-hydroxyethanal",
+        "common_name": "glycolaldehyde",
+        "inchi": "InChI=1S/C2H4O2/c3-1-2-4/h1,4H,2H2"
+      },
+      {
+        "id": "mol_005",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3"
+      },
+      {
+        "id": "mol_006",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C2H5NO",
+        "iupac_name": "2-hydroxyethan-1-imine",
+        "common_name": "glycolaldehyde imine",
+        "inchi": null
+      },
+      {
+        "id": "mol_008",
+        "formula": "C3H6N2O",
+        "iupac_name": "2-amino-3-hydroxypropanenitrile",
+        "common_name": "serine nitrile",
+        "inchi": "InChI=1S/C3H6N2O/c4-1-3(5)2-6/h3,6H,2,5H2"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C3H7NO3",
+        "iupac_name": "2-amino-3-hydroxypropanoic acid",
+        "common_name": "serine",
+        "inchi": "InChI=1S/C3H7NO3/c4-2(1-5)3(6)7/h2,5H,1,4H2,(H,6,7)"
+      },
+      {
+        "id": "mol_010",
+        "formula": "HSO3-",
+        "iupac_name": "hydrogensulfite",
+        "common_name": "bisulfite",
+        "inchi": "InChI=1S/H2O3S/c1-4(2)3/h(H2,1,2,3)/p-1"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C2H5NO4S",
+        "iupac_name": null,
+        "common_name": "glycolaldehyde amino-sulfonate reservoir",
+        "inchi": null
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_003"
+        ],
+        "reaction_type": "cyanohydrin formation",
+        "description": "Formaldehyde reacts with hydrogen cyanide to give glycolonitrile."
+      },
+      {
+        "id": "rxn_002",
+        "inputs": [
+          "mol_003",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_004",
+          "mol_005"
+        ],
+        "reaction_type": "hydrolysis / reductive homologation sequence",
+        "description": "Glycolonitrile is converted to glycolaldehyde, releasing ammonia in the literature-supported prebiotic network."
+      },
+      {
+        "id": "rxn_003",
+        "inputs": [
+          "mol_004",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_007",
+          "mol_006"
+        ],
+        "reaction_type": "imine formation",
+        "description": "Glycolaldehyde condenses with ammonia to form a glycolaldehyde imine/hemiaminal pool."
+      },
+      {
+        "id": "rxn_004",
+        "inputs": [
+          "mol_007",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "reaction_type": "Strecker cyanide addition",
+        "description": "The imine derived from glycolaldehyde undergoes cyanide addition to form serine nitrile."
+      },
+      {
+        "id": "rxn_005",
+        "inputs": [
+          "mol_008",
+          "mol_006",
+          "mol_006"
+        ],
+        "outputs": [
+          "mol_009",
+          "mol_005"
+        ],
+        "reaction_type": "nitrile hydrolysis",
+        "description": "Serine nitrile hydrolyzes to serine under aqueous acidic or thermally driven conditions."
+      },
+      {
+        "id": "rxn_006",
+        "inputs": [
+          "mol_004",
+          "mol_005",
+          "mol_010"
+        ],
+        "outputs": [
+          "mol_011"
+        ],
+        "reaction_type": "reservoir formation",
+        "description": "In bisulfite-rich environments, glycolaldehyde can be trapped as an amino-sulfonate reservoir."
+      },
+      {
+        "id": "rxn_007",
+        "inputs": [
+          "mol_011",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "reaction_type": "reservoir release and cyanide addition",
+        "description": "The amino-sulfonate reservoir can still feed into serine nitrile formation in plausible prebiotic aqueous settings."
+      }
+    ]
+  },
+  "primary_pathway": [
+    "mol_001",
+    "mol_003",
+    "mol_004",
+    "mol_007",
+    "mol_008",
+    "mol_009"
+  ],
+  "notes": {
+    "pathway_class": "prebiotic Strecker-type synthesis",
+    "starting_feedstocks": [
+      "formaldehyde",
+      "hydrogen cyanide",
+      "ammonia",
+      "water"
+    ],
+    "optional_geochemical_component": "bisulfite",
+    "plausibility_note": "This is a chemically plausible prebiotic network rather than a single universally established historical pathway."
+  }
+}

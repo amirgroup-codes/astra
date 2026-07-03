@@ -1,0 +1,181 @@
+{
+  "target_molecule": "L-Glutamate",
+  "network": {
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3"
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen gas",
+        "inchi": "InChI=1S/H2/h1H"
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3"
+      },
+      {
+        "id": "mol_004",
+        "formula": "H2O",
+        "iupac_name": "oxidane",
+        "common_name": "water",
+        "inchi": "InChI=1S/H2O/h1H2"
+      },
+      {
+        "id": "mol_005",
+        "formula": "CH2O2",
+        "iupac_name": "formic acid",
+        "common_name": "formic acid",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)"
+      },
+      {
+        "id": "mol_006",
+        "formula": "CO",
+        "iupac_name": "carbon monoxide",
+        "common_name": "carbon monoxide",
+        "inchi": "InChI=1S/CO/c1-2"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C3H4O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvate",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C4H4O5",
+        "iupac_name": "3-carboxy-2-oxopropanoic acid",
+        "common_name": "oxaloacetate",
+        "inchi": "InChI=1S/C4H4O5/c5-2(4(8)9)1-3(6)7/h1H2,(H,6,7)(H,8,9)"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C6H8O7",
+        "iupac_name": "2-hydroxypropane-1,2,3-tricarboxylic acid",
+        "common_name": "citrate",
+        "inchi": "InChI=1S/C6H8O7/c7-3(8)1-6(13,5(11)12)2-4(9)10/h13H,1-2H2,(H,7,8)(H,9,10)(H,11,12)"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C5H6O5",
+        "iupac_name": "2-oxopentanedioic acid",
+        "common_name": "alpha-ketoglutarate",
+        "inchi": "InChI=1S/C5H6O5/c6-3(5(9)10)1-2-4(7)8/h1-2H2,(H,7,8)(H,9,10)"
+      },
+      {
+        "id": "mol_011",
+        "formula": "C5H9NO4",
+        "iupac_name": "(2S)-2-aminopentanedioic acid",
+        "common_name": "L-glutamate",
+        "inchi": "InChI=1S/C5H9NO4/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H,7,8)(H,9,10)/t3-/m0/s1"
+      },
+      {
+        "id": "mol_012",
+        "formula": "C2H3NOS",
+        "iupac_name": "ethanethioic S-acid",
+        "common_name": "acetyl-thioester",
+        "inchi": "InChI=1S/C2H4OS/c1-2(3)4/h1H3,(H,3,4)"
+      },
+      {
+        "id": "mol_013",
+        "formula": "H2S",
+        "iupac_name": "hydrogen sulfide",
+        "common_name": "hydrogen sulfide",
+        "inchi": "InChI=1S/H2S/h1H2"
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Fischer-Tropsch reduction",
+        "description": "CO2 reduced by H2 on Fe-Ni sulfide mineral surfaces at hydrothermal vents (100-250\u00b0C)",
+        "catalyst": "FeS / NiS minerals",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_005"
+        ]
+      },
+      {
+        "id": "rxn_002",
+        "name": "Carbonylation to pyruvate",
+        "description": "Formic acid undergoes carbonylation and reduction via acetyl-thioester intermediates on iron-sulfur surfaces",
+        "catalyst": "FeS surfaces",
+        "inputs": [
+          "mol_005",
+          "mol_006",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_007"
+        ]
+      },
+      {
+        "id": "rxn_003",
+        "name": "Reductive carboxylation",
+        "description": "Pyruvate gains a carboxyl group from CO2 via Fe2+-catalyzed reductive carboxylation under hydrothermal conditions",
+        "catalyst": "Fe2+ ions, mineral surfaces",
+        "inputs": [
+          "mol_007",
+          "mol_001"
+        ],
+        "outputs": [
+          "mol_008"
+        ]
+      },
+      {
+        "id": "rxn_004",
+        "name": "Proto-TCA condensation",
+        "description": "Oxaloacetate condenses with an acetyl-thioester to form citrate, mimicking the first step of the reverse TCA cycle",
+        "catalyst": "FeS / NiS minerals",
+        "inputs": [
+          "mol_008",
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_009"
+        ]
+      },
+      {
+        "id": "rxn_005",
+        "name": "Oxidative decarboxylation",
+        "description": "Citrate undergoes dehydration, isomerization, and oxidative decarboxylation on mineral surfaces to yield alpha-ketoglutarate",
+        "catalyst": "Fe-S mineral clusters",
+        "inputs": [
+          "mol_009"
+        ],
+        "outputs": [
+          "mol_010",
+          "mol_001"
+        ]
+      },
+      {
+        "id": "rxn_006",
+        "name": "Reductive amination",
+        "description": "Alpha-ketoglutarate reacts with dissolved NH3, reduced by Fe2+ or H2S, to form L-glutamate",
+        "catalyst": "Fe2+ / H2S as reductant",
+        "inputs": [
+          "mol_010",
+          "mol_003",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_011",
+          "mol_004"
+        ]
+      }
+    ]
+  }
+}

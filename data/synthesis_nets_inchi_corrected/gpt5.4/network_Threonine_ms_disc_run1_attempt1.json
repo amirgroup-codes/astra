@@ -1,0 +1,997 @@
+{
+  "target_molecule": "Threonine",
+  "network": {
+    "target_molecule": "Threonine",
+    "overall_strategy": "This network targets threonine through a connected prebiotic graph that links hydrothermal carbon fixation and aldehyde generation to surface cyanide chemistry and final biochemical-style assembly. Because the literature specifically supports Strecker chemistry, phosphoro-Strecker chemistry, abiotic \u03b1-ketoacid conversion, hydrothermal synthesis contexts, cyanosulfidic/surface-UV precursor generation, and dry-wet peptide-forming settings, the network uses these as the primary routes. Convergence is centered on formaldehyde, acetaldehyde, HCN, glyoxylate, and 2-oxobutanoic acid as hub intermediates. Ten distinct pathways to threonine are represented by different combinations of hydrothermal precursor formation, surface aminonitrile generation, phosphoro-Strecker branching, \u03b1-ketoacid assembly, and final hydrolysis/transamination steps.",
+    "molecules": [
+      {
+        "id": "mol_001",
+        "formula": "CO2",
+        "iupac_name": "carbon dioxide",
+        "common_name": "carbon dioxide",
+        "inchi": "InChI=1S/CO2/c2-1-3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_002",
+        "formula": "H2",
+        "iupac_name": "molecular hydrogen",
+        "common_name": "hydrogen",
+        "inchi": "InChI=1S/H2/h1H",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_003",
+        "formula": "NH3",
+        "iupac_name": "azane",
+        "common_name": "ammonia",
+        "inchi": "InChI=1S/H3N/h1H3",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_004",
+        "formula": "HCN",
+        "iupac_name": "hydrogen cyanide",
+        "common_name": "hydrogen cyanide",
+        "inchi": "InChI=1S/CHN/c1-2/h1H",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_005",
+        "formula": "CH2O",
+        "iupac_name": "methanal",
+        "common_name": "formaldehyde",
+        "inchi": "InChI=1S/CH2O/c1-2/h1H2",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_006",
+        "formula": "CH2O2",
+        "iupac_name": "methanoic acid",
+        "common_name": "formate/formic acid",
+        "inchi": "InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_007",
+        "formula": "C2H4O",
+        "iupac_name": "ethanal",
+        "common_name": "acetaldehyde",
+        "inchi": "InChI=1S/C2H4O/c1-2-3/h2H,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_008",
+        "formula": "C2H2O3",
+        "iupac_name": "2-oxoacetic acid",
+        "common_name": "glyoxylic acid",
+        "inchi": "InChI=1S/C2H2O3/c3-1-2(4)5/h1H,(H,4,5)",
+        "role": "hub_intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_009",
+        "formula": "C3H6O3",
+        "iupac_name": "2-oxopropanoic acid",
+        "common_name": "pyruvic acid",
+        "inchi": "InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)",
+        "role": "intermediate",
+        "environment_formed": "Hydrothermal"
+      },
+      {
+        "id": "mol_010",
+        "formula": "C2H3NO",
+        "iupac_name": "methanamide",
+        "common_name": "formamide",
+        "inchi": "InChI=1S/CH3NO/c2-1-3/h1H,(H2,2,3)",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_011",
+        "formula": "CH5N3O2P",
+        "iupac_name": "diamidophosphoric acid",
+        "common_name": "diamidophosphate",
+        "inchi": "InChI=1S/H5N2O2P/c1-5(2,3)4/h(H5,1,2,3,4)",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_012",
+        "formula": "H2S",
+        "iupac_name": "sulfane",
+        "common_name": "hydrogen sulfide",
+        "inchi": "InChI=1S/H2S/h1H2",
+        "role": "starting",
+        "environment_formed": null
+      },
+      {
+        "id": "mol_013",
+        "formula": "C3H4N2",
+        "iupac_name": "2-aminopropanenitrile",
+        "common_name": "alanine aminonitrile",
+        "inchi": "InChI=1S/C3H6N2/c1-3(5)2-4/h3H,5H2,1H3",
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_014",
+        "formula": "C4H6N2O",
+        "iupac_name": "2-amino-3-hydroxybutanenitrile",
+        "common_name": "threonine aminonitrile",
+        "inchi": "InChI=1S/C4H8N2O/c1-3(7)4(6)2-5/h3-4,7H,6H2,1H3",
+        "role": "hub_intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_015",
+        "formula": "C4H9NO3",
+        "iupac_name": "2-amino-3-hydroxybutanoic acid",
+        "common_name": "threonine",
+        "inchi": "InChI=1S/C4H9NO3/c1-2(6)3(5)4(7)8/h2-3,6H,5H2,1H3,(H,7,8)",
+        "role": "target",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_016",
+        "formula": "C4H6O3",
+        "iupac_name": "2-oxobutanoic acid",
+        "common_name": "2-ketobutyric acid",
+        "inchi": "InChI=1S/C4H6O3/c1-2-3(5)4(6)7/h2H2,1H3,(H,6,7)",
+        "role": "hub_intermediate",
+        "environment_formed": "Biochemical"
+      },
+      {
+        "id": "mol_017",
+        "formula": "C4H7N2O3P",
+        "iupac_name": "N-phosphoro-2-amino-3-hydroxybutanenitrile",
+        "common_name": "N-phosphoroaminonitrile of threonine",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_018",
+        "formula": "C4H10NO6P",
+        "iupac_name": "N-phosphoro-2-amino-3-hydroxybutanoic acid",
+        "common_name": "N-phosphoramidic acid precursor to threonine",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_019",
+        "formula": "C4H9NOS",
+        "iupac_name": "2-amino-3-hydroxybutanethioamide",
+        "common_name": "threonine aminothioamide",
+        "inchi": null,
+        "role": "intermediate",
+        "environment_formed": "Surface"
+      },
+      {
+        "id": "mol_020",
+        "formula": "H3PO4",
+        "iupac_name": "phosphoric acid",
+        "common_name": "phosphate",
+        "inchi": "InChI=1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)",
+        "role": "starting",
+        "environment_formed": null
+      }
+    ],
+    "reactions": [
+      {
+        "id": "rxn_001",
+        "name": "Hydrothermal CO2 reduction to formate",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_006"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "greigite",
+          "mackinawite"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "greigite/mackinawite",
+          "aqueous": "true",
+          "other": "alkaline vent conditions, anoxic, H2-rich"
+        },
+        "mechanism": "Mineral-surface reduction of CO2 by H2 through Fe-S mediated electron transfer to give formate.",
+        "reasoning": "Directly follows the reported hydrothermal vent framework where greigite and related Fe-S phases reduce CO2 to formate under alkaline, H2-rich conditions; this is a standard prebiotic carbon-fixation entry point linked to vent chemistry and lower-temperature alkaline systems relevant to amino-acid precursor synthesis (Huber & Wachtershauser, 1997; Cody et al., 2000; Russell & Martin, 2004)."
+      },
+      {
+        "id": "rxn_002",
+        "name": "Hydrothermal Fischer-Tropsch-type formation of formaldehyde and acetaldehyde",
+        "inputs": [
+          "mol_001",
+          "mol_002"
+        ],
+        "outputs": [
+          "mol_005",
+          "mol_007"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite",
+          "elemental iron"
+        ],
+        "conditions": {
+          "temperature": "360-500K",
+          "pressure": "high",
+          "catalyst": "magnetite",
+          "aqueous": "true",
+          "other": "anoxic hydrothermal/subseafloor setting; FTT-type carbon hydrogenation"
+        },
+        "mechanism": "Successive CO2/CO hydrogenation on magnetite/Fe0 surfaces generates reduced C1-C2 carbonyl compounds including formaldehyde and acetaldehyde.",
+        "reasoning": "The literature report specifically identifies magnetite as the best-supported mineral catalyst for prebiotic FTT chemistry, producing primordial organics from reduced carbon feedstocks; acetaldehyde and formaldehyde are plausible carbonyl outputs needed for Strecker and carbon-backbone extension chemistry feeding threonine synthesis (McCollom, 2013; Cody et al., 2000; sources summarized in KB results on magnetite and FTT chemistry)."
+      },
+      {
+        "id": "rxn_003",
+        "name": "Hydrothermal generation of glyoxylate and pyruvate from fixed carbon",
+        "inputs": [
+          "mol_006",
+          "mol_005"
+        ],
+        "outputs": [
+          "mol_008",
+          "mol_009"
+        ],
+        "environment": "Hydrothermal",
+        "agents": [
+          "magnetite",
+          "pyrite"
+        ],
+        "conditions": {
+          "temperature": "350-400K",
+          "pressure": "high",
+          "catalyst": "magnetite/pyrite",
+          "aqueous": "true",
+          "other": "anoxic hydrothermal circulation; protometabolic carbon-fixation context"
+        },
+        "mechanism": "Surface-mediated carbonyl coupling and redox equilibration convert reduced C1 inputs into \u03b1-ketoacids including glyoxylate and pyruvate.",
+        "reasoning": "The knowledge base specifically identifies glyoxylate and pyruvate as prebiotically relevant precursor molecules and protometabolic hubs connected to amino-acid formation. Exact stepwise mineral-specific yields are not established for threonine synthesis, so this reaction is a necessary connecting abstraction grounded in hydrothermal protometabolic \u03b1-ketoacid chemistry and marked as a literature-supported but network-level simplification (Muchowska et al., 2020; Keller et al., 2014; sources 995, 9332, 9334 summarized in KB findings)."
+      },
+      {
+        "id": "rxn_004",
+        "name": "Surface UV production of HCN and formamide from formaldehyde feedstocks",
+        "inputs": [
+          "mol_005",
+          "mol_003"
+        ],
+        "outputs": [
+          "mol_004",
+          "mol_010"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "TiO2",
+          "sulfide minerals"
+        ],
+        "conditions": {
+          "temperature": "300-350K",
+          "pressure": "1 atm",
+          "catalyst": "TiO2",
+          "aqueous": "true",
+          "other": "UV-irradiated shallow pools, anoxic, evaporation-concentration cycles"
+        },
+        "mechanism": "Photochemical oxidation-reduction and nitrile-forming chemistry generate cyanide-bearing feedstocks and formamide from reduced carbon and nitrogen sources.",
+        "reasoning": "The research summary explicitly lists surface/UV chemistry, HCN chemistry, and formamide-producing photochemistry as plausible prebiotic routes relevant to amino-acid/nucleobase precursor formation, though not uniquely specific to threonine. This step is included as a literature-grounded connector to supply HCN for Strecker and phosphoro-Strecker routes (Sutherland, 2016; Patel et al., 2015; Ferris & Hagan, 1984; sources 21187, 9381, 9382, 6942 summarized in KB findings)."
+      },
+      {
+        "id": "rxn_005",
+        "name": "Cyanosulfidic conversion of formaldehyde to glyoxylate",
+        "inputs": [
+          "mol_005",
+          "mol_004",
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_008"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals",
+          "TiO2"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide minerals",
+          "aqueous": "true",
+          "other": "UV-driven cyanosulfidic chemistry in shallow surface waters"
+        },
+        "mechanism": "HCN-derived and sulfide-assisted photoredox chemistry channels C1 carbonyls into more oxidized C2 species such as glyoxylate.",
+        "reasoning": "The literature summary specifically names cyanosulfidic chemistry, glycolonitrile-derived networks, bisulfite/sulfur intermediates, and glyoxylate as relevant precursor chemistry, even if a direct one-step threonine route is unresolved. This reaction represents a concise literature-based connection to the glyoxylate hub (Patel et al., 2015; Ritson & Sutherland, 2012; sources 9381, 9382, 16400 summarized in KB findings)."
+      },
+      {
+        "id": "rxn_006",
+        "name": "Surface Strecker synthesis of alanine aminonitrile from acetaldehyde",
+        "inputs": [
+          "mol_007",
+          "mol_003",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_013"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "montmorillonite",
+          "TiO2"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "montmorillonite",
+          "aqueous": "true",
+          "other": "evaporitic pool or tidal-flat concentration, anoxic"
+        },
+        "mechanism": "Acetaldehyde forms an imine with ammonia, cyanide adds to the iminium carbon, producing an aminonitrile.",
+        "reasoning": "The Strecker reaction is one of the best-supported prebiotic amino-acid synthesis pathways in the supplied literature and explicitly involves aldehydes, NH3, and HCN to give aminonitriles. Alanine aminonitrile is included as a connected aminonitrile branch and a nitrogen donor surrogate for later abiotic amination logic (Strecker, 1850; Miller, 1953; Or\u00f3, 1961; sources 6940, 6942, 985 summarized in KB findings)."
+      },
+      {
+        "id": "rxn_007",
+        "name": "Surface phosphoro-Strecker formation of threonine N-phosphoroaminonitrile",
+        "inputs": [
+          "mol_007",
+          "mol_004",
+          "mol_011"
+        ],
+        "outputs": [
+          "mol_017"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "phosphate minerals",
+          "montmorillonite"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "phosphate minerals",
+          "aqueous": "true",
+          "other": "neutral pH ~7; concentrated shallow-water setting"
+        },
+        "mechanism": "Diamidophosphate activates the aldehyde/amine/cyanide sequence to form an N-phosphoroaminonitrile selectively from aldehydes.",
+        "reasoning": "This directly follows the phosphoro-Strecker route described in the literature summary: aldehyde + DAP + HCN at pH 7 forms N-phosphoroaminonitriles, with selectivity for aldehydes over ketones. For threonine, the relevant aldehydic precursor is represented by the connected acetaldehyde-based branch as a minimal literature-faithful abstraction for C4 threonine precursor assembly (Closs et al., 2020; Liu et al., 2019; sources 21192, 21193 summarized in KB findings)."
+      },
+      {
+        "id": "rxn_008",
+        "name": "Surface alkaline hydrolysis of threonine N-phosphoroaminonitrile to phosphoramidic acid",
+        "inputs": [
+          "mol_017"
+        ],
+        "outputs": [
+          "mol_018"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "phosphate minerals",
+          "borate minerals"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "phosphate minerals",
+          "aqueous": "true",
+          "other": "alkaline pH ~13 during hydrolysis step"
+        },
+        "mechanism": "Nitrile hydration/hydrolysis under alkaline conditions converts the phosphoroaminonitrile into the corresponding phosphoramidic acid species.",
+        "reasoning": "The supplied literature explicitly states that phosphoroaminonitriles hydrolyze at pH 13 to N-phosphoramidic acids. This step is therefore directly imposed from the literature-guided phosphoro-Strecker framework (Closs et al., 2020; Liu et al., 2019; sources 21192, 21193 summarized in KB findings)."
+      },
+      {
+        "id": "rxn_009",
+        "name": "Surface H2S conversion of phosphoro intermediate to threonine aminothioamide",
+        "inputs": [
+          "mol_017",
+          "mol_012"
+        ],
+        "outputs": [
+          "mol_019"
+        ],
+        "environment": "Surface",
+        "agents": [
+          "sulfide minerals",
+          "phosphate minerals"
+        ],
+        "conditions": {
+          "temperature": "300-330K",
+          "pressure": "1 atm",
+          "catalyst": "sulfide minerals",
+          "aqueous": "true",
+          "other": "near-neutral pH ~7 with dissolved H2S"
+        },
+        "mechanism": "Sulfur incorporation transforms the activated phosphoroaminonitrile manifold into an aminothioamide branch.",
+        "reasoning": "The literature summary explicitly notes conversion of phosphoroaminonitrile intermediates with H2S at pH 7 to aminothioamides. This provides a second experimentally motivated branch from the phosphoro-Strecker node toward threonine-related products (Closs et al., 2020; Liu et al., 2019; sources 21192, 21193 summarized in KB findings)."
+      },
+      {
+        "id": "rxn_010",
+        "name": "Biochemical-style assembly of 2-oxobutanoic acid from glyoxylate and acetaldehyde",
+        "inputs": [
+          "mol_008",
+          "mol_007"
+        ],
+        "outputs": [
+          "mol_016"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "null"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "prebiotic pool or mineral-interface carbonyl condensation/transformation"
+        },
+        "mechanism": "Carbonyl addition and rearrangement generate a C4 \u03b1-ketoacid, 2-oxobutanoic acid, from C2 aldehyde and glyoxylate inputs.",
+        "reasoning": "The literature emphasizes glyoxylate and pyruvate as central prebiotic \u03b1-ketoacid precursors and supports abiotic conversion of \u03b1-ketoacids as a route to amino acids. A direct threonine-specific route via 2-oxobutanoate is not explicitly demonstrated in the supplied report, so this reaction is a necessary but speculative connector that preserves the reported centrality of \u03b1-ketoacid chemistry and keeps the network fully connected (Muchowska et al., 2020; source 6987/6944 and 995 summarized in KB findings)."
+      },
+      {
+        "id": "rxn_011",
+        "name": "Biochemical-style abiotic conversion of 2-oxobutanoic acid to threonine",
+        "inputs": [
+          "mol_016",
+          "mol_003",
+          "mol_004"
+        ],
+        "outputs": [
+          "mol_014",
+          "mol_015"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "null"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "anoxic aqueous pool; imine-like intermediates; cyanide-assisted or transamination-like conversion"
+        },
+        "mechanism": "2-Oxobutanoic acid undergoes non-enzymatic amination through imine-like intermediates and cyanide-assisted capture, giving threonine aminonitrile and/or direct threonine after hydrolysis.",
+        "reasoning": "This follows the literature-supported concept of abiotic \u03b1-ketoacid-to-amino-acid conversion using ammonia/cyanide sources and imine-like intermediates, applied here to the threonine keto-acid precursor. Exact threonine-specific experimental conditions were not provided in the report, so this is marked as a literature-motivated extrapolation necessary to complete the target network (Barge et al., 2019; source 1026; source 6987/6944 summarized in KB findings)."
+      },
+      {
+        "id": "rxn_012",
+        "name": "Biochemical hydrolysis of threonine aminonitrile and phosphoro/thioamide precursors to threonine",
+        "inputs": [
+          "mol_014",
+          "mol_018",
+          "mol_019"
+        ],
+        "outputs": [
+          "mol_015",
+          "mol_020"
+        ],
+        "environment": "Biochemical",
+        "agents": [
+          "null"
+        ],
+        "conditions": {
+          "temperature": "300-370K",
+          "pressure": "1 atm",
+          "catalyst": "null",
+          "aqueous": "true",
+          "other": "wet-dry cycling, variable pH including acidic episodes around pH 1.5 for aminonitrile release"
+        },
+        "mechanism": "Hydrolysis of aminonitrile, phosphoramidic acid, and thioamide derivatives yields the free amino acid threonine, with phosphate released from phosphoro intermediates.",
+        "reasoning": "This endpoint combines the literature-supported hydrolytic fates of Strecker and phosphoro-Strecker intermediates. The supplied report explicitly notes aminonitrile formation at low pH ~1.5 in the phosphoro-Strecker manifold and hydrolysis of aminonitriles to amino acids in classic Strecker chemistry. Dry-wet cycling is included because the literature also highlights such cycling as relevant to prebiotic amino-acid processing and assembly (Closs et al., 2020; Liu et al., 2019; Strecker, 1850; sources 21192, 21193, 6940, 512 summarized in KB findings)."
+      }
+    ],
+    "pathways": [
+      {
+        "pathway_id": "P1",
+        "name": "Hydrothermal aldehyde to ketoacid to threonine",
+        "description": "Vent-derived acetaldehyde and glyoxylate converge through a C4 \u03b1-ketoacid intermediate, followed by abiotic amination to threonine.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_010",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_008",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "name": "Hydrothermal fixed carbon via formate to glyoxylate route",
+        "description": "CO2 reduction first yields formate, then glyoxylate/pyruvate, feeding the \u03b1-ketoacid route to threonine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_003",
+          "rxn_010",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_008",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "name": "Surface UV cyanide-enabled ketoacid amination route",
+        "description": "Hydrothermal formaldehyde is photochemically converted to cyanide-bearing surface feedstocks, supporting subsequent \u03b1-ketoacid amination to threonine.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_004",
+          "rxn_003",
+          "rxn_010",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_004",
+          "mol_008",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "name": "Cyanosulfidic glyoxylate branch to threonine",
+        "description": "Surface cyanosulfidic chemistry generates glyoxylate from formaldehyde and HCN, then proceeds through the \u03b1-ketoacid route.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_010",
+          "rxn_011"
+        ],
+        "key_intermediates": [
+          "mol_005",
+          "mol_004",
+          "mol_008",
+          "mol_016"
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "name": "Direct phosphoro-Strecker to phosphoramidic acid to threonine",
+        "description": "Surface acetaldehyde enters the DAP-mediated phosphoro-Strecker network, then hydrolyzes through the phosphoramidic acid branch to threonine.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_004",
+          "rxn_007",
+          "rxn_008",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_004",
+          "mol_017",
+          "mol_018"
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "name": "Direct phosphoro-Strecker thioamide branch to threonine",
+        "description": "DAP-mediated threonine precursor formation diverges into an H2S-driven aminothioamide route before final hydrolysis to threonine.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_004",
+          "rxn_007",
+          "rxn_009",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_017",
+          "mol_019"
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "name": "Ketoacid route with aminonitrile capture",
+        "description": "The \u03b1-ketoacid precursor 2-oxobutanoate is aminated in the presence of ammonia and cyanide to threonine aminonitrile, then hydrolyzed to threonine.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_003",
+          "rxn_010",
+          "rxn_011",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_008",
+          "mol_016",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "name": "Hydrothermal-to-surface integrated Strecker-like target route",
+        "description": "Hydrothermal aldehydes feed a surface cyanide network, then a biochemical hydrolysis step yields threonine through aminonitrile intermediacy.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_004",
+          "rxn_007",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_007",
+          "mol_004",
+          "mol_017",
+          "mol_014"
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "name": "Formate-supported integrated phosphoro-Strecker route",
+        "description": "CO2 fixation to formate supports hydrothermal carbonyl production; acetaldehyde then enters the phosphoro-Strecker manifold and hydrolyzes to threonine.",
+        "reaction_sequence": [
+          "rxn_001",
+          "rxn_002",
+          "rxn_004",
+          "rxn_007",
+          "rxn_008",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_006",
+          "mol_007",
+          "mol_017",
+          "mol_018"
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "name": "Cyanosulfidic-glyoxylate plus phosphoro-Strecker hybrid route",
+        "description": "Surface HCN/H2S chemistry and the DAP-mediated phosphoro-Strecker route operate in parallel, converging through hydrolytic release of threonine.",
+        "reaction_sequence": [
+          "rxn_002",
+          "rxn_004",
+          "rxn_005",
+          "rxn_007",
+          "rxn_009",
+          "rxn_012"
+        ],
+        "key_intermediates": [
+          "mol_004",
+          "mol_008",
+          "mol_017",
+          "mol_019"
+        ]
+      }
+    ],
+    "hub_molecules": [
+      "mol_004",
+      "mol_005",
+      "mol_007",
+      "mol_008",
+      "mol_016"
+    ],
+    "convergence_points": [
+      {
+        "molecule_id": "mol_004",
+        "incoming_reactions": [
+          "rxn_004"
+        ],
+        "outgoing_reactions": [
+          "rxn_005",
+          "rxn_006",
+          "rxn_007",
+          "rxn_011"
+        ]
+      },
+      {
+        "molecule_id": "mol_007",
+        "incoming_reactions": [
+          "rxn_002"
+        ],
+        "outgoing_reactions": [
+          "rxn_006",
+          "rxn_007",
+          "rxn_010"
+        ]
+      },
+      {
+        "molecule_id": "mol_008",
+        "incoming_reactions": [
+          "rxn_003",
+          "rxn_005"
+        ],
+        "outgoing_reactions": [
+          "rxn_010"
+        ]
+      },
+      {
+        "molecule_id": "mol_016",
+        "incoming_reactions": [
+          "rxn_010"
+        ],
+        "outgoing_reactions": [
+          "rxn_011"
+        ]
+      },
+      {
+        "molecule_id": "mol_015",
+        "incoming_reactions": [
+          "rxn_011",
+          "rxn_012"
+        ],
+        "outgoing_reactions": []
+      }
+    ]
+  },
+  "evaluation": {
+    "target_molecule": "Threonine",
+    "pathway_evaluations": [
+      {
+        "pathway_id": "P1",
+        "reaction_scores": {
+          "rxn_002": 0.72,
+          "rxn_003": 0.38,
+          "rxn_010": 0.22,
+          "rxn_011": 0.28
+        },
+        "chemical_feasibility": 0.36,
+        "pathway_coherence": 0.58,
+        "environmental_progression": 0.74,
+        "target_achievement": 0.42,
+        "overall_confidence": 0.47,
+        "feedback": "Connected route exists, but the core C4-building chemistry is weak. Hydrothermal generation of simple aldehydes is broadly plausible, yet the coupled formation of glyoxylate and pyruvate from formate/formaldehyde is underspecified, and the assembly of 2-ketobutyrate from glyoxylate plus acetaldehyde is not a standard prebiotic route. The final abiotic conversion of 2-ketobutyrate directly to threonine with NH3 and HCN is especially problematic because it appears to collapse aminonitrile formation and hydrolysis into one step without adequate justification.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_003",
+          "rxn_010",
+          "rxn_011"
+        ],
+        "suggestions": [
+          "Replace rxn_010 with a literature-grounded route to 2-ketobutyrate or remove the ketoacid branch if unsupported.",
+          "Split rxn_011 into aminonitrile formation and separate hydrolysis to threonine.",
+          "Specify clearer carbon accounting and conditions for rxn_003."
+        ]
+      },
+      {
+        "pathway_id": "P2",
+        "reaction_scores": {
+          "rxn_001": 0.83,
+          "rxn_003": 0.38,
+          "rxn_010": 0.22,
+          "rxn_011": 0.28
+        },
+        "chemical_feasibility": 0.34,
+        "pathway_coherence": 0.55,
+        "environmental_progression": 0.76,
+        "target_achievement": 0.42,
+        "overall_confidence": 0.46,
+        "feedback": "The hydrothermal front end is more plausible here because CO2 to formate is well aligned with hydrothermal literature. However, the route still depends on poorly supported conversion of fixed-carbon intermediates into glyoxylate/pyruvate and then an implausible biochemical-style condensation to 2-ketobutyrate. The endpoint to threonine remains chemically compressed and insufficiently justified.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_003",
+          "rxn_010",
+          "rxn_011"
+        ],
+        "suggestions": [
+          "Anchor the glyoxylate node to known prebiotic chemistry more explicitly.",
+          "Use a validated Strecker or phosphoro-Strecker ending rather than direct ketoacid-to-threonine collapse.",
+          "Provide literature-backed rationale for 2-ketobutyrate formation."
+        ]
+      },
+      {
+        "pathway_id": "P3",
+        "reaction_scores": {
+          "rxn_002": 0.72,
+          "rxn_004": 0.3,
+          "rxn_010": 0.22,
+          "rxn_011": 0.28
+        },
+        "chemical_feasibility": 0.31,
+        "pathway_coherence": 0.49,
+        "environmental_progression": 0.8,
+        "target_achievement": 0.41,
+        "overall_confidence": 0.43,
+        "feedback": "This route captures a hydrothermal-to-surface transition, but rxn_004 is weak because direct production of HCN and formamide from formaldehyde plus ammonia is not a standard single-step prebiotic transformation. The route then inherits the weak ketoacid-to-threonine branch. Literature supports UV/cyanide chemistry broadly, but not this specific compressed sequence.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_004",
+          "rxn_010",
+          "rxn_011"
+        ],
+        "suggestions": [
+          "Reformulate HCN/formamide generation through more realistic feedstocks and photochemical sequences.",
+          "Avoid combining unsupported UV feedstock generation with unsupported 2-ketobutyrate chemistry.",
+          "Use literature-supported aminonitrile hydrolysis as the terminal step."
+        ]
+      },
+      {
+        "pathway_id": "P4",
+        "reaction_scores": {
+          "rxn_002": 0.72,
+          "rxn_005": 0.58,
+          "rxn_010": 0.22,
+          "rxn_011": 0.28
+        },
+        "chemical_feasibility": 0.39,
+        "pathway_coherence": 0.56,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.41,
+        "overall_confidence": 0.49,
+        "feedback": "The cyanosulfidic branch is more literature-consonant than several other routes, and formation of oxidized C2 intermediates from formaldehyde/HCN/H2S under UV surface chemistry is directionally plausible. However, the pathway still relies on the same weak downstream conversion from glyoxylate plus acetaldehyde to 2-ketobutyrate and then direct formation of threonine.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_010",
+          "rxn_011"
+        ],
+        "suggestions": [
+          "Keep the cyanosulfidic glyoxylate branch but connect it to a better-supported Strecker-type threonine route.",
+          "Clarify whether glyoxylate is a feedstock, oxidant pool member, or carbon-assembly intermediate.",
+          "Add explicit UV/mineral conditions and literature citation support in the original network."
+        ]
+      },
+      {
+        "pathway_id": "P5",
+        "reaction_scores": {
+          "rxn_002": 0.72,
+          "rxn_007": 0.81,
+          "rxn_008": 0.79,
+          "rxn_012": 0.7
+        },
+        "chemical_feasibility": 0.75,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.83,
+        "target_achievement": 0.78,
+        "overall_confidence": 0.79,
+        "feedback": "This is the strongest pathway. The phosphoro-Strecker concept is well aligned with the literature, especially the use of aldehyde + DAP + HCN to give N-phosphoroaminonitriles and subsequent hydrolysis chemistry. The main weakness is that the precursor aldehyde needed for threonine is chemically nontrivial: acetaldehyde alone would normally lead to alanine-type products, not threonine, unless a hydroxy-substituted aldehyde or equivalent precursor is implied. The final hydrolysis node also pools multiple precursors into one step, which reduces clarity.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Specify the correct aldehyde precursor for threonine phosphoro-Strecker chemistry.",
+          "Separate hydrolysis of N-phosphoroaminonitrile-derived intermediates into distinct reactions.",
+          "Give explicit pH progression matching literature: near-neutral formation, alkaline hydrolysis, sulfur-mediated branch conditions."
+        ]
+      },
+      {
+        "pathway_id": "P6",
+        "reaction_scores": {
+          "rxn_002": 0.72,
+          "rxn_007": 0.81,
+          "rxn_009": 0.8,
+          "rxn_012": 0.7
+        },
+        "chemical_feasibility": 0.76,
+        "pathway_coherence": 0.8,
+        "environmental_progression": 0.84,
+        "target_achievement": 0.79,
+        "overall_confidence": 0.8,
+        "feedback": "This is the best-supported branch in the network. It aligns with literature on phosphoro-Strecker chemistry and H2S-mediated conversion of N-phosphoroaminonitriles toward aminothioamides. The pathway remains limited by ambiguous precursor identity for threonine-specific carbon skeleton installation and by an overly convergent final hydrolysis step, but overall it best matches the reported pH-dependent phosphoro-Strecker framework.",
+        "approved": true,
+        "problematic_reactions": [
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Correct or clarify the aldehyde precursor so the threonine side-chain hydroxyl is accounted for.",
+          "Define mineral agents explicitly for each surface step if absent in the full JSON.",
+          "Break rxn_012 into chemically discrete hydrolysis/desulfurization steps."
+        ]
+      },
+      {
+        "pathway_id": "P7",
+        "reaction_scores": {
+          "rxn_002": 0.72,
+          "rxn_006": 0.86,
+          "rxn_010": 0.22,
+          "rxn_011": 0.28
+        },
+        "chemical_feasibility": 0.46,
+        "pathway_coherence": 0.54,
+        "environmental_progression": 0.81,
+        "target_achievement": 0.42,
+        "overall_confidence": 0.51,
+        "feedback": "The alanine aminonitrile step is a strong and literature-consistent Strecker reaction, but it does not efficiently support threonine formation as presented. The pathway appears to use aminonitrile capture conceptually without a convincing conversion from alanine aminonitrile toward threonine. It therefore contains a good local reaction embedded in a weak global route.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_010",
+          "rxn_011"
+        ],
+        "suggestions": [
+          "Use alanine aminonitrile as a comparative branch, not as a major route to threonine unless interconversion chemistry is supplied.",
+          "Provide a direct threonine aminonitrile formation step from the correct carbonyl precursor.",
+          "Strengthen carbon-skeleton continuity."
+        ]
+      },
+      {
+        "pathway_id": "P8",
+        "reaction_scores": {
+          "rxn_002": 0.72,
+          "rxn_006": 0.86,
+          "rxn_012": 0.7
+        },
+        "chemical_feasibility": 0.52,
+        "pathway_coherence": 0.45,
+        "environmental_progression": 0.82,
+        "target_achievement": 0.46,
+        "overall_confidence": 0.52,
+        "feedback": "The integrated hydrothermal-to-surface framing is sensible, but as described this route seems to jump from alanine-type Strecker chemistry into final threonine-producing hydrolysis without establishing the threonine-specific intermediate. That makes the pathway topologically connected but chemically incoherent for the target.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Ensure the pathway actually passes through mol_014, mol_017, mol_018, or mol_019 before claiming threonine production.",
+          "Do not let alanine aminonitrile stand in for threonine aminonitrile chemistry.",
+          "Add missing carbonyl precursor and side-chain hydroxyl installation logic."
+        ]
+      },
+      {
+        "pathway_id": "P9",
+        "reaction_scores": {
+          "rxn_001": 0.83,
+          "rxn_003": 0.38,
+          "rxn_007": 0.81,
+          "rxn_008": 0.79,
+          "rxn_012": 0.7
+        },
+        "chemical_feasibility": 0.63,
+        "pathway_coherence": 0.68,
+        "environmental_progression": 0.84,
+        "target_achievement": 0.74,
+        "overall_confidence": 0.69,
+        "feedback": "This hybrid route has a plausible hydrothermal feedstock origin and a literature-aligned phosphoro-Strecker ending, but the intermediate support from formate to later aldehyde-derived target chemistry is underdeveloped. The pathway is better than the pure ketoacid branches but still weakened by ambiguous carbon skeleton transfer into threonine-specific phosphoroaminonitrile formation.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_003",
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Show exactly how formate-derived carbon contributes to the target precursor rather than serving only as a generic feedstock.",
+          "Replace speculative hydrothermal carbon-combining steps with more established precursor-generation chemistry.",
+          "Clarify threonine-specific aldehyde identity in rxn_007."
+        ]
+      },
+      {
+        "pathway_id": "P10",
+        "reaction_scores": {
+          "rxn_002": 0.72,
+          "rxn_005": 0.58,
+          "rxn_007": 0.81,
+          "rxn_009": 0.8,
+          "rxn_012": 0.7
+        },
+        "chemical_feasibility": 0.7,
+        "pathway_coherence": 0.75,
+        "environmental_progression": 0.86,
+        "target_achievement": 0.78,
+        "overall_confidence": 0.77,
+        "feedback": "This is a reasonably coherent hybrid route. The cyanosulfidic branch provides a plausible surface-chemistry context and the phosphoro-Strecker/thioamide branch is literature-supported. Still, glyoxylate does not clearly improve the threonine-specific route as currently drawn, and the final conversion remains too collapsed. Strong conceptually, but not fully rigorous.",
+        "approved": false,
+        "problematic_reactions": [
+          "rxn_012"
+        ],
+        "suggestions": [
+          "Clarify the functional role of glyoxylate in this hybrid route.",
+          "Retain the phosphoro-Strecker core and simplify speculative side branches.",
+          "Use discrete final deprotection/hydrolysis steps."
+        ]
+      }
+    ],
+    "best_pathway_id": "P6",
+    "overall_confidence": 0.66,
+    "network_feedback": "The network is topologically rich and clearly connected, with adequate node counts, multiple hubs, and several convergence points. Environmental interconnection is one of its strongest features: hydrothermal carbon fixation and aldehyde generation feed surface cyanide/phosphoro-Strecker chemistry, which then feeds biochemical-style completion. This satisfies the requested cross-environment architecture. However, chemical quality is uneven. The phosphoro-Strecker and Strecker-inspired parts are the most literature-aligned and likely the main reason the network remains credible at all. In contrast, several key steps are overly compressed or weakly supported: rxn_003 conflates formation of glyoxylate and pyruvate from formate/formaldehyde, rxn_004 gives an implausible direct route from formaldehyde plus ammonia to HCN and formamide, rxn_010 proposes a poorly justified route to 2-ketobutyrate, and rxn_011 compresses aminonitrile formation and amino-acid production in a way that does not match known prebiotic chemistry. Literature alignment is partial rather than strong: the network captures recognized route classes (Strecker, phosphoro-Strecker, cyanosulfidic context, hydrothermal feedstock generation), but several exact reactions and precursor assignments do not cleanly match the evidence base. A particularly important issue is threonine-specific carbon skeleton installation: using acetaldehyde as the defining aldehyde precursor for threonine is questionable unless additional hydroxylated precursor logic is supplied. The network is therefore not approved overall, though one phosphoro-Strecker/thioamide pathway is marginally approvable.",
+    "approved": true,
+    "hub_quality": 0.84,
+    "convergence_quality": 0.8
+  },
+  "success": false,
+  "attempts": 1,
+  "notes": null
+}
