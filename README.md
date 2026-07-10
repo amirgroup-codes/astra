@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img/astra_logo.png" alt="ASTRA" width="620">
+  <img src="img/astra_logo.png" alt="ASTRA" width="400">
 </p>
 
 <h1 align="center">ASTRA</h1>
@@ -18,6 +18,19 @@
 </p>
 
 ---
+
+## Authors
+
+- **Daniel Saeedi**¹ · **Amirali Aghazadeh**¹ (corresponding, `amiralia@gatech.edu`)
+- Nihit Pokhrel² · Leijia Gao² · Charley Wen² · Elizabeth Bruce²
+- José C. Aponte³
+- Amanda Stockton⁴
+
+<sup>1 — School of Electrical and Computer Engineering, Georgia Institute of Technology ·
+2 — Microsoft Discovery ·
+3 — Astrochemistry Laboratory, NASA Goddard Space Flight Center ·
+4 — School of Chemistry and Biochemistry, Georgia Institute of Technology</sup>
+
 
 **ASTRA** is a multi-agent system that reconstructs **chemical synthesis networks** connecting simple
 prebiotic feedstocks (H₂O, CO₂, NH₃, HCN, H₂CO, H₂S, CH₄, H₂) to complex biomolecules such as amino
@@ -212,15 +225,3 @@ If you use ASTRA in your research, please cite:
   url     = {https://chemrxiv.org/doi/abs/10.26434/chemrxiv.15005927/v1}
 }
 ```
-
-## Authors
-
-- **Daniel Saeedi**¹ · **Amirali Aghazadeh**¹ (corresponding, `amiralia@gatech.edu`)
-- Nihit Pokhrel² · Leijia Gao² · Charley Wen² · Elizabeth Bruce²
-- José C. Aponte³
-- Amanda Stockton⁴
-
-<sup>1 — School of Electrical and Computer Engineering, Georgia Institute of Technology ·
-2 — Microsoft Discovery ·
-3 — Astrochemistry Laboratory, NASA Goddard Space Flight Center ·
-4 — School of Chemistry and Biochemistry, Georgia Institute of Technology</sup>
